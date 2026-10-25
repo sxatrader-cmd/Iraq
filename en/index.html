@@ -647,7 +647,20 @@ img.hero-img{width:100%;object-fit:cover;object-position:center;display:block}
 
   <section class="block in" style="padding-top:0" id="reviews">
     <div class="sec-head"><span class="eyebrow">Traveller reviews</span><h2 class="disp">Rated 5.0 on Tripadvisor</h2></div>
-    <div class="ti-wrap" style="margin-top:0"><script defer async src='https://cdn.trustindex.io/loader.js?3607655845c93565f566f34edc7'></script></div>
+    <div class="ti-wrap" id="tiWrap" style="margin-top:0"></div>
+    <script>
+    /* reviews appear 10 seconds after the visitor opens the page */
+    (function(){
+      var sec=document.getElementById("reviews"); sec.style.display="none";
+      setTimeout(function(){
+        sec.style.display=""; sec.style.opacity="0"; sec.style.transition="opacity .8s ease";
+        var sc=document.createElement("script"); sc.defer=true; sc.async=true;
+        sc.src="https://cdn.trustindex.io/loader.js?3607655845c93565f566f34edc7";
+        document.getElementById("tiWrap").appendChild(sc);
+        requestAnimationFrame(function(){ requestAnimationFrame(function(){ sec.style.opacity="1"; }); });
+      },10000);
+    })();
+    </script>
   </section>
 
   <section class="block in" style="padding-top:0" id="faq">
