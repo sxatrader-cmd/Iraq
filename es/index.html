@@ -321,6 +321,21 @@ select option{color:#1B2A47;background:#fff}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 img.hero-img{width:100%;object-fit:cover;object-position:center;display:block}
 .social{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.social span{font-size:13px;color:#C9CFD9;margin-inline-end:4px}.social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(217,192,142,.55);display:grid;place-items:center;color:var(--gold-2);transition:background .2s,color .2s}.social a:hover{background:var(--gold);color:var(--navy)}.social svg{width:19px;height:19px}@media (max-width:760px){footer{padding-bottom:64px}}
+.ta{background:var(--panel);border-radius:6px;padding:24px;display:grid;grid-template-columns:1fr 1.25fr;gap:24px;align-items:start;border-top:3px solid #34E0A1}
+.ta-score{display:flex;align-items:center;gap:14px;margin:4px 0 12px}
+.ta-score b{font-family:var(--serif-en);font-size:46px;font-weight:400;color:var(--navy);line-height:1}
+.ta-dots{display:flex;gap:4px}.ta-dots i{width:18px;height:18px;border-radius:50%;background:#00AA6C;display:block}
+.ta-score small{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+.ta p{margin:0 0 16px;color:var(--ink);font-size:15.5px}
+.ta-btns{display:flex;flex-wrap:wrap;gap:10px}
+.ta-btns a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:14px;border-radius:999px;padding:10px 18px}
+.ta-btns .pri{background:#00AA6C;color:#fff}.ta-btns .sec{border:1.5px solid var(--navy);color:var(--navy)}
+.ta-btns a:hover{filter:brightness(1.08)}
+.ta-widget{background:#fff;border-radius:6px;padding:12px;min-height:120px;overflow:hidden;display:flex;justify-content:center}
+.ta-widget .TA_selfserveprop{width:100%}.ta-widget #CDSWIDSSP{width:100%!important;max-width:100%!important;border:0!important}
+.ta-logo{height:22px;width:110px;margin-bottom:8px;direction:ltr;display:block}
+.ta-widget .TA_links{list-style:none;margin:0;padding:0;align-self:center;text-align:center}.ta-widget .TA_links a{color:#00AA6C;font-weight:700;text-decoration:none}
+@media (max-width:760px){.ta{grid-template-columns:1fr;padding:20px}}
 </style>
 </head>
 <body>
@@ -624,6 +639,22 @@ img.hero-img{width:100%;object-fit:cover;object-position:center;display:block}
   </section>
 
   
+
+  <section class="block in" style="padding-top:0" id="reviews">
+    <div class="sec-head"><span class="eyebrow">Opiniones de viajeros</span><h2 class="disp">Valoración 5.0 en Tripadvisor</h2></div>
+    <div class="ta">
+      <div>
+        <svg class="ta-logo" viewBox="0 0 120 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#34E0A1"/><circle cx="8" cy="12" r="3.3" fill="#fff"/><circle cx="16" cy="12" r="3.3" fill="#fff"/><circle cx="8" cy="12" r="1.5" fill="#000"/><circle cx="16" cy="12" r="1.5" fill="#000"/><text x="28" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#000">Tripadvisor</text></svg>
+        <div class="ta-score"><b>5.0</b><div><span class="ta-dots" aria-label="5/5"><i></i><i></i><i></i><i></i><i></i></span><small>20+ opiniones</small></div></div>
+        <p>Más de 20 viajeros de todo el mundo han contado su viaje por Irak con Fable Tour. Lee sus opiniones tal como están publicadas en Tripadvisor.</p>
+        <div class="ta-btns"><a class="pri" href="https://www.tripadvisor.com/Attraction_Review-g294001-d34080229-Reviews-Fable_Tour_in_Iraq-Baghdad_Baghdad_Province.html" target="_blank" rel="noopener">Leer todas las opiniones</a><a class="sec" href="https://www.tripadvisor.com/UserReviewEdit-g294001-d34080229-Fable_Tour_in_Iraq-Baghdad_Baghdad_Province.html" target="_blank" rel="noopener">Escribir una opinión</a></div>
+      </div>
+      <div class="ta-widget">
+        <div id="TA_selfservepropes" class="TA_selfserveprop"><ul id="taListes" class="TA_links"><li><a target="_blank" rel="noopener" href="https://www.tripadvisor.com/Attraction_Review-g294001-d34080229-Reviews-Fable_Tour_in_Iraq-Baghdad_Baghdad_Province.html">Tripadvisor</a></li></ul></div>
+        <script async src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=es&amp;locationId=34080229&amp;lang=es&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+      </div>
+    </div>
+  </section>
 
   <section class="block in" style="padding-top:0" id="faq">
     <div class="sec-head"><span class="eyebrow">Preguntas frecuentes</span><h2 class="disp">Preguntas frecuentes</h2></div>
