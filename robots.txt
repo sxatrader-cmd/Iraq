@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sxatrader-cmd.github.io/iraq/sitemap.xml
+Sitemap: https://iraq.fabletour.com/sitemap.xml
