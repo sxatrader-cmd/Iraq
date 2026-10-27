@@ -9,7 +9,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 D = json.loads((pathlib.Path(__file__).parent / "ziyara_i18n.json").read_text())
 KEY, SLUG, OLD = "ziyara", "baghdad-holy-shrines", "baghdad-old-town"
 PRICE_JS = "ziyara:function(n){return 50+25*(n-1)},"
-IMGS = ["kadhimiya-shrine-night.webp", "junayd-baghdadi-shrine.webp", "junayd-baghdadi-tomb.webp",
+IMGS = ["kadhimiya-shrine-night.webp", "junayd-baghdadi-shrine.webp", "junayd-baghdadi-front.webp",
         "bahlul-shrine-dome.webp", "bahlul-shrine-tomb.webp"]
 SITE = "https://iraq.fabletour.com"
 esc = lambda s: html.escape(s, quote=True)
