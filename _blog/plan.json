@@ -1,4 +1,5 @@
 {
+ "rule": "Only places and stories connected to the cities/sites of the 7-day and 9-day tour programmes.",
  "groups": {
   "A": [
    "en",
@@ -27,9 +28,9 @@
  "queue": [
   {
    "topic": "babylon",
-   "title_it": "Babilonia",
-   "category_it": "Siti archeologici",
-   "region": "Babil",
+   "title": "Babylon: complete visitor guide",
+   "city": "Babylon",
+   "category_en": "Archaeological sites",
    "tour": "7",
    "date": "2026-10-27",
    "langs_done": [
@@ -38,541 +39,946 @@
    "source_article": "_blog/it/posts/babilonia-iraq-guida-visita.html"
   },
   {
-   "topic": "ur-e-la-grande-ziggurat",
-   "title_it": "Ur e la Grande Ziggurat",
-   "category_it": "Siti archeologici",
-   "region": "Dhi Qar",
+   "topic": "imam-ali-shrine-in-najaf",
+   "title": "Imam Ali Shrine in Najaf",
+   "city": "Najaf",
+   "category_en": "Holy shrines",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "le-paludi-della-mesopotamia-ahwar",
-   "title_it": "Le Paludi della Mesopotamia (Ahwar)",
-   "category_it": "Natura",
-   "region": "Dhi Qar / Bassora",
+   "topic": "imam-hussein-shrine-in-karbala",
+   "title": "Imam Hussein Shrine in Karbala",
+   "city": "Karbala",
+   "category_en": "Holy shrines",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "uruk-warka-la-citta-di-gilgamesh",
-   "title_it": "Uruk (Warka), la città di Gilgamesh",
-   "category_it": "Siti archeologici",
-   "region": "Muthanna",
+   "topic": "the-ishtar-gate-of-babylon",
+   "title": "The Ishtar Gate of Babylon",
+   "city": "Babylon",
+   "category_en": "Archaeological sites",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "hatra-la-citta-del-dio-sole",
-   "title_it": "Hatra, la città del dio Sole",
-   "category_it": "Siti archeologici",
-   "region": "Ninive",
+   "topic": "al-mutanabbi-street-and-baghdad-s-book-market",
+   "title": "Al-Mutanabbi Street and Baghdad's book market",
+   "city": "Baghdad",
+   "category_en": "Cities & culture",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "samarra-e-il-minareto-a-spirale-malwiya",
-   "title_it": "Samarra e il Minareto a spirale (Malwiya)",
-   "category_it": "Siti archeologici",
-   "region": "Salah al-Din",
+   "topic": "the-great-mosque-of-kufa",
+   "title": "The Great Mosque of Kufa",
+   "city": "Kufa",
+   "category_en": "Holy shrines",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "via-al-mutanabbi-e-il-mercato-dei-libri-",
-   "title_it": "Via al-Mutanabbi e il mercato dei libri di Baghdad",
-   "category_it": "Città",
-   "region": "Baghdad",
+   "topic": "the-great-ziggurat-of-ur",
+   "title": "The Great Ziggurat of Ur",
+   "city": "Ur",
+   "category_en": "Archaeological sites",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "ctesifonte-e-il-grande-arco-taq-kasra",
-   "title_it": "Ctesifonte e il grande arco (Taq Kasra)",
-   "category_it": "Siti archeologici",
-   "region": "Baghdad",
+   "topic": "the-malwiya-spiral-minaret-of-samarra",
+   "title": "The Malwiya spiral minaret of Samarra",
+   "city": "Samarra",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "basra-the-gateway-of-the-south",
+   "title": "Basra, the gateway of the south",
+   "city": "Basra",
+   "category_en": "Cities & culture",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "la-cittadella-di-erbil",
-   "title_it": "La Cittadella di Erbil",
-   "category_it": "Siti archeologici",
-   "region": "Erbil",
+   "topic": "the-mesopotamian-marshes-ahwar",
+   "title": "The Mesopotamian Marshes (Ahwar)",
+   "city": "Marshes",
+   "category_en": "Nature",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "uruk-warka-the-first-city",
+   "title": "Uruk (Warka), the first city",
+   "city": "Uruk",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "old-mosul-and-the-al-nuri-mosque",
+   "title": "Old Mosul and the Al-Nuri Mosque",
+   "city": "Mosul",
+   "category_en": "Cities & culture",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "biography-of-imam-ali-ibn-abi-talib-birth-in-the",
+   "title": "Biography of Imam Ali ibn Abi Talib: birth in the Kaaba and early life",
+   "city": "Najaf",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "biography-of-imam-hussein-ibn-ali",
+   "title": "Biography of Imam Hussein ibn Ali",
+   "city": "Karbala",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "nimrud-the-assyrian-capital-of-ashurnasirpal-ii",
+   "title": "Nimrud, the Assyrian capital of Ashurnasirpal II",
+   "city": "Nimrud",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "hatra-city-of-the-sun-god",
+   "title": "Hatra, city of the Sun God",
+   "city": "Hatra",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "erbil-citadel-one-of-the-oldest-inhabited-places",
+   "title": "Erbil Citadel, one of the oldest inhabited places",
+   "city": "Erbil",
+   "category_en": "Archaeological sites",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "aqar-quf-la-ziggurat-di-dur-kurigalzu",
-   "title_it": "Aqar Quf, la ziggurat di Dur-Kurigalzu",
-   "category_it": "Siti archeologici",
-   "region": "Baghdad",
+   "topic": "al-kadhimiya-shrine-in-baghdad",
+   "title": "Al-Kadhimiya Shrine in Baghdad",
+   "city": "Baghdad",
+   "category_en": "Holy shrines",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "la-madrasa-al-mustansiriya-di-baghdad",
-   "title_it": "La Madrasa al-Mustansiriya di Baghdad",
-   "category_it": "Città",
-   "region": "Baghdad",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-museo-nazionale-delliraq",
-   "title_it": "Il Museo Nazionale dell'Iraq",
-   "category_it": "Musei",
-   "region": "Baghdad",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "kerbala",
-   "title_it": "Kerbala",
-   "category_it": "Città sante",
-   "region": "Kerbala",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "najaf-e-la-valle-della-pace-wadi-al-sala",
-   "title_it": "Najaf e la Valle della Pace (Wadi al-Salam)",
-   "category_it": "Città sante",
-   "region": "Najaf",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "borsippa-e-la-ziggurat-di-birs-nimrud",
-   "title_it": "Borsippa e la ziggurat di Birs Nimrud",
-   "category_it": "Siti archeologici",
-   "region": "Babil",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "nimrud-capitale-assira",
-   "title_it": "Nimrud, capitale assira",
-   "category_it": "Siti archeologici",
-   "region": "Ninive",
+   "topic": "mar-mattai-monastery-on-mount-maqlub",
+   "title": "Mar Mattai Monastery on Mount Maqlub",
+   "city": "Mar Mattai",
+   "category_en": "Holy shrines",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "ninive-e-le-mura-di-mosul",
-   "title_it": "Ninive e le mura di Mosul",
-   "category_it": "Siti archeologici",
-   "region": "Ninive",
+   "topic": "the-7-day-iraq-heritage-itinerary-day-by-day",
+   "title": "The 7-day Iraq heritage itinerary, day by day",
+   "city": "General",
+   "category_en": "Travel guides",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "wadi-al-salam-the-valley-of-peace-in-najaf",
+   "title": "Wadi al-Salam, the Valley of Peace in Najaf",
+   "city": "Najaf",
+   "category_en": "Holy shrines",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "al-abbas-shrine-in-karbala",
+   "title": "Al-Abbas Shrine in Karbala",
+   "city": "Karbala",
+   "category_en": "Holy shrines",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "hammurabi-and-his-code-of-laws",
+   "title": "Hammurabi and his Code of Laws",
+   "city": "Babylon",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "biography-of-imam-musa-al-kadhim",
+   "title": "Biography of Imam Musa al-Kadhim",
+   "city": "Baghdad",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "kufa-capital-of-imam-ali-history-of-the-city",
+   "title": "Kufa, capital of Imam Ali: history of the city",
+   "city": "Kufa",
+   "category_en": "Cities & culture",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-royal-tombs-of-ur-and-queen-puabi",
+   "title": "The Royal Tombs of Ur and Queen Puabi",
+   "city": "Ur",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "al-askari-shrine-in-samarra",
+   "title": "Al-Askari Shrine in Samarra",
+   "city": "Samarra",
+   "category_en": "Holy shrines",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "shatt-al-arab-at-sunset",
+   "title": "Shatt al-Arab at sunset",
+   "city": "Basra",
+   "category_en": "Nature",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-mudhif-reed-guesthouses-of-the-marshes",
+   "title": "The mudhif: reed guesthouses of the Marshes",
+   "city": "Marshes",
+   "category_en": "Cities & culture",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-epic-of-gilgamesh-and-uruk",
+   "title": "The Epic of Gilgamesh and Uruk",
+   "city": "Uruk",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "nineveh-the-walls-and-gates-of-the-assyrian-capi",
+   "title": "Nineveh: the walls and gates of the Assyrian capital",
+   "city": "Mosul",
+   "category_en": "Archaeological sites",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "la-citta-vecchia-di-mosul",
-   "title_it": "La città vecchia di Mosul",
-   "category_it": "Città",
-   "region": "Ninive",
+   "topic": "stories-of-imam-ali-s-justice-as-ruler",
+   "title": "Stories of Imam Ali's justice as ruler",
+   "city": "Najaf",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-journey-of-imam-hussein-from-medina-to-karba",
+   "title": "The journey of Imam Hussein from Medina to Karbala",
+   "city": "Karbala",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-lamassu-winged-guardian-bulls-of-assyria",
+   "title": "The Lamassu: winged guardian bulls of Assyria",
+   "city": "Nimrud",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-arab-kingdom-of-hatra",
+   "title": "The Arab kingdom of Hatra",
+   "city": "Hatra",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "qaysari-bazaar-in-erbil",
+   "title": "Qaysari Bazaar in Erbil",
+   "city": "Erbil",
+   "category_en": "Cities & culture",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "ashur-qalat-sherqat-prima-capitale-assir",
-   "title_it": "Ashur (Qal'at Sherqat), prima capitale assira",
-   "category_it": "Siti archeologici",
-   "region": "Salah al-Din",
+   "topic": "al-mustansiriya-madrasa-one-of-the-oldest-univer",
+   "title": "Al-Mustansiriya Madrasa, one of the oldest universities",
+   "city": "Baghdad",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-9-day-iraq-itinerary-from-basra-to-erbil",
+   "title": "The 9-day Iraq itinerary from Basra to Erbil",
+   "city": "General",
+   "category_en": "Travel guides",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "bassora-la-venezia-del-medio-oriente",
-   "title_it": "Bassora, la Venezia del Medio Oriente",
-   "category_it": "Città",
-   "region": "Bassora",
+   "topic": "malik-al-ashtar-companion-of-imam-ali",
+   "title": "Malik al-Ashtar, companion of Imam Ali",
+   "city": "Najaf",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "al-abbas-ibn-ali-biography-of-the-standard-beare",
+   "title": "Al-Abbas ibn Ali: biography of the standard-bearer of Karbala",
+   "city": "Karbala",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "nebuchadnezzar-ii-the-builder-king-of-babylon",
+   "title": "Nebuchadnezzar II, the builder king of Babylon",
+   "city": "Babylon",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-qishla-and-its-clock-tower",
+   "title": "The Qishla and its clock tower",
+   "city": "Baghdad",
+   "category_en": "Cities & culture",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "muslim-ibn-aqil-his-mission-and-shrine-in-kufa",
+   "title": "Muslim ibn Aqil: his mission and shrine in Kufa",
+   "city": "Kufa",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "prophet-abraham-and-ur-of-the-chaldees",
+   "title": "Prophet Abraham and Ur of the Chaldees",
+   "city": "Ur",
+   "category_en": "Holy shrines",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "biography-of-imam-ali-al-hadi",
+   "title": "Biography of Imam Ali al-Hadi",
+   "city": "Samarra",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "qurna-and-adam-s-tree-where-the-tigris-meets-the",
+   "title": "Qurna and Adam's Tree, where the Tigris meets the Euphrates",
+   "city": "Basra",
+   "category_en": "Nature",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "life-of-the-marsh-arabs-buffalo-boats-and-reeds",
+   "title": "Life of the Marsh Arabs: buffalo, boats and reeds",
+   "city": "Marshes",
+   "category_en": "Cities & culture",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "uruk-and-the-invention-of-writing",
+   "title": "Uruk and the invention of writing",
+   "city": "Uruk",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "prophet-jonah-yunus-and-nineveh",
+   "title": "Prophet Jonah (Yunus) and Nineveh",
+   "city": "Mosul",
+   "category_en": "Holy shrines",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "lo-shatt-al-arab",
-   "title_it": "Lo Shatt al-Arab",
-   "category_it": "Natura",
-   "region": "Bassora",
+   "topic": "old-najaf-markets-and-the-historic-city-around-t",
+   "title": "Old Najaf: markets and the historic city around the shrine",
+   "city": "Najaf",
+   "category_en": "Cities & culture",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "ashura-the-history-of-the-day-of-karbala",
+   "title": "Ashura: the history of the day of Karbala",
+   "city": "Karbala",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-nimrud-ivories-and-royal-treasure",
+   "title": "The Nimrud ivories and royal treasure",
+   "city": "Nimrud",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-temples-and-sculptures-of-hatra",
+   "title": "The temples and sculptures of Hatra",
+   "city": "Hatra",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "erbil-a-city-of-the-north",
+   "title": "Erbil: a city of the north",
+   "city": "Erbil",
+   "category_en": "Cities & culture",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "il-palazzo-abbaside-di-baghdad",
-   "title_it": "Il Palazzo Abbaside di Baghdad",
-   "category_it": "Città",
-   "region": "Baghdad",
+   "topic": "aqar-quf-the-ziggurat-of-dur-kurigalzu",
+   "title": "Aqar Quf, the ziggurat of Dur-Kurigalzu",
+   "city": "Baghdad",
+   "category_en": "Archaeological sites",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "il-suq-al-saray-e-il-qishla-di-baghdad",
-   "title_it": "Il Suq al-Saray e il Qishla di Baghdad",
-   "category_it": "Città",
-   "region": "Baghdad",
+   "topic": "best-time-to-visit-iraq-month-by-month",
+   "title": "Best time to visit Iraq, month by month",
+   "city": "General",
+   "category_en": "Travel guides",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "il-santuario-di-al-kadhimiya-a-baghdad",
-   "title_it": "Il santuario di al-Kadhimiya a Baghdad",
-   "category_it": "Città sante",
-   "region": "Baghdad",
+   "topic": "imam-ali-and-the-poor-stories-of-his-generosity",
+   "title": "Imam Ali and the poor: stories of his generosity",
+   "city": "Najaf",
+   "category_en": "Stories & biographies",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "lalish-il-santuario-degli-yazidi",
-   "title_it": "Lalish, il santuario degli yazidi",
-   "category_it": "Luoghi sacri",
-   "region": "Duhok",
+   "topic": "habib-ibn-muzahir-companion-of-imam-hussein",
+   "title": "Habib ibn Muzahir, companion of Imam Hussein",
+   "city": "Karbala",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-hanging-gardens-of-babylon-legend-and-eviden",
+   "title": "The Hanging Gardens of Babylon: legend and evidence",
+   "city": "Babylon",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-abbasid-palace-in-baghdad",
+   "title": "The Abbasid Palace in Baghdad",
+   "city": "Baghdad",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-house-of-imam-ali-in-kufa",
+   "title": "The House of Imam Ali in Kufa",
+   "city": "Kufa",
+   "category_en": "Holy shrines",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "ur-nammu-and-the-oldest-law-code",
+   "title": "Ur-Nammu and the oldest law code",
+   "city": "Ur",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "abbasid-samarra-unesco-world-heritage-city",
+   "title": "Abbasid Samarra, UNESCO World Heritage city",
+   "city": "Samarra",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-armenian-church-of-the-virgin-mary-in-basra",
+   "title": "The Armenian Church of the Virgin Mary in Basra",
+   "city": "Basra",
+   "category_en": "Holy shrines",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "alqosh-e-il-monastero-di-rabban-hormizd",
-   "title_it": "Alqosh e il monastero di Rabban Hormizd",
-   "category_it": "Luoghi sacri",
-   "region": "Ninive",
+   "topic": "chibayish-and-the-birds-of-the-marshes",
+   "title": "Chibayish and the birds of the Marshes",
+   "city": "Marshes",
+   "category_en": "Nature",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-warka-vase-and-the-eanna-temple",
+   "title": "The Warka Vase and the Eanna temple",
+   "city": "Uruk",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "mosul-s-churches-al-tahira-and-al-saa-a",
+   "title": "Mosul's churches: Al-Tahira and Al-Saa'a",
+   "city": "Mosul",
+   "category_en": "Holy shrines",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "il-monastero-di-mar-mattai",
-   "title_it": "Il monastero di Mar Mattai",
-   "category_it": "Luoghi sacri",
-   "region": "Ninive",
+   "topic": "ammar-ibn-yasir-companion-of-the-prophet-and-ima",
+   "title": "Ammar ibn Yasir, companion of the Prophet and Imam Ali",
+   "city": "Najaf",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "al-hurr-al-riyahi-the-story-of-his-change-of-hea",
+   "title": "Al-Hurr al-Riyahi: the story of his change of heart",
+   "city": "Karbala",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "biography-of-imam-muhammad-al-jawad",
+   "title": "Biography of Imam Muhammad al-Jawad",
+   "city": "Baghdad",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "practical-tips-for-travellers-in-iraq",
+   "title": "Practical tips for travellers in Iraq",
+   "city": "General",
+   "category_en": "Travel guides",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-shrines-of-prophets-hud-and-salih-in-wadi-al",
+   "title": "The shrines of Prophets Hud and Salih in Wadi al-Salam",
+   "city": "Najaf",
+   "category_en": "Holy shrines",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "zaynab-bint-ali-life-and-legacy",
+   "title": "Zaynab bint Ali: life and legacy",
+   "city": "Karbala",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "borsippa-and-the-ziggurat-of-birs-nimrud",
+   "title": "Borsippa and the ziggurat of Birs Nimrud",
+   "city": "Babylon",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-house-of-wisdom-and-baghdad-s-golden-age",
+   "title": "The House of Wisdom and Baghdad's golden age",
+   "city": "Baghdad",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "maytham-al-tammar-companion-of-imam-ali",
+   "title": "Maytham al-Tammar, companion of Imam Ali",
+   "city": "Kufa",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-standard-of-ur",
+   "title": "The Standard of Ur",
+   "city": "Ur",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "biography-of-imam-hasan-al-askari",
+   "title": "Biography of Imam Hasan al-Askari",
+   "city": "Samarra",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-basra-museum",
+   "title": "The Basra Museum",
+   "city": "Basra",
+   "category_en": "Archaeological sites",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "amedi-amadiya-la-citta-sulla-montagna",
-   "title_it": "Amedi (Amadiya), la città sulla montagna",
-   "category_it": "Natura",
-   "region": "Duhok",
+   "topic": "mosul-cuisine-kubba-and-the-dishes-of-the-north",
+   "title": "Mosul cuisine: kubba and the dishes of the north",
+   "city": "Mosul",
+   "category_en": "Cities & culture",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "la-valle-di-rawanduz-e-il-canyon-di-gali",
-   "title_it": "La valle di Rawanduz e il Canyon di Gali Ali Beg",
-   "category_it": "Natura",
-   "region": "Erbil",
+   "topic": "nahj-al-balagha-the-sermons-and-letters-of-imam-",
+   "title": "Nahj al-Balagha: the sermons and letters of Imam Ali",
+   "city": "Najaf",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "arbaeen-the-walk-from-najaf-to-karbala",
+   "title": "Arbaeen: the walk from Najaf to Karbala",
+   "city": "Karbala",
+   "category_en": "Holy shrines",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "masgouf-and-the-tigris-riverbank-of-abu-nuwas",
+   "title": "Masgouf and the Tigris riverbank of Abu Nuwas",
+   "city": "Baghdad",
+   "category_en": "Cities & culture",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "kumayl-ibn-ziyad-companion-of-imam-ali",
+   "title": "Kumayl ibn Ziyad, companion of Imam Ali",
+   "city": "Najaf",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "zuhayr-ibn-al-qayn-companion-of-imam-hussein",
+   "title": "Zuhayr ibn al-Qayn, companion of Imam Hussein",
+   "city": "Karbala",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-tower-of-babel-and-the-etemenanki-ziggurat",
+   "title": "The Tower of Babel and the Etemenanki ziggurat",
+   "city": "Babylon",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "harun-al-rashid-and-the-baghdad-of-the-thousand-",
+   "title": "Harun al-Rashid and the Baghdad of the Thousand and One Nights",
+   "city": "Baghdad",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "hani-ibn-urwa-and-his-shrine-in-kufa",
+   "title": "Hani ibn Urwa and his shrine in Kufa",
+   "city": "Kufa",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-great-mosque-of-samarra",
+   "title": "The Great Mosque of Samarra",
+   "city": "Samarra",
+   "category_en": "Archaeological sites",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "sinbad-the-sailor-and-basra-s-maritime-legends",
+   "title": "Sinbad the Sailor and Basra's maritime legends",
+   "city": "Basra",
+   "category_en": "Stories & biographies",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "sulaymaniyah",
-   "title_it": "Sulaymaniyah",
-   "category_it": "Città",
-   "region": "Sulaymaniyah",
+   "topic": "the-najaf-seminary-hawza-a-thousand-years-of-lea",
+   "title": "The Najaf seminary (Hawza): a thousand years of learning",
+   "city": "Najaf",
+   "category_en": "Cities & culture",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "ali-al-akbar-ibn-al-hussein",
+   "title": "Ali al-Akbar ibn al-Hussein",
+   "city": "Karbala",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "al-shaheed-monument-architecture-of-baghdad",
+   "title": "Al-Shaheed Monument: architecture of Baghdad",
+   "city": "Baghdad",
+   "category_en": "Cities & culture",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "kish-una-delle-prime-citta-sumere",
-   "title_it": "Kish, una delle prime città sumere",
-   "category_it": "Siti archeologici",
-   "region": "Babil",
+   "topic": "salman-al-farsi-and-his-bond-with-imam-ali",
+   "title": "Salman al-Farsi and his bond with Imam Ali",
+   "city": "Najaf",
+   "category_en": "Stories & biographies",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "nippur-la-citta-sacra-di-enlil",
-   "title_it": "Nippur, la città sacra di Enlil",
-   "category_it": "Siti archeologici",
-   "region": "Qadisiyya",
+   "topic": "bayn-al-haramayn-and-the-old-city-of-karbala",
+   "title": "Bayn al-Haramayn and the old city of Karbala",
+   "city": "Karbala",
+   "category_en": "Cities & culture",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "eridu-la-citta-piu-antica-secondo-i-sume",
-   "title_it": "Eridu, la città più antica secondo i Sumeri",
-   "category_it": "Siti archeologici",
-   "region": "Dhi Qar",
+   "topic": "the-lion-of-babylon",
+   "title": "The Lion of Babylon",
+   "city": "Babylon",
+   "category_en": "Archaeological sites",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "lagash-e-girsu",
-   "title_it": "Lagash e Girsu",
-   "category_it": "Siti archeologici",
-   "region": "Dhi Qar",
+   "topic": "shabandar-caf-and-baghdad-s-tea-culture",
+   "title": "Shabandar Café and Baghdad's tea culture",
+   "city": "Baghdad",
+   "category_en": "Cities & culture",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "il-lago-habbaniyah",
-   "title_it": "Il Lago Habbaniyah",
-   "category_it": "Natura",
-   "region": "Anbar",
+   "topic": "the-kufic-script-born-in-kufa",
+   "title": "The Kufic script: born in Kufa",
+   "city": "Kufa",
+   "category_en": "Cities & culture",
    "tour": "7",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "kufa-e-la-sua-grande-moschea",
-   "title_it": "Kufa e la sua grande moschea",
-   "category_it": "Città sante",
-   "region": "Najaf",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-castello-di-al-ukhaidir",
-   "title_it": "Il Castello di al-Ukhaidir",
-   "category_it": "Siti archeologici",
-   "region": "Kerbala",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-minareto-di-erbil-mudhafaria",
-   "title_it": "Il minareto di Erbil (Mudhafaria)",
-   "category_it": "Siti archeologici",
-   "region": "Erbil",
+   "topic": "hasan-al-basri-and-the-scholars-of-basra",
+   "title": "Hasan al-Basri and the scholars of Basra",
+   "city": "Basra",
+   "category_en": "Stories & biographies",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "il-museo-di-mosul",
-   "title_it": "Il Museo di Mosul",
-   "category_it": "Musei",
-   "region": "Ninive",
+   "topic": "abu-dharr-al-ghifari-companion-of-the-prophet-an",
+   "title": "Abu Dharr al-Ghifari, companion of the Prophet and Imam Ali",
+   "city": "Najaf",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "al-qasim-ibn-al-hasan-at-karbala",
+   "title": "Al-Qasim ibn al-Hasan at Karbala",
+   "city": "Karbala",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "the-round-city-of-al-mansur",
+   "title": "The Round City of al-Mansur",
+   "city": "Baghdad",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "imam-ali-s-final-days-in-kufa-and-burial-in-naja",
+   "title": "Imam Ali's final days in Kufa and burial in Najaf",
+   "city": "Najaf",
+   "category_en": "Stories & biographies",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "akitu-the-babylonian-new-year-festival",
+   "title": "Akitu: the Babylonian New Year festival",
+   "city": "Babylon",
+   "category_en": "Cities & culture",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "basra-s-palm-groves-and-iraqi-dates",
+   "title": "Basra's palm groves and Iraqi dates",
+   "city": "Basra",
+   "category_en": "Nature",
    "tour": "9",
    "date": null,
    "langs_done": []
   },
   {
-   "topic": "il-museo-di-bassora",
-   "title_it": "Il Museo di Bassora",
-   "category_it": "Musei",
-   "region": "Bassora",
-   "tour": "9",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-lungofiume-di-abu-nuwas-e-il-tigri-a-",
-   "title_it": "Il Lungofiume di Abu Nuwas e il Tigri a Baghdad",
-   "category_it": "Città",
-   "region": "Baghdad",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-monumento-al-martire-al-shaheed-di-ba",
-   "title_it": "Il Monumento al Martire (al-Shaheed) di Baghdad",
-   "category_it": "Città",
-   "region": "Baghdad",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "hilla-la-citta-accanto-a-babilonia",
-   "title_it": "Hilla, la città accanto a Babilonia",
-   "category_it": "Città",
-   "region": "Babil",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-palazzo-di-babilonia-sulla-collina",
-   "title_it": "Il palazzo di Babilonia sulla collina",
-   "category_it": "Siti archeologici",
-   "region": "Babil",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "dur-sharrukin-khorsabad",
-   "title_it": "Dur-Sharrukin (Khorsabad)",
-   "category_it": "Siti archeologici",
-   "region": "Ninive",
-   "tour": "9",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-lago-dukan",
-   "title_it": "Il Lago Dukan",
-   "category_it": "Natura",
-   "region": "Sulaymaniyah",
-   "tour": "9",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-deserto-occidentale-e-al-anbar",
-   "title_it": "Il deserto occidentale e Al-Anbar",
-   "category_it": "Natura",
-   "region": "Anbar",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "la-cucina-irachena-masgouf-e-altri-piatt",
-   "title_it": "La cucina irachena: masgouf e altri piatti da provare",
-   "category_it": "Cultura",
-   "region": "Iraq",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-caffe-e-il-te-in-iraq-cultura-delle-c",
-   "title_it": "Il caffè e il tè in Iraq: cultura delle chaikhana",
-   "category_it": "Cultura",
-   "region": "Iraq",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-dattero-iracheno-e-i-palmeti",
-   "title_it": "Il dattero iracheno e i palmeti",
-   "category_it": "Cultura",
-   "region": "Iraq",
-   "tour": "9",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-codice-di-hammurabi-e-la-nascita-dell",
-   "title_it": "Il Codice di Hammurabi e la nascita delle leggi",
-   "category_it": "Storia",
-   "region": "Iraq",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "la-scrittura-cuneiforme-nata-in-mesopota",
-   "title_it": "La scrittura cuneiforme: nata in Mesopotamia",
-   "category_it": "Storia",
-   "region": "Iraq",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "lepopea-di-gilgamesh-e-i-luoghi-dove-si-",
-   "title_it": "L'Epopea di Gilgamesh e i luoghi dove si svolge",
-   "category_it": "Storia",
-   "region": "Iraq",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "il-tigri-e-leufrate-i-fiumi-della-civilt",
-   "title_it": "Il Tigri e l'Eufrate: i fiumi della civiltà",
-   "category_it": "Natura",
-   "region": "Iraq",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "quando-andare-in-iraq-clima-mese-per-mes",
-   "title_it": "Quando andare in Iraq: clima mese per mese",
-   "category_it": "Guide pratiche",
-   "region": "Iraq",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "visto-per-liraq-per-cittadini-italiani",
-   "title_it": "Visto per l'Iraq per cittadini italiani",
-   "category_it": "Guide pratiche",
-   "region": "Iraq",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "e-sicuro-viaggiare-in-iraq-consigli-prat",
-   "title_it": "È sicuro viaggiare in Iraq? Consigli pratici",
-   "category_it": "Guide pratiche",
-   "region": "Iraq",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "itinerario-di-7-giorni-in-iraq",
-   "title_it": "Itinerario di 7 giorni in Iraq",
-   "category_it": "Guide pratiche",
-   "region": "Iraq",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "itinerario-di-9-giorni-in-iraq-da-bassor",
-   "title_it": "Itinerario di 9 giorni in Iraq: da Bassora a Erbil",
-   "category_it": "Guide pratiche",
-   "region": "Iraq",
-   "tour": "9",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "cosa-mettere-in-valigia-per-un-viaggio-i",
-   "title_it": "Cosa mettere in valigia per un viaggio in Iraq",
-   "category_it": "Guide pratiche",
-   "region": "Iraq",
-   "tour": "7",
-   "date": null,
-   "langs_done": []
-  },
-  {
-   "topic": "soldi-carte-e-sim-in-iraq",
-   "title_it": "Soldi, carte e SIM in Iraq",
-   "category_it": "Guide pratiche",
-   "region": "Iraq",
+   "topic": "alexander-the-great-s-last-days-in-babylon",
+   "title": "Alexander the Great's last days in Babylon",
+   "city": "Babylon",
+   "category_en": "Stories & biographies",
    "tour": "7",
    "date": null,
    "langs_done": []

@@ -11,7 +11,9 @@ Blog URLs: Arabic → `/blog/`, every other language L → `/L/blog/`. Sources l
 ## 1. Pick today's topic (Baghdad date, YYYY-MM-DD)
 Open `_blog/plan.json` → `queue`.
 - If an item has `"date"` == today → that is today's topic.
-- Otherwise (normally only group A): take the first item with `"date": null`, set its `"date"` to today. (If the queue is empty, add a new well-known Iraqi place not yet covered, with a new English `topic` key.)
+- Otherwise (normally only group A): take the first item with `"date": null`, set its `"date"` to today.
+- TOPIC RULE (Saif's instruction): write ONLY about places, history and stories connected to the cities and sites in the two tour programmes — Baghdad (Kadhimiya, Mutanabbi St, Qishla, Mustansiriya, Aqar Quf), Babylon & Borsippa, Karbala, Kufa, Najaf, Uruk, Basra & Qurna, the Marshes, Ur, Samarra, Mosul & Nineveh, Nimrud, Hatra, Mar Mattai, Erbil. Topics can be a site, or a person/story tied to it (e.g. Najaf → biography of Imam Ali, stories from his life, his companions; Kufa → the Great Mosque, Muslim ibn Aqil; Karbala → Imam Hussein, al-Abbas, the companions of Hussein). If the queue runs out, add new topics of this kind only, rotating between cities, never places outside the programmes.
+- The item's `title` is an English working title and `category_en` the category; translate the category consistently per language.
 - Write only the languages of YOUR group that are not yet in the item's `langs_done`.
 - If an earlier day's item still has languages of your group missing (a run failed), do those too after today's, max 3 extra articles.
 
@@ -31,11 +33,13 @@ For each language L:
 - Slug: lowercase ASCII `a-z0-9-` only, 3–6 words. Latin-script languages: in that language without accents (`babylone-irak-guide-visite`). Non-Latin (ar, fa, ru, el, zh, ja, th): English words (`babylon-iraq-travel-guide`).
 - Append to `_blog/L/posts.json` (create the file as `[]` if missing):
   `topic` (the plan key — identical in all languages, this links translations via hreflang), `slug`, `date` (today), `title` (≤60 chars; CJK ≤32 chars), `h1`, `description` (130–155 chars; CJK 60–90 chars), `excerpt` (≤150), `keywords` (6–10, comma-separated), `category` (translated, keep the same wording for the same category every day — reuse what earlier posts in L used), `region` (in L), `place` (short name in L), `geo` [lat, lon] (only if confident), `tour` ("7"/"9" from plan), `image`, `image_alt` (in L), `image_credit`, `facts` (4–6 [label, value] in L), `faq` (5–6 [question, answer] in L, answers 1–3 sentences).
-- Tone everywhere: purely touristic and cultural. No politics, no war/conflict/destruction narratives, no "dark tourism", no religious controversy. Religious sites: spiritual, architectural and heritage significance only. Everything in your own words, no copied text, no song lyrics or poems.
+- Tone everywhere: touristic, cultural and respectful. No modern politics, no modern war/conflict/destruction narratives, no "dark tourism". Religious sites: spiritual, architectural and heritage significance.
+- Biographies and stories of Imams, Prophets and companions (Imam Ali, Imam Hussein, al-Abbas, Zaynab, Malik al-Ashtar, Muslim ibn Aqil, etc.): write with deep respect, using the well-known historical accounts; use the honorifics customary in each language (Arabic/Persian: عليه السلام / (ع) after the Imams, صلى الله عليه وآله وسلم after the Prophet; other languages: "Imam Ali (peace be upon him)" on first mention is fine). Historical events like the Battle of Karbala (680 CE) are told as history, without graphic detail and without sectarian polemics or attacks on any group. Where accounts differ, say "according to tradition". Quote the Qur'an or sayings only briefly and only if certain of the wording; prefer paraphrase.
+- Everything in your own words, no copied text, no song lyrics or poems.
 
 ## 4. Images — free licences only (one hero photo per topic, reuse it in every language)
 - If another language of this topic already has an image, reuse the same `image` and `image_credit` (translate only the alt text and the word "Photo").
-- Otherwise: allowed sources only Pexels, Unsplash, or Wikimedia Commons files that are Public domain / CC0 / CC BY / CC BY-SA. Not allowed: Google Images, news sites, blogs, social media, watermarked stock, Pixabay hotlinks, unclear licences, people as the main subject, public figures.
+- Otherwise: allowed sources only Pexels, Unsplash, or Wikimedia Commons files that are Public domain / CC0 / CC BY / CC BY-SA. Not allowed: Google Images, news sites, blogs, social media, watermarked stock, Pixabay hotlinks, unclear licences, people as the main subject, public figures. Never use any painting or image depicting the Prophet, the Imams or their family — for biography/story topics use a photo of the related shrine, mosque or city.
 - Confirm the photo really shows THIS place (WebSearch with allowed_domains pexels.com / unsplash.com / commons.wikimedia.org, then WebFetch the photo page for place, author, licence).
 - If the shell can download it (curl works), save `img/<topic>.webp` (≈1600px, compressed) and use that path. Otherwise the CDN URL: Pexels `https://images.pexels.com/photos/<id>/pexels-photo-<id>.jpeg?auto=compress&cs=tinysrgb&w=1600&h=800&fit=crop`; Unsplash `https://images.unsplash.com/photo-...?w=1600&q=80`; Wikimedia: upload.wikimedia.org URL.
 - `image_credit` always: `Photo: <author> / <Pexels|Unsplash|Wikimedia Commons> (<licence>)` (word "Photo" in L).
@@ -47,4 +51,4 @@ For each language L:
 3. Check: every new page exists; ld+json blocks parse (`json.loads`); internal links point to existing files; `sitemap.xml` parses as XML.
 4. `git pull --rebase origin main` (another group may have pushed), rebuild if the pull changed `_blog/`, commit `Blog: <topic> (<langs>)`, push to `main`. If the push is rejected, pull --rebase again and retry once.
 
-Only touch `_blog/`, the `blog/` folders, `img/` and `sitemap.xml`. Never edit the tour pages.
+Only touch `_blog/`, the `blog/` folders, `img/` and `sitemap.xml`. Never edit the tour pages. For biography/story topics the `place` field is the related city or shrine (e.g. Najaf), and `geo` is that shrine's location.
