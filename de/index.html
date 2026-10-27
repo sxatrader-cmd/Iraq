@@ -546,6 +546,15 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
 @media (max-width:820px){.ft-trust{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.ft-book{flex-wrap:wrap}.ft-bk-b{width:100%;text-align:center}}
 </style>
+<style id="ft-guide-css">
+.ft-cta{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--gold);color:var(--navy);font-weight:700;font-size:16px;padding:13px 28px;border-radius:4px;text-decoration:none}
+.ft-cta:hover{filter:brightness(1.07)}
+.ft-guide{display:flex;gap:26px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px 26px}
+.ft-guide img{flex:none;width:150px;height:150px;border-radius:50%;object-fit:cover}
+.ft-guide h2{margin:4px 0 10px;color:var(--navy)}
+.ft-guide p{margin:0;color:var(--ink);line-height:1.75;max-width:70ch}
+@media (max-width:640px){.ft-guide{flex-direction:column;text-align:center;padding:22px 18px}.ft-guide img{width:130px;height:130px}}
+</style>
 </head>
 <body>
 
@@ -578,6 +587,7 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
     <span class="eyebrow" data-i="eyebrow">Privat- und Gruppenreisen · Zu Ihrem Wunschtermin</span>
     <h1 class="disp" data-i="h1">Irak: eine Reise durch Mesopotamien</h1>
     <p data-i="lead">Von Babylon, Ur und den Marschen im Süden bis Samarra, Hatra, Mosul und Erbil im Norden. Zwei Programme mit 4–5★-Hotels und eigenem Reiseleiter.</p>
+    <a class="ft-cta" href="#interest">Jetzt buchen →</a>
   </div>
 </section>
 
@@ -1046,19 +1056,18 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
 
 
 
+  <section class="block in" style="padding-top:0" id="guide">
+    <div class="ft-guide"><img src="/img/saif-avatar.webp" alt="Saif Al-Tamimi – Fable Tour" width="150" height="150" loading="lazy" decoding="async"><div><span class="eyebrow">Ihr Reiseleiter</span><h2 class="disp">Saif Al-Tamimi</h2><p>Saif wurde 1991 im Irak geboren. 2010 ging er in die Ukraine, studierte dort Zahnmedizin und schloss an der Staatlichen Medizinischen Universität Poltawa ab. Er reist leidenschaftlich gern, hat 13 Länder als Tourist besucht und möchte, dass die Welt die wahre Geschichte des Irak kennenlernt. Heute ist Reiseleiter sein Hauptberuf – weil immer mehr Touristen in den Irak kommen und weil er seine Arbeit liebt. Er führt auf Englisch, Russisch und Arabisch.</p></div></div>
+  </section>
+
   <section class="block in" style="padding-top:0" id="reviews">
     <div class="ti-wrap" id="tiWrap" style="margin-top:0"></div>
     <script>
-    /* reviews appear 10 seconds after the visitor opens the page */
+    /* reviews load immediately */
     (function(){
-      var sec=document.getElementById("reviews"); sec.style.display="none";
-      setTimeout(function(){
-        sec.style.display=""; sec.style.opacity="0"; sec.style.transition="opacity .8s ease";
-        var sc=document.createElement("script"); sc.defer=true; sc.async=true;
-        sc.src="https://cdn.trustindex.io/loader.js?3607655845c93565f566f34edc7";
-        document.getElementById("tiWrap").appendChild(sc);
-        requestAnimationFrame(function(){ requestAnimationFrame(function(){ sec.style.opacity="1"; }); });
-      },10000);
+      var sc=document.createElement("script"); sc.defer=true; sc.async=true;
+      sc.src="https://cdn.trustindex.io/loader.js?3607655845c93565f566f34edc7";
+      document.getElementById("tiWrap").appendChild(sc);
     })();
     </script>
   </section>
