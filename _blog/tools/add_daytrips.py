@@ -23,9 +23,10 @@ FROM = {"babylon": 200, "babylon4": 220, "holy": 239, "south": 300, "samarra": 1
 IMG_Q = {}
 PX = lambda i: f"https://images.pexels.com/photos/{i}/pexels-photo-{i}.jpeg?auto=compress&cs=tinysrgb&w=900"
 # free-licence photos (Pexels licence / Saif's own photo) — no credit shown
-LOCAL_IMG = {"aqarquf": "img/aqar-quf-ziggurat.webp", "samarra": PX(37988383), "babylon": "img/babylon-ishtar-gate.webp",
+LOCAL_IMG = {"aqarquf": "img/aqar-quf-ziggurat.webp", "samarra": ["img/samarra-malwiya.webp", "img/samarra-2.webp"], "babylon": "img/babylon-ishtar-gate.webp",
              "babylon4": "img/borsippa-ziggurat.webp", "madain": "img/taq-kasra.webp", "holy": "img/kufa-great-mosque.webp", "south": PX(14111676)}
 MAXP = 12
+COUNT = '<span class="dt-cnt" dir="ltr" aria-hidden="true">1 / {n}</span>'
 ZOOM = '<span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span>'
 
 CSS = """
@@ -45,9 +46,13 @@ html[lang="ar"] .dt-toggle b,html[lang="fa"] .dt-toggle b{font-family:var(--seri
 .dt-ph.none{filter:none}
 .dt-ph[data-full]{cursor:zoom-in}
 .dt-zoom{position:absolute;inset-inline-end:8px;bottom:8px;width:32px;height:32px;border-radius:50%;background:rgba(18,26,43,.55);color:#fff;display:grid;place-items:center;filter:none}
+.dt-cnt{position:absolute;inset-inline-start:8px;bottom:8px;background:rgba(18,26,43,.55);color:#fff;font:600 12px var(--sans-en);padding:4px 8px;border-radius:999px;filter:none}
+.dt-lb .nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.85);color:var(--navy);font-size:26px;cursor:pointer;inset-inline-end:auto}
+.dt-lb .prev{left:10px}.dt-lb .next{right:10px;left:auto}
+.dt-lb .ct{position:absolute;bottom:max(16px,env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);color:#fff;font:600 13px var(--sans-en)}
 .dt-lb{position:fixed;inset:0;z-index:60;background:rgba(10,15,28,.94);display:grid;place-items:center;padding:16px;touch-action:pinch-zoom}
 .dt-lb img{max-width:100%;max-height:88vh;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.6);filter:saturate(1.3) contrast(1.05)}
-.dt-lb button{position:absolute;top:max(14px,env(safe-area-inset-top,0px));inset-inline-end:14px;width:44px;height:44px;border-radius:50%;border:0;background:var(--gold);color:var(--navy);font-size:24px;font-weight:700;cursor:pointer}
+.dt-lb .x{position:absolute;top:max(14px,env(safe-area-inset-top,0px));inset-inline-end:14px;width:44px;height:44px;border-radius:50%;border:0;background:var(--gold);color:var(--navy);font-size:24px;font-weight:700;cursor:pointer}
 .dt-ph.none{background-size:56px;background-repeat:repeat;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23B8955A' stroke-width='1.2' opacity='.4'%3E%3Cpath d='M28 4 52 28 28 52 4 28z'/%3E%3Ccircle cx='28' cy='28' r='7'/%3E%3C/g%3E%3C/svg%3E")}
 .dt-bd{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
 .dt-bd h3{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.3}
@@ -78,12 +83,14 @@ def section(l):
         title, stops, inc = T[k]
         img = ""
         if k in LOCAL_IMG:
-            src = LOCAL_IMG[k] if LOCAL_IMG[k].startswith("http") else ("" if l == "ar" else "../") + LOCAL_IMG[k]
-            full = src.replace("w=900", "w=1800")
+            lst = LOCAL_IMG[k] if isinstance(LOCAL_IMG[k], list) else [LOCAL_IMG[k]]
+            lst = [u if u.startswith("http") else ("" if l == "ar" else "../") + u for u in lst]
+            src = lst[0]
+            full = "|".join(u.replace("w=900", "w=1800") for u in lst)
             img = f' style="background-image:url(\'{src}\')" data-full="{esc(full)}" tabindex="0"'
         incs = "".join(f"<li>{esc(x)}</li>" for x in inc)
         cards += f"""<article class="dt" data-trip="{k}">
-  <div class="dt-ph{'' if img else ' none'}"{img} role="{'button' if img else 'img'}" aria-label="{esc(title)}">{ZOOM if img else ''}</div>
+  <div class="dt-ph{'' if img else ' none'}"{img} role="{'button' if img else 'img'}" aria-label="{esc(title)}">{ZOOM if img else ''}{COUNT.format(n=len(LOCAL_IMG[k])) if isinstance(LOCAL_IMG.get(k), list) else ''}</div>
   <div class="dt-bd">
     <h3>{esc(title)}</h3>
     <p class="dt-s">{esc(stops)}</p>
@@ -132,12 +139,22 @@ document.querySelectorAll(".dt").forEach(function(c){var k=c.dataset.trip,n=1,ou
  function upd(){out.textContent=n;var p=fmt(P[k](n));tot.textContent=p;bk.href="https://wa.me/9647711745353?text="+encodeURIComponent(U.wa.replace("{trip}",T[k]).replace("{n}",n).replace("{price}",p));}
  c.querySelectorAll(".dt-step button").forEach(function(b){b.addEventListener("click",function(){n=Math.min(MAX,Math.max(1,n+(+b.dataset.d)));upd();});});upd();});
 function loadImgs(){}
-function lb(src,alt){var o=document.createElement("div");o.className="dt-lb";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
- var i=document.createElement("img");i.src=src;i.alt=alt;var x=document.createElement("button");x.type="button";x.setAttribute("aria-label","×");x.textContent="×";
- o.appendChild(i);o.appendChild(x);document.body.appendChild(o);document.body.style.overflow="hidden";x.focus();
+function lb(list,alt){var idx=0,o=document.createElement("div");o.className="dt-lb";o.dir="ltr";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
+ var i=document.createElement("img");i.alt=alt;var x=document.createElement("button");x.type="button";x.className="x";x.setAttribute("aria-label","×");x.textContent="×";
+ o.appendChild(i);o.appendChild(x);var ct=null;
+ function show(){i.src=list[idx];if(ct)ct.textContent=(idx+1)+" / "+list.length;}
+ function go(d){idx=(idx+d+list.length)%%list.length;show();}
+ if(list.length>1){var p=document.createElement("button");p.type="button";p.className="nav prev";p.textContent="‹";p.setAttribute("aria-label","‹");
+  var n=document.createElement("button");n.type="button";n.className="nav next";n.textContent="›";n.setAttribute("aria-label","›");
+  p.addEventListener("click",function(e){e.stopPropagation();go(-1);});n.addEventListener("click",function(e){e.stopPropagation();go(1);});
+  ct=document.createElement("span");ct.className="ct";o.appendChild(p);o.appendChild(n);o.appendChild(ct);
+  var sx=null;o.addEventListener("touchstart",function(e){if(e.touches.length===1)sx=e.touches[0].clientX;},{passive:true});
+  o.addEventListener("touchend",function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)go(dx<0?1:-1);sx=null;});}
+ show();document.body.appendChild(o);document.body.style.overflow="hidden";x.focus();
  function close(){o.remove();document.body.style.overflow="";document.removeEventListener("keydown",k);}
- function k(e){if(e.key==="Escape")close();}document.addEventListener("keydown",k);o.addEventListener("click",function(e){if(e.target!==i)close();});}
-document.querySelectorAll(".dt-ph[data-full]").forEach(function(ph){function open(){lb(ph.dataset.full,ph.getAttribute("aria-label"));}
+ function k(e){if(e.key==="Escape")close();else if(e.key==="ArrowRight")go(1);else if(e.key==="ArrowLeft")go(-1);}document.addEventListener("keydown",k);
+ o.addEventListener("click",function(e){if(e.target===o||e.target===x)close();});}
+document.querySelectorAll(".dt-ph[data-full]").forEach(function(ph){function open(){lb(ph.dataset.full.split("|"),ph.getAttribute("aria-label"));}
  ph.addEventListener("click",open);ph.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});});
 })();</script>
 """ % (JS_PRICES, json.dumps({"wa": u["wa"]}, ensure_ascii=False), json.dumps(T, ensure_ascii=False), MAXP)
