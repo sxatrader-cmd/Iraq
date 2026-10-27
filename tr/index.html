@@ -501,6 +501,19 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
 .ap-book[aria-disabled="true"]{opacity:.45;pointer-events:none}
 .ap-big{margin-top:10px;font-size:13px;color:var(--muted)}
 </style>
+<style id="gal-css">
+.xvid{margin:28px auto!important}
+.gal{position:relative;border-radius:6px;overflow:hidden;background:var(--navy);aspect-ratio:4/3;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+@media(min-width:820px){.gal{aspect-ratio:16/9}}
+.gal-s{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+.gal-s.on{opacity:1}
+.gal-s img{width:100%;height:100%;object-fit:cover;display:block}
+.gal-nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(14,22,40,.45);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:grid;place-items:center;z-index:2}
+.gal-prev{left:10px}.gal-next{right:10px}
+.gal-dots{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:6px;z-index:2;flex-wrap:wrap;padding:0 40px}
+.gal-dots button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer}
+.gal-dots button.on{background:var(--gold);transform:scale(1.3)}
+</style>
 </head>
 <body>
 
@@ -661,7 +674,8 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
    
    <div class="grp" data-tour="7"><span class="eyebrow">Grup turları</span><h4>Yaklaşan grup tarihleri</h4><p>Bu tarihlerden birinde küçük bir gruba katılın — aynı fiyatla, iki kişilik odada kişi başı <span dir="ltr">$2,500</span>.</p><div class="grp-dates"><div class="gd" data-date="2026-11-06"><span class="gd-d">6</span><span class="gd-txt"><span class="gd-m" style="display:block">6 Kasım 2026</span><span class="gd-w"></span></span><button type="button" data-book="7" data-date="2026-11-06">Rezervasyon</button></div><div class="gd" data-date="2026-11-13"><span class="gd-d">13</span><span class="gd-txt"><span class="gd-m" style="display:block">13 Kasım 2026</span><span class="gd-w"></span></span><button type="button" data-book="7" data-date="2026-11-13">Rezervasyon</button></div><div class="gd" data-date="2026-11-20"><span class="gd-d">20</span><span class="gd-txt"><span class="gd-m" style="display:block">20 Kasım 2026</span><span class="gd-w"></span></span><button type="button" data-book="7" data-date="2026-11-20">Rezervasyon</button></div></div></div>
    </div></section>
-   <section class="prog" id="tour-9-days" aria-labelledby="tour-9-days-h">
+   <div class="vid vert xvid"><iframe src="https://www.youtube-nocookie.com/embed/1mDJ139QhMM?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Fable Tour" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<section class="prog" id="tour-9-days" aria-labelledby="tour-9-days-h">
     <div class="prog-head"><span class="eyebrow">Program 2 · <span dir="ltr">$3,400</span></span>
       <h3 class="disp" id="tour-9-days-h">Tüm Irak, Basra'dan Erbil'e: 9 gün / 8 gece</h3>
       <p class="route">Basra · Bataklıklar · Ur · Necef · Kerbela · Babil · Bağdat · Samarra · Hatra · Musul · Nimrud · Erbil</p><p class="se">Varış: Basra havalimanı · Dönüş: Erbil havalimanı</p><button type="button" class="prog-tg" aria-expanded="false" aria-controls="pb-tour-9-days" data-show="Programı göster" data-hide="Programı gizle"><span class="lbl">Programı göster</span><span class="prog-chev" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M6 9l6 6 6-6"/></svg></span></button></div><div class="prog-body" id="pb-tour-9-days" hidden>
@@ -794,6 +808,9 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
    
    <div class="grp" data-tour="9"><span class="eyebrow">Grup turları</span><h4>Yaklaşan grup tarihleri</h4><p>Bu tarihlerden birinde küçük bir gruba katılın — aynı fiyatla, iki kişilik odada kişi başı <span dir="ltr">$3,400</span>.</p><div class="grp-dates"><div class="gd" data-date="2026-11-06"><span class="gd-d">6</span><span class="gd-txt"><span class="gd-m" style="display:block">6 Kasım 2026</span><span class="gd-w"></span></span><button type="button" data-book="9" data-date="2026-11-06">Rezervasyon</button></div><div class="gd" data-date="2026-12-04"><span class="gd-d">4</span><span class="gd-txt"><span class="gd-m" style="display:block">4 Aralık 2026</span><span class="gd-w"></span></span><button type="button" data-book="9" data-date="2026-12-04">Rezervasyon</button></div><div class="gd" data-date="2027-01-01"><span class="gd-d">1</span><span class="gd-txt"><span class="gd-m" style="display:block">1 Ocak 2027</span><span class="gd-w"></span></span><button type="button" data-book="9" data-date="2027-01-01">Rezervasyon</button></div></div></div>
    </div></section>
+<div class="vid vert xvid"><iframe src="https://www.youtube-nocookie.com/embed/87ApC9_ynRM?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Fable Tour" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="gal-wrap" id="gallery" style="margin:36px 0"><div class="sec-head"><span class="eyebrow">Galeri</span><h2 class="disp">Irak gezilerimizden</h2></div><div class="gal" dir="ltr"><div class="gal-s on"><img src="/img/shabandar-cafe-tea.webp" alt="Irak gezilerimizden – 1" decoding="async"></div><div class="gal-s"><img src="/img/kadhimiya-shrine-night.webp" alt="Irak gezilerimizden – 2" decoding="async"></div><div class="gal-s"><img data-src="/img/qishla-clock-tower-view.webp" alt="Irak gezilerimizden – 3" decoding="async"></div><div class="gal-s"><img data-src="/img/basra-shatt-al-arab-sunset.webp" alt="Irak gezilerimizden – 4" decoding="async"></div><div class="gal-s"><img data-src="/img/abbasid-palace-arches.webp" alt="Irak gezilerimizden – 5" decoding="async"></div><div class="gal-s"><img data-src="/img/uruk-warka.webp" alt="Irak gezilerimizden – 6" decoding="async"></div><div class="gal-s"><img data-src="/img/mosul-al-hadba-nuri.webp" alt="Irak gezilerimizden – 7" decoding="async"></div><div class="gal-s"><img data-src="/img/baghdadi-museum-scene.webp" alt="Irak gezilerimizden – 8" decoding="async"></div><div class="gal-s"><img data-src="/img/hatra.webp" alt="Irak gezilerimizden – 9" decoding="async"></div><div class="gal-s"><img data-src="/img/tigris-boat-clock-tower.webp" alt="Irak gezilerimizden – 10" decoding="async"></div><div class="gal-s"><img data-src="/img/samarra-malwiya-b2b.webp" alt="Irak gezilerimizden – 11" decoding="async"></div><div class="gal-s"><img data-src="/img/qishla-arcade.webp" alt="Irak gezilerimizden – 12" decoding="async"></div><div class="gal-s"><img data-src="/img/nimrud.webp" alt="Irak gezilerimizden – 13" decoding="async"></div><div class="gal-s"><img data-src="/img/abbasid-palace-courtyard.webp" alt="Irak gezilerimizden – 14" decoding="async"></div><div class="gal-s"><img data-src="/img/adam-tree-qurna.webp" alt="Irak gezilerimizden – 15" decoding="async"></div><div class="gal-s"><img data-src="/img/mutanabbi-statue.webp" alt="Irak gezilerimizden – 16" decoding="async"></div><div class="gal-s"><img data-src="/img/wadi-al-salam.webp" alt="Irak gezilerimizden – 17" decoding="async"></div><div class="gal-s"><img data-src="/img/qishla-balcony.webp" alt="Irak gezilerimizden – 18" decoding="async"></div><div class="gal-s"><img data-src="/img/bahlul-shrine-dome.webp" alt="Irak gezilerimizden – 19" decoding="async"></div><div class="gal-s"><img data-src="/img/baghdadi-museum-costumes.webp" alt="Irak gezilerimizden – 20" decoding="async"></div><button type="button" class="gal-nav gal-prev" aria-label="‹">‹</button><button type="button" class="gal-nav gal-next" aria-label="›">›</button><div class="gal-dots"></div></div></div>
+
     </div>
   </section>
 
@@ -1381,6 +1398,19 @@ function upd(){
  var msg=C.wa.replace("{date}",d.value).replace("{time}",tm.value).replace("{n}",k).replace("{extra}",ex).replace("{price}",ps);
  bk.href="https://wa.me/9647711745353?text="+encodeURIComponent(msg);bk.removeAttribute("aria-disabled");}
 [d,tm,n,h,f].forEach(function(x){x.addEventListener("input",upd);x.addEventListener("change",upd);});
+})();</script>
+<script id="gal-js">(function(){
+var g=document.querySelector(".gal");if(!g)return;var s=[].slice.call(g.querySelectorAll(".gal-s")),d=g.querySelector(".gal-dots"),i=0,t=null,N=s.length;
+function load(k){var im=s[k].querySelector("img");if(im&&im.dataset.src){im.src=im.dataset.src;im.removeAttribute("data-src");}}
+s.forEach(function(_,k){var b=document.createElement("button");b.type="button";b.setAttribute("aria-label",(k+1)+" / "+N);b.addEventListener("click",function(){go(k);restart();});d.appendChild(b);});
+var dots=[].slice.call(d.children);
+function go(k){s[i].classList.remove("on");dots[i].classList.remove("on");i=(k+N)%N;load(i);load((i+1)%N);s[i].classList.add("on");dots[i].classList.add("on");}
+function restart(){clearInterval(t);t=setInterval(function(){if(!document.hidden)go(i+1);},5000);}
+g.querySelector(".gal-prev").addEventListener("click",function(){go(i-1);restart();});
+g.querySelector(".gal-next").addEventListener("click",function(){go(i+1);restart();});
+var x=null;g.addEventListener("touchstart",function(e){x=e.touches[0].clientX;},{passive:true});
+g.addEventListener("touchend",function(e){if(x===null)return;var dx=e.changedTouches[0].clientX-x;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));restart();}x=null;});
+go(0);restart();
 })();</script>
 </body>
 </html>
