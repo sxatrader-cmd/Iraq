@@ -1493,5 +1493,22 @@ cards.forEach(function(ph){
   upd();
 })();
 </script>
+<script>
+/* lift the WhatsApp and Book buttons above the Trustindex review pop-up while it is showing */
+(function(){
+  var btns=[document.querySelector('.wa-float'),document.getElementById('ftSBook')].filter(Boolean);
+  btns.forEach(function(b){ b.style.transition=(b.style.transition?b.style.transition+',':'')+'translate .3s ease'; });
+  var last=-1;
+  setInterval(function(){
+    var off=0, H=window.innerHeight;
+    document.querySelectorAll('.ti-widget').forEach(function(w){
+      if(getComputedStyle(w).position!=='fixed') return;
+      var r=w.getBoundingClientRect();
+      if(r.height>0 && r.top<H && r.bottom>H-40 && getComputedStyle(w).visibility!=='hidden' && getComputedStyle(w).opacity!=='0'){ off=Math.max(off,H-r.top+8); }
+    });
+    if(off!==last){ last=off; btns.forEach(function(b){ b.style.translate=off?('0 -'+Math.round(off)+'px'):''; }); }
+  },400);
+})();
+</script>
 </body>
 </html>
