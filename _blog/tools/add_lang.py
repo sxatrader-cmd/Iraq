@@ -166,6 +166,7 @@ def build_page(lang, rel, M, trips, unknown):
     out = re.sub(r'(<a href="[^"]*" hreflang="en" lang="en") aria-current="page"', r'\1', out)
     out = re.sub(r'(<a href="[^"]*/en/[^"]*day-trips/[^"]*")', lambda m: m.group(1).replace("/en/", f"/{lang}/"), out)
     out = out.replace('HOME="/en/"', f'HOME="/{lang}/"')
+    out = out.replace('href="/en/blog/"', f'href="/{lang}/blog/"')
     return out
 
 

@@ -1,10 +1,11 @@
 # Daily multilingual blog — instructions
 
-Site: https://iraq.fabletour.com — 20 languages. Every day ONE place in Iraq gets ONE article in EVERY language.
-Three scheduled runs share the work; each run handles one language group (see `groups` in `_blog/plan.json`):
+Site: https://iraq.fabletour.com — 24 languages. Every day ONE place in Iraq gets ONE article in EVERY language.
+Four scheduled runs share the work; each run handles one language group (see `groups` in `_blog/plan.json`):
 - Group A (first run of the day): en, ar, ru, de, fr, it
 - Group B: es, el, cs, pl, tr, fa
 - Group C: zh, ja, ms, id, th, hi, ur, ta
+- Group D: fi, sv, da, no (Finnish, Swedish, Danish, Norwegian Bokmål)
 
 Blog URLs: Arabic → `/blog/`, every other language L → `/L/blog/`. Sources live in `_blog/L/`.
 
@@ -23,14 +24,14 @@ If another language of this topic already exists (check `langs_done`; the files 
 ## 3. Write each article — native, not a word-for-word translation
 For each language L:
 - 1,000–1,500 words (CJK: 2,000–3,000 characters; Thai similar length) of natural, fluent text for travellers from that country. Adapt the hook to the reader (Italian: Verdi's Nabucco for Babylon; German: the Ishtar Gate in Berlin's Pergamon Museum; Malay/Indonesian/Persian/Arabic/Turkish/Urdu/Hindi/Tamil readers: religious-heritage (ziyarat) visitors are common — Urdu: use customary honorifics (ؑ after the Imams, ؐ/ﷺ after the Prophet); Hindi/Tamil: plain respectful wording; Chinese/Japanese: practical tone, clear structure).
-- Do local keyword thinking in L: the main keyword as people in that country search it (e.g. de "Babylon Irak besichtigen", fr "visiter Babylone", ru "Вавилон Ирак экскурсия", ja "バビロン遺跡 行き方"). Use it in title, h1, first paragraph, one h2 and description — naturally.
+- Do local keyword thinking in L: the main keyword as people in that country search it (e.g. de "Babylon Irak besichtigen", fr "visiter Babylone", ru "Вавилон Ирак экскурсия", ja "バビロン遺跡 行き方", fi "Babylon Irak nähtävyydet", sv "besöka Babylon Irak", da "besøge Babylon Irak", no "besøke Babylon Irak"). Use it in title, h1, first paragraph, one h2 and description — naturally.
 - Body fragment → `_blog/L/posts/<slug>.html`:
   - Starts with `<p class="lead">…</p>`; then 5–8 `<h2>` sections, `<h3>` sub-points, one `<ul>` of practical tips, optional `<blockquote>` with a first-person note from the guide Saif.
   - Sections like: where it is / history / what to see / how to get there (from Baghdad or nearest city) / best time to visit / practical tips / the place in an Iraq trip.
   - Internal links: 1–3 to earlier articles in the SAME language (`/L/blog/<slug>/`, Arabic `/blog/<slug>/`), and to the tours: `/L/#tour-7-days` or `/L/#tour-9-days` (Arabic: `/#tour-7-days`).
   - Do NOT include H1, facts box, FAQ, CTA or author box — `build.py` adds them.
   - Visa/entry: only say rules change and must be checked; do not state rules for a nationality unless verified today.
-- Slug: lowercase ASCII `a-z0-9-` only, 3–6 words. Latin-script languages: in that language without accents (`babylone-irak-guide-visite`). Non-Latin (ar, fa, ru, el, zh, ja, th, hi, ur, ta): English words (`babylon-iraq-travel-guide`).
+- Slug: lowercase ASCII `a-z0-9-` only, 3–6 words. Latin-script languages: in that language without accents (`babylone-irak-guide-visite`; Nordic letters ä/å→a, ö/ø→o, æ→ae: `besoke-babylon-irak-guide`). Non-Latin (ar, fa, ru, el, zh, ja, th, hi, ur, ta): English words (`babylon-iraq-travel-guide`).
 - Append to `_blog/L/posts.json` (create the file as `[]` if missing):
   `topic` (the plan key — identical in all languages, this links translations via hreflang), `slug`, `date` (today), `title` (≤60 chars; CJK ≤32 chars), `h1`, `description` (130–155 chars; CJK 60–90 chars), `excerpt` (≤150), `keywords` (6–10, comma-separated), `category` (translated, keep the same wording for the same category every day — reuse what earlier posts in L used), `region` (in L), `place` (short name in L), `geo` [lat, lon] (only if confident), `tour` ("7"/"9" from plan), `image`, `image_alt` (in L), `image_credit`, `facts` (4–6 [label, value] in L), `faq` (5–6 [question, answer] in L, answers 1–3 sentences).
 - Tone everywhere: touristic, cultural and respectful. No modern politics, no modern war/conflict/destruction narratives, no "dark tourism". Religious sites: spiritual, architectural and heritage significance.

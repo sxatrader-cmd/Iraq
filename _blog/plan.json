@@ -26,6 +26,12 @@
    "hi",
    "ur",
    "ta"
+  ],
+  "D": [
+   "fi",
+   "sv",
+   "da",
+   "no"
   ]
  },
  "queue": [
@@ -50,7 +56,11 @@
     "th",
     "hi",
     "ur",
-    "ta"
+    "ta",
+    "fi",
+    "sv",
+    "da",
+    "no"
    ],
    "source_article": "_blog/it/posts/babilonia-iraq-guida-visita.html"
   },

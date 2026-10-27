@@ -22,13 +22,14 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 B = ROOT / "_blog"
 SITE = "https://iraq.fabletour.com"
 WA = "https://wa.me/9647711745353"
-LANGS = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa", "ms", "id", "th", "hi", "ur", "ta"]
+LANGS = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa", "ms", "id", "th", "hi", "ur", "ta", "fi", "sv", "da", "no"]
 HREFLANG = {"zh": "zh-Hans"}
 OGLOC = {"ar": "ar_AR", "en": "en_US", "ru": "ru_RU", "de": "de_DE", "fr": "fr_FR", "es": "es_ES", "it": "it_IT",
          "el": "el_GR", "cs": "cs_CZ", "pl": "pl_PL", "zh": "zh_CN", "ja": "ja_JP", "tr": "tr_TR", "fa": "fa_IR",
-         "ms": "ms_MY", "id": "id_ID", "th": "th_TH", "hi": "hi_IN", "ur": "ur_PK", "ta": "ta_IN"}
+         "ms": "ms_MY", "id": "id_ID", "th": "th_TH", "hi": "hi_IN", "ur": "ur_PK", "ta": "ta_IN",
+         "fi": "fi_FI", "sv": "sv_SE", "da": "da_DK", "no": "nb_NO"}
 RTL = {"ar", "fa", "ur"}
-BLOGWORD = {"ar": "المدونة", "fa": "وبلاگ", "ru": "Блог", "zh": "博客", "ja": "ブログ", "th": "บล็อก", "hi": "ब्लॉग", "ur": "بلاگ", "ta": "வலைப்பதிவு"}
+BLOGWORD = {"ar": "المدونة", "fa": "وبلاگ", "ru": "Блог", "zh": "博客", "ja": "ブログ", "th": "บล็อก", "hi": "ब्लॉग", "ur": "بلاگ", "ta": "வலைப்பதிவு", "fi": "Blogi", "sv": "Blogg", "no": "Blogg"}
 AUTHOR = {"ar": "سيف التميمي", "fa": "سیف التمیمی", "ur": "سیف التمیمی", "hi": "सैफ़ अल-तमीमी", "ta": "சைஃப் அல்-தமீமி"}
 AUTHOR_EN = "Saif Al-Tamimi"
 T = json.loads((B / "i18n.json").read_text())
@@ -49,7 +50,7 @@ def fdate(l, d):
 
 def slugify(s):
     s = s.lower()
-    for a, b in {"à":"a","á":"a","â":"a","ä":"a","è":"e","é":"e","ê":"e","ì":"i","í":"i","ò":"o","ó":"o","ô":"o","ö":"o","ù":"u","ú":"u","ü":"u","ç":"c","ñ":"n","ş":"s","ğ":"g","ı":"i","ł":"l","ś":"s","ź":"z","ż":"z","ą":"a","ę":"e","ć":"c","ń":"n","ř":"r","š":"s","č":"c","ž":"z","ý":"y","ů":"u","ě":"e","ď":"d","ť":"t","ň":"n","’":"","'":""}.items():
+    for a, b in {"à":"a","á":"a","â":"a","ä":"a","è":"e","é":"e","ê":"e","ì":"i","í":"i","ò":"o","ó":"o","ô":"o","ö":"o","ù":"u","ú":"u","ü":"u","ç":"c","ñ":"n","ş":"s","ğ":"g","ı":"i","ł":"l","ś":"s","ź":"z","ż":"z","ą":"a","ę":"e","ć":"c","ń":"n","ř":"r","š":"s","č":"c","ž":"z","ý":"y","ů":"u","ě":"e","ď":"d","ť":"t","ň":"n","å":"a","æ":"ae","ø":"o","’":"","'":""}.items():
         s = s.replace(a, b)
     s = re.sub(r"[^\w]+", "-", s, flags=re.U).strip("-")
     return s or "s"
@@ -67,6 +68,10 @@ def tours(l):
     f = ROOT / ("index.html" if l == "ar" else f"{l}/index.html")
     s = f.read_text()
     t = re.findall(r'<a class="pcard".*?<b class="disp">(.*?)</b>.*?<span class="ppk">(.*?)</span>', s, re.S)
+    if len(t) < 2:  # programme cards were removed from the homepages: use the booking form and price box
+        names = re.findall(r'<select id="f-prog"[^>]*><option value="([^"]*)">.*?<option value="([^"]*)">', s, re.S)[0]
+        per = re.search(r'<div class="per">([^<]*)</div>', s).group(1)
+        t = [(names[0], per), (names[1], per)]
     (n7, k7), (n9, k9) = [(html.unescape(a), html.unescape(b)) for a, b in t[:2]]
     return {"7": (n7, home(l) + "#tour-7-days", f"$2,500 {k7}"), "9": (n9, home(l) + "#tour-9-days", f"$3,400 {k9}")}
 
