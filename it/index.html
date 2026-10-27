@@ -942,7 +942,7 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
         <div class="field"><label for="f-name" data-i="lName">Nome e cognome</label><input id="f-name" name="name" required autocomplete="name"></div>
         <div class="field"><label for="f-email" data-i="lEmail">Email</label><input id="f-email" name="email" type="email" required autocomplete="email" dir="ltr"></div>
         <div class="field"><label for="f-wa" data-i="lWa">Numero WhatsApp</label><input id="f-wa" name="whatsapp" type="tel" required dir="ltr" placeholder="+00 000 000 0000"></div>
-        <div class="field"><label for="f-prog">Programma</label><select id="f-prog" name="program"><option value="Iraq Heritage Tour: 7 days / 6 nights">Tour del patrimonio dell'Iraq: 7 giorni / 6 notti — $2,500</option><option value="All Iraq, Basra to Erbil: 9 days / 8 nights">Tutto l'Iraq, da Bassora a Erbil: 9 giorni / 8 notti — $3,400</option></select></div><div class="field" id="f-date-field"><label for="f-date">Data del gruppo</label><select id="f-date" name="group_date"><option value="">Tour privato — scelgo io la data</option></select></div>
+        <div class="field"><label for="f-prog">Programma</label><select id="f-prog" name="program"><option value="Iraq Heritage Tour: 7 days / 6 nights">Tour del patrimonio dell'Iraq: 7 giorni / 6 notti — $2,500</option><option value="All Iraq, Basra to Erbil: 9 days / 8 nights">Tutto l'Iraq, da Bassora a Erbil: 9 giorni / 8 notti — $3,400</option></select></div><div class="field" id="f-date-field"><label for="f-date">Data</label><select id="f-date" name="group_date"><option value="">Tour privato — scelgo io la data</option></select></div><div class="field" id="f-pdate-field" hidden><label for="f-pdate">Scegli la data del viaggio</label><input id="f-pdate" name="private_date" type="date" dir="ltr"></div>
         <button class="btn" type="submit" id="f-btn" data-i="send">Invia</button>
         <div class="msg" id="f-msg" role="status" aria-live="polite"></div>
       </form>
@@ -1158,12 +1158,13 @@ $("#form").addEventListener("submit",async e=>{
   const name=$("#f-name").value.trim(), email=$("#f-email").value.trim(), wa=$("#f-wa").value.trim();
   msg.className="msg";
   if(!name||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)||wa.replace(/\D/g,"").length<8){ msg.textContent=t.err; msg.classList.add("err"); return; }
+  { const pf=document.getElementById("f-pdate-field"),pd=document.getElementById("f-pdate"); if(pf&&!pf.hidden&&!pd.value){ msg.textContent="Scegli la data del viaggio"; msg.classList.add("err"); pd.focus(); return; } }
   if(WEB3FORMS_KEY.startsWith("YOUR_")){ msg.textContent=t.nokey; msg.classList.add("err"); return; }
   btn.disabled=true; btn.textContent=t.sending;
   try{
     const r=await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
-      body:JSON.stringify({access_key:WEB3FORMS_KEY,subject:"Iraq Tour — New booking request: "+(document.getElementById("f-prog")||{}).value+((document.getElementById("f-date")||{}).value?" | Group "+document.getElementById("f-date").value.slice(0,10):"")+" ("+lang.toUpperCase()+")",from_name:"Fable Tour Website",
-        name,email,whatsapp:wa,tour:(document.getElementById("f-prog")||{}).value||"",group_date:(document.getElementById("f-date")||{}).value||"",language:lang,botcheck:e.target.botcheck.checked})});
+      body:JSON.stringify({access_key:WEB3FORMS_KEY,subject:"Iraq Tour — New booking request: "+(document.getElementById("f-prog")||{}).value+((document.getElementById("f-date")||{}).value?" | Group "+document.getElementById("f-date").value.slice(0,10):((document.getElementById("f-pdate")||{}).value?" | Private "+document.getElementById("f-pdate").value:""))+" ("+lang.toUpperCase()+")",from_name:"Fable Tour Website",
+        name,email,whatsapp:wa,tour:(document.getElementById("f-prog")||{}).value||"",group_date:(document.getElementById("f-date")||{}).value||"",private_date:(document.getElementById("f-date")||{}).value?"":((document.getElementById("f-pdate")||{}).value||""),language:lang,botcheck:e.target.botcheck.checked})});
     const j=await r.json();
     if(!j.success) throw 0;
     msg.textContent=t.ok; msg.classList.add("ok"); e.target.reset();
@@ -1270,5 +1271,11 @@ function openFor(id){var el=document.getElementById(id);if(!el)return;var s=el.c
 document.querySelectorAll('a[href^="#tour-"]').forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();var id=a.getAttribute("href").slice(1);try{history.replaceState(null,"","#"+id);}catch(x){}openFor(id);});});
 function fromHash(){if(/^#tour-/.test(location.hash))openFor(decodeURIComponent(location.hash.slice(1)));}
 fromHash();window.addEventListener("hashchange",fromHash);
-})();</script></body>
+})();</script><script id="pdate-js">(function(){var sel=document.getElementById("f-date"),prog=document.getElementById("f-prog"),pf=document.getElementById("f-pdate-field"),pd=document.getElementById("f-pdate");if(!sel||!pf||!pd)return;
+var LEAD={"7":5,"9":10};
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+function upd(){var priv=sel.value==="";pf.hidden=!priv;pd.required=priv;var t=prog&&prog.selectedIndex===1?"9":"7";var m=new Date();m.setDate(m.getDate()+LEAD[t]);pd.min=iso(m);if(pd.value&&pd.value<pd.min)pd.value="";}
+sel.addEventListener("change",upd);if(prog)prog.addEventListener("change",function(){setTimeout(upd,0);});
+new MutationObserver(function(){setTimeout(upd,0);}).observe(sel,{childList:true});
+document.addEventListener("click",function(e){if(e.target.closest("[data-book]"))setTimeout(upd,0);});upd();})();</script></body>
 </html>
