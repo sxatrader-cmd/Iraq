@@ -569,6 +569,206 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
     <div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/2V3rdMhxwU0?rel=0&amp;modestbranding=1&amp;playsinline=1" title="العراق مع Fable Tour" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
   </section>
 
+  <!-- ================= START: KARBALA SECTION (copy from here) ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<style>
+#karbala-story{
+  --kb-bg:#0b1a33; --kb-bg2:#10244a; --kb-gold:#d4ad55; --kb-gold2:#f1d48a;
+  --kb-red:#9e1b22; --kb-text:#eef1f6; --kb-muted:#aab4c8; --kb-line:rgba(212,173,85,.28);
+  background:
+    radial-gradient(ellipse at top, rgba(158,27,34,.35), transparent 60%),
+    linear-gradient(180deg,var(--kb-bg) 0%, #07111f 100%);
+  color:var(--kb-text); padding:64px 16px; position:relative; overflow:hidden;
+}
+#karbala-story *{box-sizing:border-box}
+#karbala-story .kb-wrap{max-width:900px;margin:0 auto}
+#karbala-story .kb-lang{display:none}
+#karbala-story .kb-lang.kb-on{display:block}
+#karbala-story .kb-eyebrow{
+  display:inline-block;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--kb-gold);border:1px solid var(--kb-line);padding:6px 14px;border-radius:999px;margin-bottom:18px
+}
+#karbala-story h2{
+  font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(28px,5vw,46px);
+  line-height:1.2;margin:0 0 18px;color:#fff
+}
+#karbala-story [dir=rtl] h2,#karbala-story [dir=rtl] h3{font-family:"Amiri",serif}
+#karbala-story h2 .kb-q{color:var(--kb-gold2);display:block;font-size:.72em;margin-top:8px}
+#karbala-story .kb-hook{font-size:clamp(16px,2.4vw,19px);line-height:1.85;color:var(--kb-text);margin:0 0 28px}
+#karbala-story .kb-hook b{color:var(--kb-gold2)}
+#karbala-story .kb-video{
+  position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  background:#000 center/cover no-repeat;cursor:pointer;
+  box-shadow:0 20px 60px rgba(0,0,0,.55),0 0 0 1px var(--kb-line)
+}
+#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.6))}
+#karbala-story .kb-play{
+  position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;z-index:2;
+  background:var(--kb-red);display:grid;place-items:center;border:2px solid var(--kb-gold);
+  box-shadow:0 0 0 10px rgba(158,27,34,.25);transition:transform .2s
+}
+#karbala-story .kb-video:hover .kb-play{transform:scale(1.08)}
+#karbala-story .kb-play svg{width:32px;height:32px;fill:#fff;margin-inline-start:5px}
+#karbala-story [dir=rtl] .kb-play svg{margin:0 0 0 5px}
+#karbala-story .kb-vmeta{position:absolute;bottom:14px;inset-inline:16px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#karbala-story .kb-vmeta span{background:rgba(0,0,0,.55);padding:4px 10px;border-radius:6px}
+#karbala-story .kb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+#karbala-story .kb-caption{font-size:14px;color:var(--kb-muted);margin:14px 0 30px;line-height:1.7}
+#karbala-story .kb-btn{
+  display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--kb-gold2);
+  border:1.5px solid var(--kb-gold);padding:13px 28px;border-radius:999px;font-size:16px;font-weight:600;
+  cursor:pointer;font-family:inherit;transition:background .2s,color .2s
+}
+#karbala-story .kb-btn:hover{background:var(--kb-gold);color:#0b1a33}
+#karbala-story .kb-btn .kb-arr{transition:transform .3s}
+#karbala-story .kb-btn[aria-expanded=true] .kb-arr{transform:rotate(180deg)}
+#karbala-story .kb-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
+#karbala-story .kb-more.kb-open{grid-template-rows:1fr}
+#karbala-story .kb-more>div{overflow:hidden}
+#karbala-story .kb-inner{padding-top:40px}
+#karbala-story h3{font-size:clamp(22px,3.5vw,30px);color:var(--kb-gold2);margin:48px 0 20px;font-family:"Cormorant Garamond",Georgia,serif}
+#karbala-story h3:first-child{margin-top:0}
+#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--kb-line)}
+#karbala-story .kb-ch{position:relative;margin-bottom:30px}
+#karbala-story .kb-ch::before{
+  content:"";position:absolute;inset-inline-start:-38px;top:6px;width:14px;height:14px;border-radius:50%;
+  background:var(--kb-bg);border:2px solid var(--kb-gold)
+}
+#karbala-story .kb-ch.kb-red::before{background:var(--kb-red);border-color:var(--kb-red);box-shadow:0 0 12px var(--kb-red)}
+#karbala-story .kb-date{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--kb-gold)}
+#karbala-story .kb-ch h4{margin:4px 0 8px;font-size:19px;color:#fff}
+#karbala-story .kb-ch p{margin:0 0 8px;line-height:1.85;color:#d6dbe6;font-size:16px}
+#karbala-story blockquote{
+  margin:12px 0;padding:14px 18px;border-inline-start:3px solid var(--kb-red);
+  background:rgba(158,27,34,.12);border-radius:8px;font-style:italic;color:#fff;line-height:1.8
+}
+#karbala-story .kb-card{background:rgba(255,255,255,.04);border:1px solid var(--kb-line);border-radius:14px;padding:22px}
+#karbala-story .kb-card p{line-height:1.85;color:#d6dbe6;margin:0 0 12px}
+#karbala-story .kb-sources{font-size:14px;color:var(--kb-muted);line-height:1.9}
+#karbala-story .kb-sources li{margin-bottom:2px}
+#karbala-story .kb-cta{margin-top:40px;text-align:center;padding:30px 20px;border-top:1px solid var(--kb-line)}
+#karbala-story .kb-cta p{color:var(--kb-text);font-size:17px;margin:0 0 16px}
+#karbala-story .kb-cta a{
+  display:inline-block;background:var(--kb-gold);color:#0b1a33;text-decoration:none;font-weight:700;
+  padding:14px 32px;border-radius:999px
+}
+@media (max-width:600px){
+  #karbala-story{padding:48px 16px}
+  #karbala-story .kb-play{width:68px;height:68px}
+  #karbala-story .kb-timeline{padding-inline-start:22px}
+  #karbala-story .kb-ch::before{inset-inline-start:-30px}
+}
+</style>
+
+<section id="karbala-story" aria-label="Karbala">
+<div class="kb-wrap">
+
+<!-- ===================== ARABIC ===================== -->
+<div class="kb-lang" data-lang="ar" dir="rtl">
+  <span class="kb-eyebrow">كربلاء · 61 هـ</span>
+  <h2>لكربلاء قصةٌ هزّت العالم من أقصاه إلى أقصاه<span class="kb-q">فما هي هذه القصة؟</span></h2>
+  <p class="kb-hook">في يومٍ واحد، على أرضٍ قاحلة قرب الفرات، وقف رجلٌ مع <b>اثنين وسبعين</b> من أهله وأصحابه أمام جيشٍ بالآلاف، رافضاً أن يضع يده بيد حاكمٍ ظالم. خسر حياته عطشاناً في ذلك اليوم… لكنه صار رمزاً للحرية بعد أربعة عشر قرناً. إنه <b>الحسين بن علي</b>، حفيد النبي محمد ﷺ، وتلك الأرض هي <b>كربلاء</b>، التي يقصدها اليوم الملايين من كل أنحاء الأرض.</p>
+  <div class="kb-video" data-hl="ar"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>بصوت الشيخ عبد الزهراء الكعبي</span><span>1:30:00</span></div></div>
+  <p class="kb-caption">مقتل الإمام الحسين (ع) كاملاً، بصوت الشيخ عبد الزهراء الكعبي، مع صور من كربلاء، ومترجم إلى الإنكليزية والروسية.</p>
+  <button class="kb-btn" aria-expanded="false">اعرف المزيد <span class="kb-arr">▾</span></button>
+  <div class="kb-more"><div><div class="kb-inner">
+
+    <h3>القصة كما ترويها المصادر الشيعية</h3>
+    <div class="kb-timeline">
+      <div class="kb-ch"><span class="kb-date">50 هـ · المدينة</span><h4>رحيل الحسن وعهدٌ لم يُحترم</h4>
+        <p>صالح الإمامُ الحسن بن علي معاويةَ بن أبي سفيان حقناً لدماء المسلمين، وكان من شروط الصلح ألّا يعهد معاوية بالحكم لأحدٍ من بعده. وفي سنة 50 للهجرة رحل الحسن مسموماً، وتذكر المصادر الشيعية أن ذلك كان بيد زوجته جعدة بنت الأشعث بتحريضٍ من معاوية. فصار الحسين إماماً، والتزم بالعهد الذي وقّعه أخوه طوال حياة معاوية.</p></div>
+      <div class="kb-ch"><span class="kb-date">بعد 50 هـ</span><h4>يزيد… وليّ العهد</h4>
+        <p>نقض معاوية الشرط، وأخذ البيعة لابنه يزيد ليحكم من بعده، وهو رجلٌ تصفه المصادر بالمجاهرة بالفسق وشرب الخمر واللهو. رأى الحسين في ذلك تحويلاً لخلافة النبي إلى مُلكٍ يُورَّث، فرفض أن يبايع.</p></div>
+      <div class="kb-ch"><span class="kb-date">رجب 60 هـ · المدينة</span><h4>«ومثلي لا يبايع مثله»</h4>
+        <p>مات معاوية، فكتب يزيد إلى والي المدينة الوليد بن عتبة أن يأخذ البيعة من الحسين أو يأتيه برأسه. دُعي الحسين ليلاً إلى قصر الإمارة فقال كلمته الشهيرة: «ومثلي لا يبايع مثله». وفي 28 رجب خرج بأهله نحو مكة، تاركاً وصيته لأخيه محمد بن الحنفية:</p>
+        <blockquote>«إني لم أخرج أشِراً ولا بطِراً ولا مفسداً ولا ظالماً، وإنما خرجت لطلب الإصلاح في أمة جدي».</blockquote></div>
+      <div class="kb-ch"><span class="kb-date">شعبان – ذو الحجة 60 هـ</span><h4>رسائل الكوفة وغدرها بمسلم بن عقيل</h4>
+        <p>وصلت الحسينَ في مكة آلافُ الرسائل من أهل الكوفة يدعونه إليهم. فأرسل ابن عمه مسلم بن عقيل، فبايعه ثمانية عشر ألفاً كما يروي الشيخ المفيد. لكن يزيد ولّى عبيد الله بن زياد على الكوفة، فأرهب الناس وأغراهم حتى تفرقوا عن مسلم، فبقي وحيداً في أزقتها. آوته امرأة اسمها طوعة، ثم حوصر وقاتل حتى أُسر، وقُتل من أعلى القصر يوم عرفة، ومعه هانئ بن عروة.</p></div>
+      <div class="kb-ch"><span class="kb-date">8 ذو الحجة 60 هـ · مكة</span><h4>الخروج حتى لا تُنتهك حرمة البيت</h4>
+        <p>علم الحسين أن يزيد دسّ رجالاً لاغتياله ولو كان متعلقاً بأستار الكعبة، فأحلّ من إحرامه وجعلها عمرة، وخرج يوم التروية بينما الناس يدخلون للحج، كي لا يُسفك دمه في الحرم. وفي الطريق جاءه خبر مقتل مسلم، فأذِن لمن معه بالانصراف؛ فتفرّق طلاب الدنيا، وبقي الأوفياء.</p></div>
+      <div class="kb-ch"><span class="kb-date">محرم 61 هـ</span><h4>الحُرّ… والوصول إلى أرض الكرب</h4>
+        <p>اعترضه الحر بن يزيد الرياحي بألف فارس، وقد أنهكهم العطش، فأمر الحسين أصحابه أن يسقوهم ويسقوا خيلهم. ثم سايره الحر حتى نزل الركب في الثاني من محرم أرضاً سأل عن اسمها، فقيل: كربلاء. فقال إنها أرض كربٍ وبلاء، وإن هنا مناخ ركابهم ومُهراق دمائهم.</p></div>
+      <div class="kb-ch"><span class="kb-date">2 – 9 محرم</span><h4>الحصار والعطش</h4>
+        <p>وصل عمر بن سعد بأربعة آلاف، ثم تتابعت الجيوش حتى بلغت عشرات الآلاف. وفي السابع من محرم مُنع الماء عن مخيم الحسين، فعطش الأطفال والنساء على بُعد خطوات من الفرات. وفي التاسع جاء شمر بن ذي الجوشن بأمرٍ حاسم: الاستسلام أو القتال.</p></div>
+      <div class="kb-ch"><span class="kb-date">ليلة العاشر</span><h4>الليلة الأخيرة</h4>
+        <p>طلب الحسين مهلة ليلةٍ واحدة للصلاة وتلاوة القرآن والدعاء. جمع أصحابه وقال لهم إن القوم لا يريدون غيره، وإن هذا الليل قد غشيهم فليتخذوه ستراً وينجوا بأنفسهم. فقام أخوه العباس أولاً ثم الأصحاب واحداً بعد الآخر يرفضون تركه. وباتوا ليلتهم ولهم دويٌّ كدويّ النحل بين راكعٍ وساجد.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">10 محرم 61 هـ · يوم عاشوراء</span><h4>يوم الوفاء</h4>
+        <p>اصطف أصحاب الحسين: اثنان وثلاثون فارساً وأربعون راجلاً. خطب فيهم الحسين يذكّرهم بمن هو، فلم يسمعوا. وهنا استيقظ ضمير الحر، فترك الجيش وجاء تائباً، وكان من أوائل الشهداء، فقال له الحسين: أنت حرٌّ كما سمّتك أمك، في الدنيا والآخرة.</p>
+        <p>سقط الأصحاب واحداً بعد الآخر: حبيب بن مظاهر الشيخ الكبير، ومسلم بن عوسجة، وزهير بن القين. وعند صلاة الظهر وقف سعيد بن عبد الله الحنفي يتلقى السهام بصدره عن الحسين حتى سقط.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">ظهر عاشوراء</span><h4>أهل البيت</h4>
+        <p>ثم برز بنو هاشم: أولهم علي الأكبر، أشبه الناس خَلقاً وخُلقاً برسول الله، ثم القاسم بن الحسن، فتىً لم يبلغ الحلم. ومضى العباس، حامل اللواء، إلى الفرات ليأتي بالماء للأطفال؛ وصل الماء فلم يشرب لأن أخاه عطشان، وفي طريق العودة قُطعت يمينه ثم يساره، وأُصيبت القربة، فسقط على ضفة النهر. فقال الحسين: الآن انكسر ظهري.</p>
+        <p>ثم حمل الحسين طفله الرضيع عبد الله يطلب له شربة ماء، فجاءه سهم حرملة فذبح الطفل بين يدي أبيه.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">عصر عاشوراء</span><h4>الوحيد</h4>
+        <p>بقي الحسين وحيداً ينادي: «هل من ناصرٍ ينصرنا؟». قاتل قتال الأبطال حتى أثخنته الجراح، فسقط عن فرسه، وتقدم شمر فقتله. ثم داست الخيل جسده، وأُحرقت الخيام، وسُلبت النساء والأطفال.</p></div>
+      <div class="kb-ch"><span class="kb-date">ما بعد كربلاء</span><h4>زينب… والأربعين</h4>
+        <p>سيقت النساء والأطفال سبايا إلى الكوفة ثم إلى الشام، وفيهم زينب أخت الحسين وابنه الإمام زين العابدين، وقد نجا لمرضه. وفي قصر الكوفة، حين سألها ابن زياد شامتاً، أجابت: «ما رأيت إلا جميلاً»، ثم وقفت في مجلس يزيد بخطبةٍ فضحت الظالم في عقر داره. وفي العشرين من صفر وصل الصحابي جابر بن عبد الله الأنصاري زائراً لقبر الحسين، فكان أول زائر، ومن هنا وُلدت زيارة الأربعين التي يمشي فيها اليوم الملايين إلى كربلاء.</p></div>
+    </div>
+
+    <h3>عن الفيديو: صوت الكعبي وفنّ النعي</h3>
+    <div class="kb-card">
+      <p><b>الشيخ عبد الزهراء الكعبي</b> خطيبٌ حسيني من كربلاء، وُلد سنة 1327 هـ في يوم ولادة السيدة فاطمة الزهراء فسُمّي باسمها. في العاشر من محرم سنة 1379 هـ (1959م) قرأ المقتل بجوار حرم الحسين، وبُثّ عبر إذاعة بغداد فسمعه الناس في العراق والخليج. ومنذ ذلك اليوم صار صوته جزءاً من صباح عاشوراء في كل بيت عراقي، حتى بعد رحيله بعقود، ولم يستطع أحد أن يقلّد طريقته.</p>
+      <p><b>النعي</b> فنٌّ عراقي عريق لرواية مصيبة الحسين: سردٌ قصصي بلحنٍ حزين ومن دون أي آلة موسيقية، يمزج النثر العربي الفصيح بأبيات الرثاء الشعبية. غايته ليست الطرب، بل أن يعيش السامع الحدث كأنه حاضرٌ في كربلاء.</p>
+      <p>الفيديو يعرض المقتل كاملاً (ساعة ونصف) مع صورٍ حقيقية من كربلاء، ومترجماً إلى الإنكليزية والروسية لزوارنا من حول العالم.</p>
+    </div>
+
+    <h3>المصادر</h3>
+    <ul class="kb-sources">
+      <li>الإرشاد — الشيخ المفيد</li>
+      <li>اللهوف على قتلى الطفوف — السيد ابن طاووس</li>
+      <li>مقتل الحسين — السيد عبد الرزاق المقرّم</li>
+      <li>نَفَس المهموم — الشيخ عباس القمي</li>
+    </ul>
+
+    <div class="kb-cta"><p>قف حيث وقف الحسين، وامشِ بين الحرمين.</p><a href="#itinerary">زُر كربلاء معنا</a></div>
+  </div></div></div>
+</div>
+
+
+</div>
+</section>
+
+<script>
+function kbInit(){
+  var s=document.getElementById('karbala-story'); if(!s) return;
+  var L=(document.documentElement.lang||'ar').slice(0,2).toLowerCase();
+  // Section exists only in Arabic, English and Russian
+  if(['ar','en','ru'].indexOf(L)<0){ s.style.display='none'; return; }
+  s.style.display='';
+  var VID='_ydgWmJuKUU', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
+  s.querySelectorAll('.kb-lang').forEach(function(b){
+    b.classList.toggle('kb-on', b.getAttribute('data-lang')===L);
+  });
+  s.querySelectorAll('.kb-video').forEach(function(v){
+    if(v.dataset.ready) return; v.dataset.ready=1;
+    v.style.backgroundImage='url('+THUMB+')';
+    v.addEventListener('click',function(){
+      if(v.querySelector('iframe')) return;
+      var hl=v.getAttribute('data-hl');
+      var cc = (hl==='en'||hl==='ru') ? '&cc_load_policy=1&cc_lang_pref='+hl : '';
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0&hl='+hl+cc;
+      f.title='Maqtal al-Husayn (AS) – English & Russian Subtitles';
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen=true;
+      v.appendChild(f);
+    });
+  });
+  s.querySelectorAll('.kb-btn').forEach(function(btn){
+    if(btn.dataset.ready) return; btn.dataset.ready=1;
+    var more=btn.nextElementSibling, label=btn.firstChild.nodeValue;
+    var closeTxt={ar:'إخفاء ',en:'Show less ',ru:'Свернуть '};
+    btn.addEventListener('click',function(){
+      var open=more.classList.toggle('kb-open');
+      btn.setAttribute('aria-expanded',open);
+      var lang=btn.closest('.kb-lang').getAttribute('data-lang');
+      btn.firstChild.nodeValue = open ? closeTxt[lang] : label;
+    });
+  });
+}
+document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',kbInit) : kbInit();
+</script>
+<!-- ================= END: KARBALA SECTION (copy to here) ================= -->
+
   <section class="block in" id="itinerary">
     <div class="sec-head"><span class="eyebrow" data-i="itE">البرامج</span><h2 class="disp" data-i="itH">البرامج يوماً بيوم</h2><p data-i="itP">اضغط على عنوان أي يوم لعرض تفاصيله وصوره. اضغط على أي صورة لتكبيرها.</p></div>
     <div class="days" id="days">
