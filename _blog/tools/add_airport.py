@@ -259,7 +259,7 @@ def section(l):
           </div>
           <div class="ap-price" aria-live="polite">
             <div class="ap-hint">{esc(t["hint"])}</div>
-            <div class="ap-tot" hidden><span>{esc(t["total"])}</span><b dir="ltr"></b><small class="ap-night" hidden>{esc(t["night"])}</small></div>
+            <div class="ap-tot" hidden><span>{esc(t["total"])}</span><b dir="ltr"></b></div>
           </div>
           <a class="ap-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener" aria-disabled="true">{esc(t["book"])}</a>
           <div class="ap-big">{esc(t["big"])}</div>
@@ -281,12 +281,12 @@ function setOpen(o){{body.hidden=!o;b.setAttribute("aria-expanded",o);if(lbl)lbl
 b.addEventListener("click",function(){{setOpen(body.hidden);}});
 if(location.hash==="#airport-transfer")setOpen(true);
 var d=document.getElementById("ap-date"),tm=document.getElementById("ap-time"),n=document.getElementById("ap-n"),h=document.getElementById("ap-hotel"),f=document.getElementById("ap-flight");
-var hint=body.querySelector(".ap-hint"),tot=body.querySelector(".ap-tot"),out=tot.querySelector("b"),night=tot.querySelector(".ap-night"),bk=body.querySelector(".ap-book");
+var hint=body.querySelector(".ap-hint"),tot=body.querySelector(".ap-tot"),out=tot.querySelector("b"),bk=body.querySelector(".ap-book");
 try{{var td=new Date();td.setMinutes(td.getMinutes()-td.getTimezoneOffset());d.min=td.toISOString().slice(0,10);}}catch(e){{}}
 function upd(){{
  if(!d.value||!tm.value){{hint.hidden=false;tot.hidden=true;bk.setAttribute("aria-disabled","true");bk.href="https://wa.me/9647711745353";return;}}
  var hr=parseInt(tm.value.split(":")[0],10),isNight=!(hr>=10&&hr<20),k=+n.value||1,cars=Math.ceil(k/PER),p=(isNight?NIGHT:DAY)*cars,ps="$"+p.toLocaleString("en-US");
- hint.hidden=true;tot.hidden=false;out.textContent=ps;night.hidden=!isNight;
+ hint.hidden=true;tot.hidden=false;out.textContent=ps;
  var ex="";if(h.value.trim())ex+=" "+C.eh.replace("{{h}}",h.value.trim());if(f.value.trim())ex+=" "+C.ef.replace("{{f}}",f.value.trim());
  var msg=C.wa.replace("{{date}}",d.value).replace("{{time}}",tm.value).replace("{{n}}",k).replace("{{extra}}",ex).replace("{{price}}",ps);
  bk.href="https://wa.me/9647711745353?text="+encodeURIComponent(msg);bk.removeAttribute("aria-disabled");}}
