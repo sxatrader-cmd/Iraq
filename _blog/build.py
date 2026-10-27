@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fable Tour — multilingual blog builder (17 languages).
+"""Fable Tour — multilingual blog builder (20 languages).
 
 Sources (per language code L):
   _blog/L/posts.json          article metadata (list)
@@ -22,14 +22,14 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 B = ROOT / "_blog"
 SITE = "https://iraq.fabletour.com"
 WA = "https://wa.me/9647711745353"
-LANGS = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa", "ms", "id", "th"]
+LANGS = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa", "ms", "id", "th", "hi", "ur", "ta"]
 HREFLANG = {"zh": "zh-Hans"}
 OGLOC = {"ar": "ar_AR", "en": "en_US", "ru": "ru_RU", "de": "de_DE", "fr": "fr_FR", "es": "es_ES", "it": "it_IT",
          "el": "el_GR", "cs": "cs_CZ", "pl": "pl_PL", "zh": "zh_CN", "ja": "ja_JP", "tr": "tr_TR", "fa": "fa_IR",
-         "ms": "ms_MY", "id": "id_ID", "th": "th_TH"}
-RTL = {"ar", "fa"}
-BLOGWORD = {"ar": "المدونة", "fa": "وبلاگ", "ru": "Блог", "zh": "博客", "ja": "ブログ", "th": "บล็อก"}
-AUTHOR = {"ar": "سيف التميمي", "fa": "سیف التمیمی"}
+         "ms": "ms_MY", "id": "id_ID", "th": "th_TH", "hi": "hi_IN", "ur": "ur_PK", "ta": "ta_IN"}
+RTL = {"ar", "fa", "ur"}
+BLOGWORD = {"ar": "المدونة", "fa": "وبلاگ", "ru": "Блог", "zh": "博客", "ja": "ブログ", "th": "บล็อก", "hi": "ब्लॉग", "ur": "بلاگ", "ta": "வலைப்பதிவு"}
+AUTHOR = {"ar": "سيف التميمي", "fa": "سیف التمیمی", "ur": "سیف التمیمی", "hi": "सैफ़ अल-तमीमी", "ta": "சைஃப் அல்-தமீமி"}
 AUTHOR_EN = "Saif Al-Tamimi"
 T = json.loads((B / "i18n.json").read_text())
 CSS = (B / "style.css").read_text() + (B / "gyg.css").read_text()
@@ -94,7 +94,10 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel
          '<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=PT+Serif:wght@400;700&family=Inter+Tight:wght@400;500;600{extra}&display=swap" rel="stylesheet">')
 FONT_EXTRA = {"ar": "&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600",
               "fa": "&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600",
-              "zh": "&family=Noto+Serif+SC:wght@600", "ja": "&family=Noto+Serif+JP:wght@600"}
+              "zh": "&family=Noto+Serif+SC:wght@600", "ja": "&family=Noto+Serif+JP:wght@600",
+              "hi": "&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@600",
+              "ta": "&family=Noto+Sans+Tamil:wght@400;500;600&family=Noto+Serif+Tamil:wght@600",
+              "ur": "&family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Naskh+Arabic:wght@400;600"}
 
 ORG = {"@type": "TravelAgency", "@id": "https://fabletour.com/#org", "name": "Fable Tour", "url": "https://fabletour.com",
        "logo": SITE + "/logo.png", "email": "support@fabletour.com", "telephone": "+9647711745353"}

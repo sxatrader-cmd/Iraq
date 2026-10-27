@@ -27,6 +27,9 @@ S = {
 "ms": ["Trip berkumpulan","Tarikh kumpulan akan datang","Sertai kumpulan kecil pada salah satu tarikh ini — harga yang sama, {price} seorang dalam bilik berdua.","Tempah","Tarikh kumpulan","Lawatan persendirian — saya pilih tarikh"],
 "id": ["Keberangkatan grup","Jadwal grup berikutnya","Bergabunglah dengan grup kecil di salah satu tanggal ini — harga sama, {price} per orang di kamar double.","Pesan","Tanggal grup","Tur privat — saya pilih tanggal sendiri"],
 "th": ["ทัวร์กรุ๊ป","วันเดินทางกรุ๊ปถัดไป","ร่วมเดินทางกับกรุ๊ปเล็กในวันใดวันหนึ่งต่อไปนี้ ราคาเดิม {price} ต่อท่าน พักห้องคู่","จอง","วันเดินทางกรุ๊ป","ทัวร์ส่วนตัว — เลือกวันเอง"],
+"hi": ["ग्रुप टूर","अगली ग्रुप तारीख़ें","इनमें से किसी तारीख़ पर एक छोटे ग्रुप में शामिल हों — वही कीमत, डबल रूम में प्रति व्यक्ति {price}।","बुक करें","ग्रुप की तारीख़","निजी टूर — तारीख़ मैं खुद चुनूँगा/चुनूँगी"],
+"ur": ["گروپ ٹور","اگلی گروپ تاریخیں","ان میں سے کسی تاریخ پر ایک چھوٹے گروپ میں شامل ہوں — وہی قیمت، ڈبل روم میں فی کس {price}۔","بک کریں","گروپ کی تاریخ","پرائیویٹ ٹور — تاریخ میں خود چنوں گا"],
+"ta": ["குழுப் பயணங்கள்","அடுத்த குழுப் பயணத் தேதிகள்","இந்தத் தேதிகளில் ஒன்றில் ஒரு சிறு குழுவுடன் இணையுங்கள் — அதே விலை, இரட்டை அறையில் ஒருவருக்கு {price}.","முன்பதிவு","குழுத் தேதி","தனிப்பட்ட சுற்றுலா — தேதியை நானே தேர்வு செய்வேன்"],
 }
 PRICE = {"7": "$2,500", "9": "$3,400"}
 LEAD = {"7": 5, "9": 10}          # minimum days between today and the first date shown
@@ -57,7 +60,7 @@ CSS = """
 /* group departures */
 .grp{margin:18px 0 8px;background:var(--panel);border-radius:6px;padding:18px 18px 16px;border-top:4px solid var(--gold)}
 .grp h4{margin:4px 0 4px;font-family:var(--serif-en);font-weight:400;font-size:21px;color:var(--navy)}
-html[lang="ar"] .grp h4,html[lang="fa"] .grp h4{font-family:var(--serif-ar);font-weight:700;font-size:23px}
+html[lang="ar"] .grp h4,html[lang="fa"] .grp h4,html[lang="ur"] .grp h4{font-family:var(--serif-ar);font-weight:700;font-size:23px}
 .grp p{margin:0;color:var(--muted);font-size:14.5px}
 .grp-dates{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
 .gd{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 12px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;min-width:0}
@@ -65,7 +68,7 @@ html[lang="ar"] .grp h4,html[lang="fa"] .grp h4{font-family:var(--serif-ar);font
 .gd .gd-m{font-weight:600;color:var(--navy);font-size:15px}
 .gd .gd-w{font-size:13px;color:var(--muted)}
 .gd button{margin-top:4px;width:100%;background:var(--gold);color:var(--navy);border:0;border-radius:4px;padding:10px 12px;font:600 14px var(--sans-en);cursor:pointer}
-html[lang="ar"] .gd button,html[lang="fa"] .gd button{font-family:var(--sans-ar)}
+html[lang="ar"] .gd button,html[lang="fa"] .gd button,html[lang="ur"] .gd button{font-family:var(--sans-ar)}
 .gd button:hover{background:var(--navy);color:#EFE3C8}
 @media (max-width:560px){.grp-dates{grid-template-columns:1fr}.gd{flex-direction:row;flex-wrap:wrap;justify-content:space-between;text-align:start;gap:4px 12px}.gd .gd-d{font-size:28px}.gd .gd-txt{flex:1;min-width:0}.gd button{width:auto;margin:0}}
 """

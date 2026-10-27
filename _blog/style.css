@@ -111,3 +111,12 @@ html[lang="zh-Hans"] h1,html[lang="zh-Hans"] h2,html[lang="zh-Hans"] h3,html[lan
 html[lang="th"] body{line-height:1.9}
 
 .hero-img,.pc .ph:not(.ph-none),.featured .ph:not(.ph-none){filter:saturate(1.3) contrast(1.05) brightness(1.03)}
+
+html[lang="hi"] body{font-family:"Inter Tight","Noto Sans Devanagari","Nirmala UI",sans-serif;line-height:1.9}
+html[lang="hi"] h1,html[lang="hi"] h2,html[lang="hi"] h3{font-family:"Libre Baskerville","Noto Serif Devanagari",serif;line-height:1.5}
+html[lang="ta"] body{font-family:"Inter Tight","Noto Sans Tamil","Nirmala UI",sans-serif;line-height:1.9}
+html[lang="ta"] h1,html[lang="ta"] h2,html[lang="ta"] h3{font-family:"Libre Baskerville","Noto Serif Tamil",serif;line-height:1.5}
+html[lang="ur"] body{font-family:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq","Noto Naskh Arabic",serif;font-size:16px;line-height:2.25}
+html[lang="ur"] h1,html[lang="ur"] h2,html[lang="ur"] h3{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic",serif;font-weight:700;line-height:1.9}
+html:is([lang="hi"],[lang="ta"],[lang="ur"]) .eyebrow,html:is([lang="hi"],[lang="ta"],[lang="ur"]) .nav a,html:is([lang="hi"],[lang="ta"],[lang="ur"]) .pc .ph span,html:is([lang="hi"],[lang="ta"],[lang="ur"]) .chips button{letter-spacing:0;text-transform:none}
+html[lang="ur"] .eyebrow,html[lang="ur"] .nav a,html[lang="ur"] .btn,html[lang="ur"] .chips button,html[lang="ur"] .pc .ph span{font-family:"Noto Naskh Arabic",sans-serif}

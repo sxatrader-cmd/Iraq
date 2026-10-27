@@ -6,7 +6,7 @@ import re, json, pathlib, html
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 D = json.loads((pathlib.Path(__file__).parent / "daytrips_i18n.json").read_text())
-LANGS = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa", "ms", "id", "th"]
+LANGS = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa", "ms", "id", "th", "hi", "ur", "ta"]
 ORDER = ["aqarquf", "madain", "samarra", "babylon", "babylon4", "holy", "south"]
 
 # price for n people (total for the group, USD) — same formulas are used in the page script
@@ -35,7 +35,7 @@ CSS = """
 .dt-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--navy);color:#fff;border:0;border-radius:6px;padding:20px 22px;cursor:pointer;text-align:start;border-bottom:4px solid var(--gold)}
 .dt-toggle .eyebrow{color:var(--gold-2)}
 .dt-toggle b{display:block;font-family:var(--serif-en);font-weight:400;font-size:clamp(22px,3.6vw,28px);line-height:1.3;margin-top:4px}
-html[lang="ar"] .dt-toggle b,html[lang="fa"] .dt-toggle b{font-family:var(--serif-ar);font-weight:700}
+html[lang="ar"] .dt-toggle b,html[lang="fa"] .dt-toggle b,html[lang="ur"] .dt-toggle b{font-family:var(--serif-ar);font-weight:700}
 .dt-toggle small{display:block;color:#C9CFD9;font-size:14px;margin-top:4px}
 .dt-toggle .dt-chev{flex:none;width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;transition:transform .25s}
 .dt-toggle[aria-expanded="true"] .dt-chev{transform:rotate(180deg)}
@@ -56,7 +56,7 @@ html[lang="ar"] .dt-toggle b,html[lang="fa"] .dt-toggle b{font-family:var(--seri
 .dt-ph.none{background-size:56px;background-repeat:repeat;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23B8955A' stroke-width='1.2' opacity='.4'%3E%3Cpath d='M28 4 52 28 28 52 4 28z'/%3E%3Ccircle cx='28' cy='28' r='7'/%3E%3C/g%3E%3C/svg%3E")}
 .dt-bd{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
 .dt-bd h3{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.3}
-html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{font-family:var(--serif-ar);font-weight:700;font-size:22px}
 .dt-s{margin:0;font-size:14px;color:var(--muted);line-height:1.55}
 .dt-inc{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 0;padding:0;list-style:none}
 .dt-inc li{font-size:12.5px;background:var(--panel);color:var(--navy);border-radius:999px;padding:3px 10px}
@@ -119,7 +119,7 @@ def section(l):
 def pcard(l):
     u = D[l]["ui"]
     route = " · ".join(D[l]["trips"][k][0] for k in ["aqarquf", "madain", "samarra", "babylon", "holy", "south"])
-    arrow = "←" if l in ("ar", "fa") else "→"
+    arrow = "←" if l in ("ar", "fa", "ur") else "→"
     return (f'<a class="pcard" href="#day-trips" data-open-dt><span class="eyebrow">{esc(u["card_e"])}</span>'
             f'<b class="disp">{esc(u["card_t"])}</b><span class="r">{esc(route)}</span>'
             f'<span class="pp" dir="ltr">${50}+</span><span class="ppk">{esc(u["pg"])}</span><span class="go">{esc(u["card_go"])}</span></a>')
