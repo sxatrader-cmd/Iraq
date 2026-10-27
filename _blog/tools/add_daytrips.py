@@ -1,0 +1,160 @@
+#!/usr/bin/env python3
+"""Adds the 'Day trips from Baghdad' section (collapsed until clicked) to every language
+homepage, plus a third card in 'Choose your programme'. Idempotent (re-run to update).
+Prices are calculated in the browser from the formulas in PRICES below."""
+import re, json, pathlib, html
+
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+D = json.loads((pathlib.Path(__file__).parent / "daytrips_i18n.json").read_text())
+LANGS = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa", "ms", "id", "th"]
+ORDER = ["babylon", "babylon4", "holy", "south", "samarra", "madain", "aqarquf"]
+
+# price for n people (total for the group, USD) — same formulas are used in the page script
+JS_PRICES = """{
+ babylon:function(n){return n<2?200:240+50*(n-2)},
+ babylon4:function(n){return n<2?220:260+40*(n-2)},
+ holy:function(n){return 200+30*Math.max(0,n-3)},
+ south:function(n){return [300,325,350][n-1]||350+40*(n-3)},
+ samarra:function(n){return [150,200,225][n-1]||225+25*(n-3)},
+ madain:function(n){return 100+25*(n-1)},
+ aqarquf:function(n){return 50+25*(n-1)}
+}"""
+FROM = {"babylon": 200, "babylon4": 220, "holy": 200, "south": 300, "samarra": 150, "madain": 100, "aqarquf": 50}
+IMG_Q = {"babylon": "Babylon Iraq ruins|Babylon Iraq", "babylon4": "Borsippa ziggurat|Birs Nimrud",
+         "holy": "Imam Ali Shrine Najaf|Imam Ali Mosque", "south": "Ziggurat of Ur|Ur ziggurat Iraq", "samarra": "Malwiya minaret Samarra|Malwiya",
+         "madain": "Taq Kasra|Ctesiphon arch", "aqarquf": ""}
+LOCAL_IMG = {"aqarquf": "img/aqar-quf-ziggurat.webp"}
+MAXP = 12
+
+CSS = """
+/* day trips */
+.pcards{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))!important}
+.dt-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--navy);color:#fff;border:0;border-radius:6px;padding:20px 22px;cursor:pointer;text-align:start;border-bottom:4px solid var(--gold)}
+.dt-toggle .eyebrow{color:var(--gold-2)}
+.dt-toggle b{display:block;font-family:var(--serif-en);font-weight:400;font-size:clamp(22px,3.6vw,28px);line-height:1.3;margin-top:4px}
+html[lang="ar"] .dt-toggle b,html[lang="fa"] .dt-toggle b{font-family:var(--serif-ar);font-weight:700}
+.dt-toggle small{display:block;color:#C9CFD9;font-size:14px;margin-top:4px}
+.dt-toggle .dt-chev{flex:none;width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;transition:transform .25s}
+.dt-toggle[aria-expanded="true"] .dt-chev{transform:rotate(180deg)}
+.dt-note{margin:14px 2px 0;color:var(--muted);font-size:14px}
+.dt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:14px}
+.dt{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.dt-ph{position:relative;aspect-ratio:16/10;background:var(--navy-2) center/cover no-repeat}
+.dt-ph.none{background-size:56px;background-repeat:repeat;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23B8955A' stroke-width='1.2' opacity='.4'%3E%3Cpath d='M28 4 52 28 28 52 4 28z'/%3E%3Ccircle cx='28' cy='28' r='7'/%3E%3C/g%3E%3C/svg%3E")}
+.dt-ph a{position:absolute;inset-inline-end:6px;bottom:6px;font-size:10.5px;color:#fff;background:rgba(18,26,43,.6);padding:2px 6px;border-radius:3px;text-decoration:none}
+.dt-bd{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.dt-bd h3{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.3}
+html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+.dt-s{margin:0;font-size:14px;color:var(--muted);line-height:1.55}
+.dt-inc{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 0;padding:0;list-style:none}
+.dt-inc li{font-size:12.5px;background:var(--panel);color:var(--navy);border-radius:999px;padding:3px 10px}
+.dt-inc li::before{content:"✓ ";color:var(--gold)}
+.dt-calc{margin-top:auto;border-top:1px solid var(--line);padding-top:12px;display:grid;grid-template-columns:auto 1fr;gap:10px 12px;align-items:end}
+.dt-pp{display:flex;flex-direction:column;gap:4px}
+.dt-calc label{font-size:12px;color:var(--muted);letter-spacing:.04em;text-transform:none;font-weight:600}
+.dt-step{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.dt-step button{width:34px;height:34px;border:0;background:var(--panel);color:var(--navy);font-size:18px;cursor:pointer}
+.dt-step output{min-width:34px;text-align:center;font-weight:600;color:var(--navy)}
+.dt-total{justify-self:end;text-align:end}
+.dt-total span{display:block;font-size:11.5px;color:var(--muted)}
+.dt-total b{font-family:var(--serif-en);font-size:26px;font-weight:400;color:var(--navy);font-variant-numeric:tabular-nums}
+.dt-book{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;border-radius:4px;padding:11px 14px}
+.dt-book:hover{filter:brightness(.95)}
+"""
+
+def esc(s): return html.escape(s, quote=True)
+
+def section(l):
+    u = D[l]["ui"]; T = D[l]["trips"]
+    cards = ""
+    for k in ORDER:
+        title, stops, inc = T[k]
+        img = ""
+        if k in LOCAL_IMG:
+            img = f' style="background-image:url(\'{"" if l == "ar" else "../"}{LOCAL_IMG[k]}\')"'
+        incs = "".join(f"<li>{esc(x)}</li>" for x in inc)
+        cards += f"""<article class="dt" data-trip="{k}" data-q="{esc(IMG_Q[k])}">
+  <div class="dt-ph{'' if img else ' none'}"{img} role="img" aria-label="{esc(title)}"></div>
+  <div class="dt-bd">
+    <h3>{esc(title)}</h3>
+    <p class="dt-s">{esc(stops)}</p>
+    {f'<ul class="dt-inc" aria-label="{esc(u["inc"])}">{incs}</ul>' if incs else ''}
+    <div class="dt-calc">
+      <div class="dt-pp"><label>{esc(u["trav"])}</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-total"><span>{esc(u["total"])}</span><b dir="ltr">${FROM[k]}</b></div>
+      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">{esc(u["book"])}</a>
+    </div>
+  </div>
+</article>"""
+    chev = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
+    return f"""
+  <section class="block in" style="padding-top:0" id="day-trips">
+    <button class="dt-toggle" type="button" aria-expanded="false" aria-controls="dt-body" data-show="{esc(u['show'])}" data-hide="{esc(u['hide'])}">
+      <span><span class="eyebrow">{esc(u['eye'])} · <span dir="ltr">{esc(u['from'])} $50</span></span><b>{esc(u['h'])}</b><small class="dt-lbl">{esc(u['show'])}</small></span>
+      <span class="dt-chev">{chev}</span>
+    </button>
+    <div id="dt-body" hidden>
+      <p class="dt-note">{esc(u['p'])}</p>
+      <div class="dt-grid">{cards}</div>
+    </div>
+  </section>
+"""
+
+def pcard(l):
+    u = D[l]["ui"]
+    route = " · ".join(D[l]["trips"][k][0] for k in ["babylon", "holy", "south", "samarra", "madain", "aqarquf"])
+    arrow = "←" if l in ("ar", "fa") else "→"
+    return (f'<a class="pcard" href="#day-trips" data-open-dt><span class="eyebrow">{esc(u["card_e"])}</span>'
+            f'<b class="disp">{esc(u["card_t"])}</b><span class="r">{esc(route)}</span>'
+            f'<span class="pp" dir="ltr">${50}+</span><span class="ppk">{esc(u["pg"])}</span><span class="go">{esc(u["card_go"])}</span></a>')
+
+def script(l):
+    u = D[l]["ui"]
+    T = {k: D[l]["trips"][k][0] for k in ORDER}
+    return """<script>/* day trips */(function(){
+var P=%s,U=%s,T=%s,MAX=%d,loaded=false;
+var tg=document.querySelector(".dt-toggle"),body=document.getElementById("dt-body");if(!tg||!body)return;
+function setOpen(o){body.hidden=!o;tg.setAttribute("aria-expanded",o);tg.querySelector(".dt-lbl").textContent=o?tg.dataset.hide:tg.dataset.show;if(o)loadImgs();}
+tg.addEventListener("click",function(){setOpen(body.hidden);});
+document.querySelectorAll("[data-open-dt]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();setOpen(true);document.getElementById("day-trips").scrollIntoView({behavior:"smooth",block:"start"});});});
+if(location.hash==="#day-trips")setOpen(true);
+function fmt(v){return "$"+v.toLocaleString("en-US");}
+document.querySelectorAll(".dt").forEach(function(c){var k=c.dataset.trip,n=1,out=c.querySelector("output"),tot=c.querySelector(".dt-total b"),bk=c.querySelector(".dt-book");
+ function upd(){out.textContent=n;var p=fmt(P[k](n));tot.textContent=p;bk.href="https://wa.me/9647711745353?text="+encodeURIComponent(U.wa.replace("{trip}",T[k]).replace("{n}",n).replace("{price}",p));}
+ c.querySelectorAll(".dt-step button").forEach(function(b){b.addEventListener("click",function(){n=Math.min(MAX,Math.max(1,n+(+b.dataset.d)));upd();});});upd();});
+var cache={};try{cache=JSON.parse(localStorage.getItem("ft-dt-img")||"{}");}catch(e){}
+function loadImgs(){if(loaded)return;loaded=true;document.querySelectorAll(".dt[data-q]").forEach(function(c){var q=c.dataset.q,ph=c.querySelector(".dt-ph");if(!q)return;
+ function show(r){ph.classList.remove("none");ph.style.backgroundImage="url('"+r.thumb+"')";var a=document.createElement("a");a.href=r.page;a.target="_blank";a.rel="noopener";a.textContent=U.photo;ph.appendChild(a);}
+ if(cache[q]){show(cache[q]);return;}
+ var qs=q.split("|");(function tryQ(i){if(i>=qs.length)return;
+ fetch("https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url|size|mime&iiurlwidth=900&gsrsearch="+encodeURIComponent(qs[i]+" filetype:bitmap"))
+ .then(function(r){return r.json();}).then(function(j){var ps=Object.values((j.query&&j.query.pages)||{}).sort(function(a,b){return a.index-b.index;});
+  var cs=ps.map(function(p){return p.imageinfo&&p.imageinfo[0];}).filter(function(x){return x&&/jpeg|png/.test(x.mime)&&x.width>=700;});
+  var pk=cs.find(function(x){return x.width>x.height;})||cs[0];if(!pk){tryQ(i+1);return;}var r={thumb:pk.thumburl,page:pk.descriptionurl};cache[q]=r;try{localStorage.setItem("ft-dt-img",JSON.stringify(cache));}catch(e){}show(r);}).catch(function(){tryQ(i+1);});})(0);});}
+})();</script>
+""" % (JS_PRICES, json.dumps({"wa": u["wa"], "photo": u["photo"]}, ensure_ascii=False), json.dumps(T, ensure_ascii=False), MAXP)
+
+def run():
+    for l in LANGS:
+        f = ROOT / ("index.html" if l == "ar" else f"{l}/index.html")
+        s = f.read_text()
+        # remove previous version
+        s = re.sub(r'\n  <section class="block in" style="padding-top:0" id="day-trips">.*?</section>\n', "", s, flags=re.S)
+        s = re.sub(r'<script>/\* day trips \*/.*?</script>\n', "", s, flags=re.S)
+        s = re.sub(r'\n/\* day trips \*/.*?(?=</style>)', "\n", s, count=1, flags=re.S)
+        s = re.sub(r'<a class="pcard" href="#day-trips" data-open-dt>.*?</a>', "", s, flags=re.S)
+        # css
+        i = s.find("</style>"); s = s[:i] + CSS + s[i:]
+        # third programme card
+        m = re.search(r'<div class="pcards">.*?</a></div>', s, re.S)
+        s = s[:m.end() - 6] + pcard(l) + s[m.end() - 6:]
+        # section after the itinerary block
+        a = s.find('id="tour-9-days"'); e1 = s.find("</section>", a); e2 = s.find("</section>", e1 + 10) + 10
+        s = s[:e2] + "\n" + section(l) + s[e2:]
+        # script
+        i = s.rfind("</body>"); s = s[:i] + script(l) + s[i:]
+        f.write_text(s)
+        print(l, s.count('class="dt"'), s.count("data-open-dt"))
+
+if __name__ == "__main__":
+    run()

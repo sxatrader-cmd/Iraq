@@ -384,6 +384,42 @@ html[lang="ar"] .grp h4,html[lang="fa"] .grp h4{font-family:var(--serif-ar);font
 html[lang="ar"] .gd button,html[lang="fa"] .gd button{font-family:var(--sans-ar)}
 .gd button:hover{background:var(--navy);color:#EFE3C8}
 @media (max-width:560px){.grp-dates{grid-template-columns:1fr}.gd{flex-direction:row;flex-wrap:wrap;justify-content:space-between;text-align:start;gap:4px 12px}.gd .gd-d{font-size:28px}.gd .gd-txt{flex:1;min-width:0}.gd button{width:auto;margin:0}}
+
+
+
+/* day trips */
+.pcards{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))!important}
+.dt-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--navy);color:#fff;border:0;border-radius:6px;padding:20px 22px;cursor:pointer;text-align:start;border-bottom:4px solid var(--gold)}
+.dt-toggle .eyebrow{color:var(--gold-2)}
+.dt-toggle b{display:block;font-family:var(--serif-en);font-weight:400;font-size:clamp(22px,3.6vw,28px);line-height:1.3;margin-top:4px}
+html[lang="ar"] .dt-toggle b,html[lang="fa"] .dt-toggle b{font-family:var(--serif-ar);font-weight:700}
+.dt-toggle small{display:block;color:#C9CFD9;font-size:14px;margin-top:4px}
+.dt-toggle .dt-chev{flex:none;width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;transition:transform .25s}
+.dt-toggle[aria-expanded="true"] .dt-chev{transform:rotate(180deg)}
+.dt-note{margin:14px 2px 0;color:var(--muted);font-size:14px}
+.dt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:14px}
+.dt{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.dt-ph{position:relative;aspect-ratio:16/10;background:var(--navy-2) center/cover no-repeat}
+.dt-ph.none{background-size:56px;background-repeat:repeat;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23B8955A' stroke-width='1.2' opacity='.4'%3E%3Cpath d='M28 4 52 28 28 52 4 28z'/%3E%3Ccircle cx='28' cy='28' r='7'/%3E%3C/g%3E%3C/svg%3E")}
+.dt-ph a{position:absolute;inset-inline-end:6px;bottom:6px;font-size:10.5px;color:#fff;background:rgba(18,26,43,.6);padding:2px 6px;border-radius:3px;text-decoration:none}
+.dt-bd{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.dt-bd h3{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.3}
+html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+.dt-s{margin:0;font-size:14px;color:var(--muted);line-height:1.55}
+.dt-inc{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 0;padding:0;list-style:none}
+.dt-inc li{font-size:12.5px;background:var(--panel);color:var(--navy);border-radius:999px;padding:3px 10px}
+.dt-inc li::before{content:"✓ ";color:var(--gold)}
+.dt-calc{margin-top:auto;border-top:1px solid var(--line);padding-top:12px;display:grid;grid-template-columns:auto 1fr;gap:10px 12px;align-items:end}
+.dt-pp{display:flex;flex-direction:column;gap:4px}
+.dt-calc label{font-size:12px;color:var(--muted);letter-spacing:.04em;text-transform:none;font-weight:600}
+.dt-step{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.dt-step button{width:34px;height:34px;border:0;background:var(--panel);color:var(--navy);font-size:18px;cursor:pointer}
+.dt-step output{min-width:34px;text-align:center;font-weight:600;color:var(--navy)}
+.dt-total{justify-self:end;text-align:end}
+.dt-total span{display:block;font-size:11.5px;color:var(--muted)}
+.dt-total b{font-family:var(--serif-en);font-size:26px;font-weight:400;color:var(--navy);font-variant-numeric:tabular-nums}
+.dt-book{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;border-radius:4px;padding:11px 14px}
+.dt-book:hover{filter:brightness(.95)}
 </style>
 </head>
 <body>
@@ -440,7 +476,7 @@ html[lang="ar"] .gd button,html[lang="fa"] .gd button{font-family:var(--sans-ar)
         <b class="disp">ทัวร์มรดกอิรัก: 7 วัน / 6 คืน</b><span class="r">แบกแดด · บาบิโลน · คาร์บาลา · นาจาฟ · อูรุก · บัสรา · พื้นที่ชุ่มน้ำ · อูร์ · ซามาร์รา · โมซูล · ฮัตรา</span>
         <span class="pp" dir="ltr">$2,500</span><span class="ppk">ต่อท่าน พักห้องคู่</span><span class="go">ดูโปรแกรม →</span></a><a class="pcard" href="#tour-9-days"><span class="eyebrow">9 วัน</span>
         <b class="disp">อิรักทั้งประเทศ บัสราถึงเออร์บิล: 9 วัน / 8 คืน</b><span class="r">บัสรา · พื้นที่ชุ่มน้ำ · อูร์ · นาจาฟ · คาร์บาลา · บาบิโลน · แบกแดด · ซามาร์รา · ฮัตรา · โมซูล · นิมรุด · เออร์บิล</span>
-        <span class="pp" dir="ltr">$3,400</span><span class="ppk">ต่อท่าน พักห้องคู่</span><span class="go">ดูโปรแกรม →</span></a></div>
+        <span class="pp" dir="ltr">$3,400</span><span class="ppk">ต่อท่าน พักห้องคู่</span><span class="go">ดูโปรแกรม →</span></a><a class="pcard" href="#day-trips" data-open-dt><span class="eyebrow">1 วัน</span><b class="disp">ทริปวันเดียวจากแบกแดด</b><span class="r">บาบิโลน · คูฟา นาจาฟ และคาร์บาลา · ซิกกูรัตแห่งอูร์และพื้นที่ชุ่มน้ำ · ซามาร์รา · อัลมาดาอิน (ซีทีฟอน) · ซิกกูรัตอะการ์กูฟ</span><span class="pp" dir="ltr">$50+</span><span class="ppk">ต่อกลุ่ม</span><span class="go">ดูทริป →</span></a></div>
   </section>
 
   <section class="block in" id="itinerary">
@@ -682,6 +718,104 @@ html[lang="ar"] .gd button,html[lang="fa"] .gd button{font-family:var(--sans-ar)
    </section>
     </div>
   </section>
+
+  <section class="block in" style="padding-top:0" id="day-trips">
+    <button class="dt-toggle" type="button" aria-expanded="false" aria-controls="dt-body" data-show="ดูทริปวันเดียว" data-hide="ซ่อนทริปวันเดียว">
+      <span><span class="eyebrow">ทริปวันเดียว · <span dir="ltr">เริ่มต้น $50</span></span><b>ทริปวันเดียวจากแบกแดด</b><small class="dt-lbl">ดูทริปวันเดียว</small></span>
+      <span class="dt-chev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+    </button>
+    <div id="dt-body" hidden>
+      <p class="dt-note">ออกจากแบกแดดตอนเช้าและกลับในวันเดียวกัน รถส่วนตัว ราคาเดียวสำหรับทั้งกลุ่ม</p>
+      <div class="dt-grid"><article class="dt" data-trip="babylon" data-q="Babylon Iraq ruins|Babylon Iraq">
+  <div class="dt-ph none" role="img" aria-label="บาบิโลน"></div>
+  <div class="dt-bd">
+    <h3>บาบิโลน</h3>
+    <p class="dt-s">ซากเมืองโบราณบาบิโลน</p>
+    <ul class="dt-inc" aria-label="รวม"><li>ค่าเข้าชม</li></ul>
+    <div class="dt-calc">
+      <div class="dt-pp"><label>จำนวนผู้เดินทาง</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-total"><span>ราคารวมทั้งกลุ่ม</span><b dir="ltr">$200</b></div>
+      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">จองทาง WhatsApp</a>
+    </div>
+  </div>
+</article><article class="dt" data-trip="babylon4" data-q="Borsippa ziggurat|Birs Nimrud">
+  <div class="dt-ph none" role="img" aria-label="บาบิโลน บอร์ซิปปา ศาสดาโยบ และซุลกิฟล์"></div>
+  <div class="dt-bd">
+    <h3>บาบิโลน บอร์ซิปปา ศาสดาโยบ และซุลกิฟล์</h3>
+    <p class="dt-s">บาบิโลน · ซิกกูรัตบอร์ซิปปา · สุสานศาสดาโยบ · สุสานซุลกิฟล์</p>
+    <ul class="dt-inc" aria-label="รวม"><li>ค่าเข้าชม</li></ul>
+    <div class="dt-calc">
+      <div class="dt-pp"><label>จำนวนผู้เดินทาง</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-total"><span>ราคารวมทั้งกลุ่ม</span><b dir="ltr">$220</b></div>
+      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">จองทาง WhatsApp</a>
+    </div>
+  </div>
+</article><article class="dt" data-trip="holy" data-q="Imam Ali Shrine Najaf|Imam Ali Mosque">
+  <div class="dt-ph none" role="img" aria-label="คูฟา นาจาฟ และคาร์บาลา"></div>
+  <div class="dt-bd">
+    <h3>คูฟา นาจาฟ และคาร์บาลา</h3>
+    <p class="dt-s">มัสยิดใหญ่แห่งคูฟา · สุสานอิหม่ามอาลีที่นาจาฟ · สุสานอิหม่ามฮุซัยน์และอัลอับบาสที่คาร์บาลา</p>
+    <ul class="dt-inc" aria-label="รวม"><li>ราคาเดียวกันสำหรับ 1–3 ท่าน</li></ul>
+    <div class="dt-calc">
+      <div class="dt-pp"><label>จำนวนผู้เดินทาง</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-total"><span>ราคารวมทั้งกลุ่ม</span><b dir="ltr">$200</b></div>
+      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">จองทาง WhatsApp</a>
+    </div>
+  </div>
+</article><article class="dt" data-trip="south" data-q="Ziggurat of Ur|Ur ziggurat Iraq">
+  <div class="dt-ph none" role="img" aria-label="ซิกกูรัตแห่งอูร์และพื้นที่ชุ่มน้ำ"></div>
+  <div class="dt-bd">
+    <h3>ซิกกูรัตแห่งอูร์และพื้นที่ชุ่มน้ำ</h3>
+    <p class="dt-s">ซิกกูรัตใหญ่แห่งอูร์ · พื้นที่ชุ่มน้ำเมโสโปเตเมีย</p>
+    <ul class="dt-inc" aria-label="รวม"><li>อาหารกลางวันปลามัสกูฟ</li><li>ล่องเรือมัชฮูฟในพื้นที่ชุ่มน้ำ</li><li>ค่าเข้าชมอูร์</li></ul>
+    <div class="dt-calc">
+      <div class="dt-pp"><label>จำนวนผู้เดินทาง</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-total"><span>ราคารวมทั้งกลุ่ม</span><b dir="ltr">$300</b></div>
+      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">จองทาง WhatsApp</a>
+    </div>
+  </div>
+</article><article class="dt" data-trip="samarra" data-q="Malwiya minaret Samarra|Malwiya">
+  <div class="dt-ph none" role="img" aria-label="ซามาร์รา"></div>
+  <div class="dt-bd">
+    <h3>ซามาร์รา</h3>
+    <p class="dt-s">สุสานสองอิหม่าม (อัลอัสการี) · หออะซานเกลียวมัลวิยา · ที่คุมขังอิหม่ามอาลี อัลฮาดี และกัสร์ อัลบิรกาที่อยู่ใกล้กัน · หออะซานอบูดุลาฟ</p>
+    <ul class="dt-inc" aria-label="รวม"><li>ค่าเข้าชม</li></ul>
+    <div class="dt-calc">
+      <div class="dt-pp"><label>จำนวนผู้เดินทาง</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-total"><span>ราคารวมทั้งกลุ่ม</span><b dir="ltr">$150</b></div>
+      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">จองทาง WhatsApp</a>
+    </div>
+  </div>
+</article><article class="dt" data-trip="madain" data-q="Taq Kasra|Ctesiphon arch">
+  <div class="dt-ph none" role="img" aria-label="อัลมาดาอิน (ซีทีฟอน)"></div>
+  <div class="dt-bd">
+    <h3>อัลมาดาอิน (ซีทีฟอน)</h3>
+    <p class="dt-s">ซุ้มประตูซีทีฟอน (ฏอก กิสรอ) · สุสานซอฮาบะฮ์ซัลมาน อัลฟารีซี</p>
+    
+    <div class="dt-calc">
+      <div class="dt-pp"><label>จำนวนผู้เดินทาง</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-total"><span>ราคารวมทั้งกลุ่ม</span><b dir="ltr">$100</b></div>
+      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">จองทาง WhatsApp</a>
+    </div>
+  </div>
+</article><article class="dt" data-trip="aqarquf" data-q="">
+  <div class="dt-ph" style="background-image:url('../img/aqar-quf-ziggurat.webp')" role="img" aria-label="ซิกกูรัตอะการ์กูฟ"></div>
+  <div class="dt-bd">
+    <h3>ซิกกูรัตอะการ์กูฟ</h3>
+    <p class="dt-s">ซิกกูรัตดูร์-คูริกัลซูที่อะการ์กูฟ</p>
+    <ul class="dt-inc" aria-label="รวม"><li>ค่าเข้าชม</li></ul>
+    <div class="dt-calc">
+      <div class="dt-pp"><label>จำนวนผู้เดินทาง</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-total"><span>ราคารวมทั้งกลุ่ม</span><b dir="ltr">$50</b></div>
+      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">จองทาง WhatsApp</a>
+    </div>
+  </div>
+</article></div>
+    </div>
+  </section>
+
+
+
 
   <section class="block in" style="padding-top:0">
     <div class="sec-head"><span class="eyebrow" data-i="inE">บริการ</span><h2 class="disp" data-i="inH">สิ่งที่รวมอยู่ในทั้งสองทัวร์</h2></div>
@@ -990,6 +1124,35 @@ document.addEventListener("click",function(e){var b=e.target.closest("[data-book
  if(prog)prog.selectedIndex=(t==="9"?1:0);fill(t,b.dataset.date);
  var f=document.getElementById("interest");if(f)f.scrollIntoView({behavior:"smooth",block:"start"});
  setTimeout(function(){var n=document.getElementById("f-name");if(n)n.focus({preventScroll:true});},600);});
+})();</script>
+<script>/* day trips */(function(){
+var P={
+ babylon:function(n){return n<2?200:240+50*(n-2)},
+ babylon4:function(n){return n<2?220:260+40*(n-2)},
+ holy:function(n){return 200+30*Math.max(0,n-3)},
+ south:function(n){return [300,325,350][n-1]||350+40*(n-3)},
+ samarra:function(n){return [150,200,225][n-1]||225+25*(n-3)},
+ madain:function(n){return 100+25*(n-1)},
+ aqarquf:function(n){return 50+25*(n-1)}
+},U={"wa": "สวัสดีครับ/ค่ะ อยากจองทริปวันเดียว “{trip}” สำหรับ {n} ท่าน ({price})", "photo": "ภาพ: Wikimedia Commons"},T={"babylon": "บาบิโลน", "babylon4": "บาบิโลน บอร์ซิปปา ศาสดาโยบ และซุลกิฟล์", "holy": "คูฟา นาจาฟ และคาร์บาลา", "south": "ซิกกูรัตแห่งอูร์และพื้นที่ชุ่มน้ำ", "samarra": "ซามาร์รา", "madain": "อัลมาดาอิน (ซีทีฟอน)", "aqarquf": "ซิกกูรัตอะการ์กูฟ"},MAX=12,loaded=false;
+var tg=document.querySelector(".dt-toggle"),body=document.getElementById("dt-body");if(!tg||!body)return;
+function setOpen(o){body.hidden=!o;tg.setAttribute("aria-expanded",o);tg.querySelector(".dt-lbl").textContent=o?tg.dataset.hide:tg.dataset.show;if(o)loadImgs();}
+tg.addEventListener("click",function(){setOpen(body.hidden);});
+document.querySelectorAll("[data-open-dt]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();setOpen(true);document.getElementById("day-trips").scrollIntoView({behavior:"smooth",block:"start"});});});
+if(location.hash==="#day-trips")setOpen(true);
+function fmt(v){return "$"+v.toLocaleString("en-US");}
+document.querySelectorAll(".dt").forEach(function(c){var k=c.dataset.trip,n=1,out=c.querySelector("output"),tot=c.querySelector(".dt-total b"),bk=c.querySelector(".dt-book");
+ function upd(){out.textContent=n;var p=fmt(P[k](n));tot.textContent=p;bk.href="https://wa.me/9647711745353?text="+encodeURIComponent(U.wa.replace("{trip}",T[k]).replace("{n}",n).replace("{price}",p));}
+ c.querySelectorAll(".dt-step button").forEach(function(b){b.addEventListener("click",function(){n=Math.min(MAX,Math.max(1,n+(+b.dataset.d)));upd();});});upd();});
+var cache={};try{cache=JSON.parse(localStorage.getItem("ft-dt-img")||"{}");}catch(e){}
+function loadImgs(){if(loaded)return;loaded=true;document.querySelectorAll(".dt[data-q]").forEach(function(c){var q=c.dataset.q,ph=c.querySelector(".dt-ph");if(!q)return;
+ function show(r){ph.classList.remove("none");ph.style.backgroundImage="url('"+r.thumb+"')";var a=document.createElement("a");a.href=r.page;a.target="_blank";a.rel="noopener";a.textContent=U.photo;ph.appendChild(a);}
+ if(cache[q]){show(cache[q]);return;}
+ var qs=q.split("|");(function tryQ(i){if(i>=qs.length)return;
+ fetch("https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url|size|mime&iiurlwidth=900&gsrsearch="+encodeURIComponent(qs[i]+" filetype:bitmap"))
+ .then(function(r){return r.json();}).then(function(j){var ps=Object.values((j.query&&j.query.pages)||{}).sort(function(a,b){return a.index-b.index;});
+  var cs=ps.map(function(p){return p.imageinfo&&p.imageinfo[0];}).filter(function(x){return x&&/jpeg|png/.test(x.mime)&&x.width>=700;});
+  var pk=cs.find(function(x){return x.width>x.height;})||cs[0];if(!pk){tryQ(i+1);return;}var r={thumb:pk.thumburl,page:pk.descriptionurl};cache[q]=r;try{localStorage.setItem("ft-dt-img",JSON.stringify(cache));}catch(e){}show(r);}).catch(function(){tryQ(i+1);});})(0);});}
 })();</script>
 </body>
 </html>
