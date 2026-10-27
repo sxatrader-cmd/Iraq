@@ -505,7 +505,8 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
 <style id="eur-css">
 .eur{display:inline-block;margin-inline-start:.4em;font-size:.78em;font-weight:inherit;opacity:.8;white-space:nowrap;letter-spacing:0}
 .amount .eur{display:block;margin:6px 0 0;font-size:.5em;opacity:1;color:var(--gold,#c9a14a)}
-.dt-total .eur{display:block;margin:2px 0 0;font-size:.6em}
+.dt-total b .usd-p{display:inline;font-size:inherit;color:inherit}
+.dt-total b .eur{display:block;margin:2px 0 0;font-size:14px;color:var(--muted)}
 .eur-pay{display:block;margin-top:9px;font-size:12.5px;line-height:1.5;color:inherit;opacity:.8}
 .eur-pay::before{content:"€";display:inline-grid;place-items:center;width:17px;height:17px;margin-inline-end:6px;border-radius:50%;background:var(--gold,#c9a14a);color:#fff;font-size:10.5px;font-weight:700;vertical-align:-3px}
 .eur-pay .eur-rate{white-space:nowrap}
@@ -861,6 +862,22 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
     
     
     <!--dtx--><div class="dt-more" id="more-oldtown" hidden><p>Στην ανατολική όχθη του Τίγρη χτυπά η καρδιά της παλιάς Βαγδάτης, της πόλης που ίδρυσαν οι Αββασίδες χαλίφηδες το 762 μ.Χ. και που μέσα σε μία γενιά έγινε η μεγαλύτερη και πιο λόγια πόλη του κόσμου, έδρα του Οίκου της Σοφίας. Σε αυτόν τον ιδιωτικό περίπατο τεσσάρων έως πέντε ωρών διαβάζουμε δώδεκα αιώνες ιστορίας σε ένα μόνο πρωινό.</p><p>Ξεκινάμε από τον μεντρεσέ Μουσταντσιρίγια, που ολοκληρώθηκε το 1234 και είναι από τα αρχαιότερα πανεπιστήμια του κόσμου, με τη μεγάλη αυλή, τις στοές και τον λεπτό αββασιδικό διάκοσμο από τούβλα. Μετά μπαίνουμε στο σουκ αλ-Σαφαφίρ, όπου ο ρυθμός από τα σφυριά των χαλκουργών γεμίζει ακόμη το σκεπαστό σοκάκι και οι δίσκοι και τα μπρίκια σφυρηλατούνται και χαράζονται με το χέρι. Ακολουθεί το Μουσείο της Βαγδάτης στον Τίγρη, με σκηνές σε φυσικό μέγεθος που ζωντανεύουν την παλιά πόλη: γάμος, κορανικό σχολείο, καφενείο και ξεχασμένα επαγγέλματα.</p><p>Περπατάμε κάτω από τις κιονοστοιχίες της οδού Ρασίντ, της μεγάλης λεωφόρου της Βαγδάτης του 20ού αιώνα, και στρίβουμε στην οδό Μουτανάμπι, τη διασημότερη αγορά βιβλίων του αραβικού κόσμου. Πίνουμε τσάι στο καφέ Σαμπαντάρ, ανοιχτό από το 1917, και στεκόμαστε στο άγαλμα του ποιητή αλ-Μουτανάμπι πάνω από το ποτάμι. Τελειώνουμε στους κήπους της Κίσλα, κάτω από τον οθωμανικό πύργο του ρολογιού, όπου ο Φαϊζάλ Α΄ ανακηρύχθηκε βασιλιάς του Ιράκ το 1921. Τις Παρασκευές όλη η συνοικία ζωντανεύει με ποίηση, βιβλία και μουσική.</p><p>Σας παραλαμβάνουμε από το κατάλυμά σας στη Βαγδάτη και σας επιστρέφουμε. Η τιμή περιλαμβάνει όλα τα εισιτήρια εισόδου και είναι μία τιμή για όλη την ομάδα σας. Ο ξεναγός μιλά αραβικά, αγγλικά και ρωσικά και σας συνοδεύει σε όλη τη διαδρομή, με ιστορίες, γνωριμίες με τους τεχνίτες και τα καλύτερα σημεία για φωτογραφίες.</p></div><div class="dt-acts"><button type="button" class="dt-rm" aria-expanded="false" aria-controls="more-oldtown">Διαβάστε περισσότερα</button><button type="button" class="dt-cp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>Αντιγραφή συνδέσμου</span></button></div><!--/dtx-->
+    <div class="dt-calc">
+      <div class="dt-pp"><label>Ταξιδιώτες</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-total"><span>Σύνολο για την ομάδα σας</span><b dir="ltr">$100</b></div>
+      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">Κράτηση μέσω WhatsApp</a>
+    </div>
+  </div>
+</article>
+<article class="dt" data-trip="ziyara">
+  <div class="dt-ph" style="background-image:url('../img/kadhimiya-shrine-night.webp')" data-full="../img/kadhimiya-shrine-night.webp|../img/junayd-baghdadi-shrine.webp|../img/junayd-baghdadi-tomb.webp|../img/bahlul-shrine-dome.webp|../img/bahlul-shrine-tomb.webp" tabindex="0" role="button" aria-label="Τα ιερά προσκυνήματα της Βαγδάτης"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span><span class="dt-cnt" dir="ltr" aria-hidden="true">1 / 5</span></div>
+  <div class="dt-bd">
+    <h3>Τα ιερά προσκυνήματα της Βαγδάτης</h3>
+    <p class="dt-s">Ιερό Αλ-Καντιμίγια · Τέμενος Αμπού Χανίφα, Αντχαμίγια · Ιερό του Αμπντ αλ-Καντίρ αλ-Γκιλάνι · Ιερό του αλ-Τζουνάιντ αλ-Μπαγκντάντι · Ιερό του Μπαχλούλ</p>
+    <ul class="dt-inc" aria-label="Περιλαμβάνει"><li>Ιδιωτικό αυτοκίνητο και ξεναγός</li><li>Παραλαβή και επιστροφή στο ξενοδοχείο</li></ul>
+    
+    
+    <!--dtx--><div class="dt-more" id="more-ziyara" hidden><p>Μια ολόκληρη μέρα στα μεγάλα ιερά της Βαγδάτης, τόπους που εδώ και πάνω από χίλια χρόνια φέρνουν στην πόλη επισκέπτες από όλο τον ισλαμικό κόσμο. Η διαδρομή ενώνει τις δύο όχθες του Τίγρη, από την Καντιμίγια στα δυτικά ως την Αντχαμίγια και το Μπαμπ αλ-Σεΐχ στα ανατολικά, και τελειώνει στους ήσυχους τάφους των πρώτων δασκάλων του σουφισμού στο Καρχ.</p><p>Ξεκινάμε από το ιερό Αλ-Καντιμίγια, όπου αναπαύονται ο ιμάμης Μούσα αλ-Καζίμ και ο εγγονός του ιμάμης Μοχάμαντ αλ-Τζαουάντ (ειρήνη σε αυτούς). Οι δύο χρυσοί τρούλοι, οι τέσσερις χρυσοί μιναρέδες και οι αυλές με μπλε πλακάκια και ψηφιδωτά από καθρέφτες το κάνουν ένα από τα ωραιότερα αξιοθέατα του Ιράκ. Στην απέναντι όχθη, στην Αντχαμίγια, επισκεπτόμαστε το τέμενος του ιμάμη Αμπού Χανίφα αλ-Νουμάν, του μεγάλου νομομαθούς του 8ου αιώνα, τη σχολή του οποίου ακολουθούν εκατομμύρια μουσουλμάνοι, με τον γνωστό πύργο του ρολογιού.</p><p>Στη συνοικία Μπαμπ αλ-Σεΐχ φτάνουμε στο τέμενος και ιερό του σεΐχη Αμπντ αλ-Καντίρ αλ-Γκιλάνι, λογίου του 12ου αιώνα και ιδρυτή του σουφικού τάγματος Καντιρίγια, που υποδέχεται επισκέπτες από όλο τον κόσμο. Ολοκληρώνουμε στο Καρχ, στο ιερό του αλ-Τζουνάιντ αλ-Μπαγκντάντι, ενός από τους πιο σημαντικούς πρώιμους σουφί δασκάλους, που αναπαύεται δίπλα στον θείο και δάσκαλό του Σάρι αλ-Σακάτι, και στο ιερό με τον γαλάζιο τρούλο του Μπαχλούλ, του σοφού που έμεινε γνωστός για τα πνευματώδη μαθήματά του στον χαλίφη Χαρούν αλ-Ρασίντ.</p><p>Σας παραλαμβάνουμε με ιδιωτικό αυτοκίνητο από το κατάλυμά σας στη Βαγδάτη και σας επιστρέφουμε, με μία τιμή για όλη την ομάδα σας. Απαιτείται σεμνή ενδυμασία· οι γυναίκες φορούν αμπάγια για να μπουν στο ιερό της Καντιμίγια και μπορούμε να βοηθήσουμε. Ο ξεναγός σας μιλά αραβικά, αγγλικά και ρωσικά.</p></div><div class="dt-acts"><button type="button" class="dt-rm" aria-expanded="false" aria-controls="more-ziyara">Διαβάστε περισσότερα</button><button type="button" class="dt-cp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>Αντιγραφή συνδέσμου</span></button></div><!--/dtx-->
     <div class="dt-calc">
       <div class="dt-pp"><label>Ταξιδιώτες</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
       <div class="dt-total"><span>Σύνολο για την ομάδα σας</span><b dir="ltr">$100</b></div>
@@ -1288,6 +1305,7 @@ document.addEventListener("click",function(e){var b=e.target.closest("[data-book
 <script>/* day trips */(function(){
 var P={
  oldtown:function(n){return n<2?100:150+50*(n-2)},
+ ziyara:function(n){return 50+25*(n-1)},
  babylon:function(n){return n<2?200:240+50*(n-2)},
  babylon4:function(n){return n<2?220:260+40*(n-2)},
  holy:function(n){return 239+30*Math.max(0,n-3)},
@@ -1295,7 +1313,7 @@ var P={
  samarra:function(n){return [150,200,225][n-1]||225+25*(n-3)},
  madain:function(n){return 100+25*(n-1)},
  aqarquf:function(n){return 50+25*(n-1)}
-},U={"wa": "Γεια σας! Θα ήθελα να κλείσω την εκδρομή «{trip}» για {n} άτομα ({price})."},T={"oldtown": "Η παλιά πόλη της Βαγδάτης", "aqarquf": "Ζιγκουράτ του Ακάρ Κουφ", "madain": "Αλ-Μαντάιν (Κτησιφών)", "samarra": "Σαμάρα", "babylon": "Βαβυλώνα", "babylon4": "Βαβυλώνα, Βόρσιππα, προφήτης Ιώβ & Ντουλ-Κιφλ", "holy": "Κούφα, Νατζάφ & Καρμπάλα", "south": "Ζιγκουράτ της Ουρ & οι Βάλτοι"},MAX=12,loaded=false;
+},U={"wa": "Γεια σας! Θα ήθελα να κλείσω την εκδρομή «{trip}» για {n} άτομα ({price})."},T={"ziyara": "Τα ιερά προσκυνήματα της Βαγδάτης", "oldtown": "Η παλιά πόλη της Βαγδάτης", "aqarquf": "Ζιγκουράτ του Ακάρ Κουφ", "madain": "Αλ-Μαντάιν (Κτησιφών)", "samarra": "Σαμάρα", "babylon": "Βαβυλώνα", "babylon4": "Βαβυλώνα, Βόρσιππα, προφήτης Ιώβ & Ντουλ-Κιφλ", "holy": "Κούφα, Νατζάφ & Καρμπάλα", "south": "Ζιγκουράτ της Ουρ & οι Βάλτοι"},MAX=12,loaded=false;
 var tg=document.querySelector(".dt-toggle"),body=document.getElementById("dt-body");if(!tg||!body)return;
 function setOpen(o){body.hidden=!o;tg.setAttribute("aria-expanded",o);tg.querySelector(".dt-lbl").textContent=o?tg.dataset.hide:tg.dataset.show;if(o)loadImgs();}
 tg.addEventListener("click",function(){setOpen(body.hidden);});
@@ -1325,7 +1343,7 @@ document.querySelectorAll(".dt-ph[data-full]").forEach(function(ph){function ope
  ph.addEventListener("click",open);ph.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});});
 })();</script>
 <script id="dtx">(function(){
-var L=["Διαβάστε περισσότερα", "Λιγότερα", "Αντιγραφή συνδέσμου", "Ο σύνδεσμος αντιγράφηκε ✓", "Όλες οι ημερήσιες εκδρομές"],HOME="/el/",SL={"oldtown": "baghdad-old-town", "aqarquf": "aqar-quf", "madain": "al-madain-ctesiphon", "samarra": "samarra", "babylon": "babylon", "babylon4": "babylon-borsippa-kifl", "holy": "kufa-najaf-karbala", "south": "ur-marshes"},FIX=document.body.getAttribute("data-trip"),sec=document.getElementById("day-trips");if(!sec)return;
+var L=["Διαβάστε περισσότερα", "Λιγότερα", "Αντιγραφή συνδέσμου", "Ο σύνδεσμος αντιγράφηκε ✓", "Όλες οι ημερήσιες εκδρομές"],HOME="/el/",SL={"ziyara": "baghdad-holy-shrines", "oldtown": "baghdad-old-town", "aqarquf": "aqar-quf", "madain": "al-madain-ctesiphon", "samarra": "samarra", "babylon": "babylon", "babylon4": "babylon-borsippa-kifl", "holy": "kufa-najaf-karbala", "south": "ur-marshes"},FIX=document.body.getAttribute("data-trip"),sec=document.getElementById("day-trips");if(!sec)return;
 var tg=sec.querySelector(".dt-toggle"),bd=document.getElementById("dt-body"),all=sec.querySelector(".dt-all");
 function setMore(c,o){var m=c.querySelector(".dt-more"),b=c.querySelector(".dt-rm");if(!m)return;m.hidden=!o;b.setAttribute("aria-expanded",o);b.textContent=o?L[1]:L[0];}
 function fb(u){var t=document.createElement("textarea");t.value=u;t.setAttribute("readonly","");t.style.cssText="position:fixed;top:0;opacity:0";document.body.appendChild(t);t.select();t.setSelectionRange(0,u.length);try{document.execCommand("copy");}catch(e){}t.remove();}

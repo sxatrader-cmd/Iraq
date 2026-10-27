@@ -28,7 +28,8 @@ NOTE = {
 CSS = """<style id="eur-css">
 .eur{display:inline-block;margin-inline-start:.4em;font-size:.78em;font-weight:inherit;opacity:.8;white-space:nowrap;letter-spacing:0}
 .amount .eur{display:block;margin:6px 0 0;font-size:.5em;opacity:1;color:var(--gold,#c9a14a)}
-.dt-total .eur{display:block;margin:2px 0 0;font-size:.6em}
+.dt-total b .usd-p{display:inline;font-size:inherit;color:inherit}
+.dt-total b .eur{display:block;margin:2px 0 0;font-size:14px;color:var(--muted)}
 .eur-pay{display:block;margin-top:9px;font-size:12.5px;line-height:1.5;color:inherit;opacity:.8}
 .eur-pay::before{content:"€";display:inline-grid;place-items:center;width:17px;height:17px;margin-inline-end:6px;border-radius:50%;background:var(--gold,#c9a14a);color:#fff;font-size:10.5px;font-weight:700;vertical-align:-3px}
 .eur-pay .eur-rate{white-space:nowrap}
