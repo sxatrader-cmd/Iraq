@@ -386,6 +386,7 @@ html[lang="ar"] .gd button,html[lang="fa"] .gd button{font-family:var(--sans-ar)
 
 
 
+
 /* day trips */
 .pcards{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))!important}
 .dt-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--navy);color:#fff;border:0;border-radius:6px;padding:20px 22px;cursor:pointer;text-align:start;border-bottom:4px solid var(--gold)}
@@ -773,18 +774,6 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);
       <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">Réserver sur WhatsApp</a>
     </div>
   </div>
-</article><article class="dt" data-trip="holy" data-q="Imam Ali Shrine Najaf|Imam Ali Mosque">
-  <div class="dt-ph none" role="img" aria-label="Koufa, Nadjaf et Kerbala"></div>
-  <div class="dt-bd">
-    <h3>Koufa, Nadjaf et Kerbala</h3>
-    <p class="dt-s">Grande mosquée de Koufa · mausolée de l&#x27;imam Ali à Nadjaf · mausolées de l&#x27;imam Hussein et d&#x27;Al-Abbas à Kerbala</p>
-    <ul class="dt-inc" aria-label="Inclus"><li>Même prix de 1 à 3 personnes</li></ul>
-    <div class="dt-calc">
-      <div class="dt-pp"><label>Voyageurs</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
-      <div class="dt-total"><span>Total pour votre groupe</span><b dir="ltr">$200</b></div>
-      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">Réserver sur WhatsApp</a>
-    </div>
-  </div>
 </article><article class="dt" data-trip="babylon4" data-q="Borsippa ziggurat|Birs Nimrud">
   <div class="dt-ph none" role="img" aria-label="Babylone, Borsippa, prophète Job et Dhul-Kifl"></div>
   <div class="dt-bd">
@@ -794,6 +783,18 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);
     <div class="dt-calc">
       <div class="dt-pp"><label>Voyageurs</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
       <div class="dt-total"><span>Total pour votre groupe</span><b dir="ltr">$220</b></div>
+      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">Réserver sur WhatsApp</a>
+    </div>
+  </div>
+</article><article class="dt" data-trip="holy" data-q="Imam Ali Shrine Najaf|Imam Ali Mosque">
+  <div class="dt-ph none" role="img" aria-label="Koufa, Nadjaf et Kerbala"></div>
+  <div class="dt-bd">
+    <h3>Koufa, Nadjaf et Kerbala</h3>
+    <p class="dt-s">Grande mosquée de Koufa · mausolée de l&#x27;imam Ali à Nadjaf · mausolées de l&#x27;imam Hussein et d&#x27;Al-Abbas à Kerbala</p>
+    <ul class="dt-inc" aria-label="Inclus"><li>Même prix de 1 à 3 personnes</li></ul>
+    <div class="dt-calc">
+      <div class="dt-pp"><label>Voyageurs</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-total"><span>Total pour votre groupe</span><b dir="ltr">$239</b></div>
       <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">Réserver sur WhatsApp</a>
     </div>
   </div>
@@ -812,6 +813,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);
 </article></div>
     </div>
   </section>
+
 
 
 
@@ -1129,12 +1131,12 @@ document.addEventListener("click",function(e){var b=e.target.closest("[data-book
 var P={
  babylon:function(n){return n<2?200:240+50*(n-2)},
  babylon4:function(n){return n<2?220:260+40*(n-2)},
- holy:function(n){return 200+30*Math.max(0,n-3)},
+ holy:function(n){return 239+30*Math.max(0,n-3)},
  south:function(n){return [300,325,350][n-1]||350+40*(n-3)},
  samarra:function(n){return [150,200,225][n-1]||225+25*(n-3)},
  madain:function(n){return 100+25*(n-1)},
  aqarquf:function(n){return 50+25*(n-1)}
-},U={"wa": "Bonjour ! Je souhaite réserver l'excursion « {trip} » pour {n} personnes ({price}).", "photo": "Photo : Wikimedia Commons"},T={"aqarquf": "Ziggourat d'Aqar Quf", "madain": "Al-Madaïn (Ctésiphon)", "samarra": "Samarra", "babylon": "Babylone", "holy": "Koufa, Nadjaf et Kerbala", "babylon4": "Babylone, Borsippa, prophète Job et Dhul-Kifl", "south": "Ziggourat d'Ur et les Marais"},MAX=12,loaded=false;
+},U={"wa": "Bonjour ! Je souhaite réserver l'excursion « {trip} » pour {n} personnes ({price}).", "photo": "Photo : Wikimedia Commons"},T={"aqarquf": "Ziggourat d'Aqar Quf", "madain": "Al-Madaïn (Ctésiphon)", "samarra": "Samarra", "babylon": "Babylone", "babylon4": "Babylone, Borsippa, prophète Job et Dhul-Kifl", "holy": "Koufa, Nadjaf et Kerbala", "south": "Ziggourat d'Ur et les Marais"},MAX=12,loaded=false;
 var tg=document.querySelector(".dt-toggle"),body=document.getElementById("dt-body");if(!tg||!body)return;
 function setOpen(o){body.hidden=!o;tg.setAttribute("aria-expanded",o);tg.querySelector(".dt-lbl").textContent=o?tg.dataset.hide:tg.dataset.show;if(o)loadImgs();}
 tg.addEventListener("click",function(){setOpen(body.hidden);});

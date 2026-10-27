@@ -7,19 +7,19 @@ import re, json, pathlib, html
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 D = json.loads((pathlib.Path(__file__).parent / "daytrips_i18n.json").read_text())
 LANGS = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa", "ms", "id", "th"]
-ORDER = ["aqarquf", "madain", "samarra", "babylon", "holy", "babylon4", "south"]
+ORDER = ["aqarquf", "madain", "samarra", "babylon", "babylon4", "holy", "south"]
 
 # price for n people (total for the group, USD) — same formulas are used in the page script
 JS_PRICES = """{
  babylon:function(n){return n<2?200:240+50*(n-2)},
  babylon4:function(n){return n<2?220:260+40*(n-2)},
- holy:function(n){return 200+30*Math.max(0,n-3)},
+ holy:function(n){return 239+30*Math.max(0,n-3)},
  south:function(n){return [300,325,350][n-1]||350+40*(n-3)},
  samarra:function(n){return [150,200,225][n-1]||225+25*(n-3)},
  madain:function(n){return 100+25*(n-1)},
  aqarquf:function(n){return 50+25*(n-1)}
 }"""
-FROM = {"babylon": 200, "babylon4": 220, "holy": 200, "south": 300, "samarra": 150, "madain": 100, "aqarquf": 50}
+FROM = {"babylon": 200, "babylon4": 220, "holy": 239, "south": 300, "samarra": 150, "madain": 100, "aqarquf": 50}
 IMG_Q = {"babylon": "Babylon Iraq ruins|Babylon Iraq", "babylon4": "Borsippa ziggurat|Birs Nimrud",
          "holy": "Imam Ali Shrine Najaf|Imam Ali Mosque", "south": "Ziggurat of Ur|Ur ziggurat Iraq", "samarra": "Malwiya minaret Samarra|Malwiya",
          "madain": "Taq Kasra|Ctesiphon arch", "aqarquf": ""}
