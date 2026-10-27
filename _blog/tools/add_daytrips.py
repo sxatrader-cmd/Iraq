@@ -7,7 +7,7 @@ import re, json, pathlib, html
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 D = json.loads((pathlib.Path(__file__).parent / "daytrips_i18n.json").read_text())
 LANGS = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa", "ms", "id", "th"]
-ORDER = ["babylon", "babylon4", "holy", "south", "samarra", "madain", "aqarquf"]
+ORDER = ["aqarquf", "madain", "samarra", "babylon", "holy", "babylon4", "south"]
 
 # price for n people (total for the group, USD) — same formulas are used in the page script
 JS_PRICES = """{
@@ -102,7 +102,7 @@ def section(l):
 
 def pcard(l):
     u = D[l]["ui"]
-    route = " · ".join(D[l]["trips"][k][0] for k in ["babylon", "holy", "south", "samarra", "madain", "aqarquf"])
+    route = " · ".join(D[l]["trips"][k][0] for k in ["aqarquf", "madain", "samarra", "babylon", "holy", "south"])
     arrow = "←" if l in ("ar", "fa") else "→"
     return (f'<a class="pcard" href="#day-trips" data-open-dt><span class="eyebrow">{esc(u["card_e"])}</span>'
             f'<b class="disp">{esc(u["card_t"])}</b><span class="r">{esc(route)}</span>'
