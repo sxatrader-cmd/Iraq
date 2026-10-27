@@ -434,6 +434,28 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
 .dt-total b{font-family:var(--serif-en);font-size:26px;font-weight:400;color:var(--navy);font-variant-numeric:tabular-nums}
 .dt-book{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;border-radius:4px;padding:11px 14px}
 .dt-book:hover{filter:brightness(.95)}
+/*dtx*/
+.dt-more{font-size:15px;line-height:1.8;color:var(--ink);border-top:1px solid var(--line);padding-top:12px;margin-top:2px}
+.dt-more p{margin:0 0 10px}
+.dt-more p:last-child{margin-bottom:0}
+.dt-acts{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-top:2px}
+.dt-rm{background:none;border:0;padding:6px 0;color:var(--navy);font:inherit;font-weight:700;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px;text-decoration-thickness:2px}
+.dt-rm::after{content:"";width:7px;height:7px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+.dt-rm[aria-expanded="true"]::after{transform:rotate(-135deg) translateY(-2px)}
+.dt-cp{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);color:var(--navy);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.dt-cp:hover{border-color:var(--gold)}
+.dt-cp.ok{background:#E3F4E8;border-color:#7CC492;color:#1D6B37}
+.dt-all{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;color:var(--navy);font-weight:700;font-size:15px;text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:3px}
+.dt-all[hidden]{display:none}
+body.dt-solo .hero,body.dt-solo .hero-band,body.dt-solo main>*:not(#day-trips){display:none!important}
+body.dt-solo #day-trips{padding-top:26px!important}
+body.dt-solo .dt-toggle,body.dt-solo .dt-note,body.dt-solo .dt:not(.is-solo){display:none}
+body.dt-solo .dt-grid{grid-template-columns:1fr;max-width:760px;margin-inline:auto}
+body.dt-solo .dt-all{display:flex;max-width:760px;margin-inline:auto;margin-bottom:14px;border:0}
+body.dt-solo .dt-bd h3{font-size:28px}
+.dt-ph .dt-zoom{right:8px;left:auto}
+.dt-ph .dt-cnt{left:8px;right:auto}
+/*/dtx*/
 </style>
 </head>
 <body>
@@ -746,12 +768,15 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
     </button>
     <div id="dt-body" hidden>
       <p class="dt-note">الانطلاق من بغداد صباحاً والعودة إليها في اليوم نفسه. سيارة خاصة وسعر واحد لمجموعتك كلها.</p>
-      <div class="dt-grid"><article class="dt" data-trip="aqarquf">
+      <!--dtx--><a class="dt-all" href="#day-trips" hidden><span aria-hidden="true">→</span>عرض كل الرحلات اليومية</a><!--/dtx--><div class="dt-grid"><article class="dt" data-trip="aqarquf">
   <div class="dt-ph" style="background-image:url('img/aqar-quf-ziggurat.webp')" data-full="img/aqar-quf-ziggurat.webp" tabindex="0" role="button" aria-label="زقورة عقرقوف"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
     <h3>زقورة عقرقوف</h3>
     <p class="dt-s">زقورة دور كوريگالزو في عقرقوف</p>
     <ul class="dt-inc" aria-label="يشمل"><li>الدخوليات</li></ul>
+    
+    
+    <!--dtx--><div class="dt-more" id="more-aqarquf" hidden><p>على بعد نحو ثلاثين كيلومتراً غرب بغداد تقف زقورة عقرقوف، واحدة من أوضح الزقورات القائمة في العراق وأقربها إلى العاصمة. هنا كانت مدينة دور كوريگالزو، العاصمة التي أسسها الملك الكيشي كوريگالزو الأول في القرن الرابع عشر قبل الميلاد، لتكون مركزاً للحكم ومعبداً كبيراً للإله إنليل.</p><p>ما يدهش الزائر أولاً هو طريقة البناء. شُيّدت الزقورة من اللبن المجفف بالشمس، وبين كل عدة صفوف منه طبقة من حصران القصب المغموسة بالقار، ثم حبال قصب سميكة تشد الكتلة كلها. هذه التقنية، التي ما زالت ظاهرة بوضوح في جدرانها، هي سر بقائها شامخة أكثر من ثلاثة آلاف سنة رغم الرياح والأمطار. ويرتفع ما بقي منها اليوم نحو خمسين متراً فوق السهل المنبسط، فتراها من بعيد قبل أن تصل إليها.</p><p>نتجول حول قاعدة الزقورة ونصعد الدرج الذي أُعيد بناؤه في الواجهة، ونشرح لك كيف كانت الزقورات تُبنى ولماذا كانت مدرجة بطبقات، وما الدور الذي كانت تؤديه في حياة المدن الرافدينية بين السماء والأرض. ونمر على بقايا القصور والمعابد المحيطة التي كشفتها التنقيبات في المدينة القديمة.</p><p>هذه الرحلة قصيرة ومريحة، مثالية إذا كان وقتك في بغداد محدوداً، أو إذا أردت أن تبدأ رحلتك في العراق بلمحة سريعة عن حضارة وادي الرافدين قبل زيارة بابل أو أور. يكفيها نصف يوم تقريباً، ويمكن أن نجعلها في الصباح الباكر أو قبل الغروب، حين يتلون الطوب بلون ذهبي دافئ وتكون الإضاءة في أجمل حالاتها للتصوير.</p><p>ننطلق بسيارة خاصة من مكان إقامتك في بغداد ونعيدك إليه، والسعر يشمل تذاكر الدخول، وهو سعر واحد لمجموعتك كلها. يرافقك مرشد يتحدث العربية والإنجليزية والروسية، ويجيب عن أسئلتك طوال الطريق.</p></div><div class="dt-acts"><button type="button" class="dt-rm" aria-expanded="false" aria-controls="more-aqarquf">اقرأ المزيد</button><button type="button" class="dt-cp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>نسخ رابط الرحلة</span></button></div><!--/dtx-->
     <div class="dt-calc">
       <div class="dt-pp"><label>عدد الأشخاص</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
       <div class="dt-total"><span>السعر الكلي لمجموعتك</span><b dir="ltr">$50</b></div>
@@ -764,6 +789,9 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
     <h3>المدائن</h3>
     <p class="dt-s">طاق كسرى · مرقد الصحابي سلمان الفارسي</p>
     
+    
+    
+    <!--dtx--><div class="dt-more" id="more-madain" hidden><p>على بعد نحو خمسة وثلاثين كيلومتراً جنوب شرق بغداد، على ضفاف دجلة، تقع المدائن، المدينة التي عرفها العالم القديم باسم طيسفون، عاصمة الإمبراطورية الساسانية لقرون طويلة، وواحدة من أكبر مدن العالم في زمانها.</p><p>أبرز ما بقي منها طاق كسرى، القاعة الملكية التي يُنسب بناؤها إلى الملك كسرى أنوشروان في القرن السادس الميلادي. قوسه الضخم المبني من الآجر يرتفع نحو سبعة وثلاثين متراً، ويُعد من أكبر الأقواس الآجرية ذات الفتحة الواحدة التي بناها الإنسان على الإطلاق. تحت هذا القوس كان الملوك يستقبلون السفراء والوفود، وتروي الكتب القديمة قصص البساط المنسوج بالذهب والجواهر الذي كان يفرش أرض القاعة. ونقف معك أمام الواجهة الطويلة بزخارفها وأعمدتها المصمتة لنتخيل كيف كانت تبدو في عزها.</p><p>وفي القرن السابع الميلادي دخلت المدائن صفحة جديدة من تاريخها مع وصول المسلمين، وأصبح الصحابي الجليل سلمان الفارسي والياً عليها، وفيها توفي ودُفن. نزور مرقده المعروف بمسجد سلمان باك، وهو مكان هادئ يقصده الزوار من داخل العراق وخارجه، ويضم كذلك مرقد الصحابي حذيفة بن اليمان. ونحدثك عن سيرة سلمان، الرجل الذي قطع رحلة طويلة من بلاد فارس بحثاً عن الحقيقة حتى وصل إلى المدينة المنورة.</p><p>تجمع هذه الرحلة بين عظمة العمارة الفارسية القديمة وروحانية التاريخ الإسلامي المبكر في مكان واحد، وهي قريبة من بغداد، تكفيها ساعات قليلة، فتناسب من يريد رحلة قصيرة في صباح أو بعد ظهر يوم واحد.</p><p>ننطلق بسيارة خاصة من مكان إقامتك في بغداد ونعيدك إليه، بسعر واحد لمجموعتك كلها، مع مرشد يرافقك ويشرح لك تاريخ المكان بالعربية أو الإنجليزية أو الروسية.</p></div><div class="dt-acts"><button type="button" class="dt-rm" aria-expanded="false" aria-controls="more-madain">اقرأ المزيد</button><button type="button" class="dt-cp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>نسخ رابط الرحلة</span></button></div><!--/dtx-->
     <div class="dt-calc">
       <div class="dt-pp"><label>عدد الأشخاص</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
       <div class="dt-total"><span>السعر الكلي لمجموعتك</span><b dir="ltr">$100</b></div>
@@ -776,6 +804,9 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
     <h3>سامراء</h3>
     <p class="dt-s">مرقد الإمامين العسكريين (ع) · ملوية سامراء · سجن الإمام علي الهادي (ع) وقصر البركة المجاور له · ملوية أبي دلف</p>
     <ul class="dt-inc" aria-label="يشمل"><li>الدخوليات</li></ul>
+    
+    
+    <!--dtx--><div class="dt-more" id="more-samarra" hidden><p>على بعد نحو مئة وخمسة وعشرين كيلومتراً شمال بغداد، على الضفة الشرقية لدجلة، تقع سامراء، المدينة التي بناها الخليفة العباسي المعتصم عام 836 للميلاد وسماها «سُرّ من رأى»، وكانت عاصمة الخلافة العباسية أكثر من نصف قرن. واليوم تُعد مدينتها الأثرية من مواقع التراث العالمي المسجلة في اليونسكو، لأنها من أفضل ما بقي في العالم من عواصم الحضارة الإسلامية القديمة.</p><p>نبدأ بمرقد الإمامين العسكريين، الإمام علي الهادي والإمام الحسن العسكري عليهما السلام، بقبته الذهبية الواسعة ومآذنه الشاهقة وأبوابه المزينة بالكاشي الأزرق، وهو من أهم المزارات في العراق ويقصده الزوار من أنحاء العالم.</p><p>ثم نصل إلى رمز المدينة: الملوية، المئذنة الحلزونية للجامع الكبير الذي بناه الخليفة المتوكل في منتصف القرن التاسع، وكان يوماً أكبر مسجد في العالم. ترتفع الملوية نحو اثنين وخمسين متراً، ويلتف حولها ممر صاعد يمكن السير عليه حتى القمة، ومنها تمتد أمامك أسوار الجامع الهائلة بأقواسها، والمدينة القديمة والسهول من حولها. صعود الملوية تجربة لا تُنسى، فخذ وقتك والتقط صورك من كل جهة.</p><p>بعدها نزور الموقع المعروف بسجن الإمام علي الهادي عليه السلام، وقصر البركة المجاور له، ونحكي لك قصة إقامة الإمام في سامراء. ونختم الرحلة شمال المدينة عند جامع أبي دلف ومئذنته الحلزونية الأصغر، التي بُنيت على طراز الملوية، في مكان هادئ بعيد عن الزحام وجميل جداً للتصوير.</p><p>رحلة سامراء طويلة نسبياً وتستغرق يوماً كاملاً، لذلك ننطلق صباحاً بسيارة خاصة من مكان إقامتك في بغداد ونعيدك إليه مساءً. السعر يشمل تذاكر الدخول، وهو سعر واحد لمجموعتك كلها، ويرافقك مرشد يتحدث العربية والإنجليزية والروسية.</p></div><div class="dt-acts"><button type="button" class="dt-rm" aria-expanded="false" aria-controls="more-samarra">اقرأ المزيد</button><button type="button" class="dt-cp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>نسخ رابط الرحلة</span></button></div><!--/dtx-->
     <div class="dt-calc">
       <div class="dt-pp"><label>عدد الأشخاص</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
       <div class="dt-total"><span>السعر الكلي لمجموعتك</span><b dir="ltr">$150</b></div>
@@ -788,6 +819,9 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
     <h3>بابل</h3>
     <p class="dt-s">آثار مدينة بابل الأثرية</p>
     <ul class="dt-inc" aria-label="يشمل"><li>الدخوليات</li></ul>
+    
+    
+    <!--dtx--><div class="dt-more" id="more-babylon" hidden><p>على بعد نحو خمسة وثمانين كيلومتراً جنوب بغداد، قرب مدينة الحلة، تقع بابل، أشهر مدن العالم القديم، والمسجلة على قائمة التراث العالمي لليونسكو منذ عام 2019. هنا حكم حمورابي وكتب شريعته الشهيرة، وهنا بنى نبوخذنصر الثاني مدينته العظيمة في القرن السادس قبل الميلاد، وهنا توفي الإسكندر المقدوني.</p><p>ندخل المدينة من نسخة بوابة عشتار الزرقاء بزخارف الثيران والتنانين، ونمشي في شارع الموكب الذي كانت تسير فيه الاحتفالات الكبرى في رأس السنة البابلية. ونرى جدران الطابوق الأصلية التي ما زالت تحمل أختام نبوخذنصر واسمه بالخط المسماري، ونتعرف على حكاية البوابة الأصلية المعروضة اليوم في متحف برلين.</p><p>ثم نتجول في القصر الجنوبي بقاعاته وساحاته الواسعة، ونتوقف عند أسد بابل، التمثال البازلتي الضخم الذي صار رمزاً للمدينة. ونحدثك عن الجنائن المعلقة، إحدى عجائب الدنيا السبع، وعن زقورة إيتيمينانكي التي يربطها كثير من الباحثين بقصة برج بابل، وعن المسرح الإغريقي الذي بُني بعد دخول الإسكندر.</p><p>مرشدك يحول الحجارة إلى قصص: كيف كانت الحياة في أكبر مدينة على الأرض قبل ألفين وستمئة سنة، وكيف كان الفلك والرياضيات والقانون يزدهرون فيها، ولماذا بقي اسم بابل حياً في ذاكرة البشرية حتى اليوم.</p><p>الرحلة مناسبة للجميع، من عشاق التاريخ إلى العائلات، ولا تحتاج إلى مجهود بدني كبير. ننطلق صباحاً بسيارة خاصة من مكان إقامتك في بغداد ونعيدك إليه بعد الظهر. السعر يشمل تذاكر الدخول، وهو سعر واحد لمجموعتك كلها، ويرافقك مرشد يتحدث العربية والإنجليزية والروسية.</p></div><div class="dt-acts"><button type="button" class="dt-rm" aria-expanded="false" aria-controls="more-babylon">اقرأ المزيد</button><button type="button" class="dt-cp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>نسخ رابط الرحلة</span></button></div><!--/dtx-->
     <div class="dt-calc">
       <div class="dt-pp"><label>عدد الأشخاص</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
       <div class="dt-total"><span>السعر الكلي لمجموعتك</span><b dir="ltr">$200</b></div>
@@ -800,6 +834,9 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
     <h3>بابل - بورسيبا - النبي أيوب - ذو الكفل</h3>
     <p class="dt-s">بابل · زقورة بورسيبا · مرقد النبي أيوب (ع) · مرقد ذي الكفل (ع)</p>
     <ul class="dt-inc" aria-label="يشمل"><li>الدخوليات</li></ul>
+    
+    
+    <!--dtx--><div class="dt-more" id="more-babylon4" hidden><p>هذه الرحلة هي النسخة الأشمل لزيارة منطقة بابل، تجمع في يوم واحد بين أعظم آثار بلاد الرافدين وبين مرقدين من أقدم مزارات العراق، في طريق واحد يمتد جنوب بغداد بين الحلة والكفل.</p><p>نبدأ بمدينة بابل الأثرية المسجلة على قائمة التراث العالمي لليونسكو: بوابة عشتار الزرقاء، شارع الموكب، القصر الجنوبي لنبوخذنصر، وأسد بابل الشهير. نحكي لك قصة حمورابي وشريعته، وأسطورة الجنائن المعلقة، ونريك الطابوق الأصلي الذي ما زال يحمل اسم الملك مختوماً بالخط المسماري.</p><p>ثم نتجه إلى بورسيبا، المعروفة اليوم ببرس نمرود، حيث تقف بقايا زقورة معبد الإله نابو، إله الحكمة والكتابة. ترتفع الزقورة وسط أرض منبسطة، وعلى قمتها كتل من الطابوق انصهرت وتزججت بفعل حرارة شديدة في زمن قديم، وهو مشهد غريب يثير فضول كل من يراه. ويربط كثيرون بين هذا الموقع وقصة برج بابل.</p><p>بعدها نزور مرقد النبي أيوب عليه السلام، رمز الصبر في التراث الديني، وهو مكان هادئ تحيطه البساتين، فيه بئر يقصدها الزوار تبركاً. ونختم بمرقد النبي ذي الكفل عليه السلام في بلدة الكفل على ضفاف الفرات، وهو مزار تاريخي عريق تميزه مئذنته القديمة وزخارفه، ويحمل طبقات من تاريخ أتباع ديانات مختلفة عاشوا في هذه الأرض وقدسوا المكان.</p><p>هي رحلة غنية ومتنوعة تستغرق يوماً كاملاً، تمنحك صورة واسعة عن تاريخ المنطقة القديم والديني معاً. ننطلق صباحاً بسيارة خاصة من مكان إقامتك في بغداد ونعيدك إليه مساءً. السعر يشمل تذاكر الدخول، وهو سعر واحد لمجموعتك كلها، ويرافقك مرشد يتحدث العربية والإنجليزية والروسية.</p></div><div class="dt-acts"><button type="button" class="dt-rm" aria-expanded="false" aria-controls="more-babylon4">اقرأ المزيد</button><button type="button" class="dt-cp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>نسخ رابط الرحلة</span></button></div><!--/dtx-->
     <div class="dt-calc">
       <div class="dt-pp"><label>عدد الأشخاص</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
       <div class="dt-total"><span>السعر الكلي لمجموعتك</span><b dir="ltr">$220</b></div>
@@ -812,6 +849,9 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
     <h3>الكوفة - النجف - كربلاء</h3>
     <p class="dt-s">مسجد الكوفة الكبير · مرقد الإمام علي (ع) في النجف · مرقدا الإمام الحسين وأبي الفضل العباس (ع) في كربلاء</p>
     <ul class="dt-inc" aria-label="يشمل"><li>السعر نفسه من شخص إلى 3 أشخاص</li></ul>
+    
+    
+    <!--dtx--><div class="dt-more" id="more-holy" hidden><p>رحلة روحانية في يوم واحد إلى ثلاث من أهم المدن في تاريخ العراق الإسلامي: الكوفة والنجف وكربلاء، نعيش فيها سيرة الإمام علي بن أبي طالب وأبنائه عليهم السلام في الأماكن التي شهدتها.</p><p>نبدأ بمسجد الكوفة الكبير، من أقدم المساجد في العالم الإسلامي، الذي اتخذه الإمام علي عليه السلام مقراً لخلافته حين جعل الكوفة عاصمة له. في هذا المسجد كان يصلي ويخطب ويقضي بين الناس، وفيه المحراب الذي ضُرب فيه في شهر رمضان. ونزور داخل المسجد مقامات عدة ومرقد مسلم بن عقيل، سفير الإمام الحسين إلى الكوفة، ونحدثك عن سيرة الإمام وأصحابه الذين عاشوا معه في هذه المدينة.</p><p>ثم نصل إلى النجف الأشرف، إلى مرقد الإمام علي عليه السلام بقبته الذهبية وصحنه الواسع المزين بالكاشي والمرايا، وهو من أكثر الأماكن قدسية في العراق، وتحيط به المدينة القديمة بأسواقها ومدارسها الدينية العريقة. ونمر بجانب وادي السلام، من أكبر المقابر في العالم وأقدمها.</p><p>ونختم في كربلاء المقدسة بزيارة مرقد الإمام الحسين عليه السلام ومرقد أخيه أبي الفضل العباس عليه السلام، ونمشي في منطقة بين الحرمين التي تربط بينهما، ونروي لك قصة كربلاء وما تعنيه لملايين الزوار الذين يقصدونها كل عام.</p><p>الرحلة تستغرق يوماً كاملاً، ننطلق فيه صباحاً بسيارة خاصة من مكان إقامتك في بغداد ونعيدك إليه مساءً. السعر واحد لمجموعة من شخص إلى ثلاثة أشخاص. ننصح بلباس محتشم، والنساء بالعباءة عند دخول المراقد، ويمكننا مساعدتك في ذلك. ويرافقك مرشد يتحدث العربية والإنجليزية والروسية.</p></div><div class="dt-acts"><button type="button" class="dt-rm" aria-expanded="false" aria-controls="more-holy">اقرأ المزيد</button><button type="button" class="dt-cp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>نسخ رابط الرحلة</span></button></div><!--/dtx-->
     <div class="dt-calc">
       <div class="dt-pp"><label>عدد الأشخاص</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
       <div class="dt-total"><span>السعر الكلي لمجموعتك</span><b dir="ltr">$239</b></div>
@@ -824,6 +864,9 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
     <h3>زقورة أور والأهوار</h3>
     <p class="dt-s">زقورة أور · الأهوار</p>
     <ul class="dt-inc" aria-label="يشمل"><li>وجبة غداء سمك مسكوف</li><li>جولة بالمشحوف في الأهوار</li><li>دخوليات زقورة أور</li></ul>
+    
+    
+    <!--dtx--><div class="dt-more" id="more-south" hidden><p>رحلة إلى جنوب العراق، إلى المكان الذي بدأت فيه الحضارة: زقورة أور العظيمة، ثم الأهوار، الجنة المائية التي يعيش أهلها حياة لم تتغير كثيراً منذ آلاف السنين.</p><p>نبدأ بمدينة أور السومرية قرب الناصرية، حيث تقف الزقورة التي بناها الملك أورنمو قبل أكثر من أربعة آلاف عام للإله نانا، إله القمر. بواجهتها الضخمة ودرجها العريض الصاعد، هي من أكمل الزقورات المحفوظة في العالم. نصعد الدرج ونرى من الأعلى أطلال المدينة القديمة، ثم نزور المقبرة الملكية التي كشفت فيها التنقيبات في عشرينيات القرن الماضي كنوزاً مذهلة من الذهب والقيثارات والحلي، والبيت المعروف ببيت النبي إبراهيم عليه السلام، فأور بحسب التقاليد هي مدينته التي وُلد فيها.</p><p>ثم ننتقل إلى الأهوار، المسجلة على قائمة التراث العالمي لليونسكو منذ عام 2016. نركب المشحوف، القارب الخشبي الطويل التقليدي، ونتهادى بين ممرات القصب العالية والمياه الهادئة، ونرى الجواميس وهي تسبح، والطيور المهاجرة، وبيوت القصب المبنية على جزر صغيرة. ونزور مضيفاً، بيت الضيافة الكبير المصنوع من القصب بأقواسه المدهشة، ونتعرف على حياة أهل الأهوار وكرمهم.</p><p>ونتناول الغداء، سمكاً مسكوفاً، الطبق العراقي الأشهر، مشوياً على الطريقة التقليدية بجانب النار. الغداء وجولة المشحوف وتذاكر دخول زقورة أور كلها مشمولة في السعر.</p><p>المسافة من بغداد إلى الجنوب طويلة، لذلك ننطلق في الصباح الباكر جداً ونعود ليلاً، في يوم طويل لكنه يستحق كل دقيقة. السفر بسيارة خاصة من مكان إقامتك في بغداد وإليه، بسعر واحد لمجموعتك كلها، ويرافقك مرشد يتحدث العربية والإنجليزية والروسية.</p></div><div class="dt-acts"><button type="button" class="dt-rm" aria-expanded="false" aria-controls="more-south">اقرأ المزيد</button><button type="button" class="dt-cp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>نسخ رابط الرحلة</span></button></div><!--/dtx-->
     <div class="dt-calc">
       <div class="dt-pp"><label>عدد الأشخاص</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
       <div class="dt-total"><span>السعر الكلي لمجموعتك</span><b dir="ltr">$300</b></div>
@@ -1196,6 +1239,26 @@ function lb(list,alt){var idx=0,o=document.createElement("div");o.className="dt-
  o.addEventListener("click",function(e){if(e.target===o||e.target===x)close();});}
 document.querySelectorAll(".dt-ph[data-full]").forEach(function(ph){function open(){lb(ph.dataset.full.split("|"),ph.getAttribute("aria-label"));}
  ph.addEventListener("click",open);ph.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});});
+})();</script>
+<script id="dtx">(function(){
+var L=["اقرأ المزيد", "عرض أقل", "نسخ رابط الرحلة", "تم نسخ الرابط ✓", "عرض كل الرحلات اليومية"],sec=document.getElementById("day-trips");if(!sec)return;
+var tg=sec.querySelector(".dt-toggle"),bd=document.getElementById("dt-body"),all=sec.querySelector(".dt-all"),t0=document.title;
+function setMore(c,o){var m=c.querySelector(".dt-more"),b=c.querySelector(".dt-rm");if(!m)return;m.hidden=!o;b.setAttribute("aria-expanded",o);b.textContent=o?L[1]:L[0];}
+function fb(u){var t=document.createElement("textarea");t.value=u;t.setAttribute("readonly","");t.style.cssText="position:fixed;top:0;opacity:0";document.body.appendChild(t);t.select();t.setSelectionRange(0,u.length);try{document.execCommand("copy");}catch(e){}t.remove();}
+sec.querySelectorAll(".dt").forEach(function(c){
+ var rm=c.querySelector(".dt-rm"),cp=c.querySelector(".dt-cp");
+ if(rm)rm.addEventListener("click",function(){setMore(c,c.querySelector(".dt-more").hidden);});
+ if(cp)cp.addEventListener("click",function(){var u=location.origin+location.pathname+"#trip-"+c.dataset.trip,s=cp.querySelector("span");
+  function ok(){cp.classList.add("ok");s.textContent=L[3];clearTimeout(cp._t);cp._t=setTimeout(function(){cp.classList.remove("ok");s.textContent=L[2];},2400);}
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(u).then(ok,function(){fb(u);ok();});}else{fb(u);ok();}});
+});
+function route(){var m=location.hash.match(/^#trip-([a-z0-9]+)$/),c=m&&sec.querySelector('.dt[data-trip="'+m[1]+'"]');
+ sec.querySelectorAll(".dt").forEach(function(x){x.classList.toggle("is-solo",x===c);});
+ document.body.classList.toggle("dt-solo",!!c);all.hidden=!c;
+ if(c){if(bd&&bd.hidden&&tg)tg.click();setMore(c,true);document.title=c.querySelector("h3").textContent+" | Fable Tour";window.scrollTo(0,0);}
+ else document.title=t0;}
+all.addEventListener("click",function(e){e.preventDefault();history.pushState(null,"",location.pathname+location.search+"#day-trips");route();sec.scrollIntoView({block:"start"});});
+window.addEventListener("hashchange",route);route();
 })();</script>
 </body>
 </html>
