@@ -5,7 +5,8 @@ from the English pages and a translation file, then links it from every page
 
 Usage:  python3 _blog/tools/add_lang.py fi sv da no
 Translations: _blog/tools/pages_i18n/<lang>.json  ({"<id>": "text"}, ids from src.json)
-Idempotent: re-running rebuilds the pages of the given languages from English."""
+Idempotent: re-running rebuilds the pages of the given languages from English.
+After rebuilding run add_airport.py, then add_euro.py."""
 import re, json, html, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]

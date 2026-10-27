@@ -468,7 +468,41 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
 .dt-ph .dt-cnt{left:8px;right:auto}
 /*/dtx*/
 </style>
-<style id="prog-tg-css">.prog-head{cursor:pointer}.prog:not(.open) .prog-head{border-radius:6px}.prog-tg{margin-top:14px;display:flex;align-items:center;gap:12px;background:none;border:0;padding:0;color:var(--gold-2);font:inherit;font-weight:700;font-size:15px;cursor:pointer}.prog-chev{flex:none;width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;transition:transform .25s}.prog.open .prog-chev{transform:rotate(180deg)}</style><style id="pdate-css">#form input:not([type=checkbox]),#form select{height:48px;box-sizing:border-box}#f-pdate{-webkit-appearance:none;appearance:none;display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin:0;line-height:1.2;text-align:left;color-scheme:dark}#f-pdate::-webkit-date-and-time-value{text-align:left;margin:0;min-height:1.2em}#f-pdate::-webkit-calendar-picker-indicator{filter:invert(1);opacity:.75;cursor:pointer}#f-pdate-field{min-width:0}</style><style id="eur-css">
+<style id="prog-tg-css">.prog-head{cursor:pointer}.prog:not(.open) .prog-head{border-radius:6px}.prog-tg{margin-top:14px;display:flex;align-items:center;gap:12px;background:none;border:0;padding:0;color:var(--gold-2);font:inherit;font-weight:700;font-size:15px;cursor:pointer}.prog-chev{flex:none;width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;transition:transform .25s}.prog.open .prog-chev{transform:rotate(180deg)}</style><style id="pdate-css">#form input:not([type=checkbox]),#form select{height:48px;box-sizing:border-box}#f-pdate{-webkit-appearance:none;appearance:none;display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin:0;line-height:1.2;text-align:left;color-scheme:dark}#f-pdate::-webkit-date-and-time-value{text-align:left;margin:0;min-height:1.2em}#f-pdate::-webkit-calendar-picker-indicator{filter:invert(1);opacity:.75;cursor:pointer}#f-pdate-field{min-width:0}</style><style id="ap-css">
+.ap-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--navy);color:#fff;border:0;border-radius:6px;padding:20px 22px;cursor:pointer;text-align:start;border-bottom:4px solid var(--gold);font:inherit}
+.ap-toggle .eyebrow{color:var(--gold-2)}
+.ap-toggle b{display:block;font-family:var(--serif-en);font-weight:400;font-size:clamp(21px,3.4vw,27px);line-height:1.3;margin-top:4px}
+html[lang="ar"] .ap-toggle b,html[lang="fa"] .ap-toggle b,html[lang="ur"] .ap-toggle b{font-family:var(--serif-ar);font-weight:700}
+.ap-toggle small{display:block;color:#C9CFD9;font-size:14px;margin-top:4px}
+.ap-chev{flex:none;width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;transition:transform .25s}
+.ap-toggle[aria-expanded="true"] .ap-chev{transform:rotate(180deg)}
+.ap-card{margin-top:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:grid;grid-template-columns:1fr}
+@media(min-width:820px){.ap-card{grid-template-columns:5fr 6fr}}
+.ap-ph{position:relative;min-height:240px;background:var(--navy) center/cover no-repeat}
+.ap-ph img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3}
+.ap-in{padding:22px 22px 24px}
+.ap-in>p{margin:0 0 14px;line-height:1.6;color:var(--ink)}
+.ap-inc{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:7px}
+.ap-inc li{display:flex;gap:9px;align-items:flex-start;font-size:15px}
+.ap-inc li::before{content:"✓";color:var(--gold);font-weight:700;flex:none}
+.ap-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ap-form label{display:flex;flex-direction:column;gap:5px;font-size:13px;color:var(--muted);min-width:0}
+.ap-form .wide{grid-column:1/-1}
+.ap-form input,.ap-form select{width:100%;box-sizing:border-box;height:46px;padding:0 12px;border:1px solid var(--line);border-radius:5px;background:#fff;color:var(--ink);font:16px var(--sans-en);-webkit-appearance:none;appearance:none;min-width:0}
+.ap-form select{background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 18px) 20px,calc(100% - 13px) 20px;background-size:5px 5px;background-repeat:no-repeat}
+html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
+.ap-price{margin-top:16px;padding:14px 16px;border-radius:6px;background:var(--panel);border:1px solid var(--line)}
+.ap-price .ap-hint{color:var(--muted);font-size:14px}
+.ap-price .ap-tot span{display:block;font-size:12px;color:var(--muted);letter-spacing:.04em}
+.ap-price .ap-tot b{font-family:var(--serif-en);font-weight:400;font-size:30px;color:var(--navy)}
+.ap-price .ap-tot .eur{display:block;font-size:.55em}
+.ap-night{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+.ap-night[hidden],.ap-tot[hidden],.ap-hint[hidden]{display:none}
+.ap-book{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;height:50px;border-radius:5px;background:#25D366;color:#fff;font-weight:600;text-decoration:none}
+.ap-book[aria-disabled="true"]{opacity:.45;pointer-events:none}
+.ap-big{margin-top:10px;font-size:13px;color:var(--muted)}
+</style>
+<style id="eur-css">
 .eur{display:inline-block;margin-inline-start:.4em;font-size:.78em;font-weight:inherit;opacity:.8;white-space:nowrap;letter-spacing:0}
 .amount .eur{display:block;margin:6px 0 0;font-size:.5em;opacity:1;color:var(--gold,#c9a14a)}
 .dt-total .eur{display:block;margin:2px 0 0;font-size:.6em}
@@ -914,6 +948,35 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
 </article></div>
     </div>
   </section>
+  <section class="block in" style="padding-top:0" id="airport-transfer">
+    <button class="ap-toggle" type="button" aria-expanded="false" aria-controls="ap-body" data-show="Näytä tiedot" data-hide="Piilota tiedot">
+      <span><span class="eyebrow">Lentokenttäkuljetus</span><b>Vastaanotto Bagdadin lentoasemalla ja kuljetus hotelliin</b><small class="ap-lbl">Näytä tiedot</small></span>
+      <span class="ap-chev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+    </button>
+    <div id="ap-body" hidden>
+      <div class="ap-card">
+        <div class="ap-ph"><img src="/img/airport-pickup-baghdad.webp" alt="Fable Tourin opas odottaa matkailijoita Bagdadin kansainvälisen lentoaseman tuloaulassa" width="1400" height="1050" loading="lazy" decoding="async"></div>
+        <div class="ap-in">
+          <p>Otamme sinut vastaan Bagdadin kansainvälisen lentoaseman tuloaulassa ja ajamme yksityisellä autolla suoraan hotelliisi Bagdadissa.</p>
+          <ul class="ap-inc"><li>Vastaanotto tuloaulassa</li><li>Yksityinen ilmastoitu auto</li><li>Apua matkatavaroiden kanssa</li><li>Kuljetus hotelliisi Bagdadissa</li></ul>
+          <div class="ap-form">
+            <label>Saapumispäivä<input type="date" id="ap-date" required></label>
+            <label>Saapumisaika (paikallista aikaa)<input type="time" id="ap-time" required></label>
+            <label class="wide">Matkustajat<select id="ap-n"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></label>
+            <label>Hotelli (valinnainen)<input type="text" id="ap-hotel" autocomplete="off"></label>
+            <label>Lennon numero (valinnainen)<input type="text" id="ap-flight" autocomplete="off"></label>
+          </div>
+          <div class="ap-price" aria-live="polite">
+            <div class="ap-hint">Valitse saapumispäivä ja -aika nähdäksesi hinnan.</div>
+            <div class="ap-tot" hidden><span>Kokonaishinta</span><b dir="ltr"></b><small class="ap-night" hidden>Yöhinta klo 20–10 saapuville</small></div>
+          </div>
+          <a class="ap-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener" aria-disabled="true">Varaa WhatsAppissa</a>
+          <div class="ap-big">Yli 9 matkustajaa? Kirjoita meille WhatsAppissa.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
 
@@ -1301,7 +1364,25 @@ function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0"
 function upd(){var priv=sel.value==="";pf.hidden=!priv;pd.required=priv;var t=prog&&prog.selectedIndex===1?"9":"7";var m=new Date();m.setDate(m.getDate()+LEAD[t]);pd.min=iso(m);if(pd.value&&pd.value<pd.min)pd.value="";}
 sel.addEventListener("change",upd);if(prog)prog.addEventListener("change",function(){setTimeout(upd,0);});
 new MutationObserver(function(){setTimeout(upd,0);}).observe(sel,{childList:true});
-document.addEventListener("click",function(e){if(e.target.closest("[data-book]"))setTimeout(upd,0);});upd();})();</script><script id="eur-js">(function(){
+document.addEventListener("click",function(e){if(e.target.closest("[data-book]"))setTimeout(upd,0);});upd();})();</script><script id="ap-js">(function(){
+var C={"wa": "Hei! Haluaisin varata vastaanoton Bagdadin kansainvälisellä lentoasemalla ja kuljetuksen hotelliin. Saapuminen: {date} klo {time}, {n} matkustajaa.{extra} Hinta: {price}.", "eh": "Hotelli: {h}.", "ef": "Lento: {f}.", "show": "Näytä tiedot", "hide": "Piilota tiedot"},DAY=75,NIGHT=125,PER=3;
+var b=document.querySelector(".ap-toggle"),body=document.getElementById("ap-body"),lbl=b&&b.querySelector(".ap-lbl");if(!b||!body)return;
+function setOpen(o){body.hidden=!o;b.setAttribute("aria-expanded",o);if(lbl)lbl.textContent=o?C.hide:C.show;}
+b.addEventListener("click",function(){setOpen(body.hidden);});
+if(location.hash==="#airport-transfer")setOpen(true);
+var d=document.getElementById("ap-date"),tm=document.getElementById("ap-time"),n=document.getElementById("ap-n"),h=document.getElementById("ap-hotel"),f=document.getElementById("ap-flight");
+var hint=body.querySelector(".ap-hint"),tot=body.querySelector(".ap-tot"),out=tot.querySelector("b"),night=tot.querySelector(".ap-night"),bk=body.querySelector(".ap-book");
+try{var td=new Date();td.setMinutes(td.getMinutes()-td.getTimezoneOffset());d.min=td.toISOString().slice(0,10);}catch(e){}
+function upd(){
+ if(!d.value||!tm.value){hint.hidden=false;tot.hidden=true;bk.setAttribute("aria-disabled","true");bk.href="https://wa.me/9647711745353";return;}
+ var hr=parseInt(tm.value.split(":")[0],10),isNight=!(hr>=10&&hr<20),k=+n.value||1,cars=Math.ceil(k/PER),p=(isNight?NIGHT:DAY)*cars,ps="$"+p.toLocaleString("en-US");
+ hint.hidden=true;tot.hidden=false;out.textContent=ps;night.hidden=!isNight;
+ var ex="";if(h.value.trim())ex+=" "+C.eh.replace("{h}",h.value.trim());if(f.value.trim())ex+=" "+C.ef.replace("{f}",f.value.trim());
+ var msg=C.wa.replace("{date}",d.value).replace("{time}",tm.value).replace("{n}",k).replace("{extra}",ex).replace("{price}",ps);
+ bk.href="https://wa.me/9647711745353?text="+encodeURIComponent(msg);bk.removeAttribute("aria-disabled");}
+[d,tm,n,h,f].forEach(function(x){x.addEventListener("input",upd);x.addEventListener("change",upd);});
+})();</script>
+<script id="eur-js">(function(){
 var L=document.documentElement.lang||"de",FB=0.86,KEY="fable_usd_eur",today=new Date().toISOString().slice(0,10),R=null,busy=false;
 var F=new Intl.NumberFormat(L==="no"?"nb":L,{style:"currency",currency:"EUR",maximumFractionDigits:0});
 var F4=new Intl.NumberFormat(L==="no"?"nb":L,{minimumFractionDigits:2,maximumFractionDigits:4});
