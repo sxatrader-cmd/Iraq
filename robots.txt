@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /_blog/
 
 Sitemap: https://iraq.fabletour.com/sitemap.xml
