@@ -61,7 +61,7 @@ article.post{padding-block:28px 8px}
 .faq summary::-webkit-details-marker{display:none}
 .faq p{margin:10px 0 0;color:#3a404b}
 .author{display:flex;gap:16px;align-items:center;background:var(--panel);border-radius:6px;padding:18px;margin:30px 0 8px;font-size:15px}
-.author svg{width:56px;height:56px;flex:none;border-radius:50%;background:#fff;box-shadow:0 0 0 2px var(--gold)}
+.author img{width:88px;height:88px;flex:none;border-radius:50%}
 .author p{margin:0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
 .pc{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s}

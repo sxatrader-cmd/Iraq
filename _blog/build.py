@@ -206,7 +206,7 @@ def build_article(l, p, posts, ALL, TOURS):
          "mainEntityOfPage": {"@type": "WebPage", "@id": url}, "url": url,
          "image": {"@type": "ImageObject", "url": image}, "wordCount": p["_words"], "articleSection": p["category"],
          "keywords": p.get("keywords", ""),
-         "author": {"@type": "Person", "name": author(l), "alternateName": AUTHOR_EN, "jobTitle": t["guide_job"],
+         "author": {"@type": "Person", "name": author(l), "alternateName": AUTHOR_EN, "jobTitle": t["guide_job"], "image": "https://iraq.fabletour.com/img/saif-avatar.webp",
                     "worksFor": {"@id": "https://fabletour.com/#org"}, "knowsLanguage": ["ar", "en", "ru"]},
          "publisher": ORG, "isPartOf": {"@id": blog_url(l) + "#blog"},
          "about": {"@type": "TouristAttraction", "name": place,
@@ -271,7 +271,7 @@ def build_article(l, p, posts, ALL, TOURS):
       <div class="btns"><a class="btn" href="{WA}?text={wa_msg}" target="_blank" rel="noopener">{WA_ICON.replace('<svg ', '<svg width="18" height="18" ')} {esc(t["wa_btn"])}</a><a class="btn ghost" href="{tour[1]}">{esc(t["see_prog"])}</a></div>
     </aside>
     {faq_html}
-    <div class="author"><svg><use href="#ftmark"/></svg><p><b>{esc(author(l))}</b> {esc(t["bio"])}</p></div>
+    <div class="author"><img src="/img/saif-avatar.webp" alt="{esc(author(l))} — Fable Tour Iraq" width="88" height="88" loading="lazy"><p><b>{esc(author(l))}</b> {esc(t["bio"])}</p></div>
   </div>
 </article>
 {rel_html}
