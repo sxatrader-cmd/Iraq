@@ -217,8 +217,6 @@ def build_article(l, p, posts, ALL, TOURS):
             {"@type": "ListItem", "position": 2, "name": blogword(l), "item": blog_url(l)},
             {"@type": "ListItem", "position": 3, "name": p["h1"], "item": url}]},
     ]
-    if p.get("image_credit"):
-        graph[0]["image"]["creditText"] = p["image_credit"]
     if faq:
         graph.append({"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
@@ -233,7 +231,7 @@ def build_article(l, p, posts, ALL, TOURS):
     hero_img = ""
     if p.get("image"):
         hero_img = (f'<img class="hero-img" src="{esc(src(p["image"]))}" alt="{esc(alt)}" width="1600" height="800" fetchpriority="high" decoding="async">'
-                    + (f'<div class="figcap">{esc(p["image_credit"])}</div>' if p.get("image_credit") else ""))
+)
     toc_html = ""
     if len(toc) >= 3:
         toc_html = f'<nav class="toc" aria-label="{esc(t["toc"])}"><b>{esc(t["toc"])}</b><ol>' + "".join(

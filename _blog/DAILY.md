@@ -37,13 +37,15 @@ For each language L:
 - Biographies and stories of Imams, Prophets and companions (Imam Ali, Imam Hussein, al-Abbas, Zaynab, Malik al-Ashtar, Muslim ibn Aqil, etc.): write with deep respect, using the well-known historical accounts; use the honorifics customary in each language (Arabic/Persian: عليه السلام / (ع) after the Imams, صلى الله عليه وآله وسلم after the Prophet; other languages: "Imam Ali (peace be upon him)" on first mention is fine). Historical events like the Battle of Karbala (680 CE) are told as history, without graphic detail and without sectarian polemics or attacks on any group. Where accounts differ, say "according to tradition". Quote the Qur'an or sayings only briefly and only if certain of the wording; prefer paraphrase.
 - Everything in your own words, no copied text, no song lyrics or poems.
 
-## 4. Images — free licences only (one hero photo per topic, reuse it in every language)
-- If another language of this topic already has an image, reuse the same `image` and `image_credit` (translate only the alt text and the word "Photo").
-- Otherwise: allowed sources only Pexels, Unsplash, or Wikimedia Commons files that are Public domain / CC0 / CC BY / CC BY-SA. Not allowed: Google Images, news sites, blogs, social media, watermarked stock, Pixabay hotlinks, unclear licences, people as the main subject, public figures. Never use any painting or image depicting the Prophet, the Imams or their family — for biography/story topics use a photo of the related shrine, mosque or city.
-- Confirm the photo really shows THIS place (WebSearch with allowed_domains pexels.com / unsplash.com / commons.wikimedia.org, then WebFetch the photo page for place, author, licence).
-- If the shell can download it (curl works), save `img/<topic>.webp` (≈1600px, compressed) and use that path. Otherwise the CDN URL: Pexels `https://images.pexels.com/photos/<id>/pexels-photo-<id>.jpeg?auto=compress&cs=tinysrgb&w=1600&h=800&fit=crop`; Unsplash `https://images.unsplash.com/photo-...?w=1600&q=80`; Wikimedia: upload.wikimedia.org URL.
-- `image_credit` always: `Photo: <author> / <Pexels|Unsplash|Wikimedia Commons> (<licence>)` (word "Photo" in L).
-- No free photo of the exact place → `""` (decorative pattern), never a wrong or copyrighted photo.
+## 4. Images — free, no attribution, bright colours (one hero photo per topic, reuse it in every language)
+Saif's rule: photos must be free of rights, shown WITHOUT any source/credit, and in bright, vivid colours.
+- If another language of this topic already has an image, reuse the same `image`.
+- Allowed sources ONLY: Pexels (pexels.com) and Unsplash (unsplash.com, free photos — not Unsplash+), whose licences allow use without attribution; or Wikimedia Commons files that are Public Domain or CC0. Never CC BY / CC BY-SA (they require a credit). Not allowed: Google Images, news sites, blogs, social media, watermarked stock, unclear licences, people as the main subject, public figures, and any image depicting the Prophet, the Imams or their family.
+- Prefer colourful photos: blue sky, golden domes, sunsets, greenery, water — avoid black-and-white or dull grey shots.
+- Confirm the photo really shows THIS place (WebSearch with allowed_domains pexels.com / unsplash.com, WebFetch the photo page for place and licence). For a biography/story topic use a photo of the related shrine, mosque or city.
+- If the shell can download it, save `img/<topic>.webp` (≈1600px) and use that path. Otherwise the CDN URL: Pexels `https://images.pexels.com/photos/<id>/pexels-photo-<id>.jpeg?auto=compress&cs=tinysrgb&w=1600&h=800&fit=crop`; Unsplash `https://images.unsplash.com/photo-...?w=1600&q=80`.
+- Leave `image_credit` empty (""). Nothing about the source is shown on the page.
+- No suitable free photo of the exact place → `""` (decorative pattern), never a wrong or copyrighted photo.
 
 ## 5. Build, check, publish
 1. Add your languages to the plan item's `langs_done`.

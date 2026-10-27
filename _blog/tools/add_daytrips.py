@@ -20,10 +20,11 @@ JS_PRICES = """{
  aqarquf:function(n){return 50+25*(n-1)}
 }"""
 FROM = {"babylon": 200, "babylon4": 220, "holy": 239, "south": 300, "samarra": 150, "madain": 100, "aqarquf": 50}
-IMG_Q = {"babylon": "Babylon Iraq ruins|Babylon Iraq", "babylon4": "Borsippa ziggurat|Birs Nimrud",
-         "holy": "Imam Ali Shrine Najaf|Imam Ali Mosque", "south": "Ziggurat of Ur|Ur ziggurat Iraq", "samarra": "Malwiya minaret Samarra|Malwiya",
-         "madain": "Taq Kasra|Ctesiphon arch", "aqarquf": ""}
-LOCAL_IMG = {"aqarquf": "img/aqar-quf-ziggurat.webp"}
+IMG_Q = {}
+PX = lambda i: f"https://images.pexels.com/photos/{i}/pexels-photo-{i}.jpeg?auto=compress&cs=tinysrgb&w=900"
+# free-licence photos (Pexels licence / Saif's own photo) — no credit shown
+LOCAL_IMG = {"aqarquf": "img/aqar-quf-ziggurat.webp", "samarra": PX(37988383), "babylon": PX(12050747),
+             "babylon4": PX(30379466), "holy": PX(37182660), "south": PX(14111676)}
 MAXP = 12
 
 CSS = """
@@ -39,9 +40,9 @@ html[lang="ar"] .dt-toggle b,html[lang="fa"] .dt-toggle b{font-family:var(--seri
 .dt-note{margin:14px 2px 0;color:var(--muted);font-size:14px}
 .dt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:14px}
 .dt{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
-.dt-ph{position:relative;aspect-ratio:16/10;background:var(--navy-2) center/cover no-repeat}
+.dt-ph{position:relative;aspect-ratio:16/10;background:var(--navy-2) center/cover no-repeat;filter:saturate(1.35) contrast(1.06) brightness(1.03)}
+.dt-ph.none{filter:none}
 .dt-ph.none{background-size:56px;background-repeat:repeat;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23B8955A' stroke-width='1.2' opacity='.4'%3E%3Cpath d='M28 4 52 28 28 52 4 28z'/%3E%3Ccircle cx='28' cy='28' r='7'/%3E%3C/g%3E%3C/svg%3E")}
-.dt-ph a{position:absolute;inset-inline-end:6px;bottom:6px;font-size:10.5px;color:#fff;background:rgba(18,26,43,.6);padding:2px 6px;border-radius:3px;text-decoration:none}
 .dt-bd{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
 .dt-bd h3{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.3}
 html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);font-weight:700;font-size:22px}
@@ -71,9 +72,10 @@ def section(l):
         title, stops, inc = T[k]
         img = ""
         if k in LOCAL_IMG:
-            img = f' style="background-image:url(\'{"" if l == "ar" else "../"}{LOCAL_IMG[k]}\')"'
+            src = LOCAL_IMG[k] if LOCAL_IMG[k].startswith("http") else ("" if l == "ar" else "../") + LOCAL_IMG[k]
+            img = f' style="background-image:url(\'{src}\')"'
         incs = "".join(f"<li>{esc(x)}</li>" for x in inc)
-        cards += f"""<article class="dt" data-trip="{k}" data-q="{esc(IMG_Q[k])}">
+        cards += f"""<article class="dt" data-trip="{k}">
   <div class="dt-ph{'' if img else ' none'}"{img} role="img" aria-label="{esc(title)}"></div>
   <div class="dt-bd">
     <h3>{esc(title)}</h3>
@@ -122,17 +124,9 @@ function fmt(v){return "$"+v.toLocaleString("en-US");}
 document.querySelectorAll(".dt").forEach(function(c){var k=c.dataset.trip,n=1,out=c.querySelector("output"),tot=c.querySelector(".dt-total b"),bk=c.querySelector(".dt-book");
  function upd(){out.textContent=n;var p=fmt(P[k](n));tot.textContent=p;bk.href="https://wa.me/9647711745353?text="+encodeURIComponent(U.wa.replace("{trip}",T[k]).replace("{n}",n).replace("{price}",p));}
  c.querySelectorAll(".dt-step button").forEach(function(b){b.addEventListener("click",function(){n=Math.min(MAX,Math.max(1,n+(+b.dataset.d)));upd();});});upd();});
-var cache={};try{cache=JSON.parse(localStorage.getItem("ft-dt-img")||"{}");}catch(e){}
-function loadImgs(){if(loaded)return;loaded=true;document.querySelectorAll(".dt[data-q]").forEach(function(c){var q=c.dataset.q,ph=c.querySelector(".dt-ph");if(!q)return;
- function show(r){ph.classList.remove("none");ph.style.backgroundImage="url('"+r.thumb+"')";var a=document.createElement("a");a.href=r.page;a.target="_blank";a.rel="noopener";a.textContent=U.photo;ph.appendChild(a);}
- if(cache[q]){show(cache[q]);return;}
- var qs=q.split("|");(function tryQ(i){if(i>=qs.length)return;
- fetch("https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url|size|mime&iiurlwidth=900&gsrsearch="+encodeURIComponent(qs[i]+" filetype:bitmap"))
- .then(function(r){return r.json();}).then(function(j){var ps=Object.values((j.query&&j.query.pages)||{}).sort(function(a,b){return a.index-b.index;});
-  var cs=ps.map(function(p){return p.imageinfo&&p.imageinfo[0];}).filter(function(x){return x&&/jpeg|png/.test(x.mime)&&x.width>=700;});
-  var pk=cs.find(function(x){return x.width>x.height;})||cs[0];if(!pk){tryQ(i+1);return;}var r={thumb:pk.thumburl,page:pk.descriptionurl};cache[q]=r;try{localStorage.setItem("ft-dt-img",JSON.stringify(cache));}catch(e){}show(r);}).catch(function(){tryQ(i+1);});})(0);});}
+function loadImgs(){}
 })();</script>
-""" % (JS_PRICES, json.dumps({"wa": u["wa"], "photo": u["photo"]}, ensure_ascii=False), json.dumps(T, ensure_ascii=False), MAXP)
+""" % (JS_PRICES, json.dumps({"wa": u["wa"]}, ensure_ascii=False), json.dumps(T, ensure_ascii=False), MAXP)
 
 def run():
     for l in LANGS:
