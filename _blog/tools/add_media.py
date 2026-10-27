@@ -62,9 +62,9 @@ def vid(v):
 def gallery(l):
     sl = "".join(f'<div class="gal-s{" on" if k == 0 else ""}"><img {"src" if k < 2 else "data-src"}="/img/{p}.webp" alt="{H[l]} – {k + 1}" decoding="async"{"" if k < 2 else ""}></div>'
                  for k, p in enumerate(PHOTOS))
-    return (f'<div class="gal-wrap" id="gallery" style="margin:36px 0"><div class="sec-head"><span class="eyebrow">{EYE[l]}</span><h2 class="disp">{H[l]}</h2></div>'
+    return (f'<section class="block in gal-wrap" style="padding-top:0" id="gallery"><div class="sec-head"><span class="eyebrow">{EYE[l]}</span><h2 class="disp">{H[l]}</h2></div>'
             f'<div class="gal" dir="ltr">{sl}<button type="button" class="gal-nav gal-prev" aria-label="‹">‹</button>'
-            f'<button type="button" class="gal-nav gal-next" aria-label="›">›</button><div class="gal-dots"></div></div></div>\n')
+            f'<button type="button" class="gal-nav gal-next" aria-label="›">›</button><div class="gal-dots"></div></div></section>\n')
 
 
 def end_of(s, start):
@@ -81,13 +81,16 @@ def run():
         s = f.read_text()
         s = re.sub(r'<div class="vid vert xvid"[^>]*><iframe[^>]*></iframe></div>\n?', "", s)
         s = re.sub(r'\n?<div class="gal-wrap" id="gallery".*?<div class="gal-dots"></div></div></div>\n?', "", s, flags=re.S)
+        s = re.sub(r'<section class="block in gal-wrap".*?<div class="gal-dots"></div></div></section>\n?', "", s, flags=re.S)
         s = re.sub(r'<style id="gal-css">.*?</style>\n?', "", s, flags=re.S)
         s = re.sub(r'<script id="gal-js">.*?</script>\n?', "", s, flags=re.S)
         a = s.index('<section class="prog" id="tour-9-days"')
         s = s[:a] + vid(V1) + s[a:]
         a = s.index('<section class="prog" id="tour-9-days"')
         e = end_of(s, a)
-        s = s[:e] + "\n" + vid(V2) + gallery(l) + s[e:]
+        s = s[:e] + "\n" + vid(V2) + s[e:]
+        a = s.index('<section class="block in" style="padding-top:0" id="faq">')
+        s = s[:a] + gallery(l) + "  " + s[a:]
         s = s.replace("</head>", CSS + "\n</head>", 1)
         s = s.replace("</body>", JS + "\n</body>", 1)
         f.write_text(s)
