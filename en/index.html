@@ -570,103 +570,76 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   </section>
 
   <!-- ================= START: KARBALA SECTION (copy from here) ================= -->
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 <style>
-#karbala-story{
-  --kb-bg:#0b1a33; --kb-bg2:#10244a; --kb-gold:#d4ad55; --kb-gold2:#f1d48a;
-  --kb-red:#9e1b22; --kb-text:#eef1f6; --kb-muted:#aab4c8; --kb-line:rgba(212,173,85,.28);
-  background:
-    radial-gradient(ellipse at top, rgba(158,27,34,.35), transparent 60%),
-    linear-gradient(180deg,var(--kb-bg) 0%, #07111f 100%);
-  color:var(--kb-text); padding:64px 16px; position:relative; overflow:hidden;
-}
+#karbala-story{padding-bottom:0}
 #karbala-story *{box-sizing:border-box}
-#karbala-story .kb-wrap{max-width:900px;margin:0 auto}
 #karbala-story .kb-lang{display:none}
 #karbala-story .kb-lang.kb-on{display:block}
-#karbala-story .kb-eyebrow{
-  display:inline-block;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--kb-gold);border:1px solid var(--kb-line);padding:6px 14px;border-radius:999px;margin-bottom:18px
-}
-#karbala-story h2{
-  font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(28px,5vw,46px);
-  line-height:1.2;margin:0 0 18px;color:#fff
-}
-#karbala-story [dir=rtl] h2,#karbala-story [dir=rtl] h3{font-family:"Amiri",serif}
-#karbala-story h2 .kb-q{color:var(--kb-gold2);display:block;font-size:.72em;margin-top:8px}
-#karbala-story .kb-hook{font-size:clamp(16px,2.4vw,19px);line-height:1.85;color:var(--kb-text);margin:0 0 28px}
-#karbala-story .kb-hook b{color:var(--kb-gold2)}
-#karbala-story .kb-video{
-  position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
-  background:#000 center/cover no-repeat;cursor:pointer;
-  box-shadow:0 20px 60px rgba(0,0,0,.55),0 0 0 1px var(--kb-line)
-}
-#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.6))}
-#karbala-story .kb-play{
-  position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;z-index:2;
-  background:var(--kb-red);display:grid;place-items:center;border:2px solid var(--kb-gold);
-  box-shadow:0 0 0 10px rgba(158,27,34,.25);transition:transform .2s
-}
-#karbala-story .kb-video:hover .kb-play{transform:scale(1.08)}
-#karbala-story .kb-play svg{width:32px;height:32px;fill:#fff;margin-inline-start:5px}
-#karbala-story [dir=rtl] .kb-play svg{margin:0 0 0 5px}
-#karbala-story .kb-vmeta{position:absolute;bottom:14px;inset-inline:16px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
-#karbala-story .kb-vmeta span{background:rgba(0,0,0,.55);padding:4px 10px;border-radius:6px}
+#karbala-story .kb-eyebrow{display:block;font:500 13px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-eyebrow{font-family:var(--sans-ar);letter-spacing:.02em;font-size:14px}
+#karbala-story h2{font-size:clamp(24px,3.8vw,32px);color:var(--navy);margin:6px 0 14px;line-height:1.3}
+#karbala-story h2 .kb-q{display:block;color:var(--gold);font-size:.78em;margin-top:4px}
+#karbala-story .kb-hook{margin:0 0 22px;color:var(--ink);max-width:68ch}
+#karbala-story .kb-hook b{color:var(--navy)}
+#karbala-story .kb-video{position:relative;width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;cursor:pointer;
+  background:var(--navy) center/cover no-repeat;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,71,.05),rgba(27,42,71,.55))}
+#karbala-story .kb-play{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;z-index:2;
+  background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold);transition:transform .2s}
+#karbala-story .kb-video:hover .kb-play{transform:scale(1.07)}
+#karbala-story .kb-play svg{width:28px;height:28px;fill:var(--gold-2);margin-inline-start:4px}
+#karbala-story .kb-vmeta{position:absolute;bottom:12px;inset-inline:14px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#karbala-story .kb-vmeta span{background:rgba(27,42,71,.82);padding:3px 10px;border-radius:4px}
 #karbala-story .kb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
-#karbala-story .kb-caption{font-size:14px;color:var(--kb-muted);margin:14px 0 30px;line-height:1.7}
-#karbala-story .kb-btn{
-  display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--kb-gold2);
-  border:1.5px solid var(--kb-gold);padding:13px 28px;border-radius:999px;font-size:16px;font-weight:600;
-  cursor:pointer;font-family:inherit;transition:background .2s,color .2s
-}
-#karbala-story .kb-btn:hover{background:var(--kb-gold);color:#0b1a33}
-#karbala-story .kb-btn .kb-arr{transition:transform .3s}
+#karbala-story .kb-caption{font-size:14px;color:var(--muted);margin:16px 0 18px;line-height:1.7}
+#karbala-story .kb-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);border:0;border-radius:4px;
+  padding:13px 26px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+#karbala-story .kb-btn:hover{filter:brightness(1.07)}
+#karbala-story .kb-arr{transition:transform .3s}
 #karbala-story .kb-btn[aria-expanded=true] .kb-arr{transform:rotate(180deg)}
 #karbala-story .kb-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
 #karbala-story .kb-more.kb-open{grid-template-rows:1fr}
 #karbala-story .kb-more>div{overflow:hidden}
-#karbala-story .kb-inner{padding-top:40px}
-#karbala-story h3{font-size:clamp(22px,3.5vw,30px);color:var(--kb-gold2);margin:48px 0 20px;font-family:"Cormorant Garamond",Georgia,serif}
+#karbala-story .kb-inner{padding-top:30px}
+#karbala-story h3{font-family:var(--serif-en);font-weight:400;font-size:clamp(21px,3vw,26px);color:var(--navy);margin:36px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+html[lang="ar"] #karbala-story h3{font-family:var(--serif-ar);font-weight:700}
 #karbala-story h3:first-child{margin-top:0}
-#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--kb-line)}
-#karbala-story .kb-ch{position:relative;margin-bottom:30px}
-#karbala-story .kb-ch::before{
-  content:"";position:absolute;inset-inline-start:-38px;top:6px;width:14px;height:14px;border-radius:50%;
-  background:var(--kb-bg);border:2px solid var(--kb-gold)
-}
-#karbala-story .kb-ch.kb-red::before{background:var(--kb-red);border-color:var(--kb-red);box-shadow:0 0 12px var(--kb-red)}
-#karbala-story .kb-date{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--kb-gold)}
-#karbala-story .kb-ch h4{margin:4px 0 8px;font-size:19px;color:#fff}
-#karbala-story .kb-ch p{margin:0 0 8px;line-height:1.85;color:#d6dbe6;font-size:16px}
-#karbala-story blockquote{
-  margin:12px 0;padding:14px 18px;border-inline-start:3px solid var(--kb-red);
-  background:rgba(158,27,34,.12);border-radius:8px;font-style:italic;color:#fff;line-height:1.8
-}
-#karbala-story .kb-card{background:rgba(255,255,255,.04);border:1px solid var(--kb-line);border-radius:14px;padding:22px}
-#karbala-story .kb-card p{line-height:1.85;color:#d6dbe6;margin:0 0 12px}
-#karbala-story .kb-sources{font-size:14px;color:var(--kb-muted);line-height:1.9}
-#karbala-story .kb-sources li{margin-bottom:2px}
-#karbala-story .kb-cta{margin-top:40px;text-align:center;padding:30px 20px;border-top:1px solid var(--kb-line)}
-#karbala-story .kb-cta p{color:var(--kb-text);font-size:17px;margin:0 0 16px}
-#karbala-story .kb-cta a{
-  display:inline-block;background:var(--kb-gold);color:#0b1a33;text-decoration:none;font-weight:700;
-  padding:14px 32px;border-radius:999px
-}
+#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--line);margin-inline-start:8px}
+#karbala-story .kb-ch{position:relative;margin-bottom:26px}
+#karbala-story .kb-ch::before{content:"";position:absolute;inset-inline-start:-39px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--gold)}
+#karbala-story .kb-ch.kb-red::before{background:var(--navy);box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--gold)}
+#karbala-story .kb-date{display:block;font:500 12px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-date{font-family:var(--sans-ar);letter-spacing:0;font-size:13px}
+#karbala-story .kb-ch h4{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.35;margin:2px 0 8px}
+html[lang="ar"] #karbala-story .kb-ch h4{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+#karbala-story .kb-ch p{margin:0 0 10px;max-width:68ch;color:var(--ink)}
+#karbala-story blockquote{margin:12px 0;padding:12px 18px;border-inline-start:3px solid var(--gold);background:rgba(184,149,90,.09);
+  border-radius:4px;color:var(--navy);font-family:var(--serif-en);font-style:italic;line-height:1.8}
+html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style:normal;font-size:18px}
+#karbala-story .kb-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+#karbala-story .kb-card p{margin:0 0 12px;color:var(--ink)}
+#karbala-story .kb-card p:last-child{margin:0}
+#karbala-story .kb-card b{color:var(--navy)}
+#karbala-story .kb-sources{font-size:14px;color:var(--muted);line-height:1.9;margin:0;padding-inline-start:20px}
+#karbala-story .kb-cta{margin-top:32px;text-align:center;padding:26px 0 6px;border-top:1px solid var(--line)}
+#karbala-story .kb-cta p{color:var(--navy);margin:0 0 14px;font-size:17px}
+#karbala-story .kb-cta a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:4px}
+#karbala-story .kb-cta a:hover{background:var(--navy-2)}
 @media (max-width:600px){
-  #karbala-story{padding:48px 16px}
-  #karbala-story .kb-play{width:68px;height:68px}
-  #karbala-story .kb-timeline{padding-inline-start:22px}
-  #karbala-story .kb-ch::before{inset-inline-start:-30px}
+  #karbala-story .kb-play{width:58px;height:58px}
+  #karbala-story .kb-timeline{padding-inline-start:22px;margin-inline-start:4px}
+  #karbala-story .kb-ch::before{inset-inline-start:-31px}
 }
 </style>
 
-<section id="karbala-story" aria-label="Karbala">
+<section class="block in" id="karbala-story" aria-label="Karbala">
 <div class="kb-wrap">
 
 <!-- ===================== ENGLISH ===================== -->
 <div class="kb-lang" data-lang="en" dir="ltr">
   <span class="kb-eyebrow">Karbala · 680 AD</span>
-  <h2>Karbala: a story that shook the world from end to end<span class="kb-q">So what really happened here?</span></h2>
+  <h2 class="disp">Karbala: a story that shook the world from end to end<span class="kb-q">So what really happened here?</span></h2>
   <p class="kb-hook">On a single day, on a barren plain by the Euphrates, one man stood with <b>72</b> family members and companions before an army of thousands, refusing to pledge loyalty to a tyrant. He died thirsty that afternoon… and became a symbol of freedom for the next fourteen centuries. He was <b>Imam Hussein</b>, grandson of the Prophet Muhammad, and that plain was <b>Karbala</b> — a city that millions travel to from every corner of the earth today.</p>
   <div class="kb-video" data-hl="en"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>Voice: Sheikh Abdul Zahra Al-Kaabi</span><span>1:30:00 · EN subtitles</span></div></div>
   <p class="kb-caption">The full Maqtal of Imam Hussein, recited by Sheikh Abdul Zahra Al-Kaabi, over images of Karbala — with English subtitles.</p>
