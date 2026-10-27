@@ -24,7 +24,7 @@ IMG_Q = {}
 PX = lambda i: f"https://images.pexels.com/photos/{i}/pexels-photo-{i}.jpeg?auto=compress&cs=tinysrgb&w=900"
 # free-licence photos (Pexels licence / Saif's own photo) — no credit shown
 LOCAL_IMG = {"aqarquf": "img/aqar-quf-ziggurat.webp", "samarra": ["img/samarra-malwiya.webp", "img/samarra-2.webp"], "babylon": "img/babylon-ishtar-gate.webp",
-             "babylon4": "img/borsippa-ziggurat.webp", "madain": "img/taq-kasra.webp", "holy": "img/kufa-great-mosque.webp", "south": PX(14111676)}
+             "babylon4": "img/borsippa-ziggurat.webp", "madain": "img/taq-kasra.webp", "holy": "img/kufa-great-mosque.webp", "south": ["img/marshes-mashoof.webp", "img/ur-ziggurat.webp", "img/marshes-mudhif.webp", "img/marshes-buffalo.webp"]}
 MAXP = 12
 COUNT = '<span class="dt-cnt" dir="ltr" aria-hidden="true">1 / {n}</span>'
 ZOOM = '<span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span>'
