@@ -16,10 +16,20 @@ Goal: publish ONE new Italian article per day on https://iraq.fabletour.com/it/b
    - Tone: purely touristic and cultural. No politics, no war/conflict/destruction narratives, no "dark tourism", no religious controversy. Religious sites are described by their spiritual, architectural and heritage significance.
    - No copied text from sources; everything in your own words. No song lyrics or poems.
 5. Append an entry to `_blog/it/posts.json` with today's date (Baghdad time, YYYY-MM-DD) and these fields:
-   `slug, date, title (≤60 chars, keyword first, may end with "(2026)"), h1, description (130–155 chars), excerpt (≤150 chars), keywords (comma list, 6–10), category (use the plan item's), region, place (short name), geo [lat, lon] (only if confident), tour ("7" or "9" from the plan item), image (path of a photo in /img/ only if one in the repo truly shows this place, else ""), facts (4–6 [label, value] pairs), faq (5–6 [question, answer] pairs, answers 1–3 sentences)`.
+   `slug, date, title (≤60 chars, keyword first, may end with "(2026)"), h1, description (130–155 chars), excerpt (≤150 chars), keywords (comma list, 6–10), category (use the plan item's), region, place (short name), geo [lat, lon] (only if confident), tour ("7" or "9" from the plan item), image (see "Images" below), image_alt (Italian description of the photo), image_credit, facts (4–6 [label, value] pairs), faq (5–6 [question, answer] pairs, answers 1–3 sentences)`.
 6. Mark the plan item `"done": true` and add `"slug"`.
 7. Run `python3 _blog/build.py`. Fix any WARN about title/description length and rebuild.
 8. Check the output: open `it/blog/<slug>/index.html`, confirm the JSON-LD parses (`python3 -c` with json.loads on each ld+json block) and internal links point to existing pages.
 9. Commit with message `Blog IT: <place>` and push to `main`.
+
+## Images (required — every article gets one hero photo)
+Saif wants ONLY free / open-licence photos from the internet, never copyrighted ones.
+- Allowed sources, in order of preference: Pexels (pexels.com), Unsplash (unsplash.com), Wikimedia Commons files that are Public domain, CC0, CC BY or CC BY-SA.
+- Not allowed: Google Images results, news sites, blogs, Instagram/Facebook, stock sites with watermarks, Pixabay hotlinks, anything with unclear licence, photos showing identifiable people as the subject, or photos of public figures.
+- Find a photo that really shows THIS place (WebSearch with allowed_domains pexels.com / unsplash.com / commons.wikimedia.org, then WebFetch the photo page to confirm the place, author and licence).
+- If the shell can download it (curl works), save it as `img/<slug>.jpg` (≈1600px wide, compress, ideally convert to .webp) and set image to `img/<slug>.webp`. Otherwise use the direct CDN URL:
+  Pexels → `https://images.pexels.com/photos/<id>/pexels-photo-<id>.jpeg?auto=compress&cs=tinysrgb&w=1600&h=800&fit=crop`; Unsplash → `https://images.unsplash.com/photo-...?w=1600&q=80`; Wikimedia → the upload.wikimedia.org URL.
+- image_credit is ALWAYS filled: `Foto: <author> / <Pexels|Unsplash|Wikimedia Commons> (<licence>)`. For CC BY / CC BY-SA the author and licence are mandatory.
+- If no free photo of the exact place exists, use "" (the page shows a decorative pattern) rather than a wrong or copyrighted photo.
 
 Never edit other language folders or the tour pages. Only touch `_blog/`, `it/blog/` and `sitemap.xml`.

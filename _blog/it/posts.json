@@ -15,7 +15,7 @@
    44.4209
   ],
   "tour": "7",
-  "image": "",
+  "image": "https://images.pexels.com/photos/23432359/pexels-photo-23432359.jpeg?auto=compress&cs=tinysrgb&w=1600&h=800&fit=crop",
   "facts": [
    [
     "Dove",
@@ -63,6 +63,8 @@
     "Gli italiani hanno bisogno del visto per visitare l'Iraq?",
     "Sì, ma attualmente i cittadini italiani possono ottenerlo all'arrivo in aeroporto o online. Le regole possono cambiare, quindi è bene verificare prima della partenza."
    ]
-  ]
+  ],
+  "image_alt": "Un visitatore cammina tra le mura in mattoni dell'antica Babilonia, vicino a Hilla, in Iraq",
+  "image_credit": "Foto: khezez | خزاز / Pexels (licenza Pexels, uso libero)"
  }
 ]

@@ -210,12 +210,15 @@ ORG = {"@type": "TravelAgency", "@id": "https://fabletour.com/#org", "name": "Fa
        "url": "https://fabletour.com", "logo": SITE + "/logo.png", "email": "support@fabletour.com",
        "telephone": "+9647711745353"}
 
+def src(p):
+    return p if p.startswith("http") else "/" + p.lstrip("/")
+
 def img_url(p):
     if not p: return SITE + "/og-image.jpg"
     return p if p.startswith("http") else SITE + "/" + p.lstrip("/")
 
 def card(p, cls="pc"):
-    style = f' style="background-image:url(\'/{p["image"].lstrip("/")}\')"' if p.get("image") else ""
+    style = f' style="background-image:url(\'{src(p["image"])}\')"' if p.get("image") else ""
     noimg = "" if p.get("image") else " ph-none"
     return (f'<a class="{cls}" href="/it/blog/{p["slug"]}/" data-cat="{esc(p["category"])}">'
             f'<div class="ph{noimg}"{style}><span>{esc(p["category"])}</span></div>'
@@ -282,7 +285,7 @@ def build_article(p, posts):
              {"@context": "https://schema.org", "@graph": graph}, p.get("keywords", "")).replace("{BLOGCUR}", 'aria-current="page"')
     hero_img = ""
     if p.get("image"):
-        hero_img = (f'<img class="hero-img" src="/{p["image"].lstrip("/")}" alt="{esc(alt)}" width="1600" height="800" fetchpriority="high" decoding="async">'
+        hero_img = (f'<img class="hero-img" src="{esc(src(p["image"]))}" alt="{esc(alt)}" width="1600" height="800" fetchpriority="high" decoding="async">'
                     + (f'<div class="figcap">{esc(p["image_credit"])}</div>' if p.get("image_credit") else ""))
     toc_html = ""
     if len(toc) >= 3:
@@ -354,7 +357,7 @@ def build_index(posts):
     rest = ordered
     if ordered:
         p = ordered[0]; rest = ordered[1:]
-        style = f' style="background-image:url(\'/{p["image"].lstrip("/")}\')"' if p.get("image") else ""
+        style = f' style="background-image:url(\'{src(p["image"])}\')"' if p.get("image") else ""
         noimg = "" if p.get("image") else " ph-none"
         feat = (f'<a class="featured" href="/it/blog/{p["slug"]}/"><div class="ph{noimg}"{style}></div><div class="bd">'
                 f'<span class="eyebrow">Ultimo articolo · {esc(p["category"])}</span><h2>{esc(p["h1"])}</h2><p>{esc(p["excerpt"])}</p>'
@@ -410,7 +413,7 @@ def build_sitemap(posts):
     for p in posts:
         img = ""
         if p.get("image"):
-            img = f"<image:image><image:loc>{img_url(p['image'])}</image:loc></image:image>"
+            img = f"<image:image><image:loc>{esc(img_url(p['image']))}</image:loc></image:image>"
         entries += f"\n  <url><loc>{BASE}{p['slug']}/</loc><lastmod>{p.get('updated', p['date'])}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>{img}</url>"
     entries += "\n  <!-- blog-it:end -->"
     if 'xmlns:image=' not in s:
