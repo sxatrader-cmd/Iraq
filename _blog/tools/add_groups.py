@@ -122,10 +122,10 @@ def run():
         s = re.sub(r'<div class="field" id="f-date-field">.*?</div>', "", s, flags=re.S)
         # css
         i = s.find("</style>"); s = s[:i] + CSS + s[i:]
-        # blocks after each programme head
+        # blocks at the end of each programme (below the last day)
         for tour in ("7", "9"):
-            a = s.find(f'id="tour-{tour}-days"'); ph = s.find('<div class="prog-head">', a); end = s.find("</div>", ph) + 6
-            s = s[:end] + block(l, tour, today) + s[end:]
+            a = s.find(f'id="tour-{tour}-days"'); end = s.find("</section>", a)   # end of the programme
+            s = s[:end] + block(l, tour, today) + "\n   " + s[end:]
         # form field after programme select
         lbl = S[l][4]
         m = re.search(r'(<div class="field"><label for="f-prog".*?</select></div>)', s, re.S)
