@@ -388,6 +388,7 @@ html[lang="ar"] .gd button,html[lang="fa"] .gd button{font-family:var(--sans-ar)
 
 
 
+
 /* day trips */
 .pcards{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))!important}
 .dt-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--navy);color:#fff;border:0;border-radius:6px;padding:20px 22px;cursor:pointer;text-align:start;border-bottom:4px solid var(--gold)}
@@ -402,6 +403,11 @@ html[lang="ar"] .dt-toggle b,html[lang="fa"] .dt-toggle b{font-family:var(--seri
 .dt{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
 .dt-ph{position:relative;aspect-ratio:16/10;background:var(--navy-2) center/cover no-repeat;filter:saturate(1.35) contrast(1.06) brightness(1.03)}
 .dt-ph.none{filter:none}
+.dt-ph[data-full]{cursor:zoom-in}
+.dt-zoom{position:absolute;inset-inline-end:8px;bottom:8px;width:32px;height:32px;border-radius:50%;background:rgba(18,26,43,.55);color:#fff;display:grid;place-items:center;filter:none}
+.dt-lb{position:fixed;inset:0;z-index:60;background:rgba(10,15,28,.94);display:grid;place-items:center;padding:16px;touch-action:pinch-zoom}
+.dt-lb img{max-width:100%;max-height:88vh;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.6);filter:saturate(1.3) contrast(1.05)}
+.dt-lb button{position:absolute;top:max(14px,env(safe-area-inset-top,0px));inset-inline-end:14px;width:44px;height:44px;border-radius:50%;border:0;background:var(--gold);color:var(--navy);font-size:24px;font-weight:700;cursor:pointer}
 .dt-ph.none{background-size:56px;background-repeat:repeat;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23B8955A' stroke-width='1.2' opacity='.4'%3E%3Cpath d='M28 4 52 28 28 52 4 28z'/%3E%3Ccircle cx='28' cy='28' r='7'/%3E%3C/g%3E%3C/svg%3E")}
 .dt-bd{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
 .dt-bd h3{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.3}
@@ -728,7 +734,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);
     <div id="dt-body" hidden>
       <p class="dt-note">Départ de Bagdad le matin, retour le jour même. Voiture privée, un seul prix pour tout votre groupe.</p>
       <div class="dt-grid"><article class="dt" data-trip="aqarquf">
-  <div class="dt-ph" style="background-image:url('../img/aqar-quf-ziggurat.webp')" role="img" aria-label="Ziggourat d&#x27;Aqar Quf"></div>
+  <div class="dt-ph" style="background-image:url('../img/aqar-quf-ziggurat.webp')" data-full="../img/aqar-quf-ziggurat.webp" tabindex="0" role="button" aria-label="Ziggourat d&#x27;Aqar Quf"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
     <h3>Ziggourat d&#x27;Aqar Quf</h3>
     <p class="dt-s">Ziggourat de Dur-Kurigalzu à Aqar Quf</p>
@@ -752,7 +758,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);
     </div>
   </div>
 </article><article class="dt" data-trip="samarra">
-  <div class="dt-ph" style="background-image:url('https://images.pexels.com/photos/37988383/pexels-photo-37988383.jpeg?auto=compress&cs=tinysrgb&w=900')" role="img" aria-label="Samarra"></div>
+  <div class="dt-ph" style="background-image:url('https://images.pexels.com/photos/37988383/pexels-photo-37988383.jpeg?auto=compress&cs=tinysrgb&w=900')" data-full="https://images.pexels.com/photos/37988383/pexels-photo-37988383.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800" tabindex="0" role="button" aria-label="Samarra"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
     <h3>Samarra</h3>
     <p class="dt-s">Mausolée des deux imams (al-Askari) · minaret en spirale Malwiya · prison de l&#x27;imam Ali al-Hadi et le Qasr al-Birka voisin · minaret d&#x27;Abu Dulaf</p>
@@ -764,7 +770,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);
     </div>
   </div>
 </article><article class="dt" data-trip="babylon">
-  <div class="dt-ph" style="background-image:url('https://images.pexels.com/photos/12050747/pexels-photo-12050747.jpeg?auto=compress&cs=tinysrgb&w=900')" role="img" aria-label="Babylone"></div>
+  <div class="dt-ph" style="background-image:url('https://images.pexels.com/photos/12050747/pexels-photo-12050747.jpeg?auto=compress&cs=tinysrgb&w=900')" data-full="https://images.pexels.com/photos/12050747/pexels-photo-12050747.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800" tabindex="0" role="button" aria-label="Babylone"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
     <h3>Babylone</h3>
     <p class="dt-s">Ruines de l&#x27;antique Babylone</p>
@@ -776,7 +782,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);
     </div>
   </div>
 </article><article class="dt" data-trip="babylon4">
-  <div class="dt-ph" style="background-image:url('https://images.pexels.com/photos/30379466/pexels-photo-30379466.jpeg?auto=compress&cs=tinysrgb&w=900')" role="img" aria-label="Babylone, Borsippa, prophète Job et Dhul-Kifl"></div>
+  <div class="dt-ph" style="background-image:url('https://images.pexels.com/photos/30379466/pexels-photo-30379466.jpeg?auto=compress&cs=tinysrgb&w=900')" data-full="https://images.pexels.com/photos/30379466/pexels-photo-30379466.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800" tabindex="0" role="button" aria-label="Babylone, Borsippa, prophète Job et Dhul-Kifl"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
     <h3>Babylone, Borsippa, prophète Job et Dhul-Kifl</h3>
     <p class="dt-s">Babylone · ziggourat de Borsippa · sanctuaire du prophète Job · sanctuaire de Dhul-Kifl</p>
@@ -788,7 +794,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);
     </div>
   </div>
 </article><article class="dt" data-trip="holy">
-  <div class="dt-ph" style="background-image:url('https://images.pexels.com/photos/37182660/pexels-photo-37182660.jpeg?auto=compress&cs=tinysrgb&w=900')" role="img" aria-label="Koufa, Nadjaf et Kerbala"></div>
+  <div class="dt-ph" style="background-image:url('../img/kufa-great-mosque.webp')" data-full="../img/kufa-great-mosque.webp" tabindex="0" role="button" aria-label="Koufa, Nadjaf et Kerbala"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
     <h3>Koufa, Nadjaf et Kerbala</h3>
     <p class="dt-s">Grande mosquée de Koufa · mausolée de l&#x27;imam Ali à Nadjaf · mausolées de l&#x27;imam Hussein et d&#x27;Al-Abbas à Kerbala</p>
@@ -800,7 +806,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);
     </div>
   </div>
 </article><article class="dt" data-trip="south">
-  <div class="dt-ph" style="background-image:url('https://images.pexels.com/photos/14111676/pexels-photo-14111676.jpeg?auto=compress&cs=tinysrgb&w=900')" role="img" aria-label="Ziggourat d&#x27;Ur et les Marais"></div>
+  <div class="dt-ph" style="background-image:url('https://images.pexels.com/photos/14111676/pexels-photo-14111676.jpeg?auto=compress&cs=tinysrgb&w=900')" data-full="https://images.pexels.com/photos/14111676/pexels-photo-14111676.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800" tabindex="0" role="button" aria-label="Ziggourat d&#x27;Ur et les Marais"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
     <h3>Ziggourat d&#x27;Ur et les Marais</h3>
     <p class="dt-s">Grande ziggourat d&#x27;Ur · Marais de Mésopotamie</p>
@@ -814,6 +820,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3{font-family:var(--serif-ar);
 </article></div>
     </div>
   </section>
+
 
 
 
@@ -1149,6 +1156,13 @@ document.querySelectorAll(".dt").forEach(function(c){var k=c.dataset.trip,n=1,ou
  function upd(){out.textContent=n;var p=fmt(P[k](n));tot.textContent=p;bk.href="https://wa.me/9647711745353?text="+encodeURIComponent(U.wa.replace("{trip}",T[k]).replace("{n}",n).replace("{price}",p));}
  c.querySelectorAll(".dt-step button").forEach(function(b){b.addEventListener("click",function(){n=Math.min(MAX,Math.max(1,n+(+b.dataset.d)));upd();});});upd();});
 function loadImgs(){}
+function lb(src,alt){var o=document.createElement("div");o.className="dt-lb";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
+ var i=document.createElement("img");i.src=src;i.alt=alt;var x=document.createElement("button");x.type="button";x.setAttribute("aria-label","×");x.textContent="×";
+ o.appendChild(i);o.appendChild(x);document.body.appendChild(o);document.body.style.overflow="hidden";x.focus();
+ function close(){o.remove();document.body.style.overflow="";document.removeEventListener("keydown",k);}
+ function k(e){if(e.key==="Escape")close();}document.addEventListener("keydown",k);o.addEventListener("click",function(e){if(e.target!==i)close();});}
+document.querySelectorAll(".dt-ph[data-full]").forEach(function(ph){function open(){lb(ph.dataset.full,ph.getAttribute("aria-label"));}
+ ph.addEventListener("click",open);ph.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});});
 })();</script>
 </body>
 </html>

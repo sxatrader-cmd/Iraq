@@ -24,8 +24,9 @@ IMG_Q = {}
 PX = lambda i: f"https://images.pexels.com/photos/{i}/pexels-photo-{i}.jpeg?auto=compress&cs=tinysrgb&w=900"
 # free-licence photos (Pexels licence / Saif's own photo) — no credit shown
 LOCAL_IMG = {"aqarquf": "img/aqar-quf-ziggurat.webp", "samarra": PX(37988383), "babylon": PX(12050747),
-             "babylon4": PX(30379466), "holy": PX(37182660), "south": PX(14111676)}
+             "babylon4": PX(30379466), "holy": "img/kufa-great-mosque.webp", "south": PX(14111676)}
 MAXP = 12
+ZOOM = '<span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span>'
 
 CSS = """
 /* day trips */
@@ -42,6 +43,11 @@ html[lang="ar"] .dt-toggle b,html[lang="fa"] .dt-toggle b{font-family:var(--seri
 .dt{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
 .dt-ph{position:relative;aspect-ratio:16/10;background:var(--navy-2) center/cover no-repeat;filter:saturate(1.35) contrast(1.06) brightness(1.03)}
 .dt-ph.none{filter:none}
+.dt-ph[data-full]{cursor:zoom-in}
+.dt-zoom{position:absolute;inset-inline-end:8px;bottom:8px;width:32px;height:32px;border-radius:50%;background:rgba(18,26,43,.55);color:#fff;display:grid;place-items:center;filter:none}
+.dt-lb{position:fixed;inset:0;z-index:60;background:rgba(10,15,28,.94);display:grid;place-items:center;padding:16px;touch-action:pinch-zoom}
+.dt-lb img{max-width:100%;max-height:88vh;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.6);filter:saturate(1.3) contrast(1.05)}
+.dt-lb button{position:absolute;top:max(14px,env(safe-area-inset-top,0px));inset-inline-end:14px;width:44px;height:44px;border-radius:50%;border:0;background:var(--gold);color:var(--navy);font-size:24px;font-weight:700;cursor:pointer}
 .dt-ph.none{background-size:56px;background-repeat:repeat;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23B8955A' stroke-width='1.2' opacity='.4'%3E%3Cpath d='M28 4 52 28 28 52 4 28z'/%3E%3Ccircle cx='28' cy='28' r='7'/%3E%3C/g%3E%3C/svg%3E")}
 .dt-bd{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
 .dt-bd h3{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.3}
@@ -73,10 +79,11 @@ def section(l):
         img = ""
         if k in LOCAL_IMG:
             src = LOCAL_IMG[k] if LOCAL_IMG[k].startswith("http") else ("" if l == "ar" else "../") + LOCAL_IMG[k]
-            img = f' style="background-image:url(\'{src}\')"'
+            full = src.replace("w=900", "w=1800")
+            img = f' style="background-image:url(\'{src}\')" data-full="{esc(full)}" tabindex="0"'
         incs = "".join(f"<li>{esc(x)}</li>" for x in inc)
         cards += f"""<article class="dt" data-trip="{k}">
-  <div class="dt-ph{'' if img else ' none'}"{img} role="img" aria-label="{esc(title)}"></div>
+  <div class="dt-ph{'' if img else ' none'}"{img} role="{'button' if img else 'img'}" aria-label="{esc(title)}">{ZOOM if img else ''}</div>
   <div class="dt-bd">
     <h3>{esc(title)}</h3>
     <p class="dt-s">{esc(stops)}</p>
@@ -125,6 +132,13 @@ document.querySelectorAll(".dt").forEach(function(c){var k=c.dataset.trip,n=1,ou
  function upd(){out.textContent=n;var p=fmt(P[k](n));tot.textContent=p;bk.href="https://wa.me/9647711745353?text="+encodeURIComponent(U.wa.replace("{trip}",T[k]).replace("{n}",n).replace("{price}",p));}
  c.querySelectorAll(".dt-step button").forEach(function(b){b.addEventListener("click",function(){n=Math.min(MAX,Math.max(1,n+(+b.dataset.d)));upd();});});upd();});
 function loadImgs(){}
+function lb(src,alt){var o=document.createElement("div");o.className="dt-lb";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
+ var i=document.createElement("img");i.src=src;i.alt=alt;var x=document.createElement("button");x.type="button";x.setAttribute("aria-label","×");x.textContent="×";
+ o.appendChild(i);o.appendChild(x);document.body.appendChild(o);document.body.style.overflow="hidden";x.focus();
+ function close(){o.remove();document.body.style.overflow="";document.removeEventListener("keydown",k);}
+ function k(e){if(e.key==="Escape")close();}document.addEventListener("keydown",k);o.addEventListener("click",function(e){if(e.target!==i)close();});}
+document.querySelectorAll(".dt-ph[data-full]").forEach(function(ph){function open(){lb(ph.dataset.full,ph.getAttribute("aria-label"));}
+ ph.addEventListener("click",open);ph.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});});
 })();</script>
 """ % (JS_PRICES, json.dumps({"wa": u["wa"]}, ensure_ascii=False), json.dumps(T, ensure_ascii=False), MAXP)
 
