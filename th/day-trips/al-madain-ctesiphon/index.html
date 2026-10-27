@@ -470,7 +470,12 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
 .dt-ph .dt-cnt{left:8px;right:auto}
 /*/dtx*/
 </style>
-<style id="prog-tg-css">.prog-head{cursor:pointer}.prog:not(.open) .prog-head{border-radius:6px}.prog-tg{margin-top:14px;display:flex;align-items:center;gap:12px;background:none;border:0;padding:0;color:var(--gold-2);font:inherit;font-weight:700;font-size:15px;cursor:pointer}.prog-chev{flex:none;width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;transition:transform .25s}.prog.open .prog-chev{transform:rotate(180deg)}</style><style id="pdate-css">#form input:not([type=checkbox]),#form select{height:48px;box-sizing:border-box}#f-pdate{-webkit-appearance:none;appearance:none;display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin:0;line-height:1.2;text-align:left;color-scheme:dark}#f-pdate::-webkit-date-and-time-value{text-align:left;margin:0;min-height:1.2em}#f-pdate::-webkit-calendar-picker-indicator{filter:invert(1);opacity:.75;cursor:pointer}#f-pdate-field{min-width:0}</style></head>
+<style id="prog-tg-css">.prog-head{cursor:pointer}.prog:not(.open) .prog-head{border-radius:6px}.prog-tg{margin-top:14px;display:flex;align-items:center;gap:12px;background:none;border:0;padding:0;color:var(--gold-2);font:inherit;font-weight:700;font-size:15px;cursor:pointer}.prog-chev{flex:none;width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;transition:transform .25s}.prog.open .prog-chev{transform:rotate(180deg)}</style><style id="pdate-css">#form input:not([type=checkbox]),#form select{height:48px;box-sizing:border-box}#f-pdate{-webkit-appearance:none;appearance:none;display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin:0;line-height:1.2;text-align:left;color-scheme:dark}#f-pdate::-webkit-date-and-time-value{text-align:left;margin:0;min-height:1.2em}#f-pdate::-webkit-calendar-picker-indicator{filter:invert(1);opacity:.75;cursor:pointer}#f-pdate-field{min-width:0}</style><style id="dts-css">
+.dt-ph .dts{position:absolute;inset:0;background:center/cover no-repeat;opacity:0;transition:opacity 1s ease}
+.dt-ph .dts.on{opacity:1}
+.dt-ph>.dt-zoom,.dt-ph>.dt-cnt{z-index:2}
+</style>
+</head>
 <body class="dt-solo" data-trip="madain">
 
 <!-- Fable Tour logo mark (reused) -->
@@ -1304,5 +1309,23 @@ function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0"
 function upd(){var priv=sel.value==="";pf.hidden=!priv;pd.required=priv;var t=prog&&prog.selectedIndex===1?"9":"7";var m=new Date();m.setDate(m.getDate()+LEAD[t]);pd.min=iso(m);if(pd.value&&pd.value<pd.min)pd.value="";}
 sel.addEventListener("change",upd);if(prog)prog.addEventListener("change",function(){setTimeout(upd,0);});
 new MutationObserver(function(){setTimeout(upd,0);}).observe(sel,{childList:true});
-document.addEventListener("click",function(e){if(e.target.closest("[data-book]"))setTimeout(upd,0);});upd();})();</script></body>
+document.addEventListener("click",function(e){if(e.target.closest("[data-book]"))setTimeout(upd,0);});upd();})();</script><script id="dts-js">(function(){
+var cards=[].slice.call(document.querySelectorAll(".dt-ph[data-full]")).filter(function(p){return p.dataset.full.indexOf("|")>-1;});
+if(!cards.length)return;
+cards.forEach(function(ph){
+ var list=ph.dataset.full.split("|"),n=list.length,i=0,cnt=ph.querySelector(".dt-cnt"),t=null,vis=false;
+ ph.dataset.all=ph.dataset.full;
+ var L=[0,1].map(function(){var d=document.createElement("div");d.className="dts";ph.insertBefore(d,ph.firstChild);return d;}),cur=0;
+ function pre(k){var im=new Image();im.src=list[k];}
+ function show(k){i=(k+n)%n;var nx=L[1-cur];nx.style.backgroundImage="url('"+list[i]+"')";nx.classList.add("on");L[cur].classList.remove("on");cur=1-cur;
+  if(cnt)cnt.textContent=(i+1)+" / "+n;ph.dataset.full=list.slice(i).concat(list.slice(0,i)).join("|");pre((i+1)%n);}
+ function start(){if(t)return;t=setInterval(function(){if(vis&&!document.hidden)show(i+1);},5000);}
+ L[cur].style.backgroundImage="url('"+list[0]+"')";L[cur].classList.add("on");pre(1);
+ if("IntersectionObserver" in window){new IntersectionObserver(function(es){vis=es[0].isIntersecting;},{threshold:.3}).observe(ph);}else vis=true;
+ var x=null;ph.addEventListener("touchstart",function(e){x=e.touches[0].clientX;},{passive:true});
+ ph.addEventListener("touchend",function(e){if(x===null)return;var dx=e.changedTouches[0].clientX-x;if(Math.abs(dx)>40){e.preventDefault();show(i+(dx<0?1:-1));clearInterval(t);t=null;start();}x=null;});
+ start();
+});
+})();</script>
+</body>
 </html>
