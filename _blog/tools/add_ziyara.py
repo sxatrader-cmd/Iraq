@@ -62,8 +62,8 @@ def patch_js(s, l):
 
 def insert(s, card):
     s = re.sub(rf'\n?<article class="dt[^"]*" data-trip="{KEY}">.*?</article>', "", s, flags=re.S)
-    m = art(s, "oldtown")
-    return s[:m.end()] + "\n" + card + s[m.end():]
+    m = re.search(r'<article class="dt[^"]*" data-trip=', s)
+    return s[:m.start()] + card + "\n" + s[m.start():]
 
 
 def trunc(t, n=157):
@@ -86,8 +86,8 @@ def solo_page(l, base, home_old):
     norm_old = home_old.replace(pre_home, pre_here)
     s = s[:m.start()] + norm_old + s[m.end():]
     s = re.sub(rf'\n?<article class="dt[^"]*" data-trip="{KEY}">.*?</article>', "", s, flags=re.S)
-    m = art(s, "oldtown")
-    s = s[:m.end()] + "\n" + build_card(norm_old, l, solo=True, more_lbl=lbls[1]) + s[m.end():]
+    m = re.search(r'<article class="dt[^"]*" data-trip=', s)
+    s = s[:m.start()] + build_card(norm_old, l, solo=True, more_lbl=lbls[1]) + "\n" + s[m.start():]
     s = s.replace('data-trip="oldtown"', f'data-trip="{KEY}"', 1) if s.find('<body class="dt-solo" data-trip="oldtown"') >= 0 else s
     s = s.replace('<body class="dt-solo" data-trip="oldtown"', f'<body class="dt-solo" data-trip="{KEY}"')
     s = s.replace(f"day-trips/{OLD}/", f"day-trips/{SLUG}/").replace(f"img/og/{OLD}.jpg", f"img/og/{SLUG}.jpg")
