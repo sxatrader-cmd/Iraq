@@ -1,0 +1,581 @@
+{
+ "groups": {
+  "A": [
+   "en",
+   "ar",
+   "ru",
+   "de",
+   "fr",
+   "it"
+  ],
+  "B": [
+   "es",
+   "el",
+   "cs",
+   "pl",
+   "tr",
+   "fa"
+  ],
+  "C": [
+   "zh",
+   "ja",
+   "ms",
+   "id",
+   "th"
+  ]
+ },
+ "queue": [
+  {
+   "topic": "babylon",
+   "title_it": "Babilonia",
+   "category_it": "Siti archeologici",
+   "region": "Babil",
+   "tour": "7",
+   "date": "2026-10-27",
+   "langs_done": [
+    "it"
+   ],
+   "source_article": "_blog/it/posts/babilonia-iraq-guida-visita.html"
+  },
+  {
+   "topic": "ur-e-la-grande-ziggurat",
+   "title_it": "Ur e la Grande Ziggurat",
+   "category_it": "Siti archeologici",
+   "region": "Dhi Qar",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "le-paludi-della-mesopotamia-ahwar",
+   "title_it": "Le Paludi della Mesopotamia (Ahwar)",
+   "category_it": "Natura",
+   "region": "Dhi Qar / Bassora",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "uruk-warka-la-citta-di-gilgamesh",
+   "title_it": "Uruk (Warka), la città di Gilgamesh",
+   "category_it": "Siti archeologici",
+   "region": "Muthanna",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "hatra-la-citta-del-dio-sole",
+   "title_it": "Hatra, la città del dio Sole",
+   "category_it": "Siti archeologici",
+   "region": "Ninive",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "samarra-e-il-minareto-a-spirale-malwiya",
+   "title_it": "Samarra e il Minareto a spirale (Malwiya)",
+   "category_it": "Siti archeologici",
+   "region": "Salah al-Din",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "via-al-mutanabbi-e-il-mercato-dei-libri-",
+   "title_it": "Via al-Mutanabbi e il mercato dei libri di Baghdad",
+   "category_it": "Città",
+   "region": "Baghdad",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "ctesifonte-e-il-grande-arco-taq-kasra",
+   "title_it": "Ctesifonte e il grande arco (Taq Kasra)",
+   "category_it": "Siti archeologici",
+   "region": "Baghdad",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "la-cittadella-di-erbil",
+   "title_it": "La Cittadella di Erbil",
+   "category_it": "Siti archeologici",
+   "region": "Erbil",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "aqar-quf-la-ziggurat-di-dur-kurigalzu",
+   "title_it": "Aqar Quf, la ziggurat di Dur-Kurigalzu",
+   "category_it": "Siti archeologici",
+   "region": "Baghdad",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "la-madrasa-al-mustansiriya-di-baghdad",
+   "title_it": "La Madrasa al-Mustansiriya di Baghdad",
+   "category_it": "Città",
+   "region": "Baghdad",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-museo-nazionale-delliraq",
+   "title_it": "Il Museo Nazionale dell'Iraq",
+   "category_it": "Musei",
+   "region": "Baghdad",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "kerbala",
+   "title_it": "Kerbala",
+   "category_it": "Città sante",
+   "region": "Kerbala",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "najaf-e-la-valle-della-pace-wadi-al-sala",
+   "title_it": "Najaf e la Valle della Pace (Wadi al-Salam)",
+   "category_it": "Città sante",
+   "region": "Najaf",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "borsippa-e-la-ziggurat-di-birs-nimrud",
+   "title_it": "Borsippa e la ziggurat di Birs Nimrud",
+   "category_it": "Siti archeologici",
+   "region": "Babil",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "nimrud-capitale-assira",
+   "title_it": "Nimrud, capitale assira",
+   "category_it": "Siti archeologici",
+   "region": "Ninive",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "ninive-e-le-mura-di-mosul",
+   "title_it": "Ninive e le mura di Mosul",
+   "category_it": "Siti archeologici",
+   "region": "Ninive",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "la-citta-vecchia-di-mosul",
+   "title_it": "La città vecchia di Mosul",
+   "category_it": "Città",
+   "region": "Ninive",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "ashur-qalat-sherqat-prima-capitale-assir",
+   "title_it": "Ashur (Qal'at Sherqat), prima capitale assira",
+   "category_it": "Siti archeologici",
+   "region": "Salah al-Din",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "bassora-la-venezia-del-medio-oriente",
+   "title_it": "Bassora, la Venezia del Medio Oriente",
+   "category_it": "Città",
+   "region": "Bassora",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "lo-shatt-al-arab",
+   "title_it": "Lo Shatt al-Arab",
+   "category_it": "Natura",
+   "region": "Bassora",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-palazzo-abbaside-di-baghdad",
+   "title_it": "Il Palazzo Abbaside di Baghdad",
+   "category_it": "Città",
+   "region": "Baghdad",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-suq-al-saray-e-il-qishla-di-baghdad",
+   "title_it": "Il Suq al-Saray e il Qishla di Baghdad",
+   "category_it": "Città",
+   "region": "Baghdad",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-santuario-di-al-kadhimiya-a-baghdad",
+   "title_it": "Il santuario di al-Kadhimiya a Baghdad",
+   "category_it": "Città sante",
+   "region": "Baghdad",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "lalish-il-santuario-degli-yazidi",
+   "title_it": "Lalish, il santuario degli yazidi",
+   "category_it": "Luoghi sacri",
+   "region": "Duhok",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "alqosh-e-il-monastero-di-rabban-hormizd",
+   "title_it": "Alqosh e il monastero di Rabban Hormizd",
+   "category_it": "Luoghi sacri",
+   "region": "Ninive",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-monastero-di-mar-mattai",
+   "title_it": "Il monastero di Mar Mattai",
+   "category_it": "Luoghi sacri",
+   "region": "Ninive",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "amedi-amadiya-la-citta-sulla-montagna",
+   "title_it": "Amedi (Amadiya), la città sulla montagna",
+   "category_it": "Natura",
+   "region": "Duhok",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "la-valle-di-rawanduz-e-il-canyon-di-gali",
+   "title_it": "La valle di Rawanduz e il Canyon di Gali Ali Beg",
+   "category_it": "Natura",
+   "region": "Erbil",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "sulaymaniyah",
+   "title_it": "Sulaymaniyah",
+   "category_it": "Città",
+   "region": "Sulaymaniyah",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "kish-una-delle-prime-citta-sumere",
+   "title_it": "Kish, una delle prime città sumere",
+   "category_it": "Siti archeologici",
+   "region": "Babil",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "nippur-la-citta-sacra-di-enlil",
+   "title_it": "Nippur, la città sacra di Enlil",
+   "category_it": "Siti archeologici",
+   "region": "Qadisiyya",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "eridu-la-citta-piu-antica-secondo-i-sume",
+   "title_it": "Eridu, la città più antica secondo i Sumeri",
+   "category_it": "Siti archeologici",
+   "region": "Dhi Qar",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "lagash-e-girsu",
+   "title_it": "Lagash e Girsu",
+   "category_it": "Siti archeologici",
+   "region": "Dhi Qar",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-lago-habbaniyah",
+   "title_it": "Il Lago Habbaniyah",
+   "category_it": "Natura",
+   "region": "Anbar",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "kufa-e-la-sua-grande-moschea",
+   "title_it": "Kufa e la sua grande moschea",
+   "category_it": "Città sante",
+   "region": "Najaf",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-castello-di-al-ukhaidir",
+   "title_it": "Il Castello di al-Ukhaidir",
+   "category_it": "Siti archeologici",
+   "region": "Kerbala",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-minareto-di-erbil-mudhafaria",
+   "title_it": "Il minareto di Erbil (Mudhafaria)",
+   "category_it": "Siti archeologici",
+   "region": "Erbil",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-museo-di-mosul",
+   "title_it": "Il Museo di Mosul",
+   "category_it": "Musei",
+   "region": "Ninive",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-museo-di-bassora",
+   "title_it": "Il Museo di Bassora",
+   "category_it": "Musei",
+   "region": "Bassora",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-lungofiume-di-abu-nuwas-e-il-tigri-a-",
+   "title_it": "Il Lungofiume di Abu Nuwas e il Tigri a Baghdad",
+   "category_it": "Città",
+   "region": "Baghdad",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-monumento-al-martire-al-shaheed-di-ba",
+   "title_it": "Il Monumento al Martire (al-Shaheed) di Baghdad",
+   "category_it": "Città",
+   "region": "Baghdad",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "hilla-la-citta-accanto-a-babilonia",
+   "title_it": "Hilla, la città accanto a Babilonia",
+   "category_it": "Città",
+   "region": "Babil",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-palazzo-di-babilonia-sulla-collina",
+   "title_it": "Il palazzo di Babilonia sulla collina",
+   "category_it": "Siti archeologici",
+   "region": "Babil",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "dur-sharrukin-khorsabad",
+   "title_it": "Dur-Sharrukin (Khorsabad)",
+   "category_it": "Siti archeologici",
+   "region": "Ninive",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-lago-dukan",
+   "title_it": "Il Lago Dukan",
+   "category_it": "Natura",
+   "region": "Sulaymaniyah",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-deserto-occidentale-e-al-anbar",
+   "title_it": "Il deserto occidentale e Al-Anbar",
+   "category_it": "Natura",
+   "region": "Anbar",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "la-cucina-irachena-masgouf-e-altri-piatt",
+   "title_it": "La cucina irachena: masgouf e altri piatti da provare",
+   "category_it": "Cultura",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-caffe-e-il-te-in-iraq-cultura-delle-c",
+   "title_it": "Il caffè e il tè in Iraq: cultura delle chaikhana",
+   "category_it": "Cultura",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-dattero-iracheno-e-i-palmeti",
+   "title_it": "Il dattero iracheno e i palmeti",
+   "category_it": "Cultura",
+   "region": "Iraq",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-codice-di-hammurabi-e-la-nascita-dell",
+   "title_it": "Il Codice di Hammurabi e la nascita delle leggi",
+   "category_it": "Storia",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "la-scrittura-cuneiforme-nata-in-mesopota",
+   "title_it": "La scrittura cuneiforme: nata in Mesopotamia",
+   "category_it": "Storia",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "lepopea-di-gilgamesh-e-i-luoghi-dove-si-",
+   "title_it": "L'Epopea di Gilgamesh e i luoghi dove si svolge",
+   "category_it": "Storia",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "il-tigri-e-leufrate-i-fiumi-della-civilt",
+   "title_it": "Il Tigri e l'Eufrate: i fiumi della civiltà",
+   "category_it": "Natura",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "quando-andare-in-iraq-clima-mese-per-mes",
+   "title_it": "Quando andare in Iraq: clima mese per mese",
+   "category_it": "Guide pratiche",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "visto-per-liraq-per-cittadini-italiani",
+   "title_it": "Visto per l'Iraq per cittadini italiani",
+   "category_it": "Guide pratiche",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "e-sicuro-viaggiare-in-iraq-consigli-prat",
+   "title_it": "È sicuro viaggiare in Iraq? Consigli pratici",
+   "category_it": "Guide pratiche",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "itinerario-di-7-giorni-in-iraq",
+   "title_it": "Itinerario di 7 giorni in Iraq",
+   "category_it": "Guide pratiche",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "itinerario-di-9-giorni-in-iraq-da-bassor",
+   "title_it": "Itinerario di 9 giorni in Iraq: da Bassora a Erbil",
+   "category_it": "Guide pratiche",
+   "region": "Iraq",
+   "tour": "9",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "cosa-mettere-in-valigia-per-un-viaggio-i",
+   "title_it": "Cosa mettere in valigia per un viaggio in Iraq",
+   "category_it": "Guide pratiche",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  },
+  {
+   "topic": "soldi-carte-e-sim-in-iraq",
+   "title_it": "Soldi, carte e SIM in Iraq",
+   "category_it": "Guide pratiche",
+   "region": "Iraq",
+   "tour": "7",
+   "date": null,
+   "langs_done": []
+  }
+ ]
+}

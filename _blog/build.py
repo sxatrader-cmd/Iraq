@@ -1,191 +1,142 @@
 #!/usr/bin/env python3
-"""Fable Tour — Italian blog builder.
+"""Fable Tour — multilingual blog builder (17 languages).
 
-Sources:   _blog/it/posts.json            (article metadata, newest last)
-           _blog/it/posts/<slug>.html     (article body fragment: <p>, <h2>, <h3>, <ul>, <figure>…)
-Output:    it/blog/index.html             (blog home, static, SEO)
-           it/blog/<slug>/index.html      (one page per article)
-           it/blog/feed.xml               (RSS)
-           sitemap.xml                    (blog URLs refreshed inside the existing sitemap)
+Sources (per language code L):
+  _blog/L/posts.json          article metadata (list)
+  _blog/L/posts/<slug>.html   article body fragment (<p>, <h2>, <h3>, <ul>, <blockquote>…)
+  _blog/i18n.json             interface strings per language
+  _blog/style.css, gyg.css    shared styles
+Output:
+  ar  -> /blog/ ;  other L -> /L/blog/
+  <blog>/index.html, <blog>/<slug>/index.html, <blog>/feed.xml
+  sitemap.xml (blog block between <!-- blog:start --> and <!-- blog:end -->)
+
+Articles about the same place share the same "topic" key in every language,
+which links them together with hreflang.
 
 Run:  python3 _blog/build.py
 """
 import json, re, html, math, datetime, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SRC = ROOT / "_blog" / "it"
-OUT = ROOT / "it" / "blog"
+B = ROOT / "_blog"
 SITE = "https://iraq.fabletour.com"
-BASE = SITE + "/it/blog/"
 WA = "https://wa.me/9647711745353"
-AUTHOR = "Saif Al-Tamimi"
+LANGS = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa", "ms", "id", "th"]
+HREFLANG = {"zh": "zh-Hans"}
+OGLOC = {"ar": "ar_AR", "en": "en_US", "ru": "ru_RU", "de": "de_DE", "fr": "fr_FR", "es": "es_ES", "it": "it_IT",
+         "el": "el_GR", "cs": "cs_CZ", "pl": "pl_PL", "zh": "zh_CN", "ja": "ja_JP", "tr": "tr_TR", "fa": "fa_IR",
+         "ms": "ms_MY", "id": "id_ID", "th": "th_TH"}
+RTL = {"ar", "fa"}
+BLOGWORD = {"ar": "المدونة", "fa": "وبلاگ", "ru": "Блог", "zh": "博客", "ja": "ブログ", "th": "บล็อก"}
+AUTHOR = {"ar": "سيف التميمي", "fa": "سیف التمیمی"}
+AUTHOR_EN = "Saif Al-Tamimi"
+T = json.loads((B / "i18n.json").read_text())
+CSS = (B / "style.css").read_text() + (B / "gyg.css").read_text()
 
-MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
-        "agosto", "settembre", "ottobre", "novembre", "dicembre"]
+def esc(s): return html.escape(str(s), quote=True)
+def hl(l): return HREFLANG.get(l, l)
+def home(l): return "/" if l == "ar" else f"/{l}/"
+def blog_path(l): return "/blog/" if l == "ar" else f"/{l}/blog/"
+def blog_url(l): return SITE + blog_path(l)
+def out_dir(l): return ROOT / blog_path(l).strip("/")
+def author(l): return AUTHOR.get(l, AUTHOR_EN)
+def blogword(l): return BLOGWORD.get(l, "Blog")
 
-def it_date(d):
+def fdate(l, d):
     y, m, dd = map(int, d.split("-"))
-    return f"{dd} {MESI[m-1]} {y}"
-
-def esc(s):
-    return html.escape(s, quote=True)
+    return T[l]["date"].format(d=dd, M=T[l]["months"][m - 1], y=y)
 
 def slugify(s):
     s = s.lower()
-    for a, b in {"à":"a","á":"a","è":"e","é":"e","ì":"i","í":"i","ò":"o","ó":"o","ù":"u","ú":"u","’":"","'":""}.items():
+    for a, b in {"à":"a","á":"a","â":"a","ä":"a","è":"e","é":"e","ê":"e","ì":"i","í":"i","ò":"o","ó":"o","ô":"o","ö":"o","ù":"u","ú":"u","ü":"u","ç":"c","ñ":"n","ş":"s","ğ":"g","ı":"i","ł":"l","ś":"s","ź":"z","ż":"z","ą":"a","ę":"e","ć":"c","ń":"n","ř":"r","š":"s","č":"c","ž":"z","ý":"y","ů":"u","ě":"e","ď":"d","ť":"t","ň":"n","’":"","'":""}.items():
         s = s.replace(a, b)
-    return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    s = re.sub(r"[^\w]+", "-", s, flags=re.U).strip("-")
+    return s or "s"
 
-def words(t):
-    return len(re.sub(r"<[^>]+>", " ", t).split())
+def words(l, t):
+    t = re.sub(r"<[^>]+>", " ", t)
+    if l in ("zh", "ja"): return len(re.sub(r"\s", "", t)) // 2      # ~2 chars per "word"
+    if l == "th": return len(re.sub(r"\s", "", t)) // 5
+    return len(t.split())
 
-GYG = (SRC / "gyg.css").read_text()
-FOOTER = (SRC / "footer.html").read_text()
+def src(p): return p if p.startswith("http") else "/" + p.lstrip("/")
+def img_url(p): return (SITE + "/og-image.jpg") if not p else (p if p.startswith("http") else SITE + "/" + p.lstrip("/"))
 
-CSS = """
-:root{--navy:#1B2A47;--navy-2:#2A3C5F;--gold:#B8955A;--gold-2:#D9C08E;--ground:#EEE6D8;--paper:#FCFAF6;--panel:#F4EEE3;--ink:#22262E;--muted:#5F6672;--line:#E6DDCC;
---serif:"Libre Baskerville","PT Serif",Georgia,"Times New Roman",serif;--sans:"Inter Tight","Helvetica Neue",Arial,sans-serif;color-scheme:light}
-*{box-sizing:border-box}html,body{margin:0}
-body{background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;padding:24px max(12px,env(safe-area-inset-right,0px)) 24px max(12px,env(safe-area-inset-left,0px))}
-img{max-width:100%;height:auto;display:block}
-a{color:var(--navy-2)}
-:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-h1,h2,h3{text-wrap:balance;margin:0;font-family:var(--serif);font-weight:400;color:var(--navy)}
-.card{max-width:880px;margin:0 auto;background:var(--paper);border-radius:6px;overflow:hidden;box-shadow:0 2px 24px -12px rgba(27,42,71,.35)}
-.wrap,.in{padding-left:clamp(18px,5vw,44px);padding-right:clamp(18px,5vw,44px)}
-.eyebrow{display:block;font:500 12.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-.topbar{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:16px}
-.logo{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none}
-.logo svg{width:52px;height:52px;flex:none;border-radius:50%;background:#fff;box-shadow:0 0 0 3px var(--gold)}
-.logo b{font-family:var(--serif);font-size:21px;letter-spacing:.16em;font-weight:700;color:#EFE3C8;text-transform:uppercase;white-space:nowrap}
-.nav{display:flex;gap:6px;align-items:center}
-.nav a{color:#EFE3C8;text-decoration:none;font:600 13px var(--sans);letter-spacing:.06em;padding:8px 12px;border:1px solid rgba(217,192,142,.45);border-radius:4px;white-space:nowrap}
-.nav a:hover,.nav a[aria-current]{background:var(--gold);color:var(--navy);border-color:var(--gold)}
-.crumbs{font-size:13px;color:var(--muted);padding-top:18px}
-.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
-.crumbs li+li::before{content:"›";margin-inline-end:6px;color:var(--gold)}
-.crumbs a{color:var(--muted)}
-.hero-band{background:var(--navy);color:#fff;border-bottom:5px solid var(--gold);padding-block:34px 32px;position:relative;overflow:hidden}
-.hero-band::after{content:"";position:absolute;inset:0;opacity:.09;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23D9C08E' stroke-width='1.4'%3E%3Cpath d='M28 4 52 28 28 52 4 28z'/%3E%3Ccircle cx='28' cy='28' r='7'/%3E%3C/g%3E%3C/svg%3E")}
-.hero-band>*{position:relative;z-index:1}
-.hero-band h1{color:#fff;font-size:clamp(28px,5vw,42px);line-height:1.22;margin:10px 0 14px}
-.hero-band p{margin:0;color:#D9DEE6;max-width:62ch;font-size:16.5px}
-.meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font-size:13.5px;color:#C9CFD9}
-.meta b{color:var(--gold-2);font-weight:600}
-.hero-img{width:100%;aspect-ratio:16/8;object-fit:cover;background:var(--navy-2)}
-.figcap{font-size:12.5px;color:var(--muted);padding:6px clamp(18px,5vw,44px) 0}
-article.post{padding-block:28px 8px}
-.prose{max-width:68ch}
-.prose p{margin:0 0 16px}
-.prose h2{font-size:clamp(23px,3.6vw,29px);line-height:1.3;margin:38px 0 12px;scroll-margin-top:100px}
-.prose h3{font-size:20px;margin:26px 0 8px}
-.prose ul,.prose ol{padding-inline-start:22px;margin:0 0 16px}
-.prose li{margin-bottom:6px}
-.prose blockquote{margin:22px 0;padding:14px 20px;border-inline-start:4px solid var(--gold);background:var(--panel);font-family:var(--serif);color:var(--navy);font-size:17px}
-.prose figure{margin:22px 0}.prose figcaption{font-size:13px;color:var(--muted);margin-top:6px}
-.lead{font-size:19px;line-height:1.65;color:#343a45}
-.facts{background:var(--panel);border-radius:6px;padding:18px 22px;margin:6px 0 26px;border-top:4px solid var(--gold)}
-.facts h2{font-size:18px!important;margin:0 0 10px!important}
-.facts dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0;font-size:15px}
-.facts dt{color:var(--muted);font-weight:500}.facts dd{margin:0}
-.toc{border:1px solid var(--line);border-radius:6px;padding:14px 20px;margin:0 0 26px;font-size:15px}
-.toc b{font-family:var(--serif);font-weight:400;color:var(--navy)}
-.toc ol{margin:8px 0 0;padding-inline-start:20px}.toc li{margin:3px 0}
-.cta{background:var(--navy);color:#fff;border-radius:6px;padding:24px;margin:34px 0;border-bottom:5px solid var(--gold)}
-.cta h2{color:#fff!important;font-size:24px!important;margin:6px 0 8px!important}
-.cta p{color:#D9DEE6;margin:0 0 16px}
-.btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font:600 14.5px var(--sans);padding:12px 18px;border-radius:4px;background:var(--gold);color:var(--navy)}
-.btn.ghost{background:transparent;color:#EFE3C8;border:1px solid rgba(217,192,142,.6)}
-.faq details{border-bottom:1px solid var(--line);padding:12px 0}
-.faq summary{cursor:pointer;font-weight:600;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:12px}
-.faq summary::after{content:"+";color:var(--gold);font-size:22px;line-height:1}
-.faq details[open] summary::after{content:"–"}
-.faq summary::-webkit-details-marker{display:none}
-.faq p{margin:10px 0 0;color:#3a404b}
-.author{display:flex;gap:16px;align-items:center;background:var(--panel);border-radius:6px;padding:18px;margin:30px 0 8px;font-size:15px}
-.author svg{width:56px;height:56px;flex:none;border-radius:50%;background:#fff;box-shadow:0 0 0 2px var(--gold)}
-.author p{margin:0}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-.pc{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s}
-.pc:hover{box-shadow:0 10px 26px -14px rgba(27,42,71,.45);transform:translateY(-2px)}
-.pc .ph{aspect-ratio:16/9;background:var(--navy) center/cover no-repeat;position:relative}
-.ph.ph-none{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23B8955A' stroke-width='1.2' opacity='.35'%3E%3Cpath d='M28 4 52 28 28 52 4 28z'/%3E%3Ccircle cx='28' cy='28' r='7'/%3E%3C/g%3E%3C/svg%3E")}
-.pc .ph span{position:absolute;inset-inline-start:12px;bottom:10px;background:var(--gold);color:var(--navy);font:600 11px var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;border-radius:3px}
-.pc .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
-.pc h3{font-size:18.5px;line-height:1.35}
-.pc p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.55}
-.pc small{margin-top:auto;font-size:12.5px;color:var(--muted)}
-.featured{display:grid;grid-template-columns:1.15fr 1fr;border:1px solid var(--line);border-radius:6px;overflow:hidden;text-decoration:none;color:inherit;margin-bottom:22px;background:var(--paper)}
-.featured .ph{min-height:240px;background:var(--navy) center/cover no-repeat}
-.featured .bd{padding:22px;display:flex;flex-direction:column;gap:10px;justify-content:center}
-.featured h2{font-size:clamp(22px,3.4vw,28px);line-height:1.3}
-.featured p{margin:0;color:var(--muted);font-size:15.5px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
-.chips button{font:600 13px var(--sans);border:1px solid var(--line);background:var(--paper);color:var(--navy);padding:7px 12px;border-radius:999px;cursor:pointer}
-.chips button[aria-pressed="true"]{background:var(--navy);color:#EFE3C8;border-color:var(--navy)}
-section.block{padding-block:30px}
-.sec-head h2{font-size:clamp(23px,3.6vw,29px)}
-footer{background:var(--navy);color:#C9CFD9;font-size:14px;border-top:5px solid var(--gold);margin-top:34px}
-footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
-footer a{color:var(--gold-2);text-decoration:none}
-footer .logo svg{width:30px;height:30px}
-.social{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.social span{font-size:13px;color:#C9CFD9;margin-inline-end:4px}
-.social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(217,192,142,.55);display:grid;place-items:center;color:var(--gold-2)}
-.social a:hover{background:var(--gold);color:var(--navy)}
-.social svg{width:19px;height:19px}
-.social a .gyg-ic{color:inherit;margin:0;font-size:0}
-.langs{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
-.addr{display:inline-flex;align-items:center;gap:8px;color:#C9CFD9!important;font-size:14px}
-.addr svg{color:var(--gold-2);flex:none}
-.wa-fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:30;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 22px -6px rgba(0,0,0,.4)}
-.wa-fab svg{width:30px;height:30px;color:#fff}
-@media (max-width:760px){body{padding:0}.card{border-radius:0}.logo svg{width:42px;height:42px}.logo b{font-size:15px;letter-spacing:.12em}.nav a{padding:7px 9px;font-size:12px}.nav .hide-s{display:none}.featured{grid-template-columns:1fr}.featured .ph{min-height:190px}.facts dl{grid-template-columns:1fr;gap:0}.facts dd{margin-bottom:8px}}
-@media print{.topbar,.wa-fab,.cta,footer{display:none}body{background:#fff;padding:0}.card{box-shadow:none}}
-""" + GYG
+def tours(l):
+    f = ROOT / ("index.html" if l == "ar" else f"{l}/index.html")
+    s = f.read_text()
+    t = re.findall(r'<a class="pcard".*?<b class="disp">(.*?)</b>.*?<span class="ppk">(.*?)</span>', s, re.S)
+    (n7, k7), (n9, k9) = [(html.unescape(a), html.unescape(b)) for a, b in t[:2]]
+    return {"7": (n7, home(l) + "#tour-7-days", f"$2,500 {k7}"), "9": (n9, home(l) + "#tour-9-days", f"$3,400 {k9}")}
 
-FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
-         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-         '<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">')
+def footer(l):
+    f = ROOT / ("index.html" if l == "ar" else f"{l}/index.html")
+    s = f.read_text()
+    a = s.rfind("<footer"); e = s.find("</footer>", a) + 9
+    ft = s[a:e].replace(' aria-current="page"', "")
+    def absol(m):
+        h = m.group(1)
+        if re.match(r"(https?:|mailto:|tel:|#|/)", h): return m.group(0)
+        h = h[3:] if h.startswith("../") else h
+        h = h[2:] if h.startswith("./") else h
+        return f'href="/{h}"'
+    ft = re.sub(r'href="([^"]*)"', absol, ft)
+    # language links in the footer point to that language's blog
+    def langnav(m):
+        x = re.sub(r'href="/([a-z]{2})/"', lambda n: f'href="/{n.group(1)}/blog/"', m.group(0))
+        return x.replace('href="/"', 'href="/blog/"')
+    return re.sub(r'<nav class="langs".*?</nav>', langnav, ft, flags=re.S)
 
 WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>'
 
-def head(title, desc, canonical, og_type, image, image_alt, extra_meta="", jsonld=None, keywords=""):
-    ld = ""
-    if jsonld:
-        ld = '<script type="application/ld+json">' + json.dumps(jsonld, ensure_ascii=False) + "</script>"
+FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+         '<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=PT+Serif:wght@400;700&family=Inter+Tight:wght@400;500;600{extra}&display=swap" rel="stylesheet">')
+FONT_EXTRA = {"ar": "&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600",
+              "fa": "&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600",
+              "zh": "&family=Noto+Serif+SC:wght@600", "ja": "&family=Noto+Serif+JP:wght@600"}
+
+ORG = {"@type": "TravelAgency", "@id": "https://fabletour.com/#org", "name": "Fable Tour", "url": "https://fabletour.com",
+       "logo": SITE + "/logo.png", "email": "support@fabletour.com", "telephone": "+9647711745353"}
+
+def head(l, title, desc, canonical, alts, og_type, image, image_alt, extra_meta="", jsonld=None, keywords=""):
+    t = T[l]
+    ld = '<script type="application/ld+json">' + json.dumps(jsonld, ensure_ascii=False) + "</script>" if jsonld else ""
     kw = f'<meta name="keywords" content="{esc(keywords)}">\n' if keywords else ""
+    alt_links = "".join(f'<link rel="alternate" hreflang="{hl(a)}" href="{u}">\n' for a, u in alts)
+    if alts:
+        xd = dict(alts).get("en") or dict(alts).get(l)
+        alt_links += f'<link rel="alternate" hreflang="x-default" href="{xd}">\n'
+    ogalt = "".join(f'<meta property="og:locale:alternate" content="{OGLOC[a]}">\n' for a, _ in alts if a != l)
+    d = "rtl" if l in RTL else "ltr"
     return f"""<!DOCTYPE html>
-<html lang="it" dir="ltr">
+<html lang="{hl(l)}" dir="{d}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 {kw}<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="author" content="{AUTHOR} — Fable Tour">
+<meta name="author" content="{esc(author(l))} — Fable Tour">
 <meta name="theme-color" content="#1B2A47">
 <meta name="format-detection" content="telephone=no">
 <link rel="canonical" href="{canonical}">
-<link rel="alternate" hreflang="it" href="{canonical}">
-<link rel="alternate" type="application/rss+xml" title="Blog Fable Tour — Iraq" href="{BASE}feed.xml">
+{alt_links}<link rel="alternate" type="application/rss+xml" title="Fable Tour — {esc(blogword(l))}" href="{blog_url(l)}feed.xml">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="Fable Tour">
-<meta property="og:locale" content="it_IT">
-<meta property="og:title" content="{esc(title)}">
+<meta property="og:locale" content="{OGLOC[l]}">
+{ogalt}<meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{image}">
+<meta property="og:image" content="{esc(image)}">
 <meta property="og:image:alt" content="{esc(image_alt)}">
 {extra_meta}<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
-<meta name="twitter:image" content="{image}">
-{FONTS}
+<meta name="twitter:image" content="{esc(image)}">
+{FONTS.format(extra=FONT_EXTRA.get(l, ""))}
 {ld}
 <style>{CSS}</style>
 </head>
@@ -193,187 +144,184 @@ def head(title, desc, canonical, og_type, image, image_alt, extra_meta="", jsonl
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="ftmark" viewBox="0 0 48 48"><image href="/logo.png" width="48" height="48"/></symbol></svg>
 <div class="card">
 <header class="topbar"><div class="wrap">
-  <a class="logo" href="/it/"><svg><use href="#ftmark"/></svg><b>Fable Tour</b></a>
-  <nav class="nav" aria-label="Menu"><a href="/it/">Tour</a><a href="/it/blog/" {{BLOGCUR}}>Blog</a><a class="hide-s" href="{WA}" target="_blank" rel="noopener">WhatsApp</a></nav>
+  <a class="logo" href="{home(l)}"><svg><use href="#ftmark"/></svg><b>Fable Tour</b></a>
+  <nav class="nav" aria-label="Menu"><a href="{home(l)}">{esc(t["tours"])}</a><a href="{blog_path(l)}" aria-current="page">{esc(blogword(l))}</a><a class="hide-s" href="{WA}" target="_blank" rel="noopener">WhatsApp</a></nav>
 </div></header>
 """
 
-def tail():
-    return FOOTER + f"""
+def tail(l):
+    return footer(l) + f"""
 </div>
-<a class="wa-fab" href="{WA}?text={esc('Ciao! Vorrei informazioni sui tour in Iraq.')}" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">{WA_ICON}</a>
+<a class="wa-fab" href="{WA}?text={esc(T[l]['wa_hello'])}" target="_blank" rel="noopener" aria-label="WhatsApp">{WA_ICON}</a>
 </body>
 </html>
 """
 
-ORG = {"@type": "TravelAgency", "@id": "https://fabletour.com/#org", "name": "Fable Tour",
-       "url": "https://fabletour.com", "logo": SITE + "/logo.png", "email": "support@fabletour.com",
-       "telephone": "+9647711745353"}
-
-def src(p):
-    return p if p.startswith("http") else "/" + p.lstrip("/")
-
-def img_url(p):
-    if not p: return SITE + "/og-image.jpg"
-    return p if p.startswith("http") else SITE + "/" + p.lstrip("/")
-
-def card(p, cls="pc"):
-    style = f' style="background-image:url(\'{src(p["image"])}\')"' if p.get("image") else ""
+def card(l, p, cls="pc"):
+    style = f' style="background-image:url(\'{esc(src(p["image"]))}\')"' if p.get("image") else ""
     noimg = "" if p.get("image") else " ph-none"
-    return (f'<a class="{cls}" href="/it/blog/{p["slug"]}/" data-cat="{esc(p["category"])}">'
+    return (f'<a class="{cls}" href="{blog_path(l)}{p["slug"]}/" data-cat="{esc(p["category"])}">'
             f'<div class="ph{noimg}"{style}><span>{esc(p["category"])}</span></div>'
             f'<div class="bd"><h3>{esc(p["h1"])}</h3><p>{esc(p["excerpt"])}</p>'
-            f'<small>{it_date(p["date"])} · {p["_min"]} min di lettura</small></div></a>')
+            f'<small>{fdate(l, p["date"])} · {T[l]["min"].format(n=p["_min"])}</small></div></a>')
 
-def build_article(p, posts):
-    body = (SRC / "posts" / f'{p["slug"]}.html').read_text()
-    # ids for h2 + table of contents
+def article_alts(p, ALL):
+    """[(lang, url)] for every language that has an article with the same topic."""
+    out = []
+    for l2 in LANGS:
+        for q in ALL.get(l2, []):
+            if q.get("topic") and q.get("topic") == p.get("topic"):
+                out.append((l2, blog_url(l2) + q["slug"] + "/")); break
+    return out
+
+def build_article(l, p, posts, ALL, TOURS):
+    t = T[l]
+    body = (B / l / "posts" / f'{p["slug"]}.html').read_text()
     toc = []
     def add_id(m):
         attrs, text = m.group(1), m.group(2)
         if "id=" in attrs:
             i = re.search(r'id="([^"]+)"', attrs).group(1)
         else:
-            i = slugify(re.sub(r"<[^>]+>", "", text))[:60]
+            i = "s" + str(len(toc) + 1) + "-" + slugify(re.sub(r"<[^>]+>", "", text))[:50]
             attrs += f' id="{i}"'
         toc.append((i, re.sub(r"<[^>]+>", "", text)))
         return f"<h2{attrs}>{text}</h2>"
     body = re.sub(r"<h2([^>]*)>(.*?)</h2>", add_id, body, flags=re.S)
-    url = BASE + p["slug"] + "/"
+    url = blog_url(l) + p["slug"] + "/"
     image = img_url(p.get("image"))
     alt = p.get("image_alt", p["h1"])
+    place = p.get("place", p["h1"])
     facts = "".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in p.get("facts", []))
     faq = p.get("faq", [])
-    tour = p.get("tour", "7")
-    tour_txt = {"7": ("Tour del patrimonio dell'Iraq — 7 giorni", "/it/#tour-7-days", "da $2,500 a persona"),
-                "9": ("Tutto l'Iraq, da Bassora a Erbil — 9 giorni", "/it/#tour-9-days", "$3,400 a persona")}[tour]
+    tour = TOURS[p.get("tour", "7")]
     related = [x for x in reversed(posts) if x["slug"] != p["slug"]]
     same = [x for x in related if x["category"] == p["category"]]
     rel = (same + [x for x in related if x not in same])[:3]
-
+    alts = article_alts(p, ALL)
     graph = [
-        {"@type": "BlogPosting", "@id": url + "#article", "headline": p["h1"][:110],
-         "name": p["title"], "description": p["description"], "inLanguage": "it-IT",
-         "datePublished": p["date"] + "T08:00:00+03:00",
-         "dateModified": p.get("updated", p["date"]) + "T08:00:00+03:00",
+        {"@type": "BlogPosting", "@id": url + "#article", "headline": p["h1"][:110], "name": p["title"],
+         "description": p["description"], "inLanguage": hl(l),
+         "datePublished": p["date"] + "T08:00:00+03:00", "dateModified": p.get("updated", p["date"]) + "T08:00:00+03:00",
          "mainEntityOfPage": {"@type": "WebPage", "@id": url}, "url": url,
-         "image": {"@type": "ImageObject", "url": image},
-         "wordCount": p["_words"], "articleSection": p["category"],
+         "image": {"@type": "ImageObject", "url": image}, "wordCount": p["_words"], "articleSection": p["category"],
          "keywords": p.get("keywords", ""),
-         "author": {"@type": "Person", "name": AUTHOR, "jobTitle": "Guida turistica in Iraq",
+         "author": {"@type": "Person", "name": author(l), "alternateName": AUTHOR_EN, "jobTitle": t["guide_job"],
                     "worksFor": {"@id": "https://fabletour.com/#org"}, "knowsLanguage": ["ar", "en", "ru"]},
-         "publisher": ORG, "isPartOf": {"@id": BASE + "#blog"},
-         "about": {"@type": "TouristAttraction", "name": p.get("place", p["h1"]),
+         "publisher": ORG, "isPartOf": {"@id": blog_url(l) + "#blog"},
+         "about": {"@type": "TouristAttraction", "name": place,
                    **({"geo": {"@type": "GeoCoordinates", "latitude": p["geo"][0], "longitude": p["geo"][1]}} if p.get("geo") else {}),
                    "address": {"@type": "PostalAddress", "addressCountry": "IQ", "addressRegion": p.get("region", "")}}},
         {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Fable Tour Iraq", "item": SITE + "/it/"},
-            {"@type": "ListItem", "position": 2, "name": "Blog", "item": BASE},
+            {"@type": "ListItem", "position": 1, "name": t["home_crumb"], "item": SITE + home(l)},
+            {"@type": "ListItem", "position": 2, "name": blogword(l), "item": blog_url(l)},
             {"@type": "ListItem", "position": 3, "name": p["h1"], "item": url}]},
     ]
+    if p.get("image_credit"):
+        graph[0]["image"]["creditText"] = p["image_credit"]
     if faq:
         graph.append({"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
     extra = (f'<meta property="article:published_time" content="{p["date"]}T08:00:00+03:00">\n'
              f'<meta property="article:modified_time" content="{p.get("updated", p["date"])}T08:00:00+03:00">\n'
-             f'<meta property="article:author" content="{AUTHOR}">\n'
+             f'<meta property="article:author" content="{esc(author(l))}">\n'
              f'<meta property="article:section" content="{esc(p["category"])}">\n')
-    for t in [k.strip() for k in p.get("keywords", "").split(",") if k.strip()][:6]:
-        extra += f'<meta property="article:tag" content="{esc(t)}">\n'
-
-    h = head(p["title"], p["description"], url, "article", image, alt, extra,
-             {"@context": "https://schema.org", "@graph": graph}, p.get("keywords", "")).replace("{BLOGCUR}", 'aria-current="page"')
+    for kw in [k.strip() for k in re.split(r"[,،、，]", p.get("keywords", "")) if k.strip()][:6]:
+        extra += f'<meta property="article:tag" content="{esc(kw)}">\n'
+    h = head(l, p["title"], p["description"], url, alts, "article", image, alt, extra,
+             {"@context": "https://schema.org", "@graph": graph}, p.get("keywords", ""))
     hero_img = ""
     if p.get("image"):
         hero_img = (f'<img class="hero-img" src="{esc(src(p["image"]))}" alt="{esc(alt)}" width="1600" height="800" fetchpriority="high" decoding="async">'
                     + (f'<div class="figcap">{esc(p["image_credit"])}</div>' if p.get("image_credit") else ""))
     toc_html = ""
     if len(toc) >= 3:
-        toc_html = '<nav class="toc" aria-label="Indice"><b>In questo articolo</b><ol>' + "".join(
-            f'<li><a href="#{i}">{esc(t)}</a></li>' for i, t in toc) + "</ol></nav>"
+        toc_html = f'<nav class="toc" aria-label="{esc(t["toc"])}"><b>{esc(t["toc"])}</b><ol>' + "".join(
+            f'<li><a href="#{i}">{esc(x)}</a></li>' for i, x in toc) + "</ol></nav>"
     faq_html = ""
     if faq:
-        faq_html = '<section class="faq" id="faq"><h2>Domande frequenti</h2>' + "".join(
+        faq_html = f'<section class="faq" id="faq"><h2>{esc(t["faq"])}</h2>' + "".join(
             f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in faq) + "</section>"
     rel_html = ""
     if rel:
-        rel_html = ('<section class="block in" style="padding-top:8px"><div class="sec-head" style="margin-bottom:16px"><span class="eyebrow">Continua a leggere</span><h2>Altri luoghi dell\'Iraq</h2></div>'
-                    '<div class="grid">' + "".join(card(x) for x in rel) + "</div></section>")
-    wa_msg = esc(f"Ciao! Ho letto l'articolo «{p['h1']}» e vorrei informazioni sul tour.")
+        rel_html = (f'<section class="block in" style="padding-top:8px"><div class="sec-head" style="margin-bottom:16px"><span class="eyebrow">{esc(t["more_eye"])}</span><h2>{esc(t["more_h"])}</h2></div>'
+                    '<div class="grid">' + "".join(card(l, x) for x in rel) + "</div></section>")
+    wa_msg = esc(t["wa_art"].format(t=p["h1"]))
+    cta_p = esc(t["cta_p"]).replace("{tour}", f'<a href="{tour[1]}" style="color:var(--gold-2)">{esc(tour[0])}</a>').replace("{price}", esc(tour[2]))
+    brief = f'<section class="facts" aria-label="{esc(t["brief"])}"><h2>{esc(t["brief"])}</h2><dl>{facts}</dl></section>' if facts else ""
     out = h + f"""
-<div class="in crumbs"><ol><li><a href="/it/">Tour in Iraq</a></li><li><a href="/it/blog/">Blog</a></li><li aria-current="page">{esc(p.get("place", p["h1"]))}</li></ol></div>
+<div class="in crumbs"><ol><li><a href="{home(l)}">{esc(t["home_crumb"])}</a></li><li><a href="{blog_path(l)}">{esc(blogword(l))}</a></li><li aria-current="page">{esc(place)}</li></ol></div>
 <main>
 <section class="hero">
   <div class="hero-band in" style="margin-top:14px">
     <span class="eyebrow">{esc(p["category"])} · {esc(p.get("region", "Iraq"))}</span>
     <h1>{esc(p["h1"])}</h1>
     <p>{esc(p["excerpt"])}</p>
-    <div class="meta"><span>Di <b>{AUTHOR}</b>, guida Fable Tour</span><span><time datetime="{p["date"]}">{it_date(p["date"])}</time></span><span>{p["_min"]} min di lettura</span></div>
+    <div class="meta"><span>{esc(t["by"])} <b>{esc(author(l))}</b>, {esc(t["role"])}</span><span><time datetime="{p["date"]}">{fdate(l, p["date"])}</time></span><span>{t["min"].format(n=p["_min"])}</span></div>
   </div>
   {hero_img}
 </section>
 <article class="post in">
   <div class="prose">
-    {'<section class="facts" aria-label="In breve"><h2>In breve</h2><dl>' + facts + '</dl></section>' if facts else ''}
+    {brief}
     {toc_html}
     {body}
     <aside class="cta">
-      <span class="eyebrow">Viaggia con noi</span>
-      <h2>Visita {esc(p.get("place", "questo luogo"))} con una guida locale</h2>
-      <p>Questo luogo fa parte del nostro <a href="{tour_txt[1]}" style="color:var(--gold-2)">{esc(tour_txt[0])}</a> ({tour_txt[2]}, camera doppia). Tour privati, nella data che scegli tu, con hotel 4★–5★.</p>
-      <div class="btns"><a class="btn" href="{WA}?text={wa_msg}" target="_blank" rel="noopener">{WA_ICON.replace('<svg ', '<svg width="18" height="18" ')} Scrivici su WhatsApp</a><a class="btn ghost" href="{tour_txt[1]}">Vedi il programma →</a></div>
+      <span class="eyebrow">{esc(t["cta_eye"])}</span>
+      <h2>{esc(t["cta_h"].format(place=place))}</h2>
+      <p>{cta_p}</p>
+      <div class="btns"><a class="btn" href="{WA}?text={wa_msg}" target="_blank" rel="noopener">{WA_ICON.replace('<svg ', '<svg width="18" height="18" ')} {esc(t["wa_btn"])}</a><a class="btn ghost" href="{tour[1]}">{esc(t["see_prog"])}</a></div>
     </aside>
     {faq_html}
-    <div class="author"><svg><use href="#ftmark"/></svg><p><b>{AUTHOR}</b> è una guida turistica di Baghdad e fondatore di Fable Tour. Accompagna viaggiatori da tutto il mondo tra i siti archeologici e le città dell'Iraq, in inglese, russo e arabo.</p></div>
+    <div class="author"><svg><use href="#ftmark"/></svg><p><b>{esc(author(l))}</b> {esc(t["bio"])}</p></div>
   </div>
 </article>
 {rel_html}
 </main>
-""" + tail()
-    d = OUT / p["slug"]
+""" + tail(l)
+    d = out_dir(l) / p["slug"]
     d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(out)
 
-def build_index(posts):
+def build_index(l, posts):
+    t = T[l]
     ordered = list(reversed(posts))
     cats = sorted({p["category"] for p in posts})
-    url = BASE
-    desc = ("Il blog di Fable Tour sull'Iraq: guide in italiano ai siti archeologici, alle città e ai luoghi della Mesopotamia — "
-            "Babilonia, Ur, Hatra, le Paludi e molto altro, con consigli pratici di una guida locale.")
+    url = blog_url(l)
+    alts = [(x, blog_url(x)) for x in LANGS]
     graph = [
-        {"@type": "Blog", "@id": url + "#blog", "url": url, "name": "Blog Fable Tour — Viaggio in Iraq",
-         "description": desc, "inLanguage": "it-IT", "publisher": ORG,
-         "blogPost": [{"@type": "BlogPosting", "headline": p["h1"], "url": BASE + p["slug"] + "/",
+        {"@type": "Blog", "@id": url + "#blog", "url": url, "name": t["b_title"].split(" | ")[0],
+         "description": t["b_desc"], "inLanguage": hl(l), "publisher": ORG,
+         "blogPost": [{"@type": "BlogPosting", "headline": p["h1"], "url": url + p["slug"] + "/",
                        "datePublished": p["date"], "image": img_url(p.get("image"))} for p in ordered[:30]]},
         {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Fable Tour Iraq", "item": SITE + "/it/"},
-            {"@type": "ListItem", "position": 2, "name": "Blog", "item": url}]},
+            {"@type": "ListItem", "position": 1, "name": t["home_crumb"], "item": SITE + home(l)},
+            {"@type": "ListItem", "position": 2, "name": blogword(l), "item": url}]},
     ]
-    h = head("Blog sull'Iraq: guide ai luoghi della Mesopotamia | Fable Tour", desc, url, "website",
-             SITE + "/og-image.jpg", "Fable Tour — blog di viaggio sull'Iraq", "",
-             {"@context": "https://schema.org", "@graph": graph},
-             "blog Iraq, viaggio in Iraq, cosa vedere in Iraq, siti archeologici Iraq, Mesopotamia, guida Iraq").replace("{BLOGCUR}", 'aria-current="page"')
-    feat = ""
-    rest = ordered
+    h = head(l, t["b_title"], t["b_desc"], url, alts, "website", SITE + "/og-image.jpg", "Fable Tour", "",
+             {"@context": "https://schema.org", "@graph": graph}, t["b_kw"])
+    feat, rest = "", ordered
     if ordered:
         p = ordered[0]; rest = ordered[1:]
-        style = f' style="background-image:url(\'{src(p["image"])}\')"' if p.get("image") else ""
+        style = f' style="background-image:url(\'{esc(src(p["image"]))}\')"' if p.get("image") else ""
         noimg = "" if p.get("image") else " ph-none"
-        feat = (f'<a class="featured" href="/it/blog/{p["slug"]}/"><div class="ph{noimg}"{style}></div><div class="bd">'
-                f'<span class="eyebrow">Ultimo articolo · {esc(p["category"])}</span><h2>{esc(p["h1"])}</h2><p>{esc(p["excerpt"])}</p>'
-                f'<small style="color:var(--muted);font-size:13px">{it_date(p["date"])} · {p["_min"]} min di lettura</small></div></a>')
+        feat = (f'<a class="featured" href="{blog_path(l)}{p["slug"]}/"><div class="ph{noimg}"{style}></div><div class="bd">'
+                f'<span class="eyebrow">{esc(t["latest"])} · {esc(p["category"])}</span><h2>{esc(p["h1"])}</h2><p>{esc(p["excerpt"])}</p>'
+                f'<small style="color:var(--muted);font-size:13px">{fdate(l, p["date"])} · {t["min"].format(n=p["_min"])}</small></div></a>')
+    else:
+        feat = f'<p style="color:var(--muted)">{esc(t["empty"])}</p>'
     chips = ""
-    if len(cats) > 1:
-        chips = ('<div class="chips" role="group" aria-label="Filtra per categoria"><button aria-pressed="true" data-f="*">Tutti</button>'
+    if len(cats) > 1 and len(rest) > 2:
+        chips = (f'<div class="chips" role="group" aria-label="{esc(t["filter"])}"><button aria-pressed="true" data-f="*">{esc(t["all"])}</button>'
                  + "".join(f'<button aria-pressed="false" data-f="{esc(c)}">{esc(c)}</button>' for c in cats) + "</div>")
-    grid = '<div class="grid" id="posts">' + "".join(card(p) for p in rest) + "</div>" if rest else ""
+    grid = '<div class="grid" id="posts">' + "".join(card(l, p) for p in rest) + "</div>" if rest else ""
     script = """<script>(function(){var b=document.querySelectorAll('.chips button'),c=document.querySelectorAll('#posts .pc');b.forEach(function(x){x.addEventListener('click',function(){b.forEach(function(y){y.setAttribute('aria-pressed',y===x)});var f=x.dataset.f;c.forEach(function(k){k.hidden=!(f==='*'||k.dataset.cat===f)})})})})();</script>"""
     out = h + f"""
 <main>
 <section class="hero"><div class="hero-band in">
-  <span class="eyebrow">Blog · Un luogo dell'Iraq al giorno</span>
-  <h1>Viaggio in Iraq: storie e guide dalla Mesopotamia</h1>
-  <p>Ogni giorno un nuovo articolo su un luogo dell'Iraq — siti archeologici, città antiche, santuari, paesaggi — scritto con l'esperienza di una guida che ci lavora ogni settimana.</p>
+  <span class="eyebrow">{esc(t["b_eye"])}</span>
+  <h1>{esc(t["b_h1"])}</h1>
+  <p>{esc(t["b_lead"])}</p>
 </div></section>
 <section class="block in">
   {feat}
@@ -381,63 +329,78 @@ def build_index(posts):
   {grid}
 </section>
 <section class="in"><aside class="cta" style="margin-top:0">
-  <span class="eyebrow">Dal blog al viaggio</span>
-  <h2>Vuoi vedere questi luoghi dal vivo?</h2>
-  <p>Due programmi privati con guida e hotel 4★–5★: 7 giorni da Baghdad o 9 giorni da Bassora a Erbil, nella data che scegli tu.</p>
-  <div class="btns"><a class="btn" href="/it/">Scopri i tour in Iraq →</a><a class="btn ghost" href="{WA}" target="_blank" rel="noopener">WhatsApp</a></div>
+  <span class="eyebrow">{esc(t["c2_eye"])}</span>
+  <h2>{esc(t["c2_h"])}</h2>
+  <p>{esc(t["c2_p"])}</p>
+  <div class="btns"><a class="btn" href="{home(l)}">{esc(t["c2_btn"])}</a><a class="btn ghost" href="{WA}?text={esc(t['wa_hello'])}" target="_blank" rel="noopener">WhatsApp</a></div>
 </aside></section>
 </main>
 {script if chips else ""}
-""" + tail()
-    OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / "index.html").write_text(out)
+""" + tail(l)
+    out_dir(l).mkdir(parents=True, exist_ok=True)
+    (out_dir(l) / "index.html").write_text(out)
 
-def build_feed(posts):
+def build_feed(l, posts):
     items = ""
     for p in list(reversed(posts))[:30]:
         dt = datetime.datetime.strptime(p["date"], "%Y-%m-%d").replace(hour=8, tzinfo=datetime.timezone(datetime.timedelta(hours=3)))
-        items += (f"<item><title>{esc(p['h1'])}</title><link>{BASE}{p['slug']}/</link><guid>{BASE}{p['slug']}/</guid>"
+        u = blog_url(l) + p["slug"] + "/"
+        items += (f"<item><title>{esc(p['h1'])}</title><link>{u}</link><guid>{u}</guid>"
                   f"<pubDate>{dt.strftime('%a, %d %b %Y %H:%M:%S %z')}</pubDate><category>{esc(p['category'])}</category>"
                   f"<description>{esc(p['description'])}</description></item>")
-    (OUT / "feed.xml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><title>Blog Fable Tour — Viaggio in Iraq</title><link>{BASE}</link>
-<description>Guide in italiano ai luoghi dell'Iraq</description><language>it-it</language>{items}</channel></rss>
+    (out_dir(l) / "feed.xml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Fable Tour — {esc(T[l]['b_h1'])}</title><link>{blog_url(l)}</link>
+<description>{esc(T[l]['b_desc'])}</description><language>{hl(l).lower()}</language>{items}</channel></rss>
 """)
 
-def build_sitemap(posts):
+def build_sitemap(ALL):
     sm = ROOT / "sitemap.xml"
     s = sm.read_text()
-    s = re.sub(r"\s*<!-- blog-it:start -->.*?<!-- blog-it:end -->", "", s, flags=re.S)
-    last = max([p.get("updated", p["date"]) for p in posts] or [datetime.date.today().isoformat()])
-    entries = f"\n  <!-- blog-it:start -->\n  <url><loc>{BASE}</loc><lastmod>{last}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>"
-    for p in posts:
-        img = ""
-        if p.get("image"):
-            img = f"<image:image><image:loc>{esc(img_url(p['image']))}</image:loc></image:image>"
-        entries += f"\n  <url><loc>{BASE}{p['slug']}/</loc><lastmod>{p.get('updated', p['date'])}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>{img}</url>"
-    entries += "\n  <!-- blog-it:end -->"
-    if 'xmlns:image=' not in s:
-        s = s.replace('<urlset ', '<urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" ', 1)
-    s = s.replace("</urlset>", entries + "\n</urlset>")
+    s = re.sub(r"\s*<!-- blog(-it)?:start -->.*?<!-- blog(-it)?:end -->", "", s, flags=re.S)
+    today = datetime.date.today().isoformat()
+    e = "\n  <!-- blog:start -->"
+    idx_alts = "".join(f'<xhtml:link rel="alternate" hreflang="{hl(x)}" href="{blog_url(x)}"/>' for x in LANGS)
+    for l in LANGS:
+        posts = ALL.get(l, [])
+        last = max([p.get("updated", p["date"]) for p in posts] or [today])
+        e += f"\n  <url><loc>{blog_url(l)}</loc><lastmod>{last}</lastmod><changefreq>daily</changefreq><priority>0.7</priority>{idx_alts}</url>"
+        for p in posts:
+            alts = "".join(f'<xhtml:link rel="alternate" hreflang="{hl(a)}" href="{u}"/>' for a, u in article_alts(p, ALL))
+            img = f"<image:image><image:loc>{esc(img_url(p['image']))}</image:loc></image:image>" if p.get("image") else ""
+            e += f"\n  <url><loc>{blog_url(l)}{p['slug']}/</loc><lastmod>{p.get('updated', p['date'])}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>{alts}{img}</url>"
+    e += "\n  <!-- blog:end -->"
+    if "xmlns:image=" not in s:
+        s = s.replace("<urlset ", '<urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" ', 1)
+    s = s.replace("</urlset>", e + "\n</urlset>")
     sm.write_text(s)
 
-def main():
-    posts = json.loads((SRC / "posts.json").read_text())
+def load(l):
+    f = B / l / "posts.json"
+    if not f.exists(): return []
+    posts = json.loads(f.read_text())
     posts.sort(key=lambda p: p["date"])
-    slugs = set()
+    seen = set()
     for p in posts:
-        assert p["slug"] not in slugs, "duplicate slug " + p["slug"]; slugs.add(p["slug"])
-        body = (SRC / "posts" / f'{p["slug"]}.html').read_text()
-        p["_words"] = words(body) + sum(words(q + " " + a) for q, a in p.get("faq", []))
+        assert p["slug"] not in seen, f"duplicate slug {l}/{p['slug']}"; seen.add(p["slug"])
+        assert re.fullmatch(r"[a-z0-9-]+", p["slug"]), f"slug must be ascii a-z0-9-: {l}/{p['slug']}"
+        body = (B / l / "posts" / f'{p["slug"]}.html').read_text()
+        p["_words"] = words(l, body) + sum(words(l, q + " " + a) for q, a in p.get("faq", []))
         p["_min"] = max(1, math.ceil(p["_words"] / 220))
-        if len(p["title"]) > 65: print("WARN title >65 chars:", p["slug"], len(p["title"]))
-        if not (110 <= len(p["description"]) <= 160): print("WARN description length:", p["slug"], len(p["description"]))
-    for p in posts:
-        build_article(p, posts)
-    build_index(posts)
-    build_feed(posts)
-    build_sitemap(posts)
-    print(f"Built {len(posts)} article(s) + blog index, feed, sitemap.")
+        if len(p["title"]) > 70: print(f"WARN {l}/{p['slug']}: title {len(p['title'])} chars (keep ≤ 65)")
+        dl = len(p["description"])
+        if not ((60 if l in ('zh', 'ja', 'th') else 110) <= dl <= 165): print(f"WARN {l}/{p['slug']}: description {dl} chars")
+    return posts
+
+def main():
+    ALL = {l: load(l) for l in LANGS}
+    for l in LANGS:
+        TOURS = tours(l)
+        for p in ALL[l]:
+            build_article(l, p, ALL[l], ALL, TOURS)
+        build_index(l, ALL[l])
+        build_feed(l, ALL[l])
+    build_sitemap(ALL)
+    print("Built:", ", ".join(f"{l}={len(ALL[l])}" for l in LANGS))
 
 if __name__ == "__main__":
     main()
