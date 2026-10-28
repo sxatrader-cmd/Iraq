@@ -121,6 +121,10 @@ def run(langs):
                 cur = d.strip("/") or "ar"
                 f.write_text(A.add_links(f.read_text(), rel, cur))
     A.sitemap()
+    import seo_local                     # local titles, H1, section and FAQ for each country
+    for lang in langs:
+        if lang in seo_local.L:
+            seo_local.apply(lang, seo_local.L[lang])
 
 
 if __name__ == "__main__":
