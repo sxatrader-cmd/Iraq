@@ -70,8 +70,16 @@
    "city": "Najaf",
    "category_en": "Holy shrines",
    "tour": "7",
-   "date": null,
-   "langs_done": []
+   "date": "2026-10-28",
+   "langs_done": [
+    "en",
+    "ar",
+    "ru",
+    "de",
+    "fr",
+    "it"
+   ],
+   "source_article": "_blog/en/posts/imam-ali-shrine-najaf-guide.html"
   },
   {
    "topic": "imam-hussein-shrine-in-karbala",
