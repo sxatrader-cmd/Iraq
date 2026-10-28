@@ -21,7 +21,7 @@ META = {
     "da": ("Dansk", "Da", "da_DK", "da"),
     "no": ("Norsk", "No", "nb_NO", "no"),
 }
-ORDER = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa",
+ORDER = ["ar", "en", "tr", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "fa",
          "ms", "id", "th", "hi", "ur", "ta", "fi", "sv", "da", "no"]
 # extra strings that are built, not translated one by one
 DT = {"fi": "Päiväretket Bagdadista", "sv": "Dagsutflykter från Bagdad",

@@ -6,7 +6,7 @@ import re, json, pathlib, html
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 D = json.loads((pathlib.Path(__file__).parent / "daytrips_i18n.json").read_text())
-LANGS = ["ar", "en", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "tr", "fa", "ms", "id", "th", "hi", "ur", "ta"]
+LANGS = ["ar", "en", "tr", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "fa", "ms", "id", "th", "hi", "ur", "ta"]
 ORDER = ["aqarquf", "madain", "samarra", "babylon", "babylon4", "holy", "south"]
 
 # price for n people (total for the group, USD) — same formulas are used in the page script
