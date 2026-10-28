@@ -31,7 +31,10 @@
    "fi",
    "sv",
    "da",
-   "no"
+   "no",
+   "sk",
+   "hr",
+   "ro"
   ]
  },
  "queue": [
@@ -66,7 +69,10 @@
     "cs",
     "pl",
     "tr",
-    "fa"
+    "fa",
+    "sk",
+    "hr",
+    "ro"
    ],
    "source_article": "_blog/it/posts/babilonia-iraq-guida-visita.html"
   },
@@ -98,7 +104,10 @@
     "fi",
     "sv",
     "da",
-    "no"
+    "no",
+    "sk",
+    "hr",
+    "ro"
    ],
    "source_article": "_blog/en/posts/imam-ali-shrine-najaf-guide.html"
   },

@@ -124,6 +124,8 @@ def translate_plain(p, M, lang, trips):
         return f"{M[m.group(1)]} — {DT[lang]}"
     # truncated trip descriptions (meta description "…", JSON-LD 600 chars)
     for paras in trips:
+        if not all(x in M for x in paras):
+            continue  # section added later by its own tool (add_ziyara.py etc.)
         full = " ".join(paras)
         if p.endswith("…") and full.startswith(p[:-1].rstrip()):
             t = " ".join(M[x] for x in paras)

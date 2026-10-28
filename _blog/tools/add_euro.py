@@ -69,6 +69,11 @@ j("https://api.frankfurter.dev/v1/latest?base=USD&symbols=EUR").then(function(d)
 })();</script>"""
 
 
+# Slovak, Croatian, Romanian (added Oct 2026)
+NOTE["sk"] = "Platba v eurách pri príchode · kurz aktualizovaný denne"
+NOTE["hr"] = "Plaćanje u eurima po dolasku · tečaj se ažurira svaki dan"
+NOTE["ro"] = "Puteți plăti în euro la sosire · curs actualizat zilnic"
+
 def note(lang):
     return f'<div class="eur-pay" data-eur-note>{NOTE[lang]} <span class="eur-rate" dir="ltr"></span></div>'
 

@@ -34,6 +34,11 @@ S = {
 PRICE = {"7": "$2,500", "9": "$3,400"}
 LEAD = {"7": 5, "9": 10}          # minimum days between today and the first date shown
 
+# Slovak, Croatian, Romanian (added Oct 2026)
+S["sk"] = ["Skupinové odchody", "Najbližšie termíny skupín", "Pripojte sa k malej skupine v jednom z týchto termínov — za rovnakú cenu, {price} na osobu v dvojlôžkovej izbe.", "Rezervovať", "Termín skupiny", "Súkromný zájazd — termín si zvolím"]
+S["hr"] = ["Grupni polasci", "Sljedeći grupni polasci", "Pridružite se maloj grupi na jedan od ovih datuma — po istoj cijeni, {price} po osobi u dvokrevetnoj sobi.", "Rezerviraj", "Datum grupnog polaska", "Privatno putovanje — sam biram datum"]
+S["ro"] = ["Plecări de grup", "Următoarele date de grup", "Alăturați-vă unui grup mic la una dintre aceste date — la același preț, {price} de persoană în cameră dublă.", "Rezervă", "Data plecării în grup", "Circuit privat — aleg eu data"]
+
 def baghdad_today():
     return (datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None) + datetime.timedelta(hours=3)).date()
 
