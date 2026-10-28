@@ -1544,5 +1544,29 @@ cards.forEach(function(ph){
   },400);
 })();
 </script>
+<script id="ti-autohide">
+/* hide the floating Trustindex review card 60 s after it first shows */
+(function(){
+  var first=0, start=Date.now();
+  function fixedTi(){
+    var out=[], els=document.querySelectorAll('[class*="ti-widget"],[class*="ti-popup"],[class*="ti-floating"],[id*="trustindex"]');
+    for(var i=0;i<els.length;i++){
+      var el=els[i], p=el, fixed=false;
+      while(p && p!==document.body){ if(getComputedStyle(p).position==="fixed"){fixed=true;break;} p=p.parentElement; }
+      if(fixed) out.push(p);
+    }
+    return out;
+  }
+  var t=setInterval(function(){
+    var f=fixedTi(), shown=false;
+    for(var i=0;i<f.length;i++){ if(f[i].offsetWidth||f[i].offsetHeight){shown=true;} }
+    if(shown && !first) first=Date.now();
+    if(first && Date.now()-first>=60*1000){
+      for(var j=0;j<f.length;j++){ f[j].style.setProperty("display","none","important"); }
+    }
+    if(Date.now()-start>15*60*1000) clearInterval(t);
+  },1000);
+})();
+</script>
 </body>
 </html>
