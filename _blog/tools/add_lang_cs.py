@@ -129,3 +129,5 @@ def run(langs):
 
 if __name__ == "__main__":
     run(sys.argv[1:] or list(NEW))
+    import footer_sites            # footer links to the other destination sites
+    footer_sites.run()
