@@ -120,8 +120,16 @@
    "city": "Karbala",
    "category_en": "Holy shrines",
    "tour": "7",
-   "date": null,
-   "langs_done": []
+   "date": "2026-10-29",
+   "langs_done": [
+    "en",
+    "ar",
+    "ru",
+    "de",
+    "fr",
+    "it"
+   ],
+   "source_article": "_blog/en/posts/imam-hussein-shrine-karbala-guide.html"
   },
   {
    "topic": "the-ishtar-gate-of-babylon",
