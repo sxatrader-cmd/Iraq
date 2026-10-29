@@ -240,6 +240,10 @@ EXTRA["sk"] = ("Hotel: {h}.", "Let: {f}.")
 EXTRA["hr"] = ("Hotel: {h}.", "Let: {f}.")
 EXTRA["ro"] = ("Hotel: {h}.", "Zbor: {f}.")
 
+# Dutch (added Oct 2026)
+S["nl"] = ["Luchthaventransfer", "Ophalen op de luchthaven van Bagdad en transfer naar het hotel", "Details bekijken", "Details verbergen", "We ontvangen u in de aankomsthal van de internationale luchthaven van Bagdad en brengen u met een privéauto rechtstreeks naar uw hotel in Bagdad.", "Ontvangst in de aankomsthal", "Privéauto met airco", "Hulp met uw bagage", "Transfer naar uw hotel in Bagdad", "Aankomstdatum", "Aankomsttijd (lokaal)", "Reizigers", "Hotel (optioneel)", "Vluchtnummer (optioneel)", "Kies uw aankomstdatum en -tijd om de prijs te zien.", "Totaalprijs", "Nachttarief voor aankomsten tussen 20:00 en 10:00", "Boeken via WhatsApp", "Hallo! Ik wil graag een ophaalservice boeken op de internationale luchthaven van Bagdad met transfer naar mijn hotel. Aankomst: {date} om {time}, {n} reizigers.{extra} Prijs: {price}.", "Meer dan 9 reizigers? Stuur ons een bericht via WhatsApp.", "Gids van Fable Tour wacht op gasten in de aankomsthal van de internationale luchthaven van Bagdad"]
+EXTRA["nl"] = ("Hotel: {h}.", "Vlucht: {f}.")
+
 def esc(s): return html.escape(s, quote=True)
 
 

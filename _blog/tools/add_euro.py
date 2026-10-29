@@ -74,6 +74,9 @@ NOTE["sk"] = "Platba v eurách pri príchode · kurz aktualizovaný denne"
 NOTE["hr"] = "Plaćanje u eurima po dolasku · tečaj se ažurira svaki dan"
 NOTE["ro"] = "Puteți plăti în euro la sosire · curs actualizat zilnic"
 
+# Dutch (added Oct 2026)
+NOTE["nl"] = "Betalen in euro bij aankomst mogelijk · koers dagelijks bijgewerkt"
+
 def note(lang):
     return f'<div class="eur-pay" data-eur-note>{NOTE[lang]} <span class="eur-rate" dir="ltr"></span></div>'
 

@@ -39,6 +39,9 @@ S["sk"] = ["Skupinové odchody", "Najbližšie termíny skupín", "Pripojte sa k
 S["hr"] = ["Grupni polasci", "Sljedeći grupni polasci", "Pridružite se maloj grupi na jedan od ovih datuma — po istoj cijeni, {price} po osobi u dvokrevetnoj sobi.", "Rezerviraj", "Datum grupnog polaska", "Privatno putovanje — sam biram datum"]
 S["ro"] = ["Plecări de grup", "Următoarele date de grup", "Alăturați-vă unui grup mic la una dintre aceste date — la același preț, {price} de persoană în cameră dublă.", "Rezervă", "Data plecării în grup", "Circuit privat — aleg eu data"]
 
+# Dutch (added Oct 2026)
+S["nl"] = ["Groepsvertrekken", "Volgende groepsdata", "Sluit aan bij een kleine groep op een van deze data — voor dezelfde prijs, {price} per persoon in een tweepersoonskamer.", "Boeken", "Groepsdatum", "Privéreis — ik kies zelf de datum"]
+
 def baghdad_today():
     return (datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None) + datetime.timedelta(hours=3)).date()
 

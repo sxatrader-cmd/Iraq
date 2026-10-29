@@ -1,11 +1,11 @@
 # Daily multilingual blog — instructions
 
-Site: https://iraq.fabletour.com — 27 languages. Every day ONE place in Iraq gets ONE article in EVERY language.
+Site: https://iraq.fabletour.com — 28 languages. Every day ONE place in Iraq gets ONE article in EVERY language.
 Four scheduled runs share the work; each run handles one language group (see `groups` in `_blog/plan.json`):
 - Group A (first run of the day): en, ar, ru, de, fr, it
 - Group B: es, el, cs, pl, tr, fa
 - Group C: zh, ja, ms, id, th, hi, ur, ta
-- Group D: fi, sv, da, no, sk, hr, ro (Finnish, Swedish, Danish, Norwegian Bokmål, Slovak, Croatian, Romanian)
+- Group D: fi, sv, da, no, sk, hr, ro, nl (Finnish, Swedish, Danish, Norwegian Bokmål, Slovak, Croatian, Romanian, Dutch)
 
 Blog URLs: Arabic → `/blog/`, every other language L → `/L/blog/`. Sources live in `_blog/L/`.
 
@@ -24,7 +24,7 @@ If another language of this topic already exists (check `langs_done`; the files 
 ## 3. Write each article — native, not a word-for-word translation
 For each language L:
 - 1,000–1,500 words (CJK: 2,000–3,000 characters; Thai similar length) of natural, fluent text for travellers from that country. Adapt the hook to the reader (Italian/Romanian: Verdi's Nabucco for Babylon; German: the Ishtar Gate in Berlin's Pergamon Museum; Malay/Indonesian/Persian/Arabic/Turkish/Urdu/Hindi/Tamil readers: religious-heritage (ziyarat) visitors are common — Urdu: use customary honorifics (ؑ after the Imams, ؐ/ﷺ after the Prophet); Hindi/Tamil: plain respectful wording; Chinese/Japanese: practical tone, clear structure).
-- Do local keyword thinking in L: the main keyword as people in that country search it (e.g. de "Babylon Irak besichtigen", fr "visiter Babylone", ru "Вавилон Ирак экскурсия", ja "バビロン遺跡 行き方", fi "Babylon Irak nähtävyydet", sv "besöka Babylon Irak", da "besøge Babylon Irak", no "besøke Babylon Irak", sk "Babylon Irak návšteva", hr "posjet Babilonu Irak", ro "vizită Babilon Irak"). Use it in title, h1, first paragraph, one h2 and description — naturally.
+- Do local keyword thinking in L: the main keyword as people in that country search it (e.g. de "Babylon Irak besichtigen", fr "visiter Babylone", ru "Вавилон Ирак экскурсия", ja "バビロン遺跡 行き方", fi "Babylon Irak nähtävyydet", sv "besöka Babylon Irak", da "besøge Babylon Irak", no "besøke Babylon Irak", sk "Babylon Irak návšteva", hr "posjet Babilonu Irak", ro "vizită Babilon Irak", nl "Babylon Irak bezoeken"). Use it in title, h1, first paragraph, one h2 and description — naturally.
 - Body fragment → `_blog/L/posts/<slug>.html`:
   - Starts with `<p class="lead">…</p>`; then 5–8 `<h2>` sections, `<h3>` sub-points, one `<ul>` of practical tips, optional `<blockquote>` with a first-person note from the guide Saif.
   - Sections like: where it is / history / what to see / how to get there (from Baghdad or nearest city) / best time to visit / practical tips / the place in an Iraq trip.

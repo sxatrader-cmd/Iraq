@@ -4,7 +4,7 @@ CZECH pages, which already carry every section (day trips, airport transfer, hol
 gallery, FAQ, euro prices…), using a Czech→language dictionary, then links the new language
 from every page (hreflang, language menu, footer links, og:locale) and the sitemap.
 
-Used for Slovak, Croatian and Romanian (Oct 2026):  python3 _blog/tools/add_lang_cs.py sk hr ro
+Used for Slovak, Croatian, Romanian and Dutch (Oct 2026):  python3 _blog/tools/add_lang_cs.py sk hr ro nl
 Translations: _blog/tools/pages_i18n/<lang>.from-cs.json  ({"<Czech text>": "<translation>"})
 Idempotent: re-running rebuilds the pages of the given languages from Czech.
 The Karbala story section is not on the Czech pages, so new languages don't get it."""
@@ -17,6 +17,7 @@ NEW = {
     "sk": ("Slovenčina", "Sk", "sk_SK", "sk"),
     "hr": ("Hrvatski", "Hr", "hr_HR", "hr"),
     "ro": ("Română", "Ro", "ro_RO", "ro"),
+    "nl": ("Nederlands", "Nl", "nl_NL", "nl"),
 }
 A.META.update(NEW)
 for l in NEW:
@@ -59,6 +60,8 @@ def tr_plain(p, M, lang, trips):
 
 def build_page(lang, rel, M, trips, unknown):
     s = (ROOT / SRC / rel).read_text()
+    # Czech-market banner (links to /cs/iraq-tours-from-czechia/) is not for other languages
+    s = re.sub(r'\s*<div class="czechia-banner">.*?</div>', '', s, flags=re.S)
     toks = A.tokenize(s)
     for t in toks:
         k, v = t

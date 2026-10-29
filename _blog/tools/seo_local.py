@@ -71,6 +71,26 @@ L = {
   ("Pot plăti circuitul în euro?", "Da. Prețul este afișat în dolari americani și îl puteți plăti în euro la sosire, la cursul zilei. Nu cerem avans."),
  ],
 },
+"nl": {
+ "title": "Rondreis Irak 7 en 9 dagen – Babylon, Ur, moerassen | Fable Tour",
+ "desc": "Rondreis door Irak met een lokale gids: Babylon, Ur, Karbala, Najaf, de moerassen en Hatra. 7 dagen vanuit Bagdad of 9 dagen van Basra naar Erbil, betalen in euro.",
+ "kw": "rondreis Irak, reis naar Irak, Irak reis, groepsreis Irak, privéreis Irak, vakantie Irak, reisbureau Irak, Babylon bezoeken, Mesopotamië rondreis, Irak met gids, Bagdad, Ur, Fable Tour",
+ "h1": "Rondreis Irak: een reis door het oude Mesopotamië",
+ "eye": "Vanuit Nederland en België naar Irak",
+ "h2": "Rondreis Irak vanuit Nederland en België: praktische informatie",
+ "body": [
+  ("Hoe reist u naar Irak", "Er zijn geen rechtstreekse vluchten vanuit Nederland of België naar Irak. Het eenvoudigst vliegt u vanaf Amsterdam Schiphol, Eindhoven of Brussel met één overstap – meestal in Istanbul, Dubai, Doha of Amman. De 7-daagse rondreis begint en eindigt op de internationale luchthaven van Bagdad, de 9-daagse begint in Basra en eindigt in Erbil. We ontvangen u op de luchthaven en zorgen voor alle transfers."),
+  ("Tijdsverschil, munteenheid en betalen", "Irak hanteert het hele jaar UTC+3: in de winter is het er twee uur later dan in Nederland en België, in de zomer één uur. De lokale munt is de Iraakse dinar, maar de reissom kunt u bij aankomst in euro betalen – de koers wordt op deze pagina dagelijks bijgewerkt. We vragen geen aanbetaling."),
+  ("Wanneer gaan en wat neemt u mee", "De beste periode voor een rondreis door Irak is van oktober tot april, als de dagen zonnig en aangenaam warm zijn. In de zomer loopt de temperatuur vaak op tot boven de 45 °C. Neem comfortabele schoenen, iets voor op het hoofd en kleding die schouders en knieën bedekt mee; voor het bezoek aan heiligdommen lenen we vrouwen een abaya."),
+  ("Waarom reizen met een lokale gids", "U wordt begeleid door Saif, een gids uit Bagdad die elke plek kent – van de Isjtarpoort in Babylon tot de ziggoerat van Ur. De reizen zijn privé voor uw groep, of u sluit aan bij een kleine groep, met 4★–5★-hotels en privévervoer met airco."),
+ ],
+ "links": '<p>Lees ook: <a href="/nl/blog/babylon-irak-bezoeken-reisgids/">Babylon in Irak – reisgids</a> · <a href="/nl/blog/heiligdom-imam-ali-najaf/">Het heiligdom van imam Ali in Najaf</a> · <a href="/nl/day-trips/babylon/">Dagtocht naar Babylon vanuit Bagdad</a></p>',
+ "faq": [
+  ("Hoe reis ik vanuit Nederland of België naar Irak?", "Er zijn geen rechtstreekse vluchten. Meestal vliegt u vanaf Amsterdam, Eindhoven of Brussel met een overstap in Istanbul, Dubai, Doha of Amman naar Bagdad, Basra of Erbil. We ontvangen u op de luchthaven."),
+  ("Wat is het tijdsverschil tussen Nederland en Irak?", "Irak heeft het hele jaar UTC+3: in de winter is het er twee uur later dan in Nederland en België, in de zomer één uur."),
+  ("Kan ik de reis in euro betalen?", "Ja. We vermelden de prijs in Amerikaanse dollars en u kunt bij aankomst in euro betalen tegen de dagkoers. We vragen geen aanbetaling."),
+ ],
+},
 }
 
 esc = lambda s: html.escape(s, quote=True)

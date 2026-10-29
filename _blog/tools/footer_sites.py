@@ -41,6 +41,7 @@ T = {
  "sv": ("Fler resor", "Sri Lanka", "Turkiet", "Jemen", "Förenade Arabemiraten"),
  "da": ("Flere rejser", "Sri Lanka", "Tyrkiet", "Yemen", "UAE"),
  "no": ("Flere reiser", "Sri Lanka", "Tyrkia", "Jemen", "De forente arabiske emirater"),
+ "nl": ("Meer reizen", "Sri Lanka", "Turkije", "Jemen", "VAE"),
  "nb": ("Flere reiser", "Sri Lanka", "Tyrkia", "Jemen", "De forente arabiske emirater"),
 }
 CSS = ('<style id="sites-css">.sites{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;font-size:14px}'

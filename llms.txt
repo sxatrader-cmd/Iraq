@@ -81,6 +81,7 @@ Language versions of this Iraq site (same tours, localized pages):
 - [Slovak](https://iraq.fabletour.com/sk/)
 - [Croatian](https://iraq.fabletour.com/hr/)
 - [Romanian](https://iraq.fabletour.com/ro/)
+- [Dutch](https://iraq.fabletour.com/nl/)
 
 Related Fable Tour sites:
 
