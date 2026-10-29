@@ -1262,7 +1262,7 @@ function kbInit(){
   });
   s.querySelectorAll('.kb-video').forEach(function(v){
     if(v.dataset.ready) return; v.dataset.ready=1;
-    v.style.backgroundImage='url('/+THUMB+')';
+    v.style.backgroundImage='url('+THUMB+')';
     v.addEventListener('click',function(){
       if(v.querySelector('iframe')) return;
       var hl=v.getAttribute('data-hl');
