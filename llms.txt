@@ -83,6 +83,19 @@ Language versions of this Iraq site (same tours, localized pages):
 - [Romanian](https://iraq.fabletour.com/ro/)
 - [Dutch](https://iraq.fabletour.com/nl/)
 
+## Pages for travellers from specific countries
+
+- [Iraq tours from Kuwait](https://iraq.fabletour.com/en/iraq-tours-from-kuwait/) · [ar](https://iraq.fabletour.com/iraq-tours-from-kuwait/)
+- [Iraq tours from Bahrain](https://iraq.fabletour.com/en/iraq-tours-from-bahrain/) · [ar](https://iraq.fabletour.com/iraq-tours-from-bahrain/)
+- [Iraq tours from Oman](https://iraq.fabletour.com/en/iraq-tours-from-oman/) · [ar](https://iraq.fabletour.com/iraq-tours-from-oman/)
+- [Iraq tours from the UAE](https://iraq.fabletour.com/en/iraq-tours-from-uae/) · [ar](https://iraq.fabletour.com/iraq-tours-from-uae/)
+- [Iraq tours from Lebanon](https://iraq.fabletour.com/en/iraq-tours-from-lebanon/) · [ar](https://iraq.fabletour.com/iraq-tours-from-lebanon/)
+- [Iraq tours from Jordan](https://iraq.fabletour.com/en/iraq-tours-from-jordan/) · [ar](https://iraq.fabletour.com/iraq-tours-from-jordan/)
+- [Iraq tours from Thailand](https://iraq.fabletour.com/en/iraq-tours-from-thailand/) · [th](https://iraq.fabletour.com/th/iraq-tours-from-thailand/)
+- [Iraq tours from Pakistan](https://iraq.fabletour.com/en/iraq-tours-from-pakistan/) · [ur](https://iraq.fabletour.com/ur/iraq-tours-from-pakistan/)
+- [Iraq tours from Iran](https://iraq.fabletour.com/en/iraq-tours-from-iran/) · [fa](https://iraq.fabletour.com/fa/iraq-tours-from-iran/)
+- [Iraq tours from Turkey](https://iraq.fabletour.com/en/iraq-tours-from-turkey/) · [tr](https://iraq.fabletour.com/tr/iraq-tours-from-turkey/)
+
 Related Fable Tour sites:
 
 - [fabletour.com](https://fabletour.com/) — main Fable Tour site
