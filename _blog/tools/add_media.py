@@ -39,17 +39,10 @@ CSS = """<style id="gal-css">
 </style>"""
 
 JS = """<script id="gal-js">(function(){
-var g=document.querySelector(".gal");if(!g)return;var s=[].slice.call(g.querySelectorAll(".gal-s")),d=g.querySelector(".gal-dots"),i=0,t=null,N=s.length;
+var g=document.querySelector(".gal");if(!g)return;var s=[].slice.call(g.querySelectorAll(".gal-s")),i=0,N=s.length;
 function load(k){var im=s[k].querySelector("img");if(im&&im.dataset.src){im.src=im.dataset.src;im.removeAttribute("data-src");}}
-s.forEach(function(_,k){var b=document.createElement("button");b.type="button";b.setAttribute("aria-label",(k+1)+" / "+N);b.addEventListener("click",function(){go(k);restart();});d.appendChild(b);});
-var dots=[].slice.call(d.children);
-function go(k){s[i].classList.remove("on");dots[i].classList.remove("on");i=(k+N)%N;load(i);load((i+1)%N);s[i].classList.add("on");dots[i].classList.add("on");}
-function restart(){clearInterval(t);t=setInterval(function(){if(!document.hidden)go(i+1);},5000);}
-g.querySelector(".gal-prev").addEventListener("click",function(){go(i-1);restart();});
-g.querySelector(".gal-next").addEventListener("click",function(){go(i+1);restart();});
-var x=null;g.addEventListener("touchstart",function(e){x=e.touches[0].clientX;},{passive:true});
-g.addEventListener("touchend",function(e){if(x===null)return;var dx=e.changedTouches[0].clientX-x;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));restart();}x=null;});
-go(0);restart();
+function go(k){s[i].classList.remove("on");i=(k+N)%N;load(i);load((i+1)%N);s[i].classList.add("on");}
+go(0);if(N>1)setInterval(function(){if(!document.hidden)go(i+1);},3000);
 })();</script>"""
 
 
@@ -79,8 +72,8 @@ def gallery(l):
     sl = "".join(f'<div class="gal-s{" on" if k == 0 else ""}"><img {"src" if k < 2 else "data-src"}="/img/{p}.webp" alt="{H[l]} – {k + 1}" decoding="async"{"" if k < 2 else ""}></div>'
                  for k, p in enumerate(PHOTOS))
     return (f'<section class="block in gal-wrap" style="padding-top:0" id="gallery"><div class="sec-head"><span class="eyebrow">{EYE[l]}</span><h2 class="disp">{H[l]}</h2></div>'
-            f'<div class="gal" dir="ltr">{sl}<button type="button" class="gal-nav gal-prev" aria-label="‹">‹</button>'
-            f'<button type="button" class="gal-nav gal-next" aria-label="›">›</button><div class="gal-dots"></div></div></section>\n')
+            f'<div class="gal" dir="ltr">{sl}'
+            f'</div></section>\n')
 
 
 def end_of(s, start):
