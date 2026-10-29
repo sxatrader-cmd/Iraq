@@ -65,8 +65,10 @@ def build(src):
     intro = html.unescape(re.sub(r"<[^>]+>", "", re.search(r'<div class="ap-in">\s*<p>(.*?)</p>', sec, re.S).group(1))).strip()
     alt = html.unescape(re.search(r'<div class="ap-ph"><img[^>]*alt="([^"]*)"', sec).group(1))
     inc = [html.unescape(re.sub(r"<[^>]+>", "", x)).strip() for x in re.findall(r"<li>(.*?)</li>", re.search(r'<ul class="ap-inc">(.*?)</ul>', sec, re.S).group(1))]
-    sep = "، " if lang in ("ar", "fa", "ur") else ("、" if lang.startswith(("zh", "ja")) else ", ")
-    desc = trunc(intro + " " + sep.join(inc) + ("." if lang not in ("zh-Hans", "zh-Hant-TW", "ja") else "。"), 200)
+    extra = [html.unescape(x) for x in re.findall(r'<li class="ap-x">(.*?)</li>', sec)]
+    end = "。" if lang in ("zh-Hans", "zh-Hant-TW", "ja") else "."
+    sp = "" if end == "。" else " "
+    desc = trunc(intro + "".join(sp + x + end for x in extra), 220)
 
     # absolute asset paths (page sits one folder deeper)
     s = re.sub(r'(?<=["\'(|=])\.\./', "/", s)
