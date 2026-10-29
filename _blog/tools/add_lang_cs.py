@@ -4,7 +4,8 @@ CZECH pages, which already carry every section (day trips, airport transfer, hol
 gallery, FAQ, euro prices…), using a Czech→language dictionary, then links the new language
 from every page (hreflang, language menu, footer links, og:locale) and the sitemap.
 
-Used for Slovak, Croatian, Romanian and Dutch (Oct 2026):  python3 _blog/tools/add_lang_cs.py sk hr ro nl
+Used for Slovak, Croatian, Romanian, Dutch and Georgian (Oct 2026):  python3 _blog/tools/add_lang_cs.py sk hr ro nl ka
+Georgian (ka) is not an EU language: post_ka.py strips the euro prices and adds Georgian fonts.
 Translations: _blog/tools/pages_i18n/<lang>.from-cs.json  ({"<Czech text>": "<translation>"})
 Idempotent: re-running rebuilds the pages of the given languages from Czech.
 The Karbala story section is not on the Czech pages, so new languages don't get it."""
@@ -18,6 +19,7 @@ NEW = {
     "hr": ("Hrvatski", "Hr", "hr_HR", "hr"),
     "ro": ("Română", "Ro", "ro_RO", "ro"),
     "nl": ("Nederlands", "Nl", "nl_NL", "nl"),
+    "ka": ("ქართული", "Ka", "ka_GE", "ka"),
 }
 A.META.update(NEW)
 for l in NEW:

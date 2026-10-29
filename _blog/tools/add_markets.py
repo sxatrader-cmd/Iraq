@@ -256,7 +256,7 @@ CSS = """<style id="market-css">
 .market-hl{display:grid;gap:14px;grid-template-columns:1fr;margin-top:14px}
 @media(min-width:720px){.market-hl{grid-template-columns:1fr 1fr 1fr}}
 .market-hl .hl{border-radius:8px;overflow:hidden;border:1px solid rgba(27,42,71,.1);background:#fff}
-.market-hl .ph{height:140px;background-size:cover;background-position:center}
+.market-hl .ph{height:140px;width:100%;aspect-ratio:auto;background-size:cover;background-position:center}
 .market-hl .bd{padding:12px 14px}
 .market-hl .bd h3{margin:0 0 6px;font-size:1.05rem}
 .market-hl .bd p{margin:0;font-size:14px;line-height:1.45}
@@ -280,7 +280,7 @@ def absolutize(s, lang):
     d = page_dir(lang)
 
     def fix(u):
-        if re.match(r"(?:[a-z][a-z0-9+.-]*:|/|#|\$\{|data:)", u) or not u:
+        if re.match(r"(?:[a-z][a-z0-9+.-]*:|/|#|\$\{|data:)", u) or not u or "+" in u:  # "+" = JS string concat
             return u
         r = posixpath.normpath(posixpath.join(d, u))
         return r if r.endswith("/") or not u.endswith("/") else r + "/"

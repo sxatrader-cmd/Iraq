@@ -1,11 +1,11 @@
 # Daily multilingual blog — instructions
 
-Site: https://iraq.fabletour.com — 28 languages. Every day ONE place in Iraq gets ONE article in EVERY language.
+Site: https://iraq.fabletour.com — 29 languages. Every day ONE place in Iraq gets ONE article in EVERY language.
 Four scheduled runs share the work; each run handles one language group (see `groups` in `_blog/plan.json`):
 - Group A (first run of the day): en, ar, ru, de, fr, it
 - Group B: es, el, cs, pl, tr, fa
 - Group C: zh, ja, ms, id, th, hi, ur, ta
-- Group D: fi, sv, da, no, sk, hr, ro, nl (Finnish, Swedish, Danish, Norwegian Bokmål, Slovak, Croatian, Romanian, Dutch)
+- Group D: fi, sv, da, no, sk, hr, ro, nl, ka (Finnish, Swedish, Danish, Norwegian Bokmål, Slovak, Croatian, Romanian, Dutch, Georgian)
 
 Blog URLs: Arabic → `/blog/`, every other language L → `/L/blog/`. Sources live in `_blog/L/`.
 
