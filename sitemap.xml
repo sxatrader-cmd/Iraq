@@ -14488,4 +14488,28 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://iraq.fabletour.com/de/iraq-tours-from-thueringen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/de/iraq-tours-from-thueringen/"/>
   </url>
+  <url>
+    <loc>https://iraq.fabletour.com/ru/iraq-tours-from-moscow/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iraq.fabletour.com/ru/iraq-tours-from-moscow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/ru/iraq-tours-from-moscow/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/ru/iraq-tours-from-saint-petersburg/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iraq.fabletour.com/ru/iraq-tours-from-saint-petersburg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/ru/iraq-tours-from-saint-petersburg/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/ru/iraq-tours-from-yekaterinburg/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iraq.fabletour.com/ru/iraq-tours-from-yekaterinburg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/ru/iraq-tours-from-yekaterinburg/"/>
+  </url>
 </urlset>
