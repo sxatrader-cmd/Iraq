@@ -461,6 +461,9 @@ html[lang="ar"] .ap-toggle b,html[lang="fa"] .ap-toggle b,html[lang="ur"] .ap-to
 .ap-ph{position:relative;align-self:start;background:var(--navy)}
 .ap-ph img{width:100%;height:auto;display:block;aspect-ratio:4/3}
 .ap-in{padding:22px 22px 24px}
+.ap-bot{grid-column:1/-1;padding:0 22px 24px;box-sizing:border-box;width:100%}
+@media(min-width:820px){.ap-bot{max-width:560px;margin:0 auto;padding-top:24px}.ap-in{padding-bottom:22px}}
+
 .ap-in>p{margin:0 0 14px;line-height:1.6;color:var(--ink)}
 .ap-inc{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:7px}
 .ap-inc li{display:flex;gap:9px;align-items:flex-start;font-size:15px}
@@ -1097,6 +1100,8 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
         <div class="ap-in">
           <p>We meet you in the arrivals hall at Baghdad International Airport and drive you in a private car straight to your hotel in Baghdad.</p>
           <ul class="ap-inc"><li>Meet &amp; greet in the arrivals hall</li><li>Private air-conditioned car</li><li>Help with your luggage</li><li>Drop-off at your hotel in Baghdad</li><li class="ap-x">Available 24/7</li><li class="ap-x">English-speaking meet & greet staff</li></ul><p class="ap-cpw"><button type="button" class="dt-cp ap-cp" data-url="/en/airport-transfer/" data-l="Copy link" data-ok="Link copied ✓"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>Copy link</span></button></p>
+        </div>
+        <div class="ap-bot">
           <div class="ap-form">
             <label>Arrival date<input type="date" id="ap-date" required></label>
             <label>Arrival time (local)<select id="ap-time" required><option value="">--:--</option><option value="00:00">00:00</option><option value="00:30">00:30</option><option value="01:00">01:00</option><option value="01:30">01:30</option><option value="02:00">02:00</option><option value="02:30">02:30</option><option value="03:00">03:00</option><option value="03:30">03:30</option><option value="04:00">04:00</option><option value="04:30">04:30</option><option value="05:00">05:00</option><option value="05:30">05:30</option><option value="06:00">06:00</option><option value="06:30">06:30</option><option value="07:00">07:00</option><option value="07:30">07:30</option><option value="08:00">08:00</option><option value="08:30">08:30</option><option value="09:00">09:00</option><option value="09:30">09:30</option><option value="10:00">10:00</option><option value="10:30">10:30</option><option value="11:00">11:00</option><option value="11:30">11:30</option><option value="12:00">12:00</option><option value="12:30">12:30</option><option value="13:00">13:00</option><option value="13:30">13:30</option><option value="14:00">14:00</option><option value="14:30">14:30</option><option value="15:00">15:00</option><option value="15:30">15:30</option><option value="16:00">16:00</option><option value="16:30">16:30</option><option value="17:00">17:00</option><option value="17:30">17:30</option><option value="18:00">18:00</option><option value="18:30">18:30</option><option value="19:00">19:00</option><option value="19:30">19:30</option><option value="20:00">20:00</option><option value="20:30">20:30</option><option value="21:00">21:00</option><option value="21:30">21:30</option><option value="22:00">22:00</option><option value="22:30">22:30</option><option value="23:00">23:00</option><option value="23:30">23:30</option></select></label>
