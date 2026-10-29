@@ -119,6 +119,20 @@ st("washington", "Washington", "us", "Seattle, Kent, SeaTac and Tacoma",
    ["babylon", "ur", "marshes"],
    "Long flight from the Pacific Northwest? Add our airport pickup in Baghdad and rest a night before the tour starts.")
 
+st("new-mexico", "New Mexico", "us", "Albuquerque, Rio Rancho, Santa Fe and Las Cruces",
+   "New Mexico has a small, close-knit Arab community and Iraqi families who settled in Albuquerque and Rio Rancho, with more in Santa Fe and Las Cruces. Many travel back to see relatives in Baghdad — we add Babylon, Ur and the Marshes to the trip, with a guide who speaks Arabic and English.",
+   [("Albuquerque (ABQ) → Baghdad (BGW)", f"Usually two connections: via a US hub (Dallas, Houston, Chicago, Los Angeles), then {HUBS}."),
+    ("Santa Fe (SAF), El Paso (ELP) for Las Cruces", "Connect through Dallas, Denver or Phoenix.")],
+   ["babylon", "ur", "marshes"],
+   "Long journey from the Southwest? Add our Baghdad airport pickup and a rest night before the tour starts.")
+
+st("las-vegas", "Las Vegas", "us", "Las Vegas, Henderson and North Las Vegas",
+   "Las Vegas and Henderson have a growing Arab community and Iraqi families who have moved to Southern Nevada in recent years. From Harry Reid Airport you are two short connections away from Baghdad — we take care of everything from the moment you land.",
+   [("Las Vegas (LAS) → Baghdad (BGW) / Erbil (EBL)", f"Connect through Los Angeles, Dallas, Chicago or New York, then via {HUBS} (check current schedules)."),
+    ("Reno (RNO)", "Connect through Las Vegas, San Francisco or another hub.")],
+   ["babylon", "kadhimiya", "samarra"],
+   "Prefer a short trip? Our 7-day tour starts and ends at Baghdad International Airport, and our same-day trips from Baghdad fit around a family visit.")
+
 # Canada
 st("ontario", "Ontario", "ca", "Toronto, Mississauga, Ottawa, Windsor and London",
    "Ontario is home to Canada's largest Iraqi and Arab communities — in Mississauga, Toronto, Brampton, Ottawa, Windsor (next to Detroit), London and Hamilton. Many families travel back every year; we help you combine the family visit with Babylon, Ur and the Marshes.",
