@@ -48,6 +48,9 @@ S["ka"] = ["ჯგუფური გასვლები", "ჯგუფურ
 # Korean (added Oct 2026)
 S["ko"] = ["그룹 출발", "가장 가까운 그룹 출발일", "다음 날짜 중 하나에 소규모 그룹으로 함께하세요 — 같은 요금으로, 더블룸 기준 1인 {price}.", "예약하기", "그룹 출발일", "프라이빗 투어 — 날짜는 제가 정합니다"]
 
+# Portuguese (added Oct 2026)
+S["pt"] = ["Partidas em grupo", "Próximas datas de grupo", "Junte-se a um pequeno grupo numa destas datas — pelo mesmo preço, {price} por pessoa em quarto duplo.", "Reservar", "Data de grupo", "Viagem privada — eu escolho a data"]
+
 def baghdad_today():
     return (datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None) + datetime.timedelta(hours=3)).date()
 

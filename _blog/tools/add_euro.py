@@ -76,6 +76,7 @@ NOTE["ro"] = "Puteți plăti în euro la sosire · curs actualizat zilnic"
 
 # Dutch (added Oct 2026)
 NOTE["nl"] = "Betalen in euro bij aankomst mogelijk · koers dagelijks bijgewerkt"
+NOTE["pt"] = "Pagamento em euros à chegada · câmbio atualizado diariamente"
 
 def note(lang):
     return f'<div class="eur-pay" data-eur-note>{NOTE[lang]} <span class="eur-rate" dir="ltr"></span></div>'

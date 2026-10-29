@@ -66,6 +66,10 @@ EYE["ka"] = "გალერეა"
 H["ko"] = "우리의 이라크 여행에서"
 EYE["ko"] = "갤러리"
 
+# Portuguese (added Oct 2026)
+H["pt"] = "Das nossas viagens pelo Iraque"
+EYE["pt"] = "Galeria"
+
 def vid(v):
     return (f'<div class="vid vert xvid"><iframe src="https://www.youtube-nocookie.com/embed/{v}?rel=0&amp;modestbranding=1&amp;playsinline=1" '
             'title="Fable Tour" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '

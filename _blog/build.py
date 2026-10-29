@@ -22,12 +22,12 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 B = ROOT / "_blog"
 SITE = "https://iraq.fabletour.com"
 WA = "https://wa.me/9647711745353"
-LANGS = ["ar", "en", "tr", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "fa", "ms", "id", "th", "hi", "ur", "ta", "fi", "sv", "da", "no", "sk", "hr", "ro", "nl", "ka", "ko"]
+LANGS = ["ar", "en", "tr", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "fa", "ms", "id", "th", "hi", "ur", "ta", "fi", "sv", "da", "no", "sk", "hr", "ro", "nl", "ka", "ko", "pt"]
 HREFLANG = {"zh": "zh-Hans"}
 OGLOC = {"ar": "ar_AR", "en": "en_US", "ru": "ru_RU", "de": "de_DE", "fr": "fr_FR", "es": "es_ES", "it": "it_IT",
          "el": "el_GR", "cs": "cs_CZ", "pl": "pl_PL", "zh": "zh_CN", "ja": "ja_JP", "tr": "tr_TR", "fa": "fa_IR",
          "ms": "ms_MY", "id": "id_ID", "th": "th_TH", "hi": "hi_IN", "ur": "ur_PK", "ta": "ta_IN",
-         "fi": "fi_FI", "sv": "sv_SE", "da": "da_DK", "no": "nb_NO", "sk": "sk_SK", "hr": "hr_HR", "ro": "ro_RO", "nl": "nl_NL", "ka": "ka_GE", "ko": "ko_KR"}
+         "fi": "fi_FI", "sv": "sv_SE", "da": "da_DK", "no": "nb_NO", "sk": "sk_SK", "hr": "hr_HR", "ro": "ro_RO", "nl": "nl_NL", "ka": "ka_GE", "ko": "ko_KR", "pt": "pt_PT"}
 RTL = {"ar", "fa", "ur"}
 BLOGWORD = {"ar": "المدونة", "fa": "وبلاگ", "ru": "Блог", "zh": "博客", "ja": "ブログ", "th": "บล็อก", "hi": "ब्लॉग", "ur": "بلاگ", "ta": "வலைப்பதிவு", "fi": "Blogi", "sv": "Blogg", "no": "Blogg", "ka": "ბლოგი", "ko": "블로그"}
 AUTHOR = {"ar": "سيف التميمي", "fa": "سیف التمیمی", "ur": "سیف التمیمی", "hi": "सैफ़ अल-तमीमी", "ta": "சைஃப் அல்-தமீமி", "ka": "საიფ ალ-თამიმი", "ko": "사이프 알타미미"}

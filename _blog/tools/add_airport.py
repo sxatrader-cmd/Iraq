@@ -252,6 +252,10 @@ EXTRA["ka"] = ("სასტუმრო: {h}.", "რეისი: {f}.")
 S["ko"] = ["공항 픽업", "바그다드 국제공항 픽업 및 호텔 이동", "자세히 보기", "자세히 숨기기", "바그다드 국제공항 도착 홀에서 맞이하고 전용 차량으로 바그다드 호텔까지 바로 모셔다 드립니다.", "도착 홀에서 영접", "에어컨 전용 차량", "수하물 도움", "바그다드 호텔까지 이동", "도착 날짜", "도착 시간 (현지)", "인원", "호텔 (선택)", "항공편 번호 (선택)", "도착 날짜와 시간을 선택하면 요금이 표시됩니다.", "총 요금", "20:00~10:00 도착은 야간 요금", "WhatsApp으로 예약", "안녕하세요! 바그다드 국제공항 픽업과 호텔까지의 이동을 예약하고 싶습니다. 도착: {date} {time}, 인원: {n}명.{extra} 요금: {price}.", "9명 이상인가요? WhatsApp으로 문의해 주세요.", "바그다드 국제공항 도착 홀에서 손님을 기다리는 Fable Tour 가이드"]
 EXTRA["ko"] = ("호텔: {h}.", "항공편: {f}.")
 
+# Portuguese (added Oct 2026)
+S["pt"] = ["Transfer do aeroporto", "Recolha no aeroporto de Bagdade e transfer para o hotel", "Ver detalhes", "Ocultar detalhes", "Recebemo-lo no átrio de chegadas do Aeroporto Internacional de Bagdade e levamo-lo em carro privado diretamente ao seu hotel em Bagdade.", "Receção no átrio de chegadas", "Carro privado com ar condicionado", "Ajuda com a bagagem", "Transfer até ao seu hotel em Bagdade", "Data de chegada", "Hora de chegada (local)", "Viajantes", "Hotel (opcional)", "Número do voo (opcional)", "Escolha a data e a hora de chegada para ver o preço.", "Preço total", "Tarifa noturna para chegadas entre as 20:00 e as 10:00", "Reservar pelo WhatsApp", "Olá! Quero reservar a recolha no Aeroporto Internacional de Bagdade com transfer para o hotel. Chegada: {date} às {time}, número de viajantes: {n}.{extra} Preço: {price}.", "Mais de 9 viajantes? Escreva-nos pelo WhatsApp.", "Guia da Fable Tour à espera dos hóspedes no átrio de chegadas do Aeroporto Internacional de Bagdade"]
+EXTRA["pt"] = ("Hotel: {h}.", "Voo: {f}.")
+
 def esc(s): return html.escape(s, quote=True)
 
 

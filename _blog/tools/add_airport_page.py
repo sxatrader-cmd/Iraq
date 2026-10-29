@@ -18,7 +18,7 @@ ALL = {"ar": "كل رحلات العراق", "en": "All Iraq tours", "ru": "Вс
        "fa": "همه تورهای عراق", "ms": "Semua lawatan Iraq", "id": "Semua tur Irak", "th": "ทัวร์อิรักทั้งหมด",
        "ta": "அனைத்து ஈராக் சுற்றுலாக்கள்", "hi": "इराक के सभी टूर", "ur": "عراق کے تمام ٹورز", "fi": "Kaikki Irakin matkat",
        "sv": "Alla Irakresor", "da": "Alle Irak-ture", "no": "Alle Irak-turer", "sk": "Všetky zájazdy do Iraku",
-       "hr": "Sva putovanja po Iraku", "ro": "Toate tururile în Irak", "nl": "Alle Irak-reizen", "ka": "ერაყის ყველა ტური", "ko": "이라크 투어 전체 보기"}
+       "hr": "Sva putovanja po Iraku", "ro": "Toate tururile în Irak", "nl": "Alle Irak-reizen", "ka": "ერაყის ყველა ტური", "ko": "이라크 투어 전체 보기", "pt": "Todas as viagens ao Iraque"}
 
 CSS = ("body.ap-solo .hero,body.ap-solo .hero-band,body.ap-solo main>*:not(#airport-transfer){display:none!important}"
        "body.ap-solo #airport-transfer{padding-top:26px!important;max-width:820px;margin-inline:auto}"

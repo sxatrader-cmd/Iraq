@@ -27,7 +27,7 @@ ORDER = ["ar", "en", "tr", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh",
 DT = {"fi": "Päiväretket Bagdadista", "sv": "Dagsutflykter från Bagdad",
       "da": "Dagsture fra Bagdad", "no": "Dagsturer fra Bagdad"}
 
-ATTR = r'(?:alt|title|aria-label|content|placeholder|data-alt|data-cap|data-show|data-hide|label)'
+ATTR = r'(?:alt|title|aria-label|content|placeholder|data-alt|data-cap|data-show|data-hide|data-l|data-ok|label)'
 
 
 def tokenize(s):
