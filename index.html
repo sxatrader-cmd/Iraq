@@ -506,6 +506,13 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
 .ap-price .ap-tot .eur{display:block;font-size:.55em}
 .ap-night{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
 .ap-night[hidden],.ap-tot[hidden],.ap-hint[hidden]{display:none}
+.ap-vid{margin:16px auto 0;max-width:340px;text-align:center}
+.ap-vid h3{font-size:17px;color:var(--navy);margin:0 0 10px}
+.ap-vbox{position:relative;width:100%;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#000;border:3px solid var(--gold)}
+.ap-vbox button{all:unset;cursor:pointer;position:absolute;inset:0;display:block}
+.ap-vbox img{width:100%;height:100%;object-fit:cover;display:block}
+.ap-vbox .pl{position:absolute;inset:0;margin:auto;width:68px;height:68px;border-radius:50%;background:rgba(10,25,50,.8);display:grid;place-items:center;border:2px solid var(--gold)}
+.ap-vbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .ap-book{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;height:50px;border-radius:5px;background:#25D366;color:#fff;font-weight:600;text-decoration:none}
 .ap-book[aria-disabled="true"]{opacity:.45;pointer-events:none}
 .ap-big{margin-top:10px;font-size:13px;color:var(--muted)}
@@ -1069,6 +1076,13 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
           <div class="ap-big">أكثر من 9 مسافرين؟ راسلنا على واتساب.</div>
         </div>
       </div>
+      <div class="ap-vid">
+        <h3>شاهد كيف نستقبل ضيوفنا في مطار بغداد</h3>
+        <div class="ap-vbox" id="ap-vbox">
+          <button type="button" aria-label="تشغيل فيديو الاستقبال في مطار بغداد الدولي"><img src="https://i.ytimg.com/vi/f7fGi523YzM/hqdefault.jpg" alt="فيديو استقبال ضيوف Fable Tour في مطار بغداد الدولي" loading="lazy" decoding="async"><span class="pl"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button>
+        </div>
+      </div>
+      <script>(function(){var b=document.getElementById('ap-vbox');if(!b)return;b.querySelector('button').addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube.com/embed/f7fGi523YzM?autoplay=1&rel=0&playsinline=1&hl=ar';f.title='الاستقبال في مطار بغداد الدولي — Fable Tour';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;b.innerHTML='';b.appendChild(f);});})();</script>
     </div>
   </section>
 
