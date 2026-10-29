@@ -11137,22 +11137,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-ireland/"/>
   </url>
   <url>
-    <loc>https://iraq.fabletour.com/en/iraq-tours-from-usa/</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-usa/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-usa/"/>
-  </url>
-  <url>
-    <loc>https://iraq.fabletour.com/en/iraq-tours-from-canada/</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-canada/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-canada/"/>
-  </url>
-  <url>
     <loc>https://iraq.fabletour.com/en/iraq-tours-from-australia/</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -12359,5 +12343,185 @@
     <xhtml:link rel="alternate" hreflang="ka" href="https://iraq.fabletour.com/ka/airport-transfer/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/airport-transfer/"/>
     <image:image><image:loc>https://iraq.fabletour.com/img/og/airport-transfer.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-michigan/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-michigan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-michigan/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-california/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-california/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-california/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-illinois/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-illinois/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-illinois/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-texas/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-texas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-texas/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-new-york/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-new-york/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-new-york/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-new-jersey/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-new-jersey/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-new-jersey/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-arizona/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-arizona/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-arizona/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-virginia/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-virginia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-virginia/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-ohio/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-ohio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-ohio/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-florida/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-florida/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-florida/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-pennsylvania/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-pennsylvania/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-pennsylvania/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-tennessee/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-tennessee/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-tennessee/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-massachusetts/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-massachusetts/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-massachusetts/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-washington/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-washington/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-washington/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-ontario/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-ontario/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-ontario/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-quebec/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-quebec/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-quebec/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-alberta/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-alberta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-alberta/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-british-columbia/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-british-columbia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-british-columbia/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/es/iraq-tours-from-usa/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-usa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iraq.fabletour.com/es/iraq-tours-from-usa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-usa/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-usa/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-usa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iraq.fabletour.com/es/iraq-tours-from-usa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-usa/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/fr/iraq-tours-from-canada/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-canada/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iraq.fabletour.com/fr/iraq-tours-from-canada/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-canada/"/>
+  </url>
+  <url>
+    <loc>https://iraq.fabletour.com/en/iraq-tours-from-canada/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iraq.fabletour.com/en/iraq-tours-from-canada/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iraq.fabletour.com/fr/iraq-tours-from-canada/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iraq.fabletour.com/en/iraq-tours-from-canada/"/>
   </url>
 </urlset>
