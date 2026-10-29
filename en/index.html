@@ -487,8 +487,8 @@ html[lang="ar"] .ap-toggle b,html[lang="fa"] .ap-toggle b,html[lang="ur"] .ap-to
 .ap-toggle[aria-expanded="true"] .ap-chev{transform:rotate(180deg)}
 .ap-card{margin-top:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:grid;grid-template-columns:1fr}
 @media(min-width:820px){.ap-card{grid-template-columns:5fr 6fr}}
-.ap-ph{position:relative;min-height:240px;background:var(--navy) center/cover no-repeat}
-.ap-ph img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3}
+.ap-ph{position:relative;align-self:start;background:var(--navy)}
+.ap-ph img{width:100%;height:auto;display:block;aspect-ratio:4/3}
 .ap-in{padding:22px 22px 24px}
 .ap-in>p{margin:0 0 14px;line-height:1.6;color:var(--ink)}
 .ap-inc{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:7px}
@@ -1049,7 +1049,7 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
           <div class="vid vert xvid ap-vid"><iframe src="https://www.youtube-nocookie.com/embed/wJ_5nrtDy1s?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Baghdad Airport pickup with Fable Tour" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
           <div class="ap-form">
             <label>Arrival date<input type="date" id="ap-date" required></label>
-            <label>Arrival time (local)<input type="time" id="ap-time" required></label>
+            <label>Arrival time (local)<select id="ap-time" required><option value="">--:--</option><option value="00:00">00:00</option><option value="00:30">00:30</option><option value="01:00">01:00</option><option value="01:30">01:30</option><option value="02:00">02:00</option><option value="02:30">02:30</option><option value="03:00">03:00</option><option value="03:30">03:30</option><option value="04:00">04:00</option><option value="04:30">04:30</option><option value="05:00">05:00</option><option value="05:30">05:30</option><option value="06:00">06:00</option><option value="06:30">06:30</option><option value="07:00">07:00</option><option value="07:30">07:30</option><option value="08:00">08:00</option><option value="08:30">08:30</option><option value="09:00">09:00</option><option value="09:30">09:30</option><option value="10:00">10:00</option><option value="10:30">10:30</option><option value="11:00">11:00</option><option value="11:30">11:30</option><option value="12:00">12:00</option><option value="12:30">12:30</option><option value="13:00">13:00</option><option value="13:30">13:30</option><option value="14:00">14:00</option><option value="14:30">14:30</option><option value="15:00">15:00</option><option value="15:30">15:30</option><option value="16:00">16:00</option><option value="16:30">16:30</option><option value="17:00">17:00</option><option value="17:30">17:30</option><option value="18:00">18:00</option><option value="18:30">18:30</option><option value="19:00">19:00</option><option value="19:30">19:30</option><option value="20:00">20:00</option><option value="20:30">20:30</option><option value="21:00">21:00</option><option value="21:30">21:30</option><option value="22:00">22:00</option><option value="22:30">22:30</option><option value="23:00">23:00</option><option value="23:30">23:30</option></select></label>
             <label class="wide">Travellers<select id="ap-n"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></label>
             <label>Hotel (optional)<input type="text" id="ap-hotel" autocomplete="off"></label>
             <label>Flight number (optional)<input type="text" id="ap-flight" autocomplete="off"></label>
