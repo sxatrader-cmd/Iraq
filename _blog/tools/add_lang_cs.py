@@ -20,6 +20,7 @@ NEW = {
     "ro": ("Română", "Ro", "ro_RO", "ro"),
     "nl": ("Nederlands", "Nl", "nl_NL", "nl"),
     "ka": ("ქართული", "Ka", "ka_GE", "ka"),
+    "ko": ("한국어", "Ko", "ko_KR", "ko"),
 }
 A.META.update(NEW)
 for l in NEW:

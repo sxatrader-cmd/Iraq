@@ -30,7 +30,8 @@ X = {"ar": ("الخدمة متاحة على مدار الساعة 24/7", "موظ
  "hr": ("Dostupno 24/7", "Osoblje za doček koje govori engleski"),
  "ro": ("Disponibil 24/7", "Personal de întâmpinare vorbitor de engleză"),
  "nl": ("24/7 beschikbaar", "Engelstalig ontvangstpersoneel"),
- "ka": ("ხელმისაწვდომია 24/7", "ინგლისურენოვანი შემხვედრი თანამშრომელი")}
+ "ka": ("ხელმისაწვდომია 24/7", "ინგლისურენოვანი შემხვედრი თანამშრომელი"),
+ "ko": ("연중무휴 24시간 이용 가능", "영어를 하는 공항 영접 직원")}
 n = 0
 for p in glob.glob(str(ROOT / "**/index.html"), recursive=True):
     s = open(p, encoding="utf-8").read()

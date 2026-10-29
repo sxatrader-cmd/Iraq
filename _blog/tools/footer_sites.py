@@ -43,6 +43,7 @@ T = {
  "no": ("Flere reiser", "Sri Lanka", "Tyrkia", "Jemen", "De forente arabiske emirater"),
  "nl": ("Meer reizen", "Sri Lanka", "Turkije", "Jemen", "VAE"),
  "ka": ("სხვა ტურები", "შრი-ლანკა", "თურქეთი", "იემენი", "არაბთა გაერთიანებული საამიროები"),
+ "ko": ("다른 여행지", "스리랑카", "튀르키예", "예멘", "아랍에미리트"),
  "nb": ("Flere reiser", "Sri Lanka", "Tyrkia", "Jemen", "De forente arabiske emirater"),
 }
 CSS = ('<style id="sites-css">.sites{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;font-size:14px}'
