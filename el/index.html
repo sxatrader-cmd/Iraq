@@ -462,6 +462,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
 .dt-rm[aria-expanded="true"]::after{transform:rotate(-135deg) translateY(-2px)}
 .dt-cp{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);color:var(--navy);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
 .dt-cp:hover{border-color:var(--gold)}
+.ap-cpw{margin:14px 0 4px}
 .dt-cp.ok{background:#E3F4E8;border-color:#7CC492;color:#1D6B37}
 .dt-all{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;color:var(--navy);font-weight:700;font-size:15px;text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:3px}
 .dt-all[hidden]{display:none}
@@ -1048,7 +1049,7 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
         <div class="ap-ph"><img src="/img/airport-pickup-baghdad.webp" alt="Ξεναγός της Fable Tour περιμένει ταξιδιώτες στην αίθουσα αφίξεων του Διεθνούς Αεροδρομίου της Βαγδάτης" width="1400" height="1050" loading="lazy" decoding="async"></div>
         <div class="ap-in">
           <p>Σας υποδεχόμαστε στην αίθουσα αφίξεων του Διεθνούς Αεροδρομίου της Βαγδάτης και σας μεταφέρουμε με ιδιωτικό αυτοκίνητο κατευθείαν στο ξενοδοχείο σας στη Βαγδάτη.</p>
-          <ul class="ap-inc"><li>Υποδοχή στην αίθουσα αφίξεων</li><li>Ιδιωτικό κλιματιζόμενο αυτοκίνητο</li><li>Βοήθεια με τις αποσκευές</li><li>Μεταφορά στο ξενοδοχείο σας στη Βαγδάτη</li></ul>
+          <ul class="ap-inc"><li>Υποδοχή στην αίθουσα αφίξεων</li><li>Ιδιωτικό κλιματιζόμενο αυτοκίνητο</li><li>Βοήθεια με τις αποσκευές</li><li>Μεταφορά στο ξενοδοχείο σας στη Βαγδάτη</li></ul><p class="ap-cpw"><button type="button" class="dt-cp ap-cp" data-url="/el/#airport-transfer" data-l="Αντιγραφή συνδέσμου" data-ok="Ο σύνδεσμος αντιγράφηκε ✓"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>Αντιγραφή συνδέσμου</span></button></p>
           <div class="ap-form">
             <label>Ημερομηνία άφιξης<input type="date" id="ap-date" required></label>
             <label>Ώρα άφιξης (τοπική)<input type="time" id="ap-time" required></label>
@@ -1455,7 +1456,7 @@ function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0"
 function upd(){var priv=sel.value==="";pf.hidden=!priv;pd.required=priv;var t=prog&&prog.selectedIndex===1?"9":"7";var m=new Date();m.setDate(m.getDate()+LEAD[t]);pd.min=iso(m);if(pd.value&&pd.value<pd.min)pd.value="";}
 sel.addEventListener("change",upd);if(prog)prog.addEventListener("change",function(){setTimeout(upd,0);});
 new MutationObserver(function(){setTimeout(upd,0);}).observe(sel,{childList:true});
-document.addEventListener("click",function(e){if(e.target.closest("[data-book]"))setTimeout(upd,0);});upd();})();</script><script id="ap-js">(function(){
+document.addEventListener("click",function(e){if(e.target.closest("[data-book]"))setTimeout(upd,0);});upd();})();</script><script id="ap-cp-js">(function(){var b=document.querySelector(".ap-cp");if(!b)return;var s=b.querySelector("span");function fb(u){var t=document.createElement("textarea");t.value=u;t.setAttribute("readonly","");t.style.cssText="position:fixed;top:0;opacity:0";document.body.appendChild(t);t.select();t.setSelectionRange(0,u.length);try{document.execCommand("copy");}catch(e){}t.remove();}b.addEventListener("click",function(){var u=location.origin+b.dataset.url;function ok(){b.classList.add("ok");s.textContent=b.dataset.ok;clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove("ok");s.textContent=b.dataset.l;},2400);}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(u).then(ok,function(){fb(u);ok();});}else{fb(u);ok();}});})();</script><script id="ap-js">(function(){
 var C={"wa": "Γεια σας! Θα ήθελα να κλείσω υποδοχή στο Διεθνές Αεροδρόμιο της Βαγδάτης με μεταφορά στο ξενοδοχείο. Άφιξη: {date} στις {time}, {n} ταξιδιώτες.{extra} Τιμή: {price}.", "eh": "Ξενοδοχείο: {h}.", "ef": "Πτήση: {f}.", "show": "Δείτε λεπτομέρειες", "hide": "Απόκρυψη λεπτομερειών"},DAY=75,NIGHT=125,PER=3;
 var b=document.querySelector(".ap-toggle"),body=document.getElementById("ap-body"),lbl=b&&b.querySelector(".ap-lbl");if(!b||!body)return;
 function setOpen(o){body.hidden=!o;b.setAttribute("aria-expanded",o);if(lbl)lbl.textContent=o?C.hide:C.show;}

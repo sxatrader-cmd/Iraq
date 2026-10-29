@@ -457,6 +457,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
 .dt-rm[aria-expanded="true"]::after{transform:rotate(-135deg) translateY(-2px)}
 .dt-cp{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);color:var(--navy);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
 .dt-cp:hover{border-color:var(--gold)}
+.ap-cpw{margin:14px 0 4px}
 .dt-cp.ok{background:#E3F4E8;border-color:#7CC492;color:#1D6B37}
 .dt-all{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;color:var(--navy);font-weight:700;font-size:15px;text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:3px}
 .dt-all[hidden]{display:none}
@@ -1029,7 +1030,7 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
         <div class="ap-ph"><img src="/img/airport-pickup-baghdad.webp" alt="பாக்தாத் சர்வதேச விமான நிலைய வருகை மண்டபத்தில் விருந்தினர்களுக்காகக் காத்திருக்கும் Fable Tour வழிகாட்டி" width="1400" height="1050" loading="lazy" decoding="async"></div>
         <div class="ap-in">
           <p>பாக்தாத் சர்வதேச விமான நிலையத்தின் வருகை மண்டபத்தில் உங்களை வரவேற்று, தனியார் காரில் பாக்தாதில் உள்ள உங்கள் ஹோட்டலுக்கு நேரடியாக அழைத்துச் செல்கிறோம்.</p>
-          <ul class="ap-inc"><li>வருகை மண்டபத்தில் வரவேற்பு</li><li>குளிரூட்டப்பட்ட தனியார் கார்</li><li>சாமான்களுக்கு உதவி</li><li>பாக்தாதில் உங்கள் ஹோட்டலில் இறக்கிவிடுதல்</li></ul>
+          <ul class="ap-inc"><li>வருகை மண்டபத்தில் வரவேற்பு</li><li>குளிரூட்டப்பட்ட தனியார் கார்</li><li>சாமான்களுக்கு உதவி</li><li>பாக்தாதில் உங்கள் ஹோட்டலில் இறக்கிவிடுதல்</li></ul><p class="ap-cpw"><button type="button" class="dt-cp ap-cp" data-url="/ta/#airport-transfer" data-l="இணைப்பை நகலெடு" data-ok="இணைப்பு நகலெடுக்கப்பட்டது ✓"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>இணைப்பை நகலெடு</span></button></p>
           <div class="ap-form">
             <label>வருகை தேதி<input type="date" id="ap-date" required></label>
             <label>வருகை நேரம் (உள்ளூர்)<input type="time" id="ap-time" required></label>
@@ -1436,7 +1437,7 @@ function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0"
 function upd(){var priv=sel.value==="";pf.hidden=!priv;pd.required=priv;var t=prog&&prog.selectedIndex===1?"9":"7";var m=new Date();m.setDate(m.getDate()+LEAD[t]);pd.min=iso(m);if(pd.value&&pd.value<pd.min)pd.value="";}
 sel.addEventListener("change",upd);if(prog)prog.addEventListener("change",function(){setTimeout(upd,0);});
 new MutationObserver(function(){setTimeout(upd,0);}).observe(sel,{childList:true});
-document.addEventListener("click",function(e){if(e.target.closest("[data-book]"))setTimeout(upd,0);});upd();})();</script><script id="ap-js">(function(){
+document.addEventListener("click",function(e){if(e.target.closest("[data-book]"))setTimeout(upd,0);});upd();})();</script><script id="ap-cp-js">(function(){var b=document.querySelector(".ap-cp");if(!b)return;var s=b.querySelector("span");function fb(u){var t=document.createElement("textarea");t.value=u;t.setAttribute("readonly","");t.style.cssText="position:fixed;top:0;opacity:0";document.body.appendChild(t);t.select();t.setSelectionRange(0,u.length);try{document.execCommand("copy");}catch(e){}t.remove();}b.addEventListener("click",function(){var u=location.origin+b.dataset.url;function ok(){b.classList.add("ok");s.textContent=b.dataset.ok;clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove("ok");s.textContent=b.dataset.l;},2400);}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(u).then(ok,function(){fb(u);ok();});}else{fb(u);ok();}});})();</script><script id="ap-js">(function(){
 var C={"wa": "வணக்கம்! பாக்தாத் சர்வதேச விமான நிலைய வரவேற்பு மற்றும் ஹோட்டலுக்கு இடமாற்றம் முன்பதிவு செய்ய விரும்புகிறேன். வருகை: {date}, நேரம் {time}, {n} பயணிகள்.{extra} விலை: {price}.", "eh": "ஹோட்டல்: {h}.", "ef": "விமானம்: {f}.", "show": "விவரங்களைக் காண்க", "hide": "விவரங்களை மறை"},DAY=75,NIGHT=125,PER=3;
 var b=document.querySelector(".ap-toggle"),body=document.getElementById("ap-body"),lbl=b&&b.querySelector(".ap-lbl");if(!b||!body)return;
 function setOpen(o){body.hidden=!o;b.setAttribute("aria-expanded",o);if(lbl)lbl.textContent=o?C.hide:C.show;}
