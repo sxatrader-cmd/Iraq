@@ -162,8 +162,16 @@
    "city": "Babylon",
    "category_en": "Archaeological sites",
    "tour": "7",
-   "date": null,
-   "langs_done": []
+   "date": "2026-10-30",
+   "langs_done": [
+    "en",
+    "ar",
+    "ru",
+    "de",
+    "fr",
+    "it"
+   ],
+   "source_article": "_blog/en/posts/ishtar-gate-babylon-guide.html"
   },
   {
    "topic": "al-mutanabbi-street-and-baghdad-s-book-market",
