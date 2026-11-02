@@ -122,4 +122,4 @@ html:is([lang="hi"],[lang="ta"],[lang="ur"]) .eyebrow,html:is([lang="hi"],[lang=
 html[lang="ur"] .eyebrow,html[lang="ur"] .nav a,html[lang="ur"] .btn,html[lang="ur"] .chips button,html[lang="ur"] .pc .ph span{font-family:"Noto Naskh Arabic",sans-serif}
 
 /* desktop: full-width layout */
-@media (min-width:900px){body{padding:0}.card{max-width:none;border-radius:0;box-shadow:none}.wrap,.in{padding-left:max(44px,calc((100% - 1240px)/2));padding-right:max(44px,calc((100% - 1240px)/2))}}
+@media (min-width:900px){body{padding:0}.card{max-width:none;border-radius:0;box-shadow:none}.wrap,.in{padding-left:max(44px,calc((100% - 1240px)/2));padding-right:max(44px,calc((100% - 1240px)/2))}img.hero-img{height:auto}}
