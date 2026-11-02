@@ -169,7 +169,10 @@
     "ru",
     "de",
     "fr",
-    "it"
+    "it",
+    "fi",
+    "nl",
+    "sv"
    ],
    "source_article": "_blog/en/posts/ishtar-gate-babylon-guide.html"
   },
@@ -179,8 +182,18 @@
    "city": "Baghdad",
    "category_en": "Cities & culture",
    "tour": "7",
-   "date": null,
-   "langs_done": []
+   "date": "2026-11-02",
+   "langs_done": [
+    "da",
+    "fi",
+    "hr",
+    "ka",
+    "nl",
+    "no",
+    "ro",
+    "sk",
+    "sv"
+   ]
   },
   {
    "topic": "the-great-mosque-of-kufa",
