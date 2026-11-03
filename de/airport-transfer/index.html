@@ -1708,6 +1708,28 @@ cards.forEach(function(ph){
   upd();
 })();
 </script>
+<script id="desktop-vids">
+/* desktop: show the main video + the two programme videos side by side above the programmes */
+(function(){
+  var mq=window.matchMedia("(min-width:900px)"),it=document.getElementById("itinerary");
+  var xs=[].slice.call(document.querySelectorAll("#itinerary .xvid:not(.ap-vid)"));
+  if(!it||xs.length<2)return;
+  var vs=document.querySelector("#video .vid"),v=vs&&vs.classList.contains("vert")?vs:null;
+  var host=document.getElementById("video")||it,row=document.createElement("div");row.className="vid-row";
+  var items=(v?[v]:[]).concat(xs),marks=items.map(function(x){var m=document.createComment("v");x.parentNode.insertBefore(m,x);return m;});
+  function f(){
+    if(mq.matches){
+      if(row.parentNode)return;
+      if(v)v.parentNode.insertBefore(row,v);
+      else if(host===it){var h=it.querySelector(".sec-head");h&&h.nextSibling?it.querySelector(".sec-head").parentNode.insertBefore(row,h.nextSibling):it.insertBefore(row,it.firstChild);}
+      else host.appendChild(row);
+      row.className="vid-row n"+items.length;items.forEach(function(x){row.appendChild(x);});
+    }else if(row.parentNode){items.forEach(function(x,i){marks[i].parentNode.insertBefore(x,marks[i]);});row.parentNode.removeChild(row);}
+  }
+  f();mq.addEventListener?mq.addEventListener("change",f):mq.addListener(f);
+})();
+</script>
+<style>.vid-row{display:grid;gap:22px;margin:22px auto 6px;max-width:1080px}.vid-row.n3{grid-template-columns:repeat(3,1fr)}.vid-row.n2{grid-template-columns:repeat(2,1fr);max-width:720px}.vid-row .vid.vert{max-width:none!important;width:100%;margin:0!important}</style>
 <script src="/chatbot.js" defer></script>
 </body>
 </html>
