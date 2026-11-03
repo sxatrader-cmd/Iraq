@@ -43,16 +43,16 @@
   var seg = (location.pathname.split("/")[1] || "").toLowerCase();
   var LG = LANGS.indexOf(seg) >= 0 ? seg : "ar";
   var UI = {
-    ar: ["آراء المسافرين", "تقييمات موثّقة على GetYourGuide", "حجز موثّق على GetYourGuide", "عرض الترجمة", "النص الأصلي", "كل التقييمات على GetYourGuide", "السابق", "التالي"],
-    en: ["Traveller reviews", "Verified reviews on GetYourGuide", "Verified booking on GetYourGuide", "Show translation", "Show original", "All reviews on GetYourGuide", "Previous", "Next"],
-    ru: ["Отзывы путешественников", "Проверенные отзывы на GetYourGuide", "Подтверждённое бронирование на GetYourGuide", "Показать перевод", "Оригинал", "Все отзывы на GetYourGuide", "Назад", "Вперёд"],
-    de: ["Bewertungen von Reisenden", "Verifizierte Bewertungen auf GetYourGuide", "Verifizierte Buchung auf GetYourGuide", "Übersetzung anzeigen", "Original anzeigen", "Alle Bewertungen auf GetYourGuide", "Zurück", "Weiter"],
-    fr: ["Avis des voyageurs", "Avis vérifiés sur GetYourGuide", "Réservation vérifiée sur GetYourGuide", "Voir la traduction", "Voir l'original", "Tous les avis sur GetYourGuide", "Précédent", "Suivant"],
-    es: ["Opiniones de viajeros", "Opiniones verificadas en GetYourGuide", "Reserva verificada en GetYourGuide", "Ver traducción", "Ver original", "Todas las opiniones en GetYourGuide", "Anterior", "Siguiente"],
-    it: ["Recensioni dei viaggiatori", "Recensioni verificate su GetYourGuide", "Prenotazione verificata su GetYourGuide", "Mostra traduzione", "Mostra originale", "Tutte le recensioni su GetYourGuide", "Precedente", "Successivo"],
-    tr: ["Gezgin yorumları", "GetYourGuide'da doğrulanmış yorumlar", "GetYourGuide'da doğrulanmış rezervasyon", "Çeviriyi göster", "Orijinali göster", "GetYourGuide'daki tüm yorumlar", "Önceki", "Sonraki"],
-    fa: ["نظرات مسافران", "نظرات تأییدشده در GetYourGuide", "رزرو تأییدشده در GetYourGuide", "نمایش ترجمه", "متن اصلی", "همه نظرات در GetYourGuide", "قبلی", "بعدی"],
-    ur: ["مسافروں کے تبصرے", "GetYourGuide پر تصدیق شدہ تبصرے", "GetYourGuide پر تصدیق شدہ بکنگ", "ترجمہ دیکھیں", "اصل متن", "GetYourGuide پر تمام تبصرے", "پچھلا", "اگلا"]
+    ar: ["آراء المسافرين", "تقييمات موثّقة على GetYourGuide", "حجز موثّق على GetYourGuide", "عرض الترجمة", "النص الأصلي", "كل التقييمات على GetYourGuide", "السابق", "التالي", "مرّر للأسفل لقراءة المزيد"],
+    en: ["Traveller reviews", "Verified reviews on GetYourGuide", "Verified booking on GetYourGuide", "Show translation", "Show original", "All reviews on GetYourGuide", "Previous", "Next", "Scroll to read more"],
+    ru: ["Отзывы путешественников", "Проверенные отзывы на GetYourGuide", "Подтверждённое бронирование на GetYourGuide", "Показать перевод", "Оригинал", "Все отзывы на GetYourGuide", "Назад", "Вперёд", "Прокрутите, чтобы читать дальше"],
+    de: ["Bewertungen von Reisenden", "Verifizierte Bewertungen auf GetYourGuide", "Verifizierte Buchung auf GetYourGuide", "Übersetzung anzeigen", "Original anzeigen", "Alle Bewertungen auf GetYourGuide", "Zurück", "Weiter", "Scrollen zum Weiterlesen"],
+    fr: ["Avis des voyageurs", "Avis vérifiés sur GetYourGuide", "Réservation vérifiée sur GetYourGuide", "Voir la traduction", "Voir l'original", "Tous les avis sur GetYourGuide", "Précédent", "Suivant", "Faites défiler pour lire la suite"],
+    es: ["Opiniones de viajeros", "Opiniones verificadas en GetYourGuide", "Reserva verificada en GetYourGuide", "Ver traducción", "Ver original", "Todas las opiniones en GetYourGuide", "Anterior", "Siguiente", "Desliza para leer más"],
+    it: ["Recensioni dei viaggiatori", "Recensioni verificate su GetYourGuide", "Prenotazione verificata su GetYourGuide", "Mostra traduzione", "Mostra originale", "Tutte le recensioni su GetYourGuide", "Precedente", "Successivo", "Scorri per leggere tutto"],
+    tr: ["Gezgin yorumları", "GetYourGuide'da doğrulanmış yorumlar", "GetYourGuide'da doğrulanmış rezervasyon", "Çeviriyi göster", "Orijinali göster", "GetYourGuide'daki tüm yorumlar", "Önceki", "Sonraki", "Devamı için kaydırın"],
+    fa: ["نظرات مسافران", "نظرات تأییدشده در GetYourGuide", "رزرو تأییدشده در GetYourGuide", "نمایش ترجمه", "متن اصلی", "همه نظرات در GetYourGuide", "قبلی", "بعدی", "برای خواندن ادامه اسکرول کنید"],
+    ur: ["مسافروں کے تبصرے", "GetYourGuide پر تصدیق شدہ تبصرے", "GetYourGuide پر تصدیق شدہ بکنگ", "ترجمہ دیکھیں", "اصل متن", "GetYourGuide پر تمام تبصرے", "پچھلا", "اگلا", "مزید پڑھنے کے لیے اسکرول کریں"]
   };
   var U = UI[LG] || UI.en;
   var RTL = document.documentElement.dir === "rtl";
@@ -77,6 +77,10 @@
     ".gr-who b{display:block;color:var(--navy,#1B2A47);font-size:15px;line-height:1.3}.gr-who small{color:var(--muted,#5b6475);font-size:13px}" +
     ".gr-tx{margin:0;font-size:15px;line-height:1.65;color:var(--ink,#1F2733);max-height:11.6em;overflow:auto;padding-inline-end:4px;unicode-bidi:plaintext;text-align:start}" +
     ".gr-tx::before{content:'\\201C';font-family:Georgia,serif;color:var(--gold,#B8955A);font-size:30px;line-height:0;vertical-align:-10px;margin-inline-end:3px}" +
+    ".gr-tx{scrollbar-width:thin;scrollbar-color:var(--gold,#B8955A) #EEE7DA;padding-inline-end:10px}" +
+    ".gr-tx::-webkit-scrollbar{width:6px;-webkit-appearance:none}.gr-tx::-webkit-scrollbar-track{background:#EEE7DA;border-radius:3px}.gr-tx::-webkit-scrollbar-thumb{background:var(--gold,#B8955A);border-radius:3px}" +
+    ".gr-txw{position:relative}.gr-txw.more::after{content:\"\";position:absolute;left:0;right:12px;bottom:0;height:46px;background:linear-gradient(rgba(255,255,255,0),#fff);pointer-events:none}" +
+    ".gr-more{display:none;align-self:center;font-size:12.5px;font-weight:700;color:var(--gold,#B8955A);gap:4px;align-items:center;margin-top:-4px}.gr-more.on{display:inline-flex;animation:grb 1.6s ease-in-out infinite}@keyframes grb{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}" +
     ".gr-tr{align-self:flex-start;background:none;border:0;padding:0;color:var(--navy-2,#2A3D63);font:inherit;font-size:13px;font-weight:700;cursor:pointer;text-decoration:underline}" +
     ".gr-ft{margin-top:auto;padding-top:10px;border-top:1px solid var(--line,rgba(27,42,71,.1));display:flex;flex-direction:column;gap:3px}" +
     ".gr-tour{font-size:13px;font-weight:700;color:var(--navy,#1B2A47);text-decoration:underline;text-decoration-color:var(--gold,#B8955A);text-underline-offset:3px}.gr-tour:hover{color:var(--gold,#B8955A)}" +
@@ -115,10 +119,16 @@
       var wd = el("div"); wd.appendChild(el("b", null, r.n)); wd.appendChild(el("small", null, r.c));
       who.appendChild(av); who.appendChild(wd); c.appendChild(who);
       var p = el("p", "gr-tx", r.x); if (r.lang) p.lang = r.lang; else p.lang = "en";
-      c.appendChild(p);
+      var w = el("div", "gr-txw"); w.appendChild(p); c.appendChild(w);
+      var mh = el("span", "gr-more", "↓ " + U[8]); c.appendChild(mh);
+      (function (p, w, mh) {
+        function chk() { var over = p.scrollHeight - p.clientHeight > 4, end = p.scrollTop + p.clientHeight >= p.scrollHeight - 4;
+          w.classList.toggle("more", over && !end); mh.classList.toggle("on", over && p.scrollTop < 8); }
+        p.addEventListener("scroll", chk, { passive: true }); setTimeout(chk, 50); window.addEventListener("resize", chk); p._chk = chk;
+      })(p, w, mh);
       if (r.en && LG !== r.lang) {
         var b = el("button", "gr-tr", U[3]); b.type = "button"; var shown = false;
-        b.addEventListener("click", function () { shown = !shown; p.textContent = shown ? r.en : r.x; p.lang = shown ? "en" : r.lang; b.textContent = shown ? U[4] : U[3]; });
+        b.addEventListener("click", function () { shown = !shown; p.textContent = shown ? r.en : r.x; p.lang = shown ? "en" : r.lang; b.textContent = shown ? U[4] : U[3]; p.scrollTop = 0; p._chk && p._chk(); });
         c.appendChild(b);
       }
       var ft = el("div", "gr-ft"), tl = el("a", "gr-tour", r.t + " ↗"); tl.href = r.u || GYG; tl.target = "_blank"; tl.rel = "noopener"; ft.appendChild(tl);
@@ -127,7 +137,6 @@
     });
     sec.appendChild(track);
     var dots = el("div", "gr-dots"); sec.appendChild(dots);
-    var all = el("a", "gr-all", U[5] + (RTL ? " ←" : " →")); all.href = GYG; all.target = "_blank"; all.rel = "noopener"; sec.appendChild(all);
     anchor.parentNode.insertBefore(sec, anchor);
 
     /* slider logic */
