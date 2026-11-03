@@ -51,6 +51,43 @@
   };
   var T = {}; (function () { var a = S[LG] || S.en; for (var i = 0; i < K.length; i++) T[K[i]] = a[i]; })();
 
+  /* answer to flight questions and any extra service the visitor asks for (Saif: always "yes, on request") */
+  var SV = {
+    ar:"نعم، هذا ممكن عند الطلب. راسلنا على واتساب بما تحتاجه وسيرتّبه لك فريق Fable Tour.",
+    en:"Yes, that's possible on request. Message us on WhatsApp with what you need and the Fable Tour team will arrange it for you.",
+    ru:"Да, это возможно по запросу. Напишите нам в WhatsApp, что вам нужно, и команда Fable Tour всё организует.",
+    de:"Ja, das ist auf Anfrage möglich. Schreiben Sie uns auf WhatsApp, was Sie brauchen, und das Fable-Tour-Team organisiert es für Sie.",
+    fr:"Oui, c'est possible sur demande. Écrivez-nous sur WhatsApp ce dont vous avez besoin et l'équipe Fable Tour s'en occupe.",
+    es:"Sí, es posible bajo petición. Escríbanos por WhatsApp lo que necesita y el equipo de Fable Tour lo organizará.",
+    it:"Sì, è possibile su richiesta. Scriveteci su WhatsApp di cosa avete bisogno e il team Fable Tour se ne occuperà.",
+    tr:"Evet, talep üzerine mümkün. İhtiyacınızı WhatsApp'tan yazın, Fable Tour ekibi sizin için ayarlasın.",
+    el:"Ναι, είναι δυνατό κατόπιν αιτήματος. Γράψτε μας στο WhatsApp τι χρειάζεστε και η ομάδα της Fable Tour θα το κανονίσει.",
+    cs:"Ano, na vyžádání je to možné. Napište nám na WhatsApp, co potřebujete, a tým Fable Tour to zařídí.",
+    pl:"Tak, jest to możliwe na życzenie. Napisz nam na WhatsAppie, czego potrzebujesz, a zespół Fable Tour wszystko zorganizuje.",
+    zh:"可以，按需安排。请通过 WhatsApp 告诉我们您的需求，Fable Tour 团队会为您安排。",
+    "zh-tw":"可以，依需求安排。請透過 WhatsApp 告訴我們您的需求，Fable Tour 團隊會為您安排。",
+    ja:"はい、ご希望に応じて手配可能です。WhatsAppでご要望をお送りいただければ、Fable Tourチームが手配いたします。",
+    ko:"네, 요청하시면 가능합니다. 필요하신 내용을 WhatsApp으로 보내 주시면 Fable Tour 팀이 준비해 드립니다.",
+    fa:"بله، در صورت درخواست امکان‌پذیر است. نیاز خود را در واتساپ برای ما بفرستید تا تیم Fable Tour آن را ترتیب دهد.",
+    ms:"Ya, boleh atas permintaan. Hantarkan keperluan anda melalui WhatsApp dan pasukan Fable Tour akan menguruskannya.",
+    id:"Ya, bisa sesuai permintaan. Kirimkan kebutuhan Anda lewat WhatsApp dan tim Fable Tour akan mengaturnya untuk Anda.",
+    th:"ได้ครับ จัดให้ได้ตามคำขอ ส่งรายละเอียดที่ต้องการมาทาง WhatsApp แล้วทีม Fable Tour จะจัดการให้",
+    hi:"हाँ, अनुरोध पर यह संभव है। अपनी ज़रूरत WhatsApp पर भेजें, Fable Tour टीम आपके लिए इसकी व्यवस्था करेगी।",
+    ur:"جی ہاں، درخواست پر یہ ممکن ہے۔ اپنی ضرورت واٹس ایپ پر بھیجیں، Fable Tour کی ٹیم آپ کے لیے انتظام کر دے گی۔",
+    ta:"ஆம், கோரிக்கையின் பேரில் இது சாத்தியம். உங்களுக்குத் தேவையானதை WhatsApp-இல் அனுப்புங்கள், Fable Tour குழு ஏற்பாடு செய்யும்.",
+    fi:"Kyllä, se onnistuu pyynnöstä. Kerro tarpeesi meille WhatsAppissa, niin Fable Tourin tiimi järjestää sen.",
+    sv:"Ja, det går att ordna på begäran. Skriv till oss på WhatsApp vad du behöver så ordnar Fable Tour-teamet det.",
+    da:"Ja, det kan lade sig gøre på forespørgsel. Skriv til os på WhatsApp, hvad du har brug for, så arrangerer Fable Tour-teamet det.",
+    no:"Ja, det er mulig på forespørsel. Skriv til oss på WhatsApp hva du trenger, så ordner Fable Tour-teamet det.",
+    sk:"Áno, na požiadanie je to možné. Napíšte nám na WhatsApp, čo potrebujete, a tím Fable Tour to zariadi.",
+    hr:"Da, to je moguće na zahtjev. Napišite nam na WhatsApp što vam treba i tim Fable Toura će to organizirati.",
+    ro:"Da, este posibil la cerere. Scrieți-ne pe WhatsApp de ce aveți nevoie și echipa Fable Tour se va ocupa.",
+    nl:"Ja, dat is op aanvraag mogelijk. Laat ons via WhatsApp weten wat je nodig hebt en het Fable Tour-team regelt het.",
+    ka:"დიახ, მოთხოვნისამებრ შესაძლებელია. მოგვწერეთ WhatsApp-ზე რა გჭირდებათ და Fable Tour-ის გუნდი მოაგვარებს.",
+    pt:"Sim, é possível mediante pedido. Escreva-nos pelo WhatsApp o que precisa e a equipa Fable Tour trata de tudo."
+  };
+  T.svc = SV[LG] || SV.en;
+
   /* ---------- text matching ---------- */
   function norm(s) {
     s = String(s || "").toLowerCase();
@@ -83,6 +120,9 @@
     lang:"language,speak,guide,english,russian,لغه,لغات,مرشد,دليل,يتكلم,язык,гид,говор,sprach,sprich,reiseleiter,langue,parle,idioma,habla,guia,lingu,parla,dil,rehber,konus,jezyk,przewodnik,jazyk,pruvodc,sprievodc,vodic,limb,ghid,taal,gids,kieli,opas,sprak,sprog,γλωσσ,ξεναγ,语言,導遊,导游,語言,言語,ガイド,언어,가이드,bahasa,pemandu,ภาษา,ไกด์,மொழி,வழிகாட்ட,भाषा,गाइड,زبان,گائیڈ,راهنما,ენა,გიდ",
     group:"private,group,join,departure,خاص,جماعي,مجموعه,انطلاق,индивидуал,групп,privat,gruppe,abfahrt,prive,groupe,depart,privad,grupo,salida,gruppo,partenz,ozel,grup,kalkis,prywat,grupow,soukrom,skupin,sukrom,groep,vertrek,yksityi,ryhma,grupp,ιδιωτ,ομαδ,私人,团队,團體,プライベート,グループ,개인,단체,pribadi,rombongan,persendirian,kumpulan,ส่วนตัว,กลุ่ม,தனிப்பட்ட,குழு,निजी,समूह,پرائیویٹ,گروپ,خصوصی,گروه,კერძო,ჯგუფ",
     incl:"includ,flight,flights,meals,طيران,تذاكر,يشمل,شامل,وجبات,включ,перел,авиабил,inklusiv,flug,inclu,vol,vuelo,volo,compres,dahil,ucak,wliczon,zahrn,ukljuc,inbegrepen,vlucht,sisalt,lento,ingar,flyg,inkluder,περιλαμβ,πτησ,包含,包括,机票,機票,含まれ,航空券,포함,항공,termasuk,penerbangan,รวม,เที่ยวบิน,அடங்கும,விமானம்,शामिल,उड़ान,پرواز,ჩათვლ,ფრენ",
+    fly:"flight,flights,airline,air ticket,plane ticket,airfare,طيران,طياره,الطياره,تذكره طيران,تذاكر طيران,حجز طيران,رحله جويه,خطوط جويه,перелет,перелёт,авиабилет,билет на самолет,рейс,авиакомпан,flug,fluge,flugticket,vol,vols,billet d avion,billets d avion,vuelo,vuelos,billete de avion,pasaje,volo,voli,biglietto aereo,ucak,ucus,ucak bileti,przelot,bilet lotniczy,loty,letenk,letenka,letadl,let letadlem,zrakoplov,avionsk,karta za avion,zbor,zboruri,bilet de avion,vlucht,vluchten,vliegticket,lento,lennot,lentolippu,flyg,flygbiljett,flybillet,flyreise,flyrejse,voo,voos,passagem aerea,bilhete de aviao,πτηση,πτησεις,αεροπορικ,机票,航班,機票,飛機,航空券,フライト,飛行機,항공권,항공편,비행기,tiket pesawat,penerbangan,pesawat,kapal terbang,tiket penerbangan,ตั๋วเครื่องบิน,เที่ยวบิน,เครื่องบิน,விமானம்,விமான டிக்கெட்,உடான்,उड़ान,फ्लाइट,हवाई टिकट,ہوائی ٹکٹ,فلائٹ,پرواز,بلیط هواپیما,بلیط,ფრენ,ავიაბილეთ,თვითმფრინავ",
+    inc2:"includ,inclu,يشمل,شامل,مشمول,ضمن السعر,включ,inklusiv,inbegriffen,enthalten,compres,inclus,dahil,wliczon,zahrn,ukljuc,inbegrepen,sisalt,ingar,inkluder,περιλαμβ,包含,包括,含まれ,포함,termasuk,รวม,அடங்கும,शामिल,شامل,ჩათვლ",
+    svc:"do you offer,do you provide,do you arrange,can you arrange,can you book,can you get,can you provide,could you arrange,could you book,arrange,rent a car,car rental,hotel booking,book a hotel,sim card,insurance,translator,photographer,خدمه,خدمات,توفرون,توفير,توفر,تقدرون,تكدرون,ممكن تحجز,ممكن تحجزون,ممكن توفر,هل بالامكان,تأمين,تامين,شريحه,سياره خاصه,ايجار سياره,مترجم,مصور,حجز فندق,услуг,можете ли,организ,забронир,аренд,страхов,сим карт,переводчик,dienstleist,konnen sie,konnt ihr,organisier,mietwagen,versicher,pouvez vous,organiser,location de voiture,assurance,servicio,puede organizar,alquiler,seguro,servizi,noleggio,assicurazion,hizmet,ayarlay,kiralik,sigorta,uslug,czy mozecie,wynajem,ubezpiecz,sluzb,pronajem,pojisten,najam,osiguranj,servici,puteti,inchiri,asigur,dienst,kunnen jullie,huurauto,verzeker,palvelu,voitteko,vuokra,vakuutu,tjanst,hyrbil,forsakring,tjeneste,leiebil,lejebil,forsikring,servico,aluguer,υπηρεσ,μπορειτε,ενοικιασ,ασφαλισ,服务,服務,租车,保险,保險,サービス,手配,レンタカー,保険,서비스,렌터카,보험,bisa bantu,boleh bantu,boleh atur,bisa atur,sewa kereta,sewa mobil,asuransi,insurans,บริการ,จัดให้,เช่ารถ,ประกัน,சேவை,ஏற்பாடு,सेवा,व्यवस्था,बीमा,سروس,انتظام,بیمہ,خدمات,ترتیب,اجاره,بیمه,მომსახურ,შეგიძლიათ,დაზღვევ",
     book:"book,booking,reserv,حجز,احجز,брон,buch,prenot,rezerv,boek,varaa,varaus,bestil,boka,κρατ,预订,預訂,予約,예약,tempah,pesan,จอง,முன்பதிவு,बुक,بک,رزرو,დაჯავშ",
     prog:"program,programs,itinerar,difference,7 day,9 day,برنامج,برامج,البرنامجين,الفرق,مسار,программ,маршрут,отлича,unterschied,rundreise,circuit,programa,itinerario,diferencia,programm,differenz,fark,rozni,rozdil,razlik,diferent,verschil,skillnad,forskel,διαφορ,行程,区别,區別,違い,차이,perbezaan,perbedaan,ความต่าง,வித்தியாச,अंतर,فرق,განსხვ",
     dt:"day trip,day trips,one day,same day,excursion,يوم واحد,اليوم الواحد,يوميه,однодн,экскурси,tagesaus,ausflug,journee,excursi,escursion,giornat,gunubirlik,jednodnio,jednoden,jednodnov,jednodnevn,izlet,o zi,dagtocht,dagstur,dagsutfl,dagstur,paivaret,ημερησι,εκδρομ,一日游,一日遊,日帰り,당일,sehari,satu hari,วันเดียว,หนึ่งวัน,ஒரு நாள்,एक दिन,ایک دن,یکروزه,یک روزه,ერთდღ,ექსკურს",
@@ -438,7 +478,7 @@
 
   function answer(q) {
     var it = intents(q), n = norm(q), gq = grams(n), shown = 0;
-    var keys = Object.keys(it).filter(function (k) { return k !== "hi" && k !== "thx" && k !== "who" && k !== "spk"; });
+    var keys = Object.keys(it).filter(function (k) { return k !== "hi" && k !== "thx" && k !== "who" && k !== "spk" && k !== "inc2"; });
     if (!keys.length && it.thx) { say(T.thx); return after(""); }
     if (!keys.length && it.hi && n.split(" ").length <= 4) { say(T.hi); return menu(); }
     var cs = citiesIn(q);
@@ -446,6 +486,11 @@
     if (it.time && !it.dist) { timeAnswer(); return after(q); }
     if (KB.guide && (KB.guide.w.some(function (w) { return w && has(n, w); }) || (it.who && !it.spk && !it.price && (it.lang || /guide|مرشد|دليل|гид|reiseleit|guid|rehber|przewodn|pruvod|vodi|ghid|gids|opas|ξεναγ|导游|導遊|ガイド|가이드|pemandu|ไกด์|गाइड|راهنما|گائیڈ|გიდ/.test(n))))) { topicGuide(); return after(q); }
     if (it.ap) { topicAp(); return; }
+    /* flights: always "yes, on request" (after the FAQ answer when asking if they are included) */
+    if (it.fly) {
+      if (it.inc2) { var fi = KB.faq.filter(function (f) { return f.tags.fly || f.tags.incl; })[0]; if (fi) say(fi.a); }
+      say(T.svc); return after(q);
+    }
     /* places: day trips / programme stops named in the question */
     var trips = KB.dt.map(function (d) { var c = 0; d.w.forEach(function (w) { if (has(n, w)) c++; }); return { d: d, c: c }; })
       .filter(function (x) { return x.c; }).sort(function (a, b) { return b.c - a.c; }).map(function (x) { return x.d; });
@@ -461,10 +506,13 @@
       if ((ov > 0 || tq >= 0.5) && sc > bs) { bs = sc; best = f; }
     });
     if (bs < 0.9) best = null;
+    /* any other service the visitor asks for: "yes, on request" */
+    if (it.svc && !it.dt && !it.visa && !it.cancel && !it.pay && !it.safe && !it.price && !it.prog && !it.group && !it.lang && !trips.length && !(best && bs >= 2)) { say(T.svc); return after(q); }
     var priceOnly = best && Object.keys(best.tags).length === 1 && best.tags.price;
     if (best && !(trips.length && (priceOnly || it.dt))) { say(best.a); shown++; }
     if (trips.length && (it.dt || it.price || !best || trips.length <= 3)) { trips.slice(0, 4).forEach(dtCard); shown++; }
     else if (progs.length && !best) { progs.forEach(function (p) { card({ small: p.eb, title: p.h, text: p.r, price: p.se, href: HOME + "#" + p.id }); }); shown++; }
+    if (!shown && it.svc) { say(T.svc); return after(q); }
     if (!shown && it.book) { topicBk(); return; }
     if (!shown && it.prog) { topicProg(); return; }
     if (!shown && it.wa) { chips([{ t: T.wa, href: waUrl(q), wa: 1 }]); return; }
