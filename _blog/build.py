@@ -163,6 +163,7 @@ def tail(l):
     return footer(l) + f"""
 </div>
 <a class="wa-fab" href="{WA}?text={esc(T[l]['wa_hello'])}" target="_blank" rel="noopener" aria-label="WhatsApp">{WA_ICON}</a>
+<script src="/chatbot.js" defer></script>
 </body>
 </html>
 """
