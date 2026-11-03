@@ -71,6 +71,7 @@
 
   /* intent keywords in all site languages (normalised on load) */
   var IN = {
+    dist:"how far,distance,km,kilomet,miles,how long does it take,driving time,كم تبعد,تبعد,المسافه,مسافه,كيلو,كم ساعه,كم تستغرق,расстоян,далеко,километр,сколько ехать,entfernung,wie weit,distance,a quelle distance,distancia,a que distancia,distanza,quanto dista,mesafe,ne kadar uzak,odleglosc,jak daleko,vzdalenost,udaljenost,distanta,afstand,hoe ver,etaisyys,avstand,hur langt,hvor langt,αποστασ,距离,多远,距離,多遠,どのくらい,距離,거리,얼마나 멀,jarak,berapa jauh,ระยะทาง,ไกล,தூரம்,दूरी,कितनी दूर,فاصله,چقدر دور,فاصلہ,کتنا دور,მანძილ",
     price:"price,prices,cost,how much,usd,dollar,euro,$,€,سعر,اسعار,الاسعار,كلفه,تكلفه,بكم,كم السعر,قيمه,цен,стоим,сколько,preis,kost,prix,cout,combien,tarif,precio,cuesta,cuanto,prezz,costo,quanto,fiyat,ucret,ne kadar,cena,ceny,koszt,kosztuj,stoji,cijen,koliko,pret,prijs,hinta,maksaa,pris,koster,kostar,preco,τιμ,κοστ,价格,价钱,多少钱,费用,價格,費用,料金,値段,いくら,가격,얼마,비용,harga,berapa,ราคา,เท่าไ,விலை,कीमत,कितन,قیمت,کتنا,هزینه,چند,ფას,ღირ",
     visa:"visa,viza,visum,vize,виз,فيز,تاشير,ویزا,ويزا,ویزہ,ვიზ,签证,簽證,ビザ,비자,วีซ,விசா,वीज़ा,वीजा,βιζα,θεωρησ",
     cancel:"cancel,annul,отмен,الغاء,الغي,storn,zrus,odwol,anul,iptal,cancela,annull,otkaz,peruu,avbok,afbestil,ακυρ,取消,キャンセル,취소,batal,ยกเลิก,ரத்து,रद्द,منسوخ,لغو,გაუქმ,refund,استرجاع,возврат",
@@ -137,14 +138,25 @@
       d.h.split(/[\s,&·()]+/).forEach(function (w) { if (w.length >= 2 && w.length < 4 && w.charAt(0) !== w.charAt(0).toLowerCase() && STOP.indexOf(norm(w)) < 0) u[norm(w)] = 1; });
       d.w = Object.keys(u); d.w.forEach(function (w) { cnt[w] = (cnt[w] || 0) + 1; });
     });
-    kb.dt.forEach(function (d) { d.w = d.w.filter(function (w) { return cnt[w] <= 2; }); });
+    var ct = {}; kb.dt.forEach(function (d) { d.tw = {}; words(d.h).forEach(function (w) { if (!d.tw[w]) { d.tw[w] = 1; ct[w] = (ct[w] || 0) + 1; } }); });
+    kb.dt.forEach(function (d) { var hn = norm(d.h); d.w = d.w.filter(function (w) { return cnt[w] <= 2 && (!ct[w] || ct[w] <= 1 || hn === w); }); });
     kb.prog.forEach(function (p) { p.w = p.r.split(/[·,•|]/).map(function (x) { return norm(x); }).filter(function (x) { return x.length >= 2; }); });
     return kb;
   }
   var STOP = ["the","and","die","der","das","den","dem","des","les","los","las","el","la","le","il","lo","gli","de","del","du","di","da","do","och","og","en","et","und","van","het","een","von","ve","al","ile","na","ze","za","od","do","i","a","o","e","y","u","z","w","and","of","to","ja","och"];
+  function strip(t) { return t.replace(/^(\u0648?[\u0628\u0641\u0643]?\u0627\u0644|\u0644\u0644)/, ""); }
   function has(n, w) {
-    if (DENSE.test(w) || w.length >= 4 || w.indexOf(" ") >= 0) return n.indexOf(w) >= 0;
-    return (" " + n + " ").indexOf(" " + w + " ") >= 0;
+    if (DENSE.test(w) || w.indexOf(" ") >= 0) return n.indexOf(w) >= 0;
+    if (w.length >= 4 && n.indexOf(w) >= 0) return true;
+    if ((" " + n + " ").indexOf(" " + w + " ") >= 0) return true;
+    var a = strip(w); if (a.length < 4) return false;
+    var tk = n.split(" ");
+    for (var i = 0; i < tk.length; i++) {
+      var b = strip(tk[i]); if (b.length < 4) continue;
+      var m = Math.min(a.length, b.length), p = 0; while (p < m && a.charAt(p) === b.charAt(p)) p++;
+      if (p >= Math.max(4, m - 1)) return true;
+    }
+    return false;
   }
   function words(s) { return norm(s).split(" ").filter(function (w) { return DENSE.test(w) ? w.length >= 2 : w.length >= 4; }); }
   function loadKB(cb) {
@@ -281,6 +293,7 @@
     var keys = Object.keys(it).filter(function (k) { return k !== "hi" && k !== "thx"; });
     if (!keys.length && it.thx) { say(T.thx); return after(""); }
     if (!keys.length && it.hi && n.split(" ").length <= 4) { say(T.hi); return menu(); }
+    if (it.dist && !it.ap) return nf(q);
     if (it.ap) { topicAp(); return; }
     /* places: day trips / programme stops named in the question */
     var trips = KB.dt.map(function (d) { var c = 0; d.w.forEach(function (w) { if (has(n, w)) c++; }); return { d: d, c: c }; })
