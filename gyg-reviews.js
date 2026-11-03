@@ -38,6 +38,7 @@
       x: "The museum has a broad and rich collection of archaeological treasures and it’s definitely a must. I would have loved to receive more history information about the museums but there were no audio guides available. The 1.5h tour is recommended for those interested in knowing more about Iraqi culture and history." }
   ];
 
+  R.sort(function (a, b) { return a.d < b.d ? -1 : a.d > b.d ? 1 : 0; }); /* oldest first */
   var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh"];
   var seg = (location.pathname.split("/")[1] || "").toLowerCase();
   var LG = LANGS.indexOf(seg) >= 0 ? seg : "ar";
