@@ -201,8 +201,15 @@
    "city": "Kufa",
    "category_en": "Holy shrines",
    "tour": "7",
-   "date": null,
-   "langs_done": []
+   "date": "2026-11-03",
+   "langs_done": [
+    "en",
+    "ar",
+    "ru",
+    "de",
+    "fr",
+    "it"
+   ]
   },
   {
    "topic": "the-great-ziggurat-of-ur",
