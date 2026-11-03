@@ -71,7 +71,8 @@
 
   /* intent keywords in all site languages (normalised on load) */
   var IN = {
-    dist:"how far,distance,km,kilomet,miles,how long does it take,driving time,كم تبعد,تبعد,المسافه,مسافه,كيلو,كم ساعه,كم تستغرق,расстоян,далеко,километр,сколько ехать,entfernung,wie weit,distance,a quelle distance,distancia,a que distancia,distanza,quanto dista,mesafe,ne kadar uzak,odleglosc,jak daleko,vzdalenost,udaljenost,distanta,afstand,hoe ver,etaisyys,avstand,hur langt,hvor langt,αποστασ,距离,多远,距離,多遠,どのくらい,距離,거리,얼마나 멀,jarak,berapa jauh,ระยะทาง,ไกล,தூரம்,दूरी,कितनी दूर,فاصله,چقدر دور,فاصلہ,کتنا دور,მანძილ",
+    time:"what time,time now,local time,time in baghdad,time zone,timezone,كم الساعه,الساعه كم,الساعه الان,الوقت,التوقيت,توقيت,сколько времени,который час,время,часовой пояс,uhrzeit,wie spat,zeitzone,quelle heure,heure,fuseau,que hora,hora,zona horaria,che ore,ora locale,fuso orario,saat kac,saat dilimi,yerel saat,ktora godzina,godzina,strefa czasowa,kolik je hodin,casove pasmo,koliko je sati,vrijeme,ce ora,fus orar,hoe laat,tijdzone,paljonko kello,kello,aikavyohyke,vad ar klockan,klockan,tidszon,hvad er klokken,klokken,tidszone,hva er klokka,klokka,ωρα,ζωνη ωρας,几点,时间,時間,幾點,何時,時差,몇 시,시간,jam berapa,zona waktu,waktu,กี่โมง,เวลา,நேரம்,समय,कितने बजे,وقت,ساعت چند,کتنے بجے,საათი,დრო",
+    dist:"how far,distance,km,км,kilomet,miles,how long does it take,driving time,كم تبعد,تبعد,المسافه,مسافه,كيلو,كم ساعه,كم تستغرق,расстоян,далеко,километр,сколько ехать,entfernung,wie weit,distance,a quelle distance,distancia,a que distancia,distanza,quanto dista,mesafe,ne kadar uzak,odleglosc,jak daleko,vzdalenost,udaljenost,distanta,afstand,hoe ver,etaisyys,avstand,hur langt,hvor langt,αποστασ,距离,多远,距離,多遠,どのくらい,距離,거리,얼마나 멀,jarak,berapa jauh,ระยะทาง,ไกล,தூரம்,दूरी,कितनी दूर,فاصله,چقدر دور,فاصلہ,کتنا دور,მანძილ",
     price:"price,prices,cost,how much,usd,dollar,euro,$,€,سعر,اسعار,الاسعار,كلفه,تكلفه,بكم,كم السعر,قيمه,цен,стоим,сколько,preis,kost,prix,cout,combien,tarif,precio,cuesta,cuanto,prezz,costo,quanto,fiyat,ucret,ne kadar,cena,ceny,koszt,kosztuj,stoji,cijen,koliko,pret,prijs,hinta,maksaa,pris,koster,kostar,preco,τιμ,κοστ,价格,价钱,多少钱,费用,價格,費用,料金,値段,いくら,가격,얼마,비용,harga,berapa,ราคา,เท่าไ,விலை,कीमत,कितन,قیمت,کتنا,هزینه,چند,ფას,ღირ",
     visa:"visa,viza,visum,vize,виз,فيز,تاشير,ویزا,ويزا,ویزہ,ვიზ,签证,簽證,ビザ,비자,วีซ,விசா,वीज़ा,वीजा,βιζα,θεωρησ",
     cancel:"cancel,annul,отмен,الغاء,الغي,storn,zrus,odwol,anul,iptal,cancela,annull,otkaz,peruu,avbok,afbestil,ακυρ,取消,キャンセル,취소,batal,ยกเลิก,ரத்து,रद्द,منسوخ,لغو,გაუქმ,refund,استرجاع,возврат",
@@ -101,6 +102,140 @@
       }
     }
     return out;
+  }
+
+  /* ---------- Iraqi cities: road distances (approx., shortest route over main roads) ---------- */
+  var CITY = {
+    bgd:["بغداد","Baghdad","Багдад","Bagdad","Bağdat","Bagdá","Βαγδάτη","巴格达","バグダッド","바그다드","बगदाद","แบกแดด","பாக்தாத்","بغداد","ბაღდადი","Bagdád"],
+    bsr:["البصرة","Basra","Басра","Basra","Basra","Bassorá","Βασόρα","巴士拉","バスラ","바스라","बसरा","บัสรา","பஸ்ரா","بصرہ","ბასრა","Bassora","Bassorah","بصره"],
+    msl:["الموصل","Mosul","Мосул","Mossul","Musul","Mosul","Μοσούλη","摩苏尔","モースル","모술","मोसुल","โมซูล","மொசூல்","موصل","მოსული","Mossoul","Mosoul"],
+    erb:["أربيل","Erbil","Эрбиль","Erbil","Erbil","Erbil","Ερμπίλ","埃尔比勒","アルビール","아르빌","एरबिल","เออร์บิล","எர்பில்","اربیل","ერბილი","Arbil","Irbil","Hewler","Hawler","اربيل","هولير"],
+    kik:["كركوك","Kirkuk","Киркук","Kirkuk","Kerkük","Kirkuk","Κιρκούκ","基尔库克","キルクーク","키르쿠크","किरकुक","คีร์คูก","கிர்குக்","کرکوک","ქირქუქი"],
+    sul:["السليمانية","Sulaymaniyah","Сулеймания","Sulaimaniyya","Süleymaniye","Sulaymaniyah","Σουλεϊμανίγια","苏莱曼尼亚","スレイマニヤ","술라이마니야","सुलेमानिया","สุไลมานียะห์","சுலைமானியா","سلیمانیہ","სულეიმანია","Slemani","Sulaimani","Souleimaniye","سلیمانیه","سليمانية"],
+    dhk:["دهوك","Duhok","Дохук","Dohuk","Duhok","Duhok","Ντουχόκ","杜胡克","ドホーク","두후크","दुहोक","ดูฮอก","துஹோக்","دہوک","დუჰოკი","Dohuk","Dahuk","Dihok","دهوک"],
+    zak:["زاخو","Zakho","Захо","Zakho","Zaho","Zakho","Ζάχο","扎胡","ザーホー","자코","ज़ाखो","ซาโค","சாக்கோ","زاخو","ზახო"],
+    nja:["النجف","Najaf","Наджаф","Nadschaf","Necef","Najaf","Νατζάφ","纳杰夫","ナジャフ","나자프","नजफ़","นะญัฟ","நஜஃப்","نجف","ნაჯაფი","Nadjaf","Nedżef","Nadžaf","Nedžef"],
+    krb:["كربلاء","Karbala","Кербела","Kerbela","Kerbela","Karbala","Καρμπάλα","卡尔巴拉","カルバラー","카르발라","कर्बला","กัรบะลาอ์","கர்பலா","کربلا","ქერბელა","Kerbala","Kerbala","Karbalā","كربلا"],
+    hil:["الحلة","Hillah","Хилла","Hilla","Hille","Hilla","Χίλα","希拉","ヒッラ","힐라","हिल्ला","ฮิลละห์","ஹில்லா","حلہ","ჰილა","Hilla","Al-Hillah","حله"],
+    bab:["بابل","Babylon","Вавилон","Babylon","Babil","Babilônia","Βαβυλώνα","巴比伦","バビロン","바빌론","बेबीलोन","บาบิโลน","பாபிலோன்","بابل","ბაბილონი","Babylone","Babilonia","Babilon","Babylón","Babil"],
+    kut:["الكوت","Kut","Эль-Кут","Kut","Kut","Kut","Κουτ","库特","クート","쿠트","कूत","กูต","கூட்","کوت","კუტი","Al-Kut","Wasit","واسط"],
+    ama:["العمارة","Amarah","Амара","Amara","Amare","Amara","Αμάρα","阿马拉","アマーラ","아마라","अमारा","อะมาเราะห์","அமாரா","عمارہ","ამარა","Al-Amarah","Maysan","ميسان","عماره"],
+    nas:["الناصرية","Nasiriyah","Насирия","Nasiriya","Nasıriye","Nasiriyah","Νασιρίγια","纳西里耶","ナーシリーヤ","나시리야","नासिरिया","นาซีรียะห์","நசிரியா","ناصریہ","ნასირია","Nassiriya","Nasiriyya","Dhi Qar","ذي قار","ناصریه"],
+    ur:["أور","Ur","Ур","Ur","Ur","Ur","Ουρ","乌尔","ウル","우르","उर","อูร์","ஊர்","اور","ური","زقورة أور","زقوره اور"],
+    dwn:["الديوانية","Diwaniyah","Дивания","Diwaniya","Divaniye","Diwaniyah","Ντιουανίγια","迪瓦尼耶","ディワニヤ","디와니야","दीवानिया","ดีวานียะห์","திவானியா","دیوانیہ","დივანია","Al-Diwaniyah","Qadisiyyah","القادسية","ديوانيه","دیوانیه"],
+    sam:["السماوة","Samawah","Самава","Samawa","Semave","Samawah","Σαμάουα","萨马沃","サマーワ","사마와","समावा","สะมาวะห์","சமாவா","سماوہ","სამავა","Al-Samawah","Muthanna","المثنى","سماوه"],
+    rmd:["الرمادي","Ramadi","Рамади","Ramadi","Ramadi","Ramadi","Ραμάντι","拉马迪","ラマーディ","라마디","रमादी","รอมาดี","ரமாதி","رمادی","რამადი","Anbar","الانبار","الأنبار"],
+    flj:["الفلوجة","Fallujah","Эль-Фаллуджа","Falludscha","Felluce","Faluya","Φαλούτζα","费卢杰","ファッルージャ","팔루자","फलूजा","ฟัลลูจะห์","ஃபலூஜா","فلوجہ","ფალუჯა","Fallouja","Faludża","Falluja","فلوجه","فالوجه"],
+    bqb:["بعقوبة","Baqubah","Баакуба","Baquba","Bakuba","Baquba","Μπακούμπα","巴古拜","バアクーバ","바쿠바","बाकूबा","บะอ์กูบะห์","பகுபா","بعقوبہ","ბაკუბა","Ba'qubah","Diyala","ديالى","بعقوبه"],
+    tik:["تكريت","Tikrit","Тикрит","Tikrit","Tikrit","Tikrit","Τικρίτ","提克里特","ティクリート","티크리트","तिकरित","ติกรีต","திக்ரித்","تکریت","თიქრითი","Salahuddin","صلاح الدين"],
+    smr:["سامراء","Samarra","Самарра","Samarra","Samarra","Samarra","Σαμάρα","萨迈拉","サーマッラー","사마라","सामर्रा","ซามาร์รา","சாமர்ரா","سامرا","სამარა","Samara","سامرا"],
+    hlb:["حلبجة","Halabja","Халабджа","Halabdscha","Halepçe","Halabja","Χαλάμπτζα","哈拉卜贾","ハラブジャ","할라브자","हलब्जा","ฮาลับจา","ஹலப்ஜா","حلبچہ","ჰალაბჯა","Halabdja","Halabdża","حلبچه"],
+    kuf:["الكوفة","Kufa","Куфа","Kufa","Kufe","Kufa","Κούφα","库法","クーファ","쿠파","कूफ़ा","กูฟะห์","கூஃபா","کوفہ","კუფა","Koufa","Kūfa","کوفه"],
+    chb:["الجبايش","Chibayish","Эль-Чибайиш","Chibayish","Çibayiş","Chibayish","Τσιμπαγίς","奇巴伊什","チバーイシュ","치바이시","चिबायिश","ชิบายิช","சிபாயிஷ்","چبایش","ჩიბაიში","Al-Chibayish","Marshes","الاهوار","الأهوار"],
+    htr:["الحضر","Hatra","Хатра","Hatra","Hatra","Hatra","Χάτρα","哈特拉","ハトラ","하트라","हत्रा","ฮัตรา","ஹத்ரா","حضر","ჰატრა"]
+  };
+  /* road segments in km (main highways) */
+  var ROAD = [["bgd","bqb",60],["bgd","rmd",110],["bgd","flj",65],["flj","rmd",50],["bgd","hil",100],["bgd","krb",105],["bgd","kut",175],["bgd","smr",125],
+    ["smr","tik",55],["tik","msl",225],["tik","kik",115],["kik","erb",95],["kik","sul",115],["erb","msl",85],["erb","sul",170],["msl","dhk",75],["dhk","zak",60],
+    ["bqb","kik",190],["hil","krb",45],["hil","nja",65],["krb","nja",80],["nja","kuf",10],["hil","kuf",60],["hil","dwn",85],["nja","dwn",70],["dwn","sam",95],
+    ["sam","nas",115],["nas","bsr",190],["kut","ama",165],["ama","bsr",175],["kut","nas",185],["nas","chb",95],["chb","bsr",120],["sul","hlb",80],["hil","bab",5],["nas","ur",15],["msl","htr",110],["tik","htr",120]];
+  var CN = {}, CA = [];
+  (function () {
+    var LI = {ar:0,en:1,ru:2,de:3,tr:4,pt:5,el:6,zh:7,"zh-tw":7,ja:8,ko:9,hi:10,th:11,ta:12,ur:13,ka:14};
+    for (var id in CITY) {
+      var a = CITY[id], i = LI[LG];
+      CN[id] = i != null ? a[i] : (LG === "fa" ? (a[13] || a[0]) : a[1]);
+      a.forEach(function (nm) { var n = norm(nm); if (n.length >= 2) CA.push([n, id]); });
+    }
+    CA.sort(function (x, y) { return y[0].length - x[0].length; });
+  })();
+  function citiesIn(q) {
+    var n = " " + norm(q) + " ", found = [], at = [];
+    for (var i = 0; i < CA.length; i++) {
+      var nm = CA[i][0], id = CA[i][1], p = -1, from = 0;
+      while ((p = n.indexOf(nm, from)) >= 0) {
+        var bef = n.slice(0, p), ok = /[\s]$/.test(bef) || /(^|\s)(و?[بفل]?|و)$/.test(bef);
+        var aft = n.charAt(p + nm.length);
+        if (DENSE.test(nm)) ok = true;
+        if (ok && (DENSE.test(nm) || aft === " " || /^[اةيهةيa-z]?\s/.test(n.slice(p + nm.length, p + nm.length + 2)) || nm.length >= 5)) {
+          if (found.indexOf(id) < 0) { found.push(id); at.push(p); }
+          n = n.slice(0, p) + Array(nm.length + 1).join("#") + n.slice(p + nm.length); break;
+        }
+        from = p + 1;
+      }
+    }
+    var o = found.map(function (id, k) { return [at[k], id]; }).sort(function (a, b) { return a[0] - b[0]; });
+    return o.map(function (x) { return x[1]; });
+  }
+  function road(a, b) {
+    var D = {}, done = {}; for (var id in CITY) D[id] = 1e9; D[a] = 0;
+    for (;;) {
+      var u = null; for (var k in D) if (!done[k] && (u === null || D[k] < D[u])) u = k;
+      if (u === null || D[u] >= 1e9) break; if (u === b) break; done[u] = 1;
+      ROAD.forEach(function (r) { var v = r[0] === u ? r[1] : r[1] === u ? r[0] : null; if (v && D[u] + r[2] < D[v]) D[v] = D[u] + r[2]; });
+    }
+    return D[b] < 1e9 ? D[b] : null;
+  }
+  var DT = {
+    ar:"المسافة بالسيارة بين {a} و{b} تقريباً {k} كم، أي حوالي {h} بالسيارة.",
+    en:"The road distance between {a} and {b} is about {k} km, roughly {h} by car.",
+    ru:"Расстояние по дороге между городами {a} и {b} — около {k} км, примерно {h} на машине.",
+    de:"Die Strecke zwischen {a} und {b} beträgt etwa {k} km, mit dem Auto rund {h}.",
+    fr:"La distance par la route entre {a} et {b} est d'environ {k} km, soit environ {h} en voiture.",
+    es:"La distancia por carretera entre {a} y {b} es de unos {k} km, aproximadamente {h} en coche.",
+    it:"La distanza su strada tra {a} e {b} è di circa {k} km, circa {h} in auto.",
+    tr:"{a} ile {b} arasındaki karayolu mesafesi yaklaşık {k} km, arabayla yaklaşık {h}.",
+    pt:"A distância por estrada entre {a} e {b} é de cerca de {k} km, aproximadamente {h} de carro.",
+    fa:"فاصله زمینی بین {a} و {b} حدود {k} کیلومتر است، یعنی حدود {h} با خودرو.",
+    ur:"{a} اور {b} کے درمیان سڑک کا فاصلہ تقریباً {k} کلومیٹر ہے، یعنی گاڑی سے تقریباً {h}۔"
+  };
+  var HR = {ar:["ساعة","ساعات"],en:["hour","hours"],ru:["часа","часов"],de:["Stunde","Stunden"],fr:["heure","heures"],es:["hora","horas"],it:["ora","ore"],tr:["saat","saat"],pt:["hora","horas"],fa:["ساعت","ساعت"],ur:["گھنٹہ","گھنٹے"]};
+  function hrs(km) {
+    var h = Math.max(0.5, Math.round(km / 85 * 2) / 2), w = HR[LG];
+    if (!w) return "≈ " + h + " h";
+    if (LG === "ar") { var f = Math.floor(h), half = h !== f ? " ونصف" : "";
+      return f === 0 ? "نصف ساعة" : f === 1 ? "ساعة" + half : f === 2 ? "ساعتين" + half : f + " " + (f <= 10 ? "ساعات" : "ساعة") + half; }
+    return String(h).replace(".", LG === "en" ? "." : ",") + " " + (h <= 1 ? w[0] : w[1]);
+  }
+  function distAnswer(ids) {
+    if (ids.length === 1) ids = ids[0] === "bgd" ? null : ["bgd", ids[0]];
+    if (!ids) return false;
+    var out = [];
+    for (var i = 0; i + 1 < ids.length && i < 3; i++) {
+      var a = ids[i], b = ids[i + 1], k = road(a, b); if (k == null) continue;
+      k = Math.round(k / 5) * 5;
+      var t = DT[LG];
+      out.push(t ? t.replace("{a}", CN[a]).replace("{b}", CN[b]).replace("{k}", k).replace("{h}", hrs(k))
+                 : CN[a] + " ↔ " + CN[b] + ": ≈ " + k + " km 🚗 " + hrs(k));
+    }
+    if (!out.length) return false;
+    say(out.join("\n"));
+    return true;
+  }
+
+  /* ---------- current time in Baghdad ---------- */
+  var TT = {
+    ar:"الوقت الآن في بغداد: {t}\n(توقيت العراق UTC+3، بدون توقيت صيفي)",
+    en:"The time in Baghdad now is {t}\n(Iraq time, UTC+3, no daylight saving)",
+    ru:"Сейчас в Багдаде {t}\n(время Ирака UTC+3, без перехода на летнее время)",
+    de:"In Bagdad ist es jetzt {t}\n(irakische Zeit UTC+3, keine Sommerzeit)",
+    fr:"Il est actuellement {t} à Bagdad\n(heure de l'Irak UTC+3, sans heure d'été)",
+    es:"En Bagdad ahora son las {t}\n(hora de Irak UTC+3, sin horario de verano)",
+    it:"A Baghdad ora sono le {t}\n(ora irachena UTC+3, senza ora legale)",
+    tr:"Bağdat'ta şu an saat {t}\n(Irak saati UTC+3, yaz saati uygulaması yok)",
+    pt:"Agora em Bagdá são {t}\n(hora do Iraque UTC+3, sem horário de verão)",
+    fa:"ساعت اکنون در بغداد: {t}\n(وقت عراق UTC+3، بدون ساعت تابستانی)",
+    ur:"بغداد میں اس وقت: {t}\n(عراق کا وقت UTC+3، ڈے لائٹ سیونگ نہیں)"
+  };
+  var DIF = {ar:"الفرق عن توقيتك: {d} ساعة",en:"Difference from your time: {d} h",ru:"Разница с вашим временем: {d} ч",de:"Unterschied zu Ihrer Zeit: {d} Std.",fr:"Décalage avec votre heure : {d} h",es:"Diferencia con tu hora: {d} h",it:"Differenza con la tua ora: {d} h",tr:"Sizin saatinizle fark: {d} saat",pt:"Diferença para o seu horário: {d} h"};
+  function timeAnswer() {
+    var loc = LG === "zh-tw" ? "zh-TW" : LG === "ar" ? "ar-IQ-u-nu-latn" : LG, t;
+    try { t = new Intl.DateTimeFormat(loc, { timeZone: "Asia/Baghdad", weekday: "long", day: "numeric", month: "long", hour: "numeric", minute: "2-digit" }).format(new Date()); }
+    catch (e) { var d = new Date(Date.now() + 3 * 3600e3); t = d.toISOString().slice(0, 16).replace("T", " "); }
+    var s = TT[LG] ? TT[LG].replace("{t}", t) : "Baghdad 🕒 " + t + " (UTC+3)";
+    var diff = 3 + new Date().getTimezoneOffset() / 60;
+    if (diff !== 0) { var ds = (diff > 0 ? "+" : "") + diff; s += "\n" + (DIF[LG] ? DIF[LG].replace("{d}", ds) : "Δ " + ds + " h"); }
+    say(s);
   }
 
   /* ---------- knowledge from the language home page ---------- */
@@ -135,7 +270,7 @@
     var cnt = {};
     kb.dt.forEach(function (d) {
       var u = {}; words(d.h + " " + d.s).forEach(function (w) { u[w] = 1; });
-      d.h.split(/[\s,&·()]+/).forEach(function (w) { if (w.length >= 2 && w.length < 4 && w.charAt(0) !== w.charAt(0).toLowerCase() && STOP.indexOf(norm(w)) < 0) u[norm(w)] = 1; });
+      d.h.split(/[\s,&·()]+/).forEach(function (w) { if (w.length >= 2 && w.length < 4 && STOP.indexOf(norm(w)) < 0 && (w.charAt(0) !== w.charAt(0).toLowerCase() || (/[\u0600-\u06FF]/.test(w) && norm(w).length === 3))) u[norm(w)] = 1; });
       d.w = Object.keys(u); d.w.forEach(function (w) { cnt[w] = (cnt[w] || 0) + 1; });
     });
     var ct = {}; kb.dt.forEach(function (d) { d.tw = {}; words(d.h).forEach(function (w) { if (!d.tw[w]) { d.tw[w] = 1; ct[w] = (ct[w] || 0) + 1; } }); });
@@ -293,7 +428,9 @@
     var keys = Object.keys(it).filter(function (k) { return k !== "hi" && k !== "thx"; });
     if (!keys.length && it.thx) { say(T.thx); return after(""); }
     if (!keys.length && it.hi && n.split(" ").length <= 4) { say(T.hi); return menu(); }
-    if (it.dist && !it.ap) return nf(q);
+    var cs = citiesIn(q);
+    if (it.dist && !it.ap) { if (distAnswer(cs)) return after(q); return nf(q); }
+    if (it.time && !it.dist) { timeAnswer(); return after(q); }
     if (it.ap) { topicAp(); return; }
     /* places: day trips / programme stops named in the question */
     var trips = KB.dt.map(function (d) { var c = 0; d.w.forEach(function (w) { if (has(n, w)) c++; }); return { d: d, c: c }; })
