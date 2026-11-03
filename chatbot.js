@@ -442,7 +442,12 @@
     if (KB && KB.faq.length) m.push({ t: T.faq, fn: function () { me(T.faq); topicFaq(); } });
     m.push({ t: T.bk, fn: function () { me(T.bk); topicBk(); } });
     m.push({ t: T.wa, href: waUrl(""), wa: 1 });
+    var cc = callChip(); if (cc) m.push(cc);
     chips(m);
+  }
+  function callChip() {
+    var a = document.querySelector("a.us-call"); if (!a) return null;
+    return { t: "📞 " + a.textContent.replace(/\s+/g, " ").trim().replace(/^(.*?)(\+1)/, "$1 $2").replace(/\s+/g, " "), href: a.getAttribute("href") };
   }
   function after(q) { chips([{ t: T.more, fn: function () { me(T.more); menu(); } }, { t: T.wa, href: waUrl(q || ""), wa: 1 }]); }
   function me(t) { say(t, true); }
@@ -474,7 +479,7 @@
     var formHere = document.getElementById("interest");
     chips([{ t: T.form, href: formHere ? location.pathname + "#interest" : HOME + "#interest" }, { t: T.wa, href: waUrl(""), wa: 1 }]);
   }
-  function nf(q) { say(T.nf); chips([{ t: T.wa, href: waUrl(q), wa: 1 }, { t: T.more, fn: function () { me(T.more); menu(); } }]); }
+  function nf(q) { say(T.nf); var c = [{ t: T.wa, href: waUrl(q), wa: 1 }], cc = callChip(); if (cc) c.push(cc); c.push({ t: T.more, fn: function () { me(T.more); menu(); } }); chips(c); }
 
   function answer(q) {
     var it = intents(q), n = norm(q), gq = grams(n), shown = 0;
