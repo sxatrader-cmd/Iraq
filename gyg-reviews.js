@@ -5,36 +5,36 @@
   "use strict";
   var GYG = "https://www.getyourguide.com/fable-tour-in-iraq-s471675/";
   var R = [
-    { n: "Pavel", c: "Romania", d: "2026-10-05", s: 5, t: "Kadhimiya Sunrise Tour, Baghdad", lang: "ru",
+    { n: "Pavel", c: "Romania", d: "2026-10-05", s: 5, t: "Baghdad: Kadhimiya Sunrise Tour & Airport Pickup & Breakfast", u: "https://www.getyourguide.com/baghdad-l152664/baghdad-kadhimiya-sunrise-tour-airport-pickup-breakfast-t1471096/", lang: "ru",
       x: "Супер профессиональный гид. Все было на высоте . Рекомендую",
       en: "A super professional guide. Everything was top-notch. I recommend it." },
-    { n: "Harry", c: "United Kingdom", d: "2026-10-04", s: 4, t: "Baghdad Old Town Guided Tour",
+    { n: "Harry", c: "United Kingdom", d: "2026-10-04", s: 4, t: "Baghdad: Old Town Guided Walking Tour with Drinks", u: "https://www.getyourguide.com/baghdad-l152664/baghdad-old-town-guided-walking-tour-with-drinks-t1477870/",
       x: "Very good! Highly recommend this tour to old town in the evening and enjoy some drinks! Tour guide great English, knowledgeable and friendly!" },
     { n: "Erik", c: "Netherlands", d: "2026-09-30", s: 5, t: "From Baghdad to the Shrines of Ezekiel & Prophet Job", lang: "nl",
       x: "Dankzij Saif een fantastische maar vooral ook heel indrukwekkende tour gehad. Die begon al met een mooie reis zuidwaarts door Irak. Na een hartelijke ontvangst bij de heiligdommen van Ezekiel en Ayyub werd de indrukwekkende en heel bijzondere achtergrond en historie verteld. Deze tour is beslist een aanrader.",
       en: "Thanks to Saif we had a fantastic and above all very impressive tour. It began with a beautiful drive south through Iraq. After a warm welcome at the shrines of Ezekiel and Ayyub (Job), the impressive and very special background and history were explained. This tour is definitely recommended." },
-    { n: "Joe", c: "Estonia", d: "2026-09-03", s: 5, t: "From Baghdad: Karbala Holy Sites",
+    { n: "Joe", c: "Estonia", d: "2026-09-03", s: 5, t: "From Baghdad: Karbala Holy Shrines Guided Day Trip", u: "https://www.getyourguide.com/baghdad-l152664/from-baghdad-karbala-holy-shrines-guided-day-trip-t1448656/",
       x: "Awesome trip to Karbala, best trip during my time in Iraq. Comfortable car, flexible itinerary and a very knowledgable and dedicated guide. Karbala itself is mindblowing and a must see" },
-    { n: "Zach", c: "United Kingdom", d: "2026-08-25", s: 5, t: "Duhok tour",
+    { n: "Zach", c: "United Kingdom", d: "2026-08-25", s: 5, t: "From Baghdad: 4-Day Kurdistan Highlands Private Tour", u: "https://www.getyourguide.com/dohuk-l1108/from-baghdad-4-day-kurdistan-highlands-private-tour-t1417341/",
       x: "beautiful city and nice people and highly recommended to visit Dohuk. tour guide knows a lot about places history" },
     { n: "GetYourGuide traveler", c: "United Kingdom", d: "2026-08-23", s: 5, t: "From Baghdad: Babylon Walking Tour",
       x: "highly recommended. the tour guide have deep knowledge about Babylonian history and i will book another tours with him for another historical sites in iraq ." },
     { n: "GetYourGuide traveler", c: "United Kingdom", d: "2026-08-19", s: 5, t: "Two-day tour: Kufa, Najaf & Karbala",
       x: "Fluent in English, Russian and Arabic. Excellent service always flexible to meet the customers needs. Highly recommend" },
-    { n: "Robert", c: "Germany", d: "2026-02-02", s: 5, t: "Baghdad: Full-Day Cultural Tour", lang: "de",
+    { n: "Robert", c: "Germany", d: "2026-02-02", s: 5, t: "Baghdad: Full-Day Cultural Tour with Lunch", u: "https://www.getyourguide.com/baghdad-l152664/baghdad-full-day-cultural-tour-with-lunch-t861019/", lang: "de",
       x: "Das ist eine wundervolle Tour! Sie ist umfangreich, informativ und kurzweilig. Unser Guid Saif bringt viel Detailwissen mit und ist ein angenehmer Gastgeber. Alls verlief reibungslos, ohne Komplikationen und einfach, da er fließend Englisch und Russisch spricht. Wir können diese Tour sehr empfehlen und würden sie wieder buchen.",
       en: "This is a wonderful tour! It is comprehensive, informative and entertaining. Our guide Saif brings a lot of detailed knowledge and is a pleasant host. Everything went smoothly, without complications and easily, as he speaks fluent English and Russian. We highly recommend this tour and would book it again." },
-    { n: "Michael", c: "Switzerland", d: "2026-01-19", s: 5, t: "Baghdad: Baghdadi Museum",
+    { n: "Michael", c: "Switzerland", d: "2026-01-19", s: 5, t: "Baghdad: Baghdadi Museum Guided Tour", u: "https://www.getyourguide.com/baghdad-l152664/baghdad-baghdadi-museum-guided-tour-t986948/",
       x: "As a Swiss couple visiting Iraq for the first time, our visit to the Baghdadi Museum was one of the most memorable cultural experiences of our journey. The museum offers a vivid and authentic portrayal of traditional Baghdadi life, with lifelike scenes showing daily customs, crafts, music, family life, and social traditions that once defined the city." },
-    { n: "Alessandro", c: "Italy", d: "2026-01-07", s: 5, t: "Baghdad: National Museum of Iraq",
+    { n: "Alessandro", c: "Italy", d: "2026-01-07", s: 5, t: "Baghdad: National Museum of Iraq Guided Tour", u: "https://www.getyourguide.com/baghdad-l152664/baghdad-national-museum-of-iraq-guided-tour-t860924/",
       x: "Saif is attentive, well-organized, and genuinely passionate about sharing Iraq’s rich heritage. I highly recommend him to anyone looking for an authentic and enriching experience in Iraq. Although my first trip to Iraq lasted only a few days, it left a strong impression on me. On my next visit, I plan to stay for 15 days—and without hesitation, I will book the entire tour with Saif again." },
-    { n: "Rana", c: "United States", d: "2025-12-24", s: 5, t: "Baghdad: Mustansiriyah Madrasah & Old Town",
+    { n: "Rana", c: "United States", d: "2025-12-24", s: 5, t: "Baghdad: Mustansiriyah Madrasah & Al-Baghdadi Museum Tour", u: "https://www.getyourguide.com/baghdad-l152664/baghdad-mustansiriyah-madrasah-al-baghdadi-museum-tour-t1110000/",
       x: "My recent private tour through Old Town Baghdad, Al-Mutanabbi Street, the Baghdadi Museum, and Al-Mustansiriya School was nothing short of exceptional. This was not a standard sightseeing tour—it was a refined cultural journey designed with precision, depth, and elegance. From walking through the historic alleys of Old Baghdad to feeling the intellectual soul of Mutanabbi Street, every moment was curated with insight and respect for history. The Iraq Museum was presented with remarkable storytelling, transforming ancient artifacts into a living narrative of Mesopotamian civilization. Visiting the Mustansiriya School was a powerful reminder that Baghdad once stood at the heart of global knowledge and scholarship. The level of professionalism, discretion, and personalized attention reflected true luxury service. I felt completely safe, deeply informed, and genuinely welcomed." },
-    { n: "Haroon", c: "United Kingdom", d: "2025-06-27", s: 5, t: "Baghdad: Full-Day Cultural Tour",
+    { n: "Haroon", c: "United Kingdom", d: "2025-06-27", s: 5, t: "Baghdad: Full-Day Cultural Tour with Lunch", u: "https://www.getyourguide.com/baghdad-l152664/baghdad-full-day-cultural-tour-with-lunch-t861019/",
       x: "I thought I was just visiting a city — I didn’t expect to fall in love. Al-Mutanabbi Street was alive with poetry, books, and an energy I can’t describe. With every step, I felt Baghdad whispering her secrets. At the Mustansiriya School, I stood in awe — centuries of beauty and knowledge carved into every detail. But it was the Baghdadi Museum that surprised me most. It wasn’t about ancient ruins — it was about people. Weddings, traditions, laughter in the public baths… It felt like walking through Baghdad’s memory. And in Souk Al-Safarin, time slowed. I found myself touching handmade treasures I didn’t know I needed. It wasn’t a tour. It was an experience I didn’t know my soul was craving." },
-    { n: "Ewa", c: "Poland", d: "2025-04-22", s: 5, t: "7-Day Iraq Heritage Tour",
+    { n: "Ewa", c: "Poland", d: "2025-04-22", s: 5, t: "7-Day Iraq Heritage Tour includes Babylon, Uruk & Hatra", u: "https://www.getyourguide.com/baghdad-l152664/iraq-10-day-guided-tour-with-accommodation-and-meals-t860866/",
       x: "I came to Iraq looking for history. What I found was so much more: soul, beauty, kindness, and a sense of connection I didn`t know I was missing. Every single day of this 10-day journey was filled with moments I`ll never forget. And all of it - every smile, every sacred site, every incredible meal - was made possible thanks to our amazing guide, whose warmth and deep knowledge made us feel like we weren`t just tourists - we were family. We visited sacred shrines in Baghdad, Karbala and Najaf. In Samarra we saw architectural marvels: iconic spiral minaret, the Grand Mosque and the Abu Dulaf Mosque. On our way there were also: legendary city of Uruk, ancient ruins of Babylon and Borsippa, magnificent Zigurrat of Ur, the must-see Iraqi National Museum in Baghdad. We explored the Al-Chibayish Marshes and colourful markets. The food was absolutely delicious. This fantastic tour was perfectly organised (very good hotels, meals, comfortable transport, entrance tickets) by our local guide." },
-    { n: "David", c: "United Arab Emirates", d: "2024-12-26", s: 5, t: "Baghdad: National Museum of Iraq",
+    { n: "David", c: "United Arab Emirates", d: "2024-12-26", s: 5, t: "Baghdad: National Museum of Iraq Guided Tour", u: "https://www.getyourguide.com/baghdad-l152664/baghdad-national-museum-of-iraq-guided-tour-t860924/",
       x: "The museum has a broad and rich collection of archaeological treasures and it’s definitely a must. I would have loved to receive more history information about the museums but there were no audio guides available. The 1.5h tour is recommended for those interested in knowing more about Iraqi culture and history." }
   ];
 
@@ -79,7 +79,7 @@
     ".gr-tx::before{content:'\\201C';font-family:Georgia,serif;color:var(--gold,#B8955A);font-size:30px;line-height:0;vertical-align:-10px;margin-inline-end:3px}" +
     ".gr-tr{align-self:flex-start;background:none;border:0;padding:0;color:var(--navy-2,#2A3D63);font:inherit;font-size:13px;font-weight:700;cursor:pointer;text-decoration:underline}" +
     ".gr-ft{margin-top:auto;padding-top:10px;border-top:1px solid var(--line,rgba(27,42,71,.1));display:flex;flex-direction:column;gap:3px}" +
-    ".gr-tour{font-size:13px;font-weight:700;color:var(--navy,#1B2A47)}" +
+    ".gr-tour{font-size:13px;font-weight:700;color:var(--navy,#1B2A47);text-decoration:underline;text-decoration-color:var(--gold,#B8955A);text-underline-offset:3px}.gr-tour:hover{color:var(--gold,#B8955A)}" +
     ".gr-ver{font-size:12px;color:#2E7D4F;display:flex;align-items:center;gap:5px}" +
     ".gr-dots{display:flex;justify-content:center;gap:7px;margin-top:4px}.gr-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:#D5D9E0;cursor:pointer}.gr-dots button.on{background:var(--gold,#B8955A);width:22px;border-radius:5px}" +
     ".gr-all{display:inline-block;margin-top:14px;color:var(--navy,#1B2A47);font-weight:700;font-size:14.5px;text-decoration:none;border-bottom:2px solid var(--gold,#B8955A);padding-bottom:2px}" +
@@ -121,7 +121,7 @@
         b.addEventListener("click", function () { shown = !shown; p.textContent = shown ? r.en : r.x; p.lang = shown ? "en" : r.lang; b.textContent = shown ? U[4] : U[3]; });
         c.appendChild(b);
       }
-      var ft = el("div", "gr-ft"); ft.appendChild(el("span", "gr-tour", r.t));
+      var ft = el("div", "gr-ft"), tl = el("a", "gr-tour", r.t + " ↗"); tl.href = r.u || GYG; tl.target = "_blank"; tl.rel = "noopener"; ft.appendChild(tl);
       var v = el("span", "gr-ver"); v.innerHTML = CHK; v.appendChild(document.createTextNode(U[2])); ft.appendChild(v);
       c.appendChild(ft); track.appendChild(c);
     });
