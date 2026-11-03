@@ -40,8 +40,9 @@
 
   R.sort(function (a, b) { return a.d < b.d ? -1 : a.d > b.d ? 1 : 0; }); /* oldest first */
   var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh"];
+  var PH = document.getElementById("gyg-reviews-here");
   var seg = (location.pathname.split("/")[1] || "").toLowerCase();
-  var LG = LANGS.indexOf(seg) >= 0 ? seg : "ar";
+  var LG = PH ? ((PH.getAttribute("data-lang") || document.documentElement.lang || "en").toLowerCase().slice(0, 2)) : (LANGS.indexOf(seg) >= 0 ? seg : "ar");
   var UI = {
     ar: ["آراء المسافرين", "تقييمات موثّقة على GetYourGuide", "حجز موثّق على GetYourGuide", "عرض الترجمة", "النص الأصلي", "كل التقييمات على GetYourGuide", "السابق", "التالي", "مرّر للأسفل لقراءة المزيد"],
     en: ["Traveller reviews", "Verified reviews on GetYourGuide", "Verified booking on GetYourGuide", "Show translation", "Show original", "All reviews on GetYourGuide", "Previous", "Next", "Scroll to read more"],
@@ -87,6 +88,7 @@
     ".gr-ver{font-size:12px;color:#2E7D4F;display:flex;align-items:center;gap:5px}" +
     ".gr-dots{display:flex;justify-content:center;gap:7px;margin-top:4px}.gr-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:#D5D9E0;cursor:pointer}.gr-dots button.on{background:var(--gold,#B8955A);width:22px;border-radius:5px}" +
     ".gr-all{display:inline-block;margin-top:14px;color:var(--navy,#1B2A47);font-weight:700;font-size:14.5px;text-decoration:none;border-bottom:2px solid var(--gold,#B8955A);padding-bottom:2px}" +
+    ".gr-ext{padding:36px 0 28px}.gr-ext .eyebrow{display:block;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold,#B8955A);font-weight:600}.gr-ext h2{margin:4px 0 0;font-size:clamp(24px,3vw,32px);line-height:1.25;color:var(--navy,#1B2A47);font-weight:500}" +
     "@media (max-width:900px){.gr-c{flex-basis:calc((100% - 18px)/2)}}" +
     "@media (max-width:600px){.gr-c{flex-basis:88%}.gr-nav{display:none}}";
 
@@ -94,10 +96,10 @@
   var ARR = function (d) { return '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + (d < 0 ? "M15 5l-7 7 7 7" : "M9 5l7 7-7 7") + '"/></svg>'; };
 
   function build() {
-    var anchor = document.getElementById("video-journeys") || document.getElementById("gallery") || document.getElementById("faq");
+    var anchor = PH || document.getElementById("video-journeys") || document.getElementById("gallery") || document.getElementById("faq");
     if (!anchor || document.getElementById("gyg-reviews")) return;
     var st = el("style"); st.textContent = css; document.head.appendChild(st);
-    var sec = el("section", "block in gr"); sec.id = "gyg-reviews"; sec.setAttribute("aria-label", U[0]);
+    var sec = el("section", "block in gr" + (PH ? " gr-ext" : "")); sec.id = "gyg-reviews"; sec.setAttribute("aria-label", U[0]);
     var head = el("div", "gr-head"), hl = el("div");
     hl.appendChild(el("span", "eyebrow", "GetYourGuide"));
     hl.appendChild(el("h2", "disp", U[0]));
@@ -137,7 +139,7 @@
     });
     sec.appendChild(track);
     var dots = el("div", "gr-dots"); sec.appendChild(dots);
-    anchor.parentNode.insertBefore(sec, anchor);
+    if (PH) PH.parentNode.replaceChild(sec, PH); else anchor.parentNode.insertBefore(sec, anchor);
 
     /* slider logic */
     var cards = track.children;
