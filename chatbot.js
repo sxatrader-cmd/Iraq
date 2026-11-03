@@ -71,6 +71,8 @@
 
   /* intent keywords in all site languages (normalised on load) */
   var IN = {
+    who:"who is,who are you,who will,about the guide,about your guide,tell me about,من هو,من انت,منو,مين,عن المرشد,кто,о гиде,wer ist,qui est,quien es,chi e,kimdir,kim,kto,kdo,ko je,cine este,wie is,kuka,vem ar,hvem er,ποιος,谁,誰,누구,siapa,ใคร,யார்,कौन,کون,کیست,ვინ",
+    spk:"language,languages,speak,speaks,لغه,لغات,يتكلم,يتحدث,язык,говор,sprach,sprich,langue,parle,idioma,habla,lingu,parla,dil,konus,jezyk,jazyk,limb,taal,kieli,sprak,sprog,γλωσσ,语言,語言,言語,언어,bahasa,ภาษา,மொழி,भाषा,زبان",
     time:"what time,time now,local time,time in baghdad,time zone,timezone,كم الساعه,الساعه كم,الساعه الان,الوقت,التوقيت,توقيت,сколько времени,который час,время,часовой пояс,uhrzeit,wie spat,zeitzone,quelle heure,heure,fuseau,que hora,hora,zona horaria,che ore,ora locale,fuso orario,saat kac,saat dilimi,yerel saat,ktora godzina,godzina,strefa czasowa,kolik je hodin,casove pasmo,koliko je sati,vrijeme,ce ora,fus orar,hoe laat,tijdzone,paljonko kello,kello,aikavyohyke,vad ar klockan,klockan,tidszon,hvad er klokken,klokken,tidszone,hva er klokka,klokka,ωρα,ζωνη ωρας,几点,时间,時間,幾點,何時,時差,몇 시,시간,jam berapa,zona waktu,waktu,กี่โมง,เวลา,நேரம்,समय,कितने बजे,وقت,ساعت چند,کتنے بجے,საათი,დრო",
     dist:"how far,distance,km,км,kilomet,miles,how long does it take,driving time,كم تبعد,تبعد,المسافه,مسافه,كيلو,كم ساعه,كم تستغرق,расстоян,далеко,километр,сколько ехать,entfernung,wie weit,distance,a quelle distance,distancia,a que distancia,distanza,quanto dista,mesafe,ne kadar uzak,odleglosc,jak daleko,vzdalenost,udaljenost,distanta,afstand,hoe ver,etaisyys,avstand,hur langt,hvor langt,αποστασ,距离,多远,距離,多遠,どのくらい,距離,거리,얼마나 멀,jarak,berapa jauh,ระยะทาง,ไกล,தூரம்,दूरी,कितनी दूर,فاصله,چقدر دور,فاصلہ,کتنا دور,მანძილ",
     price:"price,prices,cost,how much,usd,dollar,euro,$,€,سعر,اسعار,الاسعار,كلفه,تكلفه,بكم,كم السعر,قيمه,цен,стоим,сколько,preis,kost,prix,cout,combien,tarif,precio,cuesta,cuanto,prezz,costo,quanto,fiyat,ucret,ne kadar,cena,ceny,koszt,kosztuj,stoji,cijen,koliko,pret,prijs,hinta,maksaa,pris,koster,kostar,preco,τιμ,κοστ,价格,价钱,多少钱,费用,價格,費用,料金,値段,いくら,가격,얼마,비용,harga,berapa,ราคา,เท่าไ,விலை,कीमत,कितन,قیمت,کتنا,هزینه,چند,ფას,ღირ",
@@ -264,6 +266,12 @@
       var lis = []; ap.querySelectorAll(".ap-inc li").forEach(function (l) { lis.push(txt(l)); });
       kb.ap = { h: txt(ap.querySelector(".ap-toggle b")), p: txt(ap.querySelector(".ap-in p")), li: lis, url: HOME + "airport-transfer/" };
     }
+    var g = doc.querySelector("#guide .ft-guide");
+    if (g) {
+      var gp = g.querySelector("p"), gi = g.querySelector("img");
+      kb.guide = { eb: txt(g.querySelector(".eyebrow")), h: txt(g.querySelector("h2, h3")), p: txt(gp), img: gi ? gi.getAttribute("src") : "" };
+      kb.guide.w = words(kb.guide.h).concat(["saif","سيف","التميمي","tamimi","сайф","саиф","тамими","सैफ","サイフ","사이프","賽義夫","赛义夫","سیف"].map(norm));
+    }
     var f = doc.querySelector("#interest");
     if (f) kb.bk = { h: txt(f.querySelector("h2")), p: txt(f.querySelector(".formcard p")) };
     /* place words: day-trip names + programme route stops (common words removed) */
@@ -326,6 +334,7 @@
     ".ftb-ch:hover{background:var(--gold,#B8955A);color:var(--navy,#1B2A47)}" +
     ".ftb-ch.wa{background:#25D366;border-color:#25D366;color:#fff}.ftb-ch.wa:hover{background:#1fb457}" +
     ".ftb-card{align-self:stretch;background:#fff;border:1px solid rgba(27,42,71,.1);border-inline-start:3px solid var(--gold,#B8955A);border-radius:8px;padding:10px 12px}" +
+    ".ftb-card .ftb-av{float:inline-start;width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--gold,#B8955A);margin-inline-end:12px;margin-bottom:4px}" +
     ".ftb-card small{display:block;color:var(--gold,#B8955A);font-weight:700;font-size:12px;letter-spacing:.03em}" +
     ".ftb-card b{display:block;color:var(--navy,#1B2A47);font-size:15px;line-height:1.4}" +
     ".ftb-card p{margin:3px 0 0;font-size:13.5px;color:var(--muted,#5b6475)}" +
@@ -362,6 +371,7 @@
   }
   function card(o) {
     var c = el("div", "ftb-card");
+    if (o.img) { var im = el("img", "ftb-av"); im.src = o.img; im.alt = o.title || ""; im.width = 72; im.height = 72; c.appendChild(im); }
     if (o.small) c.appendChild(el("small")).textContent = o.small;
     c.appendChild(el("b")).textContent = o.title;
     if (o.text) c.appendChild(el("p")).textContent = o.text;
@@ -407,6 +417,9 @@
     (list || KB.dt).forEach(dtCard);
     after("");
   }
+  function topicGuide() {
+    var g = KB.guide; card({ img: g.img, small: g.eb, title: g.h, text: g.p, href: HOME + "#guide" });
+  }
   function topicAp() {
     var a = KB.ap; if (!a) return nf("");
     card({ title: a.h, text: a.p, list: a.li, href: a.url });
@@ -425,12 +438,13 @@
 
   function answer(q) {
     var it = intents(q), n = norm(q), gq = grams(n), shown = 0;
-    var keys = Object.keys(it).filter(function (k) { return k !== "hi" && k !== "thx"; });
+    var keys = Object.keys(it).filter(function (k) { return k !== "hi" && k !== "thx" && k !== "who" && k !== "spk"; });
     if (!keys.length && it.thx) { say(T.thx); return after(""); }
     if (!keys.length && it.hi && n.split(" ").length <= 4) { say(T.hi); return menu(); }
     var cs = citiesIn(q);
     if (it.dist && !it.ap) { if (distAnswer(cs)) return after(q); return nf(q); }
     if (it.time && !it.dist) { timeAnswer(); return after(q); }
+    if (KB.guide && (KB.guide.w.some(function (w) { return w && has(n, w); }) || (it.who && !it.spk && !it.price && (it.lang || /guide|مرشد|دليل|гид|reiseleit|guid|rehber|przewodn|pruvod|vodi|ghid|gids|opas|ξεναγ|导游|導遊|ガイド|가이드|pemandu|ไกด์|गाइड|راهنما|گائیڈ|გიდ/.test(n))))) { topicGuide(); return after(q); }
     if (it.ap) { topicAp(); return; }
     /* places: day trips / programme stops named in the question */
     var trips = KB.dt.map(function (d) { var c = 0; d.w.forEach(function (w) { if (has(n, w)) c++; }); return { d: d, c: c }; })
