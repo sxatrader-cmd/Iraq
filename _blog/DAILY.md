@@ -9,6 +9,14 @@ Four scheduled runs share the work; each run handles one language group (see `gr
 
 Blog URLs: Arabic → `/blog/`, every other language L → `/L/blog/`. Sources live in `_blog/L/`.
 
+## 0. Publishing frequency — daily until 20, then weekly (Saif's rule, per language)
+Before writing anything, count the articles of each language L of your group: `len(_blog/L/posts.json)`.
+- **L has fewer than 20 articles → daily.** Write one article in L today, as described below (today's topic; if L is behind, the backfill rule in §1 also applies).
+- **L has 20 or more articles → weekly.** L gets exactly ONE new article per week, written only on **Monday** (Baghdad date) — about 4 articles a month. On every other day, skip L completely (no new article, no backfill).
+- On Monday, a weekly language takes the plan item dated today if there is one; otherwise the first queue item that L does not have yet (or the next `"date": null` item, setting its `date` to today).
+- If no language of your group needs an article today, make no changes, do not commit, and finish with a one-line note "No article today (weekly schedule)".
+- The 20 is counted separately for every language, so a language that started later (e.g. ckb, pt, ko) keeps publishing daily until it also reaches 20.
+
 ## 1. Pick today's topic (Baghdad date, YYYY-MM-DD)
 Open `_blog/plan.json` → `queue`.
 - If an item has `"date"` == today → that is today's topic.

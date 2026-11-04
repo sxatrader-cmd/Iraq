@@ -1,5 +1,6 @@
 {
   "rule": "Only places and stories connected to the cities/sites of the 7-day and 9-day tour programmes.",
+  "frequency": "Per language: daily until that language has 20 articles in _blog/<lang>/posts.json, then weekly (one article every Monday, Baghdad time, ~4 per month). See DAILY.md section 0.",
   "groups": {
     "A": [
       "en",
