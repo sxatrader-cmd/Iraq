@@ -635,7 +635,7 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   </div>
   <section class="block in" style="padding-bottom:0" id="video">
     <div class="sec-head"><span class="eyebrow">Vidéo</span><h2 class="disp">L&#x27;Irak avec Fable Tour</h2><p>Un aperçu de nos voyages en Irak, filmé sur place.</p></div>
-    <div class="vid vert"><iframe src="https://www.youtube-nocookie.com/embed/jzjbK1austA?rel=0&amp;modestbranding=1&amp;playsinline=1" title="L&#x27;Irak avec Fable Tour" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="vid vert"><iframe src="https://www.youtube-nocookie.com/embed/_mIjRW9FuH8?rel=0&amp;modestbranding=1&amp;playsinline=1" title="L&#x27;Irak avec Fable Tour" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="vid vert"><iframe src="https://www.youtube-nocookie.com/embed/jzjbK1austA?rel=0&amp;modestbranding=1&amp;playsinline=1" title="L&#x27;Irak avec Fable Tour" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
   </section>
 
   <section class="block in" id="itinerary">
@@ -1720,7 +1720,7 @@ cards.forEach(function(ph){
   if(!it||xs.length<2)return;
   var vs=document.querySelector("#video .vid"),v=vs&&vs.classList.contains("vert")?vs:null;
   var host=document.getElementById("video")||it,row=document.createElement("div");row.className="vid-row";
-  var items=(v?[v]:[]).concat(xs),marks=items.map(function(x){var m=document.createComment("v");x.parentNode.insertBefore(m,x);return m;});
+  var vv=[].slice.call(document.querySelectorAll("#video .vid.vert"));var items=(vv.length?vv:(v?[v]:[])).concat(xs),marks=items.map(function(x){var m=document.createComment("v");x.parentNode.insertBefore(m,x);return m;});
   function f(){
     if(mq.matches){
       if(row.parentNode)return;
@@ -1733,7 +1733,7 @@ cards.forEach(function(ph){
   f();mq.addEventListener?mq.addEventListener("change",f):mq.addListener(f);
 })();
 </script>
-<style>.vid-row{display:grid;gap:22px;margin:22px auto 6px;max-width:1080px}.vid-row.n3{grid-template-columns:repeat(3,1fr)}.vid-row.n2{grid-template-columns:repeat(2,1fr);max-width:720px}.vid-row .vid.vert{max-width:none!important;width:100%;margin:0!important}</style>
+<style>.vid-row{display:grid;gap:22px;margin:22px auto 6px;max-width:1080px}.vid-row.n3{grid-template-columns:repeat(3,1fr)}.vid-row.n4{grid-template-columns:repeat(4,1fr);max-width:1240px}.vid-row.n2{grid-template-columns:repeat(2,1fr);max-width:720px}.vid-row .vid.vert{max-width:none!important;width:100%;margin:0!important}</style>
 <script id="desktop-daytext-js">
 /* desktop: make the stacked photos end exactly where the day text ends */
 (function(){
