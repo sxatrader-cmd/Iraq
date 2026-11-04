@@ -204,7 +204,10 @@
     "sv",
     "en",
     "ar",
-    "ru"
+    "ru",
+    "de",
+    "fr",
+    "it"
    ]
   },
   {
@@ -249,8 +252,15 @@
    "city": "Ur",
    "category_en": "Archaeological sites",
    "tour": "7",
-   "date": null,
-   "langs_done": []
+   "date": "2026-11-04",
+   "langs_done": [
+    "ar",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ru"
+   ]
   },
   {
    "topic": "the-malwiya-spiral-minaret-of-samarra",
