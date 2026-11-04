@@ -39,12 +39,13 @@
   ];
 
   R.sort(function (a, b) { return a.d < b.d ? -1 : a.d > b.d ? 1 : 0; }); /* oldest first */
-  var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh"];
+  var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh","ckb"];
   var PH = document.getElementById("gyg-reviews-here");
   var seg = (location.pathname.split("/")[1] || "").toLowerCase();
   var LG = PH ? ((PH.getAttribute("data-lang") || document.documentElement.lang || "en").toLowerCase().slice(0, 2)) : (LANGS.indexOf(seg) >= 0 ? seg : "ar");
   var UI = {
     ar: ["آراء المسافرين", "تقييمات موثّقة على GetYourGuide", "حجز موثّق على GetYourGuide", "عرض الترجمة", "النص الأصلي", "كل التقييمات على GetYourGuide", "السابق", "التالي", "مرّر للأسفل لقراءة المزيد"],
+    ckb: ["ڕای گەشتیاران", "هەڵسەنگاندنی پشتڕاستکراوە لە GetYourGuide", "حیجزی پشتڕاستکراوە لە GetYourGuide", "وەرگێڕان پیشان بدە", "دەقی ڕەسەن", "هەموو هەڵسەنگاندنەکان لە GetYourGuide", "پێشوو", "دواتر", "بۆ خوێندنەوەی زیاتر بەرەو خوارەوە بڕۆ"],
     en: ["Traveller reviews", "Verified reviews on GetYourGuide", "Verified booking on GetYourGuide", "Show translation", "Show original", "All reviews on GetYourGuide", "Previous", "Next", "Scroll to read more"],
     ru: ["Отзывы путешественников", "Проверенные отзывы на GetYourGuide", "Подтверждённое бронирование на GetYourGuide", "Показать перевод", "Оригинал", "Все отзывы на GetYourGuide", "Назад", "Вперёд", "Прокрутите, чтобы читать дальше"],
     de: ["Bewertungen von Reisenden", "Verifizierte Bewertungen auf GetYourGuide", "Verifizierte Buchung auf GetYourGuide", "Übersetzung anzeigen", "Original anzeigen", "Alle Bewertungen auf GetYourGuide", "Zurück", "Weiter", "Scrollen zum Weiterlesen"],

@@ -6,7 +6,7 @@
   if (window.__ftBot) return; window.__ftBot = 1;
 
   var WA = "9647711745353";
-  var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh"];
+  var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh","ckb"];
   var SL = {"ziyara":"baghdad-holy-shrines","oldtown":"baghdad-old-town","aqarquf":"aqar-quf","madain":"al-madain-ctesiphon","samarra":"samarra","babylon":"babylon","babylon4":"babylon-borsippa-kifl","holy":"kufa-najaf-karbala","south":"ur-marshes"};
 
   var seg = (location.pathname.split("/")[1] || "").toLowerCase();
@@ -17,6 +17,7 @@
   var K = ["t","hi","ph","nf","wa","more","prog","dt","ap","faq","bk","one","open","q","thx","send","close","form"];
   var S = {
     ar:["مساعد Fable Tour","أهلاً بك! أجيبك عن أسئلتك حول رحلاتنا في العراق. اختر موضوعاً أو اكتب سؤالك.","اكتب سؤالك…","لم أجد إجابة لهذا السؤال. راسلنا على واتساب وسنرد عليك بسرعة.","تواصل عبر واتساب","مواضيع أخرى","البرامج والأسعار","رحلات اليوم الواحد","الاستقبال من المطار","أسئلة شائعة","احجز رحلتك","لشخص واحد","التفاصيل","عندك سؤال؟","العفو! هل تريد شيئاً آخر؟","إرسال","إغلاق","افتح نموذج الحجز"],
+    ckb:["یاریدەدەری Fable Tour","سڵاو! وەڵامی پرسیارەکانت دەدەمەوە دەربارەی گەشتەکانمان لە عێراق. بابەتێک هەڵبژێرە یان پرسیارەکەت بنووسە.","پرسیارەکەت بنووسە…","وەڵامی ئەم پرسیارەم نەدۆزییەوە. لە واتسئاپ نامەمان بۆ بنێرە و بە خێرایی وەڵامت دەدەینەوە.","پەیوەندی لە واتسئاپ","بابەتی تر","بەرنامە و نرخەکان","گەشتی یەک ڕۆژە","پێشوازی لە فڕۆکەخانە","پرسیارە باوەکان","گەشتەکەت حیجز بکە","بۆ 1 کەس","وردەکاری","پرسیارێکت هەیە؟","سوپاس! شتێکی ترت دەوێت؟","ناردن","داخستن","فۆرمی حیجز بکەرەوە"],
     en:["Fable Tour assistant","Hello! I can answer your questions about our tours in Iraq. Pick a topic or type your question.","Type your question…","I couldn't find an answer to that. Message us on WhatsApp and we'll reply quickly.","Chat on WhatsApp","Other topics","Programs & prices","Day trips","Airport pickup","FAQ","Book your trip","for 1 person","Details","Have a question?","You're welcome! Anything else?","Send","Close","Open the booking form"],
     tr:["Fable Tour asistanı","Merhaba! Irak turlarımızla ilgili sorularınızı yanıtlayabilirim. Bir konu seçin veya sorunuzu yazın.","Sorunuzu yazın…","Bu sorunun cevabını bulamadım. Bize WhatsApp'tan yazın, hemen yanıt verelim.","WhatsApp'tan yazın","Diğer konular","Programlar ve fiyatlar","Günübirlik turlar","Havalimanı karşılama","Sık sorulan sorular","Turunuzu ayırtın","1 kişi için","Detaylar","Sorunuz mu var?","Rica ederim! Başka bir şey var mı?","Gönder","Kapat","Rezervasyon formunu aç"],
     ru:["Помощник Fable Tour","Здравствуйте! Я отвечу на ваши вопросы о наших турах по Ираку. Выберите тему или напишите вопрос.","Напишите ваш вопрос…","Не нашёл ответа на этот вопрос. Напишите нам в WhatsApp — мы быстро ответим.","Написать в WhatsApp","Другие темы","Программы и цены","Однодневные экскурсии","Встреча в аэропорту","Частые вопросы","Забронировать тур","за 1 человека","Подробнее","Есть вопрос?","Пожалуйста! Чем ещё помочь?","Отправить","Закрыть","Открыть форму бронирования"],

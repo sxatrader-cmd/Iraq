@@ -22,15 +22,15 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 B = ROOT / "_blog"
 SITE = "https://iraq.fabletour.com"
 WA = "https://wa.me/9647711745353"
-LANGS = ["ar", "en", "tr", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "fa", "ms", "id", "th", "hi", "ur", "ta", "fi", "sv", "da", "no", "sk", "hr", "ro", "nl", "ka", "ko", "pt"]
+LANGS = ["ar", "en", "tr", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "fa", "ms", "id", "th", "hi", "ur", "ta", "fi", "sv", "da", "no", "sk", "hr", "ro", "nl", "ka", "ko", "pt", "ckb"]
 HREFLANG = {"zh": "zh-Hans"}
 OGLOC = {"ar": "ar_AR", "en": "en_US", "ru": "ru_RU", "de": "de_DE", "fr": "fr_FR", "es": "es_ES", "it": "it_IT",
          "el": "el_GR", "cs": "cs_CZ", "pl": "pl_PL", "zh": "zh_CN", "ja": "ja_JP", "tr": "tr_TR", "fa": "fa_IR",
          "ms": "ms_MY", "id": "id_ID", "th": "th_TH", "hi": "hi_IN", "ur": "ur_PK", "ta": "ta_IN",
-         "fi": "fi_FI", "sv": "sv_SE", "da": "da_DK", "no": "nb_NO", "sk": "sk_SK", "hr": "hr_HR", "ro": "ro_RO", "nl": "nl_NL", "ka": "ka_GE", "ko": "ko_KR", "pt": "pt_PT"}
-RTL = {"ar", "fa", "ur"}
-BLOGWORD = {"ar": "المدونة", "fa": "وبلاگ", "ru": "Блог", "zh": "博客", "ja": "ブログ", "th": "บล็อก", "hi": "ब्लॉग", "ur": "بلاگ", "ta": "வலைப்பதிவு", "fi": "Blogi", "sv": "Blogg", "no": "Blogg", "ka": "ბლოგი", "ko": "블로그"}
-AUTHOR = {"ar": "سيف التميمي", "fa": "سیف التمیمی", "ur": "سیف التمیمی", "hi": "सैफ़ अल-तमीमी", "ta": "சைஃப் அல்-தமீமி", "ka": "საიფ ალ-თამიმი", "ko": "사이프 알타미미"}
+         "fi": "fi_FI", "sv": "sv_SE", "da": "da_DK", "no": "nb_NO", "sk": "sk_SK", "hr": "hr_HR", "ro": "ro_RO", "nl": "nl_NL", "ka": "ka_GE", "ko": "ko_KR", "pt": "pt_PT", "ckb": "ckb_IQ"}
+RTL = {"ar", "fa", "ur", "ckb"}
+BLOGWORD = {"ar": "المدونة", "fa": "وبلاگ", "ru": "Блог", "zh": "博客", "ja": "ブログ", "th": "บล็อก", "hi": "ब्लॉग", "ur": "بلاگ", "ta": "வலைப்பதிவு", "fi": "Blogi", "sv": "Blogg", "no": "Blogg", "ka": "ბლოგი", "ko": "블로그", "ckb": "بلۆگ"}
+AUTHOR = {"ar": "سيف التميمي", "fa": "سیف التمیمی", "ur": "سیف التمیمی", "hi": "सैफ़ अल-तमीमी", "ta": "சைஃப் அல்-தமீமி", "ka": "საიფ ალ-თამიმი", "ko": "사이프 알타미미", "ckb": "سەیف ئەلتەمیمی"}
 AUTHOR_EN = "Saif Al-Tamimi"
 T = json.loads((B / "i18n.json").read_text())
 CSS = (B / "style.css").read_text() + (B / "gyg.css").read_text()
@@ -89,7 +89,7 @@ def footer(l):
     ft = re.sub(r'href="([^"]*)"', absol, ft)
     # language links in the footer point to that language's blog
     def langnav(m):
-        x = re.sub(r'href="/([a-z]{2})/"', lambda n: f'href="/{n.group(1)}/blog/"', m.group(0))
+        x = re.sub(r'href="/([a-z]{2,3}(?:-[a-z]{2})?)/"', lambda n: f'href="/{n.group(1)}/blog/"', m.group(0))
         return x.replace('href="/"', 'href="/blog/"')
     return re.sub(r'<nav class="langs".*?</nav>', langnav, ft, flags=re.S)
 
@@ -98,6 +98,7 @@ WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=PT+Serif:wght@400;700&family=Inter+Tight:wght@400;500;600{extra}&display=swap" rel="stylesheet">')
 FONT_EXTRA = {"ar": "&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600",
+              "ckb": "&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600",
               "fa": "&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600",
               "zh": "&family=Noto+Serif+SC:wght@600", "ja": "&family=Noto+Serif+JP:wght@600",
               "hi": "&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@600",
