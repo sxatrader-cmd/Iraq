@@ -659,7 +659,7 @@
     if (/[一-鿿]/.test(s)) {
       var tw = (s.match(/[這們麼嗎來時說會為與發現對點價錢遊覽飯館個機場導買賣車開關門問題]/g) || []).length,
           cn = (s.match(/[这们么吗来时说会为与发现对点价钱游览饭馆个机场导买卖车开关门问题]/g) || []).length;
-      return tw > cn ? "zh-tw" : cn > tw ? "zh" : (LG === "zh-tw" || LG === "zh" ? LG : "zh");
+      return tw > cn ? "zh-tw" : cn > tw ? "zh" : (PG === "zh-tw" || PG === "zh" ? PG : "zh");
     }
     if (/[฀-๿]/.test(s)) return "th";
     if (/[஀-௿]/.test(s)) return "ta";
@@ -672,9 +672,9 @@
       if (/[ےٹڈڑںۓ]/.test(s)) return "ur";
       var fa = (s.match(/[یکپژ]/g) || []).length + (/(^|\s)(است|می|چه|چقدر|چطور|آیا|هست|برای|را)(\s|$)/.test(s) ? 2 : 0),
           ar = (s.match(/[يكةى]/g) || []).length + (/(^|\s)(ال|هل|كم|ما|ماذا|كيف|هي|هو|في|على|من|شنو|شكد)/.test(s) ? 1 : 0);
-      if (fa > ar) return LG === "ur" ? "ur" : "fa";
+      if (fa > ar) return PG === "ur" ? "ur" : "fa";
       if (ar > fa) return "ar";
-      return ["ar", "fa", "ur", "ckb"].indexOf(LG) >= 0 ? LG : "ar";
+      return ["ar", "fa", "ur", "ckb"].indexOf(PG) >= 0 ? PG : "ar";
     }
     if (!/[a-zà-ỹ]/.test(s)) return null;
     var tk = s.replace(/[^\p{L}\p{N}' ]/gu, " ").split(/\s+/).filter(Boolean), sc = {}, best = null, b1 = 0, b2 = 0;
@@ -687,10 +687,10 @@
     LCH.vi.lastIndex = 0; if (sc.vi >= 3 || (sc.vi >= 1.5 && LCH.vi.test(s))) return "vi";
     for (var l2 in sc) { if (sc[l2] > b1) { b2 = b1; b1 = sc[l2]; best = l2; } else if (sc[l2] > b2) b2 = sc[l2]; }
     if (!best || b1 < 2) return null;
-    if ((best === "ms" || best === "id") && Math.abs(sc.ms - sc.id) < 1.5) return (LG === "ms" || LG === "id") ? LG : (PG === "ms" ? "ms" : "id");
+    /* two close languages (ms/id, da/no, es/pt…): answer in the page language (Saif) */
+    if ((best === "ms" || best === "id") && Math.abs(sc.ms - sc.id) < 1.5) return PG;
     /* close calls between related languages: keep the page / current language when it is one of them */
-    if (b1 - b2 < 1) { if (sc[LG] === b1) return LG; return null; }
-    if ((best === "ms" || best === "id") && (LG === "ms" || LG === "id") && sc[LG] >= b1 - 1) return LG;
+    if (b1 - b2 < 1) return PG;
     return best;
   }
 
