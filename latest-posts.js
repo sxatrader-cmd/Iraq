@@ -3,7 +3,7 @@
    language page only shows articles written in that language. */
 (function () {
   "use strict";
-  var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh","ckb"];
+  var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh","ckb","vi"];
   var seg = (location.pathname.split("/")[1] || "").toLowerCase();
   var LG = LANGS.indexOf(seg) >= 0 ? seg : "ar";
   var BLOG = (LG === "ar" ? "/" : "/" + LG + "/") + "blog/";

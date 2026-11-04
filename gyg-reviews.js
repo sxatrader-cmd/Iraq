@@ -39,7 +39,7 @@
   ];
 
   R.sort(function (a, b) { return a.d < b.d ? -1 : a.d > b.d ? 1 : 0; }); /* oldest first */
-  var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh","ckb"];
+  var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh","ckb","vi"];
   var PH = document.getElementById("gyg-reviews-here");
   var seg = (location.pathname.split("/")[1] || "").toLowerCase();
   var LG = PH ? ((PH.getAttribute("data-lang") || document.documentElement.lang || "en").toLowerCase().replace(/^(zh-tw|ckb|[a-z]{2}).*$/, "$1")) : (LANGS.indexOf(seg) >= 0 ? seg : "ar");
@@ -75,6 +75,7 @@
     ta: ["பயணிகளின் மதிப்புரைகள்", "GetYourGuide சரிபார்க்கப்பட்ட மதிப்புரைகள்", "GetYourGuide சரிபார்க்கப்பட்ட முன்பதிவு", "மொழிபெயர்ப்பைக் காட்டு", "மூலத்தைக் காட்டு", "GetYourGuide இல் அனைத்து மதிப்புரைகளும்", "முந்தையது", "அடுத்தது", "மேலும் படிக்க உருட்டவும்"],
     th: ["รีวิวจากนักเดินทาง", "รีวิวที่ยืนยันแล้วบน GetYourGuide", "การจองที่ยืนยันแล้วบน GetYourGuide", "แสดงคำแปล", "แสดงต้นฉบับ", "รีวิวทั้งหมดบน GetYourGuide", "ก่อนหน้า", "ถัดไป", "เลื่อนเพื่ออ่านต่อ"],
     ms: ["Ulasan pengembara", "Ulasan disahkan di GetYourGuide", "Tempahan disahkan di GetYourGuide", "Tunjuk terjemahan", "Tunjuk asal", "Semua ulasan di GetYourGuide", "Sebelumnya", "Seterusnya", "Tatal untuk membaca lagi"],
+    vi: ["Đánh giá của du khách", "Đánh giá đã xác minh trên GetYourGuide", "Đặt tour đã xác minh trên GetYourGuide", "Xem bản dịch", "Xem bản gốc", "Tất cả đánh giá trên GetYourGuide", "Trước", "Tiếp", "Cuộn xuống để đọc tiếp"],
     id: ["Ulasan wisatawan", "Ulasan terverifikasi di GetYourGuide", "Pemesanan terverifikasi di GetYourGuide", "Tampilkan terjemahan", "Tampilkan asli", "Semua ulasan di GetYourGuide", "Sebelumnya", "Berikutnya", "Gulir untuk membaca lagi"],
     ur: ["مسافروں کے تبصرے", "GetYourGuide پر تصدیق شدہ تبصرے", "GetYourGuide پر تصدیق شدہ بکنگ", "ترجمہ دیکھیں", "اصل متن", "GetYourGuide پر تمام تبصرے", "پچھلا", "اگلا", "مزید پڑھنے کے لیے اسکرول کریں"]
   };
@@ -198,7 +199,7 @@
       setInterval(function () { if (visible && !paused && !document.hidden) go(cur() + 1); }, 6500);
   }
   var T = {};
-  var HAS_T = ["ar","ckb","ru","de","fr","es","it","tr","pl","nl","pt","cs","sk","hr","ro","el","sv","da","no","fi","ka","ko","ja","zh","zh-tw","hi","ta","th","ms","id","fa","ur"];
+  var HAS_T = ["ar","ckb","ru","de","fr","es","it","tr","pl","nl","pt","cs","sk","hr","ro","el","sv","da","no","fi","ka","ko","ja","zh","zh-tw","hi","ta","th","ms","id","fa","ur","vi"];
   function start() {
     if (HAS_T.indexOf(LG) < 0 || !window.fetch) return build();
     var base = /fabletour\.com$|^localhost|^127\./.test(location.hostname) && !PH ? "" : "https://iraq.fabletour.com";

@@ -22,6 +22,7 @@ NEW = {
     "ka": ("ქართული", "Ka", "ka_GE", "ka"),
     "ko": ("한국어", "Ko", "ko_KR", "ko"),
     "pt": ("Português", "Pt", "pt_PT", "pt"),
+    "vi": ("Tiếng Việt", "Vi", "vi_VN", "vi"),
 }
 A.META.update(NEW)
 for l in NEW:
