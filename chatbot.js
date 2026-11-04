@@ -10,7 +10,7 @@
   var SL = {"ziyara":"baghdad-holy-shrines","oldtown":"baghdad-old-town","aqarquf":"aqar-quf","madain":"al-madain-ctesiphon","samarra":"samarra","babylon":"babylon","babylon4":"babylon-borsippa-kifl","holy":"kufa-najaf-karbala","south":"ur-marshes"};
 
   var seg = (location.pathname.split("/")[1] || "").toLowerCase();
-  var LG = LANGS.indexOf(seg) >= 0 ? seg : "ar";
+  var LG = LANGS.indexOf(seg) >= 0 ? seg : "ar", PG = LG;
   var HOME = LG === "ar" ? "/" : "/" + LG + "/";
 
   /* ---------- interface text (32 languages) ---------- */
@@ -51,7 +51,7 @@
     pt:["Assistente Fable Tour","Olá! Respondo às suas perguntas sobre os nossos circuitos no Iraque. Escolha um tema ou escreva a sua pergunta.","Escreva a sua pergunta…","Não encontrei resposta para essa pergunta. Escreva-nos pelo WhatsApp e respondemos rapidamente.","Falar pelo WhatsApp","Outros temas","Programas e preços","Passeios de um dia","Recolha no aeroporto","Perguntas frequentes","Reservar a viagem","para 1 pessoa","Detalhes","Tem uma pergunta?","De nada! Mais alguma coisa?","Enviar","Fechar","Abrir o formulário de reserva"],
     vi:["Trợ lý Fable Tour","Xin chào! Tôi trả lời các câu hỏi của bạn về tour Iraq của chúng tôi. Hãy chọn một chủ đề hoặc gõ câu hỏi.","Nhập câu hỏi của bạn…","Tôi chưa tìm thấy câu trả lời cho câu hỏi này. Hãy nhắn cho chúng tôi qua WhatsApp, chúng tôi sẽ trả lời nhanh.","Nhắn qua WhatsApp","Chủ đề khác","Chương trình và giá","Tour trong ngày","Đón tại sân bay","Câu hỏi thường gặp","Đặt chuyến đi","cho 1 người","Chi tiết","Bạn có câu hỏi?","Không có gì! Bạn cần gì thêm không?","Gửi","Đóng","Mở biểu mẫu đặt tour"]
   };
-  var T = {}; (function () { var a = S[LG] || S.en; for (var i = 0; i < K.length; i++) T[K[i]] = a[i]; })();
+  var T = {}; function setT() { var a = S[LG] || S.en; for (var i = 0; i < K.length; i++) T[K[i]] = a[i]; } setT();
 
   /* answer to flight questions and any extra service the visitor asks for (Saif: always "yes, on request") */
   var SV = {
@@ -89,7 +89,7 @@
     pt:"Sim, é possível mediante pedido. Escreva-nos pelo WhatsApp o que precisa e a equipa Fable Tour trata de tudo.",
     vi:"Có, chúng tôi có thể sắp xếp theo yêu cầu. Hãy nhắn cho chúng tôi qua WhatsApp điều bạn cần và đội ngũ Fable Tour sẽ lo liệu."
   };
-  T.svc = SV[LG] || SV.en;
+  T.svc = SV[LG] || SV.en; var T0 = {}; for (var k0 in T) T0[k0] = T[k0];
 
   /* ---------- text matching ---------- */
   function norm(s) {
@@ -185,13 +185,11 @@
     ["bqb","kik",190],["hil","krb",45],["hil","nja",65],["krb","nja",80],["nja","kuf",10],["hil","kuf",60],["hil","dwn",85],["nja","dwn",70],["dwn","sam",95],
     ["sam","nas",115],["nas","bsr",190],["kut","ama",165],["ama","bsr",175],["kut","nas",185],["nas","chb",95],["chb","bsr",120],["sul","hlb",80],["hil","bab",5],["nas","ur",15],["msl","htr",110],["tik","htr",120]];
   var CN = {}, CA = [];
+  var LI = {ar:0,en:1,ru:2,de:3,tr:4,pt:5,el:6,zh:7,"zh-tw":7,ja:8,ko:9,hi:10,th:11,ta:12,ur:13,ka:14};
+  function cityNames() { for (var id in CITY) { var a = CITY[id], i = LI[LG]; CN[id] = i != null ? a[i] : (LG === "fa" ? (a[13] || a[0]) : a[1]); } }
   (function () {
-    var LI = {ar:0,en:1,ru:2,de:3,tr:4,pt:5,el:6,zh:7,"zh-tw":7,ja:8,ko:9,hi:10,th:11,ta:12,ur:13,ka:14};
-    for (var id in CITY) {
-      var a = CITY[id], i = LI[LG];
-      CN[id] = i != null ? a[i] : (LG === "fa" ? (a[13] || a[0]) : a[1]);
-      a.forEach(function (nm) { var n = norm(nm); if (n.length >= 2) CA.push([n, id]); });
-    }
+    cityNames();
+    for (var id in CITY) CITY[id].forEach(function (nm) { var n = norm(nm); if (n.length >= 2) CA.push([n, id]); });
     CA.sort(function (x, y) { return y[0].length - x[0].length; });
   })();
   function citiesIn(q) {
@@ -286,7 +284,7 @@
   }
 
   /* ---------- knowledge from the language home page ---------- */
-  var KB = null, kbWait = [];
+  var KB = null, kbWait = [], KBC = {}, BKC = {};
   function txt(el) { return el ? el.textContent.replace(/\s+/g, " ").trim() : ""; }
   function build(doc, cur) {
     var kb = { faq: [], prog: [], dt: [], ap: null, bk: null, dtNote: "" }, seen = {};
@@ -350,9 +348,10 @@
   function loadKB(cb) {
     if (KB) return cb(KB);
     kbWait.push(cb); if (kbWait.length > 1) return;
-    function done(doc) { KB = build(doc, document); var w = kbWait; kbWait = []; w.forEach(function (f) { f(KB); }); }
+    var lg0 = LG; function done(doc) { KB = KBC[lg0] = build(doc, lg0 === PG ? document : null); var w = kbWait; kbWait = []; w.forEach(function (f) { f(KB); }); }
     var here = location.pathname.replace(/index\.html$/, "");
     if (here === HOME) return done(document);
+    if (lg0 !== PG) { fetch(HOME).then(function (r) { return r.text(); }).then(function (h) { done(new DOMParser().parseFromString(h, "text/html")); }).catch(function () { kbWait = []; setLang(PG); loadKB(cb); }); return; }
     fetch(HOME, { credentials: "same-origin" }).then(function (r) { return r.text(); }).then(function (h) {
       done(new DOMParser().parseFromString(h, "text/html"));
     }).catch(function () { done(document); });
@@ -373,7 +372,7 @@
         return { p: p, idn: norm(id), ttl: norm(p.t + " " + p.h + " " + p.p), all: norm(id + " " + p.s.map(function (x) { return x[0] + " " + x[1]; }).join(" ") + " " + p.q.map(function (x) { return x.join(" "); }).join(" ")),
           sec: p.s.map(function (x) { return { h: norm(x[0]), t: norm(x[1]) }; }), fq: p.q.map(function (x) { return grams(norm(x[0])); }) };
       });
-      var w = bkWait; bkWait = []; w.forEach(function (f) { f(BK); });
+      BKC[LG] = BK; var w = bkWait; bkWait = []; w.forEach(function (f) { f(BK); });
     }
     if (!window.fetch) return done([]);
     fetch("/blog-kb/" + LG + ".json").then(function (r) { return r.ok ? r.json() : []; }).then(done).catch(function () { done([]); });
@@ -620,9 +619,85 @@
     after(q);
   }
 
+  /* ---------- answer in the language of the question ---------- */
+  function setLang(l) {
+    if (l === LG && KB) return;
+    LG = l; HOME = l === "ar" ? "/" : "/" + l + "/";
+    if (l === PG) { for (var k in T0) T[k] = T0[k]; } else { setT(); T.svc = SV[l] || SV.en; }
+    RDT = RD[l] || RD.en; cityNames();
+    KB = KBC[l] || null; kbWait = []; BK = BKC[l] || null; bkWait = [];
+  }
+  var LW = {
+    en:"the,is,are,what,how,much,does,do,can,you,where,when,which,i,my,want,visit,safe,cost,price,there,need,have,from,please,hello,hi,thanks,many,days,trip,go",
+    de:"ich,ist,wie,was,viel,kostet,der,die,das,und,gibt,es,sie,wann,reise,nicht,kann,mit,ein,eine,wir,gibt's,hallo,danke,welche,wo",
+    fr:"je,est,le,la,les,combien,coûte,coute,quel,quelle,vous,pour,une,des,du,et,comment,voyage,prix,bonjour,merci,peut,faut,où,ou,c'est,quels",
+    es:"el,la,los,las,cuánto,cuanto,cuesta,qué,que,es,hay,cómo,como,para,viaje,precio,y,hola,gracias,puedo,dónde,donde,cuál,son,un,una",
+    it:"il,lo,gli,quanto,costa,che,è,come,per,viaggio,prezzo,sono,una,della,e,ciao,grazie,posso,dove,quale,quali,del,un",
+    pt:"o,os,quanto,custa,você,voce,é,como,para,viagem,preço,preco,uma,não,nao,do,da,e,olá,ola,obrigado,posso,onde,qual,são,um",
+    nl:"de,het,een,wat,hoe,kost,is,ik,reis,prijs,van,en,niet,zijn,hallo,bedankt,kan,waar,welke,veel",
+    sv:"vad,hur,kostar,jag,är,och,en,det,resa,pris,inte,hej,tack,kan,var,vilken,mycket",
+    da:"hvad,hvordan,koster,jeg,er,og,en,det,rejse,pris,ikke,hej,tak,kan,hvor,hvilken,meget",
+    no:"hva,hvordan,koster,jeg,er,og,en,det,reise,pris,ikke,hei,takk,kan,hvor,hvilken,mye",
+    fi:"mitä,mita,paljonko,kuinka,onko,ja,on,matka,hinta,mikä,mika,voiko,hei,kiitos,missä,missa,kauanko",
+    pl:"ile,kosztuje,jak,czy,jest,co,wycieczka,cena,nie,i,dzień,dobry,dziękuję,gdzie,można,który",
+    cs:"kolik,stojí,stoji,jak,je,co,zájezd,zajezd,cena,a,není,dobrý,den,děkuji,kde,lze,který",
+    sk:"koľko,kolko,stojí,ako,je,čo,zájazd,cena,nie,dobrý,ďakujem,kde,ktorý",
+    hr:"koliko,košta,kosta,kako,je,što,sto,putovanje,cijena,i,bok,hvala,gdje,mogu,koji",
+    ro:"cât,cat,costă,costa,cum,este,ce,excursie,preț,pret,și,si,bună,mulțumesc,unde,care,pot",
+    tr:"ne,kadar,nasıl,nasil,mı,mi,mu,mü,var,fiyat,fiyatı,nedir,için,icin,merhaba,teşekkür,nerede,hangi,kaç,kac,ve,güvenli,guvenli,ücret,ucret,tur,turu,gezi",
+    id:"berapa,harga,apa,bagaimana,saya,ini,itu,ada,untuk,dan,bisa,kapan,tidak,perjalanan,halo,terima,kasih,di,mana,yang",
+    ms:"berapa,harga,apa,bagaimana,saya,ini,itu,ada,untuk,dan,boleh,bila,tidak,lawatan,helo,terima,kasih,di,mana,yang,berapakah,awak",
+    vi:"giá,bao,nhiêu,không,có,là,tôi,của,và,được,đi,ngày,xin,chào,cảm,ơn,ở,đâu,nào,bạn,toàn,những,cho,với,này,người,gì,sao,thế,khi,mấy,muốn,xem,đến,mất,nhiều,tiền,chuyến,thì,hay"
+  };
+  var LWS = {}; for (var lw in LW) LWS[lw] = LW[lw].split(",");
+  var LCH = { vi:/[ơưđạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ]/g, tr:/[ğış]/g, pl:/[ąęłńśźż]/g, cs:/[ěřů]/g, sk:/[ľĺŕôä]/g, ro:/[ășțşţâî]/g,
+    hr:/[đćčšž]/g, de:/[ßäöü]/g, da:/[æøå]/g, no:/[æøå]/g, sv:/[åäö]/g, fi:/[äö]/g, pt:/[ãõçáéêó]/g, es:/[ñ¿¡áéíóú]/g, fr:/[çèêëœàùûîé]/g, it:/[àèéìòù]/g };
+  function detect(q) {
+    var s = String(q || "").toLowerCase();
+    if (/[가-힯]/.test(s)) return "ko";
+    if (/[぀-ヿ]/.test(s)) return "ja";
+    if (/[一-鿿]/.test(s)) {
+      var tw = (s.match(/[這們麼嗎來時說會為與發現對點價錢遊覽飯館個機場導買賣車開關門問題]/g) || []).length,
+          cn = (s.match(/[这们么吗来时说会为与发现对点价钱游览饭馆个机场导买卖车开关门问题]/g) || []).length;
+      return tw > cn ? "zh-tw" : cn > tw ? "zh" : (LG === "zh-tw" || LG === "zh" ? LG : "zh");
+    }
+    if (/[฀-๿]/.test(s)) return "th";
+    if (/[஀-௿]/.test(s)) return "ta";
+    if (/[ऀ-ॿ]/.test(s)) return "hi";
+    if (/[Ⴀ-ჿ]/.test(s)) return "ka";
+    if (/[Ͱ-Ͽ]/.test(s)) return "el";
+    if (/[Ѐ-ӿ]/.test(s)) return "ru";
+    if (/[؀-ۿ]/.test(s)) {
+      if (/[ڕڵۆێەڤ]/.test(s)) return "ckb";
+      if (/[ےٹڈڑںۓ]/.test(s)) return "ur";
+      var fa = (s.match(/[یکپژ]/g) || []).length + (/(^|\s)(است|می|چه|چقدر|چطور|آیا|هست|برای|را)(\s|$)/.test(s) ? 2 : 0),
+          ar = (s.match(/[يكةى]/g) || []).length + (/(^|\s)(ال|هل|كم|ما|ماذا|كيف|هي|هو|في|على|من|شنو|شكد)/.test(s) ? 1 : 0);
+      if (fa > ar) return LG === "ur" ? "ur" : "fa";
+      if (ar > fa) return "ar";
+      return ["ar", "fa", "ur", "ckb"].indexOf(LG) >= 0 ? LG : "ar";
+    }
+    if (!/[a-zà-ỹ]/.test(s)) return null;
+    var tk = s.replace(/[^\p{L}\p{N}' ]/gu, " ").split(/\s+/).filter(Boolean), sc = {}, best = null, b1 = 0, b2 = 0;
+    for (var l in LWS) {
+      var c = 0;
+      tk.forEach(function (w) { if (LWS[l].indexOf(w) >= 0) c += 1.5; });
+      if (LCH[l]) c += Math.min(2, (s.match(LCH[l]) || []).length);
+      sc[l] = c;
+    }
+    LCH.vi.lastIndex = 0; if (sc.vi >= 3 || (sc.vi >= 1.5 && LCH.vi.test(s))) return "vi";
+    for (var l2 in sc) { if (sc[l2] > b1) { b2 = b1; b1 = sc[l2]; best = l2; } else if (sc[l2] > b2) b2 = sc[l2]; }
+    if (!best || b1 < 2) return null;
+    if ((best === "ms" || best === "id") && Math.abs(sc.ms - sc.id) < 1.5) return (LG === "ms" || LG === "id") ? LG : (PG === "ms" ? "ms" : "id");
+    /* close calls between related languages: keep the page / current language when it is one of them */
+    if (b1 - b2 < 1) { if (sc[LG] === b1) return LG; return null; }
+    if ((best === "ms" || best === "id") && (LG === "ms" || LG === "id") && sc[LG] >= b1 - 1) return LG;
+    return best;
+  }
+
   function send() {
     var q = I.value.trim(); if (!q) return;
     I.value = ""; me(q); lastQ = q;
+    var dl = detect(q); if (dl && LANGS.concat("ar").indexOf(dl) >= 0 && dl !== LG) setLang(dl);
     var d = say(""); d.innerHTML = '<span class="ftb-dots"><i></i><i></i><i></i></span>';
     loadKB(function () { loadBK(function () { setTimeout(function () { d.remove(); answer(q); }, 350); }); });
   }
