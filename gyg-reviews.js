@@ -54,6 +54,28 @@
     it: ["Recensioni dei viaggiatori", "Recensioni verificate su GetYourGuide", "Prenotazione verificata su GetYourGuide", "Mostra traduzione", "Mostra originale", "Tutte le recensioni su GetYourGuide", "Precedente", "Successivo", "Scorri per leggere tutto"],
     tr: ["Gezgin yorumları", "GetYourGuide'da doğrulanmış yorumlar", "GetYourGuide'da doğrulanmış rezervasyon", "Çeviriyi göster", "Orijinali göster", "GetYourGuide'daki tüm yorumlar", "Önceki", "Sonraki", "Devamı için kaydırın"],
     fa: ["نظرات مسافران", "نظرات تأییدشده در GetYourGuide", "رزرو تأییدشده در GetYourGuide", "نمایش ترجمه", "متن اصلی", "همه نظرات در GetYourGuide", "قبلی", "بعدی", "برای خواندن ادامه اسکرول کنید"],
+    pl: ["Opinie podróżnych", "Zweryfikowane opinie na GetYourGuide", "Zweryfikowana rezerwacja na GetYourGuide", "Pokaż tłumaczenie", "Pokaż oryginał", "Wszystkie opinie na GetYourGuide", "Poprzednia", "Następna", "Przewiń, aby czytać dalej"],
+    nl: ["Reviews van reizigers", "Geverifieerde reviews op GetYourGuide", "Geverifieerde boeking op GetYourGuide", "Vertaling tonen", "Origineel tonen", "Alle reviews op GetYourGuide", "Vorige", "Volgende", "Scroll om verder te lezen"],
+    pt: ["Avaliações de viajantes", "Avaliações verificadas no GetYourGuide", "Reserva verificada no GetYourGuide", "Ver tradução", "Ver original", "Todas as avaliações no GetYourGuide", "Anterior", "Seguinte", "Deslize para ler mais"],
+    cs: ["Recenze cestovatelů", "Ověřené recenze na GetYourGuide", "Ověřená rezervace na GetYourGuide", "Zobrazit překlad", "Zobrazit originál", "Všechny recenze na GetYourGuide", "Předchozí", "Další", "Posuňte pro další text"],
+    sk: ["Recenzie cestovateľov", "Overené recenzie na GetYourGuide", "Overená rezervácia na GetYourGuide", "Zobraziť preklad", "Zobraziť originál", "Všetky recenzie na GetYourGuide", "Predchádzajúca", "Ďalšia", "Posuňte pre ďalší text"],
+    hr: ["Recenzije putnika", "Provjerene recenzije na GetYourGuide", "Provjerena rezervacija na GetYourGuide", "Prikaži prijevod", "Prikaži izvornik", "Sve recenzije na GetYourGuide", "Prethodna", "Sljedeća", "Pomaknite za nastavak"],
+    ro: ["Recenziile călătorilor", "Recenzii verificate pe GetYourGuide", "Rezervare verificată pe GetYourGuide", "Vezi traducerea", "Vezi originalul", "Toate recenziile pe GetYourGuide", "Anterior", "Următor", "Derulați pentru a citi mai mult"],
+    el: ["Κριτικές ταξιδιωτών", "Επαληθευμένες κριτικές στο GetYourGuide", "Επαληθευμένη κράτηση στο GetYourGuide", "Εμφάνιση μετάφρασης", "Εμφάνιση πρωτοτύπου", "Όλες οι κριτικές στο GetYourGuide", "Προηγούμενη", "Επόμενη", "Κάντε κύλιση για περισσότερα"],
+    sv: ["Resenärers omdömen", "Verifierade omdömen på GetYourGuide", "Verifierad bokning på GetYourGuide", "Visa översättning", "Visa original", "Alla omdömen på GetYourGuide", "Föregående", "Nästa", "Scrolla för att läsa mer"],
+    da: ["Rejsendes anmeldelser", "Verificerede anmeldelser på GetYourGuide", "Verificeret booking på GetYourGuide", "Vis oversættelse", "Vis original", "Alle anmeldelser på GetYourGuide", "Forrige", "Næste", "Rul for at læse mere"],
+    no: ["Reisendes omtaler", "Verifiserte omtaler på GetYourGuide", "Verifisert bestilling på GetYourGuide", "Vis oversettelse", "Vis original", "Alle omtaler på GetYourGuide", "Forrige", "Neste", "Rull for å lese mer"],
+    fi: ["Matkailijoiden arviot", "Vahvistetut arviot GetYourGuidessa", "Vahvistettu varaus GetYourGuidessa", "Näytä käännös", "Näytä alkuperäinen", "Kaikki arviot GetYourGuidessa", "Edellinen", "Seuraava", "Vieritä lukeaksesi lisää"],
+    ka: ["მოგზაურების შეფასებები", "დადასტურებული შეფასებები GetYourGuide-ზე", "დადასტურებული ჯავშანი GetYourGuide-ზე", "თარგმანის ჩვენება", "ორიგინალის ჩვენება", "ყველა შეფასება GetYourGuide-ზე", "წინა", "შემდეგი", "გადაახვიეთ მეტის წასაკითხად"],
+    ko: ["여행자 후기", "GetYourGuide 인증 후기", "GetYourGuide 인증 예약", "번역 보기", "원문 보기", "GetYourGuide의 모든 후기", "이전", "다음", "스크롤하여 더 읽기"],
+    ja: ["旅行者の口コミ", "GetYourGuideの認証済み口コミ", "GetYourGuideで認証済みの予約", "翻訳を表示", "原文を表示", "GetYourGuideのすべての口コミ", "前へ", "次へ", "スクロールして続きを読む"],
+    zh: ["旅行者评价", "GetYourGuide 认证评价", "GetYourGuide 认证预订", "显示翻译", "显示原文", "GetYourGuide 上的全部评价", "上一个", "下一个", "向下滚动阅读更多"],
+    "zh-tw": ["旅客評價", "GetYourGuide 認證評價", "GetYourGuide 認證預訂", "顯示翻譯", "顯示原文", "GetYourGuide 上的所有評價", "上一則", "下一則", "向下捲動閱讀更多"],
+    hi: ["यात्रियों की समीक्षाएँ", "GetYourGuide पर सत्यापित समीक्षाएँ", "GetYourGuide पर सत्यापित बुकिंग", "अनुवाद दिखाएँ", "मूल दिखाएँ", "GetYourGuide पर सभी समीक्षाएँ", "पिछला", "अगला", "और पढ़ने के लिए स्क्रॉल करें"],
+    ta: ["பயணிகளின் மதிப்புரைகள்", "GetYourGuide சரிபார்க்கப்பட்ட மதிப்புரைகள்", "GetYourGuide சரிபார்க்கப்பட்ட முன்பதிவு", "மொழிபெயர்ப்பைக் காட்டு", "மூலத்தைக் காட்டு", "GetYourGuide இல் அனைத்து மதிப்புரைகளும்", "முந்தையது", "அடுத்தது", "மேலும் படிக்க உருட்டவும்"],
+    th: ["รีวิวจากนักเดินทาง", "รีวิวที่ยืนยันแล้วบน GetYourGuide", "การจองที่ยืนยันแล้วบน GetYourGuide", "แสดงคำแปล", "แสดงต้นฉบับ", "รีวิวทั้งหมดบน GetYourGuide", "ก่อนหน้า", "ถัดไป", "เลื่อนเพื่ออ่านต่อ"],
+    ms: ["Ulasan pengembara", "Ulasan disahkan di GetYourGuide", "Tempahan disahkan di GetYourGuide", "Tunjuk terjemahan", "Tunjuk asal", "Semua ulasan di GetYourGuide", "Sebelumnya", "Seterusnya", "Tatal untuk membaca lagi"],
+    id: ["Ulasan wisatawan", "Ulasan terverifikasi di GetYourGuide", "Pemesanan terverifikasi di GetYourGuide", "Tampilkan terjemahan", "Tampilkan asli", "Semua ulasan di GetYourGuide", "Sebelumnya", "Berikutnya", "Gulir untuk membaca lagi"],
     ur: ["مسافروں کے تبصرے", "GetYourGuide پر تصدیق شدہ تبصرے", "GetYourGuide پر تصدیق شدہ بکنگ", "ترجمہ دیکھیں", "اصل متن", "GetYourGuide پر تمام تبصرے", "پچھلا", "اگلا", "مزید پڑھنے کے لیے اسکرول کریں"]
   };
   var U = UI[LG] || UI.en;
@@ -176,7 +198,7 @@
       setInterval(function () { if (visible && !paused && !document.hidden) go(cur() + 1); }, 6500);
   }
   var T = {};
-  var HAS_T = ["ar","ckb","ru","de","fr","es","it","tr"];
+  var HAS_T = ["ar","ckb","ru","de","fr","es","it","tr","pl","nl","pt","cs","sk","hr","ro","el","sv","da","no","fi","ka","ko","ja","zh","zh-tw","hi","ta","th","ms","id","fa","ur"];
   function start() {
     if (HAS_T.indexOf(LG) < 0 || !window.fetch) return build();
     var base = /fabletour\.com$|^localhost|^127\./.test(location.hostname) && !PH ? "" : "https://iraq.fabletour.com";
