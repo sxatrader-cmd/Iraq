@@ -67,7 +67,8 @@
       a.appendChild(ph); a.appendChild(bd); grid.appendChild(a);
     });
     sec.appendChild(grid);
-    form.parentNode.insertBefore(sec, form);
+    var us = document.getElementById("usa-canada"), anchor = (us && us.nextElementSibling === form) ? us : form;
+    anchor.parentNode.insertBefore(sec, anchor);
   }
 
   function go() {
