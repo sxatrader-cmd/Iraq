@@ -42,7 +42,7 @@
   var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh","ckb"];
   var PH = document.getElementById("gyg-reviews-here");
   var seg = (location.pathname.split("/")[1] || "").toLowerCase();
-  var LG = PH ? ((PH.getAttribute("data-lang") || document.documentElement.lang || "en").toLowerCase().slice(0, 2)) : (LANGS.indexOf(seg) >= 0 ? seg : "ar");
+  var LG = PH ? ((PH.getAttribute("data-lang") || document.documentElement.lang || "en").toLowerCase().replace(/^(zh-tw|ckb|[a-z]{2}).*$/, "$1")) : (LANGS.indexOf(seg) >= 0 ? seg : "ar");
   var UI = {
     ar: ["آراء المسافرين", "تقييمات موثّقة على GetYourGuide", "حجز موثّق على GetYourGuide", "عرض الترجمة", "النص الأصلي", "كل التقييمات على GetYourGuide", "السابق", "التالي", "مرّر للأسفل لقراءة المزيد"],
     ckb: ["ڕای گەشتیاران", "هەڵسەنگاندنی پشتڕاستکراوە لە GetYourGuide", "حیجزی پشتڕاستکراوە لە GetYourGuide", "وەرگێڕان پیشان بدە", "دەقی ڕەسەن", "هەموو هەڵسەنگاندنەکان لە GetYourGuide", "پێشوو", "دواتر", "بۆ خوێندنەوەی زیاتر بەرەو خوارەوە بڕۆ"],
@@ -129,10 +129,14 @@
           w.classList.toggle("more", over && !end); mh.classList.toggle("on", over && p.scrollTop < 8); }
         p.addEventListener("scroll", chk, { passive: true }); setTimeout(chk, 50); window.addEventListener("resize", chk); p._chk = chk;
       })(p, w, mh);
-      if (r.en && LG !== r.lang) {
-        var b = el("button", "gr-tr", U[3]); b.type = "button"; var shown = false;
-        b.addEventListener("click", function () { shown = !shown; p.textContent = shown ? r.en : r.x; p.lang = shown ? "en" : r.lang; b.textContent = shown ? U[4] : U[3]; p.scrollTop = 0; p._chk && p._chk(); });
-        c.appendChild(b);
+      var ol = r.lang || "en", tr = LG === ol ? null : (LG === "en" ? r.en : (T[r.d] || null)), tl2 = tr ? LG : "en";
+      if (!tr && LG !== ol && r.en && ol !== "en") tr = r.en; /* no page-language text yet: offer English */
+      if (tr) {
+        var dflt = tl2 === LG; /* translation in page language is shown by default */
+        var b = el("button", "gr-tr"); b.type = "button"; var shown = dflt;
+        var paint = function () { p.textContent = shown ? tr : r.x; p.lang = shown ? tl2 : ol; b.textContent = shown ? U[4] : U[3]; p.scrollTop = 0; p._chk && p._chk(); };
+        b.addEventListener("click", function () { shown = !shown; paint(); });
+        paint(); c.appendChild(b);
       }
       var ft = el("div", "gr-ft"), tl = el("a", "gr-tour", r.t + " ↗"); tl.href = r.u || GYG; tl.target = "_blank"; tl.rel = "noopener"; ft.appendChild(tl);
       var v = el("span", "gr-ver"); v.innerHTML = CHK; v.appendChild(document.createTextNode(U[2])); ft.appendChild(v);
@@ -171,5 +175,14 @@
     if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches))
       setInterval(function () { if (visible && !paused && !document.hidden) go(cur() + 1); }, 6500);
   }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", build); else build();
+  var T = {};
+  var HAS_T = ["ar","ckb","ru","de","fr","es","it","tr"];
+  function start() {
+    if (HAS_T.indexOf(LG) < 0 || !window.fetch) return build();
+    var base = /fabletour\.com$|^localhost|^127\./.test(location.hostname) && !PH ? "" : "https://iraq.fabletour.com";
+    var done = false, to = setTimeout(function () { if (!done) { done = true; build(); } }, 4000);
+    fetch(base + "/reviews-i18n/" + LG + ".json").then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+      .then(function (j) { if (done) return; done = true; clearTimeout(to); T = j || {}; build(); });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
 })();
