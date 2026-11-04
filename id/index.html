@@ -1323,7 +1323,7 @@ lb.addEventListener("click",e=>{ if(e.target===lb) closeLB(); });
 document.addEventListener("keydown",e=>{ if(lb.hidden) return; if(e.key==="Escape") closeLB(); if(e.key==="ArrowRight") step(lang==="ar"?-1:1); if(e.key==="ArrowLeft") step(lang==="ar"?1:-1); });
 
 /* ================= LANGUAGE ================= */
-$("#langSel").addEventListener("change",e=>{ const v=e.target.value; location.href="../"+(v==="ar"?"":v+"/")+location.hash; });
+$("#langSel").addEventListener("change",e=>{ const v=e.target.value; location.href="/"+(v==="ar"?"":v+"/")+location.hash; });
 
 /* ================= FORM (Web3Forms) ================= */
 $("#form").addEventListener("submit",async e=>{
