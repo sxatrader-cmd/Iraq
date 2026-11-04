@@ -354,8 +354,87 @@
     }).catch(function () { done(document); });
   }
 
+  /* ---------- blog knowledge (every article of this language, /blog-kb/<lang>.json) ---------- */
+  var BK = null, bkWait = [];
+  var RD = { ar:"اقرأ المقال كاملاً", ckb:"هەموو بابەتەکە بخوێنەوە", en:"Read the full article", ru:"Читать статью полностью", de:"Ganzen Artikel lesen", fr:"Lire l'article complet", es:"Leer el artículo completo", it:"Leggi l'articolo completo", tr:"Yazının tamamını okuyun", fa:"خواندن کامل مقاله", ur:"پورا مضمون پڑھیں", pl:"Przeczytaj cały artykuł", nl:"Lees het hele artikel", pt:"Ler o artigo completo", cs:"Přečíst celý článek", sk:"Prečítať celý článok", hr:"Pročitajte cijeli članak", ro:"Citește articolul complet", el:"Διαβάστε όλο το άρθρο", fi:"Lue koko artikkeli", sv:"Läs hela artikeln", da:"Læs hele artiklen", no:"Les hele artikkelen", ka:"სრული სტატიის წაკითხვა", zh:"阅读全文", "zh-tw":"閱讀全文", ja:"記事を全文読む", ko:"전체 글 읽기", ms:"Baca artikel penuh", id:"Baca artikel lengkap", th:"อ่านบทความฉบับเต็ม", hi:"पूरा लेख पढ़ें", ta:"முழு கட்டுரையைப் படிக்க" };
+  var RDT = RD[LG] || RD.en;
+  /* question words that say nothing about the subject */
+  var QW = "who,was,were,is,are,did,does,do,can,the,an,how much,what,where,when,which,whom,whose,wer,war,ist,sind,hat,qui,est,etait,quien,era,chi,kto,был,была,это,هل,كان,كانت,tell,about,explain,know,information,please,there,their,this,that,with,from,have,does,story,history,iraq,visit,ماهي,ماهو,اريد,اعرف,معلومات,احكيلي,حدثني,اخبرني,عن,ما,هي,هو,من,شنو,شني,شو,وين,اين,متى,كيف,ليش,لماذا,قصه,قصة,تاريخ,العراق,عراق,زياره,زيارة,что,такое,кто,такой,расскажи,расскажите,про,где,когда,история,ирак,erzahl,erzahlen,etwas,uber,wann,geschichte,irak,qu est,quoi,parle,moi,histoire,parlame,raccontami,storia,cuentame,sobre,historia,nedir,kimdir,hakkinda,tarihi,nedir".split(",").map(norm);
+  function loadBK(cb) {
+    if (BK) return cb(BK);
+    bkWait.push(cb); if (bkWait.length > 1) return;
+    function done(j) {
+      BK = (j || []).map(function (p) {
+        var id = p.t + " " + p.h + " " + p.p + " " + p.k;
+        return { p: p, idn: norm(id), ttl: norm(p.t + " " + p.h + " " + p.p), all: norm(id + " " + p.s.map(function (x) { return x[0] + " " + x[1]; }).join(" ") + " " + p.q.map(function (x) { return x.join(" "); }).join(" ")),
+          sec: p.s.map(function (x) { return { h: norm(x[0]), t: norm(x[1]) }; }), fq: p.q.map(function (x) { return grams(norm(x[0])); }) };
+      });
+      var w = bkWait; bkWait = []; w.forEach(function (f) { f(BK); });
+    }
+    if (!window.fetch) return done([]);
+    fetch("/blog-kb/" + LG + ".json").then(function (r) { return r.ok ? r.json() : []; }).then(done).catch(function () { done([]); });
+  }
+  function qTokens(n) {
+    return n.split(" ").filter(function (w) {
+      if (QW.indexOf(w) >= 0 || STOP.indexOf(w) >= 0) return false;
+      return w.length >= 2;
+    });
+  }
+  function blogFind(q) {
+    if (!BK || !BK.length) return null;
+    var n = norm(q), tk = qTokens(n); if (!tk.length) return null;
+    var df = {}; tk.forEach(function (w) { df[w] = 0; BK.forEach(function (b) { if (has(b.all, w)) df[w]++; }); });
+    var best = null, bs = 0;
+    BK.forEach(function (b) {
+      var strong = 0, sc = 0, hitId = [];
+      tk.forEach(function (w) {
+        if (!df[w]) return;
+        var idf = 1 / df[w];
+        if (has(b.ttl, w)) { strong++; sc += 4 * idf; hitId.push(w); }
+        else if (has(b.idn, w)) { strong++; sc += 2 * idf; }
+        else if (has(b.all, w)) sc += idf;
+      });
+      /* whole phrase of the question found in the title / keywords */
+      for (var i = 0; i + 1 < tk.length; i++) { var ph = tk[i] + " " + tk[i + 1]; if (b.ttl.indexOf(ph) >= 0) sc += 2; else if (b.idn.indexOf(ph) >= 0) sc += 1; }
+      if (strong && sc > bs) { bs = sc; best = { b: b, rest: tk.filter(function (w) { return hitId.indexOf(w) < 0; }), n: n }; }
+    });
+    return bs >= 1 ? best : null;
+  }
+  function cut(t, max) {
+    if (t.length <= max) return t;
+    var c = t.slice(0, max), i = Math.max(c.lastIndexOf(". "), c.lastIndexOf("。"), c.lastIndexOf(".\n"), c.lastIndexOf("\n"), c.lastIndexOf("؟ "), c.lastIndexOf("! "));
+    return (i > max * 0.5 ? c.slice(0, i + 1) : c) + " …";
+  }
+  function blogAnswer(hit) {
+    var b = hit.b, p = b.p, gq = grams(hit.n);
+    /* 1) one of the article's own FAQ questions */
+    var fb = -1, fs = 0; b.fq.forEach(function (g, i) { var fqn = norm(p.q[i][0]); if (hit.rest.length && !hit.rest.some(function (w) { return has(fqn, w); })) return; var c = Math.min(contain(gq, g), contain(g, gq)); if (c > fs) { fs = c; fb = i; } });
+    /* 2) the section that best matches the rest of the question */
+    var si = 0, ss = 0;
+    if (hit.rest.length) b.sec.forEach(function (x, i) {
+      var c = 0; hit.rest.forEach(function (w) { if (has(x.h, w)) c += 2; else if (has(x.t, w)) c += 1; }); if (c > ss) { ss = c; si = i; }
+    });
+    if (ss < 2) { si = 0; ss = 0; }
+    /* a section heading that is (almost) the question itself, e.g. "What is the Ishtar Gate?" */
+    var hs = 0, hi = -1; b.sec.forEach(function (x, i) { if (!i) return; var hg = grams(x.h), c = Math.min(contain(hg, gq), contain(gq, hg) + 0.15); if (c > hs) { hs = c; hi = i; } });
+    if (hs >= 0.75 && hs >= fs) { si = hi; ss = 3; }
+    var c = el("div", "ftb-card ftb-blog");
+    if (p.c) c.appendChild(el("small")).textContent = p.c;
+    if (fs >= 0.6 && ss < 3) {
+      c.appendChild(el("b")).textContent = p.q[fb][0];
+      c.appendChild(el("p")).textContent = p.q[fb][1];
+    } else {
+      var s = p.s[si] || p.s[0];
+      c.appendChild(el("b")).textContent = s ? s[0] : p.t;
+      if (s) c.appendChild(el("p")).textContent = cut(s[1], 1400);
+      if (si === 0 && p.f && p.f.length) { var u = el("ul"); p.f.forEach(function (f) { u.appendChild(el("li")).textContent = f[0] + ": " + f[1]; }); c.appendChild(u); }
+    }
+    var a = el("a"); a.href = p.u; a.textContent = RDT + " →"; c.appendChild(a);
+    M.appendChild(c); scroll();
+  }
+
   /* ---------- UI ---------- */
-  var css = ".ftb-l{position:fixed;inset-inline-start:18px;bottom:20px;z-index:31;width:56px;height:56px;border-radius:50%;border:0;background:var(--navy,#1B2A47);color:var(--gold,#B8955A);display:grid;place-items:center;cursor:pointer;box-shadow:0 0 0 2px var(--gold,#B8955A),0 8px 22px rgba(27,42,71,.35);transition:transform .2s}" +
+  var css = ".ftb-blog p{white-space:pre-line}.ftb-blog ul{margin-top:8px}.ftb-l{position:fixed;inset-inline-start:18px;bottom:20px;z-index:31;width:56px;height:56px;border-radius:50%;border:0;background:var(--navy,#1B2A47);color:var(--gold,#B8955A);display:grid;place-items:center;cursor:pointer;box-shadow:0 0 0 2px var(--gold,#B8955A),0 8px 22px rgba(27,42,71,.35);transition:transform .2s}" +
     ".ftb-l:hover{transform:scale(1.06)}.ftb-l svg{width:27px;height:27px}" +
     ".ftb-l.wa-up{bottom:88px}" +
     ".ftb-tip{position:fixed;inset-inline-start:84px;z-index:31;background:#fff;color:var(--navy,#1B2A47);font-family:inherit;font-weight:600;font-size:14px;line-height:1.3;padding:9px 14px;border-radius:18px;box-shadow:0 6px 20px rgba(27,42,71,.25);border:1px solid var(--gold,#B8955A);cursor:pointer;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;pointer-events:none;white-space:nowrap}" +
@@ -497,6 +576,17 @@
       if (it.inc2) { var fi = KB.faq.filter(function (f) { return f.tags.fly || f.tags.incl; })[0]; if (fi) say(fi.a); }
       say(T.svc); return after(q);
     }
+    /* blog articles: places, people, events the blog has written about */
+    if (!it.price && !it.book && !it.visa && !it.cancel && !it.pay && !it.group && !it.incl && !it.safe && !it.dt && !it.svc && !it.prog) {
+      var bh = blogFind(q);
+      if (bh) {
+        blogAnswer(bh);
+        var pl = norm(bh.b.p.p || "");
+        var tr1 = KB.dt.map(function (d) { var c = 0; d.w.forEach(function (w) { if (pl && has(pl, w)) c++; }); return { d: d, c: c }; }).filter(function (x) { return x.c; }).sort(function (a, b) { return b.c - a.c; });
+        if (tr1.length) dtCard(tr1[0].d);
+        return after(q);
+      }
+    }
     /* places: day trips / programme stops named in the question */
     var trips = KB.dt.map(function (d) { var c = 0; d.w.forEach(function (w) { if (has(n, w)) c++; }); return { d: d, c: c }; })
       .filter(function (x) { return x.c; }).sort(function (a, b) { return b.c - a.c; }).map(function (x) { return x.d; });
@@ -530,7 +620,7 @@
     var q = I.value.trim(); if (!q) return;
     I.value = ""; me(q); lastQ = q;
     var d = say(""); d.innerHTML = '<span class="ftb-dots"><i></i><i></i><i></i></span>';
-    loadKB(function () { setTimeout(function () { d.remove(); answer(q); }, 350); });
+    loadKB(function () { loadBK(function () { setTimeout(function () { d.remove(); answer(q); }, 350); }); });
   }
 
   var started = false;

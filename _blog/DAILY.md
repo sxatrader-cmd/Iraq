@@ -62,7 +62,7 @@ Saif's rule: photos must be free of rights, shown WITHOUT any source/credit, and
 3. Check: every new page exists; ld+json blocks parse (`json.loads`); internal links point to existing files; `sitemap.xml` parses as XML.
 4. `git pull --rebase origin main` (another group may have pushed), rebuild if the pull changed `_blog/`, commit `Blog: <topic> (<langs>)`, push to `main`. If the push is rejected, pull --rebase again and retry once.
 
-Only touch `_blog/`, the `blog/` folders, `img/` and `sitemap.xml`. Never edit the tour pages. For biography/story topics the `place` field is the related city or shrine (e.g. Najaf), and `geo` is that shrine's location.
+Only touch `_blog/`, the `blog/` folders, `blog-kb/`, `img/` and `sitemap.xml`. `build.py` also regenerates `blog-kb/<lang>.json` (the website chatbot answers visitors' questions from every article) — always commit it together with the article. Never edit the tour pages. For biography/story topics the `place` field is the related city or shrine (e.g. Najaf), and `geo` is that shrine's location.
 
 
 ## Central Kurdish (ckb) notes

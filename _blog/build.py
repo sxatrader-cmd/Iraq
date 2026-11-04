@@ -417,3 +417,5 @@ if __name__ == "__main__":
     # footer links to the other Fable Tour sites (+ their CSS) on the freshly built blog pages
     import sys; sys.path.insert(0, str(pathlib.Path(__file__).parent / "tools"))
     import footer_sites; footer_sites.run()
+    # chatbot knowledge base from every article (/blog-kb/<lang>.json)
+    import blog_kb; blog_kb.run()
