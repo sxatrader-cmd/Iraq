@@ -3,14 +3,14 @@
 to the day-trips section of every page that has it (all languages, country/city pages included),
 and builds its own page /<lang>/day-trips/assyria-hatra-nimrud/ (Arabic: /day-trips/assyria-hatra-nimrud/)
 + sitemap entries.  Ramada Hotel International package only: 650,000 IQD -> $500 flat for 1-3 people
-(the stepper stops at 3).  Source: discovery.fabletour.com/assyria-tour/.  Idempotent."""
+1 person $500, 2 people $600, 3+ people $250 per person.  Source: discovery.fabletour.com/assyria-tour/.  Idempotent."""
 import re, json, html, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 D = json.loads((pathlib.Path(__file__).parent / "assyria_i18n.json").read_text())
 KEY, SLUG, TPL = "assyria", "assyria-hatra-nimrud", "samarra"
-PRICE, MAXP = 500, 3
-PRICE_JS = f"{KEY}:function(n){{return {PRICE}}},"
+PRICE = 500
+PRICE_JS = f"{KEY}:function(n){{return n<2?500:n<3?600:250*n}},"
 IMGS = ["assyria-hatra-temple.webp", "assyria-hatra-iwan.webp", "assyria-hatra-gate.webp",
         "assyria-ashur-brick.webp", "assyria-mosul-nuri.webp", "assyria-nimrud-inscription.webp",
         "assyria-ramada-mosul.webp", "assyria-ramada-room.webp", "assyria-ramada-suite.webp"]
@@ -40,7 +40,7 @@ def img_pre(card):
 def build_card(tpl, l, solo=False, more_lbl=None):
     t = D[l]
     pre = img_pre(tpl)
-    a = re.sub(r'<article class="dt[^"]*" data-trip="samarra">', f'<article class="dt" data-max="{MAXP}" data-trip="{KEY}">', tpl, 1)
+    a = re.sub(r'<article class="dt[^"]*" data-trip="samarra">', f'<article class="dt" data-trip="{KEY}">', tpl, 1)
     a = re.sub(r"background-image:url\('[^']*'\)", f"background-image:url('{pre}{IMGS[0]}')", a, 1)
     a = re.sub(r'data-full="[^"]*"', 'data-full="' + "|".join(pre + i for i in IMGS) + '"', a, 1)
     a = re.sub(r'(class="dt-ph"[^>]*aria-label=")[^"]*"', lambda m: m.group(1) + esc(t["n"]) + '"', a, 1)
@@ -53,7 +53,7 @@ def build_card(tpl, l, solo=False, more_lbl=None):
     a = a.replace('aria-controls="more-samarra"', f'aria-controls="more-{KEY}"')
     a = re.sub(r'(<div class="dt-total">.*?<b dir="ltr">)[^<]*', lambda m: m.group(1) + f"${PRICE}", a, 1, flags=re.S)
     if solo:
-        a = a.replace('<article class="dt" data-max', '<article class="dt is-solo" data-max', 1)
+        a = a.replace(f'<article class="dt" data-trip="{KEY}">', f'<article class="dt is-solo" data-trip="{KEY}">', 1)
         a = a.replace(f'<h3>{esc(t["n"])}</h3>', f'<h1 class="dt-h">{esc(t["n"])}</h1>', 1)
         a = a.replace(f'id="more-{KEY}" hidden>', f'id="more-{KEY}">', 1)
         if more_lbl:
@@ -63,6 +63,7 @@ def build_card(tpl, l, solo=False, more_lbl=None):
 
 
 def patch_js(s, l):
+    s = re.sub(rf'{KEY}:function\(n\)\{{[^}}]*\}},', PRICE_JS, s)
     if f"{KEY}:function" not in s:
         s = re.sub(r'(samarra:function\(n\)\{[^}]*\},)', lambda m: m.group(1) + "\n " + PRICE_JS, s, 1)
     if f'T={{"{KEY}"' not in s:
