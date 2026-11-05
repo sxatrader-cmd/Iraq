@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>إحصائيات البوت</title>
+<style>
+:root{--navy:#1B2A47;--gold:#B8955A;--paper:#FCFAF6;--panel:#F4EEE3;--ink:#22262E;--muted:#5F6672;--line:#E6DDCC}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif}
+header{background:var(--navy);color:#fff;padding:18px 16px}
+header h1{margin:0;font-size:20px}header p{margin:4px 0 0;color:#D9C08E;font-size:13px}
+main{max-width:760px;margin:0 auto;padding:16px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+input,select,button{font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:#fff}
+button{background:var(--gold);color:#fff;border:0;cursor:pointer}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+.k{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
+.k b{display:block;font-size:28px;color:var(--navy);line-height:1.2}.k span{color:var(--muted);font-size:13px}
+section{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:14px}
+h2{font-size:16px;margin:0 0 8px;color:var(--navy)}
+.row{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:14px}
+.row .l{flex:0 0 38%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .t{flex:1;background:var(--panel);border-radius:6px;height:12px}
+.row .t i{display:block;height:100%;background:var(--gold);border-radius:6px}
+.row .n{flex:0 0 36px;text-align:left;color:var(--muted)}
+.q{border-bottom:1px solid var(--line);padding:7px 0;font-size:14px}.q:last-child{border:0}
+.q small{color:var(--muted);display:block}
+.msg{color:var(--muted);padding:20px 0;text-align:center}
+</style>
+</head>
+<body>
+<header><h1>إحصائيات مساعد موقع العراق</h1><p>iraq.fabletour.com — عدد الزوار الذين تحدثوا مع البوت</p></header>
+<main>
+<div class="bar">
+  <input id="pin" type="password" inputmode="numeric" placeholder="الرمز السري" autocomplete="current-password">
+  <select id="days"><option value="1">اليوم</option><option value="7">آخر 7 أيام</option><option value="30" selected>آخر 30 يوم</option><option value="365">آخر سنة</option></select>
+  <button id="go">عرض</button>
+</div>
+<div id="out"><p class="msg">أدخل الرمز السري ثم اضغط عرض</p></div>
+</main>
+<script>
+(function(){
+  var URL="https://zrbbnveaqockoptftqst.supabase.co/rest/v1/rpc/chatbot_stats",K="sb_publishable_YscqakXUfq9ngPjaAhe2KA__sFDoMcl";
+  var LN={ar:"العربية",en:"English",ru:"Русский",de:"Deutsch",fr:"Français",tr:"Türkçe",es:"Español",it:"Italiano",el:"Ελληνικά",cs:"Čeština",pl:"Polski",zh:"中文","zh-tw":"中文(繁)",ja:"日本語",fa:"فارسی",ms:"Melayu",id:"Indonesia",th:"ไทย",ta:"தமிழ்",hi:"हिन्दी",ur:"اردو",fi:"Suomi",sv:"Svenska",da:"Dansk",no:"Norsk",sk:"Slovenčina",hr:"Hrvatski",ro:"Română",nl:"Nederlands",ka:"ქართული",ko:"한국어",pt:"Português",ckb:"کوردی",vi:"Tiếng Việt"};
+  var $=function(i){return document.getElementById(i)},out=$("out");
+  try{var s=localStorage.getItem("ftb_pin");if(s)$("pin").value=s;}catch(e){}
+  function esc(t){var d=document.createElement("div");d.textContent=t==null?"":t;return d.innerHTML;}
+  function bars(list,label){if(!list||!list.length)return '<p class="msg">لا توجد بيانات بعد</p>';var m=Math.max.apply(null,list.map(function(x){return x.n}));return list.map(function(x){return '<div class="row"><span class="l">'+esc(label(x))+'</span><span class="t"><i style="width:'+(100*x.n/m)+'%"></i></span><span class="n">'+x.n+'</span></div>'}).join("");}
+  function load(){
+    var pin=$("pin").value.trim();if(!pin)return;
+    try{localStorage.setItem("ftb_pin",pin);}catch(e){}
+    out.innerHTML='<p class="msg">جارٍ التحميل…</p>';
+    fetch(URL,{method:"POST",headers:{apikey:K,Authorization:"Bearer "+K,"Content-Type":"application/json"},body:JSON.stringify({days:+$("days").value,pin:pin})})
+    .then(function(r){return r.json()}).then(function(d){
+      if(!d||d.error||d.message){out.innerHTML='<p class="msg">'+(d&&d.error==="bad pin"?"الرمز غير صحيح":"خطأ: "+esc(d&&(d.message||d.error)))+'</p>';return;}
+      var h='<div class="kpis">'+
+        '<div class="k"><b>'+d.engaged+'</b><span>زائر تحدّث مع البوت</span></div>'+
+        '<div class="k"><b>'+d.opened+'</b><span>زائر فتح البوت</span></div>'+
+        '<div class="k"><b>'+d.questions+'</b><span>سؤال مكتوب</span></div>'+
+        '<div class="k"><b>'+d.whatsapp+'</b><span>تحوّل إلى واتساب</span></div>'+
+        '<div class="k"><b>'+d.calls+'</b><span>ضغط على الاتصال</span></div></div>';
+      h+='<section><h2>حسب اليوم (زوار تحدّثوا)</h2>'+bars(d.by_day,function(x){return x.day})+'</section>';
+      h+='<section><h2>حسب اللغة</h2>'+bars(d.by_lang,function(x){return LN[x.lang]||x.lang||"—"})+'</section>';
+      h+='<section><h2>أكثر الأزرار استخداماً</h2>'+bars(d.topics,function(x){return x.detail})+'</section>';
+      h+='<section><h2>الصفحات التي جاء منها الزوار</h2>'+bars(d.pages,function(x){return x.page})+'</section>';
+      h+='<section><h2>آخر الأسئلة المكتوبة</h2>'+((d.recent||[]).length?d.recent.map(function(q){return '<div class="q">'+esc(q.detail)+'<small>'+esc(LN[q.lang]||q.lang)+' · '+esc(q.page)+' · '+new Date(q.at).toLocaleString("ar-IQ",{timeZone:"Asia/Baghdad"})+'</small></div>'}).join(""):'<p class="msg">لا توجد أسئلة بعد</p>')+'</section>';
+      out.innerHTML=h;
+    }).catch(function(){out.innerHTML='<p class="msg">تعذّر الاتصال</p>';});
+  }
+  $("go").addEventListener("click",load);$("days").addEventListener("change",load);
+  $("pin").addEventListener("keydown",function(e){if(e.key==="Enter")load();});
+  if($("pin").value)load();
+})();
+</script>
+</body>
+</html>

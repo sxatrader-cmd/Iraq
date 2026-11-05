@@ -6,6 +6,16 @@
   if (window.__ftBot) return; window.__ftBot = 1;
 
   var WA = "9647711745353";
+
+  /* usage stats -> Supabase table chatbot_events (insert-only for the public key) */
+  var SB = "https://zrbbnveaqockoptftqst.supabase.co/rest/v1/chatbot_events", SBK = "sb_publishable_YscqakXUfq9ngPjaAhe2KA__sFDoMcl", SID;
+  try { SID = sessionStorage.getItem("ftb_sid"); if (!SID) { SID = Date.now().toString(36) + Math.random().toString(36).slice(2, 10); sessionStorage.setItem("ftb_sid", SID); } } catch (e) { SID = Date.now().toString(36) + Math.random().toString(36).slice(2, 10); }
+  function logBot(ev, detail) {
+    try {
+      fetch(SB, { method: "POST", keepalive: true, headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json", Prefer: "return=minimal" },
+        body: JSON.stringify({ session_id: SID, page: location.pathname, lang: typeof LG === "string" ? LG : "", event: ev, detail: String(detail || "").slice(0, 300) }) }).catch(function () {});
+    } catch (e) {}
+  }
   var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh","ckb","vi"];
   var SL = {"ziyara":"baghdad-holy-shrines","oldtown":"baghdad-old-town","aqarquf":"aqar-quf","madain":"al-madain-ctesiphon","samarra":"samarra","babylon":"babylon","babylon4":"babylon-borsippa-kifl","holy":"kufa-najaf-karbala","south":"ur-marshes"};
 
@@ -486,8 +496,8 @@
     var c = el("div", "ftb-c");
     list.forEach(function (x) {
       var b;
-      if (x.href) { b = el("a", "ftb-ch" + (x.wa ? " wa" : "")); b.href = x.href; if (x.wa) { b.target = "_blank"; b.rel = "noopener"; } else b.addEventListener("click", function (e) { go(e, x.href); }); }
-      else { b = el("button", "ftb-ch"); b.type = "button"; b.addEventListener("click", x.fn); }
+      if (x.href) { b = el("a", "ftb-ch" + (x.wa ? " wa" : "")); b.href = x.href; if (x.wa) { b.target = "_blank"; b.rel = "noopener"; b.addEventListener("click", function () { logBot("whatsapp", lastQ); }); } else if (/^tel:/.test(x.href)) b.addEventListener("click", function () { logBot("call", x.t); }); else b.addEventListener("click", function (e) { logBot("link", x.t); go(e, x.href); }); }
+      else { b = el("button", "ftb-ch"); b.type = "button"; b.addEventListener("click", function () { logBot("topic", x.t); }); b.addEventListener("click", x.fn); }
       b.textContent = x.t; c.appendChild(b);
     });
     M.appendChild(c); scroll();
@@ -696,7 +706,7 @@
 
   function send() {
     var q = I.value.trim(); if (!q) return;
-    I.value = ""; me(q); lastQ = q;
+    I.value = ""; me(q); lastQ = q; logBot("question", q);
     var dl = detect(q); if (dl && LANGS.concat("ar").indexOf(dl) >= 0 && dl !== LG) setLang(dl);
     var d = say(""); d.innerHTML = '<span class="ftb-dots"><i></i><i></i><i></i></span>';
     loadKB(function () { loadBK(function () { setTimeout(function () { d.remove(); answer(q); }, 350); }); });
@@ -706,7 +716,7 @@
   function open() {
     P.hidden = false; L.setAttribute("aria-expanded", "true"); hideTip();
     if (!started) {
-      started = true; say(T.hi);
+      started = true; say(T.hi); logBot("open", document.referrer ? document.referrer.split("/")[2] || "" : "");
       var d = say(""); d.innerHTML = '<span class="ftb-dots"><i></i><i></i><i></i></span>';
       loadKB(function () { d.remove(); menu(); });
     }
