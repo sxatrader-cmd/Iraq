@@ -318,9 +318,10 @@
     }
     addFaq(doc); if (cur && cur !== doc) addFaq(cur);
     doc.querySelectorAll("section.prog").forEach(function (p) {
-      kb.prog.push({ id: p.id, eb: txt(p.querySelector(".prog-head .eyebrow")), h: txt(p.querySelector(".prog-head h3, .prog-head h2")), r: txt(p.querySelector(".route")), se: txt(p.querySelector(".se")) });
+      var hd = p.querySelector(".prog-head") || doc.querySelector('.pc[data-prog="' + p.id + '"]') || p;
+      kb.prog.push({ id: p.id, eb: txt(hd.querySelector(".eyebrow")), h: txt(hd.querySelector("h3, h2")), r: txt(hd.querySelector(".route")), se: txt(hd.querySelector(".se")) });
     });
-    kb.dtNote = txt(doc.querySelector("#day-trips .dt-note"));
+    kb.dtNote = txt(doc.querySelector("#day-trips .dt-note, #day-trips .dt-head p"));
     doc.querySelectorAll("#day-trips article.dt").forEach(function (a) {
       var k = a.getAttribute("data-trip");
       kb.dt.push({ k: k, h: txt(a.querySelector("h3")), s: txt(a.querySelector(".dt-s")), p: ((txt(a.querySelector(".dt-total b")).match(/\$\s?[\d,.]+/) || [""])[0]), url: HOME + "day-trips/" + (SL[k] || "") + "/" });
