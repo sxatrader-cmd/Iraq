@@ -461,7 +461,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
 .dt-book{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;border-radius:4px;padding:11px 14px}
 .dt-book:hover{filter:brightness(.95)}
 .dt-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}.dt-head h2{margin:4px 0 0}.dt-head p{margin:6px 0 0;color:var(--muted);font-size:15px}.dt-nav{display:flex;gap:8px}.dt-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:#fff;color:var(--navy);cursor:pointer;display:grid;place-items:center}.dt-nav button:hover{background:var(--gold)}[dir=rtl] .dt-nav svg{transform:scaleX(-1)}#day-trips .dt-grid{display:flex;align-items:flex-start;gap:18px;margin-top:0;overflow-x:auto;overflow-y:hidden;transition:height .25s;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 14px;scrollbar-width:none;overscroll-behavior-x:contain}#day-trips .dt-grid::-webkit-scrollbar{display:none}#day-trips .dt{flex:0 0 calc((100% - 36px)/3);scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:8px;box-shadow:0 8px 24px -18px rgba(27,42,71,.5);min-width:0}.dt-dots{display:flex;justify-content:center;gap:7px;margin-top:4px}.dt-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:#D5D9E0;cursor:pointer}.dt-dots button.on{background:var(--gold);width:22px;border-radius:5px}@media (max-width:900px){#day-trips .dt{flex-basis:calc((100% - 18px)/2)}}@media (max-width:600px){#day-trips .dt{flex-basis:88%}.dt-nav{display:none}}#day-trips .dt-head{background:var(--navy);color:#fff;border-radius:6px;padding:20px 22px;border-bottom:4px solid var(--gold);align-items:center}#day-trips .dt-head .eyebrow{color:var(--gold-2)}#day-trips .dt-head h2{font-size:clamp(22px,3.6vw,30px);color:#fff;line-height:1.3;margin:6px 0 8px}#day-trips .dt-head p{margin:0;color:#D9DEE6;font-size:14.5px;line-height:1.6}#day-trips .dt-nav button{background:transparent;color:var(--gold-2);border-color:var(--gold)}#day-trips .dt-nav button:hover{background:var(--gold);color:var(--navy)}body.dt-solo .dt-head,body.dt-solo .dt-dots{display:none!important}body.dt-solo #day-trips .dt-grid{display:grid;overflow:visible;padding:0}body.dt-solo #day-trips .dt{flex:none;min-height:0!important}body.dt-solo #day-trips .dt-grid{height:auto!important}
-/*dtx*/
+.dt-pitch{margin:2px 0 0;font-size:14.5px;line-height:1.7;color:var(--ink)}/*dtx*/
 .dt-more{font-size:15px;line-height:1.8;color:var(--ink);border-top:1px solid var(--line);padding-top:12px;margin-top:2px}
 .dt-more p{margin:0 0 10px}
 .dt-more p:last-child{margin-bottom:0}
@@ -803,7 +803,7 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
   <div class="dt-ph" style="background-image:url('/img/kadhimiya-shrine-night.webp')" data-full="/img/kadhimiya-shrine-night.webp|/img/junayd-baghdadi-shrine.webp|/img/junayd-baghdadi-front.webp|/img/bahlul-shrine-dome.webp|/img/bahlul-shrine-tomb.webp" tabindex="0" role="button" aria-label="سەردانی ئایینی لە بەغدا"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span><span class="dt-cnt" dir="ltr" aria-hidden="true">1 / 5</span></div>
   <div class="dt-bd">
     <h3>سەردانی ئایینی لە بەغدا</h3>
-    <p class="dt-s">مەرقەدی دوو ئیمامی کازم (د.خ) · مزگەوت و مەرقەدی ئیمام ئەبو حەنیفە لە ئەعزەمییە · مەرقەدی شێخ عەبدولقادری گەیلانی · مەرقەدی جونەیدی بەغدادی · مەرقەدی بەهلوولی کووفی</p>
+    <p class="dt-s">مەرقەدی دوو ئیمامی کازم (د.خ) · مزگەوت و مەرقەدی ئیمام ئەبو حەنیفە لە ئەعزەمییە · مەرقەدی شێخ عەبدولقادری گەیلانی · مەرقەدی جونەیدی بەغدادی · مەرقەدی بەهلوولی کووفی</p><p class="dt-pitch">دڵی ڕۆحیی بەغدا لە یەک ڕۆژی لەبیرنەکراودا بژی. لە گومەزە زێڕینەکانی کازمییەوە تا گۆڕە ئارامەکانی گەورە ماموستایانی سۆفی، هەر وێستگەیەک هەزار ساڵ باوەڕ و هونەر و میوانداری نیشان دەدات. گونجاوە بۆ یەکەم سەردان و بۆ زیارەتکاران.</p>
     <ul class="dt-inc" aria-label="دەیگرێتەوە"><li>ئۆتۆمبێلی تایبەت لەگەڵ ڕێنما</li><li>هێنان و گەیاندن لە هۆتێلەوە</li></ul>
     
     
@@ -821,7 +821,7 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
   <div class="dt-ph" style="background-image:url('/img/aqarquf-ziggurat-climb.webp')" data-full="/img/aqarquf-ziggurat-climb.webp|/img/aqarquf-saif-guests.webp|/img/aqarquf-gate-arch.webp|/img/aqarquf-brick-inscription.webp|/img/aqar-quf-ziggurat.webp" tabindex="0" role="button" aria-label="زیگوراتی عەقەرقووف"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span><span class="dt-cnt" dir="ltr" aria-hidden="true">1 / 5</span></div>
   <div class="dt-bd">
     <h3>زیگوراتی عەقەرقووف</h3>
-    <p class="dt-s">زیگوراتی دوور-کوریگالزو لە عەقەرقووف</p>
+    <p class="dt-s">زیگوراتی دوور-کوریگالزو لە عەقەرقووف</p><p class="dt-pitch">تەنها نیو کاتژمێر لە بەغداوە، زیگوراتێکی ٣٤٠٠ ساڵە لە دەشتەکەدا بەرز دەبێتەوە و تۆ ڕاست لە بنکەیدا دەوەستیت. لە خشتی قوڕی وشککراو بە خۆر و حەسیری قامیش دروستکراوە و لە زۆر ئیمپراتۆریەت زیاتر ماوەتەوە. گەشتێکی کورت و ئاسوودە بۆ سەرسوڕهێنەرێکی ڕاستەقینەی میزۆپۆتامیا، باشترینە بەیانی یان کاتی ئاوابوونی خۆر بۆ وێنەی جوان. نە ڕێگای دوور، نە قەرەباڵغی: تەنها تۆ و مێژوو.</p>
     <ul class="dt-inc" aria-label="دەیگرێتەوە"><li>کرێی چوونەژوورەوە</li></ul>
     
     
@@ -837,7 +837,7 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
   <div class="dt-ph" style="background-image:url('/img/taq-kasra.webp')" data-full="/img/taq-kasra.webp" tabindex="0" role="button" aria-label="مەدائین"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
     <h3>مەدائین</h3>
-    <p class="dt-s">تاقی کیسرا · مەرقەدی هاوەڵ سەلمانی فارسی</p>
+    <p class="dt-s">تاقی کیسرا · مەرقەدی هاوەڵ سەلمانی فارسی</p><p class="dt-pitch">لە ژێر تاقی کیسرا بوەستە، گەورەترین کەوانەی خشتی یەک‌کەناری کە مرۆڤ دروستی کردبێت، کە شاکانی فارس نێردراوانی هەموو جیهانیان تێیدا پێشوازی دەکرد. پاشان بچۆ ناو ئارامیی مەرقەدی سەلمانی فارسی، کە ملیۆنان کەس ڕێزی لێ دەگرن. دوو بەشی گەورەی مێژوو، کەمتر لە کاتژمێرێک لە بەغداوە: نیو ڕۆژێکی ئاسان و لەبیرنەکراو.</p>
     
     
     
@@ -870,7 +870,7 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
   <div class="dt-ph" style="background-image:url('/img/samarra-askari-gate.webp')" data-full="/img/samarra-askari-gate.webp|/img/samarra-mosque-arches.webp|/img/samarra-malwiya.webp|/img/samarra-2.webp" tabindex="0" role="button" aria-label="سامەڕا"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span><span class="dt-cnt" dir="ltr" aria-hidden="true">1 / 4</span></div>
   <div class="dt-bd">
     <h3>سامەڕا</h3>
-    <p class="dt-s">مەرقەدی دوو ئیمامی عەسکەری (د.خ) · مەلوییەی سامەڕا · زیندانی ئیمام عەلی هادی (د.خ) و کۆشکی بەرەکەی تەنیشتی · مەلوییەی ئەبو دولەف</p>
+    <p class="dt-s">مەرقەدی دوو ئیمامی عەسکەری (د.خ) · مەلوییەی سامەڕا · زیندانی ئیمام عەلی هادی (د.خ) و کۆشکی بەرەکەی تەنیشتی · مەلوییەی ئەبو دولەف</p><p class="dt-pitch">سەرکەوە بۆ سەر مناری پێچاوپێچی ئەفسانەیی مەلوییە و سەیری پایتەختی پێشووی خەلیفە عەباسییەکان بکە، کە لە لیستی میراتی جیهانیی یونسکۆدایە. گومەزە زێڕینەکان، دیوارە گەورەکانی مزگەوت و گۆشە ئارامەکان سامەڕا دەکەنە یەکێک لە باشترین گەشتە ڕۆژانەکانی عێراق.</p>
     <ul class="dt-inc" aria-label="دەیگرێتەوە"><li>کرێی چوونەژوورەوە</li></ul>
     
     
@@ -886,7 +886,7 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
   <div class="dt-ph" style="background-image:url('/img/babylon-ishtar-gate.webp')" data-full="/img/babylon-ishtar-gate.webp" tabindex="0" role="button" aria-label="بابل"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
     <h3>بابل</h3>
-    <p class="dt-s">شوێنەوارەکانی شاری کۆنی بابل</p>
+    <p class="dt-s">شوێنەوارەکانی شاری کۆنی بابل</p><p class="dt-pitch">لەو شوێنەدا بڕۆ کە حەمورابی فەرمانڕەوایی تێدا کرد و نەبوخەزنەسر شارە ئەفسانەییەکەی تێدا بنیات نا. هەموو کەس ناوی بابل دەزانێت، و بینینی بە چاوی خۆت ئەزموونێکی لەبیرنەکراوە: دەروازەی شینی عەشتار، خشتی ڕەسەن بە مۆری پاشاکان، و شێری بابلی بەناوبانگ. گەشتێکی تایبەت و ئاسوودە کە چیرۆکە کۆنەکان دەکاتە شوێنی ڕاستەقینە.</p>
     <ul class="dt-inc" aria-label="دەیگرێتەوە"><li>کرێی چوونەژوورەوە</li></ul>
     
     
@@ -902,7 +902,7 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
   <div class="dt-ph" style="background-image:url('/img/borsippa-ziggurat.webp')" data-full="/img/borsippa-ziggurat.webp" tabindex="0" role="button" aria-label="بابل - بۆرسیپا - پێغەمبەر ئەیووب - زولکیفل"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
     <h3>بابل - بۆرسیپا - پێغەمبەر ئەیووب - زولکیفل</h3>
-    <p class="dt-s">بابل · زیگوراتی بۆرسیپا · مەرقەدی پێغەمبەر ئەیووب (د.خ) · مەرقەدی زولکیفل (د.خ)</p>
+    <p class="dt-s">بابل · زیگوراتی بۆرسیپا · مەرقەدی پێغەمبەر ئەیووب (د.خ) · مەرقەدی زولکیفل (د.خ)</p><p class="dt-pitch">تەواوترین ڕۆژ لە ناوچەی بابل: کەلاوە بەناوبانگەکانی جیهان، زیگوراتی نهێنیئامێزی بۆرسیپا بە خشتی تواوەوە، و دوو لە کۆنترین مەرقەدەکانی عێراق، هەمووی لە یەک ڕێڕەوی ئاسوودەدا. گونجاوە بۆ ئەوانەی دەیانەوێت لە یەک ڕۆژی ڕێکخراودا زۆرترین شت ببینن.</p>
     <ul class="dt-inc" aria-label="دەیگرێتەوە"><li>کرێی چوونەژوورەوە</li></ul>
     
     
@@ -918,7 +918,7 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
   <div class="dt-ph" style="background-image:url('/img/kufa-great-mosque.webp')" data-full="/img/kufa-great-mosque.webp" tabindex="0" role="button" aria-label="کووفە - نەجەف - کەربەلا"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
     <h3>کووفە - نەجەف - کەربەلا</h3>
-    <p class="dt-s">مزگەوتی گەورەی کووفە · مەرقەدی ئیمام عەلی (د.خ) لە نەجەف · مەرقەدەکانی ئیمام حوسێن و ئەبولفەزل عەباس (د.خ) لە کەربەلا</p>
+    <p class="dt-s">مزگەوتی گەورەی کووفە · مەرقەدی ئیمام عەلی (د.خ) لە نەجەف · مەرقەدەکانی ئیمام حوسێن و ئەبولفەزل عەباس (د.خ) لە کەربەلا</p><p class="dt-pitch">سێ شاری پیرۆز، یەک ڕۆژی قووڵ. شوێنپێی ژیانی ئیمام عەلی و بنەماڵەکەی هەڵبگرە، لە مزگەوتی گەورەی کووفەوە تا مەرقەدە زێڕینەکانی نەجەف و کەربەلا. گەشتێکی کاریگەر بە ڕێنمایی ورد، کە زۆر گەشتیار بە باشترین بەشی گەشتەکەیان بۆ عێراق دەیناسن.</p>
     <ul class="dt-inc" aria-label="دەیگرێتەوە"><li>هەمان نرخ لە یەک کەسەوە تا 3 کەس</li></ul>
     
     
@@ -934,7 +934,7 @@ html[lang="ar"] .dt-bd .dt-h,html[lang="fa"] .dt-bd .dt-h,html[lang="ur"] .dt-bd
   <div class="dt-ph" style="background-image:url('/img/marshes-mashoof.webp')" data-full="/img/marshes-mashoof.webp|/img/ur-ziggurat.webp|/img/marshes-mudhif.webp|/img/marshes-buffalo.webp" tabindex="0" role="button" aria-label="زیگوراتی ئوور و هۆرەکان"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span><span class="dt-cnt" dir="ltr" aria-hidden="true">1 / 4</span></div>
   <div class="dt-bd">
     <h3>زیگوراتی ئوور و هۆرەکان</h3>
-    <p class="dt-s">زیگوراتی ئوور · هۆرەکان</p>
+    <p class="dt-s">زیگوراتی ئوور · هۆرەکان</p><p class="dt-pitch">سەرکەوە بۆ سەر زیگوراتی ئوور کە زیاتر لە ٤٠٠٠ ساڵ تەمەنیەتی، پاشان بە بەلەمی نەریتیی مەشحووف بە ناو هۆرەکانی میزۆپۆتامیادا بڕۆ، بە لای خانووی قامیش و گامێشەکاندا، پێش نانی نیوەڕۆ بە ماسیی مەسگووف. سەرسوڕهێنەرە کۆنەکان و نەریتە زیندووەکان لە یەک ڕۆژدا.</p>
     <ul class="dt-inc" aria-label="دەیگرێتەوە"><li>نانی نیوەڕۆی ماسیی مەسگووف</li><li>گەشت بە مەشحووف لە هۆرەکان</li><li>کرێی چوونەژوورەوەی زیگوراتی ئوور</li></ul>
     
     
