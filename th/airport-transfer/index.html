@@ -460,6 +460,7 @@ html[lang="ar"] .dt-bd h3,html[lang="fa"] .dt-bd h3,html[lang="ur"] .dt-bd h3{fo
 .dt-total b{font-family:var(--serif-en);font-size:26px;font-weight:400;color:var(--navy);font-variant-numeric:tabular-nums}
 .dt-book{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;border-radius:4px;padding:11px 14px}
 .dt-book:hover{filter:brightness(.95)}
+.dt-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}.dt-head h2{margin:4px 0 0}.dt-head p{margin:6px 0 0;color:var(--muted);font-size:15px}.dt-nav{display:flex;gap:8px}.dt-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:#fff;color:var(--navy);cursor:pointer;display:grid;place-items:center}.dt-nav button:hover{background:var(--gold)}[dir=rtl] .dt-nav svg{transform:scaleX(-1)}#day-trips .dt-grid{display:flex;align-items:flex-start;gap:18px;margin-top:0;overflow-x:auto;overflow-y:hidden;transition:height .25s;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 14px;scrollbar-width:none;overscroll-behavior-x:contain}#day-trips .dt-grid::-webkit-scrollbar{display:none}#day-trips .dt{flex:0 0 calc((100% - 36px)/3);scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:8px;box-shadow:0 8px 24px -18px rgba(27,42,71,.5);min-width:0}.dt-dots{display:flex;justify-content:center;gap:7px;margin-top:4px}.dt-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:#D5D9E0;cursor:pointer}.dt-dots button.on{background:var(--gold);width:22px;border-radius:5px}@media (max-width:900px){#day-trips .dt{flex-basis:calc((100% - 18px)/2)}}@media (max-width:600px){#day-trips .dt{flex-basis:88%}.dt-nav{display:none}}body.dt-solo .dt-head,body.dt-solo .dt-dots{display:none!important}body.dt-solo #day-trips .dt-grid{display:grid;overflow:visible;padding:0}body.dt-solo #day-trips .dt{flex:none;min-height:0!important}body.dt-solo #day-trips .dt-grid{height:auto!important}
 /*dtx*/
 .dt-more{font-size:15px;line-height:1.8;color:var(--ink);border-top:1px solid var(--line);padding-top:12px;margin-top:2px}
 .dt-more p{margin:0 0 10px}
@@ -901,12 +902,8 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   
 
   <section class="block in" style="padding-top:0" id="day-trips">
-    <button class="dt-toggle" type="button" aria-expanded="false" aria-controls="dt-body" data-show="ดูทริปวันเดียว" data-hide="ซ่อนทริปวันเดียว">
-      <span><span class="eyebrow">ทริปวันเดียว · <span dir="ltr">เริ่มต้น $50</span></span><b>ทริปวันเดียวจากแบกแดด</b><small class="dt-lbl">ดูทริปวันเดียว</small></span>
-      <span class="dt-chev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
-    </button>
-    <div id="dt-body" hidden>
-      <p class="dt-note">ออกจากแบกแดดตอนเช้าและกลับในวันเดียวกัน รถส่วนตัว ราคาเดียวสำหรับทั้งกลุ่ม</p>
+    <div class="dt-head"><div><span class="eyebrow">ทริปวันเดียว · <span dir="ltr">เริ่มต้น $50</span></span><h2 class="disp">ทริปวันเดียวจากแบกแดด</h2><p>ออกจากแบกแดดตอนเช้าและกลับในวันเดียวกัน รถส่วนตัว ราคาเดียวสำหรับทั้งกลุ่ม</p></div><div class="dt-nav"><button type="button" class="dt-prev" aria-label="‹"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="dt-next" aria-label="›"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+    <div id="dt-body">
       <!--dtx--><a class="dt-all" href="/th/#day-trips" hidden><span aria-hidden="true">←</span>ดูทริปวันเดียวทั้งหมด</a><!--/dtx--><div class="dt-grid"><article class="dt" data-trip="ziyara">
   <div class="dt-ph" style="background-image:url('/img/kadhimiya-shrine-night.webp')" data-full="/img/kadhimiya-shrine-night.webp|/img/junayd-baghdadi-shrine.webp|/img/junayd-baghdadi-front.webp|/img/bahlul-shrine-dome.webp|/img/bahlul-shrine-tomb.webp" tabindex="0" role="button" aria-label="เส้นทางศาสนสถานศักดิ์สิทธิ์ในแบกแดด"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span><span class="dt-cnt" dir="ltr" aria-hidden="true">1 / 5</span></div>
   <div class="dt-bd">
@@ -1051,7 +1048,7 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
     </div>
   </div>
 </article></div>
-    </div>
+    <div class="dt-dots"></div></div>
   </section>
   <section class="block in" style="padding-top:0" id="airport-transfer">
     <div class="ap-solo-head"><a class="ap-all" href="/th/">← ทัวร์อิรักทั้งหมด</a><h1 class="ap-h1">รับที่สนามบินแบกแดดและส่งถึงโรงแรม</h1></div>
@@ -1403,9 +1400,9 @@ var P={
  madain:function(n){return 100+25*(n-1)},
  aqarquf:function(n){return 50+25*(n-1)}
 },U={"wa": "สวัสดีครับ/ค่ะ อยากจองทริปวันเดียว “{trip}” สำหรับ {n} ท่าน ({price})"},T={"assyria": "อัสซีเรีย: อัสซูร์ ฮัตรา โมซุล และนิมรูด (2 วัน)", "ziyara": "เส้นทางศาสนสถานศักดิ์สิทธิ์ในแบกแดด", "oldtown": "ย่านเมืองเก่าแบกแดด", "aqarquf": "ซิกกูรัตอะการ์กูฟ", "madain": "อัลมาดาอิน (ซีทีฟอน)", "samarra": "ซามาร์รา", "babylon": "บาบิโลน", "babylon4": "บาบิโลน บอร์ซิปปา ศาสดาโยบ และซุลกิฟล์", "holy": "คูฟา นาจาฟ และคาร์บาลา", "south": "ซิกกูรัตแห่งอูร์และพื้นที่ชุ่มน้ำ"},MAX=12,loaded=false;
-var tg=document.querySelector(".dt-toggle"),body=document.getElementById("dt-body");if(!tg||!body)return;
-function setOpen(o){body.hidden=!o;tg.setAttribute("aria-expanded",o);tg.querySelector(".dt-lbl").textContent=o?tg.dataset.hide:tg.dataset.show;if(o)loadImgs();}
-tg.addEventListener("click",function(){setOpen(body.hidden);});
+var tg=document.querySelector(".dt-toggle"),body=document.getElementById("dt-body");if(!body)return;
+function setOpen(o){body.hidden=false;loadImgs();}
+
 document.querySelectorAll("[data-open-dt]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();setOpen(true);document.getElementById("day-trips").scrollIntoView({behavior:"smooth",block:"start"});});});
 if(location.hash==="#day-trips")setOpen(true);
 function fmt(v){return "$"+v.toLocaleString("en-US");}
@@ -1449,6 +1446,28 @@ function route(){var c=FIX&&sec.querySelector('.dt[data-trip="'+FIX+'"]');
  sec.querySelectorAll(".dt").forEach(function(x){x.classList.toggle("is-solo",x===c);});
  document.body.classList.add("dt-solo");all.hidden=false;if(bd)bd.hidden=false;setMore(c,true);}
 route();
+})();</script><script id="dt-slider">(function(){
+var sec=document.getElementById("day-trips");if(!sec||document.body.classList.contains("dt-solo"))return;
+var track=sec.querySelector(".dt-grid"),dots=sec.querySelector(".dt-dots"),prev=sec.querySelector(".dt-prev"),next=sec.querySelector(".dt-next");if(!track||!dots)return;
+var cards=track.children,G=18;function RTL(){return getComputedStyle(track).direction==="rtl";}
+function per(){var c=cards[0];return c?Math.max(1,Math.round(track.clientWidth/(c.getBoundingClientRect().width+G))):1;}
+function pages(){return Math.max(1,Math.ceil(cards.length/per()));}
+function cur(){if(Math.abs(track.scrollLeft)>=track.scrollWidth-track.clientWidth-4)return pages()-1;var w=cards[0].getBoundingClientRect().width+G;return Math.min(pages()-1,Math.round(Math.abs(track.scrollLeft)/(w*per())));}
+function go(pg){var n=pages();pg=(pg+n)%n;var c=cards[Math.min(cards.length-1,pg*per())],f=cards[0];
+ var x=RTL()?-((f.offsetLeft+f.offsetWidth)-(c.offsetLeft+c.offsetWidth)):c.offsetLeft-f.offsetLeft;track.scrollTo({left:x});}
+function draw(){dots.innerHTML="";var n=pages(),k=cur();for(var i=0;i<n;i++){(function(i){var d=document.createElement("button");d.type="button";d.setAttribute("aria-label",(i+1)+"/"+n);if(i===k)d.className="on";d.addEventListener("click",function(){go(i);hold();});dots.appendChild(d);})(i);}}
+if(prev)prev.addEventListener("click",function(){go(cur()-1);hold();});
+if(next)next.addEventListener("click",function(){go(cur()+1);hold();});
+var t;track.addEventListener("scroll",function(){clearTimeout(t);t=setTimeout(function(){draw();fit();},120);});
+function fit(){if(!cards.length)return;var r=track.getBoundingClientRect(),H=0,i,c,b;for(i=0;i<cards.length;i++)cards[i].style.minHeight="";for(i=0;i<cards.length;i++){c=cards[i];b=c.getBoundingClientRect();var m=(b.left+b.right)/2;if(m>=r.left&&m<=r.right)H=Math.max(H,b.height);}if(!H)H=cards[0].getBoundingClientRect().height;for(i=0;i<cards.length;i++)cards[i].style.minHeight=H+"px";track.style.height=(H+18)+"px";}track.addEventListener("click",function(e){if(e.target.closest(".dt-rm"))setTimeout(fit,0);});window.addEventListener("resize",function(){draw();fit();});draw();fit();window.addEventListener("load",fit);
+var paused=false,visible=false,timer;
+function hold(){paused=true;clearTimeout(timer);timer=setTimeout(function(){paused=false;},12000);}
+sec.addEventListener("mouseenter",function(){paused=true;});sec.addEventListener("mouseleave",function(){paused=false;});
+sec.addEventListener("pointerdown",hold);sec.addEventListener("focusin",hold);track.addEventListener("touchstart",hold,{passive:true});
+function busy(){return track.querySelector(".dt-more:not([hidden])")||document.querySelector(".dt-lb");}
+if("IntersectionObserver" in window)new IntersectionObserver(function(es){visible=es[0].isIntersecting;}).observe(sec);else visible=true;
+if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))
+ setInterval(function(){if(visible&&!paused&&!document.hidden&&!busy())go(cur()+1);},6500);
 })();</script>
 <script id="prog-tg-js">(function(){
 function set(s,o){var b=s.querySelector(".prog-body"),t=s.querySelector(".prog-tg");if(!b||!t)return;b.hidden=!o;s.classList.toggle("open",o);t.setAttribute("aria-expanded",o);t.querySelector(".lbl").textContent=o?t.dataset.hide:t.dataset.show;}
