@@ -7,20 +7,31 @@
 
   var WA = "9647711745353";
 
-  /* usage stats -> Supabase table chatbot_events (insert-only for the public key) */
-  var SB = "https://zrbbnveaqockoptftqst.supabase.co/rest/v1/chatbot_events", SBK = "sb_publishable_YscqakXUfq9ngPjaAhe2KA__sFDoMcl", SID;
-  try { SID = sessionStorage.getItem("ftb_sid"); if (!SID) { SID = Date.now().toString(36) + Math.random().toString(36).slice(2, 10); sessionStorage.setItem("ftb_sid", SID); } } catch (e) { SID = Date.now().toString(36) + Math.random().toString(36).slice(2, 10); }
+  /* usage stats -> Supabase table chatbot_events (insert-only for the public key).
+     view = every page load (country comes from Cloudflare on Supabase's side). */
+  var SB = "https://zrbbnveaqockoptftqst.supabase.co/rest/v1/chatbot_events", SBK = "sb_publishable_YscqakXUfq9ngPjaAhe2KA__sFDoMcl", SID, VID, NOLOG = false;
+  function rid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 10); }
+  try { SID = sessionStorage.getItem("ftb_sid"); if (!SID) { SID = rid(); sessionStorage.setItem("ftb_sid", SID); } } catch (e) { SID = rid(); }
+  try { VID = localStorage.getItem("ft_vid"); if (!VID) { VID = rid(); localStorage.setItem("ft_vid", VID); } NOLOG = localStorage.getItem("ft_owner") === "1"; } catch (e) { VID = SID; }
+  if (navigator.webdriver || /bot|crawl|spider|slurp|headless|lighthouse|preview|facebookexternalhit|bingpreview|yandex/i.test(navigator.userAgent || "")) NOLOG = true;
   function logBot(ev, detail) {
+    if (NOLOG) return;
     try {
       fetch(SB, { method: "POST", keepalive: true, headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json", Prefer: "return=minimal" },
-        body: JSON.stringify({ session_id: SID, page: location.pathname, lang: typeof LG === "string" ? LG : "", event: ev, detail: String(detail || "").slice(0, 300) }) }).catch(function () {});
+        body: JSON.stringify({ session_id: SID, visitor_id: VID, page: location.pathname, lang: typeof LG === "string" ? LG : "", event: ev, detail: String(detail || "").slice(0, 300) }) }).catch(function () {});
     } catch (e) {}
   }
+
   var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh","ckb","vi"];
   var SL = {"ziyara":"baghdad-holy-shrines","oldtown":"baghdad-old-town","aqarquf":"aqar-quf","madain":"al-madain-ctesiphon","samarra":"samarra","babylon":"babylon","babylon4":"babylon-borsippa-kifl","holy":"kufa-najaf-karbala","south":"ur-marshes"};
 
   var seg = (location.pathname.split("/")[1] || "").toLowerCase();
   var LG = LANGS.indexOf(seg) >= 0 ? seg : "ar", PG = LG;
+  (function () {
+    var ref = ""; try { var h = document.referrer ? new URL(document.referrer).hostname : ""; if (h && h !== location.hostname) ref = h.replace(/^www\./, ""); } catch (e) {}
+    try { var u = new URLSearchParams(location.search).get("utm_source"); if (u) ref = u.slice(0, 60); } catch (e) {}
+    logBot("view", ref);
+  })();
   var HOME = LG === "ar" ? "/" : "/" + LG + "/";
 
   /* ---------- interface text (32 languages) ---------- */

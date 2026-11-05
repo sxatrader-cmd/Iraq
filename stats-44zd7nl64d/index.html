@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>إحصائيات البوت</title>
+<title>إحصائيات الموقع</title>
 <style>
 :root{--navy:#1B2A47;--gold:#B8955A;--paper:#FCFAF6;--panel:#F4EEE3;--ink:#22262E;--muted:#5F6672;--line:#E6DDCC}
 *{box-sizing:border-box}
@@ -31,7 +31,7 @@ h2{font-size:16px;margin:0 0 8px;color:var(--navy)}
 </style>
 </head>
 <body>
-<header><h1>إحصائيات مساعد موقع العراق</h1><p>iraq.fabletour.com — عدد الزوار الذين تحدثوا مع البوت</p></header>
+<header><h1>إحصائيات موقع العراق</h1><p>iraq.fabletour.com — الزوار والدول ومحادثات البوت · زياراتك أنت من هذا الجهاز لا تُحسب</p></header>
 <main>
 <div class="bar">
   <input id="pin" type="password" inputmode="numeric" placeholder="الرمز السري" autocomplete="current-password">
@@ -46,6 +46,10 @@ h2{font-size:16px;margin:0 0 8px;color:var(--navy)}
   var LN={ar:"العربية",en:"English",ru:"Русский",de:"Deutsch",fr:"Français",tr:"Türkçe",es:"Español",it:"Italiano",el:"Ελληνικά",cs:"Čeština",pl:"Polski",zh:"中文","zh-tw":"中文(繁)",ja:"日本語",fa:"فارسی",ms:"Melayu",id:"Indonesia",th:"ไทย",ta:"தமிழ்",hi:"हिन्दी",ur:"اردو",fi:"Suomi",sv:"Svenska",da:"Dansk",no:"Norsk",sk:"Slovenčina",hr:"Hrvatski",ro:"Română",nl:"Nederlands",ka:"ქართული",ko:"한국어",pt:"Português",ckb:"کوردی",vi:"Tiếng Việt"};
   var $=function(i){return document.getElementById(i)},out=$("out");
   try{var s=localStorage.getItem("ftb_pin");if(s)$("pin").value=s;}catch(e){}
+  try{localStorage.setItem("ft_owner","1");}catch(e){}
+  var CN=null;try{CN=new Intl.DisplayNames(["ar"],{type:"region"});}catch(e){}
+  function flag(c){if(!c||c.length!==2||c==="??")return "🌐";return String.fromCodePoint.apply(null,c.toUpperCase().split("").map(function(x){return 127397+x.charCodeAt(0)}));}
+  function cname(c){if(!c||c==="??")return "غير معروف";if(c==="XX"||c==="T1")return "غير معروف";try{return CN?CN.of(c):c;}catch(e){return c;}}
   function esc(t){var d=document.createElement("div");d.textContent=t==null?"":t;return d.innerHTML;}
   function bars(list,label){if(!list||!list.length)return '<p class="msg">لا توجد بيانات بعد</p>';var m=Math.max.apply(null,list.map(function(x){return x.n}));return list.map(function(x){return '<div class="row"><span class="l">'+esc(label(x))+'</span><span class="t"><i style="width:'+(100*x.n/m)+'%"></i></span><span class="n">'+x.n+'</span></div>'}).join("");}
   function load(){
@@ -55,17 +59,27 @@ h2{font-size:16px;margin:0 0 8px;color:var(--navy)}
     fetch(URL,{method:"POST",headers:{apikey:K,Authorization:"Bearer "+K,"Content-Type":"application/json"},body:JSON.stringify({days:+$("days").value,pin:pin})})
     .then(function(r){return r.json()}).then(function(d){
       if(!d||d.error||d.message){out.innerHTML='<p class="msg">'+(d&&d.error==="bad pin"?"الرمز غير صحيح":"خطأ: "+esc(d&&(d.message||d.error)))+'</p>';return;}
-      var h='<div class="kpis">'+
+      var h='<h2 style="margin:4px 0 8px">زوار الموقع</h2><div class="kpis">'+
+        '<div class="k"><b>'+d.visitors+'</b><span>زائر (أشخاص مختلفون)</span></div>'+
+        '<div class="k"><b>'+d.visits+'</b><span>زيارة</span></div>'+
+        '<div class="k"><b>'+d.views+'</b><span>صفحة مشاهدة</span></div>'+
+        '<div class="k"><b>'+(d.countries||[]).filter(function(x){return x.country!=="??"}).length+'</b><span>دولة</span></div></div>';
+      h+='<section><h2>الدول (عدد الزوار)</h2>'+bars(d.countries,function(x){return flag(x.country)+" "+cname(x.country)})+'</section>';
+      h+='<section><h2>الزوار حسب اليوم</h2>'+bars(d.v_by_day,function(x){return x.day})+'</section>';
+      h+='<section><h2>أكثر الصفحات زيارة</h2>'+bars(d.top_pages,function(x){return decodeURI(x.page)})+'</section>';
+      h+='<section><h2>من أين جاء الزوار</h2>'+bars(d.referrers,function(x){return x.detail})+'</section>';
+      h+='<h2 style="margin:18px 0 8px">البوت</h2><div class="kpis">'+
         '<div class="k"><b>'+d.engaged+'</b><span>زائر تحدّث مع البوت</span></div>'+
         '<div class="k"><b>'+d.opened+'</b><span>زائر فتح البوت</span></div>'+
         '<div class="k"><b>'+d.questions+'</b><span>سؤال مكتوب</span></div>'+
         '<div class="k"><b>'+d.whatsapp+'</b><span>تحوّل إلى واتساب</span></div>'+
         '<div class="k"><b>'+d.calls+'</b><span>ضغط على الاتصال</span></div></div>';
+      h+='<section><h2>دول من تحدّثوا مع البوت</h2>'+bars(d.bot_countries,function(x){return flag(x.country)+" "+cname(x.country)})+'</section>';
       h+='<section><h2>حسب اليوم (زوار تحدّثوا)</h2>'+bars(d.by_day,function(x){return x.day})+'</section>';
       h+='<section><h2>حسب اللغة</h2>'+bars(d.by_lang,function(x){return LN[x.lang]||x.lang||"—"})+'</section>';
       h+='<section><h2>أكثر الأزرار استخداماً</h2>'+bars(d.topics,function(x){return x.detail})+'</section>';
       h+='<section><h2>الصفحات التي جاء منها الزوار</h2>'+bars(d.pages,function(x){return x.page})+'</section>';
-      h+='<section><h2>آخر الأسئلة المكتوبة</h2>'+((d.recent||[]).length?d.recent.map(function(q){return '<div class="q">'+esc(q.detail)+'<small>'+esc(LN[q.lang]||q.lang)+' · '+esc(q.page)+' · '+new Date(q.at).toLocaleString("ar-IQ",{timeZone:"Asia/Baghdad"})+'</small></div>'}).join(""):'<p class="msg">لا توجد أسئلة بعد</p>')+'</section>';
+      h+='<section><h2>آخر الأسئلة المكتوبة</h2>'+((d.recent||[]).length?d.recent.map(function(q){return '<div class="q">'+esc(q.detail)+'<small>'+flag(q.country)+' '+esc(LN[q.lang]||q.lang)+' · '+esc(q.page)+' · '+new Date(q.at).toLocaleString("ar-IQ",{timeZone:"Asia/Baghdad"})+'</small></div>'}).join(""):'<p class="msg">لا توجد أسئلة بعد</p>')+'</section>';
       out.innerHTML=h;
     }).catch(function(){out.innerHTML='<p class="msg">تعذّر الاتصال</p>';});
   }
