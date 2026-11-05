@@ -1106,6 +1106,185 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   </section>
 
 
+  <!-- ================= START: KARBALA SECTION (copy from here) ================= -->
+<style>
+#karbala-story{padding-bottom:0}
+#karbala-story *{box-sizing:border-box}
+#karbala-story .kb-lang{display:none}
+#karbala-story .kb-lang.kb-on{display:block}
+#karbala-story .kb-eyebrow{display:block;font:500 13px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-eyebrow{font-family:var(--sans-ar);letter-spacing:.02em;font-size:14px}
+#karbala-story h2{font-size:clamp(24px,3.8vw,32px);color:var(--navy);margin:6px 0 14px;line-height:1.3}
+#karbala-story h2 .kb-q{display:block;color:var(--gold);font-size:.78em;margin-top:4px}
+#karbala-story .kb-hook{margin:0 0 22px;color:var(--ink);max-width:68ch}
+#karbala-story .kb-hook b{color:var(--navy)}
+#karbala-story .kb-video{position:relative;width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;cursor:pointer;
+  background:var(--navy) center/cover no-repeat;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,71,.05),rgba(27,42,71,.55))}
+#karbala-story .kb-play{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;z-index:2;
+  background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold);transition:transform .2s}
+#karbala-story .kb-video:hover .kb-play{transform:scale(1.07)}
+#karbala-story .kb-play svg{width:28px;height:28px;fill:var(--gold-2);margin-inline-start:4px}
+#karbala-story .kb-vmeta{position:absolute;bottom:12px;inset-inline:14px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#karbala-story .kb-vmeta span{background:rgba(27,42,71,.82);padding:3px 10px;border-radius:4px}
+#karbala-story .kb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+#karbala-story .kb-caption{font-size:14px;color:var(--muted);margin:16px 0 18px;line-height:1.7}
+#karbala-story .kb-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);border:0;border-radius:4px;
+  padding:13px 26px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+#karbala-story .kb-btn:hover{filter:brightness(1.07)}
+#karbala-story .kb-arr{transition:transform .3s}
+#karbala-story .kb-btn[aria-expanded=true] .kb-arr{transform:rotate(180deg)}
+#karbala-story .kb-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
+#karbala-story .kb-more.kb-open{grid-template-rows:1fr}
+#karbala-story .kb-more>div{overflow:hidden}
+#karbala-story .kb-inner{padding-top:30px}
+#karbala-story h3{font-family:var(--serif-en);font-weight:400;font-size:clamp(21px,3vw,26px);color:var(--navy);margin:36px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+html[lang="ar"] #karbala-story h3{font-family:var(--serif-ar);font-weight:700}
+#karbala-story h3:first-child{margin-top:0}
+#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--line);margin-inline-start:8px}
+#karbala-story .kb-ch{position:relative;margin-bottom:26px}
+#karbala-story .kb-ch::before{content:"";position:absolute;inset-inline-start:-39px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--gold)}
+#karbala-story .kb-ch.kb-red::before{background:var(--navy);box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--gold)}
+#karbala-story .kb-date{display:block;font:500 12px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-date{font-family:var(--sans-ar);letter-spacing:0;font-size:13px}
+#karbala-story .kb-ch h4{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.35;margin:2px 0 8px}
+html[lang="ar"] #karbala-story .kb-ch h4{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+#karbala-story .kb-ch p{margin:0 0 10px;max-width:68ch;color:var(--ink)}
+#karbala-story blockquote{margin:12px 0;padding:12px 18px;border-inline-start:3px solid var(--gold);background:rgba(184,149,90,.09);
+  border-radius:4px;color:var(--navy);font-family:var(--serif-en);font-style:italic;line-height:1.8}
+html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style:normal;font-size:18px}
+#karbala-story .kb-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+#karbala-story .kb-card p{margin:0 0 12px;color:var(--ink)}
+#karbala-story .kb-card p:last-child{margin:0}
+#karbala-story .kb-card b{color:var(--navy)}
+#karbala-story .kb-sources{font-size:14px;color:var(--muted);line-height:1.9;margin:0;padding-inline-start:20px}
+#karbala-story .kb-cta{margin-top:32px;text-align:center;padding:26px 0 6px;border-top:1px solid var(--line)}
+#karbala-story .kb-cta p{color:var(--navy);margin:0 0 14px;font-size:17px}
+#karbala-story .kb-cta a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:4px}
+#karbala-story .kb-cta a:hover{background:var(--navy-2)}
+@media (max-width:600px){
+  #karbala-story .kb-play{width:58px;height:58px}
+  #karbala-story .kb-timeline{padding-inline-start:22px;margin-inline-start:4px}
+  #karbala-story .kb-ch::before{inset-inline-start:-31px}
+}
+html[lang="ja"] #karbala-story blockquote{font-style:normal}
+html[lang="ja"] #karbala-story .kb-ch p,html[lang="ja"] #karbala-story .kb-card p{line-height:1.9}
+</style>
+
+<section class="block in" id="karbala-story" aria-label="Karbala">
+<div class="kb-wrap">
+
+<!-- ===================== JAPANESE ===================== -->
+<div class="kb-lang" data-lang="ja" dir="ltr">
+  <div class="sec-head"><span class="eyebrow">Karbala · カルバラ</span><h2 class="disp">カルバラ――世界を端から端まで揺るがした物語。そこで何が起きたのか？</h2><p>預言者の孫イマーム・フセイン（彼に平安あれ）は、わずか72人の仲間とともに数千の軍勢に立ち向かい、自由の象徴となりました。</p></div>
+  <button class="kb-btn" aria-expanded="false">詳しく見る <span class="kb-arr">▾</span></button>
+  <div class="kb-more"><div><div class="kb-inner">
+
+    <h3>年代記が伝える物語</h3>
+    <div class="kb-timeline">
+      <div class="kb-ch"><span class="kb-date">661 – 676年 · アラビアとシリア</span><h4>カリフ制から世襲へ</h4>
+        <p>661年、イマーム・フセイン（彼に平安あれ）の兄ハサンは、ムスリム同士の流血を止めるためにムアーウィヤ・イブン・アビー・スフヤーンと和平を結びました。この年は「統一の年」として記憶されています。ハサンは670年ごろ、メディナで毒殺されました。イブン・サアドとバラーズリーは、妻のジャアダ・ビント・アシュアスが毒を盛ったと伝え、バラーズリーはそれがムアーウィヤの教唆によるものだったと付け加えています（イブン・カスィールなど、この点を疑問視する歴史家もいます）。数年後、ムアーウィヤは息子ヤズィードを後継者として認めさせました。カリフの位が初めて父から子へと受け継がれたのです。タバリーによれば、ヤズィードのもとから戻ったメディナの使節団は、彼が酒を飲み、犬と戯れ、礼拝を怠っていると語りました。イブン・カスィールも彼を快楽と酒に溺れた人物として描いています。預言者の高名な教友の息子たちの多くが忠誠の誓いを拒み、その先頭に立ったのがイマーム・フセイン・イブン・アリー（彼に平安あれ）とアブドゥッラー・イブン・ズバイルでした。</p></div>
+      <div class="kb-ch"><span class="kb-date">680年4月 · メディナ</span><h4>「私のような者は、彼のような者に忠誠を誓わない」</h4>
+        <p>ムアーウィヤが亡くなると、ヤズィードはメディナ総督ワリード・イブン・ウトバに書状を送り、イマーム・フセイン（彼に平安あれ）、アブドゥッラー・イブン・ズバイル、アブドゥッラー・イブン・ウマルから、容赦なく忠誠の誓いを取り付けるよう命じました。ワリードは夜、イマーム・フセイン（彼に平安あれ）を呼び出しました。彼は一族の若者たちを伴って出向き、「私が声を荒げるのが聞こえたら、中に入れ」と言って彼らを門に待たせました。総督の傍らにはマルワーン・イブン・ハカムが座っていました。ワリードはムアーウィヤの死を告げ、ヤズィードへの忠誠を求めました。イマーム・フセイン（彼に平安あれ）は、自分のような者は密かに忠誠を誓うことはない、誓うなら民衆の前でだ、と答えました。</p>
+        <p>マルワーンはワリードに言いました。「今、誓いをせずに帰らせたら、二度とこのような機会はない。引き留めよ。誓えばよし、さもなくば首をはねよ」。イマーム・フセイン（彼に平安あれ）は立ち上がりました。「ザルカーの息子よ、私を殺すのはお前か、それとも彼か。神にかけて、お前は嘘をつき、罪を犯している」。そして総督に向き直って言いました。</p>
+        <blockquote>「アミールよ、我らは預言の家、啓示の源、天使たちが行き交う場所である。神は我らによって始め、我らによって締めくくられた。ヤズィードは罪深い男であり、酒を飲み、神が尊いものとした命を奪い、公然と罪を犯している。私のような者は、彼のような者に忠誠を誓わない。だが朝を待とう。そうすれば、我らのどちらがカリフにふさわしいか分かるだろう」</blockquote>
+        <p>そして彼は立ち去りました。ワリードはマルワーンの進言を退け、イマーム・フセイン（彼に平安あれ）を殺すことが代償なら、日の昇るところすべてを手に入れたいとは思わない、と語りました。</p>
+        <p>エジプトの作家アブドゥッラフマーン・シャルカーウィーは、戯曲『革命家フセイン』でこの場面を名高い一幕としました。ワリードは「求めているのはただ一言だけ。それを言えば無事に帰れる」と言います。イマーム・フセイン（彼に平安あれ）は答えます。一言は小さなものではない。一言によって人は天国に入り、一言によって火に投げ込まれる。言葉は人を導く光であり、自由の砦であり、託された預かりものであり、責任である。人の名誉とはその言葉なのだ。どうしてその言葉をヤズィードに売り渡せようか、と。</p>
+        <p>二晩後のラジャブ月28日、イマーム・フセイン（彼に平安あれ）は家族とともにメッカへ向かいました。</p></div>
+      <div class="kb-ch"><span class="kb-date">680年 春〜夏 · メッカとクーファ</span><h4>クーファからの手紙と、ムスリムの運命</h4>
+        <p>イマーム・フセイン（彼に平安あれ）が数か月メッカに滞在するあいだ、クーファ（現在のイラク）の人々から来訪を求める手紙が次々に届きました。彼は従兄弟のムスリム・イブン・アキールを先に送り、ムスリムは1万8千人が忠誠を誓ったと書き送りました。するとヤズィードはウバイドゥッラー・イブン・ズィヤードをクーファ総督に任命します。その圧力の下で人々は散り散りになり、ついにムスリムはひとり取り残されました。タウアという女性が彼をかくまいましたが、彼は裏切られ、戦った末に捕らえられ、宮殿の屋上で処刑されました。彼をもてなしたハーニー・イブン・ウルワも共に命を落としました。</p></div>
+      <div class="kb-ch"><span class="kb-date">680年9月 · メッカ出発</span><h4>「むしろ外で殺されたい」</h4>
+        <p>イブン・アッバース、イブン・ウマルらはイラク行きを思いとどまるよう助言しました。それでも彼は巡礼の始まるまさにその時に出発しました。タバリーによれば、彼はイブン・ズバイルに、自分のせいでメッカの聖域が汚されるくらいなら、メッカの外で殺されるほうがよいと語ったといいます。道中、彼はムスリムの死を知りました。途中で加わったベドウィンたちには立ち去る自由を与え、彼らが去ると、アラビアから共に来た者たちだけが残りました。</p></div>
+      <div class="kb-ch"><span class="kb-date">ヒジュラ暦61年ムハッラム月2日 · 680年10月2日</span><h4>フッルと、カルバラでの停止</h4>
+        <p>フッル・イブン・ヤズィードが1,000騎を率いて行く手を阻みました。彼らはイマーム・フセイン（彼に平安あれ）をイブン・ズィヤードのもとへ連行する命令を受けていました。兵たちは渇きで疲れ果てており、イマーム・フセイン（彼に平安あれ）は兵士とその馬に水を与えるよう命じました。道すがら、彼はこう語りました。</p>
+        <blockquote>「真理に従って行う者がいなくなり、偽りが禁じられなくなったのが、あなたがたには見えないのか」</blockquote>
+        <p>フッルに付き添われた一行は、やがてユーフラテス川のほとりの平原に止まりました。その地の名はカルバラといいました。</p></div>
+      <div class="kb-ch"><span class="kb-date">ムハッラム月3日〜9日</span><h4>包囲と渇き</h4>
+        <p>ウマル・イブン・サアドが4,000の兵を率いて到着し、イブン・ズィヤードはさらに増援を送りました。戦いの3日前、500騎が川に配置され、イマーム・フセイン（彼に平安あれ）の陣営は水から断たれました。異母弟アッバースは夜、騎兵30・歩兵20を率いて突破し、水を満たした革袋を持ち帰りました。イマーム・フセイン（彼に平安あれ）とウマル・イブン・サアドの交渉は実を結びませんでした。9日、シムルがイブン・ズィヤードの命令を携えて到着します。その裁きに服するか、戦うか、と。</p></div>
+      <div class="kb-ch"><span class="kb-date">前夜</span><h4>最後の夜</h4>
+        <p>イマーム・フセイン（彼に平安あれ）はもう一晩の猶予を求めました。彼は仲間を集め、誓いから解き放ちました。「夜があなたがたを覆っている。それを利用して去りなさい。彼らが求めているのは私ひとりだ」。最初に答えたのはアッバースで、続いて一族が、そしてムスリム・イブン・アウサジャ、サアド・イブン・アブドゥッラー、ズハイル・イブン・カインら仲間たちが答えました。誰ひとり去ろうとはしませんでした。彼らは夜通し祈りを捧げました。</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">ムハッラム月10日 · アーシューラー · 680年10月10日</span><h4>忠誠の日</h4>
+        <p>夜明けの礼拝の後、イマーム・フセイン（彼に平安あれ）は部下を整列させました。騎兵32、歩兵40。彼は敵軍に語りかけ、自らが預言者の血を引く者であることを思い起こさせました。すると、自らの行いを深く悔いたフッルが、イマーム・フセイン（彼に平安あれ）の側に移ってきました。イマーム・フセイン（彼に平安あれ）は彼に言いました。「あなたは母が名付けたとおり、自由人（フッル）だ。この世でも、来世でも」。フッルは倒れるまで戦いました。</p>
+        <p>仲間たちは一人また一人と倒れていきました。ムスリム・イブン・アウサジャ、ハビーブ・イブン・ムザーヒル、ズハイル・イブン・カイン。正午、アブー・スマーマ・サーイディーが礼拝の時を告げると、イマーム・フセイン（彼に平安あれ）は、降り注ぐ矢の下、なお立っている者たちを率いて「恐怖の礼拝」を行いました。</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">正午</span><h4>一族</h4>
+        <p>続いて預言者の一族が前に出ました。最初に倒れたのはイマーム・フセイン（彼に平安あれ）の息子アリー・アクバル。次いでハサンの息子カースィム。ある目撃者はこの少年の顔を三日月にたとえました。アッバースもまた、実の兄弟アブドゥッラー、ウスマーン、ジャアファルとともに倒れました。</p>
+        <p>イマーム・フセイン（彼に平安あれ）は幼い息子アブドゥッラーを膝に抱いて座っていました。バヌー・アサド族の男が矢を放ち、幼子は命を落としました。イマーム・フセイン（彼に平安あれ）は、その血を手のひらに受け止めました。</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">午後</span><h4>最期</h4>
+        <p>ひとり残ったイマーム・フセイン（彼に平安あれ）はなおも戦い、取り囲む者たちに突撃しては押し返しました。やがてシムルの指揮のもと、敵は彼を取り囲みました。ズルア・イブン・シャリークが斬りつけ、スィナーン・イブン・アナスが槍で突き、彼は倒れました。その首は切り落とされました。ウマル・イブン・サアドは10騎に命じて亡骸を馬で踏みにじらせ、天幕は略奪されました。息子アリー（ザイヌル・アービディーン）は病に伏していたため命を助けられました。イマーム・フセイン（彼に平安あれ）とともに、72人が命を落としました。</p></div>
+      <div class="kb-ch"><span class="kb-date">カルバラの後</span><h4>ザイナブと、アルバイーンへの道</h4>
+        <p>首級と女性、子どもたちはクーファへ連行されました。総督が勝ち誇ると、イマーム・フセイン（彼に平安あれ）の妹ザイナブは毅然と答えました。神は預言者によって私たちに栄誉を与えた、恥にまみれるのは悪を行う者であって、私たちではない、と。ダマスカスのヤズィードの宮廷では、イマーム・フセイン（彼に平安あれ）の娘の一人を求めたシリア人をたしなめ、それはあなたにもヤズィードにも許されないと告げました。後にヤズィードは一族をメディナへ帰しました。</p>
+        <p>ヤズィードの治世には、カアバさえも難を逃れませんでした。683年、フサイン・イブン・ヌマイル率いる彼の軍がメッカを包囲し、カアバは投石機で攻撃されて炎上しました。軍が撤退したのは、ヤズィードの死の知らせが届いてからでした。</p>
+        <p>イマーム・フセイン（彼に平安あれ）は倒れたその場所に葬られました。以来、その墓は巡礼者を引き寄せ、カルバラの町はその周りに広がりました。今日では毎年、数百万の人々が<b>アルバイーン</b>のために徒歩でこの地を訪れます。</p></div>
+    </div>
+
+    <h3>動画について：カアビーと哀悼の語りの芸術</h3>
+    <div class="kb-card">
+      <p><b>シェイク・アブドゥルザフラ・カアビー</b>は1909年ごろ生まれの、カルバラの説教師です。1959年のアーシューラーの日、彼はイマーム・フセイン（彼に平安あれ）の聖廟のそばで『マクタル』を朗誦し、その声はバグダッド放送を通じてイラク全土と湾岸諸国に流れました。以来、彼の声はイラクの家庭におけるアーシューラーの朝の音となりました。亡くなって数十年が経った今も、その語りを真似できた者はいません。</p>
+      <p><b>ナイー</b>（哀悼の語り）は、イマーム・フセイン（彼に平安あれ）の物語を伝えるイラクの古い芸術です。楽器を使わず、悲しみの旋律にのせて語られ、古典アラビア語の散文と民衆の哀歌の詩が織り交ぜられます。目的は楽しませることではなく、聴く人にカルバラの場に居合わせていると感じさせることです。アラビア語が分からなくても大丈夫です。声が物語を運び、日本語の翻訳が残りを伝えてくれます。</p>
+      <p>この動画では、カアビーの声による『マクタル』の全編を日本語訳付きでご覧いただけます。</p>
+    </div>
+
+    <h3>出典</h3>
+    <ul class="kb-sources">
+      <li>『諸預言者と諸王の歴史』 — タバリー（923年没）、アブー・ミフナフの伝承による</li>
+      <li>『貴族の系譜（アンサーブ・アル＝アシュラーフ）』 — バラーズリー（892年没）</li>
+      <li>『大伝記集（タバカート・アル＝クブラー）』 — イブン・サアド（845年没）</li>
+      <li>『完史（アル＝カーミル・フィッ＝ターリーフ）』 — イブン・アスィール（1233年没）</li>
+      <li>『始まりと終わり（アル＝ビダーヤ・ワン＝ニハーヤ）』 — イブン・カスィール（1373年没）</li>
+    </ul>
+
+    <div class="kb-cta"><p>イマーム・フセイン（彼に平安あれ）が立ったその場所に立ち、二つの聖廟のあいだを歩いてみませんか。</p><a href="#itinerary">私たちとカルバラを訪れる</a></div>
+  </div></div></div>
+  <div class="kb-video" style="margin-top:22px" data-hl="ja"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>朗誦：シェイク・アブドゥルザフラ・カアビー</span><span>日本語訳付き</span></div></div>
+</div>
+
+
+</div>
+</section>
+
+<script>
+function kbInit(){
+  var s=document.getElementById('karbala-story'); if(!s) return;
+  var L=(document.documentElement.lang||'ar').slice(0,2).toLowerCase();
+  // Japanese page: Japanese-translated Maqtal video
+  if(['ja'].indexOf(L)<0){ s.style.display='none'; return; }
+  s.style.display='';
+  var VID='eRZ0nKPl7iA', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
+  s.querySelectorAll('.kb-lang').forEach(function(b){
+    b.classList.toggle('kb-on', b.getAttribute('data-lang')===L);
+  });
+  s.querySelectorAll('.kb-video').forEach(function(v){
+    if(v.dataset.ready) return; v.dataset.ready=1;
+    v.style.backgroundImage='url('+THUMB+')';
+    v.addEventListener('click',function(){
+      if(v.querySelector('iframe')) return;
+      var hl=v.getAttribute('data-hl');
+      var cc = '';
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0&hl='+hl+cc;
+      f.title='イマーム・フセインのマクタル – アブドゥルザフラ・カアビー（日本語訳）';
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen=true;
+      v.appendChild(f);
+    });
+  });
+  s.querySelectorAll('.kb-btn').forEach(function(btn){
+    if(btn.dataset.ready) return; btn.dataset.ready=1;
+    var more=btn.nextElementSibling, label=btn.firstChild.nodeValue;
+    var closeTxt={ar:'إخفاء ',en:'Show less ',ru:'Свернуть ',de:'Weniger anzeigen ',fr:'Réduire ',es:'Mostrar menos ',it:'Mostra meno ',ja:'閉じる '};
+    btn.addEventListener('click',function(){
+      var open=more.classList.toggle('kb-open');
+      btn.setAttribute('aria-expanded',open);
+      var lang=btn.closest('.kb-lang').getAttribute('data-lang');
+      btn.firstChild.nodeValue = open ? closeTxt[lang] : label;
+    });
+  });
+}
+document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',kbInit) : kbInit();
+</script>
+<!-- ================= END: KARBALA SECTION (copy to here) ================= -->
+
   <section class="block in" style="padding-top:0" id="usa-canada" aria-labelledby="usa-canada-h">
     <div class="us-ar">
       <span class="eyebrow">🇺🇸 🇨🇦 アメリカ・カナダ在住の方へ</span>
