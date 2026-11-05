@@ -424,5 +424,78 @@
   "tour": "7",
   "image": "img/samarra-malwiya-b2b.webp",
   "image_credit": ""
+ },
+ {
+  "topic": "the-ishtar-gate-of-babylon",
+  "slug": "brama-isztar-babilon-przewodnik",
+  "date": "2026-11-05",
+  "title": "Brama Isztar w Babilonie (Irak): co zobaczyć dziś",
+  "h1": "Brama Isztar w Babilonie: historia i co zobaczyć dziś w Iraku",
+  "description": "Brama Isztar w Babilonie: byki i smoki na glazurowanej cegle, podróż do Berlina, oryginalne fundamenty na miejscu i porady lokalnego przewodnika po Iraku.",
+  "excerpt": "Niebieska replika, oryginalne reliefy wciąż na miejscu i Droga Procesyjna: przewodnik po Bramie Isztar w Babilonie.",
+  "keywords": "Brama Isztar, Brama Isztar Babilon, zwiedzanie Babilonu, Babilon Irak, Nabuchodonozor II, Droga Procesyjna, Muzeum Pergamońskie, wycieczka do Iraku",
+  "category": "Stanowiska archeologiczne",
+  "region": "Prowincja Babil",
+  "place": "Babilon",
+  "image_alt": "Niebieska replika Bramy Isztar z rzędami byków i smoków w Babilonie w Iraku, pod błękitnym niebem",
+  "facts": [
+   [
+    "Gdzie",
+    "Babilon koło Al-Hilli, ok. 85 km na południe od Bagdadu"
+   ],
+   [
+    "Budowa",
+    "Ok. 575 r. p.n.e., za Nabuchodonozora II"
+   ],
+   [
+    "Poświęcona",
+    "Isztar, bogini miłości i wojny"
+   ],
+   [
+    "Wykopaliska",
+    "1902–1914, ekspedycja niemiecka Roberta Koldeweya"
+   ],
+   [
+    "Potrzebny czas",
+    "Min. 1 godzina (cały Babilon 2–3 godziny)"
+   ],
+   [
+    "Najlepsza pora",
+    "Od października do kwietnia"
+   ]
+  ],
+  "faq": [
+   [
+    "Czy oryginalna Brama Isztar jest w Babilonie czy w Berlinie?",
+    "W pewnym sensie w obu miejscach. Glazurowaną część frontową zrekonstruowano w berlińskim Muzeum Pergamońskim, a oryginalne nieglazurowane fundamenty z reliefami byków i smoków pozostały w Babilonie."
+   ],
+   [
+    "Czy niebieska brama w Babilonie jest oryginalna?",
+    "Nie. Jaskrawoniebieska brama przy wejściu to mniejsza współczesna replika. Starożytne są fundamenty kilka minut spacerem dalej."
+   ],
+   [
+    "Jakie zwierzęta są na Bramie Isztar?",
+    "Byki, święte dla boga burzy Adada, oraz smok muszhuszszu Marduka. Glazurowane lwy, symbol Isztar, zdobiły Drogę Procesyjną prowadzącą do bramy."
+   ],
+   [
+    "Jak daleko jest Brama Isztar od Bagdadu?",
+    "Babilon leży ok. 85 km na południe od Bagdadu, mniej więcej półtorej godziny jazdy samochodem."
+   ],
+   [
+    "Kiedy najlepiej zwiedzać?",
+    "Od października do kwietnia, gdy pogoda jest łagodna. Latem warto przyjechać wcześnie rano."
+   ],
+   [
+    "Czy potrzebna jest wiza do Iraku?",
+    "Zasady wjazdu co jakiś czas się zmieniają. Przed rezerwacją sprawdźcie aktualne oficjalne informacje dla swojego obywatelstwa."
+   ]
+  ],
+  "geo": [
+   32.5363,
+   44.4209
+  ],
+  "tour": "7",
+  "image": "img/babylon-ishtar-gate.webp",
+  "image_credit": ""
  }
 ]

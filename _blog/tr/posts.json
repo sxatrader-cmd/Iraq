@@ -424,5 +424,78 @@
   "tour": "7",
   "image": "img/samarra-malwiya-b2b.webp",
   "image_credit": ""
+ },
+ {
+  "topic": "the-ishtar-gate-of-babylon",
+  "slug": "istar-kapisi-babil-gezi-rehberi",
+  "date": "2026-11-05",
+  "title": "Babil İştar Kapısı: tarihi ve bugün görülecekler",
+  "h1": "Babil'deki İştar Kapısı: tarihi ve bugün Irak'ta neler görülür",
+  "description": "Babil İştar Kapısı'nı ziyaret: sırlı tuğladaki boğa ve ejderhalar, Berlin ve İstanbul'a yolculuğu, yerinde duran orijinal temeller ve rehberden ipuçları.",
+  "excerpt": "Mavi replika, hâlâ yerinde duran orijinal kabartmalar ve Tören Yolu: Babil'deki İştar Kapısı için gezi rehberi.",
+  "keywords": "İştar Kapısı, Babil İştar Kapısı, İştar Kapısı ziyaret, Babil Irak gezisi, II. Nebukadnezar, Tören Yolu, İstanbul Arkeoloji Müzeleri, Irak turu",
+  "category": "Arkeolojik alanlar",
+  "region": "Babil vilayeti",
+  "place": "Babil",
+  "image_alt": "Irak'ta Babil'deki İştar Kapısı'nın sıra sıra boğa ve ejderha figürlü mavi replikası, mavi gökyüzü altında",
+  "facts": [
+   [
+    "Konum",
+    "Babil, Hille yakını, Bağdat'ın ~85 km güneyi"
+   ],
+   [
+    "Yapım",
+    "MÖ 575 civarı, II. Nebukadnezar"
+   ],
+   [
+    "Adandığı",
+    "Aşk ve savaş tanrıçası İştar"
+   ],
+   [
+    "Kazı",
+    "1902–1914, Robert Koldewey'in Alman heyeti"
+   ],
+   [
+    "Gereken süre",
+    "En az 1 saat (Babil'in tamamı 2–3 saat)"
+   ],
+   [
+    "En iyi mevsim",
+    "Ekimden nisana"
+   ]
+  ],
+  "faq": [
+   [
+    "Orijinal İştar Kapısı Babil'de mi, Berlin'de mi?",
+    "Bir bakıma ikisinde de. Sırlı ön bölüm Berlin'deki Bergama Müzesi'nde yeniden kuruldu; boğa ve ejderha kabartmalı sırsız orijinal temeller ise Babil'de yerinde duruyor."
+   ],
+   [
+    "Babil'deki mavi kapı orijinal mi?",
+    "Hayır. Girişteki parlak mavi kapı daha küçük, modern bir kopyadır. Antik olan, birkaç dakika ilerideki temellerdir."
+   ],
+   [
+    "İştar Kapısı'nda hangi hayvanlar var?",
+    "Fırtına tanrısı Adad'ın kutsal hayvanı boğalar ve Marduk'un ejderhası muşhuşşu. İştar'ın simgesi sırlı aslanlar da kapıya giden Tören Yolu'nu süslerdi."
+   ],
+   [
+    "İştar Kapısı Bağdat'a ne kadar uzak?",
+    "Babil, Bağdat'ın yaklaşık 85 km güneyindedir; arabayla bir buçuk saat kadar sürer."
+   ],
+   [
+    "Ziyaret için en iyi zaman ne?",
+    "Havanın ılık olduğu ekimden nisana kadar. Yazın sabah erken gidin."
+   ],
+   [
+    "Irak için vize gerekiyor mu?",
+    "Giriş kuralları zaman zaman değişir. Rezervasyondan önce vatandaşlığınız için güncel resmî bilgileri kontrol edin."
+   ]
+  ],
+  "geo": [
+   32.5363,
+   44.4209
+  ],
+  "tour": "7",
+  "image": "img/babylon-ishtar-gate.webp",
+  "image_credit": ""
  }
 ]
