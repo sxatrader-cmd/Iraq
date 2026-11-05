@@ -300,8 +300,16 @@
       "city": "Samarra",
       "category_en": "Archaeological sites",
       "tour": "7",
-      "date": null,
-      "langs_done": []
+      "date": "2026-11-05",
+      "langs_done": [
+        "ar",
+        "ckb",
+        "de",
+        "en",
+        "fr",
+        "it",
+        "ru"
+      ]
     },
     {
       "topic": "basra-the-gateway-of-the-south",
