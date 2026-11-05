@@ -351,5 +351,78 @@
     "Od października do kwietnia. Przyjedź wcześnie rano lub późnym popołudniem, gdy światło jest miękkie, a cegły lśnią złotem."
    ]
   ]
+ },
+ {
+  "topic": "the-malwiya-spiral-minaret-of-samarra",
+  "slug": "minaret-malwiya-samarra-przewodnik",
+  "date": "2026-11-05",
+  "title": "Minaret Malwiya w Samarze: przewodnik i historia",
+  "h1": "Zwiedzanie Samarry: spiralny minaret Malwiya, historia i porady",
+  "description": "Zwiedzanie Samarry w Iraku: 52-metrowy spiralny minaret Malwiya przy Wielkim Meczecie Abbasydów, historia, okoliczne zabytki i rady lokalnego przewodnika.",
+  "excerpt": "Słynny spiralny minaret abbasydzkiej stolicy z IX wieku: historia, Wielki Meczet i praktyczne wskazówki przed wizytą.",
+  "keywords": "minaret Malwiya, Samarra Irak, zwiedzanie Samarry, spiralny minaret Samarra, Wielki Meczet w Samarze, Abbasydzi, meczet Abu Dulafa, wycieczka do Iraku",
+  "category": "Stanowiska archeologiczne",
+  "region": "Muhafaza Salah ad-Din",
+  "place": "Samarra",
+  "image_alt": "Spiralny minaret Malwiya w Samarze, wysoka wieża ze złocistej cegły z zewnętrzną rampą, na tle czystego błękitnego nieba",
+  "facts": [
+   [
+    "Gdzie",
+    "Samarra nad Tygrysem, ok. 125 km na północ od Bagdadu"
+   ],
+   [
+    "Budowa",
+    "848–852, za kalifa al-Mutawakkila"
+   ],
+   [
+    "Wysokość",
+    "Ok. 52 m, podstawa ok. 33 m"
+   ],
+   [
+    "UNESCO",
+    "Stanowisko Archeologiczne Samarra, od 2007"
+   ],
+   [
+    "Potrzebny czas",
+    "1–2 godziny, dłużej z Abu Dulafem"
+   ],
+   [
+    "Najlepsza pora",
+    "Od października do kwietnia"
+   ]
+  ],
+  "faq": [
+   [
+    "Gdzie znajduje się minaret Malwiya?",
+    "W Samarze w muhafazie Salah ad-Din, na wschodnim brzegu Tygrysu, ok. 125 km na północ od Bagdadu, tuż przy murach Wielkiego Meczetu."
+   ],
+   [
+    "Kto zbudował spiralny minaret w Samarze?",
+    "Kalif z dynastii Abbasydów al-Mutawakkil w latach 848–852, razem z Wielkim Meczetem, gdy Samarra była stolicą kalifatu."
+   ],
+   [
+    "Jak wysoki jest minaret Malwiya?",
+    "Ma około 52 metrów wysokości i ok. 33 metry szerokości u podstawy, a zewnętrzna spiralna rampa prowadzi do małego pawilonu na szczycie."
+   ],
+   [
+    "Czy można wejść na minaret?",
+    "Nie zawsze; decyzję podejmuje obsługa na miejscu. Jeśli wejście jest dozwolone, załóżcie dobre buty, bo rampa nie ma barierki."
+   ],
+   [
+    "Jak dojechać do Samarry z Bagdadu?",
+    "Samarra leży ok. 125 km na północ od Bagdadu, mniej więcej dwie godziny drogi, i jest wygodną wycieczką jednodniową z kierowcą i przewodnikiem."
+   ],
+   [
+    "Co jeszcze zobaczyć w Samarze?",
+    "Mury Wielkiego Meczetu, meczet Abu Dulafa z mniejszym spiralnym minaretem, ruiny pałaców Abbasydów oraz sanktuarium al-Askari ze złotą kopułą."
+   ]
+  ],
+  "geo": [
+   34.2059,
+   43.8797
+  ],
+  "tour": "7",
+  "image": "img/samarra-malwiya-b2b.webp",
+  "image_credit": ""
  }
 ]
