@@ -1120,6 +1120,183 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   </section>
 
 
+  <!-- ================= START: KARBALA SECTION (copy from here) ================= -->
+<style>
+#karbala-story{padding-bottom:0}
+#karbala-story *{box-sizing:border-box}
+#karbala-story .kb-lang{display:none}
+#karbala-story .kb-lang.kb-on{display:block}
+#karbala-story .kb-eyebrow{display:block;font:500 13px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-eyebrow{font-family:var(--sans-ar);letter-spacing:.02em;font-size:14px}
+#karbala-story h2{font-size:clamp(24px,3.8vw,32px);color:var(--navy);margin:6px 0 14px;line-height:1.3}
+#karbala-story h2 .kb-q{display:block;color:var(--gold);font-size:.78em;margin-top:4px}
+#karbala-story .kb-hook{margin:0 0 22px;color:var(--ink);max-width:68ch}
+#karbala-story .kb-hook b{color:var(--navy)}
+#karbala-story .kb-video{position:relative;width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;cursor:pointer;
+  background:var(--navy) center/cover no-repeat;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,71,.05),rgba(27,42,71,.55))}
+#karbala-story .kb-play{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;z-index:2;
+  background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold);transition:transform .2s}
+#karbala-story .kb-video:hover .kb-play{transform:scale(1.07)}
+#karbala-story .kb-play svg{width:28px;height:28px;fill:var(--gold-2);margin-inline-start:4px}
+#karbala-story .kb-vmeta{position:absolute;bottom:12px;inset-inline:14px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#karbala-story .kb-vmeta span{background:rgba(27,42,71,.82);padding:3px 10px;border-radius:4px}
+#karbala-story .kb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+#karbala-story .kb-caption{font-size:14px;color:var(--muted);margin:16px 0 18px;line-height:1.7}
+#karbala-story .kb-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);border:0;border-radius:4px;
+  padding:13px 26px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+#karbala-story .kb-btn:hover{filter:brightness(1.07)}
+#karbala-story .kb-arr{transition:transform .3s}
+#karbala-story .kb-btn[aria-expanded=true] .kb-arr{transform:rotate(180deg)}
+#karbala-story .kb-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
+#karbala-story .kb-more.kb-open{grid-template-rows:1fr}
+#karbala-story .kb-more>div{overflow:hidden}
+#karbala-story .kb-inner{padding-top:30px}
+#karbala-story h3{font-family:var(--serif-en);font-weight:400;font-size:clamp(21px,3vw,26px);color:var(--navy);margin:36px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+html[lang="ar"] #karbala-story h3{font-family:var(--serif-ar);font-weight:700}
+#karbala-story h3:first-child{margin-top:0}
+#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--line);margin-inline-start:8px}
+#karbala-story .kb-ch{position:relative;margin-bottom:26px}
+#karbala-story .kb-ch::before{content:"";position:absolute;inset-inline-start:-39px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--gold)}
+#karbala-story .kb-ch.kb-red::before{background:var(--navy);box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--gold)}
+#karbala-story .kb-date{display:block;font:500 12px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-date{font-family:var(--sans-ar);letter-spacing:0;font-size:13px}
+#karbala-story .kb-ch h4{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.35;margin:2px 0 8px}
+html[lang="ar"] #karbala-story .kb-ch h4{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+#karbala-story .kb-ch p{margin:0 0 10px;max-width:68ch;color:var(--ink)}
+#karbala-story blockquote{margin:12px 0;padding:12px 18px;border-inline-start:3px solid var(--gold);background:rgba(184,149,90,.09);
+  border-radius:4px;color:var(--navy);font-family:var(--serif-en);font-style:italic;line-height:1.8}
+html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style:normal;font-size:18px}
+#karbala-story .kb-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+#karbala-story .kb-card p{margin:0 0 12px;color:var(--ink)}
+#karbala-story .kb-card p:last-child{margin:0}
+#karbala-story .kb-card b{color:var(--navy)}
+#karbala-story .kb-sources{font-size:14px;color:var(--muted);line-height:1.9;margin:0;padding-inline-start:20px}
+#karbala-story .kb-cta{margin-top:32px;text-align:center;padding:26px 0 6px;border-top:1px solid var(--line)}
+#karbala-story .kb-cta p{color:var(--navy);margin:0 0 14px;font-size:17px}
+#karbala-story .kb-cta a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:4px}
+#karbala-story .kb-cta a:hover{background:var(--navy-2)}
+@media (max-width:600px){
+  #karbala-story .kb-play{width:58px;height:58px}
+  #karbala-story .kb-timeline{padding-inline-start:22px;margin-inline-start:4px}
+  #karbala-story .kb-ch::before{inset-inline-start:-31px}
+}
+</style>
+
+<section class="block in" id="karbala-story" aria-label="Karbala">
+<div class="kb-wrap">
+
+<!-- ===================== ITALIAN ===================== -->
+<div class="kb-lang" data-lang="it" dir="ltr">
+  <div class="sec-head"><span class="eyebrow">Kerbala</span><h2 class="disp">Kerbala: una storia che ha scosso il mondo da un capo all'altro… che cosa accadde lì?</h2><p>L'imam Hussein (la pace sia su di lui), nipote del Profeta, si levò con 72 compagni contro migliaia di uomini, e divenne un simbolo di libertà.</p></div>
+  <button class="kb-btn" aria-expanded="false">Scopri di più <span class="kb-arr">▾</span></button>
+  <div class="kb-more"><div><div class="kb-inner">
+
+    <h3>La storia come l'hanno conservata le cronache</h3>
+    <div class="kb-timeline">
+      <div class="kb-ch"><span class="kb-date">661 – 676 d.C. · Arabia e Siria</span><h4>Dal califfato alla successione ereditaria</h4>
+        <p>Nel 661 Hasan, fratello maggiore dell'imam Hussein (la pace sia su di lui), fece la pace con Muawiya ibn Abi Sufyan per fermare lo spargimento di sangue tra musulmani: è ricordato come «l'anno dell'unità». Hasan morì avvelenato a Medina intorno al 670. Ibn Sa'd e al-Baladhuri riferiscono che fu la moglie Ja'da bint al-Ash'ath a dargli il veleno, e al-Baladhuri aggiunge che agì su istigazione di Muawiya, anche se alcuni storici come Ibn Kathir misero in dubbio questo punto. Pochi anni dopo Muawiya fece riconoscere il figlio Yazid come erede: per la prima volta il califfato passava di padre in figlio. Al-Tabari racconta che una delegazione di Medina tornò da Yazid dicendo che beveva vino, giocava con i cani e trascurava la preghiera; Ibn Kathir lo descrive come dedito ai piaceri e al vino. Diversi figli dei grandi compagni del Profeta si rifiutarono di giurargli fedeltà, guidati dall'imam Hussein ibn Ali (la pace sia su di lui) e da Abdullah ibn al-Zubayr.</p></div>
+      <div class="kb-ch"><span class="kb-date">Aprile 680 · Medina</span><h4>«Uno come me non giura fedeltà a uno come lui»</h4>
+        <p>Alla morte di Muawiya, Yazid scrisse ad al-Walid ibn Utba, governatore di Medina, ordinandogli di esigere il giuramento di fedeltà dall'imam Hussein (la pace sia su di lui), da Abdullah ibn al-Zubayr e da Abdullah ibn Umar, con fermezza e senza indulgenza. Al-Walid convocò l'imam Hussein (la pace sia su di lui) di notte. Egli venne con alcuni giovani della sua famiglia e li mise alla porta: se mi sentite alzare la voce, entrate. Accanto al governatore sedeva Marwan ibn al-Hakam. Al-Walid annunciò all'imam Hussein (la pace sia su di lui) la morte di Muawiya e gli chiese di giurare fedeltà a Yazid. L'imam Hussein (la pace sia su di lui) rispose che uno come lui non giura fedeltà in segreto, ma, se lo fa, davanti al popolo.</p>
+        <p>Marwan disse ad al-Walid: se se ne va ora senza giurare, non avrai mai più un'occasione simile; trattienilo; se giura, bene, altrimenti tagliagli la testa. L'imam Hussein (la pace sia su di lui) balzò in piedi: «Figlio di al-Zarqa, sarai tu a uccidermi, o lui? Per Dio, menti e commetti peccato». Poi si rivolse al governatore:</p>
+        <blockquote>«O emiro, noi siamo la casa della profezia, la fonte del messaggio, il luogo dove vanno e vengono gli angeli; per mezzo nostro Dio ha cominciato e per mezzo nostro ha suggellato. Yazid è un uomo peccatore, che beve vino, uccide le anime che Dio ha reso sacre e ostenta il suo peccato, e uno come me non giura fedeltà a uno come lui. Ma aspettiamo il mattino, voi e noi, e vedremo chi di noi è più degno del califfato».</blockquote>
+        <p>E se ne andò. Al-Walid respinse il consiglio di Marwan e disse che non avrebbe voluto possedere tutto ciò su cui sorge il sole, se il prezzo fosse stato l'uccisione dell'imam Hussein (la pace sia su di lui).</p>
+        <p>Lo scrittore egiziano Abdel Rahman al-Sharqawi fece di questa scena un momento celebre del suo dramma <i>Hussein il rivoluzionario</i>: al-Walid gli dice che gli si chiede solo una parola, e che poi potrà andarsene in pace. L'imam Hussein (la pace sia su di lui) risponde che una parola non è poca cosa: per una parola l'uomo entra in paradiso e per una parola è gettato nel fuoco; la parola è una luce che guida gli uomini, una fortezza di libertà, un deposito affidato e una responsabilità, e l'onore di un uomo è la sua parola. Come potrebbe dunque vendere la sua parola a Yazid?</p>
+        <p>Due notti dopo, il 28 di rajab, l'imam Hussein (la pace sia su di lui) partì per la Mecca con la sua famiglia.</p></div>
+      <div class="kb-ch"><span class="kb-date">Primavera – estate 680 · La Mecca e Kufa</span><h4>Le lettere di Kufa e la sorte di Muslim</h4>
+        <p>L'imam Hussein (la pace sia su di lui) rimase mesi alla Mecca, mentre arrivavano lettere degli abitanti di Kufa (nell'attuale Iraq) che lo invitavano a venire. Mandò avanti il cugino Muslim ibn Aqil, che gli scrisse che 18.000 persone gli avevano giurato fedeltà. Yazid nominò allora Ubaydullah ibn Ziyad governatore di Kufa. Sotto la sua pressione la gente si disperse, finché Muslim rimase solo. Una donna di nome Taw'a gli diede rifugio; fu tradito, combatté, fu catturato e giustiziato sul tetto del palazzo, insieme al suo ospite Hani ibn Urwa.</p></div>
+      <div class="kb-ch"><span class="kb-date">Settembre 680 · Partenza dalla Mecca</span><h4>«Meglio essere ucciso fuori»</h4>
+        <p>Ibn Abbas, Ibn Umar e altri gli consigliarono di non andare in Iraq. Partì proprio mentre iniziava il pellegrinaggio e disse a Ibn al-Zubayr, secondo al-Tabari, che preferiva essere ucciso fuori dalla Mecca piuttosto che vedere violata per causa sua la santità della città. Lungo la strada seppe della morte di Muslim. Lasciò liberi di andarsene i beduini che si erano uniti a lui durante il viaggio; se ne andarono, e rimasero solo quelli venuti con lui dall'Arabia.</p></div>
+      <div class="kb-ch"><span class="kb-date">2 muharram 61 E. · 2 ottobre 680</span><h4>Al-Hurr e la sosta a Kerbala</h4>
+        <p>Al-Hurr ibn Yazid gli sbarrò la strada con 1.000 cavalieri, che avevano l'ordine di condurlo da Ibn Ziyad. Erano stremati dalla sete, e l'imam Hussein (la pace sia su di lui) fece dare da bere ai soldati e ai loro cavalli. Lungo il cammino disse loro:</p>
+        <blockquote>«Non vedete che non si agisce più secondo la verità e che la menzogna non è più proibita?»</blockquote>
+        <p>Scortata da al-Hurr, la carovana si fermò infine in una pianura sulle rive dell'Eufrate chiamata Kerbala.</p></div>
+      <div class="kb-ch"><span class="kb-date">3 – 9 muharram</span><h4>L'assedio e la sete</h4>
+        <p>Umar ibn Sa'd arrivò con 4.000 soldati, e Ibn Ziyad ne mandò altri. Tre giorni prima della battaglia, 500 cavalieri furono posti sul fiume per tagliare l'accesso all'acqua al campo dell'imam Hussein (la pace sia su di lui). Il fratellastro Abbas guidò di notte una sortita con 30 cavalieri e 20 fanti, forzò il passaggio e riportò otri pieni. I negoziati tra l'imam Hussein (la pace sia su di lui) e Umar ibn Sa'd non portarono a nulla. Il giorno 9 arrivò Shimr con l'ordine di Ibn Ziyad: sottomettersi al suo giudizio o combattere.</p></div>
+      <div class="kb-ch"><span class="kb-date">La vigilia</span><h4>L'ultima notte</h4>
+        <p>L'imam Hussein (la pace sia su di lui) chiese ancora una notte. Riunì i compagni e li sciolse da ogni obbligo: la notte vi copre, disse, approfittatene, perché vogliono soltanto me. Abbas rispose per primo, poi la famiglia, poi i compagni — Muslim ibn Awsaja, Sa'd ibn Abdullah, Zuhayr ibn al-Qayn —: nessuno volle andarsene. Passarono la notte in preghiera.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">10 muharram · Ashura · 10 ottobre 680</span><h4>Il giorno della fedeltà</h4>
+        <p>Dopo la preghiera dell'alba, l'imam Hussein (la pace sia su di lui) schierò i suoi uomini: 32 cavalieri e 40 fanti. Parlò all'esercito e gli ricordò che discendeva dal Profeta. Allora al-Hurr passò dalla parte dell'imam Hussein (la pace sia su di lui), pieno di rimorso per ciò che aveva fatto. L'imam Hussein (la pace sia su di lui) gli disse: sei libero (<i>hurr</i>), come ti ha chiamato tua madre, in questo mondo e nell'altro. Al-Hurr combatté fino a cadere.</p>
+        <p>I compagni caddero uno dopo l'altro: Muslim ibn Awsaja, Habib ibn Mazahir, Zuhayr ibn al-Qayn. A mezzogiorno Abu Thumama al-Saidi ricordò la preghiera all'imam Hussein (la pace sia su di lui), che guidò quelli ancora in piedi nella preghiera della paura, sotto una pioggia di frecce.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Mezzogiorno</span><h4>La famiglia</h4>
+        <p>Poi si fece avanti la famiglia del Profeta. Il primo di loro a cadere fu Ali al-Akbar, figlio dell'imam Hussein (la pace sia su di lui); poi Qasim, figlio di Hasan, un ragazzo il cui volto un testimone paragonò a una falce di luna. Cadde anche Abbas, insieme ai fratelli Abdullah, Uthman e Ja'far.</p>
+        <p>L'imam Hussein (la pace sia su di lui) sedeva con il figlio piccolo Abdullah in grembo. Un uomo della tribù dei Banu Asad scoccò una freccia e uccise il bambino; l'imam Hussein (la pace sia su di lui) ne raccolse il sangue nel palmo della mano.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Il pomeriggio</span><h4>La caduta</h4>
+        <p>Solo, l'imam Hussein (la pace sia su di lui) continuò a combattere, caricando quelli che lo circondavano fino a farli arretrare. Poi si strinsero su di lui sotto il comando di Shimr. Zur'a ibn Sharik lo colpì, Sinan ibn Anas lo trafisse con la lancia e cadde; gli tagliarono la testa. Umar ibn Sa'd ordinò a dieci cavalieri di passare con i cavalli sul suo corpo, e le tende furono saccheggiate. Il figlio Ali (Zayn al-Abidin) fu risparmiato perché malato. Settantadue uomini erano morti con l'imam Hussein (la pace sia su di lui).</p></div>
+      <div class="kb-ch"><span class="kb-date">Dopo Kerbala</span><h4>Zaynab e il cammino dell'Arbain</h4>
+        <p>Le teste, le donne e i bambini furono condotti a Kufa. Quando il governatore esultò, Zaynab, sorella dell'imam Hussein (la pace sia su di lui), gli rispose con voce ferma: Dio li aveva onorati per mezzo del Suo Profeta, ed è il malfattore a essere coperto di vergogna, non loro. A Damasco, alla corte di Yazid, rimise al suo posto un siriano che pretendeva una delle figlie dell'imam Hussein (la pace sia su di lui), dicendogli che ciò non spettava né a lui né a Yazid. Più tardi Yazid rimandò la famiglia a Medina.</p>
+        <p>Nemmeno la Kaaba fu risparmiata sotto Yazid. Nel 683 il suo esercito, al comando di al-Husayn ibn Numayr, assediò la Mecca; la Kaaba fu colpita dalle catapulte e prese fuoco. L'esercito si ritirò solo alla notizia della morte di Yazid.</p>
+        <p>L'imam Hussein (la pace sia su di lui) fu sepolto dove cadde. Da allora la sua tomba attira i pellegrini, la città di Kerbala è cresciuta intorno a essa, e oggi milioni di persone vi arrivano a piedi ogni anno per l'<b>Arbain</b>.</p></div>
+    </div>
+
+    <h3>Il video: al-Kaabi e l'arte del lamento</h3>
+    <div class="kb-card">
+      <p><b>Lo sceicco Abdul Zahra al-Kaabi</b> era un predicatore di Kerbala, nato intorno al 1909. Il giorno di Ashura del 1959 recitò il Maqtal presso il santuario dell'imam Hussein (la pace sia su di lui), e la sua recitazione fu trasmessa da Radio Baghdad in tutto l'Iraq e nel Golfo. Da allora la sua voce è il suono del mattino di Ashura nelle case irachene: decenni dopo la sua morte, nessuno è riuscito a imitarne lo stile.</p>
+      <p>Il <b>na'i</b> (lamento) è un'antica arte irachena per raccontare la storia dell'imam Hussein (la pace sia su di lui): un racconto salmodiato su una melodia triste, senza strumenti musicali, che unisce la prosa araba classica a versi di lamento popolari. Il suo scopo non è intrattenere, ma far sentire a chi ascolta di essere presente a Kerbala. Non serve capire l'arabo: la voce porta la storia, la traduzione in italiano fa il resto.</p>
+      <p>Il video presenta il Maqtal completo con la voce di al-Kaabi e la traduzione in italiano.</p>
+    </div>
+
+    <h3>Fonti</h3>
+    <ul class="kb-sources">
+      <li><i>Storia dei profeti e dei re</i> — al-Tabari (m. 923), secondo il racconto di Abu Mikhnaf</li>
+      <li><i>Ansab al-Ashraf</i> — al-Baladhuri (m. 892)</li>
+      <li><i>Al-Tabaqat al-Kubra</i> — Ibn Sa'd (m. 845)</li>
+      <li><i>Al-Kamil fi al-Tarikh</i> — Ibn al-Athir (m. 1233)</li>
+      <li><i>Al-Bidaya wa al-Nihaya</i> — Ibn Kathir (m. 1373)</li>
+    </ul>
+
+    <div class="kb-cta"><p>Stai dove stette l'imam Hussein (la pace sia su di lui). Cammina tra i due santuari.</p><a href="#itinerary">Visita Kerbala con noi</a></div>
+  </div></div></div>
+  <div class="kb-video" style="margin-top:22px" data-hl="it"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>Voce: sceicco Abdul Zahra al-Kaabi</span><span>Tradotto in italiano</span></div></div>
+</div>
+
+
+</div>
+</section>
+
+<script>
+function kbInit(){
+  var s=document.getElementById('karbala-story'); if(!s) return;
+  var L=(document.documentElement.lang||'ar').slice(0,2).toLowerCase();
+  // Italian page: Italian-translated Maqtal video
+  if(['it'].indexOf(L)<0){ s.style.display='none'; return; }
+  s.style.display='';
+  var VID='MeYCZO6ii-g', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
+  s.querySelectorAll('.kb-lang').forEach(function(b){
+    b.classList.toggle('kb-on', b.getAttribute('data-lang')===L);
+  });
+  s.querySelectorAll('.kb-video').forEach(function(v){
+    if(v.dataset.ready) return; v.dataset.ready=1;
+    v.style.backgroundImage='url('+THUMB+')';
+    v.addEventListener('click',function(){
+      if(v.querySelector('iframe')) return;
+      var hl=v.getAttribute('data-hl');
+      var cc = '';
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0&hl='+hl+cc;
+      f.title='Maqtal dell'imam Hussein – Abdul Zahra al-Kaabi, tradotto in italiano';
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen=true;
+      v.appendChild(f);
+    });
+  });
+  s.querySelectorAll('.kb-btn').forEach(function(btn){
+    if(btn.dataset.ready) return; btn.dataset.ready=1;
+    var more=btn.nextElementSibling, label=btn.firstChild.nodeValue;
+    var closeTxt={ar:'إخفاء ',en:'Show less ',ru:'Свернуть ',de:'Weniger anzeigen ',fr:'Réduire ',es:'Mostrar menos ',it:'Mostra meno '};
+    btn.addEventListener('click',function(){
+      var open=more.classList.toggle('kb-open');
+      btn.setAttribute('aria-expanded',open);
+      var lang=btn.closest('.kb-lang').getAttribute('data-lang');
+      btn.firstChild.nodeValue = open ? closeTxt[lang] : label;
+    });
+  });
+}
+document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',kbInit) : kbInit();
+</script>
+<!-- ================= END: KARBALA SECTION (copy to here) ================= -->
+
   <section class="block in" style="padding-top:0" id="usa-canada" aria-labelledby="usa-canada-h">
     <div class="us-ar">
       <span class="eyebrow">🇺🇸 🇨🇦 Per gli italiani che vivono negli USA e in Canada</span>
