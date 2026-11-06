@@ -1115,6 +1115,184 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   </section>
 
 
+    <!-- ================= START: KARBALA SECTION (copy from here) ================= -->
+<style>
+#karbala-story{padding-bottom:0}
+#karbala-story *{box-sizing:border-box}
+#karbala-story .kb-lang{display:none}
+#karbala-story .kb-lang.kb-on{display:block}
+#karbala-story .kb-eyebrow{display:block;font:500 13px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-eyebrow{font-family:var(--sans-ar);letter-spacing:.02em;font-size:14px}
+#karbala-story h2{font-size:clamp(24px,3.8vw,32px);color:var(--navy);margin:6px 0 14px;line-height:1.3}
+#karbala-story h2 .kb-q{display:block;color:var(--gold);font-size:.78em;margin-top:4px}
+#karbala-story .kb-hook{margin:0 0 22px;color:var(--ink);max-width:68ch}
+#karbala-story .kb-hook b{color:var(--navy)}
+#karbala-story .kb-video{position:relative;width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;cursor:pointer;
+  background:var(--navy) center/cover no-repeat;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,71,.05),rgba(27,42,71,.55))}
+#karbala-story .kb-play{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;z-index:2;
+  background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold);transition:transform .2s}
+#karbala-story .kb-video:hover .kb-play{transform:scale(1.07)}
+#karbala-story .kb-play svg{width:28px;height:28px;fill:var(--gold-2);margin-inline-start:4px}
+#karbala-story .kb-vmeta{position:absolute;bottom:12px;inset-inline:14px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#karbala-story .kb-vmeta span{background:rgba(27,42,71,.82);padding:3px 10px;border-radius:4px}
+#karbala-story .kb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+#karbala-story .kb-caption{font-size:14px;color:var(--muted);margin:16px 0 18px;line-height:1.7}
+#karbala-story .kb-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);border:0;border-radius:4px;
+  padding:13px 26px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+#karbala-story .kb-btn:hover{filter:brightness(1.07)}
+#karbala-story .kb-arr{transition:transform .3s}
+#karbala-story .kb-btn[aria-expanded=true] .kb-arr{transform:rotate(180deg)}
+#karbala-story .kb-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
+#karbala-story .kb-more.kb-open{grid-template-rows:1fr}
+#karbala-story .kb-more>div{overflow:hidden}
+#karbala-story .kb-inner{padding-top:30px}
+#karbala-story h3{font-family:var(--serif-en);font-weight:400;font-size:clamp(21px,3vw,26px);color:var(--navy);margin:36px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+html[lang="ar"] #karbala-story h3{font-family:var(--serif-ar);font-weight:700}
+#karbala-story h3:first-child{margin-top:0}
+#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--line);margin-inline-start:8px}
+#karbala-story .kb-ch{position:relative;margin-bottom:26px}
+#karbala-story .kb-ch::before{content:"";position:absolute;inset-inline-start:-39px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--gold)}
+#karbala-story .kb-ch.kb-red::before{background:var(--navy);box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--gold)}
+#karbala-story .kb-date{display:block;font:500 12px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-date{font-family:var(--sans-ar);letter-spacing:0;font-size:13px}
+#karbala-story .kb-ch h4{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.35;margin:2px 0 8px}
+html[lang="ar"] #karbala-story .kb-ch h4{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+#karbala-story .kb-ch p{margin:0 0 10px;max-width:68ch;color:var(--ink)}
+#karbala-story blockquote{margin:12px 0;padding:12px 18px;border-inline-start:3px solid var(--gold);background:rgba(184,149,90,.09);
+  border-radius:4px;color:var(--navy);font-family:var(--serif-en);font-style:italic;line-height:1.8}
+html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style:normal;font-size:18px}
+#karbala-story .kb-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+#karbala-story .kb-card p{margin:0 0 12px;color:var(--ink)}
+#karbala-story .kb-card p:last-child{margin:0}
+#karbala-story .kb-card b{color:var(--navy)}
+#karbala-story .kb-sources{font-size:14px;color:var(--muted);line-height:1.9;margin:0;padding-inline-start:20px}
+#karbala-story .kb-cta{margin-top:32px;text-align:center;padding:26px 0 6px;border-top:1px solid var(--line)}
+#karbala-story .kb-cta p{color:var(--navy);margin:0 0 14px;font-size:17px}
+#karbala-story .kb-cta a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:4px}
+#karbala-story .kb-cta a:hover{background:var(--navy-2)}
+@media (max-width:600px){
+  #karbala-story .kb-play{width:58px;height:58px}
+  #karbala-story .kb-timeline{padding-inline-start:22px;margin-inline-start:4px}
+  #karbala-story .kb-ch::before{inset-inline-start:-31px}
+}
+</style>
+
+<section class="block in" id="karbala-story" aria-label="Karbala">
+<div class="kb-wrap">
+
+<!-- ===================== PORTUGUESE ===================== -->
+<div class="kb-lang" data-lang="pt" dir="ltr">
+  <div class="sec-head"><span class="eyebrow">Karbala</span><h2 class="disp">Karbala: uma história que comoveu o mundo de uma ponta à outra… o que aconteceu ali?</h2><p>O imã Hussein (que a paz esteja com ele), neto do Profeta, ergueu-se com 72 companheiros diante de milhares de homens e tornou-se um símbolo de liberdade.</p></div>
+  <button class="kb-btn" aria-expanded="false">Saber mais <span class="kb-arr">▾</span></button>
+  <div class="kb-more"><div><div class="kb-inner">
+
+    <h3>A história tal como as crónicas a preservaram</h3>
+    <div class="kb-timeline">
+      <div class="kb-ch"><span class="kb-date">661 – 676 d.C. · Arábia e Síria</span><h4>Do califado à sucessão hereditária</h4>
+        <p>Em 661, Hassan, irmão mais velho do imã Hussein (que a paz esteja com ele), fez a paz com Muawiya ibn Abi Sufyan para pôr fim ao derramamento de sangue entre muçulmanos; esse ano ficou conhecido como «o ano da unidade». Hassan morreu envenenado em Medina por volta de 670. Ibn Saad e al-Baladhuri relatam que foi a sua esposa, Jaada bint al-Ashath, quem lhe deu o veneno, e al-Baladhuri acrescenta que o fez instigada por Muawiya, embora alguns historiadores, como Ibn Kathir, tenham posto este ponto em dúvida. Poucos anos depois, Muawiya fez reconhecer o seu filho Yazid como herdeiro: pela primeira vez, o califado passava de pai para filho. Al-Tabari conta que uma delegação de Medina regressou de uma visita a Yazid dizendo que ele bebia vinho, brincava com cães e descuidava a oração; Ibn Kathir descreve-o como entregue aos prazeres e ao vinho. Vários filhos dos grandes companheiros do Profeta recusaram jurar-lhe lealdade, à frente dos quais o imã Hussein ibn Ali (que a paz esteja com ele) e Abdallah ibn al-Zubayr.</p></div>
+      <div class="kb-ch"><span class="kb-date">Abril de 680 · Medina</span><h4>«Alguém como eu não jura lealdade a alguém como ele»</h4>
+        <p>Com a morte de Muawiya, Yazid escreveu a al-Walid ibn Utba, governador de Medina, ordenando-lhe que exigisse o juramento de lealdade ao imã Hussein (que a paz esteja com ele), a Abdallah ibn al-Zubayr e a Abdallah ibn Umar, com firmeza e sem contemplações. Al-Walid mandou chamar o imã Hussein (que a paz esteja com ele) durante a noite. Ele foi acompanhado de jovens da sua família e deixou-os à porta: se me ouvirem levantar a voz, entrem. Junto do governador estava sentado Marwan ibn al-Hakam. Al-Walid comunicou ao imã Hussein (que a paz esteja com ele) a morte de Muawiya e pediu-lhe que jurasse lealdade a Yazid. O imã Hussein (que a paz esteja com ele) respondeu que alguém como ele não jura lealdade em segredo, mas, se o fizer, diante do povo.</p>
+        <p>Marwan disse a al-Walid: se ele sair agora sem jurar, nunca mais terás uma ocasião assim; retém-no; se jurar, muito bem, e se não, corta-lhe a cabeça. O imã Hussein (que a paz esteja com ele) levantou-se de um salto: «Filho de al-Zarqa, és tu que me vais matar, ou ele? Por Deus, mentes e pecas». Depois voltou-se para o governador:</p>
+        <blockquote>«Ó emir: nós somos a casa da profecia, a fonte da mensagem, o lugar aonde vão e vêm os anjos; por nós Deus começou e por nós selou. Yazid é um homem pecador, que bebe vinho, mata as almas que Deus tornou sagradas e faz alarde do seu pecado, e alguém como eu não jura lealdade a alguém como ele. Mas esperemos pela manhã, vós e nós, e veremos quem de nós é mais digno do califado».</blockquote>
+        <p>E retirou-se. Al-Walid rejeitou o conselho de Marwan e disse que não quereria possuir tudo aquilo sobre o qual o sol nasce se o preço fosse a morte do imã Hussein (que a paz esteja com ele).</p>
+        <p>O escritor egípcio Abderrahman al-Sharqawi fez desta cena um momento célebre da sua peça de teatro <i>Hussein, o revolucionário</i>: al-Walid diz-lhe que só lhe pedem uma palavra e que depois poderá partir em paz. O imã Hussein (que a paz esteja com ele) responde que uma palavra não é pouca coisa: por uma palavra o homem entra no paraíso e por uma palavra é lançado ao fogo; a palavra é uma luz que guia os homens, uma fortaleza de liberdade, um depósito confiado e uma responsabilidade, e a honra de um homem é a sua palavra. Como poderia então vender a sua palavra a Yazid?</p>
+        <p>Duas noites depois, a 28 de rajab, o imã Hussein (que a paz esteja com ele) partiu para Meca com a sua família.</p></div>
+      <div class="kb-ch"><span class="kb-date">Primavera – verão de 680 · Meca e Kufa</span><h4>As cartas de Kufa e o destino de Muslim</h4>
+        <p>O imã Hussein (que a paz esteja com ele) permaneceu meses em Meca, enquanto chegavam cartas dos habitantes de Kufa (no atual Iraque) a convidá-lo a ir ter com eles. Enviou à frente o seu primo Muslim ibn Aqil, que lhe escreveu dizendo que 18 000 pessoas lhe tinham jurado lealdade. Yazid nomeou então Ubaydallah ibn Ziyad governador de Kufa. Sob a sua pressão, as pessoas dispersaram-se até Muslim ficar sozinho. Uma mulher chamada Tawa deu-lhe abrigo; foi traído, lutou, foi capturado e executado no terraço do palácio, juntamente com o seu anfitrião, Hani ibn Urwa.</p></div>
+      <div class="kb-ch"><span class="kb-date">Setembro de 680 · Saída de Meca</span><h4>«Prefiro ser morto fora daqui»</h4>
+        <p>Ibn Abbas, Ibn Umar e outros aconselharam-no a não ir para o Iraque. Partiu precisamente quando começava a peregrinação e disse a Ibn al-Zubayr, segundo al-Tabari, que preferia ser morto fora de Meca a ver violada por sua causa a santidade da cidade. Pelo caminho soube da morte de Muslim. Deixou partir livremente os beduínos que se lhe tinham juntado na estrada; foram-se embora, e ficaram apenas os que tinham vindo com ele desde a Arábia.</p></div>
+      <div class="kb-ch"><span class="kb-date">2 de muharram do ano 61 H · 2 de outubro de 680</span><h4>Al-Hurr e a paragem em Karbala</h4>
+        <p>Al-Hurr ibn Yazid barrou-lhe o caminho com 1000 cavaleiros, que tinham ordem de o levar até Ibn Ziyad. Estavam exaustos de sede, e o imã Hussein (que a paz esteja com ele) mandou dar de beber aos soldados e aos seus cavalos. Pelo caminho, disse-lhes:</p>
+        <blockquote>«Não vedes que já não se age segundo a verdade e que já não se proíbe a mentira?»</blockquote>
+        <p>Escoltada por al-Hurr, a caravana parou finalmente numa planície nas margens do Eufrates chamada Karbala.</p></div>
+      <div class="kb-ch"><span class="kb-date">3 – 9 de muharram</span><h4>O cerco e a sede</h4>
+        <p>Umar ibn Saad chegou com 4000 soldados, e Ibn Ziyad enviou mais. Três dias antes da batalha, 500 cavaleiros posicionaram-se junto ao rio para cortar o acesso à água ao acampamento do imã Hussein (que a paz esteja com ele). O seu meio-irmão Abbas comandou de noite uma investida com 30 cavaleiros e 20 homens a pé, forçou a passagem e trouxe odres cheios. As negociações entre o imã Hussein (que a paz esteja com ele) e Umar ibn Saad não deram em nada. No dia 9 chegou Shimr com a ordem de Ibn Ziyad: submeter-se ao seu julgamento ou combater.</p></div>
+      <div class="kb-ch"><span class="kb-date">A véspera</span><h4>A última noite</h4>
+        <p>O imã Hussein (que a paz esteja com ele) pediu mais uma noite. Reuniu os seus companheiros e libertou-os: a noite cobre-vos, disse-lhes, aproveitai-a, porque só me querem a mim. Abbas foi o primeiro a responder, depois a família, depois os companheiros — Muslim ibn Awsaja, Saad ibn Abdallah, Zuhayr ibn al-Qayn —: nenhum quis partir. Passaram a noite em oração.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">10 de muharram · Ashura · 10 de outubro de 680</span><h4>O dia da lealdade</h4>
+        <p>Depois da oração da alvorada, o imã Hussein (que a paz esteja com ele) dispôs os seus homens: 32 cavaleiros e 40 a pé. Falou ao exército e lembrou-lhe que descendia do Profeta. Foi então que al-Hurr passou para o lado do imã Hussein (que a paz esteja com ele), cheio de remorso pelo que tinha feito. O imã Hussein (que a paz esteja com ele) disse-lhe: és livre (<i>hurr</i>), como a tua mãe te chamou, neste mundo e no outro. Al-Hurr combateu até tombar.</p>
+        <p>Os companheiros foram caindo um após outro: Muslim ibn Awsaja, Habib ibn Mazahir, Zuhayr ibn al-Qayn. Ao meio-dia, Abu Thumama al-Saidi lembrou a oração ao imã Hussein (que a paz esteja com ele), e este conduziu os que ainda estavam de pé na oração do medo, debaixo de uma chuva de flechas.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Meio-dia</span><h4>A família</h4>
+        <p>Depois avançou a família do Profeta. O primeiro a cair foi Ali al-Akbar, filho do imã Hussein (que a paz esteja com ele); a seguir Qasim, filho de Hassan, um rapaz cujo rosto uma testemunha comparou a uma lua crescente. Caiu também Abbas, com os seus irmãos Abdallah, Uthman e Jafar.</p>
+        <p>O imã Hussein (que a paz esteja com ele) estava sentado com o seu filho pequeno Abdallah ao colo. Um homem da tribo dos Banu Asad disparou uma flecha e matou a criança; o imã Hussein (que a paz esteja com ele) recolheu o seu sangue na palma da mão.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">A tarde</span><h4>A queda</h4>
+        <p>Sozinho, o imã Hussein (que a paz esteja com ele) continuou a combater, investindo contra quem o cercava até os fazer recuar. Depois cerraram-se sobre ele sob o comando de Shimr. Zura ibn Sharik feriu-o, Sinan ibn Anas trespassou-o com a lança e ele caiu; cortaram-lhe a cabeça. Umar ibn Saad ordenou a dez cavaleiros que passassem com os cavalos por cima do seu corpo, e as tendas foram saqueadas. O seu filho Ali (Zayn al-Abidin) salvou-se por estar doente. Setenta e dois homens tinham morrido com o imã Hussein (que a paz esteja com ele).</p></div>
+      <div class="kb-ch"><span class="kb-date">Depois de Karbala</span><h4>Zainab e o caminho do Arbaeen</h4>
+        <p>As cabeças, as mulheres e as crianças foram levadas para Kufa. Quando o governador se vangloriou, Zainab, irmã do imã Hussein (que a paz esteja com ele), respondeu-lhe com voz firme: Deus tinha-os honrado por meio do Seu Profeta, e quem fica coberto de vergonha é o malfeitor, não eles. Em Damasco, na corte de Yazid, pôs no seu lugar um sírio que reclamava uma das filhas do imã Hussein (que a paz esteja com ele), dizendo-lhe que isso não cabia nem a ele nem a Yazid. Mais tarde, Yazid mandou a família de volta para Medina.</p>
+        <p>Nem sequer a Caaba foi poupada sob Yazid. Em 683, o seu exército, comandado por al-Husayn ibn Numayr, cercou Meca; a Caaba foi bombardeada com catapultas e ardeu. O exército só se retirou quando se soube da morte de Yazid.</p>
+        <p>O imã Hussein (que a paz esteja com ele) foi sepultado onde caiu. Desde então o seu túmulo atrai peregrinos, a cidade de Karbala cresceu à sua volta, e hoje milhões de pessoas chegam a pé todos os anos para o <b>Arbaeen</b>.</p></div>
+    </div>
+
+    <h3>Sobre o vídeo: al-Kaabi e a arte do lamento</h3>
+    <div class="kb-card">
+      <p><b>O xeque Abdul Zahra al-Kaabi</b> foi um pregador de Karbala, nascido por volta de 1909. No dia de Ashura de 1959 recitou o Maqtal junto ao santuário do imã Hussein (que a paz esteja com ele), e a sua recitação foi transmitida pela Rádio Bagdade para todo o Iraque e o Golfo. Desde então a sua voz é o som da manhã de Ashura nos lares iraquianos: décadas depois da sua morte, ninguém conseguiu imitar o seu estilo.</p>
+      <p>O <b>nai</b> (lamento) é uma arte iraquiana secular para contar a história do imã Hussein (que a paz esteja com ele): um relato salmodiado com uma melodia triste, sem instrumentos musicais, que mistura a prosa árabe clássica com versos populares de lamento. O seu objetivo não é entreter, mas fazer quem ouve sentir que está presente em Karbala. Não é preciso perceber árabe: a voz transporta a história e a tradução para português faz o resto.</p>
+      <p>O vídeo apresenta o Maqtal completo na voz de al-Kaabi, com tradução para português.</p>
+    </div>
+
+    <h3>Fontes</h3>
+    <ul class="kb-sources">
+      <li><i>História dos profetas e dos reis</i> — al-Tabari (m. 923), segundo o relato de Abu Mikhnaf</li>
+      <li><i>Ansab al-Ashraf</i> — al-Baladhuri (m. 892)</li>
+      <li><i>Al-Tabaqat al-Kubra</i> — Ibn Saad (m. 845)</li>
+      <li><i>Al-Kamil fi al-Tarikh</i> — Ibn al-Athir (m. 1233)</li>
+      <li><i>Al-Bidaya wa al-Nihaya</i> — Ibn Kathir (m. 1373)</li>
+    </ul>
+
+    <div class="kb-cta"><p>Pise o lugar onde esteve o imã Hussein (que a paz esteja com ele). Caminhe entre os dois santuários.</p><a href="#itinerary">Visite Karbala connosco</a></div>
+  </div></div></div>
+  <div class="kb-video" style="margin-top:22px" data-hl="pt"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>Voz: xeque Abdul Zahra al-Kaabi</span><span>Traduzido para português</span></div></div>
+</div>
+
+
+</div>
+</section>
+
+<script>
+function kbInit(){
+  var s=document.getElementById('karbala-story'); if(!s) return;
+  var L=(document.documentElement.lang||'ar').slice(0,2).toLowerCase();
+  // Portuguese page: Portuguese-translated Maqtal video
+  if(['pt'].indexOf(L)<0){ s.style.display='none'; return; }
+  s.style.display='';
+  var VID='vr6F0c3o4Ag', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
+  s.querySelectorAll('.kb-lang').forEach(function(b){
+    b.classList.toggle('kb-on', b.getAttribute('data-lang')===L);
+  });
+  s.querySelectorAll('.kb-video').forEach(function(v){
+    if(v.dataset.ready) return; v.dataset.ready=1;
+    v.style.backgroundImage='url('+THUMB+')';
+    v.addEventListener('click',function(){
+      if(v.querySelector('iframe')) return;
+      var hl=v.getAttribute('data-hl');
+      var cc = '';
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0&hl='+hl+cc;
+      f.title='Maqtal do imã Hussein – Abdul Zahra al-Kaabi, traduzido para português';
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen=true;
+      v.appendChild(f);
+    });
+  });
+  s.querySelectorAll('.kb-btn').forEach(function(btn){
+    if(btn.dataset.ready) return; btn.dataset.ready=1;
+    var more=btn.nextElementSibling, label=btn.firstChild.nodeValue;
+    var closeTxt={ar:'إخفاء ',en:'Show less ',ru:'Свернуть ',de:'Weniger anzeigen ',fr:'Réduire ',es:'Mostrar menos ',pt:'Mostrar menos '};
+    btn.addEventListener('click',function(){
+      var open=more.classList.toggle('kb-open');
+      btn.setAttribute('aria-expanded',open);
+      var lang=btn.closest('.kb-lang').getAttribute('data-lang');
+      btn.firstChild.nodeValue = open ? closeTxt[lang] : label;
+    });
+  });
+}
+document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',kbInit) : kbInit();
+</script>
+<!-- ================= END: KARBALA SECTION (copy to here) ================= -->
+
+
   <section class="block in" style="padding-top:0" id="usa-canada" aria-labelledby="usa-canada-h">
     <div class="us-ar">
       <span class="eyebrow">🇺🇸 🇨🇦 Para quem fala português nos EUA e no Canadá</span>
