@@ -1124,6 +1124,183 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   </section>
 
 
+  <!-- ================= START: KARBALA SECTION ================= -->
+<style>
+#karbala-story{padding-bottom:0}
+#karbala-story *{box-sizing:border-box}
+#karbala-story .kb-lang{display:none}
+#karbala-story .kb-lang.kb-on{display:block}
+#karbala-story .kb-eyebrow{display:block;font:500 13px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-eyebrow{font-family:var(--sans-ar);letter-spacing:.02em;font-size:14px}
+#karbala-story h2{font-size:clamp(24px,3.8vw,32px);color:var(--navy);margin:6px 0 14px;line-height:1.3}
+#karbala-story h2 .kb-q{display:block;color:var(--gold);font-size:.78em;margin-top:4px}
+#karbala-story .kb-hook{margin:0 0 22px;color:var(--ink);max-width:68ch}
+#karbala-story .kb-hook b{color:var(--navy)}
+#karbala-story .kb-video{position:relative;width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;cursor:pointer;
+  background:var(--navy) center/cover no-repeat;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,71,.05),rgba(27,42,71,.55))}
+#karbala-story .kb-play{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;z-index:2;
+  background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold);transition:transform .2s}
+#karbala-story .kb-video:hover .kb-play{transform:scale(1.07)}
+#karbala-story .kb-play svg{width:28px;height:28px;fill:var(--gold-2);margin-inline-start:4px}
+#karbala-story .kb-vmeta{position:absolute;bottom:12px;inset-inline:14px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#karbala-story .kb-vmeta span{background:rgba(27,42,71,.82);padding:3px 10px;border-radius:4px}
+#karbala-story .kb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+#karbala-story .kb-caption{font-size:14px;color:var(--muted);margin:16px 0 18px;line-height:1.7}
+#karbala-story .kb-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);border:0;border-radius:4px;
+  padding:13px 26px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+#karbala-story .kb-btn:hover{filter:brightness(1.07)}
+#karbala-story .kb-arr{transition:transform .3s}
+#karbala-story .kb-btn[aria-expanded=true] .kb-arr{transform:rotate(180deg)}
+#karbala-story .kb-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
+#karbala-story .kb-more.kb-open{grid-template-rows:1fr}
+#karbala-story .kb-more>div{overflow:hidden}
+#karbala-story .kb-inner{padding-top:30px}
+#karbala-story h3{font-family:var(--serif-en);font-weight:400;font-size:clamp(21px,3vw,26px);color:var(--navy);margin:36px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+html[lang="ar"] #karbala-story h3{font-family:var(--serif-ar);font-weight:700}
+#karbala-story h3:first-child{margin-top:0}
+#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--line);margin-inline-start:8px}
+#karbala-story .kb-ch{position:relative;margin-bottom:26px}
+#karbala-story .kb-ch::before{content:"";position:absolute;inset-inline-start:-39px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--gold)}
+#karbala-story .kb-ch.kb-red::before{background:var(--navy);box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--gold)}
+#karbala-story .kb-date{display:block;font:500 12px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-date{font-family:var(--sans-ar);letter-spacing:0;font-size:13px}
+#karbala-story .kb-ch h4{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.35;margin:2px 0 8px}
+html[lang="ar"] #karbala-story .kb-ch h4{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+#karbala-story .kb-ch p{margin:0 0 10px;max-width:68ch;color:var(--ink)}
+#karbala-story blockquote{margin:12px 0;padding:12px 18px;border-inline-start:3px solid var(--gold);background:rgba(184,149,90,.09);
+  border-radius:4px;color:var(--navy);font-family:var(--serif-en);font-style:italic;line-height:1.8}
+html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style:normal;font-size:18px}
+#karbala-story .kb-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+#karbala-story .kb-card p{margin:0 0 12px;color:var(--ink)}
+#karbala-story .kb-card p:last-child{margin:0}
+#karbala-story .kb-card b{color:var(--navy)}
+#karbala-story .kb-sources{font-size:14px;color:var(--muted);line-height:1.9;margin:0;padding-inline-start:20px}
+#karbala-story .kb-cta{margin-top:32px;text-align:center;padding:26px 0 6px;border-top:1px solid var(--line)}
+#karbala-story .kb-cta p{color:var(--navy);margin:0 0 14px;font-size:17px}
+#karbala-story .kb-cta a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:4px}
+#karbala-story .kb-cta a:hover{background:var(--navy-2)}
+@media (max-width:600px){
+  #karbala-story .kb-play{width:58px;height:58px}
+  #karbala-story .kb-timeline{padding-inline-start:22px;margin-inline-start:4px}
+  #karbala-story .kb-ch::before{inset-inline-start:-31px}
+}
+</style>
+
+<section class="block in" id="karbala-story" aria-label="Karbala">
+<div class="kb-wrap">
+
+<!-- ===================== DUTCH ===================== -->
+<div class="kb-lang" data-lang="nl" dir="ltr">
+  <div class="sec-head"><span class="eyebrow">Karbala</span><h2 class="disp">Karbala: een verhaal dat de wereld van uiteinde tot uiteinde schokte… wat gebeurde daar?</h2><p>Imam Hoessein (vrede zij met hem), kleinzoon van de Profeet, stond met 72 metgezellen tegenover duizenden mannen en werd een symbool van vrijheid.</p></div>
+  <button class="kb-btn" aria-expanded="false">Lees meer <span class="kb-arr">▾</span></button>
+  <div class="kb-more"><div><div class="kb-inner">
+
+    <h3>Het verhaal zoals de kronieken het bewaarden</h3>
+    <div class="kb-timeline">
+      <div class="kb-ch"><span class="kb-date">661 – 676 n.Chr. · Arabië en Syrië</span><h4>Van kalifaat naar erfopvolging</h4>
+        <p>In 661 sloot Hasan, de oudere broer van imam Hoessein (vrede zij met hem), vrede met Moe'awiya ibn Abi Soefyan om het bloedvergieten tussen moslims te stoppen: die tijd wordt herinnerd als „het jaar van de eenheid”. Hasan stierf rond 670 in Medina aan vergiftiging. Ibn Sa'd en al-Baladhoeri melden dat zijn vrouw Dja'da bint al-Asj'ath hem het gif gaf, en al-Baladhoeri voegt eraan toe dat zij dat op aansporing van Moe'awiya deed, al betwijfelden sommige historici, zoals Ibn Kathir, dit punt. Enkele jaren later liet Moe'awiya zijn zoon Yazid als opvolger erkennen: voor het eerst ging het kalifaat van vader op zoon over. Al-Tabari vertelt dat een delegatie uit Medina van Yazid terugkeerde met het bericht dat hij wijn dronk, met honden speelde en het gebed verwaarloosde; Ibn Kathir beschrijft hem als verslaafd aan genot en wijn. Verscheidene zonen van de grote metgezellen van de Profeet weigerden hem trouw te zweren, met aan het hoofd imam Hoessein ibn Ali (vrede zij met hem) en Abdoellah ibn az-Zoebayr.</p></div>
+      <div class="kb-ch"><span class="kb-date">April 680 · Medina</span><h4>„Iemand zoals ik zweert geen trouw aan iemand zoals hij”</h4>
+        <p>Na de dood van Moe'awiya schreef Yazid aan al-Walid ibn Oetba, gouverneur van Medina, met het bevel de eed van trouw af te nemen van imam Hoessein (vrede zij met hem), Abdoellah ibn az-Zoebayr en Abdoellah ibn Oemar, streng en zonder toegeeflijkheid. Al-Walid ontbood imam Hoessein (vrede zij met hem) 's nachts. Hij kwam met enkele jonge mannen uit zijn familie en zette hen bij de deur: als jullie mij mijn stem horen verheffen, kom dan binnen. Naast de gouverneur zat Marwan ibn al-Hakam. Al-Walid deelde imam Hoessein (vrede zij met hem) de dood van Moe'awiya mee en vroeg hem trouw te zweren aan Yazid. Imam Hoessein (vrede zij met hem) antwoordde dat iemand zoals hij niet in het geheim trouw zweert, maar, als hij het doet, in het openbaar, voor het volk.</p>
+        <p>Marwan zei tegen al-Walid: als hij nu vertrekt zonder te zweren, krijg je nooit meer zo'n kans; houd hem vast; zweert hij, goed, en zo niet, sla hem dan het hoofd af. Imam Hoessein (vrede zij met hem) sprong overeind: „Zoon van az-Zarqa, ben jij het die mij zal doden, of hij? Bij God, je liegt en je zondigt”. Toen wendde hij zich tot de gouverneur:</p>
+        <blockquote>„O emir, wij zijn het huis van het profeetschap, de bron van de boodschap, de plaats waar de engelen komen en gaan; door ons is God begonnen en door ons heeft Hij voltooid. Yazid is een zondig man, die wijn drinkt, zielen doodt die God onschendbaar heeft gemaakt en openlijk met zijn zonde pronkt, en iemand zoals ik zweert geen trouw aan iemand zoals hij. Maar laten we de ochtend afwachten, jullie en wij, en we zullen zien wie van ons het kalifaat het meest waardig is”.</blockquote>
+        <p>En hij vertrok. Al-Walid wees het advies van Marwan af en zei dat hij niet alles zou willen bezitten waarover de zon opgaat, als de prijs het doden van imam Hoessein (vrede zij met hem) zou zijn.</p>
+        <p>De Egyptische schrijver Abd ar-Rahman asj-Sjarqawi maakte van deze scène een beroemd moment in zijn toneelstuk <i>Hoessein de revolutionair</i>: al-Walid zegt hem dat er maar één woord van hem gevraagd wordt, en dat hij daarna in vrede kan gaan. Imam Hoessein (vrede zij met hem) antwoordt dat een woord geen kleinigheid is: door een woord gaat de mens het paradijs binnen en door een woord wordt hij in het vuur geworpen; het woord is een licht dat de mensen leidt, een vesting van vrijheid, een toevertrouwd pand en een verantwoordelijkheid, en de eer van een man is zijn woord. Hoe zou hij dan zijn woord aan Yazid kunnen verkopen?</p>
+        <p>Twee nachten later, op 28 radjab, vertrok imam Hoessein (vrede zij met hem) met zijn familie naar Mekka.</p></div>
+      <div class="kb-ch"><span class="kb-date">Voorjaar – zomer 680 · Mekka en Koefa</span><h4>De brieven uit Koefa en het lot van Moeslim</h4>
+        <p>Imam Hoessein (vrede zij met hem) verbleef maandenlang in Mekka, terwijl er brieven binnenkwamen van de inwoners van Koefa (in het huidige Irak) die hem uitnodigden te komen. Hij stuurde zijn neef Moeslim ibn Aqil vooruit, die hem schreef dat 18.000 mensen hem trouw hadden gezworen. Yazid benoemde toen Oebaydoellah ibn Ziyad tot gouverneur van Koefa. Onder zijn druk viel de menigte uiteen, totdat Moeslim alleen overbleef. Een vrouw genaamd Taw'a gaf hem onderdak; hij werd verraden, vocht, werd gevangengenomen en op het dak van het paleis terechtgesteld, samen met zijn gastheer Hani ibn Oerwa.</p></div>
+      <div class="kb-ch"><span class="kb-date">September 680 · Vertrek uit Mekka</span><h4>„Liever buiten de stad gedood worden”</h4>
+        <p>Ibn Abbas, Ibn Oemar en anderen raadden hem af naar Irak te gaan. Hij vertrok juist toen de bedevaart begon en zei tegen Ibn az-Zoebayr, volgens al-Tabari, dat hij liever buiten Mekka gedood werd dan te zien hoe door hem de heiligheid van de stad werd geschonden. Onderweg hoorde hij van de dood van Moeslim. Hij liet de bedoeïenen die zich tijdens de reis bij hem hadden aangesloten vrij om te vertrekken; zij gingen, en alleen zij die met hem uit Arabië waren gekomen, bleven.</p></div>
+      <div class="kb-ch"><span class="kb-date">2 moeharram 61 AH · 2 oktober 680</span><h4>Al-Hoerr en de halte bij Karbala</h4>
+        <p>Al-Hoerr ibn Yazid versperde hem de weg met 1.000 ruiters, die het bevel hadden hem naar Ibn Ziyad te brengen. Ze waren uitgeput van de dorst, en imam Hoessein (vrede zij met hem) liet de soldaten en hun paarden te drinken geven. Onderweg zei hij tegen hen:</p>
+        <blockquote>„Zien jullie niet dat er niet meer naar de waarheid wordt gehandeld en dat de leugen niet langer verboden is?”</blockquote>
+        <p>Begeleid door al-Hoerr hield de karavaan ten slotte halt op een vlakte aan de oever van de Eufraat, Karbala genaamd.</p></div>
+      <div class="kb-ch"><span class="kb-date">3 – 9 moeharram</span><h4>Het beleg en de dorst</h4>
+        <p>Oemar ibn Sa'd kwam met 4.000 soldaten, en Ibn Ziyad stuurde er nog meer. Drie dagen voor de slag werden 500 ruiters bij de rivier geplaatst om het kamp van imam Hoessein (vrede zij met hem) van het water af te sluiten. Zijn halfbroer Abbas leidde 's nachts een uitval met 30 ruiters en 20 voetsoldaten, brak door en bracht volle waterzakken terug. De onderhandelingen tussen imam Hoessein (vrede zij met hem) en Oemar ibn Sa'd leverden niets op. Op de negende dag kwam Sjimr met het bevel van Ibn Ziyad: zich aan zijn oordeel onderwerpen of vechten.</p></div>
+      <div class="kb-ch"><span class="kb-date">De vooravond</span><h4>De laatste nacht</h4>
+        <p>Imam Hoessein (vrede zij met hem) vroeg nog om één nacht. Hij verzamelde zijn metgezellen en ontsloeg hen van elke verplichting: de nacht bedekt jullie, zei hij, maak er gebruik van, want zij willen alleen mij. Abbas antwoordde als eerste, daarna de familie, daarna de metgezellen — Moeslim ibn Awsadja, Sa'd ibn Abdoellah, Zoehayr ibn al-Qayn —: niemand wilde vertrekken. Zij brachten de nacht door in gebed.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">10 moeharram · Asjoera · 10 oktober 680</span><h4>De dag van de trouw</h4>
+        <p>Na het ochtendgebed stelde imam Hoessein (vrede zij met hem) zijn mannen op: 32 ruiters en 40 voetsoldaten. Hij sprak het leger toe en herinnerde hen eraan dat hij afstamde van de Profeet. Toen liep al-Hoerr over naar imam Hoessein (vrede zij met hem), vol berouw over wat hij had gedaan. Imam Hoessein (vrede zij met hem) zei tegen hem: je bent vrij (<i>hoerr</i>), zoals je moeder je noemde, in deze wereld en in de volgende. Al-Hoerr vocht tot hij viel.</p>
+        <p>De metgezellen vielen een voor een: Moeslim ibn Awsadja, Habib ibn Mazahir, Zoehayr ibn al-Qayn. Rond het middaguur herinnerde Aboe Thoemama as-Sa'idi imam Hoessein (vrede zij met hem) aan het gebed, en hij leidde wie nog overeind stond in het gebed van de vrees, onder een regen van pijlen.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Middag</span><h4>De familie</h4>
+        <p>Toen trad de familie van de Profeet naar voren. De eerste van hen die viel was Ali al-Akbar, zoon van imam Hoessein (vrede zij met hem); daarna Qasim, zoon van Hasan, een jongen wiens gezicht een ooggetuige vergeleek met een sikkel van de maan. Ook Abbas viel, samen met zijn broers Abdoellah, Oethman en Dja'far.</p>
+        <p>Imam Hoessein (vrede zij met hem) zat met zijn zoontje Abdoellah op schoot. Een man van de stam Banoe Asad schoot een pijl af en doodde het kind; imam Hoessein (vrede zij met hem) ving zijn bloed op in de palm van zijn hand.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">De namiddag</span><h4>De val</h4>
+        <p>Alleen vocht imam Hoessein (vrede zij met hem) verder, en hij stormde op zijn belagers af tot ze terugweken. Toen sloten ze zich om hem heen onder leiding van Sjimr. Zoer'a ibn Sjarik trof hem, Sinan ibn Anas doorstak hem met een lans en hij viel; ze sloegen hem het hoofd af. Oemar ibn Sa'd beval tien ruiters met hun paarden over zijn lichaam te rijden, en de tenten werden geplunderd. Zijn zoon Ali (Zayn al-Abidin) werd gespaard omdat hij ziek was. Tweeënzeventig mannen waren samen met imam Hoessein (vrede zij met hem) gestorven.</p></div>
+      <div class="kb-ch"><span class="kb-date">Na Karbala</span><h4>Zaynab en de weg van Arbaeen</h4>
+        <p>De hoofden, de vrouwen en de kinderen werden naar Koefa gebracht. Toen de gouverneur juichte, antwoordde Zaynab, de zus van imam Hoessein (vrede zij met hem), hem met vaste stem: God had hen geëerd door Zijn Profeet, en het is de boosdoener die met schande wordt bedekt, niet zij. In Damascus, aan het hof van Yazid, wees ze een Syriër terecht die een van de dochters van imam Hoessein (vrede zij met hem) opeiste, en zei hem dat dit noch hem noch Yazid toekwam. Later stuurde Yazid de familie terug naar Medina.</p>
+        <p>Onder Yazid werd zelfs de Ka'ba niet gespaard. In 683 belegerde zijn leger onder bevel van al-Hoessein ibn Noemayr Mekka; de Ka'ba werd door katapulten getroffen en vatte vlam. Het leger trok zich pas terug op het bericht van de dood van Yazid.</p>
+        <p>Imam Hoessein (vrede zij met hem) werd begraven waar hij viel. Sindsdien trekt zijn graf pelgrims aan, is de stad Karbala eromheen gegroeid, en komen er vandaag jaarlijks miljoenen mensen te voet naartoe voor <b>Arbaeen</b>.</p></div>
+    </div>
+
+    <h3>De video: al-Kaabi en de kunst van de klaagzang</h3>
+    <div class="kb-card">
+      <p><b>Sjeik Abdul Zahra al-Kaabi</b> was een prediker uit Karbala, geboren rond 1909. Op de dag van Asjoera in 1959 droeg hij de Maqtal voor bij het heiligdom van imam Hoessein (vrede zij met hem), en zijn voordracht werd door Radio Bagdad in heel Irak en de Golfregio uitgezonden. Sindsdien is zijn stem het geluid van de Asjoera-ochtend in Iraakse huizen: tientallen jaren na zijn dood is niemand erin geslaagd zijn stijl na te doen.</p>
+      <p>De <b>na'i</b> (klaagzang) is een oude Iraakse kunst om het verhaal van imam Hoessein (vrede zij met hem) te vertellen: een gezongen verhaal op een droevige melodie, zonder muziekinstrumenten, dat klassiek Arabisch proza combineert met volkse rouwverzen. Het doel is niet te vermaken, maar de luisteraar het gevoel te geven aanwezig te zijn in Karbala. Je hoeft geen Arabisch te verstaan: de stem draagt het verhaal, de vertaling doet de rest.</p>
+      <p>De video toont de volledige Maqtal met de stem van al-Kaabi en vertaling.</p>
+    </div>
+
+    <h3>Bronnen</h3>
+    <ul class="kb-sources">
+      <li><i>Geschiedenis van de profeten en koningen</i> — al-Tabari (gest. 923), volgens het verslag van Aboe Mikhnaf</li>
+      <li><i>Ansab al-Asjraf</i> — al-Baladhoeri (gest. 892)</li>
+      <li><i>At-Tabaqat al-Koebra</i> — Ibn Sa'd (gest. 845)</li>
+      <li><i>Al-Kamil fi at-Tarikh</i> — Ibn al-Athir (gest. 1233)</li>
+      <li><i>Al-Bidaya wa an-Nihaya</i> — Ibn Kathir (gest. 1373)</li>
+    </ul>
+
+    <div class="kb-cta"><p>Sta waar imam Hoessein (vrede zij met hem) stond. Loop tussen de twee heiligdommen.</p><a href="#itinerary">Bezoek Karbala met ons</a></div>
+  </div></div></div>
+  <div class="kb-video" style="margin-top:22px" data-hl="nl"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>Stem: sjeik Abdul Zahra al-Kaabi</span><span>Met vertaling</span></div></div>
+</div>
+
+
+</div>
+</section>
+
+<script>
+function kbInit(){
+  var s=document.getElementById('karbala-story'); if(!s) return;
+  var L=(document.documentElement.lang||'ar').slice(0,2).toLowerCase();
+  // Dutch page: translated Maqtal video
+  if(['nl'].indexOf(L)<0){ s.style.display='none'; return; }
+  s.style.display='';
+  var VID='73tbXF-_sag', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
+  s.querySelectorAll('.kb-lang').forEach(function(b){
+    b.classList.toggle('kb-on', b.getAttribute('data-lang')===L);
+  });
+  s.querySelectorAll('.kb-video').forEach(function(v){
+    if(v.dataset.ready) return; v.dataset.ready=1;
+    v.style.backgroundImage='url('+THUMB+')';
+    v.addEventListener('click',function(){
+      if(v.querySelector('iframe')) return;
+      var hl=v.getAttribute('data-hl');
+      var cc = '';
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0&hl='+hl+cc;
+      f.title='Maqtal van imam Hoessein – Abdul Zahra al-Kaabi';
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen=true;
+      v.appendChild(f);
+    });
+  });
+  s.querySelectorAll('.kb-btn').forEach(function(btn){
+    if(btn.dataset.ready) return; btn.dataset.ready=1;
+    var more=btn.nextElementSibling, label=btn.firstChild.nodeValue;
+    var closeTxt={ar:'إخفاء ',en:'Show less ',ru:'Свернуть ',de:'Weniger anzeigen ',fr:'Réduire ',es:'Mostrar menos ',it:'Mostra meno ',nl:'Minder tonen '};
+    btn.addEventListener('click',function(){
+      var open=more.classList.toggle('kb-open');
+      btn.setAttribute('aria-expanded',open);
+      var lang=btn.closest('.kb-lang').getAttribute('data-lang');
+      btn.firstChild.nodeValue = open ? closeTxt[lang] : label;
+    });
+  });
+}
+document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',kbInit) : kbInit();
+</script>
+<!-- ================= END: KARBALA SECTION ================= -->
+
   <section class="block in" style="padding-top:0" id="usa-canada" aria-labelledby="usa-canada-h">
     <div class="us-ar">
       <span class="eyebrow">🇺🇸 🇨🇦 Voor Nederlanders en Vlamingen in de VS en Canada</span>
