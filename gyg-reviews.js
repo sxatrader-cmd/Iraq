@@ -6,7 +6,7 @@
   var GYG = "https://www.getyourguide.com/fable-tour-in-iraq-s471675/";
   var R = [
     /* Chinese-page only (only: ["zh"]), pinned first there (pin: 1) */
-    { n: "GetYourGuide 旅行者", c: "", d: "2026-11-06", s: 5, t: "From Baghdad: Babylon Walking Tour", u: "https://gyg.me/BHeinxB8", lang: "zh", only: ["zh"], pin: 1,
+    { n: "Ting", c: "United States", d: "2026-11-05", s: 5, t: "From Baghdad: Babylon Walking Tour", u: "https://gyg.me/BHeinxB8", lang: "zh", only: ["zh"], pin: 1,
       x: "非常愉快且难忘的巴比伦之旅！司机非常专业、知识丰富，对当地历史文化十分了解，而且行程安排灵活，能够根据实际情况及时调整，让整个旅程轻松又充实。虽然今天巴比伦部分景点没有开放，但司机非常热情周到，主动请我享用当地特色午餐，还特意安排了我一直想尝试的伊拉克传统烤鱼 Masgouf，非常美味！ 由于下午还有空余时间，司机又贴心地提议增加卡尔巴拉（Karbala）的参观行程，只收取了非常合理的少量额外费用，让我有机会进一步体验伊拉克独特的历史与文化。 非常感谢司机的热情、专业和灵活安排，让原本可能留下遗憾的一天变成了丰富而难忘的旅行体验。强烈推荐！" },
     { n: "Pavel", c: "Romania", d: "2026-10-05", s: 5, t: "Baghdad: Kadhimiya Sunrise Tour & Airport Pickup & Breakfast", u: "https://www.getyourguide.com/baghdad-l152664/baghdad-kadhimiya-sunrise-tour-airport-pickup-breakfast-t1471096/", lang: "ru",
       x: "Супер профессиональный гид. Все было на высоте . Рекомендую",
