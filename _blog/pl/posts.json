@@ -497,5 +497,74 @@
   "tour": "7",
   "image": "img/babylon-ishtar-gate.webp",
   "image_credit": ""
+ },
+ {
+  "topic": "basra-the-gateway-of-the-south",
+  "slug": "basra-irak-przewodnik-zwiedzanie",
+  "date": "2026-11-06",
+  "title": "Basra, Irak – zwiedzanie: przewodnik po bramie południa",
+  "h1": "Basra w Iraku – zwiedzanie: Szatt al-Arab, domy z szanaszilami i miasto Sindbada",
+  "description": "Basra w Iraku – zwiedzanie: promenada nad Szatt al-Arab, Muzeum w Basrze, domy z szanaszilami, historia, najlepsza pora i rady lokalnego przewodnika.",
+  "excerpt": "Wielki port południowego Iraku nad Szatt al-Arab: historia, promenada, Muzeum w Basrze, stare domy z szanaszilami i porady na podróż.",
+  "keywords": "Basra Irak zwiedzanie, Basra przewodnik, co zobaczyć w Basrze, Szatt al-Arab, Muzeum w Basrze, szanaszile Basra, Sindbad Żeglarz Basra, wycieczka do Iraku, południowy Irak",
+  "category": "Miasta i kultura",
+  "region": "Muhafaza Basra",
+  "place": "Basra",
+  "geo": [
+   30.5085,
+   47.7804
+  ],
+  "tour": "9",
+  "image": "img/basra-shatt-al-arab-sunset.webp",
+  "image_alt": "Zachód słońca nad Szatt al-Arab w Basrze, sylwetki palm daktylowych na tle złoto-pomarańczowego nieba nad rzeką",
+  "image_credit": "",
+  "facts": [
+   [
+    "Gdzie",
+    "Południowy Irak, nad Szatt al-Arab, ok. 545 km drogą na południowy wschód od Bagdadu"
+   ],
+   [
+    "Założona",
+    "Około 636 roku"
+   ],
+   [
+    "Słynie z",
+    "Promenady, Muzeum w Basrze, domów z szanaszilami, daktyli"
+   ],
+   [
+    "Potrzebny czas",
+    "1–2 dni oraz wycieczki do Kurny, na Mokradła i do Ur"
+   ],
+   [
+    "Najlepsza pora",
+    "Od końca października do marca"
+   ]
+  ],
+  "faq": [
+   [
+    "Gdzie leży Basra?",
+    "Na dalekim południu Iraku, na zachodnim brzegu Szatt al-Arab – rzeki utworzonej przez Tygrys i Eufrat – ok. 545 km drogą na południowy wschód od Bagdadu."
+   ],
+   [
+    "Z czego słynie Basra?",
+    "Z rzeki Szatt al-Arab i gajów palmowych, długiej historii portu i ośrodka nauki, opowieści o Sindbadzie Żeglarzu, domów z szanaszilami i znakomitych daktyli."
+   ],
+   [
+    "Co zobaczyć w Basrze?",
+    "Spacer po promenadzie o zachodzie słońca, Muzeum w Basrze w dawnym pałacu nad rzeką, uliczki starego miasta z szanaszilami, bazary i ormiański kościół Najświętszej Maryi Panny."
+   ],
+   [
+    "Jak dostać się do Basry?",
+    "Lotnisko w Basrze ma połączenia krajowe z Bagdadu i Erbilu oraz połączenia regionalne. Droga z Bagdadu jest długa, więc najlepiej połączyć ją z postojami przy zabytkach."
+   ],
+   [
+    "Kiedy najlepiej odwiedzić Basrę?",
+    "Od końca października do marca. Lato w Basrze jest bardzo gorące, a zimowe dni są przyjemne i idealne na spacery nad rzeką."
+   ],
+   [
+    "Co można zwiedzić w okolicach Basry?",
+    "Kurnę, gdzie łączą się Tygrys i Eufrat, Mokradła Mezopotamskie oraz starożytne sumeryjskie miasto Ur – wszystko w zasięgu jednodniowych wycieczek."
+   ]
+  ]
  }
 ]

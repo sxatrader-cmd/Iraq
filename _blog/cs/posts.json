@@ -497,5 +497,147 @@
   "tour": "7",
   "image": "img/samarra-malwiya-b2b.webp",
   "image_credit": ""
+ },
+ {
+  "topic": "al-mutanabbi-street-and-baghdad-s-book-market",
+  "slug": "ulice-mutanabbi-bagdad-knihy",
+  "date": "2026-11-06",
+  "title": "Ulice al-Mutanabbí v Bagdádu: průvodce knižním trhem",
+  "h1": "Ulice al-Mutanabbí v Bagdádu: ulice knih, páteční trh a kavárna Šabandar",
+  "description": "Ulice al-Mutanabbí v Bagdádu: historie ulice knih, páteční knižní trh, kavárna Šabandar, Kišla u Tigridu a praktické tipy od místního průvodce.",
+  "excerpt": "Knižní stánky, páteční trh, čaj v kavárně Šabandar a socha básníka u Tigridu: jak si užít slavnou bagdádskou ulici knih.",
+  "keywords": "ulice al-Mutanabbí Bagdád, al-Mutanabbí, knižní trh Bagdád, kavárna Šabandar, Kišla Bagdád, starý Bagdád, co vidět v Bagdádu, zájezd do Iráku",
+  "category": "Města a kultura",
+  "region": "Bagdád",
+  "place": "Ulice al-Mutanabbí, Bagdád",
+  "geo": [
+   33.3405,
+   44.387
+  ],
+  "tour": "7",
+  "image": "img/mutanabbi-street-statue.webp",
+  "image_alt": "Bronzová socha básníka al-Mutanabbího na pozadí modré oblohy, za ní hodinová věž Kišly a žlutá cihlová zeď",
+  "image_credit": "",
+  "facts": [
+   [
+    "Kde",
+    "Starý Bagdád, strana Rusáfa na východním břehu Tigridu"
+   ],
+   [
+    "Délka",
+    "Necelý 1 km, pěší zóna"
+   ],
+   [
+    "Pojmenována po",
+    "Básníkovi al-Mutanabbím (asi 915–965), název od roku 1932"
+   ],
+   [
+    "Vrchol",
+    "Páteční dopolední knižní trh"
+   ],
+   [
+    "V okolí",
+    "Kavárna Šabandar (1917), Kišla, al-Mustansiríja"
+   ],
+   [
+    "Nejlepší doba",
+    "Říjen až duben"
+   ]
+  ],
+  "faq": [
+   [
+    "Kde se nachází ulice al-Mutanabbí?",
+    "Ve starém městě Bagdádu, na straně Rusáfa na východním břehu Tigridu. Odbočuje z třídy al-Rašíd a končí u řeky."
+   ],
+   [
+    "Kdy je nejlepší ulici al-Mutanabbí navštívit?",
+    "V pátek dopoledne, kdy chodníky pokrývají knihy z druhé ruky a ulice žije. Nejpříjemnější jsou chladnější měsíce od října do dubna."
+   ],
+   [
+    "Kdo byl al-Mutanabbí?",
+    "Abú at-Tajjib al-Mutanabbí byl básník abbásovské doby, narozený kolem roku 915 v Kúfě a zemřelý roku 965, považovaný za jednoho z největších básníků arabského jazyka."
+   ],
+   [
+    "Co je kavárna Šabandar?",
+    "Legendární čajovna z roku 1917 ve spodní části ulice, místo setkávání spisovatelů a intelektuálů, se stěnami plnými starých fotografií."
+   ],
+   [
+    "Co dalšího je v okolí?",
+    "Kišla s hodinovou věží, Súk as-Saráj, medresa al-Mustansiríja, Bagdádské muzeum a trh měditepců Súk as-Safáfír – vše v docházkové vzdálenosti."
+   ],
+   [
+    "Je ulice al-Mutanabbí součástí zájezdu?",
+    "Ano, patří k bagdádskému dni 7denního zájezdu Fable Tour po Iráku, obvykle i s čajem v kavárně Šabandar."
+   ]
+  ]
+ },
+ {
+  "topic": "basra-the-gateway-of-the-south",
+  "slug": "basra-irak-pruvodce-navsteva",
+  "date": "2026-11-06",
+  "title": "Basra, Irák: průvodce návštěvou brány jihu",
+  "h1": "Basra a návštěva jihu Iráku: Šatt al-Arab, domy se šanašíly a Sindibádovo město",
+  "description": "Basra, Irák a její návštěva: nábřeží Šatt al-Arabu, Basrské muzeum, staré domy se šanašíly, historie, nejlepší doba a tipy od místního průvodce.",
+  "excerpt": "Velký přístav jižního Iráku na Šatt al-Arabu: historie, nábřeží, Basrské muzeum, staré domy se šanašíly a tipy na cestu.",
+  "keywords": "Basra Irák návštěva, Basra průvodce, co vidět v Basře, Šatt al-Arab, Basrské muzeum, Sindibád Basra, jižní Irák, zájezd do Iráku",
+  "category": "Města a kultura",
+  "region": "Provincie Basra",
+  "place": "Basra",
+  "geo": [
+   30.5085,
+   47.7804
+  ],
+  "tour": "9",
+  "image": "img/basra-shatt-al-arab-sunset.webp",
+  "image_alt": "Západ slunce nad Šatt al-Arabem v Basře, siluety datlových palem proti zlatooranžové obloze nad řekou",
+  "image_credit": "",
+  "facts": [
+   [
+    "Kde",
+    "Jih Iráku, na Šatt al-Arabu, asi 545 km jihovýchodně od Bagdádu po silnici"
+   ],
+   [
+    "Založena",
+    "Kolem roku 636 n. l."
+   ],
+   [
+    "Proslulá",
+    "Nábřežím, Basrským muzeem, domy se šanašíly a datlemi"
+   ],
+   [
+    "Potřebný čas",
+    "1–2 dny, plus výlety do Kurny, mokřadů a Uru"
+   ],
+   [
+    "Nejlepší doba",
+    "Konec října až březen"
+   ]
+  ],
+  "faq": [
+   [
+    "Kde leží Basra?",
+    "Na samém jihu Iráku, na západním břehu Šatt al-Arabu, řeky vzniklé soutokem Tigridu a Eufratu, zhruba 545 km jihovýchodně od Bagdádu po silnici."
+   ],
+   [
+    "Čím je Basra známá?",
+    "Řekou Šatt al-Arab a palmovými háji, dlouhou historií přístavu a centra vzdělanosti, příběhy o Sindibádovi námořníkovi, domy se šanašíly a výbornými datlemi."
+   ],
+   [
+    "Co v Basře vidět?",
+    "Projděte se po nábřeží při západu slunce, navštivte Basrské muzeum v bývalém paláci u řeky, staré uličky se šanašíly a bazary a arménský kostel Svaté Panny Marie."
+   ],
+   [
+    "Jak se do Basry dostat?",
+    "Mezinárodní letiště Basra má vnitrostátní lety z Bagdádu a Erbílu i regionální spoje. Cesta autem z Bagdádu je dlouhá, proto je dobré spojit ji se zastávkami na památkách po cestě."
+   ],
+   [
+    "Kdy je nejlepší doba pro návštěvu Basry?",
+    "Od konce října do března. Léta jsou v Basře velmi horká, zimní dny jsou naopak příjemné a ideální na procházky u řeky."
+   ],
+   [
+    "Co navštívit v okolí Basry?",
+    "Kurnu, kde se slévají Tigris a Eufrat, mezopotámské mokřady a starověké sumerské město Ur, vše na snadné jednodenní výlety."
+   ]
+  ]
  }
 ]

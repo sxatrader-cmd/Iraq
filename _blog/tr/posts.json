@@ -497,5 +497,74 @@
   "tour": "7",
   "image": "img/babylon-ishtar-gate.webp",
   "image_credit": ""
+ },
+ {
+  "topic": "basra-the-gateway-of-the-south",
+  "date": "2026-11-06",
+  "geo": [
+   30.5085,
+   47.7804
+  ],
+  "tour": "9",
+  "image": "img/basra-shatt-al-arab-sunset.webp",
+  "image_credit": "",
+  "slug": "basra-irak-gezi-rehberi",
+  "title": "Basra gezi rehberi: Irak'ta güneyin kapısı",
+  "h1": "Basra gezi rehberi: Şattülarap, şenaşil evleri ve Sinbad'ın şehri",
+  "description": "Basra gezi rehberi: Irak'ta gezilecek yerler, Şattülarap Korniş'i, Basra Müzesi, şenaşil evleri, tarih, en iyi mevsim ve Necef-Kerbela ipuçları.",
+  "excerpt": "Irak'ın Şattülarap kıyısındaki büyük güney limanı: tarihi, Korniş, Basra Müzesi, eski şenaşil evleri ve pratik gezi ipuçları.",
+  "keywords": "Basra gezi rehberi, Basra Irak gezilecek yerler, Şattülarap Korniş, Basra Müzesi, şenaşil evleri, Sinbad Basra, Irak ziyaret turu, güney Irak turu",
+  "category": "Şehirler ve kültür",
+  "region": "Basra vilayeti",
+  "place": "Basra",
+  "image_alt": "Basra'da Şattülarap üzerinde gün batımı; altın ve turuncu gökyüzüne karşı siluet hâlinde hurma ağaçları",
+  "facts": [
+   [
+    "Konum",
+    "Güney Irak, Şattülarap kıyısı; Bağdat'a karayoluyla ~545 km"
+   ],
+   [
+    "Kuruluş",
+    "MS 636 civarı"
+   ],
+   [
+    "Öne çıkanlar",
+    "Korniş, Basra Müzesi, şenaşil evleri, hurma"
+   ],
+   [
+    "Gereken süre",
+    "1–2 gün; ayrıca Kurna, Bataklıklar ve Ur'a günübirlik geziler"
+   ],
+   [
+    "En iyi mevsim",
+    "Ekim sonundan marta"
+   ]
+  ],
+  "faq": [
+   [
+    "Basra nerede?",
+    "Basra, Irak'ın en güneyinde, Dicle ile Fırat'ın birleşmesiyle oluşan Şattülarap'ın batı kıyısındadır; Bağdat'a karayoluyla yaklaşık 545 km uzaklıktadır."
+   ],
+   [
+    "Basra neyle ünlüdür?",
+    "Şattülarap'ı ve hurmalıkları, liman ve ilim merkezi olarak uzun tarihi, Denizci Sinbad masalları, şenaşil evleri ve nefis hurmalarıyla."
+   ],
+   [
+    "Basra'da gezilecek yerler nelerdir?",
+    "Gün batımında Korniş'te yürüyün, nehir kıyısındaki eski bir saraydaki Basra Müzesi'ni gezin, eski şenaşil sokaklarını ve çarşıları keşfedin, Ermeni Meryem Ana Kilisesi'ni görün."
+   ],
+   [
+    "Basra'ya nasıl gidilir?",
+    "Basra Uluslararası Havalimanı'na Bağdat ve Erbil'den iç hat seferleri ve bölgesel bağlantılar vardır. Bağdat'tan karayolu uzundur; yolculuğu yol üstündeki yerlerde mola vererek bölmek en iyisidir."
+   ],
+   [
+    "Basra'ya gitmek için en iyi zaman ne zaman?",
+    "Ekim sonundan marta kadar. Basra'da yazlar çok sıcaktır; kış günleri ise ılık ve nehir kenarında yürümek için idealdir."
+   ],
+   [
+    "Basra ziyareti Necef ve Kerbela ile birleştirilebilir mi?",
+    "Evet. Basra güneyin kapısıdır; 9 günlük turumuz buradan başlayıp Bataklıklar ve Ur üzerinden Necef, Kerbela ve Babil'e devam eder."
+   ]
+  ]
  }
 ]
