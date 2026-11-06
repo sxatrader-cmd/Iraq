@@ -1117,6 +1117,183 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   </section>
 
 
+  <!-- ================= START: KARBALA SECTION ================= -->
+<style>
+#karbala-story{padding-bottom:0}
+#karbala-story *{box-sizing:border-box}
+#karbala-story .kb-lang{display:none}
+#karbala-story .kb-lang.kb-on{display:block}
+#karbala-story .kb-eyebrow{display:block;font:500 13px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-eyebrow{font-family:var(--sans-ar);letter-spacing:.02em;font-size:14px}
+#karbala-story h2{font-size:clamp(24px,3.8vw,32px);color:var(--navy);margin:6px 0 14px;line-height:1.3}
+#karbala-story h2 .kb-q{display:block;color:var(--gold);font-size:.78em;margin-top:4px}
+#karbala-story .kb-hook{margin:0 0 22px;color:var(--ink);max-width:68ch}
+#karbala-story .kb-hook b{color:var(--navy)}
+#karbala-story .kb-video{position:relative;width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;cursor:pointer;
+  background:var(--navy) center/cover no-repeat;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,71,.05),rgba(27,42,71,.55))}
+#karbala-story .kb-play{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;z-index:2;
+  background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold);transition:transform .2s}
+#karbala-story .kb-video:hover .kb-play{transform:scale(1.07)}
+#karbala-story .kb-play svg{width:28px;height:28px;fill:var(--gold-2);margin-inline-start:4px}
+#karbala-story .kb-vmeta{position:absolute;bottom:12px;inset-inline:14px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#karbala-story .kb-vmeta span{background:rgba(27,42,71,.82);padding:3px 10px;border-radius:4px}
+#karbala-story .kb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+#karbala-story .kb-caption{font-size:14px;color:var(--muted);margin:16px 0 18px;line-height:1.7}
+#karbala-story .kb-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);border:0;border-radius:4px;
+  padding:13px 26px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+#karbala-story .kb-btn:hover{filter:brightness(1.07)}
+#karbala-story .kb-arr{transition:transform .3s}
+#karbala-story .kb-btn[aria-expanded=true] .kb-arr{transform:rotate(180deg)}
+#karbala-story .kb-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
+#karbala-story .kb-more.kb-open{grid-template-rows:1fr}
+#karbala-story .kb-more>div{overflow:hidden}
+#karbala-story .kb-inner{padding-top:30px}
+#karbala-story h3{font-family:var(--serif-en);font-weight:400;font-size:clamp(21px,3vw,26px);color:var(--navy);margin:36px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+html[lang="ar"] #karbala-story h3{font-family:var(--serif-ar);font-weight:700}
+#karbala-story h3:first-child{margin-top:0}
+#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--line);margin-inline-start:8px}
+#karbala-story .kb-ch{position:relative;margin-bottom:26px}
+#karbala-story .kb-ch::before{content:"";position:absolute;inset-inline-start:-39px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--gold)}
+#karbala-story .kb-ch.kb-red::before{background:var(--navy);box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--gold)}
+#karbala-story .kb-date{display:block;font:500 12px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-date{font-family:var(--sans-ar);letter-spacing:0;font-size:13px}
+#karbala-story .kb-ch h4{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.35;margin:2px 0 8px}
+html[lang="ar"] #karbala-story .kb-ch h4{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+#karbala-story .kb-ch p{margin:0 0 10px;max-width:68ch;color:var(--ink)}
+#karbala-story blockquote{margin:12px 0;padding:12px 18px;border-inline-start:3px solid var(--gold);background:rgba(184,149,90,.09);
+  border-radius:4px;color:var(--navy);font-family:var(--serif-en);font-style:italic;line-height:1.8}
+html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style:normal;font-size:18px}
+#karbala-story .kb-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+#karbala-story .kb-card p{margin:0 0 12px;color:var(--ink)}
+#karbala-story .kb-card p:last-child{margin:0}
+#karbala-story .kb-card b{color:var(--navy)}
+#karbala-story .kb-sources{font-size:14px;color:var(--muted);line-height:1.9;margin:0;padding-inline-start:20px}
+#karbala-story .kb-cta{margin-top:32px;text-align:center;padding:26px 0 6px;border-top:1px solid var(--line)}
+#karbala-story .kb-cta p{color:var(--navy);margin:0 0 14px;font-size:17px}
+#karbala-story .kb-cta a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:4px}
+#karbala-story .kb-cta a:hover{background:var(--navy-2)}
+@media (max-width:600px){
+  #karbala-story .kb-play{width:58px;height:58px}
+  #karbala-story .kb-timeline{padding-inline-start:22px;margin-inline-start:4px}
+  #karbala-story .kb-ch::before{inset-inline-start:-31px}
+}
+</style>
+
+<section class="block in" id="karbala-story" aria-label="Karbala">
+<div class="kb-wrap">
+
+<!-- ===================== POLISH ===================== -->
+<div class="kb-lang" data-lang="pl" dir="ltr">
+  <div class="sec-head"><span class="eyebrow">Kerbala</span><h2 class="disp">Kerbala: historia, która wstrząsnęła światem od krańca do krańca… co się tam wydarzyło?</h2><p>Imam Husajn (pokój z nim), wnuk Proroka, stanął z 72 towarzyszami przeciwko tysiącom ludzi i stał się symbolem wolności.</p></div>
+  <button class="kb-btn" aria-expanded="false">Dowiedz się więcej <span class="kb-arr">▾</span></button>
+  <div class="kb-more"><div><div class="kb-inner">
+
+    <h3>Historia tak, jak zachowały ją kroniki</h3>
+    <div class="kb-timeline">
+      <div class="kb-ch"><span class="kb-date">661 – 676 n.e. · Arabia i Syria</span><h4>Od kalifatu do dziedziczenia władzy</h4>
+        <p>W 661 roku Hasan, starszy brat imama Husajna (pokój z nim), zawarł pokój z Muawiją ibn Abi Sufjanem, aby powstrzymać rozlew krwi między muzułmanami: ten czas zapamiętano jako „rok jedności”. Hasan zmarł otruty w Medynie około 670 roku. Ibn Sad i al-Baladhuri podają, że truciznę podała mu żona, Dżada bint al-Aszas, a al-Baladhuri dodaje, że uczyniła to z namowy Muawiji, choć niektórzy historycy, jak Ibn Kasir, poddawali ten szczegół w wątpliwość. Kilka lat później Muawija sprawił, że jego syn Jazid został uznany za następcę: po raz pierwszy kalifat przechodził z ojca na syna. At-Tabari opowiada, że poselstwo z Medyny wróciło od Jazida z wieścią, że pije wino, bawi się z psami i zaniedbuje modlitwę; Ibn Kasir opisuje go jako oddanego przyjemnościom i winu. Kilku synów wielkich towarzyszy Proroka odmówiło złożenia mu przysięgi wierności, a na ich czele stanęli imam Husajn ibn Ali (pokój z nim) i Abdullah ibn az-Zubajr.</p></div>
+      <div class="kb-ch"><span class="kb-date">Kwiecień 680 · Medyna</span><h4>„Ktoś taki jak ja nie składa przysięgi komuś takiemu jak on”</h4>
+        <p>Po śmierci Muawiji Jazid napisał do al-Walida ibn Utby, namiestnika Medyny, nakazując mu odebrać przysięgę wierności od imama Husajna (pokój z nim), Abdullaha ibn az-Zubajra i Abdullaha ibn Umara, stanowczo i bez pobłażania. Al-Walid wezwał imama Husajna (pokój z nim) w nocy. Ten przyszedł z kilkoma młodzieńcami ze swojej rodziny i postawił ich przy drzwiach: jeśli usłyszycie, że podnoszę głos, wejdźcie. Obok namiestnika siedział Marwan ibn al-Hakam. Al-Walid oznajmił imamowi Husajnowi (pokój z nim) śmierć Muawiji i poprosił go o przysięgę dla Jazida. Imam Husajn (pokój z nim) odpowiedział, że ktoś taki jak on nie składa przysięgi w ukryciu, lecz, jeśli już, to publicznie, przed ludem.</p>
+        <p>Marwan powiedział do al-Walida: jeśli teraz odejdzie bez przysięgi, nigdy więcej nie będziesz miał takiej okazji; zatrzymaj go; jeśli przysięgnie, dobrze, a jeśli nie, zetnij mu głowę. Imam Husajn (pokój z nim) zerwał się na nogi: „Synu az-Zarki, ty mnie zabijesz, czy on? Na Boga, kłamiesz i grzeszysz”. Potem zwrócił się do namiestnika:</p>
+        <blockquote>„O emirze, my jesteśmy domem proroctwa, źródłem posłannictwa, miejscem, gdzie przychodzą i odchodzą aniołowie; przez nas Bóg zaczął i przez nas dopełnił. Jazid jest człowiekiem grzesznym, który pije wino, zabija dusze, które Bóg uczynił nietykalnymi, i otwarcie obnosi się ze swoim grzechem, a ktoś taki jak ja nie składa przysięgi komuś takiemu jak on. Lecz poczekajmy do rana, wy i my, a zobaczymy, kto z nas bardziej godzien jest kalifatu”.</blockquote>
+        <p>I odszedł. Al-Walid odrzucił radę Marwana i powiedział, że nie chciałby posiadać wszystkiego, nad czym wschodzi słońce, gdyby ceną miało być zabicie imama Husajna (pokój z nim).</p>
+        <p>Egipski pisarz Abd ar-Rahman asz-Szarkawi uczynił z tej sceny słynny moment swojego dramatu <i>Husajn rewolucjonista</i>: al-Walid mówi mu, że żąda się od niego tylko jednego słowa, a potem może odejść w pokoju. Imam Husajn (pokój z nim) odpowiada, że słowo to nie drobiazg: przez słowo człowiek wchodzi do raju i przez słowo zostaje wrzucony w ogień; słowo jest światłem, które prowadzi ludzi, twierdzą wolności, powierzonym depozytem i odpowiedzialnością, a honor człowieka to jego słowo. Jak więc miałby sprzedać swoje słowo Jazidowi?</p>
+        <p>Dwie noce później, 28 radżaba, imam Husajn (pokój z nim) wyruszył z rodziną do Mekki.</p></div>
+      <div class="kb-ch"><span class="kb-date">Wiosna – lato 680 · Mekka i Kufa</span><h4>Listy z Kufy i los Muslima</h4>
+        <p>Imam Husajn (pokój z nim) przebywał miesiącami w Mekce, a tymczasem napływały listy od mieszkańców Kufy (w dzisiejszym Iraku), zapraszające go do przybycia. Wysłał przodem swojego kuzyna, Muslima ibn Akila, który napisał mu, że 18 000 ludzi złożyło mu przysięgę. Jazid mianował wtedy Ubajdullaha ibn Zijada namiestnikiem Kufy. Pod jego naciskiem ludzie się rozproszyli, aż Muslim został sam. Kobieta imieniem Taua dała mu schronienie; został zdradzony, walczył, został pojmany i stracony na dachu pałacu, razem ze swoim gospodarzem Hanim ibn Urwą.</p></div>
+      <div class="kb-ch"><span class="kb-date">Wrzesień 680 · Wyjazd z Mekki</span><h4>„Lepiej zginąć poza nią”</h4>
+        <p>Ibn Abbas, Ibn Umar i inni radzili mu, by nie jechał do Iraku. Wyruszył właśnie wtedy, gdy zaczynała się pielgrzymka, i powiedział Ibn az-Zubajrowi, według at-Tabariego, że woli zginąć poza Mekką, niż widzieć, jak z jego powodu zostaje naruszona świętość miasta. W drodze dowiedział się o śmierci Muslima. Pozwolił odejść Beduinom, którzy przyłączyli się do niego podczas podróży; odeszli, a zostali tylko ci, którzy przybyli z nim z Arabii.</p></div>
+      <div class="kb-ch"><span class="kb-date">2 muharrama 61 r. h. · 2 października 680</span><h4>Al-Hurr i postój w Kerbali</h4>
+        <p>Al-Hurr ibn Jazid zagrodził mu drogę z 1000 jeźdźców, którzy mieli rozkaz doprowadzić go do Ibn Zijada. Byli wycieńczeni pragnieniem, a imam Husajn (pokój z nim) kazał napoić żołnierzy i ich konie. W drodze powiedział do nich:</p>
+        <blockquote>„Czyż nie widzicie, że nie postępuje się już według prawdy, a fałsz nie jest już zakazany?”</blockquote>
+        <p>Eskortowana przez al-Hurra karawana zatrzymała się w końcu na równinie nad brzegiem Eufratu, zwanej Kerbala.</p></div>
+      <div class="kb-ch"><span class="kb-date">3 – 9 muharrama</span><h4>Oblężenie i pragnienie</h4>
+        <p>Umar ibn Sad przybył z 4000 żołnierzy, a Ibn Zijad przysłał kolejnych. Trzy dni przed bitwą nad rzeką postawiono 500 jeźdźców, by odciąć obóz imama Husajna (pokój z nim) od wody. Jego przyrodni brat Abbas poprowadził nocą wypad z 30 jeźdźcami i 20 pieszymi, przebił się i przyniósł pełne bukłaki. Rozmowy między imamem Husajnem (pokój z nim) a Umarem ibn Sadem nie przyniosły rezultatu. Dziewiątego dnia przybył Szimr z rozkazem Ibn Zijada: poddać się jego wyrokowi albo walczyć.</p></div>
+      <div class="kb-ch"><span class="kb-date">Wigilia</span><h4>Ostatnia noc</h4>
+        <p>Imam Husajn (pokój z nim) poprosił jeszcze o jedną noc. Zgromadził towarzyszy i zwolnił ich z wszelkich zobowiązań: noc was okrywa, powiedział, skorzystajcie z niej, bo oni chcą tylko mnie. Pierwszy odpowiedział Abbas, potem rodzina, potem towarzysze — Muslim ibn Ausadża, Sad ibn Abdullah, Zuhajr ibn al-Kajn —: nikt nie chciał odejść. Spędzili noc na modlitwie.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">10 muharrama · Aszura · 10 października 680</span><h4>Dzień wierności</h4>
+        <p>Po modlitwie o świcie imam Husajn (pokój z nim) ustawił swoich ludzi: 32 jeźdźców i 40 pieszych. Przemówił do wojska i przypomniał, że pochodzi od Proroka. Wtedy al-Hurr przeszedł na stronę imama Husajna (pokój z nim), pełen skruchy za to, co uczynił. Imam Husajn (pokój z nim) powiedział mu: jesteś wolny (<i>hurr</i>), jak nazwała cię matka, na tym świecie i na tamtym. Al-Hurr walczył, aż poległ.</p>
+        <p>Towarzysze padali jeden po drugim: Muslim ibn Ausadża, Habib ibn Mazahir, Zuhajr ibn al-Kajn. W południe Abu Sumama as-Saidi przypomniał imamowi Husajnowi (pokój z nim) o modlitwie, a ten poprowadził tych, którzy jeszcze stali, w modlitwie strachu, pod gradem strzał.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Południe</span><h4>Rodzina</h4>
+        <p>Potem wystąpiła rodzina Proroka. Pierwszym z nich, który poległ, był Ali al-Akbar, syn imama Husajna (pokój z nim); potem Kasim, syn Hasana, chłopiec, którego twarz pewien świadek porównał do sierpa księżyca. Poległ też Abbas, wraz ze swoimi braćmi Abdullahem, Usmanem i Dżafarem.</p>
+        <p>Imam Husajn (pokój z nim) siedział z małym synkiem Abdullahem na kolanach. Mężczyzna z plemienia Banu Asad wypuścił strzałę i zabił dziecko; imam Husajn (pokój z nim) zebrał jego krew w dłoń.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Popołudnie</span><h4>Upadek</h4>
+        <p>Sam, imam Husajn (pokój z nim) walczył dalej, nacierając na otaczających go, aż się cofali. Potem zacieśnili wokół niego pierścień pod dowództwem Szimra. Zura ibn Szarik zadał mu cios, Sinan ibn Anas przebił go włócznią i imam upadł; odcięli mu głowę. Umar ibn Sad rozkazał dziesięciu jeźdźcom przejechać końmi po jego ciele, a namioty zostały złupione. Jego syn Ali (Zajn al-Abidin) ocalał, bo był chory. Siedemdziesięciu dwóch mężczyzn zginęło wraz z imamem Husajnem (pokój z nim).</p></div>
+      <div class="kb-ch"><span class="kb-date">Po Kerbali</span><h4>Zajnab i droga Arbain</h4>
+        <p>Głowy, kobiety i dzieci zaprowadzono do Kufy. Gdy namiestnik triumfował, Zajnab, siostra imama Husajna (pokój z nim), odpowiedziała mu stanowczym głosem: to Bóg uczcił ich przez swojego Proroka, a hańbą okryty jest złoczyńca, nie oni. W Damaszku, na dworze Jazida, przywołała do porządku Syryjczyka, który domagał się jednej z córek imama Husajna (pokój z nim), mówiąc mu, że nie przysługuje to ani jemu, ani Jazidowi. Później Jazid odesłał rodzinę do Medyny.</p>
+        <p>Za Jazida nie oszczędzono nawet Kaaby. W 683 roku jego wojsko pod dowództwem al-Husajna ibn Numajra oblegało Mekkę; Kaaba została trafiona z katapult i stanęła w płomieniach. Wojsko wycofało się dopiero na wieść o śmierci Jazida.</p>
+        <p>Imam Husajn (pokój z nim) został pochowany tam, gdzie poległ. Od tamtej pory jego grób przyciąga pielgrzymów, miasto Kerbala wyrosło wokół niego, a dziś miliony ludzi przychodzą tu co roku pieszo na <b>Arbain</b>.</p></div>
+    </div>
+
+    <h3>Film: al-Kaabi i sztuka lamentu</h3>
+    <div class="kb-card">
+      <p><b>Szejk Abdul Zahra al-Kaabi</b> był kaznodzieją z Kerbali, urodzonym około 1909 roku. W dzień Aszury 1959 roku wyrecytował Maqtal przy sanktuarium imama Husajna (pokój z nim), a jego recytację nadało Radio Bagdad w całym Iraku i nad Zatoką. Od tamtej pory jego głos jest dźwiękiem poranka Aszury w irackich domach: dziesięciolecia po jego śmierci nikomu nie udało się naśladować jego stylu.</p>
+      <p><b>Nai</b> (lament) to dawna iracka sztuka opowiadania historii imama Husajna (pokój z nim): recytowana opowieść na smutną melodię, bez instrumentów muzycznych, łącząca klasyczną arabską prozę z ludowymi wersami żałobnymi. Jej celem nie jest rozrywka, lecz sprawienie, by słuchacz poczuł się obecny w Kerbali. Nie trzeba znać arabskiego: głos niesie historię, a polskie tłumaczenie robi resztę.</p>
+      <p>Film przedstawia pełny Maqtal głosem al-Kaabiego z polskim tłumaczeniem.</p>
+    </div>
+
+    <h3>Źródła</h3>
+    <ul class="kb-sources">
+      <li><i>Historia proroków i królów</i> — at-Tabari (zm. 923), według przekazu Abu Michnafa</li>
+      <li><i>Ansab al-Aszraf</i> — al-Baladhuri (zm. 892)</li>
+      <li><i>At-Tabakat al-Kubra</i> — Ibn Sad (zm. 845)</li>
+      <li><i>Al-Kamil fi at-Tarich</i> — Ibn al-Asir (zm. 1233)</li>
+      <li><i>Al-Bidaja wa an-Nihaja</i> — Ibn Kasir (zm. 1373)</li>
+    </ul>
+
+    <div class="kb-cta"><p>Stań tam, gdzie stał imam Husajn (pokój z nim). Przejdź między dwoma sanktuariami.</p><a href="#itinerary">Odwiedź z nami Kerbalę</a></div>
+  </div></div></div>
+  <div class="kb-video" style="margin-top:22px" data-hl="pl"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>Głos: szejk Abdul Zahra al-Kaabi</span><span>Z polskim tłumaczeniem</span></div></div>
+</div>
+
+
+</div>
+</section>
+
+<script>
+function kbInit(){
+  var s=document.getElementById('karbala-story'); if(!s) return;
+  var L=(document.documentElement.lang||'ar').slice(0,2).toLowerCase();
+  // Polish page: Polish-translated Maqtal video
+  if(['pl'].indexOf(L)<0){ s.style.display='none'; return; }
+  s.style.display='';
+  var VID='73tbXF-_sag', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
+  s.querySelectorAll('.kb-lang').forEach(function(b){
+    b.classList.toggle('kb-on', b.getAttribute('data-lang')===L);
+  });
+  s.querySelectorAll('.kb-video').forEach(function(v){
+    if(v.dataset.ready) return; v.dataset.ready=1;
+    v.style.backgroundImage='url('+THUMB+')';
+    v.addEventListener('click',function(){
+      if(v.querySelector('iframe')) return;
+      var hl=v.getAttribute('data-hl');
+      var cc = '';
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0&hl='+hl+cc;
+      f.title='Maqtal imama Husajna – Abdul Zahra al-Kaabi, z polskim tłumaczeniem';
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen=true;
+      v.appendChild(f);
+    });
+  });
+  s.querySelectorAll('.kb-btn').forEach(function(btn){
+    if(btn.dataset.ready) return; btn.dataset.ready=1;
+    var more=btn.nextElementSibling, label=btn.firstChild.nodeValue;
+    var closeTxt={ar:'إخفاء ',en:'Show less ',ru:'Свернуть ',de:'Weniger anzeigen ',fr:'Réduire ',es:'Mostrar menos ',it:'Mostra meno ',pl:'Pokaż mniej '};
+    btn.addEventListener('click',function(){
+      var open=more.classList.toggle('kb-open');
+      btn.setAttribute('aria-expanded',open);
+      var lang=btn.closest('.kb-lang').getAttribute('data-lang');
+      btn.firstChild.nodeValue = open ? closeTxt[lang] : label;
+    });
+  });
+}
+document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',kbInit) : kbInit();
+</script>
+<!-- ================= END: KARBALA SECTION ================= -->
+
   <section class="block in" style="padding-top:0" id="usa-canada" aria-labelledby="usa-canada-h">
     <div class="us-ar">
       <span class="eyebrow">🇺🇸 🇨🇦 Dla Polaków w USA i Kanadzie</span>
