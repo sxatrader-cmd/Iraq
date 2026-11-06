@@ -1124,6 +1124,184 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   </section>
 
 
+    <!-- ================= START: KARBALA SECTION (copy from here) ================= -->
+<style>
+#karbala-story{padding-bottom:0}
+#karbala-story *{box-sizing:border-box}
+#karbala-story .kb-lang{display:none}
+#karbala-story .kb-lang.kb-on{display:block}
+#karbala-story .kb-eyebrow{display:block;font:500 13px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-eyebrow{font-family:var(--sans-ar);letter-spacing:.02em;font-size:14px}
+#karbala-story h2{font-size:clamp(24px,3.8vw,32px);color:var(--navy);margin:6px 0 14px;line-height:1.3}
+#karbala-story h2 .kb-q{display:block;color:var(--gold);font-size:.78em;margin-top:4px}
+#karbala-story .kb-hook{margin:0 0 22px;color:var(--ink);max-width:68ch}
+#karbala-story .kb-hook b{color:var(--navy)}
+#karbala-story .kb-video{position:relative;width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;cursor:pointer;
+  background:var(--navy) center/cover no-repeat;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,71,.05),rgba(27,42,71,.55))}
+#karbala-story .kb-play{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;z-index:2;
+  background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold);transition:transform .2s}
+#karbala-story .kb-video:hover .kb-play{transform:scale(1.07)}
+#karbala-story .kb-play svg{width:28px;height:28px;fill:var(--gold-2);margin-inline-start:4px}
+#karbala-story .kb-vmeta{position:absolute;bottom:12px;inset-inline:14px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#karbala-story .kb-vmeta span{background:rgba(27,42,71,.82);padding:3px 10px;border-radius:4px}
+#karbala-story .kb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+#karbala-story .kb-caption{font-size:14px;color:var(--muted);margin:16px 0 18px;line-height:1.7}
+#karbala-story .kb-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);border:0;border-radius:4px;
+  padding:13px 26px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+#karbala-story .kb-btn:hover{filter:brightness(1.07)}
+#karbala-story .kb-arr{transition:transform .3s}
+#karbala-story .kb-btn[aria-expanded=true] .kb-arr{transform:rotate(180deg)}
+#karbala-story .kb-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
+#karbala-story .kb-more.kb-open{grid-template-rows:1fr}
+#karbala-story .kb-more>div{overflow:hidden}
+#karbala-story .kb-inner{padding-top:30px}
+#karbala-story h3{font-family:var(--serif-en);font-weight:400;font-size:clamp(21px,3vw,26px);color:var(--navy);margin:36px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+html[lang="ar"] #karbala-story h3{font-family:var(--serif-ar);font-weight:700}
+#karbala-story h3:first-child{margin-top:0}
+#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--line);margin-inline-start:8px}
+#karbala-story .kb-ch{position:relative;margin-bottom:26px}
+#karbala-story .kb-ch::before{content:"";position:absolute;inset-inline-start:-39px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--gold)}
+#karbala-story .kb-ch.kb-red::before{background:var(--navy);box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--gold)}
+#karbala-story .kb-date{display:block;font:500 12px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-date{font-family:var(--sans-ar);letter-spacing:0;font-size:13px}
+#karbala-story .kb-ch h4{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.35;margin:2px 0 8px}
+html[lang="ar"] #karbala-story .kb-ch h4{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+#karbala-story .kb-ch p{margin:0 0 10px;max-width:68ch;color:var(--ink)}
+#karbala-story blockquote{margin:12px 0;padding:12px 18px;border-inline-start:3px solid var(--gold);background:rgba(184,149,90,.09);
+  border-radius:4px;color:var(--navy);font-family:var(--serif-en);font-style:italic;line-height:1.8}
+html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style:normal;font-size:18px}
+#karbala-story .kb-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+#karbala-story .kb-card p{margin:0 0 12px;color:var(--ink)}
+#karbala-story .kb-card p:last-child{margin:0}
+#karbala-story .kb-card b{color:var(--navy)}
+#karbala-story .kb-sources{font-size:14px;color:var(--muted);line-height:1.9;margin:0;padding-inline-start:20px}
+#karbala-story .kb-cta{margin-top:32px;text-align:center;padding:26px 0 6px;border-top:1px solid var(--line)}
+#karbala-story .kb-cta p{color:var(--navy);margin:0 0 14px;font-size:17px}
+#karbala-story .kb-cta a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:4px}
+#karbala-story .kb-cta a:hover{background:var(--navy-2)}
+@media (max-width:600px){
+  #karbala-story .kb-play{width:58px;height:58px}
+  #karbala-story .kb-timeline{padding-inline-start:22px;margin-inline-start:4px}
+  #karbala-story .kb-ch::before{inset-inline-start:-31px}
+}
+</style>
+
+<section class="block in" id="karbala-story" aria-label="Karbala">
+<div class="kb-wrap">
+
+<!-- ===================== ROMANIAN ===================== -->
+<div class="kb-lang" data-lang="ro" dir="ltr">
+  <div class="sec-head"><span class="eyebrow">Karbala</span><h2 class="disp">Karbala: o poveste care a mișcat lumea de la un capăt la altul… ce s-a întâmplat acolo?</h2><p>Imamul Hussein (pacea fie asupra lui), nepotul Profetului, s-a ridicat cu 72 de tovarăși în fața a mii de oameni și a devenit un simbol al libertății.</p></div>
+  <button class="kb-btn" aria-expanded="false">Află mai mult <span class="kb-arr">▾</span></button>
+  <div class="kb-more"><div><div class="kb-inner">
+
+    <h3>Povestea așa cum au păstrat-o cronicile</h3>
+    <div class="kb-timeline">
+      <div class="kb-ch"><span class="kb-date">661 – 676 d.Hr. · Arabia și Siria</span><h4>De la califat la succesiunea ereditară</h4>
+        <p>În anul 661, Hassan, fratele mai mare al imamului Hussein (pacea fie asupra lui), a făcut pace cu Muawiya ibn Abi Sufyan pentru a opri vărsarea de sânge între musulmani; anul a rămas cunoscut drept „anul unității”. Hassan a murit otrăvit la Medina în jurul anului 670. Ibn Saad și al-Baladhuri relatează că soția sa, Jaada bint al-Ashath, i-a dat otrava, iar al-Baladhuri adaugă că a făcut-o la îndemnul lui Muawiya, deși unii istorici, precum Ibn Kathir, au pus la îndoială acest lucru. Câțiva ani mai târziu, Muawiya l-a impus pe fiul său Yazid drept moștenitor: pentru prima dată, califatul trecea de la tată la fiu. Al-Tabari povestește că o delegație din Medina s-a întors de la Yazid spunând că bea vin, se juca cu câini și neglija rugăciunea; Ibn Kathir îl descrie ca fiind dedat plăcerilor și vinului. Mai mulți fii ai marilor tovarăși ai Profetului au refuzat să-i jure credință, în frunte cu imamul Hussein ibn Ali (pacea fie asupra lui) și Abdallah ibn al-Zubayr.</p></div>
+      <div class="kb-ch"><span class="kb-date">Aprilie 680 · Medina</span><h4>„Unul ca mine nu jură credință unuia ca el”</h4>
+        <p>La moartea lui Muawiya, Yazid i-a scris lui al-Walid ibn Utba, guvernatorul Medinei, poruncindu-i să ceară jurământul de credință de la imamul Hussein (pacea fie asupra lui), de la Abdallah ibn al-Zubayr și de la Abdallah ibn Umar, cu fermitate și fără menajamente. Al-Walid l-a chemat pe imamul Hussein (pacea fie asupra lui) în timpul nopții. Acesta a venit însoțit de tineri din familia sa și i-a lăsat la ușă: dacă mă auziți ridicând glasul, intrați. Lângă guvernator stătea Marwan ibn al-Hakam. Al-Walid i-a vestit imamului Hussein (pacea fie asupra lui) moartea lui Muawiya și i-a cerut să-i jure credință lui Yazid. Imamul Hussein (pacea fie asupra lui) a răspuns că unul ca el nu jură credință în taină, ci, dacă o face, în fața poporului.</p>
+        <p>Marwan i-a spus lui al-Walid: dacă pleacă acum fără să jure, nu vei mai avea niciodată o asemenea ocazie; reține-l; dacă jură, bine, iar dacă nu, taie-i capul. Imamul Hussein (pacea fie asupra lui) a sărit în picioare: „Fiu al lui al-Zarqa, tu mă vei ucide, sau el? Pe Dumnezeu, minți și păcătuiești”. Apoi s-a întors spre guvernator:</p>
+        <blockquote>„O, emire: noi suntem casa profeției, izvorul mesajului, locul unde vin și pleacă îngerii; prin noi a început Dumnezeu și prin noi a pecetluit. Yazid este un om păcătos, care bea vin, ucide sufletele pe care Dumnezeu le-a făcut sfinte și își etalează păcatul, iar unul ca mine nu jură credință unuia ca el. Dar să așteptăm dimineața, voi și noi, și vom vedea care dintre noi este mai vrednic de califat”.</blockquote>
+        <p>Și a plecat. Al-Walid a respins sfatul lui Marwan și a spus că n-ar vrea să stăpânească tot ce se află sub soare dacă prețul ar fi moartea imamului Hussein (pacea fie asupra lui).</p>
+        <p>Scriitorul egiptean Abderrahman al-Sharqawi a făcut din această scenă un moment celebru al piesei sale de teatru <i>Hussein revoluționarul</i>: al-Walid îi spune că i se cere doar un cuvânt, după care poate pleca în pace. Imamul Hussein (pacea fie asupra lui) răspunde că un cuvânt nu este puțin lucru: printr-un cuvânt omul intră în paradis și printr-un cuvânt este aruncat în foc; cuvântul este o lumină care îi călăuzește pe oameni, o fortăreață a libertății, un bun încredințat și o răspundere, iar onoarea unui om este cuvântul său. Cum ar fi putut, așadar, să-și vândă cuvântul lui Yazid?</p>
+        <p>Două nopți mai târziu, pe 28 rajab, imamul Hussein (pacea fie asupra lui) a plecat spre Mecca împreună cu familia sa.</p></div>
+      <div class="kb-ch"><span class="kb-date">Primăvara – vara anului 680 · Mecca și Kufa</span><h4>Scrisorile din Kufa și soarta lui Muslim</h4>
+        <p>Imamul Hussein (pacea fie asupra lui) a rămas luni de zile la Mecca, în timp ce soseau scrisori de la locuitorii din Kufa (în Irakul de azi) care îl chemau la ei. L-a trimis înainte pe vărul său Muslim ibn Aqil, care i-a scris că 18.000 de oameni îi juraseră credință. Yazid l-a numit atunci pe Ubaydallah ibn Ziyad guvernator al Kufei. Sub presiunea lui, oamenii s-au risipit până când Muslim a rămas singur. O femeie pe nume Tawa i-a dat adăpost; a fost trădat, a luptat, a fost prins și executat pe acoperișul palatului, împreună cu gazda sa, Hani ibn Urwa.</p></div>
+      <div class="kb-ch"><span class="kb-date">Septembrie 680 · Plecarea din Mecca</span><h4>„Prefer să fiu ucis în afara ei”</h4>
+        <p>Ibn Abbas, Ibn Umar și alții l-au sfătuit să nu meargă în Irak. A plecat chiar când începea pelerinajul și i-a spus lui Ibn al-Zubayr, potrivit lui al-Tabari, că preferă să fie ucis în afara Meccăi decât să vadă sfințenia orașului încălcată din cauza lui. Pe drum a aflat de moartea lui Muslim. I-a lăsat liberi să plece pe beduinii care i se alăturaseră pe drum; aceștia au plecat și au rămas doar cei care veniseră cu el din Arabia.</p></div>
+      <div class="kb-ch"><span class="kb-date">2 muharram anul 61 H · 2 octombrie 680</span><h4>Al-Hurr și oprirea la Karbala</h4>
+        <p>Al-Hurr ibn Yazid i-a tăiat calea cu 1.000 de călăreți, care aveau ordin să-l ducă la Ibn Ziyad. Erau istoviți de sete, iar imamul Hussein (pacea fie asupra lui) a poruncit să li se dea apă soldaților și cailor lor. Pe drum, le-a spus:</p>
+        <blockquote>„Nu vedeți că nu se mai lucrează după adevăr și că minciuna nu mai este oprită?”</blockquote>
+        <p>Escortată de al-Hurr, caravana s-a oprit în cele din urmă într-o câmpie de pe malul Eufratului numită Karbala.</p></div>
+      <div class="kb-ch"><span class="kb-date">3 – 9 muharram</span><h4>Asediul și setea</h4>
+        <p>Umar ibn Saad a sosit cu 4.000 de soldați, iar Ibn Ziyad a trimis și mai mulți. Cu trei zile înainte de bătălie, 500 de călăreți s-au postat la râu pentru a tăia accesul la apă al taberei imamului Hussein (pacea fie asupra lui). Fratele său vitreg Abbas a condus noaptea o ieșire cu 30 de călăreți și 20 de pedestrași, a forțat trecerea și a adus burdufuri pline. Negocierile dintre imamul Hussein (pacea fie asupra lui) și Umar ibn Saad nu au dus nicăieri. Pe 9 a sosit Shimr cu porunca lui Ibn Ziyad: supunere la judecata lui sau luptă.</p></div>
+      <div class="kb-ch"><span class="kb-date">În ajun</span><h4>Ultima noapte</h4>
+        <p>Imamul Hussein (pacea fie asupra lui) a cerut încă o noapte. Și-a adunat tovarășii și i-a dezlegat: noaptea vă acoperă, le-a spus, folosiți-o, căci numai pe mine mă vor. Abbas a răspuns primul, apoi familia, apoi tovarășii — Muslim ibn Awsaja, Saad ibn Abdallah, Zuhayr ibn al-Qayn —: niciunul n-a vrut să plece. Și-au petrecut noaptea în rugăciune.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">10 muharram · Așura · 10 octombrie 680</span><h4>Ziua credinței</h4>
+        <p>După rugăciunea zorilor, imamul Hussein (pacea fie asupra lui) și-a rânduit oamenii: 32 de călăreți și 40 de pedestrași. A vorbit armatei și i-a amintit că se trage din Profet. Atunci al-Hurr a trecut de partea imamului Hussein (pacea fie asupra lui), plin de remușcare pentru ce făcuse. Imamul Hussein (pacea fie asupra lui) i-a spus: ești liber (<i>hurr</i>), cum te-a numit mama ta, în lumea aceasta și în cea de apoi. Al-Hurr a luptat până a căzut.</p>
+        <p>Tovarășii au căzut unul după altul: Muslim ibn Awsaja, Habib ibn Mazahir, Zuhayr ibn al-Qayn. La amiază, Abu Thumama al-Saidi i-a amintit imamului Hussein (pacea fie asupra lui) de rugăciune, iar acesta i-a condus pe cei rămași în picioare în rugăciunea fricii, sub o ploaie de săgeți.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Amiaza</span><h4>Familia</h4>
+        <p>Apoi a înaintat familia Profetului. Primul dintre ei care a căzut a fost Ali al-Akbar, fiul imamului Hussein (pacea fie asupra lui); apoi Qasim, fiul lui Hassan, un băiat al cărui chip un martor l-a asemănat cu luna nouă. A căzut și Abbas, împreună cu frații săi Abdallah, Uthman și Jafar.</p>
+        <p>Imamul Hussein (pacea fie asupra lui) ședea cu fiul său mic, Abdallah, în brațe. Un bărbat din tribul Banu Asad a tras o săgeată și a ucis copilul; imamul Hussein (pacea fie asupra lui) i-a strâns sângele în palmă.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">După-amiaza</span><h4>Căderea</h4>
+        <p>Singur, imamul Hussein (pacea fie asupra lui) a continuat să lupte, năvălind asupra celor care îl înconjurau până îi făcea să se retragă. Apoi s-au strâns în jurul lui sub comanda lui Shimr. Zura ibn Sharik l-a rănit, Sinan ibn Anas l-a străpuns cu sulița și el a căzut; i-au tăiat capul. Umar ibn Saad a poruncit ca zece călăreți să treacă cu caii peste trupul lui, iar corturile au fost jefuite. Fiul său Ali (Zayn al-Abidin) a scăpat pentru că era bolnav. Șaptezeci și doi de oameni muriseră alături de imamul Hussein (pacea fie asupra lui).</p></div>
+      <div class="kb-ch"><span class="kb-date">După Karbala</span><h4>Zainab și drumul Arbaeen</h4>
+        <p>Capetele, femeile și copiii au fost duși la Kufa. Când guvernatorul s-a lăudat, Zainab, sora imamului Hussein (pacea fie asupra lui), i-a răspuns cu glas ferm: Dumnezeu îi cinstise prin Profetul Său, iar cel acoperit de rușine este făcătorul de rele, nu ei. La Damasc, la curtea lui Yazid, l-a pus la punct pe un sirian care cerea una dintre fiicele imamului Hussein (pacea fie asupra lui), spunându-i că acest lucru nu le aparține nici lui, nici lui Yazid. Mai târziu, Yazid a trimis familia înapoi la Medina.</p>
+        <p>Nici măcar Kaaba n-a fost cruțată sub Yazid. În 683, armata sa, condusă de al-Husayn ibn Numayr, a asediat Mecca; Kaaba a fost bombardată cu catapulte și a luat foc. Armata s-a retras abia când s-a aflat de moartea lui Yazid.</p>
+        <p>Imamul Hussein (pacea fie asupra lui) a fost înmormântat acolo unde a căzut. De atunci mormântul său atrage pelerini, orașul Karbala a crescut în jurul lui, iar astăzi milioane de oameni vin pe jos în fiecare an pentru <b>Arbaeen</b>.</p></div>
+    </div>
+
+    <h3>Despre video: al-Kaabi și arta bocetului</h3>
+    <div class="kb-card">
+      <p><b>Șeicul Abdul Zahra al-Kaabi</b> a fost un predicator din Karbala, născut în jurul anului 1909. În ziua de Așura a anului 1959 a recitat Maqtal-ul lângă sanctuarul imamului Hussein (pacea fie asupra lui), iar recitarea lui a fost transmisă de Radio Bagdad în tot Irakul și Golful. De atunci vocea lui este sunetul dimineții de Așura în casele irakiene: la decenii după moartea sa, nimeni n-a reușit să-i imite stilul.</p>
+      <p><b>Nai</b> (bocetul) este o artă irakiană veche de secole prin care se spune povestea imamului Hussein (pacea fie asupra lui): o relatare cântată pe o melodie tristă, fără instrumente muzicale, care îmbină proza arabă clasică cu versuri populare de bocet. Scopul ei nu este să distreze, ci să-l facă pe ascultător să simtă că este prezent la Karbala. Nu e nevoie să înțelegeți araba: vocea poartă povestea, iar traducerea în română face restul.</p>
+      <p>Videoclipul prezintă Maqtal-ul complet, în vocea lui al-Kaabi, cu traducere în limba română.</p>
+    </div>
+
+    <h3>Surse</h3>
+    <ul class="kb-sources">
+      <li><i>Istoria profeților și a regilor</i> — al-Tabari (m. 923), după relatarea lui Abu Mikhnaf</li>
+      <li><i>Ansab al-Ashraf</i> — al-Baladhuri (m. 892)</li>
+      <li><i>Al-Tabaqat al-Kubra</i> — Ibn Saad (m. 845)</li>
+      <li><i>Al-Kamil fi al-Tarikh</i> — Ibn al-Athir (m. 1233)</li>
+      <li><i>Al-Bidaya wa al-Nihaya</i> — Ibn Kathir (m. 1373)</li>
+    </ul>
+
+    <div class="kb-cta"><p>Pășiți pe locul unde a stat imamul Hussein (pacea fie asupra lui). Mergeți între cele două sanctuare.</p><a href="#itinerary">Vizitați Karbala cu noi</a></div>
+  </div></div></div>
+  <div class="kb-video" style="margin-top:22px" data-hl="ro"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>Voce: șeicul Abdul Zahra al-Kaabi</span><span>Tradus în română</span></div></div>
+</div>
+
+
+</div>
+</section>
+
+<script>
+function kbInit(){
+  var s=document.getElementById('karbala-story'); if(!s) return;
+  var L=(document.documentElement.lang||'ar').slice(0,2).toLowerCase();
+  // Romanian page: Romanian-translated Maqtal video
+  if(['ro'].indexOf(L)<0){ s.style.display='none'; return; }
+  s.style.display='';
+  var VID='3uyT_klGjZM', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
+  s.querySelectorAll('.kb-lang').forEach(function(b){
+    b.classList.toggle('kb-on', b.getAttribute('data-lang')===L);
+  });
+  s.querySelectorAll('.kb-video').forEach(function(v){
+    if(v.dataset.ready) return; v.dataset.ready=1;
+    v.style.backgroundImage='url('+THUMB+')';
+    v.addEventListener('click',function(){
+      if(v.querySelector('iframe')) return;
+      var hl=v.getAttribute('data-hl');
+      var cc = '';
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0&hl='+hl+cc;
+      f.title='Maqtal-ul imamului Hussein – Abdul Zahra al-Kaabi, tradus în română';
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen=true;
+      v.appendChild(f);
+    });
+  });
+  s.querySelectorAll('.kb-btn').forEach(function(btn){
+    if(btn.dataset.ready) return; btn.dataset.ready=1;
+    var more=btn.nextElementSibling, label=btn.firstChild.nodeValue;
+    var closeTxt={ar:'إخفاء ',en:'Show less ',ru:'Свернуть ',de:'Weniger anzeigen ',fr:'Réduire ',es:'Mostrar menos ',ro:'Arată mai puțin '};
+    btn.addEventListener('click',function(){
+      var open=more.classList.toggle('kb-open');
+      btn.setAttribute('aria-expanded',open);
+      var lang=btn.closest('.kb-lang').getAttribute('data-lang');
+      btn.firstChild.nodeValue = open ? closeTxt[lang] : label;
+    });
+  });
+}
+document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',kbInit) : kbInit();
+</script>
+<!-- ================= END: KARBALA SECTION (copy to here) ================= -->
+
+
   <section class="block in" style="padding-top:0" id="usa-canada" aria-labelledby="usa-canada-h">
     <div class="us-ar">
       <span class="eyebrow">🇺🇸 🇨🇦 Pentru românii din SUA și Canada</span>
