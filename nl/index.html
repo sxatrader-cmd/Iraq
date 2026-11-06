@@ -1237,8 +1237,8 @@ html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style
     <h3>De video: al-Kaabi en de kunst van de klaagzang</h3>
     <div class="kb-card">
       <p><b>Sjeik Abdul Zahra al-Kaabi</b> was een prediker uit Karbala, geboren rond 1909. Op de dag van Asjoera in 1959 droeg hij de Maqtal voor bij het heiligdom van imam Hoessein (vrede zij met hem), en zijn voordracht werd door Radio Bagdad in heel Irak en de Golfregio uitgezonden. Sindsdien is zijn stem het geluid van de Asjoera-ochtend in Iraakse huizen: tientallen jaren na zijn dood is niemand erin geslaagd zijn stijl na te doen.</p>
-      <p>De <b>na'i</b> (klaagzang) is een oude Iraakse kunst om het verhaal van imam Hoessein (vrede zij met hem) te vertellen: een gezongen verhaal op een droevige melodie, zonder muziekinstrumenten, dat klassiek Arabisch proza combineert met volkse rouwverzen. Het doel is niet te vermaken, maar de luisteraar het gevoel te geven aanwezig te zijn in Karbala. Je hoeft geen Arabisch te verstaan: de stem draagt het verhaal, de vertaling doet de rest.</p>
-      <p>De video toont de volledige Maqtal met de stem van al-Kaabi en vertaling.</p>
+      <p>De <b>na'i</b> (klaagzang) is een oude Iraakse kunst om het verhaal van imam Hoessein (vrede zij met hem) te vertellen: een gezongen verhaal op een droevige melodie, zonder muziekinstrumenten, dat klassiek Arabisch proza combineert met volkse rouwverzen. Het doel is niet te vermaken, maar de luisteraar het gevoel te geven aanwezig te zijn in Karbala. Je hoeft geen Arabisch te verstaan: de stem draagt het verhaal, de Nederlandse vertaling doet de rest.</p>
+      <p>De video toont de volledige Maqtal met de stem van al-Kaabi en Nederlandse vertaling.</p>
     </div>
 
     <h3>Bronnen</h3>
@@ -1252,7 +1252,7 @@ html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style
 
     <div class="kb-cta"><p>Sta waar imam Hoessein (vrede zij met hem) stond. Loop tussen de twee heiligdommen.</p><a href="#itinerary">Bezoek Karbala met ons</a></div>
   </div></div></div>
-  <div class="kb-video" style="margin-top:22px" data-hl="nl"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>Stem: sjeik Abdul Zahra al-Kaabi</span><span>Met vertaling</span></div></div>
+  <div class="kb-video" style="margin-top:22px" data-hl="nl"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>Stem: sjeik Abdul Zahra al-Kaabi</span><span>Met Nederlandse vertaling</span></div></div>
 </div>
 
 
@@ -1263,10 +1263,10 @@ html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style
 function kbInit(){
   var s=document.getElementById('karbala-story'); if(!s) return;
   var L=(document.documentElement.lang||'ar').slice(0,2).toLowerCase();
-  // Dutch page: translated Maqtal video
+  // Dutch page: Dutch-translated Maqtal video
   if(['nl'].indexOf(L)<0){ s.style.display='none'; return; }
   s.style.display='';
-  var VID='73tbXF-_sag', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
+  var VID='TrZCDWYJSeI', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
   s.querySelectorAll('.kb-lang').forEach(function(b){
     b.classList.toggle('kb-on', b.getAttribute('data-lang')===L);
   });
@@ -1279,7 +1279,7 @@ function kbInit(){
       var cc = '';
       var f=document.createElement('iframe');
       f.src='https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0&hl='+hl+cc;
-      f.title='Maqtal van imam Hoessein – Abdul Zahra al-Kaabi';
+      f.title='Maqtal van imam Hoessein – Abdul Zahra al-Kaabi, met Nederlandse vertaling';
       f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
       f.allowFullscreen=true;
       v.appendChild(f);
