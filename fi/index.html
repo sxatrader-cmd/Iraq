@@ -1136,6 +1136,183 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   </section>
 
 
+  <!-- ================= START: KARBALA SECTION ================= -->
+<style>
+#karbala-story{padding-bottom:0}
+#karbala-story *{box-sizing:border-box}
+#karbala-story .kb-lang{display:none}
+#karbala-story .kb-lang.kb-on{display:block}
+#karbala-story .kb-eyebrow{display:block;font:500 13px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-eyebrow{font-family:var(--sans-ar);letter-spacing:.02em;font-size:14px}
+#karbala-story h2{font-size:clamp(24px,3.8vw,32px);color:var(--navy);margin:6px 0 14px;line-height:1.3}
+#karbala-story h2 .kb-q{display:block;color:var(--gold);font-size:.78em;margin-top:4px}
+#karbala-story .kb-hook{margin:0 0 22px;color:var(--ink);max-width:68ch}
+#karbala-story .kb-hook b{color:var(--navy)}
+#karbala-story .kb-video{position:relative;width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;cursor:pointer;
+  background:var(--navy) center/cover no-repeat;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,71,.05),rgba(27,42,71,.55))}
+#karbala-story .kb-play{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;z-index:2;
+  background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold);transition:transform .2s}
+#karbala-story .kb-video:hover .kb-play{transform:scale(1.07)}
+#karbala-story .kb-play svg{width:28px;height:28px;fill:var(--gold-2);margin-inline-start:4px}
+#karbala-story .kb-vmeta{position:absolute;bottom:12px;inset-inline:14px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#karbala-story .kb-vmeta span{background:rgba(27,42,71,.82);padding:3px 10px;border-radius:4px}
+#karbala-story .kb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+#karbala-story .kb-caption{font-size:14px;color:var(--muted);margin:16px 0 18px;line-height:1.7}
+#karbala-story .kb-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);border:0;border-radius:4px;
+  padding:13px 26px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+#karbala-story .kb-btn:hover{filter:brightness(1.07)}
+#karbala-story .kb-arr{transition:transform .3s}
+#karbala-story .kb-btn[aria-expanded=true] .kb-arr{transform:rotate(180deg)}
+#karbala-story .kb-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
+#karbala-story .kb-more.kb-open{grid-template-rows:1fr}
+#karbala-story .kb-more>div{overflow:hidden}
+#karbala-story .kb-inner{padding-top:30px}
+#karbala-story h3{font-family:var(--serif-en);font-weight:400;font-size:clamp(21px,3vw,26px);color:var(--navy);margin:36px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+html[lang="ar"] #karbala-story h3{font-family:var(--serif-ar);font-weight:700}
+#karbala-story h3:first-child{margin-top:0}
+#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--line);margin-inline-start:8px}
+#karbala-story .kb-ch{position:relative;margin-bottom:26px}
+#karbala-story .kb-ch::before{content:"";position:absolute;inset-inline-start:-39px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--gold)}
+#karbala-story .kb-ch.kb-red::before{background:var(--navy);box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--gold)}
+#karbala-story .kb-date{display:block;font:500 12px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-date{font-family:var(--sans-ar);letter-spacing:0;font-size:13px}
+#karbala-story .kb-ch h4{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.35;margin:2px 0 8px}
+html[lang="ar"] #karbala-story .kb-ch h4{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+#karbala-story .kb-ch p{margin:0 0 10px;max-width:68ch;color:var(--ink)}
+#karbala-story blockquote{margin:12px 0;padding:12px 18px;border-inline-start:3px solid var(--gold);background:rgba(184,149,90,.09);
+  border-radius:4px;color:var(--navy);font-family:var(--serif-en);font-style:italic;line-height:1.8}
+html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style:normal;font-size:18px}
+#karbala-story .kb-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+#karbala-story .kb-card p{margin:0 0 12px;color:var(--ink)}
+#karbala-story .kb-card p:last-child{margin:0}
+#karbala-story .kb-card b{color:var(--navy)}
+#karbala-story .kb-sources{font-size:14px;color:var(--muted);line-height:1.9;margin:0;padding-inline-start:20px}
+#karbala-story .kb-cta{margin-top:32px;text-align:center;padding:26px 0 6px;border-top:1px solid var(--line)}
+#karbala-story .kb-cta p{color:var(--navy);margin:0 0 14px;font-size:17px}
+#karbala-story .kb-cta a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:4px}
+#karbala-story .kb-cta a:hover{background:var(--navy-2)}
+@media (max-width:600px){
+  #karbala-story .kb-play{width:58px;height:58px}
+  #karbala-story .kb-timeline{padding-inline-start:22px;margin-inline-start:4px}
+  #karbala-story .kb-ch::before{inset-inline-start:-31px}
+}
+</style>
+
+<section class="block in" id="karbala-story" aria-label="Karbala">
+<div class="kb-wrap">
+
+<!-- ===================== FINNISH ===================== -->
+<div class="kb-lang" data-lang="fi" dir="ltr">
+  <div class="sec-head"><span class="eyebrow">Karbala</span><h2 class="disp">Karbala: tarina, joka järisytti maailmaa laidasta laitaan… mitä siellä tapahtui?</h2><p>Imaami Husain (rauha hänelle), Profeetan pojanpoika, nousi 72 toverinsa kanssa tuhansia miehiä vastaan ja hänestä tuli vapauden symboli.</p></div>
+  <button class="kb-btn" aria-expanded="false">Lue lisää <span class="kb-arr">▾</span></button>
+  <div class="kb-more"><div><div class="kb-inner">
+
+    <h3>Tarina sellaisena kuin kronikat sen säilyttivät</h3>
+    <div class="kb-timeline">
+      <div class="kb-ch"><span class="kb-date">661 – 676 jaa. · Arabia ja Syyria</span><h4>Kalifaatista perinnölliseen vallanperimykseen</h4>
+        <p>Vuonna 661 Hasan, imaami Husainin (rauha hänelle) vanhempi veli, teki rauhan Muawija ibn Abi Sufjanin kanssa lopettaakseen muslimien välisen verenvuodatuksen: aika muistetaan ”yhtenäisyyden vuotena”. Hasan kuoli myrkytettynä Medinassa noin vuonna 670. Ibn Sad ja al-Baladhuri kertovat, että hänen vaimonsa Dzada bint al-Ashath antoi hänelle myrkyn, ja al-Baladhuri lisää, että hän teki sen Muawijan yllyttämänä, vaikka jotkut historioitsijat, kuten Ibn Kathir, kyseenalaistivat tämän. Muutamaa vuotta myöhemmin Muawija sai poikansa Jazidin tunnustetuksi seuraajakseen: ensimmäistä kertaa kalifaatti siirtyi isältä pojalle. Al-Tabari kertoo, että Medinan lähetystö palasi Jazidin luota kertoen hänen juovan viiniä, leikkivän koirien kanssa ja laiminlyövän rukouksen; Ibn Kathir kuvaa häntä nautintoihin ja viiniin taipuvaiseksi. Useat Profeetan suurten toverien pojat kieltäytyivät vannomasta hänelle uskollisuutta, etunenässä imaami Husain ibn Ali (rauha hänelle) ja Abdullah ibn az-Zubair.</p></div>
+      <div class="kb-ch"><span class="kb-date">Huhtikuu 680 · Medina</span><h4>”Kaltaiseni ei vanno uskollisuutta hänen kaltaiselleen”</h4>
+        <p>Muawijan kuoltua Jazid kirjoitti Medinan kuvernöörille al-Walid ibn Utballe ja käski tätä vaatimaan uskollisuudenvalan imaami Husainilta (rauha hänelle), Abdullah ibn az-Zubairilta ja Abdullah ibn Umarilta, tiukasti ja ilman lempeyttä. Al-Walid kutsui imaami Husainin (rauha hänelle) luokseen yöllä. Hän tuli muutaman perheensä nuoren miehen kanssa ja asetti heidät oven luo: jos kuulette minun korottavan ääntäni, tulkaa sisään. Kuvernöörin vieressä istui Marwan ibn al-Hakam. Al-Walid kertoi imaami Husainille (rauha hänelle) Muawijan kuolemasta ja pyysi häntä vannomaan uskollisuutta Jazidille. Imaami Husain (rauha hänelle) vastasi, ettei hänen kaltaisensa vanno uskollisuutta salaa, vaan, jos vannoo, julkisesti kansan edessä.</p>
+        <p>Marwan sanoi al-Walidille: jos hän lähtee nyt vannomatta, et saa enää koskaan tällaista tilaisuutta; pidätä hänet; jos hän vannoo, hyvä, ja jos ei, lyö hänen päänsä irti. Imaami Husain (rauha hänelle) ponnahti pystyyn: ”Az-Zarqan poika, sinäkö minut tapat, vai hän? Jumalan nimeen, valehtelet ja teet syntiä.” Sitten hän kääntyi kuvernöörin puoleen:</p>
+        <blockquote>”Oi emiiri, me olemme profeettauden huone, sanoman lähde, paikka, jossa enkelit tulevat ja menevät; meidän kauttamme Jumala aloitti ja meidän kauttamme Hän päätti. Jazid on syntinen mies, joka juo viiniä, surmaa sieluja, jotka Jumala on tehnyt loukkaamattomiksi, ja kerskuu avoimesti synnillään, eikä kaltaiseni vanno uskollisuutta hänen kaltaiselleen. Mutta odottakaamme aamuun, te ja me, niin näemme, kuka meistä on kalifaatin arvoisempi.”</blockquote>
+        <p>Ja hän lähti. Al-Walid hylkäsi Marwanin neuvon ja sanoi, ettei haluaisi omistaa kaikkea, minkä yllä aurinko nousee, jos hintana olisi imaami Husainin (rauha hänelle) surmaaminen.</p>
+        <p>Egyptiläinen kirjailija Abd ar-Rahman ash-Sharqawi teki kohtauksesta kuuluisan hetken näytelmäänsä <i>Husain, vallankumouksellinen</i>: al-Walid sanoo, että häneltä pyydetään vain yksi sana, ja sen jälkeen hän voi lähteä rauhassa. Imaami Husain (rauha hänelle) vastaa, ettei sana ole vähäpätöinen asia: sanalla ihminen pääsee paratiisiin ja sanalla hänet heitetään tuleen; sana on valo, joka johdattaa ihmisiä, vapauden linnake, uskottu talletus ja vastuu, ja miehen kunnia on hänen sanansa. Kuinka hän siis voisi myydä sanansa Jazidille?</p>
+        <p>Kaksi yötä myöhemmin, 28. radzabia, imaami Husain (rauha hänelle) lähti perheineen Mekkaan.</p></div>
+      <div class="kb-ch"><span class="kb-date">Kevät – kesä 680 · Mekka ja Kufa</span><h4>Kufan kirjeet ja Muslimin kohtalo</h4>
+        <p>Imaami Husain (rauha hänelle) viipyi kuukausia Mekassa, ja samaan aikaan saapui kirjeitä Kufan (nykyisessä Irakissa) asukkailta, jotka kutsuivat häntä tulemaan. Hän lähetti serkkunsa Muslim ibn Aqilin edeltä, ja tämä kirjoitti hänelle, että 18 000 ihmistä oli vannonut hänelle uskollisuutta. Jazid nimitti silloin Ubaidullah ibn Zijadin Kufan kuvernööriksi. Tämän painostuksesta väki hajaantui, kunnes Muslim jäi yksin. Tawa-niminen nainen antoi hänelle suojan; hänet petettiin, hän taisteli, hänet vangittiin ja teloitettiin palatsin katolla yhdessä isäntänsä Hani ibn Urwan kanssa.</p></div>
+      <div class="kb-ch"><span class="kb-date">Syyskuu 680 · Lähtö Mekasta</span><h4>”Mieluummin surmatuksi kaupungin ulkopuolella”</h4>
+        <p>Ibn Abbas, Ibn Umar ja muut neuvoivat häntä olemaan lähtemättä Irakiin. Hän lähti juuri pyhiinvaelluksen alkaessa ja sanoi al-Tabarin mukaan Ibn az-Zubairille, että hän mieluummin surmattaisiin Mekan ulkopuolella kuin näkisi kaupungin pyhyyttä loukattavan hänen takiaan. Matkalla hän kuuli Muslimin kuolemasta. Hän päästi lähtemään beduiinit, jotka olivat liittyneet häneen matkan aikana; he lähtivät, ja jäljelle jäivät vain ne, jotka olivat tulleet hänen kanssaan Arabiasta.</p></div>
+      <div class="kb-ch"><span class="kb-date">2. muharram 61 AH · 2. lokakuuta 680</span><h4>Al-Hurr ja pysähdys Karbalaan</h4>
+        <p>Al-Hurr ibn Jazid tukki hänen tiensä 1 000 ratsumiehen kanssa, joilla oli käsky tuoda hänet Ibn Zijadin luo. He olivat janon uuvuttamia, ja imaami Husain (rauha hänelle) antoi juottaa sotilaat ja heidän hevosensa. Matkalla hän sanoi heille:</p>
+        <blockquote>”Ettekö näe, ettei totuuden mukaan enää toimita eikä valhe ole enää kiellettyä?”</blockquote>
+        <p>Al-Hurrin saattamana karavaani pysähtyi lopulta tasangolle Eufratin rannalle, jota kutsutaan Karbalaksi.</p></div>
+      <div class="kb-ch"><span class="kb-date">3. – 9. muharram</span><h4>Piiritys ja jano</h4>
+        <p>Umar ibn Sad saapui 4 000 sotilaan kanssa, ja Ibn Zijad lähetti lisää. Kolme päivää ennen taistelua joelle asetettiin 500 ratsumiestä katkaisemaan imaami Husainin (rauha hänelle) leirin pääsy veteen. Hänen velipuolensa Abbas johti yöllä 30 ratsumiehen ja 20 jalkamiehen hyökkäyksen, murtautui läpi ja toi takaisin täysiä vesileiliöitä. Neuvottelut imaami Husainin (rauha hänelle) ja Umar ibn Sadin välillä eivät tuottaneet tulosta. Yhdeksäntenä päivänä saapui Shimr Ibn Zijadin käskyn kanssa: alistua hänen tuomioonsa tai taistella.</p></div>
+      <div class="kb-ch"><span class="kb-date">Aatto</span><h4>Viimeinen yö</h4>
+        <p>Imaami Husain (rauha hänelle) pyysi vielä yhden yön. Hän kokosi toverinsa ja vapautti heidät kaikista velvoitteista: yö peittää teidät, hän sanoi, käyttäkää se hyväksenne, sillä he haluavat vain minut. Abbas vastasi ensimmäisenä, sitten perhe, sitten toverit — Muslim ibn Awsadza, Sad ibn Abdullah, Zuhair ibn al-Qain —: kukaan ei halunnut lähteä. He viettivät yön rukouksessa.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">10. muharram · Ashura · 10. lokakuuta 680</span><h4>Uskollisuuden päivä</h4>
+        <p>Aamunkoiton rukouksen jälkeen imaami Husain (rauha hänelle) järjesti miehensä: 32 ratsumiestä ja 40 jalkamiestä. Hän puhui armeijalle ja muistutti heitä siitä, että hän polveutui Profeetasta. Silloin al-Hurr siirtyi imaami Husainin (rauha hänelle) puolelle, täynnä katumusta tekojensa vuoksi. Imaami Husain (rauha hänelle) sanoi hänelle: olet vapaa (<i>hurr</i>), kuten äitisi sinut nimesi, tässä maailmassa ja tulevassa. Al-Hurr taisteli kaatumiseensa asti.</p>
+        <p>Toverit kaatuivat yksi toisensa jälkeen: Muslim ibn Awsadza, Habib ibn Mazahir, Zuhair ibn al-Qain. Keskipäivällä Abu Thumama as-Saidi muistutti imaami Husainia (rauha hänelle) rukouksesta, ja hän johti vielä pystyssä olevat pelon rukoukseen nuolisateen keskellä.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Keskipäivä</span><h4>Perhe</h4>
+        <p>Sitten astui esiin Profeetan perhe. Ensimmäisenä heistä kaatui Ali al-Akbar, imaami Husainin (rauha hänelle) poika; sitten Qasim, Hasanin poika, nuorukainen, jonka kasvoja eräs silminnäkijä vertasi kuunsirppiin. Myös Abbas kaatui veljiensä Abdullahin, Uthmanin ja Dzafarin kanssa.</p>
+        <p>Imaami Husain (rauha hänelle) istui pieni poikansa Abdullah sylissään. Banu Asad -heimon mies ampui nuolen ja surmasi lapsen; imaami Husain (rauha hänelle) keräsi hänen verensä kämmeneensä.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Iltapäivä</span><h4>Kaatuminen</h4>
+        <p>Yksin imaami Husain (rauha hänelle) jatkoi taistelua ja hyökkäsi ympäröijiään vastaan, kunnes nämä perääntyivät. Sitten he sulkivat piirin hänen ympärilleen Shimrin johdolla. Zura ibn Sharik iski häntä, Sinan ibn Anas lävisti hänet keihäällä ja hän kaatui; he katkaisivat hänen päänsä. Umar ibn Sad käski kymmenen ratsumiestä ratsastamaan hevosineen hänen ruumiinsa yli, ja teltat ryöstettiin. Hänen poikansa Ali (Zain al-Abidin) säästettiin, koska hän oli sairas. Seitsemänkymmentäkaksi miestä oli kuollut imaami Husainin (rauha hänelle) kanssa.</p></div>
+      <div class="kb-ch"><span class="kb-date">Karbalan jälkeen</span><h4>Zainab ja Arbaeenin tie</h4>
+        <p>Päät, naiset ja lapset vietiin Kufaan. Kun kuvernööri riemuitsi, Zainab, imaami Husainin (rauha hänelle) sisar, vastasi hänelle lujalla äänellä: Jumala oli kunnioittanut heitä Profeettansa kautta, ja häpeä peittää pahantekijän, ei heitä. Damaskoksessa, Jazidin hovissa, hän ojensi syyrialaista, joka vaati itselleen yhtä imaami Husainin (rauha hänelle) tyttäristä, ja sanoi, ettei se kuulunut hänelle eikä Jazidille. Myöhemmin Jazid lähetti perheen takaisin Medinaan.</p>
+        <p>Jazidin aikana edes Kaabaa ei säästetty. Vuonna 683 hänen armeijansa al-Husain ibn Numairin johdolla piiritti Mekkaa; Kaabaan osui katapulttien ammuksia ja se syttyi tuleen. Armeija vetäytyi vasta kuultuaan Jazidin kuolemasta.</p>
+        <p>Imaami Husain (rauha hänelle) haudattiin sinne, mihin hän kaatui. Siitä lähtien hänen hautansa on vetänyt puoleensa pyhiinvaeltajia, Karbalan kaupunki on kasvanut sen ympärille, ja nykyään miljoonat ihmiset saapuvat sinne joka vuosi jalan <b>Arbaeeniin</b>.</p></div>
+    </div>
+
+    <h3>Video: al-Kaabi ja valituslaulun taide</h3>
+    <div class="kb-card">
+      <p><b>Sheikki Abdul Zahra al-Kaabi</b> oli karbalalainen saarnaaja, syntynyt noin vuonna 1909. Ashura-päivänä 1959 hän lausui Maqtalin imaami Husainin (rauha hänelle) pyhäkön luona, ja Radio Bagdad lähetti hänen esityksensä koko Irakiin ja Persianlahden alueelle. Siitä lähtien hänen äänensä on ollut Ashura-aamun ääni irakilaisissa kodeissa: vuosikymmeniä hänen kuolemansa jälkeen kukaan ei ole onnistunut jäljittelemään hänen tyyliään.</p>
+      <p><b>Nai</b> (valituslaulu) on vanha irakilainen taide kertoa imaami Husainin (rauha hänelle) tarina: surulliseen sävelmään laulettu kertomus ilman soittimia, joka yhdistää klassista arabialaista proosaa kansanomaisiin surusäkeisiin. Sen tarkoitus ei ole viihdyttää, vaan saada kuulija tuntemaan olevansa läsnä Karbalassa. Arabiaa ei tarvitse ymmärtää: ääni kantaa tarinan, ja suomenkielinen käännös hoitaa loput.</p>
+      <p>Videolla on koko Maqtal al-Kaabin äänellä ja suomenkielisellä käännöksellä.</p>
+    </div>
+
+    <h3>Lähteet</h3>
+    <ul class="kb-sources">
+      <li><i>Profeettojen ja kuninkaiden historia</i> — al-Tabari (k. 923), Abu Mikhnafin kertomuksen mukaan</li>
+      <li><i>Ansab al-Ashraf</i> — al-Baladhuri (k. 892)</li>
+      <li><i>At-Tabaqat al-Kubra</i> — Ibn Sad (k. 845)</li>
+      <li><i>Al-Kamil fi at-Tarikh</i> — Ibn al-Athir (k. 1233)</li>
+      <li><i>Al-Bidaya wa an-Nihaya</i> — Ibn Kathir (k. 1373)</li>
+    </ul>
+
+    <div class="kb-cta"><p>Seiso siellä, missä imaami Husain (rauha hänelle) seisoi. Kulje kahden pyhäkön välillä.</p><a href="#itinerary">Vieraile Karbalassa kanssamme</a></div>
+  </div></div></div>
+  <div class="kb-video" style="margin-top:22px" data-hl="fi"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>Ääni: sheikki Abdul Zahra al-Kaabi</span><span>Suomenkielinen käännös</span></div></div>
+</div>
+
+
+</div>
+</section>
+
+<script>
+function kbInit(){
+  var s=document.getElementById('karbala-story'); if(!s) return;
+  var L=(document.documentElement.lang||'ar').slice(0,2).toLowerCase();
+  // Finnish page: Finnish-translated Maqtal video
+  if(['fi'].indexOf(L)<0){ s.style.display='none'; return; }
+  s.style.display='';
+  var VID='d5cyPVrggDM', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
+  s.querySelectorAll('.kb-lang').forEach(function(b){
+    b.classList.toggle('kb-on', b.getAttribute('data-lang')===L);
+  });
+  s.querySelectorAll('.kb-video').forEach(function(v){
+    if(v.dataset.ready) return; v.dataset.ready=1;
+    v.style.backgroundImage='url('+THUMB+')';
+    v.addEventListener('click',function(){
+      if(v.querySelector('iframe')) return;
+      var hl=v.getAttribute('data-hl');
+      var cc = '';
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0&hl='+hl+cc;
+      f.title='Imaami Husainin Maqtal – Abdul Zahra al-Kaabi, suomenkielinen käännös';
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen=true;
+      v.appendChild(f);
+    });
+  });
+  s.querySelectorAll('.kb-btn').forEach(function(btn){
+    if(btn.dataset.ready) return; btn.dataset.ready=1;
+    var more=btn.nextElementSibling, label=btn.firstChild.nodeValue;
+    var closeTxt={ar:'إخفاء ',en:'Show less ',ru:'Свернуть ',de:'Weniger anzeigen ',fr:'Réduire ',es:'Mostrar menos ',it:'Mostra meno ',fi:'Näytä vähemmän '};
+    btn.addEventListener('click',function(){
+      var open=more.classList.toggle('kb-open');
+      btn.setAttribute('aria-expanded',open);
+      var lang=btn.closest('.kb-lang').getAttribute('data-lang');
+      btn.firstChild.nodeValue = open ? closeTxt[lang] : label;
+    });
+  });
+}
+document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',kbInit) : kbInit();
+</script>
+<!-- ================= END: KARBALA SECTION ================= -->
+
   <section class="block in" style="padding-top:0" id="usa-canada" aria-labelledby="usa-canada-h">
     <div class="us-ar">
       <span class="eyebrow">🇺🇸 🇨🇦 Yhdysvalloissa ja Kanadassa asuville suomalaisille</span>
