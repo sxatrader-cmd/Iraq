@@ -1136,6 +1136,183 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   </section>
 
 
+  <!-- ================= START: KARBALA SECTION ================= -->
+<style>
+#karbala-story{padding-bottom:0}
+#karbala-story *{box-sizing:border-box}
+#karbala-story .kb-lang{display:none}
+#karbala-story .kb-lang.kb-on{display:block}
+#karbala-story .kb-eyebrow{display:block;font:500 13px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-eyebrow{font-family:var(--sans-ar);letter-spacing:.02em;font-size:14px}
+#karbala-story h2{font-size:clamp(24px,3.8vw,32px);color:var(--navy);margin:6px 0 14px;line-height:1.3}
+#karbala-story h2 .kb-q{display:block;color:var(--gold);font-size:.78em;margin-top:4px}
+#karbala-story .kb-hook{margin:0 0 22px;color:var(--ink);max-width:68ch}
+#karbala-story .kb-hook b{color:var(--navy)}
+#karbala-story .kb-video{position:relative;width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;cursor:pointer;
+  background:var(--navy) center/cover no-repeat;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,71,.05),rgba(27,42,71,.55))}
+#karbala-story .kb-play{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;z-index:2;
+  background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold);transition:transform .2s}
+#karbala-story .kb-video:hover .kb-play{transform:scale(1.07)}
+#karbala-story .kb-play svg{width:28px;height:28px;fill:var(--gold-2);margin-inline-start:4px}
+#karbala-story .kb-vmeta{position:absolute;bottom:12px;inset-inline:14px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#karbala-story .kb-vmeta span{background:rgba(27,42,71,.82);padding:3px 10px;border-radius:4px}
+#karbala-story .kb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+#karbala-story .kb-caption{font-size:14px;color:var(--muted);margin:16px 0 18px;line-height:1.7}
+#karbala-story .kb-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);border:0;border-radius:4px;
+  padding:13px 26px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+#karbala-story .kb-btn:hover{filter:brightness(1.07)}
+#karbala-story .kb-arr{transition:transform .3s}
+#karbala-story .kb-btn[aria-expanded=true] .kb-arr{transform:rotate(180deg)}
+#karbala-story .kb-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
+#karbala-story .kb-more.kb-open{grid-template-rows:1fr}
+#karbala-story .kb-more>div{overflow:hidden}
+#karbala-story .kb-inner{padding-top:30px}
+#karbala-story h3{font-family:var(--serif-en);font-weight:400;font-size:clamp(21px,3vw,26px);color:var(--navy);margin:36px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+html[lang="ar"] #karbala-story h3{font-family:var(--serif-ar);font-weight:700}
+#karbala-story h3:first-child{margin-top:0}
+#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--line);margin-inline-start:8px}
+#karbala-story .kb-ch{position:relative;margin-bottom:26px}
+#karbala-story .kb-ch::before{content:"";position:absolute;inset-inline-start:-39px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--gold)}
+#karbala-story .kb-ch.kb-red::before{background:var(--navy);box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--gold)}
+#karbala-story .kb-date{display:block;font:500 12px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-date{font-family:var(--sans-ar);letter-spacing:0;font-size:13px}
+#karbala-story .kb-ch h4{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.35;margin:2px 0 8px}
+html[lang="ar"] #karbala-story .kb-ch h4{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+#karbala-story .kb-ch p{margin:0 0 10px;max-width:68ch;color:var(--ink)}
+#karbala-story blockquote{margin:12px 0;padding:12px 18px;border-inline-start:3px solid var(--gold);background:rgba(184,149,90,.09);
+  border-radius:4px;color:var(--navy);font-family:var(--serif-en);font-style:italic;line-height:1.8}
+html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style:normal;font-size:18px}
+#karbala-story .kb-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+#karbala-story .kb-card p{margin:0 0 12px;color:var(--ink)}
+#karbala-story .kb-card p:last-child{margin:0}
+#karbala-story .kb-card b{color:var(--navy)}
+#karbala-story .kb-sources{font-size:14px;color:var(--muted);line-height:1.9;margin:0;padding-inline-start:20px}
+#karbala-story .kb-cta{margin-top:32px;text-align:center;padding:26px 0 6px;border-top:1px solid var(--line)}
+#karbala-story .kb-cta p{color:var(--navy);margin:0 0 14px;font-size:17px}
+#karbala-story .kb-cta a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:4px}
+#karbala-story .kb-cta a:hover{background:var(--navy-2)}
+@media (max-width:600px){
+  #karbala-story .kb-play{width:58px;height:58px}
+  #karbala-story .kb-timeline{padding-inline-start:22px;margin-inline-start:4px}
+  #karbala-story .kb-ch::before{inset-inline-start:-31px}
+}
+</style>
+
+<section class="block in" id="karbala-story" aria-label="Karbala">
+<div class="kb-wrap">
+
+<!-- ===================== SWEDISH ===================== -->
+<div class="kb-lang" data-lang="sv" dir="ltr">
+  <div class="sec-head"><span class="eyebrow">Karbala</span><h2 class="disp">Karbala: en berättelse som skakade världen från ena änden till den andra… vad hände där?</h2><p>Imam Husayn (frid vare med honom), Profetens sonson, stod med 72 följeslagare mot tusentals män och blev en symbol för frihet.</p></div>
+  <button class="kb-btn" aria-expanded="false">Läs mer <span class="kb-arr">▾</span></button>
+  <div class="kb-more"><div><div class="kb-inner">
+
+    <h3>Berättelsen så som krönikorna bevarat den</h3>
+    <div class="kb-timeline">
+      <div class="kb-ch"><span class="kb-date">661 – 676 e.Kr. · Arabien och Syrien</span><h4>Från kalifat till ärftlig tronföljd</h4>
+        <p>År 661 slöt Hasan, imam Husayns (frid vare med honom) äldre bror, fred med Muawiya ibn Abi Sufyan för att stoppa blodsutgjutelsen mellan muslimer: tiden minns som ”enighetens år”. Hasan dog förgiftad i Medina omkring år 670. Ibn Sad och al-Baladhuri uppger att hans hustru Jada bint al-Ashath gav honom giftet, och al-Baladhuri tillägger att hon gjorde det på Muawiyas uppmaning, även om vissa historiker, som Ibn Kathir, ifrågasatte den uppgiften. Några år senare lät Muawiya erkänna sin son Yazid som tronföljare: för första gången gick kalifatet i arv från far till son. Al-Tabari berättar att en delegation från Medina återvände från Yazid med beskedet att han drack vin, lekte med hundar och försummade bönen; Ibn Kathir beskriver honom som hängiven njutningar och vin. Flera söner till Profetens stora följeslagare vägrade svära honom trohet, med imam Husayn ibn Ali (frid vare med honom) och Abdullah ibn az-Zubayr i spetsen.</p></div>
+      <div class="kb-ch"><span class="kb-date">April 680 · Medina</span><h4>”En sådan som jag svär inte trohet till en sådan som han”</h4>
+        <p>Efter Muawiyas död skrev Yazid till al-Walid ibn Utba, Medinas guvernör, och beordrade honom att avkräva trohetsed av imam Husayn (frid vare med honom), Abdullah ibn az-Zubayr och Abdullah ibn Umar, med fasthet och utan eftergivenhet. Al-Walid kallade till sig imam Husayn (frid vare med honom) på natten. Han kom med några unga män ur sin familj och ställde dem vid dörren: om ni hör mig höja rösten, kom in. Bredvid guvernören satt Marwan ibn al-Hakam. Al-Walid meddelade imam Husayn (frid vare med honom) att Muawiya var död och bad honom svära Yazid trohet. Imam Husayn (frid vare med honom) svarade att en sådan som han inte svär trohet i hemlighet, utan, om han gör det, öppet inför folket.</p>
+        <p>Marwan sade till al-Walid: om han går nu utan att svära får du aldrig en sådan chans igen; håll kvar honom; svär han, gott, och annars hugg huvudet av honom. Imam Husayn (frid vare med honom) reste sig hastigt: ”Son till az-Zarqa, är det du som ska döda mig, eller han? Vid Gud, du ljuger och syndar.” Sedan vände han sig till guvernören:</p>
+        <blockquote>”O emir, vi är profetskapets hus, budskapets källa, platsen där änglarna kommer och går; genom oss började Gud och genom oss fullbordade Han. Yazid är en syndig man, som dricker vin, dödar själar som Gud gjort okränkbara och öppet skyltar med sin synd, och en sådan som jag svär inte trohet till en sådan som han. Men låt oss vänta till morgonen, ni och vi, så får vi se vem av oss som är mest värdig kalifatet.”</blockquote>
+        <p>Och han gick. Al-Walid avvisade Marwans råd och sade att han inte ville äga allt som solen går upp över, om priset vore att döda imam Husayn (frid vare med honom).</p>
+        <p>Den egyptiske författaren Abd ar-Rahman ash-Sharqawi gjorde denna scen till ett berömt ögonblick i sitt drama <i>Husayn revolutionären</i>: al-Walid säger att man bara begär ett enda ord av honom, och att han sedan kan gå i frid. Imam Husayn (frid vare med honom) svarar att ett ord inte är en småsak: genom ett ord går människan in i paradiset och genom ett ord kastas hon i elden; ordet är ett ljus som leder människorna, en frihetens fästning, ett anförtrott gods och ett ansvar, och en mans heder är hans ord. Hur skulle han då kunna sälja sitt ord till Yazid?</p>
+        <p>Två nätter senare, den 28 rajab, reste imam Husayn (frid vare med honom) med sin familj till Mecka.</p></div>
+      <div class="kb-ch"><span class="kb-date">Vår – sommar 680 · Mecka och Kufa</span><h4>Breven från Kufa och Muslims öde</h4>
+        <p>Imam Husayn (frid vare med honom) stannade i månader i Mecka, medan det kom brev från invånarna i Kufa (i dagens Irak) som bjöd in honom att komma. Han skickade sin kusin Muslim ibn Aqil i förväg, som skrev till honom att 18 000 människor svurit honom trohet. Yazid utsåg då Ubaydullah ibn Ziyad till guvernör i Kufa. Under hans tryck skingrades folket, tills Muslim stod ensam. En kvinna vid namn Tawa gav honom skydd; han blev förrådd, kämpade, togs till fånga och avrättades på palatsets tak, tillsammans med sin värd Hani ibn Urwa.</p></div>
+      <div class="kb-ch"><span class="kb-date">September 680 · Avfärden från Mecka</span><h4>”Hellre dödas utanför staden”</h4>
+        <p>Ibn Abbas, Ibn Umar och andra avrådde honom från att resa till Irak. Han bröt upp just när vallfärden började och sade till Ibn az-Zubayr, enligt al-Tabari, att han hellre dödades utanför Mecka än såg stadens helgd kränkas för hans skull. På vägen fick han veta att Muslim var död. Han lät beduinerna som anslutit sig under resan gå; de gick, och kvar blev bara de som kommit med honom från Arabien.</p></div>
+      <div class="kb-ch"><span class="kb-date">2 muharram år 61 AH · 2 oktober 680</span><h4>Al-Hurr och rasten vid Karbala</h4>
+        <p>Al-Hurr ibn Yazid spärrade vägen för honom med 1 000 ryttare, som hade order att föra honom till Ibn Ziyad. De var utmattade av törst, och imam Husayn (frid vare med honom) lät ge soldaterna och deras hästar att dricka. Under vägen sade han till dem:</p>
+        <blockquote>”Ser ni inte att man inte längre handlar efter sanningen och att lögnen inte längre är förbjuden?”</blockquote>
+        <p>Eskorterad av al-Hurr stannade karavanen till slut på en slätt vid Eufrats strand som kallas Karbala.</p></div>
+      <div class="kb-ch"><span class="kb-date">3 – 9 muharram</span><h4>Belägringen och törsten</h4>
+        <p>Umar ibn Sad kom med 4 000 soldater, och Ibn Ziyad skickade fler. Tre dagar före slaget placerades 500 ryttare vid floden för att skära av imam Husayns (frid vare med honom) läger från vattnet. Hans halvbror Abbas ledde nattetid ett utfall med 30 ryttare och 20 fotsoldater, bröt igenom och kom tillbaka med fyllda vattensäckar. Förhandlingarna mellan imam Husayn (frid vare med honom) och Umar ibn Sad ledde ingenstans. Den nionde dagen kom Shimr med Ibn Ziyads order: underkasta sig hans dom eller strida.</p></div>
+      <div class="kb-ch"><span class="kb-date">Kvällen före</span><h4>Den sista natten</h4>
+        <p>Imam Husayn (frid vare med honom) bad om ytterligare en natt. Han samlade sina följeslagare och löste dem från varje förpliktelse: natten skyler er, sade han, använd den, för det är bara mig de vill ha. Abbas svarade först, sedan familjen, sedan följeslagarna — Muslim ibn Awsaja, Sad ibn Abdullah, Zuhayr ibn al-Qayn —: ingen ville gå. De tillbringade natten i bön.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">10 muharram · Ashura · 10 oktober 680</span><h4>Trohetens dag</h4>
+        <p>Efter gryningsbönen ställde imam Husayn (frid vare med honom) upp sina män: 32 ryttare och 40 fotsoldater. Han talade till hären och påminde om att han härstammade från Profeten. Då gick al-Hurr över till imam Husayn (frid vare med honom), full av ånger över vad han gjort. Imam Husayn (frid vare med honom) sade till honom: du är fri (<i>hurr</i>), som din mor kallade dig, i denna värld och i nästa. Al-Hurr stred tills han föll.</p>
+        <p>Följeslagarna föll en efter en: Muslim ibn Awsaja, Habib ibn Mazahir, Zuhayr ibn al-Qayn. Vid middagstid påminde Abu Thumama as-Saidi imam Husayn (frid vare med honom) om bönen, och han ledde dem som ännu stod upprätt i fruktans bön, under ett regn av pilar.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Middag</span><h4>Familjen</h4>
+        <p>Sedan trädde Profetens familj fram. Den förste av dem att falla var Ali al-Akbar, son till imam Husayn (frid vare med honom); därefter Qasim, Hasans son, en pojke vars ansikte ett vittne liknade vid en månskära. Även Abbas föll, tillsammans med sina bröder Abdullah, Uthman och Jafar.</p>
+        <p>Imam Husayn (frid vare med honom) satt med sin lille son Abdullah i knät. En man från stammen Banu Asad sköt en pil och dödade barnet; imam Husayn (frid vare med honom) samlade hans blod i handflatan.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Eftermiddagen</span><h4>Fallet</h4>
+        <p>Ensam fortsatte imam Husayn (frid vare med honom) att strida och anföll dem som omringade honom tills de vek undan. Sedan slöt de sig kring honom under Shimrs befäl. Zura ibn Sharik träffade honom, Sinan ibn Anas genomborrade honom med en lans och han föll; de högg huvudet av honom. Umar ibn Sad befallde tio ryttare att rida med sina hästar över hans kropp, och tälten plundrades. Hans son Ali (Zayn al-Abidin) skonades eftersom han var sjuk. Sjuttiotvå män hade dött tillsammans med imam Husayn (frid vare med honom).</p></div>
+      <div class="kb-ch"><span class="kb-date">Efter Karbala</span><h4>Zaynab och Arbaeens väg</h4>
+        <p>Huvudena, kvinnorna och barnen fördes till Kufa. När guvernören jublade svarade Zaynab, imam Husayns (frid vare med honom) syster, med fast röst: Gud hade hedrat dem genom Sin Profet, och det är ogärningsmannen som täcks av skam, inte de. I Damaskus, vid Yazids hov, tillrättavisade hon en syrier som gjorde anspråk på en av imam Husayns (frid vare med honom) döttrar, och sade att det varken tillkom honom eller Yazid. Senare skickade Yazid tillbaka familjen till Medina.</p>
+        <p>Under Yazid skonades inte ens Kaba. År 683 belägrade hans här under al-Husayn ibn Numayrs befäl Mecka; Kaba träffades av katapulter och fattade eld. Hären drog sig tillbaka först vid beskedet om Yazids död.</p>
+        <p>Imam Husayn (frid vare med honom) begravdes där han föll. Sedan dess drar hans grav till sig pilgrimer, staden Karbala har vuxit upp runt den, och i dag kommer miljontals människor hit till fots varje år till <b>Arbaeen</b>.</p></div>
+    </div>
+
+    <h3>Videon: al-Kaabi och klagosångens konst</h3>
+    <div class="kb-card">
+      <p><b>Shejk Abdul Zahra al-Kaabi</b> var en predikant från Karbala, född omkring 1909. På Ashura-dagen 1959 reciterade han Maqtal vid imam Husayns (frid vare med honom) helgedom, och hans recitation sändes av Radio Bagdad över hela Irak och Gulfen. Sedan dess är hans röst ljudet av Ashura-morgonen i irakiska hem: årtionden efter hans död har ingen lyckats efterlikna hans stil.</p>
+      <p><b>Nai</b> (klagosång) är en gammal irakisk konst att berätta historien om imam Husayn (frid vare med honom): en sjungen berättelse på en sorgsen melodi, utan musikinstrument, som förenar klassisk arabisk prosa med folkliga sorgeverser. Syftet är inte att underhålla, utan att låta lyssnaren känna sig närvarande i Karbala. Du behöver inte förstå arabiska: rösten bär berättelsen, och den svenska översättningen gör resten.</p>
+      <p>Videon presenterar hela Maqtal med al-Kaabis röst och svensk översättning.</p>
+    </div>
+
+    <h3>Källor</h3>
+    <ul class="kb-sources">
+      <li><i>Profeternas och kungarnas historia</i> — al-Tabari (d. 923), enligt Abu Mikhnafs berättelse</li>
+      <li><i>Ansab al-Ashraf</i> — al-Baladhuri (d. 892)</li>
+      <li><i>At-Tabaqat al-Kubra</i> — Ibn Sad (d. 845)</li>
+      <li><i>Al-Kamil fi at-Tarikh</i> — Ibn al-Athir (d. 1233)</li>
+      <li><i>Al-Bidaya wa an-Nihaya</i> — Ibn Kathir (d. 1373)</li>
+    </ul>
+
+    <div class="kb-cta"><p>Stå där imam Husayn (frid vare med honom) stod. Gå mellan de två helgedomarna.</p><a href="#itinerary">Besök Karbala med oss</a></div>
+  </div></div></div>
+  <div class="kb-video" style="margin-top:22px" data-hl="sv"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>Röst: shejk Abdul Zahra al-Kaabi</span><span>Med svensk översättning</span></div></div>
+</div>
+
+
+</div>
+</section>
+
+<script>
+function kbInit(){
+  var s=document.getElementById('karbala-story'); if(!s) return;
+  var L=(document.documentElement.lang||'ar').slice(0,2).toLowerCase();
+  // Swedish page: Swedish-translated Maqtal video
+  if(['sv'].indexOf(L)<0){ s.style.display='none'; return; }
+  s.style.display='';
+  var VID='vt3tvHU_HWA', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
+  s.querySelectorAll('.kb-lang').forEach(function(b){
+    b.classList.toggle('kb-on', b.getAttribute('data-lang')===L);
+  });
+  s.querySelectorAll('.kb-video').forEach(function(v){
+    if(v.dataset.ready) return; v.dataset.ready=1;
+    v.style.backgroundImage='url('+THUMB+')';
+    v.addEventListener('click',function(){
+      if(v.querySelector('iframe')) return;
+      var hl=v.getAttribute('data-hl');
+      var cc = '';
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0&hl='+hl+cc;
+      f.title='Maqtal om imam Husayn – Abdul Zahra al-Kaabi, med svensk översättning';
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen=true;
+      v.appendChild(f);
+    });
+  });
+  s.querySelectorAll('.kb-btn').forEach(function(btn){
+    if(btn.dataset.ready) return; btn.dataset.ready=1;
+    var more=btn.nextElementSibling, label=btn.firstChild.nodeValue;
+    var closeTxt={ar:'إخفاء ',en:'Show less ',ru:'Свернуть ',de:'Weniger anzeigen ',fr:'Réduire ',es:'Mostrar menos ',it:'Mostra meno ',sv:'Visa mindre '};
+    btn.addEventListener('click',function(){
+      var open=more.classList.toggle('kb-open');
+      btn.setAttribute('aria-expanded',open);
+      var lang=btn.closest('.kb-lang').getAttribute('data-lang');
+      btn.firstChild.nodeValue = open ? closeTxt[lang] : label;
+    });
+  });
+}
+document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',kbInit) : kbInit();
+</script>
+<!-- ================= END: KARBALA SECTION ================= -->
+
   <section class="block in" style="padding-top:0" id="usa-canada" aria-labelledby="usa-canada-h">
     <div class="us-ar">
       <span class="eyebrow">🇺🇸 🇨🇦 För svenskar i USA och Kanada</span>
