@@ -157,7 +157,8 @@
         "hr",
         "ro",
         "nl",
-        "ka"
+        "ka",
+        "ckb"
       ],
       "source_article": "_blog/en/posts/imam-hussein-shrine-karbala-guide.html"
     },
@@ -344,8 +345,16 @@
       "city": "Basra",
       "category_en": "Cities & culture",
       "tour": "9",
-      "date": null,
-      "langs_done": []
+      "date": "2026-11-06",
+      "langs_done": [
+        "en",
+        "ar",
+        "ru",
+        "de",
+        "fr",
+        "it",
+        "ckb"
+      ]
     },
     {
       "topic": "the-mesopotamian-marshes-ahwar",
