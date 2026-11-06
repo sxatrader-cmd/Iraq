@@ -1124,6 +1124,183 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
   </section>
 
 
+  <!-- ================= START: KARBALA SECTION ================= -->
+<style>
+#karbala-story{padding-bottom:0}
+#karbala-story *{box-sizing:border-box}
+#karbala-story .kb-lang{display:none}
+#karbala-story .kb-lang.kb-on{display:block}
+#karbala-story .kb-eyebrow{display:block;font:500 13px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-eyebrow{font-family:var(--sans-ar);letter-spacing:.02em;font-size:14px}
+#karbala-story h2{font-size:clamp(24px,3.8vw,32px);color:var(--navy);margin:6px 0 14px;line-height:1.3}
+#karbala-story h2 .kb-q{display:block;color:var(--gold);font-size:.78em;margin-top:4px}
+#karbala-story .kb-hook{margin:0 0 22px;color:var(--ink);max-width:68ch}
+#karbala-story .kb-hook b{color:var(--navy)}
+#karbala-story .kb-video{position:relative;width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;cursor:pointer;
+  background:var(--navy) center/cover no-repeat;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+#karbala-story .kb-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,71,.05),rgba(27,42,71,.55))}
+#karbala-story .kb-play{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;z-index:2;
+  background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold);transition:transform .2s}
+#karbala-story .kb-video:hover .kb-play{transform:scale(1.07)}
+#karbala-story .kb-play svg{width:28px;height:28px;fill:var(--gold-2);margin-inline-start:4px}
+#karbala-story .kb-vmeta{position:absolute;bottom:12px;inset-inline:14px;z-index:2;font-size:13px;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#karbala-story .kb-vmeta span{background:rgba(27,42,71,.82);padding:3px 10px;border-radius:4px}
+#karbala-story .kb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+#karbala-story .kb-caption{font-size:14px;color:var(--muted);margin:16px 0 18px;line-height:1.7}
+#karbala-story .kb-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);border:0;border-radius:4px;
+  padding:13px 26px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+#karbala-story .kb-btn:hover{filter:brightness(1.07)}
+#karbala-story .kb-arr{transition:transform .3s}
+#karbala-story .kb-btn[aria-expanded=true] .kb-arr{transform:rotate(180deg)}
+#karbala-story .kb-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
+#karbala-story .kb-more.kb-open{grid-template-rows:1fr}
+#karbala-story .kb-more>div{overflow:hidden}
+#karbala-story .kb-inner{padding-top:30px}
+#karbala-story h3{font-family:var(--serif-en);font-weight:400;font-size:clamp(21px,3vw,26px);color:var(--navy);margin:36px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+html[lang="ar"] #karbala-story h3{font-family:var(--serif-ar);font-weight:700}
+#karbala-story h3:first-child{margin-top:0}
+#karbala-story .kb-timeline{position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--line);margin-inline-start:8px}
+#karbala-story .kb-ch{position:relative;margin-bottom:26px}
+#karbala-story .kb-ch::before{content:"";position:absolute;inset-inline-start:-39px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--gold)}
+#karbala-story .kb-ch.kb-red::before{background:var(--navy);box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--gold)}
+#karbala-story .kb-date{display:block;font:500 12px var(--sans-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+html[lang="ar"] #karbala-story .kb-date{font-family:var(--sans-ar);letter-spacing:0;font-size:13px}
+#karbala-story .kb-ch h4{font-family:var(--serif-en);font-weight:400;font-size:20px;color:var(--navy);line-height:1.35;margin:2px 0 8px}
+html[lang="ar"] #karbala-story .kb-ch h4{font-family:var(--serif-ar);font-weight:700;font-size:22px}
+#karbala-story .kb-ch p{margin:0 0 10px;max-width:68ch;color:var(--ink)}
+#karbala-story blockquote{margin:12px 0;padding:12px 18px;border-inline-start:3px solid var(--gold);background:rgba(184,149,90,.09);
+  border-radius:4px;color:var(--navy);font-family:var(--serif-en);font-style:italic;line-height:1.8}
+html[lang="ar"] #karbala-story blockquote{font-family:var(--serif-ar);font-style:normal;font-size:18px}
+#karbala-story .kb-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+#karbala-story .kb-card p{margin:0 0 12px;color:var(--ink)}
+#karbala-story .kb-card p:last-child{margin:0}
+#karbala-story .kb-card b{color:var(--navy)}
+#karbala-story .kb-sources{font-size:14px;color:var(--muted);line-height:1.9;margin:0;padding-inline-start:20px}
+#karbala-story .kb-cta{margin-top:32px;text-align:center;padding:26px 0 6px;border-top:1px solid var(--line)}
+#karbala-story .kb-cta p{color:var(--navy);margin:0 0 14px;font-size:17px}
+#karbala-story .kb-cta a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:4px}
+#karbala-story .kb-cta a:hover{background:var(--navy-2)}
+@media (max-width:600px){
+  #karbala-story .kb-play{width:58px;height:58px}
+  #karbala-story .kb-timeline{padding-inline-start:22px;margin-inline-start:4px}
+  #karbala-story .kb-ch::before{inset-inline-start:-31px}
+}
+</style>
+
+<section class="block in" id="karbala-story" aria-label="Karbala">
+<div class="kb-wrap">
+
+<!-- ===================== SLOVAK ===================== -->
+<div class="kb-lang" data-lang="sk" dir="ltr">
+  <div class="sec-head"><span class="eyebrow">Karbala</span><h2 class="disp">Karbala: príbeh, ktorý otriasol svetom od jedného konca po druhý… čo sa tam stalo?</h2><p>Imám Husajn (mier s ním), vnuk Proroka, sa postavil so 72 druhmi proti tisícom mužov a stal sa symbolom slobody.</p></div>
+  <button class="kb-btn" aria-expanded="false">Zistiť viac <span class="kb-arr">▾</span></button>
+  <div class="kb-more"><div><div class="kb-inner">
+
+    <h3>Príbeh, ako ho zachovali kroniky</h3>
+    <div class="kb-timeline">
+      <div class="kb-ch"><span class="kb-date">661 – 676 n. l. · Arábia a Sýria</span><h4>Od kalifátu k dedičnému nástupníctvu</h4>
+        <p>V roku 661 uzavrel Hasan, starší brat imáma Husajna (mier s ním), mier s Muávijom ibn Abí Sufjánom, aby zastavil krviprelievanie medzi moslimami: tento čas sa pripomína ako „rok jednoty“. Hasan zomrel otrávený v Medine okolo roku 670. Ibn Sad a al-Balázurí uvádzajú, že jed mu podala jeho manželka Džada bint al-Ašas, a al-Balázurí dodáva, že to urobila na popud Muáviju, hoci niektorí historici, napríklad Ibn Kasír, tento bod spochybňovali. O niekoľko rokov neskôr Muávija presadil uznanie svojho syna Jazída za nástupcu: po prvý raz prechádzal kalifát z otca na syna. At-Tabarí rozpráva, že posolstvo z Mediny sa od Jazída vrátilo so správou, že pije víno, hrá sa so psami a zanedbáva modlitbu; Ibn Kasír ho opisuje ako oddaného pôžitkom a vínu. Viacerí synovia veľkých druhov Proroka mu odmietli prisahať vernosť, na ich čele imám Husajn ibn Alí (mier s ním) a Abdulláh ibn az-Zubajr.</p></div>
+      <div class="kb-ch"><span class="kb-date">Apríl 680 · Medina</span><h4>„Niekto ako ja neprisahá vernosť niekomu ako on“</h4>
+        <p>Po Muávijovej smrti napísal Jazíd al-Valídovi ibn Utbovi, správcovi Mediny, a nariadil mu vyžiadať si prísahu vernosti od imáma Husajna (mier s ním), Abdulláha ibn az-Zubajra a Abdulláha ibn Umara, rázne a bez zhovievavosti. Al-Valíd si imáma Husajna (mier s ním) predvolal v noci. Ten prišiel s niekoľkými mladými mužmi zo svojej rodiny a postavil ich ku dverám: ak budete počuť, že zvyšujem hlas, vstúpte. Vedľa správcu sedel Marván ibn al-Hakam. Al-Valíd oznámil imámovi Husajnovi (mier s ním) Muávijovu smrť a požiadal ho o prísahu Jazídovi. Imám Husajn (mier s ním) odpovedal, že niekto ako on neprisahá vernosť potajomky, ale ak vôbec, tak verejne, pred ľudom.</p>
+        <p>Marván povedal al-Valídovi: ak teraz odíde bez prísahy, takú príležitosť už nikdy mať nebudeš; zadrž ho; ak prisahá, dobre, a ak nie, odsekni mu hlavu. Imám Husajn (mier s ním) vyskočil: „Syn az-Zarky, ty ma zabiješ, alebo on? Pri Bohu, klameš a hrešíš.“ Potom sa obrátil k správcovi:</p>
+        <blockquote>„Ó emír, my sme dom proroctva, prameň posolstva, miesto, kam prichádzajú a odkiaľ odchádzajú anjeli; skrze nás Boh začal a skrze nás zavŕšil. Jazíd je hriešny muž, ktorý pije víno, zabíja duše, ktoré Boh urobil nedotknuteľnými, a okázalo sa chváli svojím hriechom, a niekto ako ja neprisahá vernosť niekomu ako on. Ale počkajme do rána, vy aj my, a uvidíme, kto z nás je kalifátu hodnejší.“</blockquote>
+        <p>A odišiel. Al-Valíd Marvánovu radu odmietol a povedal, že by nechcel vlastniť všetko, nad čím vychádza slnko, keby cenou malo byť zabitie imáma Husajna (mier s ním).</p>
+        <p>Egyptský spisovateľ Abd ar-Rahmán aš-Šarkáví urobil z tejto scény slávny moment svojej drámy <i>Husajn revolucionár</i>: al-Valíd mu hovorí, že sa od neho žiada len jedno slovo a potom môže odísť v pokoji. Imám Husajn (mier s ním) odpovedá, že slovo nie je maličkosť: slovom človek vstupuje do raja a slovom je uvrhnutý do ohňa; slovo je svetlo, ktoré vedie ľudí, pevnosť slobody, zverený poklad a zodpovednosť, a česť muža je jeho slovo. Ako by teda mohol predať svoje slovo Jazídovi?</p>
+        <p>O dve noci neskôr, 28. radžabu, odišiel imám Husajn (mier s ním) s rodinou do Mekky.</p></div>
+      <div class="kb-ch"><span class="kb-date">Jar – leto 680 · Mekka a Kúfa</span><h4>Listy z Kúfy a osud Muslima</h4>
+        <p>Imám Husajn (mier s ním) zostal mesiace v Mekke a medzitým prichádzali listy od obyvateľov Kúfy (v dnešnom Iraku), ktorí ho pozývali, aby prišiel. Poslal napred svojho bratranca Muslima ibn Akíla, ktorý mu napísal, že mu prisahalo vernosť 18 000 ľudí. Jazíd potom vymenoval Ubajdulláha ibn Zijáda za správcu Kúfy. Pod jeho tlakom sa ľudia rozišli, až Muslim zostal sám. Žena menom Taua mu poskytla úkryt; bol zradený, bojoval, bol zajatý a popravený na streche paláca spolu so svojím hostiteľom Háním ibn Urvom.</p></div>
+      <div class="kb-ch"><span class="kb-date">September 680 · Odchod z Mekky</span><h4>„Radšej byť zabitý mimo nej“</h4>
+        <p>Ibn Abbás, Ibn Umar a ďalší mu radili, aby do Iraku nešiel. Vyrazil práve vtedy, keď sa začínala púť, a povedal Ibn az-Zubajrovi, podľa at-Tabarího, že radšej zomrie mimo Mekky, než aby kvôli nemu bola porušená posvätnosť mesta. Cestou sa dozvedel o Muslimovej smrti. Beduínom, ktorí sa k nemu na ceste pridali, dovolil odísť; odišli a zostali len tí, čo s ním prišli z Arábie.</p></div>
+      <div class="kb-ch"><span class="kb-date">2. muharramu 61 h. · 2. októbra 680</span><h4>Al-Hurr a zastávka v Karbale</h4>
+        <p>Al-Hurr ibn Jazíd mu zatarasil cestu s 1 000 jazdcami, ktorí mali rozkaz priviesť ho k Ibn Zijádovi. Boli vyčerpaní smädom a imám Husajn (mier s ním) dal vojakov aj ich kone napojiť. Cestou im povedal:</p>
+        <blockquote>„Nevidíte, že sa už nekoná podľa pravdy a lož už nie je zakázaná?“</blockquote>
+        <p>Karavána v sprievode al-Hurra sa napokon zastavila na pláni pri brehu Eufratu, ktorá sa volá Karbala.</p></div>
+      <div class="kb-ch"><span class="kb-date">3. – 9. muharramu</span><h4>Obliehanie a smäd</h4>
+        <p>Umar ibn Sad prišiel so 4 000 vojakmi a Ibn Zijád poslal ďalších. Tri dni pred bitkou postavili k rieke 500 jazdcov, aby odrezali tábor imáma Husajna (mier s ním) od vody. Jeho nevlastný brat Abbás viedol v noci výpad s 30 jazdcami a 20 pešími, prerazil a priniesol plné mechy vody. Rokovania medzi imámom Husajnom (mier s ním) a Umarom ibn Sadom nepriniesli nič. Deviaty deň prišiel Šimr s rozkazom Ibn Zijáda: podriadiť sa jeho súdu, alebo bojovať.</p></div>
+      <div class="kb-ch"><span class="kb-date">Predvečer</span><h4>Posledná noc</h4>
+        <p>Imám Husajn (mier s ním) požiadal ešte o jednu noc. Zhromaždil svojich druhov a zbavil ich všetkých záväzkov: noc vás zakrýva, povedal, využite ju, pretože chcú len mňa. Ako prvý odpovedal Abbás, potom rodina, potom druhovia — Muslim ibn Ausadža, Sad ibn Abdulláh, Zuhajr ibn al-Kajn —: nikto nechcel odísť. Strávili noc v modlitbe.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">10. muharramu · Ášúra · 10. októbra 680</span><h4>Deň vernosti</h4>
+        <p>Po rannej modlitbe zoradil imám Husajn (mier s ním) svojich mužov: 32 jazdcov a 40 pešiakov. Prehovoril k vojsku a pripomenul im, že pochádza od Proroka. Vtedy al-Hurr prešiel na stranu imáma Husajna (mier s ním), plný ľútosti nad tým, čo urobil. Imám Husajn (mier s ním) mu povedal: si slobodný (<i>hurr</i>), ako ťa pomenovala tvoja matka, na tomto svete aj na onom. Al-Hurr bojoval, kým nepadol.</p>
+        <p>Druhovia padali jeden za druhým: Muslim ibn Ausadža, Habíb ibn Mazáhir, Zuhajr ibn al-Kajn. Na poludnie pripomenul Abú Sumáma as-Saídí imámovi Husajnovi (mier s ním) modlitbu a ten viedol tých, čo ešte stáli, v modlitbe strachu, pod dažďom šípov.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Poludnie</span><h4>Rodina</h4>
+        <p>Potom vystúpila rodina Proroka. Prvý z nich, kto padol, bol Alí al-Akbar, syn imáma Husajna (mier s ním); po ňom Kásim, syn Hasana, chlapec, ktorého tvár jeden svedok prirovnal ku kosáčiku mesiaca. Padol aj Abbás spolu so svojimi bratmi Abdulláhom, Usmánom a Džafarom.</p>
+        <p>Imám Husajn (mier s ním) sedel s malým synčekom Abdulláhom na kolenách. Muž z kmeňa Banú Asad vystrelil šíp a dieťa zabil; imám Husajn (mier s ním) zachytil jeho krv do dlane.</p></div>
+      <div class="kb-ch kb-red"><span class="kb-date">Popoludnie</span><h4>Pád</h4>
+        <p>Sám bojoval imám Husajn (mier s ním) ďalej a útočil na tých, čo ho obkľučovali, až ustupovali. Potom sa okolo neho zovreli pod velením Šimra. Zura ibn Šaríq ho zasiahol, Sinán ibn Anas ho prebodol kopijou a padol; odsekli mu hlavu. Umar ibn Sad prikázal desiatim jazdcom prejsť koňmi cez jeho telo a stany boli vydrancované. Jeho syn Alí (Zajn al-Ábidín) bol ušetrený, pretože bol chorý. Sedemdesiatdva mužov zomrelo spolu s imámom Husajnom (mier s ním).</p></div>
+      <div class="kb-ch"><span class="kb-date">Po Karbale</span><h4>Zajnab a cesta Arbaín</h4>
+        <p>Hlavy, ženy a deti odviedli do Kúfy. Keď správca jasal, Zajnab, sestra imáma Husajna (mier s ním), mu pevným hlasom odpovedala: Boh ich poctil skrze svojho Proroka, a hanbou je pokrytý zločinec, nie oni. V Damasku, na Jazídovom dvore, zahriakla Sýrčana, ktorý si nárokoval jednu z dcér imáma Husajna (mier s ním), a povedala mu, že to neprislúcha ani jemu, ani Jazídovi. Neskôr Jazíd poslal rodinu späť do Mediny.</p>
+        <p>Za Jazída nebola ušetrená ani Kaaba. V roku 683 jeho vojsko pod velením al-Husajna ibn Numajra obliehalo Mekku; Kaabu zasiahli katapulty a vzbĺkla. Vojsko sa stiahlo až na správu o Jazídovej smrti.</p>
+        <p>Imám Husajn (mier s ním) bol pochovaný tam, kde padol. Odvtedy jeho hrob priťahuje pútnikov, mesto Karbala vyrástlo okolo neho a dnes sem každý rok prichádzajú pešo milióny ľudí na <b>Arbaín</b>.</p></div>
+    </div>
+
+    <h3>Video: al-Kaabí a umenie náreku</h3>
+    <div class="kb-card">
+      <p><b>Šejk Abdul Zahra al-Kaabí</b> bol kazateľ z Karbaly, narodený okolo roku 1909. V deň Ášúry v roku 1959 predniesol Maqtal pri svätyni imáma Husajna (mier s ním) a jeho prednes vysielalo Rádio Bagdad v celom Iraku a Zálive. Odvtedy je jeho hlas zvukom ášúrskeho rána v irackých domovoch: desaťročia po jeho smrti sa nikomu nepodarilo jeho štýl napodobniť.</p>
+      <p><b>Naí</b> (nárek) je staré iracké umenie rozprávať príbeh imáma Husajna (mier s ním): prednášané rozprávanie na smutnú melódiu, bez hudobných nástrojov, ktoré spája klasickú arabskú prózu s ľudovými žalospevmi. Jeho cieľom nie je zabávať, ale dať poslucháčovi pocit, že je prítomný v Karbale. Arabčine rozumieť nemusíte: hlas nesie príbeh a slovenský preklad urobí zvyšok.</p>
+      <p>Video prináša celý Maqtal hlasom al-Kaabího so slovenským prekladom.</p>
+    </div>
+
+    <h3>Pramene</h3>
+    <ul class="kb-sources">
+      <li><i>Dejiny prorokov a kráľov</i> — at-Tabarí (zom. 923), podľa podania Abú Michnafa</li>
+      <li><i>Ansáb al-ašráf</i> — al-Balázurí (zom. 892)</li>
+      <li><i>At-Tabakát al-kubrá</i> — Ibn Sad (zom. 845)</li>
+      <li><i>Al-Kámil fí at-taríkh</i> — Ibn al-Asír (zom. 1233)</li>
+      <li><i>Al-Bidája va an-nihája</i> — Ibn Kasír (zom. 1373)</li>
+    </ul>
+
+    <div class="kb-cta"><p>Stojte tam, kde stál imám Husajn (mier s ním). Prejdite sa medzi dvoma svätyňami.</p><a href="#itinerary">Navštívte s nami Karbalu</a></div>
+  </div></div></div>
+  <div class="kb-video" style="margin-top:22px" data-hl="sk"><div class="kb-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="kb-vmeta"><span>Hlas: šejk Abdul Zahra al-Kaabí</span><span>So slovenským prekladom</span></div></div>
+</div>
+
+
+</div>
+</section>
+
+<script>
+function kbInit(){
+  var s=document.getElementById('karbala-story'); if(!s) return;
+  var L=(document.documentElement.lang||'ar').slice(0,2).toLowerCase();
+  // Slovak page: Slovak-translated Maqtal video
+  if(['sk'].indexOf(L)<0){ s.style.display='none'; return; }
+  s.style.display='';
+  var VID='FCv9rkKcC0c', THUMB='https://i.ytimg.com/vi/'+VID+'/hqdefault.jpg';
+  s.querySelectorAll('.kb-lang').forEach(function(b){
+    b.classList.toggle('kb-on', b.getAttribute('data-lang')===L);
+  });
+  s.querySelectorAll('.kb-video').forEach(function(v){
+    if(v.dataset.ready) return; v.dataset.ready=1;
+    v.style.backgroundImage='url('+THUMB+')';
+    v.addEventListener('click',function(){
+      if(v.querySelector('iframe')) return;
+      var hl=v.getAttribute('data-hl');
+      var cc = '';
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0&hl='+hl+cc;
+      f.title='Maqtal imáma Husajna – Abdul Zahra al-Kaabí, so slovenským prekladom';
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen=true;
+      v.appendChild(f);
+    });
+  });
+  s.querySelectorAll('.kb-btn').forEach(function(btn){
+    if(btn.dataset.ready) return; btn.dataset.ready=1;
+    var more=btn.nextElementSibling, label=btn.firstChild.nodeValue;
+    var closeTxt={ar:'إخفاء ',en:'Show less ',ru:'Свернуть ',de:'Weniger anzeigen ',fr:'Réduire ',es:'Mostrar menos ',it:'Mostra meno ',sk:'Zobraziť menej '};
+    btn.addEventListener('click',function(){
+      var open=more.classList.toggle('kb-open');
+      btn.setAttribute('aria-expanded',open);
+      var lang=btn.closest('.kb-lang').getAttribute('data-lang');
+      btn.firstChild.nodeValue = open ? closeTxt[lang] : label;
+    });
+  });
+}
+document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',kbInit) : kbInit();
+</script>
+<!-- ================= END: KARBALA SECTION ================= -->
+
   <section class="block in" style="padding-top:0" id="usa-canada" aria-labelledby="usa-canada-h">
     <div class="us-ar">
       <span class="eyebrow">🇺🇸 🇨🇦 Pre Slovákov v USA a Kanade</span>
