@@ -755,6 +755,25 @@
     f.appendChild(I); f.appendChild(sb); f.addEventListener("submit", function (e) { e.preventDefault(); send(); });
     P.appendChild(h); P.appendChild(M); P.appendChild(f);
     document.body.appendChild(L); document.body.appendChild(tip); document.body.appendChild(P);
+    /* floating Viber button (same number as WhatsApp), stacked just above the WhatsApp button; chat button moves above it */
+    var wa = document.querySelector(".wa-float,.wa-fab");
+    if (wa && !document.querySelector(".vb-float")) {
+      var vst = el("style"); vst.textContent = ".vb-float{position:fixed;z-index:30;border-radius:50%;background:#7360F2;display:grid;place-items:center;box-shadow:0 8px 22px rgba(115,96,242,.4);transition:transform .2s}.vb-float:hover{transform:scale(1.08)}.vb-float svg{width:56%;height:56%;fill:#fff}";
+      document.head.appendChild(vst);
+      var vb = el("a", "vb-float", '<svg viewBox="0 0 24 24"><path d="M11.4 0C9.5 0 5.3.2 3 2.3 1.3 4 .7 6.5.6 9.6c-.1 3.1-.2 8.9 5.4 10.5v2.4s0 1 .6 1.2c.8.2 1.2-.5 2-1.4l1.4-1.6c3.9.3 6.9-.4 7.2-.5.8-.3 5.2-.8 5.9-6.7.8-6.1-.4-9.9-2.4-11.6C20 1.4 17.2 0 11.4 0zm.1 1.8c4.9 0 7.4 1.2 8 1.7 1.6 1.4 2.5 4.7 1.8 9.9-.6 4.9-4.2 5.2-4.9 5.4-.3.1-2.9.7-6.2.5 0 0-2.4 2.9-3.2 3.7-.1.1-.3.2-.4.1-.1 0-.2-.2-.2-.4v-4C1.7 17.4 1.9 12.5 2 9.7c.1-2.7.6-4.9 2-6.3C6 1.6 9.8 1.8 11.5 1.8zm.4 2.8c-.2 0-.2.3 0 .3 1.8 0 3.3.6 4.6 1.8 1.3 1.3 1.9 3 2 5.1 0 .2.3.2.3 0-.1-2.2-.8-4-2.2-5.4-1.3-1.3-3-2-4.7-1.8zm-3.8.8c-.3 0-.6 0-.9.3-.6.6-1.3 1.2-1.2 2 .1.8 1.6 3.7 3.9 5.8 1.2 1.1 3.7 2.8 4.8 3 1 .2 1.6-.6 2.2-1.2.4-.4.4-.9.1-1.2l-1.8-1.3c-.4-.3-.9-.3-1.2.1l-.5.6c-.3.4-.8.3-.8.3-3.1-.8-3.9-3.9-3.9-3.9s0-.5.3-.8l.6-.5c.4-.3.4-.8.1-1.2L8.6 5.7c-.1-.2-.3-.3-.5-.3zm4.1.9c-.2 0-.2.3 0 .3 1.3.1 2.3.5 3 1.3.8.8 1.1 1.9 1.1 3.2 0 .2.3.2.3 0 0-1.4-.4-2.6-1.3-3.4-.8-.9-1.9-1.3-3.1-1.4zm.3 1.5c-.2 0-.2.3 0 .3.7 0 1.2.2 1.6.6.4.4.6.9.6 1.6 0 .2.3.2.3 0 0-.8-.3-1.4-.7-1.8-.5-.5-1-.7-1.8-.7z"/></svg>');
+      vb.href = "viber://chat?number=%2B9647711745353"; vb.setAttribute("aria-label", "Viber"); vb.rel = "noopener";
+      document.body.appendChild(vb);
+      var placeVb = function () {
+        var r = wa.getBoundingClientRect(); if (!r.width) return;
+        var gap = 12, s = Math.round(r.width), b = Math.round(window.innerHeight - r.top + gap);
+        vb.style.width = vb.style.height = s + "px"; vb.style.bottom = b + "px";
+        if (r.left + r.width / 2 < window.innerWidth / 2) { vb.style.left = Math.round(r.left) + "px"; vb.style.right = "auto"; }
+        else { vb.style.right = Math.round(window.innerWidth - r.right) + "px"; vb.style.left = "auto"; }
+        var lr = L.getBoundingClientRect(), same = Math.abs((lr.left + lr.width / 2) - (r.left + r.width / 2)) < r.width;
+        if (same) { L.style.bottom = (b + s + gap) + "px"; tip.style.bottom = (b + s + gap + 10) + "px"; }
+      };
+      placeVb(); window.addEventListener("resize", placeVb); window.addEventListener("load", placeVb);
+    }
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !P.hidden) close(); });
     /* small "Have a question?" hint, once per visit */
     var shown = false; try { shown = sessionStorage.getItem("ftb-tip") === "1"; } catch (e) {}
