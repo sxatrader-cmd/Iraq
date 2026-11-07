@@ -195,7 +195,8 @@
         "ro",
         "pl",
         "tr",
-        "fa"
+        "fa",
+        "ckb"
       ],
       "source_article": "_blog/en/posts/ishtar-gate-babylon-guide.html"
     },
@@ -387,8 +388,16 @@
       "city": "Marshes",
       "category_en": "Nature",
       "tour": "7",
-      "date": null,
-      "langs_done": []
+      "date": "2026-11-07",
+      "langs_done": [
+        "en",
+        "ar",
+        "ru",
+        "de",
+        "fr",
+        "it",
+        "ckb"
+      ]
     },
     {
       "topic": "uruk-warka-the-first-city",
