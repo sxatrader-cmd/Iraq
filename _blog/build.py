@@ -440,3 +440,4 @@ if __name__ == "__main__":
     import blog_kb; blog_kb.run()
     # US/Canada 24/7 line in the footer + JSON-LD contactPoint (no-op when already there)
     import add_us_phone; add_us_phone.run()
+    import add_dt_default_pax; add_dt_default_pax.run()  # day-trip calculator defaults to 3 travellers (day-trip pages only)

@@ -166,6 +166,7 @@ def run():
         solo_page(l, base, old_home)
         print("ziyara:", l)
     sitemap()
+    import add_dt_default_pax; add_dt_default_pax.run()  # day-trip calculator defaults to 3 travellers (day-trip pages only)
 
 
 if __name__ == "__main__":

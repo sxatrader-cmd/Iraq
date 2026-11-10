@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Adds the 'Day trips from Baghdad' section (collapsed until clicked) to every language
 homepage, plus a third card in 'Choose your programme'. Idempotent (re-run to update).
-Prices are calculated in the browser from the formulas in PRICES below."""
+Prices are calculated in the browser from the formulas in PRICES below.
+This script only writes language homepages (default travellers stays 1).
+Day-trip pages (*/day-trips/*) default to 3 via add_dt_default_pax.py."""
 import re, json, pathlib, html
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
