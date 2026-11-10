@@ -2,13 +2,14 @@
 """Adds the day trip 'Baghdad's Holy Shrines' (key ziyara, slug baghdad-holy-shrines) to the
 day-trips section of every page in all 24 languages, and builds its own page
 /<lang>/day-trips/baghdad-holy-shrines/ (Arabic: /day-trips/baghdad-holy-shrines/) + sitemap entries.
-Price: 1 person $50, 2 people $75, +$25 per extra person.  Idempotent."""
+Price: 1 person $50, 2 people $75, +$25 per extra person. Visible card total defaults to 3 travellers ($100); JSON-LD Offer stays $50.  Idempotent."""
 import re, json, html, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 D = json.loads((pathlib.Path(__file__).parent / "ziyara_i18n.json").read_text())
 KEY, SLUG, OLD = "ziyara", "baghdad-holy-shrines", "baghdad-old-town"
 PRICE_JS = "ziyara:function(n){return 50+25*(n-1)},"
+DISPLAY_PRICE = 100  # 3 travellers; JSON-LD Offer stays $50
 IMGS = ["kadhimiya-shrine-night.webp", "junayd-baghdadi-shrine.webp", "junayd-baghdadi-front.webp",
         "bahlul-shrine-dome.webp", "bahlul-shrine-tomb.webp"]
 SITE = "https://iraq.fabletour.com"
@@ -38,6 +39,7 @@ def build_card(tpl, l, solo=False, more_lbl=None):
     a = re.sub(r'<h[13][^>]*>.*?</h[13]>', f'<h3>{esc(t["n"])}</h3>', a, 1, flags=re.S)
     a = re.sub(r'<p class="dt-s">.*?</p>', f'<p class="dt-s">{esc(t["s"])}</p>', a, 1, flags=re.S)
     a = re.sub(r'(<ul class="dt-inc"[^>]*>).*?(</ul>)', lambda m: m.group(1) + "".join(f"<li>{esc(x)}</li>" for x in t["inc"]) + m.group(2), a, 1, flags=re.S)
+    a = re.sub(r'(<div class="dt-total">.*?<b dir="ltr">)[^<]*', lambda m: m.group(1) + f"${DISPLAY_PRICE}", a, 1, flags=re.S)
     a = re.sub(r'<div class="dt-more" id="more-oldtown"[^>]*>.*?</div>',
                f'<div class="dt-more" id="more-{KEY}" hidden>' + "".join(f"<p>{esc(p)}</p>" for p in t["p"]) + "</div>", a, 1, flags=re.S)
     a = a.replace('aria-controls="more-oldtown"', f'aria-controls="more-{KEY}"')
@@ -166,7 +168,7 @@ def run():
         solo_page(l, base, old_home)
         print("ziyara:", l)
     sitemap()
-    import add_dt_default_pax; add_dt_default_pax.run()  # day-trip calculator defaults to 3 travellers (day-trip pages only)
+    import add_dt_default_pax; add_dt_default_pax.run()  # .dt day-trip cards default to 3 travellers, site-wide
 
 
 if __name__ == "__main__":

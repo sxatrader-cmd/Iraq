@@ -176,3 +176,4 @@ if __name__ == "__main__":
     for l, d in L.items():
         apply(l, d)
     import add_us_phone; add_us_phone.run()  # US/Canada 24/7 line on every page (footer + JSON-LD)
+    import add_dt_default_pax; add_dt_default_pax.run()  # .dt day-trip cards default to 3 travellers, site-wide

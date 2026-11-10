@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Default the day-trip price calculator to 3 travellers on day-trip pages only.
+"""Default every .dt day-trip card calculator to 3 travellers, site-wide.
 
-Applies to */day-trips/* pages and standalone SEO day-trip pages
-(e.g. en/babylon-day-trip-from-baghdad/). Does not change language homepages,
-market/landing pages, airport-transfer calculators, or the 7-/9-day package prices.
+Applies to language homepages, airport pages, market/landing pages, and
+*/day-trips/* pages (plus standalone SEO day-trip pages). Does not change
+airport-transfer calculators or the 7-/9-day package prices.
 
 Sets: JS init n=3, the <output> stepper, the visible group total, and (via the
 existing upd() on load) the WhatsApp prefill. JSON-LD Offer prices are left as
@@ -15,6 +15,7 @@ import re, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 DEFAULT = 3
+SKIP_PARTS = {".git", "_blog", "node_modules"}
 JS_INIT = re.compile(r'(var k=c\.dataset\.trip,n=)\d+(,out=c\.querySelector\("output"\))')
 OUTPUT = re.compile(
     r'(<div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>)\d+(</output><button type="button" data-d="1" aria-label="\+">\+</button></div>)'
@@ -46,23 +47,14 @@ def price(k, n):
     raise KeyError(k)
 
 
-def is_daytrip_page(p):
+def is_html(p):
     parts = p.relative_to(ROOT).parts
-    if ".git" in parts or p.suffix != ".html":
-        return False
-    if "day-trips" in parts:
-        return True
-    # standalone keyword landing pages that use the same day-trip calculator
-    return any(part.endswith("-day-trip-from-baghdad") or part.endswith("-day-trip") for part in parts)
+    return p.suffix == ".html" and not (SKIP_PARTS & set(parts))
 
 
 def targets():
-    seen = set()
-    for pat in ("day-trips/*/index.html", "*/day-trips/*/index.html", "*/*day-trip*/index.html"):
-        for p in ROOT.glob(pat):
-            if p.resolve() in seen or not is_daytrip_page(p):
-                continue
-            seen.add(p.resolve())
+    for p in ROOT.rglob("*.html"):
+        if is_html(p):
             yield p
 
 
@@ -88,12 +80,14 @@ def run():
     unknown = []
     for p in targets():
         s = p.read_text()
+        if 'class="dt"' not in s and "dataset.trip" not in s:
+            continue
         s2, n_js, n_out, n_tot, unk = patch(s)
         unknown.extend((str(p.relative_to(ROOT)), k) for k in unk)
         if s2 != s:
             p.write_text(s2)
             n += 1
-    print(f"add_dt_default_pax: {n} day-trip pages updated (default {DEFAULT})")
+    print(f"add_dt_default_pax: {n} pages updated (default {DEFAULT}, site-wide .dt cards)")
     if unknown:
         print(" unknown trip keys:", unknown)
     return n

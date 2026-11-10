@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Adds the 'Day trips from Baghdad' section (collapsed until clicked) to every language
 homepage, plus a third card in 'Choose your programme'. Idempotent (re-run to update).
-Prices are calculated in the browser from the formulas in PRICES below.
-This script only writes language homepages (default travellers stays 1).
-Day-trip pages (*/day-trips/*) default to 3 via add_dt_default_pax.py."""
+Prices are calculated in the browser from the formulas in JS_PRICES below.
+The calculator defaults to 3 travellers (static <output> and group total match the
+3-person price so there is no flash of 1). add_dt_default_pax.py keeps this default
+on every .dt card site-wide through rebuilds. 7-/9-day package prices stay at 1."""
 import re, json, pathlib, html
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -21,7 +22,27 @@ JS_PRICES = """{
  madain:function(n){return 100+25*(n-1)},
  aqarquf:function(n){return 50+25*(n-1)}
 }"""
-FROM = {"babylon": 200, "babylon4": 220, "holy": 239, "south": 300, "samarra": 150, "madain": 100, "aqarquf": 50}
+DEFAULT_PAX = 3
+
+def price(k, n):
+    if k == "babylon":
+        return 200 if n < 2 else 240 + 50 * (n - 2)
+    if k == "babylon4":
+        return 220 if n < 2 else 260 + 40 * (n - 2)
+    if k == "holy":
+        return 239 + 30 * max(0, n - 3)
+    if k == "south":
+        return [300, 325, 350][n - 1] if 1 <= n <= 3 else 350 + 40 * (n - 3)
+    if k == "samarra":
+        return [150, 200, 225][n - 1] if 1 <= n <= 3 else 225 + 25 * (n - 3)
+    if k == "madain":
+        return 100 + 25 * (n - 1)
+    if k == "aqarquf":
+        return 50 + 25 * (n - 1)
+    raise KeyError(k)
+
+# visible group total for the default traveller count (formulas unchanged; JS still prices any n)
+FROM = {k: price(k, DEFAULT_PAX) for k in ("babylon", "babylon4", "holy", "south", "samarra", "madain", "aqarquf")}
 IMG_Q = {}
 PX = lambda i: f"https://images.pexels.com/photos/{i}/pexels-photo-{i}.jpeg?auto=compress&cs=tinysrgb&w=900"
 # free-licence photos (Pexels licence / Saif's own photo) — no credit shown
@@ -98,7 +119,7 @@ def section(l):
     <p class="dt-s">{esc(stops)}</p>
     {f'<ul class="dt-inc" aria-label="{esc(u["inc"])}">{incs}</ul>' if incs else ''}
     <div class="dt-calc">
-      <div class="dt-pp"><label>{esc(u["trav"])}</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>1</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-pp"><label>{esc(u["trav"])}</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>{DEFAULT_PAX}</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
       <div class="dt-total"><span>{esc(u["total"])}</span><b dir="ltr">${FROM[k]}</b></div>
       <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">{esc(u["book"])}</a>
     </div>
@@ -137,7 +158,7 @@ tg.addEventListener("click",function(){setOpen(body.hidden);});
 document.querySelectorAll("[data-open-dt]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();setOpen(true);document.getElementById("day-trips").scrollIntoView({behavior:"smooth",block:"start"});});});
 if(location.hash==="#day-trips")setOpen(true);
 function fmt(v){return "$"+v.toLocaleString("en-US");}
-document.querySelectorAll(".dt").forEach(function(c){var k=c.dataset.trip,n=1,out=c.querySelector("output"),tot=c.querySelector(".dt-total b"),bk=c.querySelector(".dt-book");
+document.querySelectorAll(".dt").forEach(function(c){var k=c.dataset.trip,n=3,out=c.querySelector("output"),tot=c.querySelector(".dt-total b"),bk=c.querySelector(".dt-book");
  function upd(){out.textContent=n;var p=fmt(P[k](n));tot.textContent=p;bk.href="https://wa.me/9647711745353?text="+encodeURIComponent(U.wa.replace("{trip}",T[k]).replace("{n}",n).replace("{price}",p));}
  c.querySelectorAll(".dt-step button").forEach(function(b){b.addEventListener("click",function(){n=Math.min(MAX,Math.max(1,n+(+b.dataset.d)));upd();});});upd();});
 function loadImgs(){}

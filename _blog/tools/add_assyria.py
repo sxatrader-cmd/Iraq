@@ -9,7 +9,8 @@ import re, json, html, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 D = json.loads((pathlib.Path(__file__).parent / "assyria_i18n.json").read_text())
 KEY, SLUG, TPL = "assyria", "assyria-hatra-nimrud", "samarra"
-PRICE = 500
+PRICE = 500  # 1-person / JSON-LD Offer starting price
+DISPLAY_PRICE = 750  # 3 travellers ($250 each); do not use for JSON-LD
 PRICE_JS = f"{KEY}:function(n){{return n<2?500:n<3?600:250*n}},"
 IMGS = ["assyria-hatra-temple.webp", "assyria-hatra-iwan.webp", "assyria-hatra-gate.webp",
         "assyria-ashur-brick.webp", "assyria-mosul-nuri.webp", "assyria-nimrud-inscription.webp",
@@ -51,7 +52,7 @@ def build_card(tpl, l, solo=False, more_lbl=None):
     a = re.sub(r'<div class="dt-more" id="more-samarra"[^>]*>.*?</div>',
                f'<div class="dt-more" id="more-{KEY}" hidden>' + "".join(f"<p>{esc(p)}</p>" for p in t["p"]) + "</div>", a, 1, flags=re.S)
     a = a.replace('aria-controls="more-samarra"', f'aria-controls="more-{KEY}"')
-    a = re.sub(r'(<div class="dt-total">.*?<b dir="ltr">)[^<]*', lambda m: m.group(1) + f"${PRICE}", a, 1, flags=re.S)
+    a = re.sub(r'(<div class="dt-total">.*?<b dir="ltr">)[^<]*', lambda m: m.group(1) + f"${DISPLAY_PRICE}", a, 1, flags=re.S)
     if solo:
         a = a.replace(f'<article class="dt" data-trip="{KEY}">', f'<article class="dt is-solo" data-trip="{KEY}">', 1)
         a = a.replace(f'<h3>{esc(t["n"])}</h3>', f'<h1 class="dt-h">{esc(t["n"])}</h1>', 1)
@@ -187,7 +188,7 @@ def run():
     for l in D:
         solo_page(l)
     sitemap()
-    import add_dt_default_pax; add_dt_default_pax.run()  # day-trip calculator defaults to 3 travellers (day-trip pages only)
+    import add_dt_default_pax; add_dt_default_pax.run()  # .dt day-trip cards default to 3 travellers, site-wide
 
 
 if __name__ == "__main__":
