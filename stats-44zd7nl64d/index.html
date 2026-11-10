@@ -28,6 +28,18 @@ h2{font-size:16px;margin:0 0 8px;color:var(--navy)}
 .q{border-bottom:1px solid var(--line);padding:7px 0;font-size:14px}.q:last-child{border:0}
 .q small{color:var(--muted);display:block}
 .msg{color:var(--muted);padding:20px 0;text-align:center}
+.tabs{display:flex;gap:6px;margin-bottom:12px}.tabs button{background:#fff;color:var(--navy);border:1px solid var(--line)}.tabs button.on{background:var(--navy);color:#fff}
+main.wide{max-width:1100px}
+.fl{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 10px}.fl button{background:#fff;color:var(--ink);border:1px solid var(--line);padding:6px 10px;font-size:13px}.fl button.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.vc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;cursor:pointer;font-size:13.5px}
+.vc .top{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.vc .ip{font-family:ui-monospace,Menlo,monospace;direction:ltr;font-weight:600;color:var(--navy)}
+.vc .meta{color:var(--muted);margin-top:4px;display:flex;gap:4px 14px;flex-wrap:wrap}
+.lb{border-radius:20px;padding:1px 9px;font-size:12px;font-weight:600;color:#fff}.lb.h{background:#2E7D4F}.lb.b{background:#B03A2E}.lb.s{background:#C98A1B}
+.why{color:#8a5a00;font-size:12px;margin-top:4px}
+.cv{background:#E7F3EC;color:#1d5e38;border-radius:6px;padding:0 6px;font-size:12px}
+.jr{margin-top:8px;border-top:1px dashed var(--line);padding-top:6px;cursor:default}
+.jr .st{display:flex;gap:8px;padding:3px 0;font-size:13px}.jr .st time{color:var(--muted);flex:0 0 120px;direction:ltr;text-align:right}
+.jr .st .pg{flex:1;word-break:break-all}.jr .sep{color:var(--gold);font-size:12px;margin:6px 0 2px}
 </style>
 </head>
 <body>
@@ -35,10 +47,12 @@ h2{font-size:16px;margin:0 0 8px;color:var(--navy)}
 <main>
 <div class="bar">
   <input id="pin" type="password" inputmode="numeric" placeholder="الرمز السري" autocomplete="current-password">
-  <select id="days"><option value="1">اليوم</option><option value="7">آخر 7 أيام</option><option value="30" selected>آخر 30 يوم</option><option value="365">آخر سنة</option></select>
+  <select id="days"><option value="1">اليوم</option><option value="7">آخر 7 أيام</option><option value="30" selected>آخر 30 يوم</option><option value="90">آخر 90 يوم</option><option value="365">آخر سنة</option></select>
   <button id="go">عرض</button>
 </div>
+<div class="tabs"><button id="tS" class="on">الملخص</button><button id="tV">كل زائر (إنسان / بوت)</button></div>
 <div id="out"><p class="msg">أدخل الرمز السري ثم اضغط عرض</p></div>
+<div id="vout" style="display:none"></div>
 </main>
 <script>
 (function(){
@@ -88,5 +102,6 @@ h2{font-size:16px;margin:0 0 8px;color:var(--navy)}
   if($("pin").value)load();
 })();
 </script>
+<script src="visitors.js"></script>
 </body>
 </html>

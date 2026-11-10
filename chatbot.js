@@ -13,6 +13,46 @@
   function rid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 10); }
   try { SID = sessionStorage.getItem("ftb_sid"); if (!SID) { SID = rid(); sessionStorage.setItem("ftb_sid", SID); } } catch (e) { SID = rid(); }
   try { VID = localStorage.getItem("ft_vid"); if (!VID) { VID = rid(); localStorage.setItem("ft_vid", VID); } NOLOG = localStorage.getItem("ft_owner") === "1"; } catch (e) { VID = SID; }
+  /* per-visitor analytics -> Supabase RPC track_hit (IP, country and user-agent are read server-side).
+     Records bots too (they are labelled on the private stats page). Owner's own device is skipped.
+     If the RPC is missing/unreachable it switches itself off for 6 h and never affects the page. */
+  (function () {
+    var OFF = "ft_trk_off", RPC = "https://zrbbnveaqockoptftqst.supabase.co/rest/v1/rpc/track_hit";
+    try { if (localStorage.getItem("ft_owner") === "1") return; var o = +localStorage.getItem(OFF) || 0; if (o && Date.now() - o < 216e5) return; } catch (e) {}
+    var PV = rid(), t0 = Date.now(), vis = 0, vs = document.visibilityState === "visible" ? t0 : 0, act = false, sc = 0, dead = false;
+    function send(o) {
+      if (dead) return;
+      o.visitor_id = VID; o.session_id = SID; o.pv_id = PV;
+      try {
+        fetch(RPC, { method: "POST", keepalive: true, headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json" }, body: JSON.stringify({ e: o }) })
+          .then(function (r) { if (r.status === 404 || r.status === 400) { dead = true; try { localStorage.setItem(OFF, String(Date.now())); } catch (e) {} } }).catch(function () {});
+      } catch (e) {}
+    }
+    var utm = null;
+    try { var q = new URLSearchParams(location.search); ["utm_source","utm_medium","utm_campaign","utm_term","utm_content","gclid","fbclid","ttclid","msclkid"].forEach(function (k) { var v = q.get(k); if (v) { utm = utm || {}; utm[k] = v.slice(0, 100); } }); } catch (e) {}
+    var tz = ""; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+    send({ kind: "view", page: location.pathname + (location.search ? location.search.slice(0, 120) : ""), title: (document.title || "").slice(0, 150),
+      referrer: document.referrer || "", utm: utm, tz: tz,
+      lang: ((navigator.languages && navigator.languages.join(",")) || navigator.language || "").slice(0, 80),
+      screen: (screen.width || 0) + "x" + (screen.height || 0) + "@" + (window.devicePixelRatio || 1),
+      webdriver: !!navigator.webdriver, touch: ("ontouchstart" in window) || (navigator.maxTouchPoints || 0) > 0 });
+    function mark() { act = true; }
+    ["mousemove","scroll","touchstart","keydown","pointerdown","wheel"].forEach(function (ev) { addEventListener(ev, mark, { passive: true, once: true }); });
+    addEventListener("scroll", function () { try { var h = document.documentElement, m = h.scrollHeight - innerHeight; if (m > 0) sc = Math.max(sc, Math.round(100 * scrollY / m)); } catch (e) {} }, { passive: true });
+    function leave() {
+      if (vs) { vis += Date.now() - vs; vs = 0; }
+      send({ kind: "leave", dwell_ms: vis, scroll_pct: Math.min(100, sc), interacted: act });
+    }
+    document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") leave(); else vs = Date.now(); });
+    addEventListener("pagehide", function () { if (vs) leave(); });
+    document.addEventListener("click", function (e) {
+      var a = e.target && e.target.closest ? e.target.closest("a[href]") : null; if (!a) return;
+      var h = a.getAttribute("href") || "", k = "";
+      if (/wa\.me|whatsapp/i.test(h)) k = "whatsapp"; else if (/^tel:/i.test(h)) k = "call"; else if (/t\.me\/|telegram/i.test(h)) k = "telegram";
+      else if (/^viber:|viber\./i.test(h)) k = "viber"; else if (/^mailto:/i.test(h)) k = "email";
+      if (k) send({ kind: "click", page: location.pathname, detail: (k + ":" + h).slice(0, 200) });
+    }, true);
+  })();
   if (navigator.webdriver || /bot|crawl|spider|slurp|headless|lighthouse|preview|facebookexternalhit|bingpreview|yandex/i.test(navigator.userAgent || "")) NOLOG = true;
   function logBot(ev, detail) {
     if (NOLOG) return;
