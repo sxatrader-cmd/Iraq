@@ -191,3 +191,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+    import add_dt_links; add_dt_links.run()  # keep homepage cards linked (crawlable <a href>) to their day-trip/airport pages
