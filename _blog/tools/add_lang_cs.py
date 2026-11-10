@@ -139,3 +139,4 @@ if __name__ == "__main__":
     run(sys.argv[1:] or list(NEW))
     import footer_sites            # footer links to the other destination sites
     footer_sites.run()
+    import add_us_phone; add_us_phone.run()  # US/Canada 24/7 line on every page (footer + JSON-LD)

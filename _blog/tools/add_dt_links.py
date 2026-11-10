@@ -110,6 +110,7 @@ def run():
         total += a
         print(f"{f.relative_to(ROOT)}: +{a} links" + (f"  MISSING TARGETS: {miss}" if miss else ""))
     print("total links added:", total)
+    import add_us_phone; add_us_phone.run()  # US/Canada 24/7 line on every page (footer + JSON-LD)
 
 if __name__ == "__main__":
     run()

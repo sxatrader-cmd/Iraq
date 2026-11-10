@@ -120,7 +120,14 @@ FONT_EXTRA = {"ar": "&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght
               "ur": "&family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Naskh+Arabic:wght@400;600"}
 
 ORG = {"@type": "TravelAgency", "@id": "https://fabletour.com/#org", "name": "Fable Tour", "url": "https://fabletour.com",
-       "logo": SITE + "/logo.png", "email": "support@fabletour.com", "telephone": "+9647711745353"}
+       "logo": SITE + "/logo.png", "email": "support@fabletour.com", "telephone": "+9647711745353",
+       "contactPoint": [{"@type": "ContactPoint", "telephone": "+1-212-433-8608", "contactType": "customer service",
+                         "areaServed": ["US", "CA"], "availableLanguage": ["en", "ar"],
+                         "hoursAvailable": {"@type": "OpeningHoursSpecification",
+                                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                                            "opens": "00:00", "closes": "23:59"}},
+                        {"@type": "ContactPoint", "name": "WhatsApp", "telephone": "+964-771-174-5353",
+                         "contactType": "customer service", "url": "https://wa.me/9647711745353"}]}
 
 def head(l, title, desc, canonical, alts, og_type, image, image_alt, extra_meta="", jsonld=None, keywords=""):
     t = T[l]
@@ -431,3 +438,5 @@ if __name__ == "__main__":
     import footer_sites; footer_sites.run()
     # chatbot knowledge base from every article (/blog-kb/<lang>.json)
     import blog_kb; blog_kb.run()
+    # US/Canada 24/7 line in the footer + JSON-LD contactPoint (no-op when already there)
+    import add_us_phone; add_us_phone.run()
