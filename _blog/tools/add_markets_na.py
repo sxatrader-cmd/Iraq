@@ -372,7 +372,7 @@ FR_PANEL = """<section class="block in market-panel" id="for-canada" aria-labell
         <div class="hl"><div class="ph" style="background-image:url('/img/samarra-malwiya.webp')" role="img" aria-label="Samarra"></div><div class="bd"><h3>Samarra et Bagdad</h3><p>Le minaret en spirale de Samarra, la rue Mutanabbi et la Qishla à Bagdad.</p></div></div>
       </div>
     </div>
-{LINKS}    <div class="market-info" id="travel-advice" style="margin-top:16px"><p><strong>Conseils aux voyageurs du gouvernement du Canada.</strong> Lisez les conseils officiels les plus récents sur <a href="https://voyage.gc.ca/destinations/irak" target="_blank" rel="noopener">voyage.gc.ca — Irak</a> avant de décider, et vérifiez que votre assurance voyage couvre la destination. Nous organisons des programmes privés avec des guides locaux et ne poussons personne à voyager contre l'avis de son gouvernement.</p></div>
+{LINKS}    <div class="market-info" id="travel-advice" style="margin-top:16px"><p><strong>Conseils aux voyageurs du gouvernement du Canada.</strong> Lisez les conseils officiels les plus récents sur <a href="https://voyage.gc.ca/destinations/iraq" target="_blank" rel="noopener">voyage.gc.ca — Irak</a> avant de décider, et vérifiez que votre assurance voyage couvre la destination. Nous organisons des programmes privés avec des guides locaux et ne poussons personne à voyager contre l'avis de son gouvernement.</p></div>
   </section>"""
 
 LOCAL = {

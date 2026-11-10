@@ -23,7 +23,7 @@ B = ROOT / "_blog"
 SITE = "https://iraq.fabletour.com"
 WA = "https://wa.me/9647711745353"
 LANGS = ["ar", "en", "tr", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "fa", "ms", "id", "th", "hi", "ur", "ta", "fi", "sv", "da", "no", "sk", "hr", "ro", "nl", "ka", "ko", "pt", "ckb", "vi"]
-HREFLANG = {"zh": "zh-Hans"}
+HREFLANG = {"zh": "zh-Hans", "zh-tw": "zh-Hant"}
 OGLOC = {"ar": "ar_AR", "en": "en_US", "ru": "ru_RU", "de": "de_DE", "fr": "fr_FR", "es": "es_ES", "it": "it_IT",
          "el": "el_GR", "cs": "cs_CZ", "pl": "pl_PL", "zh": "zh_CN", "ja": "ja_JP", "tr": "tr_TR", "fa": "fa_IR",
          "ms": "ms_MY", "id": "id_ID", "th": "th_TH", "hi": "hi_IN", "ur": "ur_PK", "ta": "ta_IN",
@@ -37,6 +37,17 @@ CSS = (B / "style.css").read_text() + (B / "gyg.css").read_text()
 
 def esc(s): return html.escape(str(s), quote=True)
 def hl(l): return HREFLANG.get(l, l)
+def with_zhtw(alts):
+    """adds the Traditional Chinese page (zh-Hant, /zh-tw/...) right after zh-Hans when it exists,
+    so every page in a set lists it (hreflang must be reciprocal)"""
+    out = []
+    for a, u in alts:
+        out.append((a, u))
+        if a == "zh":
+            u2 = u.replace(SITE + "/zh/", SITE + "/zh-tw/", 1)
+            if (ROOT / u2[len(SITE):].strip("/") / "index.html").exists():
+                out.append(("zh-tw", u2))
+    return out
 def home(l): return "/" if l == "ar" else f"/{l}/"
 def blog_path(l): return "/blog/" if l == "ar" else f"/{l}/blog/"
 def blog_url(l): return SITE + blog_path(l)
@@ -115,7 +126,7 @@ def head(l, title, desc, canonical, alts, og_type, image, image_alt, extra_meta=
     t = T[l]
     ld = '<script type="application/ld+json">' + json.dumps(jsonld, ensure_ascii=False) + "</script>" if jsonld else ""
     kw = f'<meta name="keywords" content="{esc(keywords)}">\n' if keywords else ""
-    alt_links = "".join(f'<link rel="alternate" hreflang="{hl(a)}" href="{u}">\n' for a, u in alts)
+    alt_links = "".join(f'<link rel="alternate" hreflang="{hl(a)}" href="{u}">\n' for a, u in with_zhtw(alts))
     if alts:
         xd = dict(alts).get("en") or dict(alts).get(l)
         alt_links += f'<link rel="alternate" hreflang="x-default" href="{xd}">\n'
@@ -370,13 +381,13 @@ def build_sitemap(ALL):
     s = re.sub(r"\s*<!-- blog(-it)?:start -->.*?<!-- blog(-it)?:end -->", "", s, flags=re.S)
     today = datetime.date.today().isoformat()
     e = "\n  <!-- blog:start -->"
-    idx_alts = "".join(f'<xhtml:link rel="alternate" hreflang="{hl(x)}" href="{blog_url(x)}"/>' for x in LANGS)
+    idx_alts = "".join(f'<xhtml:link rel="alternate" hreflang="{hl(x)}" href="{u}"/>' for x, u in with_zhtw([(x, blog_url(x)) for x in LANGS]))
     for l in LANGS:
         posts = ALL.get(l, [])
         last = max([p.get("updated", p["date"]) for p in posts] or [today])
         e += f"\n  <url><loc>{blog_url(l)}</loc><lastmod>{last}</lastmod><changefreq>daily</changefreq><priority>0.7</priority>{idx_alts}</url>"
         for p in posts:
-            alts = "".join(f'<xhtml:link rel="alternate" hreflang="{hl(a)}" href="{u}"/>' for a, u in article_alts(p, ALL))
+            alts = "".join(f'<xhtml:link rel="alternate" hreflang="{hl(a)}" href="{u}"/>' for a, u in with_zhtw(article_alts(p, ALL)))
             img = f"<image:image><image:loc>{esc(img_url(p['image']))}</image:loc></image:image>" if p.get("image") else ""
             e += f"\n  <url><loc>{blog_url(l)}{p['slug']}/</loc><lastmod>{p.get('updated', p['date'])}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>{alts}{img}</url>"
     e += "\n  <!-- blog:end -->"
