@@ -26,7 +26,7 @@ def process(path):
     if not m:
         return 0, []
     sl = json.loads(m.group(2))
-    # HOME from the file location (the dtx HOME on some pages, e.g. ckb, points at "/")
+    # HOME from the file location (language folder)
     rel = path.relative_to(ROOT).parent.as_posix()
     home = "/" if rel in ("", ".") else f"/{rel}/"
     added, missing = 0, []
@@ -65,7 +65,23 @@ def process(path):
     path.write_text(s, encoding="utf-8")
     return added, missing
 
+def fix_home(path):
+    """the copy-link script (<script id="dtx">) must use the page's own language home,
+    e.g. /ckb/ pages were built from the Arabic root and kept HOME="/" (copied Arabic URLs)"""
+    parts = path.relative_to(ROOT).parts
+    lang = parts[0] if parts[0] in LANGS else ""
+    home = f"/{lang}/" if lang else "/"
+    s = path.read_text(encoding="utf-8")
+    t = re.sub(r'(<script id="dtx">.*?HOME=")[^"]*(",SL=)', lambda m: m.group(1) + home + m.group(2), s, count=1, flags=re.S)
+    if t != s:
+        path.write_text(t, encoding="utf-8")
+        print(f"{path.relative_to(ROOT)}: HOME -> {home}")
+
 def run():
+    for l in LANGS:
+        for f in [ROOT / l / "index.html", ROOT / l / "airport-transfer" / "index.html"] + sorted((ROOT / l / "day-trips").glob("*/index.html")):
+            if f.exists():
+                fix_home(f)
     files = [ROOT / "index.html"] + [ROOT / l / "index.html" for l in LANGS]
     total = 0
     for f in files:
