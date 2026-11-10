@@ -7,6 +7,7 @@ link to their own product pages with real <a href> tags (crawlable internal link
 - Airport card: adds <a class="ap-pg" href="<HOME>airport-transfer/">title</a> next to "Copy link".
 Copy-link buttons and the look of the cards are unchanged (links inherit the heading colour).
 Only product pages (day-trips, airport-transfer) are linked; never market/landing pages.
+Also keeps day-trip pages at one H1 (fix_solo_h1) and the copy-link HOME per language (fix_home).
 Idempotent. Run after add_lang.py / add_airport.py / add_ziyara.py / add_assyria.py whenever
 homepages are rebuilt:   python3 _blog/tools/add_dt_links.py"""
 import re, json, html, pathlib, sys
@@ -77,7 +78,25 @@ def fix_home(path):
         path.write_text(t, encoding="utf-8")
         print(f"{path.relative_to(ROOT)}: HOME -> {home}")
 
+HERO_CSS_OLD = ".hero-band h1{font-size:clamp(30px,5.2vw,44px);line-height:1.25;margin:10px 0 12px;color:#fff}"
+HERO_CSS_NEW = (".hero-band h1,.hero-band .hero-h1{font-size:clamp(30px,5.2vw,44px);line-height:1.25;margin:10px 0 12px;color:#fff}"
+                ".hero-band .hero-h1{text-wrap:balance}")
+
+def fix_solo_h1(path):
+    """day-trip pages: the generic hero title ("Iraq: a journey through Mesopotamia") is a <div class="hero-h1">
+    with the same look, so the trip name (<h1 class="dt-h">) is the page's only H1"""
+    s = path.read_text(encoding="utf-8")
+    if '<h1 class="dt-h">' not in s:
+        return
+    t = re.sub(r'<h1 class="disp" data-i="h1">(.*?)</h1>', r'<div class="disp hero-h1" data-i="h1">\1</div>', s, count=1, flags=re.S)
+    if HERO_CSS_NEW not in t:
+        t = t.replace(HERO_CSS_OLD, HERO_CSS_NEW, 1)
+    if t != s:
+        path.write_text(t, encoding="utf-8")
+
 def run():
+    for f in sorted(ROOT.glob("day-trips/*/index.html")) + sorted(ROOT.glob("*/day-trips/*/index.html")):
+        fix_solo_h1(f)
     for l in LANGS:
         for f in [ROOT / l / "index.html", ROOT / l / "airport-transfer" / "index.html"] + sorted((ROOT / l / "day-trips").glob("*/index.html")):
             if f.exists():
