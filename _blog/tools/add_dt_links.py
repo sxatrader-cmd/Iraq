@@ -110,6 +110,7 @@ def run():
         total += a
         print(f"{f.relative_to(ROOT)}: +{a} links" + (f"  MISSING TARGETS: {miss}" if miss else ""))
     print("total links added:", total)
+    import add_program_pages; add_program_pages.link_homes()  # 7-/9-day program titles link to /tours/iraq-N-day-tour/
     import add_us_phone; add_us_phone.run()  # US/Canada 24/7 line on every page (footer + JSON-LD)
     import add_dt_default_pax; add_dt_default_pax.run()  # .dt day-trip cards default to 3 travellers, site-wide
 
