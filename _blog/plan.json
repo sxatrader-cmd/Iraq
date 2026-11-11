@@ -396,7 +396,9 @@
         "de",
         "fr",
         "it",
-        "ckb"
+        "ckb",
+        "ja",
+        "sv"
       ]
     },
     {
@@ -405,8 +407,12 @@
       "city": "Uruk",
       "category_en": "Archaeological sites",
       "tour": "7",
-      "date": null,
-      "langs_done": []
+      "date": "2026-11-11",
+      "langs_done": [
+        "en",
+        "de",
+        "ar"
+      ]
     },
     {
       "topic": "old-mosul-and-the-al-nuri-mosque",
