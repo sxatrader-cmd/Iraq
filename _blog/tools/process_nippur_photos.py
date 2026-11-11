@@ -24,6 +24,7 @@ WIDE_CANDIDATES = [
 TALL_CANDIDATES = [
     ATTACH / "04eacbf3335494a37e97ceead887f91adc7b08e14b9ddeea940e1ed6714e85c1.jpg",
     ATTACH / "42fe8d416bdda6792630fe0cfbff8cd3892e2e735f49c54f26828313201c1a92.jpg",
+    TMP / "saif_nippur2.jpg",
     TMP / "saif_nippur_2.jpg",
 ]
 

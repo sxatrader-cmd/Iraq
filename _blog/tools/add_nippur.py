@@ -15,7 +15,7 @@ TPL_SLUG = "aqar-quf"
 PRICE = 150          # 1-person / JSON-LD starting price
 DISPLAY_PRICE = 200  # default 3 travellers
 PRICE_JS = f"{KEY}:function(n){{return 150+25*(n-1)}},"
-IMGS = ["nippur-ziggurat.webp"]  # add nippur-ruins.webp here when the second photo is processed
+IMGS = ["nippur-ziggurat.webp", "nippur-ruins.webp"]
 SITE = "https://iraq.fabletour.com"
 LANGMAP = {"zh-Hans": "zh", "zh-Hant-TW": "zh-tw"}
 # Leave de/ja market landing pages alone if we ever need a tighter skip;
