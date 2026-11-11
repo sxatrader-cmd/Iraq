@@ -1,47 +1,55 @@
 {
   "rule": "Only places and stories connected to the cities/sites of the 7-day and 9-day tour programmes.",
-  "frequency": "Per language: daily until that language has 20 articles in _blog/<lang>/posts.json, then weekly (one article every Monday, Baghdad time, ~4 per month). See DAILY.md section 0.",
-  "groups": {
-    "A": [
-      "en",
-      "ar",
-      "ru",
-      "de",
-      "fr",
-      "it",
-      "ckb"
-    ],
-    "B": [
-      "es",
-      "el",
-      "cs",
-      "pl",
-      "tr",
-      "fa",
-      "pt"
-    ],
-    "C": [
-      "zh",
-      "ja",
-      "ms",
-      "id",
-      "th",
+  "frequency": "7-weekday rotation (Asia/Baghdad weekday): each run writes ONE article for every blog in that day's `schedule` row and nothing else. Every blog = 1 article/week, English = 2 (Tue + Wed) = 35/week. Topic per blog: oldest dated queue item it lacks, else the next date:null item. See DAILY.md sections 0-1. ('ar' = root /blog/.)",
+  "schedule": {
+    "Sunday": [
+      "ckb",
       "hi",
       "ur",
-      "ta",
-      "ko",
-      "vi"
+      "id",
+      "cs"
     ],
-    "D": [
-      "fi",
-      "sv",
-      "da",
-      "no",
+    "Monday": [
+      "ms",
+      "th",
+      "vi",
+      "ta",
+      "el"
+    ],
+    "Tuesday": [
+      "ro",
       "sk",
       "hr",
-      "ro",
+      "ka",
+      "en"
+    ],
+    "Wednesday": [
+      "ar",
+      "en",
+      "de",
+      "ja",
+      "sv"
+    ],
+    "Thursday": [
+      "fr",
+      "es",
+      "ru",
+      "ko",
+      "fi"
+    ],
+    "Friday": [
+      "it",
+      "pt",
+      "tr",
+      "zh",
+      "da"
+    ],
+    "Saturday": [
       "nl",
-      "ka"
+      "pl",
+      "fa",
+      "zh-tw",
+      "no"
     ]
   },
   "queue": [
@@ -82,7 +90,8 @@
         "ro",
         "nl",
         "ka",
-        "ckb"
+        "ckb",
+        "zh-tw"
       ],
       "source_article": "_blog/it/posts/babilonia-iraq-guida-visita.html"
     },
@@ -120,7 +129,8 @@
         "ro",
         "nl",
         "ka",
-        "ckb"
+        "ckb",
+        "zh-tw"
       ],
       "source_article": "_blog/en/posts/imam-ali-shrine-najaf-guide.html"
     },

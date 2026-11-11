@@ -22,31 +22,46 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 B = ROOT / "_blog"
 SITE = "https://iraq.fabletour.com"
 WA = "https://wa.me/9647711745353"
+# LANGS: blogs in the hreflang order used everywhere. zh-tw (Traditional Chinese) is built too (BUILD_LANGS)
+# but is not part of LANGS: with_zhtw() always inserts it right after zh-Hans, so every hreflang set keeps the same order.
 LANGS = ["ar", "en", "tr", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "fa", "ms", "id", "th", "hi", "ur", "ta", "fi", "sv", "da", "no", "sk", "hr", "ro", "nl", "ka", "ko", "pt", "ckb", "vi"]
+BUILD_LANGS = LANGS + ["zh-tw"]
+HTML_LANG = {"zh-tw": "zh-Hant-TW"}  # <html lang>, as on the zh-tw homepage
 HREFLANG = {"zh": "zh-Hans", "zh-tw": "zh-Hant"}
 OGLOC = {"ar": "ar_AR", "en": "en_US", "ru": "ru_RU", "de": "de_DE", "fr": "fr_FR", "es": "es_ES", "it": "it_IT",
          "el": "el_GR", "cs": "cs_CZ", "pl": "pl_PL", "zh": "zh_CN", "ja": "ja_JP", "tr": "tr_TR", "fa": "fa_IR",
          "ms": "ms_MY", "id": "id_ID", "th": "th_TH", "hi": "hi_IN", "ur": "ur_PK", "ta": "ta_IN",
-         "fi": "fi_FI", "sv": "sv_SE", "da": "da_DK", "no": "nb_NO", "sk": "sk_SK", "hr": "hr_HR", "ro": "ro_RO", "nl": "nl_NL", "ka": "ka_GE", "ko": "ko_KR", "pt": "pt_PT", "ckb": "ckb_IQ", "vi": "vi_VN"}
+         "fi": "fi_FI", "sv": "sv_SE", "da": "da_DK", "no": "nb_NO", "sk": "sk_SK", "hr": "hr_HR", "ro": "ro_RO", "nl": "nl_NL", "ka": "ka_GE", "ko": "ko_KR", "pt": "pt_PT", "ckb": "ckb_IQ", "vi": "vi_VN", "zh-tw": "zh_TW"}
 RTL = {"ar", "fa", "ur", "ckb"}
-BLOGWORD = {"ar": "المدونة", "fa": "وبلاگ", "ru": "Блог", "zh": "博客", "ja": "ブログ", "th": "บล็อก", "hi": "ब्लॉग", "ur": "بلاگ", "ta": "வலைப்பதிவு", "fi": "Blogi", "sv": "Blogg", "no": "Blogg", "ka": "ბლოგი", "ko": "블로그", "ckb": "بلۆگ"}
+BLOGWORD = {"zh-tw": "部落格", "ar": "المدونة", "fa": "وبلاگ", "ru": "Блог", "zh": "博客", "ja": "ブログ", "th": "บล็อก", "hi": "ब्लॉग", "ur": "بلاگ", "ta": "வலைப்பதிவு", "fi": "Blogi", "sv": "Blogg", "no": "Blogg", "ka": "ბლოგი", "ko": "블로그", "ckb": "بلۆگ"}
 AUTHOR = {"ar": "سيف التميمي", "fa": "سیف التمیمی", "ur": "سیف التمیمی", "hi": "सैफ़ अल-तमीमी", "ta": "சைஃப் அல்-தமீமி", "ka": "საიფ ალ-თამიმი", "ko": "사이프 알타미미", "ckb": "سەیف ئەلتەمیمی"}
 AUTHOR_EN = "Saif Al-Tamimi"
 T = json.loads((B / "i18n.json").read_text())
 CSS = (B / "style.css").read_text() + (B / "gyg.css").read_text()
+# zh-tw pages use <html lang="zh-Hant-TW">: give them the same CJK typography rules as zh-Hans
+CSS_TW = CSS.replace('html[lang="zh-Hans"]', 'html[lang="zh-Hans"],html[lang="zh-Hant"],html[lang="zh-Hant-TW"]')
 
 def esc(s): return html.escape(str(s), quote=True)
 def hl(l): return HREFLANG.get(l, l)
-def with_zhtw(alts):
+TW_BY_TOPIC = {}  # topic -> zh-tw article url, filled in main() from _blog/zh-tw/posts.json
+
+def with_zhtw(alts, topic=None):
     """adds the Traditional Chinese page (zh-Hant, /zh-tw/...) right after zh-Hans when it exists,
-    so every page in a set lists it (hreflang must be reciprocal)"""
+    so every page in a set lists it (hreflang must be reciprocal). For articles the zh-tw page is found
+    by topic (its slug may differ from zh); otherwise by the same path under /zh-tw/."""
+    tw = TW_BY_TOPIC.get(topic) if topic else None
     out = []
     for a, u in alts:
         out.append((a, u))
         if a == "zh":
+            if tw:
+                out.append(("zh-tw", tw))
+                continue
             u2 = u.replace(SITE + "/zh/", SITE + "/zh-tw/", 1)
             if (ROOT / u2[len(SITE):].strip("/") / "index.html").exists():
                 out.append(("zh-tw", u2))
+    if tw and ("zh-tw", tw) not in out:
+        out.append(("zh-tw", tw))
     return out
 def home(l): return "/" if l == "ar" else f"/{l}/"
 def blog_path(l): return "/blog/" if l == "ar" else f"/{l}/blog/"
@@ -68,7 +83,7 @@ def slugify(s):
 
 def words(l, t):
     t = re.sub(r"<[^>]+>", " ", t)
-    if l in ("zh", "ja"): return len(re.sub(r"\s", "", t)) // 2      # ~2 chars per "word"
+    if l in ("zh", "zh-tw", "ja"): return len(re.sub(r"\s", "", t)) // 2      # ~2 chars per "word"
     if l == "th": return len(re.sub(r"\s", "", t)) // 5
     return len(t.split())
 
@@ -111,7 +126,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel
 FONT_EXTRA = {"ar": "&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600",
               "ckb": "&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600",
               "fa": "&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600",
-              "zh": "&family=Noto+Serif+SC:wght@600", "ja": "&family=Noto+Serif+JP:wght@600",
+              "zh": "&family=Noto+Serif+SC:wght@600", "zh-tw": "&family=Noto+Serif+SC:wght@600", "ja": "&family=Noto+Serif+JP:wght@600",
               "hi": "&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@600",
               "ta": "&family=Noto+Sans+Tamil:wght@400;500;600&family=Noto+Serif+Tamil:wght@600",
               "ka": "&family=Noto+Sans+Georgian:wght@400;500;600&family=Noto+Serif+Georgian:wght@600",
@@ -129,18 +144,18 @@ ORG = {"@type": "TravelAgency", "@id": "https://fabletour.com/#org", "name": "Fa
                         {"@type": "ContactPoint", "name": "WhatsApp", "telephone": "+964-771-174-5353",
                          "contactType": "customer service", "url": "https://wa.me/9647711745353"}]}
 
-def head(l, title, desc, canonical, alts, og_type, image, image_alt, extra_meta="", jsonld=None, keywords=""):
+def head(l, title, desc, canonical, alts, og_type, image, image_alt, extra_meta="", jsonld=None, keywords="", topic=None):
     t = T[l]
     ld = '<script type="application/ld+json">' + json.dumps(jsonld, ensure_ascii=False) + "</script>" if jsonld else ""
     kw = f'<meta name="keywords" content="{esc(keywords)}">\n' if keywords else ""
-    alt_links = "".join(f'<link rel="alternate" hreflang="{hl(a)}" href="{u}">\n' for a, u in with_zhtw(alts))
+    alt_links = "".join(f'<link rel="alternate" hreflang="{hl(a)}" href="{u}">\n' for a, u in with_zhtw(alts, topic))
     if alts:
         xd = dict(alts).get("en") or dict(alts).get(l)
         alt_links += f'<link rel="alternate" hreflang="x-default" href="{xd}">\n'
     ogalt = "".join(f'<meta property="og:locale:alternate" content="{OGLOC[a]}">\n' for a, _ in alts if a != l)
     d = "rtl" if l in RTL else "ltr"
     return f"""<!DOCTYPE html>
-<html lang="{hl(l)}" dir="{d}">
+<html lang="{HTML_LANG.get(l, hl(l))}" dir="{d}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -168,7 +183,7 @@ def head(l, title, desc, canonical, alts, og_type, image, image_alt, extra_meta=
 <meta name="twitter:image" content="{esc(image)}">
 {FONTS.format(extra=FONT_EXTRA.get(l, ""))}
 {ld}
-<style>{CSS}</style>
+<style>{CSS_TW if l == "zh-tw" else CSS}</style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="ftmark" viewBox="0 0 48 48"><image href="/logo.png" width="48" height="48"/></symbol></svg>
@@ -258,7 +273,7 @@ def build_article(l, p, posts, ALL, TOURS):
     for kw in [k.strip() for k in re.split(r"[,،、，]", p.get("keywords", "")) if k.strip()][:6]:
         extra += f'<meta property="article:tag" content="{esc(kw)}">\n'
     h = head(l, p["title"], p["description"], url, alts, "article", image, alt, extra,
-             {"@context": "https://schema.org", "@graph": graph}, p.get("keywords", ""))
+             {"@context": "https://schema.org", "@graph": graph}, p.get("keywords", ""), p.get("topic"))
     hero_img = ""
     if p.get("image"):
         hero_img = (f'<img class="hero-img" src="{esc(src(p["image"]))}" alt="{esc(alt)}" width="1600" height="800" fetchpriority="high" decoding="async">'
@@ -389,12 +404,12 @@ def build_sitemap(ALL):
     today = datetime.date.today().isoformat()
     e = "\n  <!-- blog:start -->"
     idx_alts = "".join(f'<xhtml:link rel="alternate" hreflang="{hl(x)}" href="{u}"/>' for x, u in with_zhtw([(x, blog_url(x)) for x in LANGS]))
-    for l in LANGS:
+    for l in BUILD_LANGS:
         posts = ALL.get(l, [])
         last = max([p.get("updated", p["date"]) for p in posts] or [today])
         e += f"\n  <url><loc>{blog_url(l)}</loc><lastmod>{last}</lastmod><changefreq>daily</changefreq><priority>0.7</priority>{idx_alts}</url>"
         for p in posts:
-            alts = "".join(f'<xhtml:link rel="alternate" hreflang="{hl(a)}" href="{u}"/>' for a, u in with_zhtw(article_alts(p, ALL)))
+            alts = "".join(f'<xhtml:link rel="alternate" hreflang="{hl(a)}" href="{u}"/>' for a, u in with_zhtw(article_alts(p, ALL), p.get("topic")))
             img = f"<image:image><image:loc>{esc(img_url(p['image']))}</image:loc></image:image>" if p.get("image") else ""
             e += f"\n  <url><loc>{blog_url(l)}{p['slug']}/</loc><lastmod>{p.get('updated', p['date'])}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>{alts}{img}</url>"
     e += "\n  <!-- blog:end -->"
@@ -417,19 +432,20 @@ def load(l):
         p["_min"] = max(1, math.ceil(p["_words"] / 220))
         if len(p["title"]) > 70: print(f"WARN {l}/{p['slug']}: title {len(p['title'])} chars (keep ≤ 65)")
         dl = len(p["description"])
-        if not ((60 if l in ('zh', 'ja', 'th') else 110) <= dl <= 165): print(f"WARN {l}/{p['slug']}: description {dl} chars")
+        if not ((60 if l in ('zh', 'zh-tw', 'ja', 'th') else 110) <= dl <= 165): print(f"WARN {l}/{p['slug']}: description {dl} chars")
     return posts
 
 def main():
-    ALL = {l: load(l) for l in LANGS}
-    for l in LANGS:
+    ALL = {l: load(l) for l in BUILD_LANGS}
+    TW_BY_TOPIC.update({p["topic"]: blog_url("zh-tw") + p["slug"] + "/" for p in ALL["zh-tw"] if p.get("topic")})
+    for l in BUILD_LANGS:
         TOURS = tours(l)
         for p in ALL[l]:
             build_article(l, p, ALL[l], ALL, TOURS)
         build_index(l, ALL[l])
         build_feed(l, ALL[l])
     build_sitemap(ALL)
-    print("Built:", ", ".join(f"{l}={len(ALL[l])}" for l in LANGS))
+    print("Built:", ", ".join(f"{l}={len(ALL[l])}" for l in BUILD_LANGS))
 
 if __name__ == "__main__":
     main()
