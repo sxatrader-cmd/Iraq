@@ -103,6 +103,9 @@
     return out;
   }
 
+  /* Same criterion as the green "✓ تفاعل وبقي …" reason line */
+  function isEngaged(v) { return !!(v.interacted && v.dwell_ms > 10000 && !v.webdriver); }
+
   var LBL = { h: "إنسان", b: "بوت", s: "مشكوك" };
   function render() {
     var list = (grp === "ip" ? byIp(data) : data.map(function (v) { var c = JSON.parse(JSON.stringify(v)); c._vids = [v.visitor_id]; return c; })).map(score);
@@ -113,9 +116,10 @@
       '<div class="k"><b style="color:#C98A1B">' + n.s + '</b><span>مشكوك · ' + pv.s + ' صفحة</span></div>' +
       '<div class="k"><b style="color:#B03A2E">' + n.b + '</b><span>بوت · ' + pv.b + ' صفحة</span></div>' +
       '<div class="k"><b>' + conv + '</b><span>تواصلوا (واتساب / اتصال / سؤال)</span></div></div>';
-    h += '<div class="fl">' + [["all", "الكل (" + list.length + ")"], ["h", "إنسان"], ["s", "مشكوك"], ["b", "بوت"], ["c", "تواصلوا فقط"]].map(function (x) { return '<button data-f="' + x[0] + '"' + (filt === x[0] ? ' class="on"' : "") + ">" + x[1] + "</button>"; }).join("") +
+    var eng = list.filter(isEngaged).length;
+    h += '<div class="fl">' + [["all", "الكل (" + list.length + ")"], ["h", "إنسان"], ["s", "مشكوك"], ["b", "بوت"], ["c", "تواصلوا فقط"], ["i", "تفاعلوا (" + eng + ")"]].map(function (x) { return '<button data-f="' + x[0] + '"' + (filt === x[0] ? ' class="on"' : "") + ">" + x[1] + "</button>"; }).join("") +
       '<span style="flex:1"></span>' + [["v", "حسب الجهاز"], ["ip", "حسب الـ IP"]].map(function (x) { return '<button data-g="' + x[0] + '"' + (grp === x[0] ? ' class="on"' : "") + ">" + x[1] + "</button>"; }).join("") + "</div>";
-    var shown = list.filter(function (v) { return filt === "all" || filt === v._l || (filt === "c" && (v.wa + v.calls + v.bot_q + v.bot_wa + v.bot_call) > 0); });
+    var shown = list.filter(function (v) { return filt === "all" || filt === v._l || (filt === "c" && (v.wa + v.calls + v.bot_q + v.bot_wa + v.bot_call) > 0) || (filt === "i" && isEngaged(v)); });
     if (!shown.length) h += '<p class="msg">لا يوجد زوار بهذا التصنيف</p>';
     h += shown.slice(0, 600).map(function (v, ix) {
       var i = v.ipinfo || {}, place = flag(v.country) + " " + cname(v.country) + (i.city ? " · " + esc(i.city) : "");
