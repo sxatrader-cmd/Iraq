@@ -300,6 +300,8 @@ def build(l, k):
     # language menu goes to the same program page
     s = re.sub(r'location\.href="/"\+\(v==="ar"\?"":v\+"/"\)\+location\.hash;',
                f'location.href="/"+(v==="ar"?"":v+"/")+"tours/{P["slug"]}/";', s)
+    # the homepage script would overwrite <title> with the homepage title
+    s = s.replace("document.title=t.title;", "")
     # css
     if "/* program page */" not in s:
         i = s.find("</style>"); s = s[:i] + CSS + s[i:]

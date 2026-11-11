@@ -873,7 +873,7 @@ function renderStatic(){
   const t=T[lang];
   document.documentElement.lang=lang;
   document.documentElement.dir = lang==="ar"?"rtl":"ltr";
-  document.title=t.title;
+  
   document.querySelectorAll("[data-i]").forEach(el=>{ const k=el.dataset.i; if(t[k]!==undefined) el.textContent=t[k]; });
   $("#langSel").value="zh-tw";
   // route
