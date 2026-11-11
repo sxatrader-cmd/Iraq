@@ -44,6 +44,8 @@ def price(k, n):
         return 100 + 25 * (n - 1)
     if k == "aqarquf":
         return 50 + 25 * (n - 1)
+    if k == "nippur":
+        return 150 + 25 * (n - 1)
     raise KeyError(k)
 
 

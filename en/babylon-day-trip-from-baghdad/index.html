@@ -1084,6 +1084,21 @@ html[dir="rtl"] .ap-form select{background-position:18px 20px,13px 20px}
       <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">Book on WhatsApp</a>
     </div>
   </div>
+</article><article class="dt" data-trip="nippur">
+  <div class="dt-ph" style="background-image:url('/img/nippur-ziggurat.webp')" data-full="/img/nippur-ziggurat.webp" tabindex="0" role="button" aria-label="Nippur"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
+  <div class="dt-bd">
+    <h3>Nippur</h3>
+    <p class="dt-s">Nippur ziggurat · Enlil&#x27;s Ekur temple</p><p class="dt-pitch">The religious heart of ancient Sumer, where Enlil&#x27;s temple Ekur and its ziggurat stood at the centre of the Sumerian world. About three hours south of Baghdad, near Afak in Al-Qadisiyah. A private day trip to one of Iraq&#x27;s most important archaeological sites.</p>
+    <ul class="dt-inc" aria-label="Included"><li>Entrance tickets</li><li>Private car with driver/guide</li></ul>
+    
+    
+    <!--dtx--><div class="dt-more" id="more-nippur" hidden><p>Nippur was the religious centre of ancient Sumer — not a political capital, but the sacred city of the god Enlil, chief of the Sumerian pantheon. His temple, the Ekur (&quot;House Mountain&quot;), and its ziggurat made Nippur a place of pilgrimage for kings and priests for more than two thousand years.</p><p>Today the ruins of the ziggurat and the temple precinct still rise above the plain near Afak, in Al-Qadisiyah Governorate, close to Diwaniyah. We walk the site with you, explain how the Ekur was the spiritual centre of Mesopotamia, and give you time among the remains.</p><p>This is a private full-day trip from Baghdad. We pick you up from your hotel, drive about three hours south, visit the site, and return you to Baghdad the same day. The price includes entrance tickets and a private car with a driver/guide who speaks Arabic, English and Russian. One price for your whole group.</p></div><div class="dt-acts"><button type="button" class="dt-rm" aria-expanded="false" aria-controls="more-nippur">Read more</button><button type="button" class="dt-cp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg><span>Copy trip link</span></button></div><!--/dtx-->
+    <div class="dt-calc">
+      <div class="dt-pp"><label>Travellers</label><div class="dt-step"><button type="button" data-d="-1" aria-label="−">−</button><output>3</output><button type="button" data-d="1" aria-label="+">+</button></div></div>
+      <div class="dt-total"><span>Total for your group</span><b dir="ltr">$200</b></div>
+      <a class="dt-book" href="https://wa.me/9647711745353" target="_blank" rel="noopener">Book on WhatsApp</a>
+    </div>
+  </div>
 </article><article class="dt" data-trip="holy">
   <div class="dt-ph" style="background-image:url('/img/kufa-great-mosque.webp')" data-full="/img/kufa-great-mosque.webp" tabindex="0" role="button" aria-label="Kufa, Najaf &amp; Karbala"><span class="dt-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/></svg></span></div>
   <div class="dt-bd">
@@ -1657,8 +1672,9 @@ var P={
  samarra:function(n){return [150,200,225][n-1]||225+25*(n-3)},
  assyria:function(n){return n<2?500:n<3?600:250*n},
  madain:function(n){return 100+25*(n-1)},
- aqarquf:function(n){return 50+25*(n-1)}
-},U={"wa": "Hello! I'd like to book the day trip “{trip}” for {n} people ({price})."},T={"assyria": "Assyria: Ashur, Hatra, Mosul & Nimrud (2 days)", "ziyara": "Baghdad's Holy Shrines", "oldtown": "Baghdad Old Town", "aqarquf": "Aqar Quf Ziggurat", "madain": "Al-Mada'in (Ctesiphon)", "samarra": "Samarra", "babylon": "Babylon", "babylon4": "Babylon, Borsippa, Prophet Job & Dhul-Kifl", "holy": "Kufa, Najaf & Karbala", "south": "Ziggurat of Ur & the Marshes"},MAX=12,loaded=false;
+ aqarquf:function(n){return 50+25*(n-1)},
+ nippur:function(n){return 150+25*(n-1)}
+},U={"wa": "Hello! I'd like to book the day trip “{trip}” for {n} people ({price})."},T={"nippur": "Nippur", "assyria": "Assyria: Ashur, Hatra, Mosul & Nimrud (2 days)", "ziyara": "Baghdad's Holy Shrines", "oldtown": "Baghdad Old Town", "aqarquf": "Aqar Quf Ziggurat", "madain": "Al-Mada'in (Ctesiphon)", "samarra": "Samarra", "babylon": "Babylon", "babylon4": "Babylon, Borsippa, Prophet Job & Dhul-Kifl", "holy": "Kufa, Najaf & Karbala", "south": "Ziggurat of Ur & the Marshes"},MAX=12,loaded=false;
 var tg=document.querySelector(".dt-toggle"),body=document.getElementById("dt-body");if(!body)return;
 function setOpen(o){body.hidden=false;loadImgs();}
 
@@ -1688,7 +1704,7 @@ document.querySelectorAll(".dt-ph[data-full]").forEach(function(ph){function ope
  ph.addEventListener("click",open);ph.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});});
 })();</script>
 <script id="dtx">(function(){
-var L=["Read more", "Show less", "Copy trip link", "Link copied ✓", "See all day trips"],HOME="/en/",SL={"assyria": "assyria-hatra-nimrud", "ziyara": "baghdad-holy-shrines", "oldtown": "baghdad-old-town", "aqarquf": "aqar-quf", "madain": "al-madain-ctesiphon", "samarra": "samarra", "babylon": "babylon", "babylon4": "babylon-borsippa-kifl", "holy": "kufa-najaf-karbala", "south": "ur-marshes"},FIX=document.body.getAttribute("data-trip"),sec=document.getElementById("day-trips");if(!sec)return;
+var L=["Read more", "Show less", "Copy trip link", "Link copied ✓", "See all day trips"],HOME="/en/",SL={"nippur": "nippur", "assyria": "assyria-hatra-nimrud", "ziyara": "baghdad-holy-shrines", "oldtown": "baghdad-old-town", "aqarquf": "aqar-quf", "madain": "al-madain-ctesiphon", "samarra": "samarra", "babylon": "babylon", "babylon4": "babylon-borsippa-kifl", "holy": "kufa-najaf-karbala", "south": "ur-marshes"},FIX=document.body.getAttribute("data-trip"),sec=document.getElementById("day-trips");if(!sec)return;
 var tg=sec.querySelector(".dt-toggle"),bd=document.getElementById("dt-body"),all=sec.querySelector(".dt-all");
 function setMore(c,o){var m=c.querySelector(".dt-more"),b=c.querySelector(".dt-rm");if(!m)return;m.hidden=!o;b.setAttribute("aria-expanded",o);b.textContent=o?L[1]:L[0];}
 function fb(u){var t=document.createElement("textarea");t.value=u;t.setAttribute("readonly","");t.style.cssText="position:fixed;top:0;opacity:0";document.body.appendChild(t);t.select();t.setSelectionRange(0,u.length);try{document.execCommand("copy");}catch(e){}t.remove();}
