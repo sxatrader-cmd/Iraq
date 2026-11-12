@@ -11,6 +11,26 @@ import re, json, html, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 
 L = {
+"hu": {
+ "title": "Iraki utazás 7 és 9 napra – Babilon, Ur, mocsárvidék | Fable Tour",
+ "desc": "Iraki körutazás helyi idegenvezetővel: Babilon, Ur, Kerbela, Nedzsef, a mocsárvidék és Hatra. 7 nap Bagdadból vagy 9 nap Bászrától Erbilig, fizetés euróban.",
+ "kw": "iraki utazás, utazás Irakba, Irak körutazás, Irak utazási iroda, Irak látnivalók, Babilon látogatás, Mezopotámia utazás, Irak idegenvezetővel, Bagdad, Ur, Fable Tour",
+ "h1": "Iraki utazás: körút az ősi Mezopotámiában",
+ "eye": "Magyarországról Irakba",
+ "h2": "Iraki utazás Magyarországról: gyakorlati tudnivalók",
+ "body": [
+  ("Hogyan juthat el Magyarországról Irakba", "Budapestről nincs közvetlen járat Bagdadba; a legkényelmesebb egy átszállással utazni, leggyakrabban Isztambulon, Dubajon, Dohán vagy Ammánon keresztül. A 7 napos körút a bagdadi nemzetközi repülőtéren kezdődik és ér véget, a 9 napos Bászrában kezdődik és Erbilben zárul. A repülőtéren fogadjuk, és minden transzfert mi intézünk."),
+  ("Időeltolódás, pénznem és fizetés", "Irak egész évben UTC+3 időzónában van, így télen két órával, nyáron egy órával jár előrébb, mint Magyarország. A helyi pénznem az iraki dinár, de a körút árát nálunk érkezéskor euróban is kifizetheti – az árfolyamot ezen az oldalon naponta frissítjük. Előleget nem kérünk."),
+  ("Mikor érdemes menni és mit vigyen", "Az iraki körutazás legjobb időszaka októbertől áprilisig tart, amikor a napok naposak és kellemesen melegek. Nyáron a hőmérséklet gyakran 45 °C fölé emelkedik. Vigyen kényelmes cipőt, fejfedőt és vállat, térdet takaró ruhát; a nőknek a szentélyek látogatásához abáját adunk kölcsön."),
+  ("Miért utazzon helyi idegenvezetővel", "Saif, a bagdadi idegenvezető kísér, aki minden helyszínt ismer – a babiloni Istár-kaputól az uri zikkuratig. Első budapesti csoportunkat is ő kísérte végig Irakon. A körutak privátak az ön csoportja számára, vagy csatlakozhat egy kis csoporthoz, 4★–5★ szállodákkal és privát, légkondicionált közlekedéssel."),
+ ],
+ "links": '<p>Olvassa el ezeket is: <a href="/hu/day-trips/babylon/">Kirándulás Babilonba Bagdadból</a> · <a href="/hu/day-trips/ur-marshes/">Az uri zikkurat és a mocsárvidék</a> · <a href="/hu/tours/iraq-7-day-tour/">7 napos iraki körút</a></p>',
+ "faq": [
+  ("Hogyan jutok el Magyarországról Irakba?", "Közvetlen járat nincs. Budapestről leggyakrabban Isztambulon, Dubajon, Dohán vagy Ammánon át lehet repülni Bagdadba, Bászrába vagy Erbilbe. A repülőtéren fogadjuk."),
+  ("Mekkora az időeltolódás Magyarország és Irak között?", "Irak egész évben UTC+3 időzónában van: télen két órával, nyáron egy órával jár előrébb, mint Magyarország."),
+  ("Fizethetem a körutat euróban?", "Igen. Az árat amerikai dollárban adjuk meg, és érkezéskor a napi árfolyamon euróban is kifizetheti. Előleget nem kérünk."),
+ ],
+},
 "sk": {
  "title": "Zájazd do Iraku 7 a 9 dní – Babylon, Ur, mokrade | Fable Tour",
  "desc": "Zájazd do Iraku s miestnym sprievodcom: Babylon, Ur, Karbala, Nadžaf, mokrade a Hatra. 7 dní z Bagdadu alebo 9 dní z Basry do Erbilu, platba v eurách.",

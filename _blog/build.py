@@ -24,14 +24,14 @@ SITE = "https://iraq.fabletour.com"
 WA = "https://wa.me/9647711745353"
 # LANGS: blogs in the hreflang order used everywhere. zh-tw (Traditional Chinese) is built too (BUILD_LANGS)
 # but is not part of LANGS: with_zhtw() always inserts it right after zh-Hans, so every hreflang set keeps the same order.
-LANGS = ["ar", "en", "tr", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "fa", "ms", "id", "th", "hi", "ur", "ta", "fi", "sv", "da", "no", "sk", "hr", "ro", "nl", "ka", "ko", "pt", "ckb", "vi"]
+LANGS = ["ar", "en", "tr", "ru", "de", "fr", "es", "it", "el", "cs", "pl", "zh", "ja", "fa", "ms", "id", "th", "hi", "ur", "ta", "fi", "sv", "da", "no", "sk", "hr", "ro", "nl", "ka", "ko", "pt", "ckb", "vi", "hu"]
 BUILD_LANGS = LANGS + ["zh-tw"]
 HTML_LANG = {"zh-tw": "zh-Hant-TW"}  # <html lang>, as on the zh-tw homepage
 HREFLANG = {"zh": "zh-Hans", "zh-tw": "zh-Hant"}
 OGLOC = {"ar": "ar_AR", "en": "en_US", "ru": "ru_RU", "de": "de_DE", "fr": "fr_FR", "es": "es_ES", "it": "it_IT",
          "el": "el_GR", "cs": "cs_CZ", "pl": "pl_PL", "zh": "zh_CN", "ja": "ja_JP", "tr": "tr_TR", "fa": "fa_IR",
          "ms": "ms_MY", "id": "id_ID", "th": "th_TH", "hi": "hi_IN", "ur": "ur_PK", "ta": "ta_IN",
-         "fi": "fi_FI", "sv": "sv_SE", "da": "da_DK", "no": "nb_NO", "sk": "sk_SK", "hr": "hr_HR", "ro": "ro_RO", "nl": "nl_NL", "ka": "ka_GE", "ko": "ko_KR", "pt": "pt_PT", "ckb": "ckb_IQ", "vi": "vi_VN", "zh-tw": "zh_TW"}
+         "fi": "fi_FI", "sv": "sv_SE", "da": "da_DK", "no": "nb_NO", "sk": "sk_SK", "hr": "hr_HR", "ro": "ro_RO", "nl": "nl_NL", "ka": "ka_GE", "ko": "ko_KR", "pt": "pt_PT", "ckb": "ckb_IQ", "vi": "vi_VN", "hu": "hu_HU", "zh-tw": "zh_TW"}
 RTL = {"ar", "fa", "ur", "ckb"}
 BLOGWORD = {"zh-tw": "部落格", "ar": "المدونة", "fa": "وبلاگ", "ru": "Блог", "zh": "博客", "ja": "ブログ", "th": "บล็อก", "hi": "ब्लॉग", "ur": "بلاگ", "ta": "வலைப்பதிவு", "fi": "Blogi", "sv": "Blogg", "no": "Blogg", "ka": "ბლოგი", "ko": "블로그", "ckb": "بلۆگ"}
 AUTHOR = {"ar": "سيف التميمي", "fa": "سیف التمیمی", "ur": "سیف التمیمی", "hi": "सैफ़ अल-तमीमी", "ta": "சைஃப் அல்-தமீமி", "ka": "საიფ ალ-თამიმი", "ko": "사이프 알타미미", "ckb": "سەیف ئەلتەمیمی"}

@@ -1,15 +1,15 @@
 # Daily multilingual blog — instructions
 
-Site: https://iraq.fabletour.com — 34 blogs: 33 languages (incl. Central Kurdish / Sorani `ckb`) + Traditional Chinese (`zh-tw`).
+Site: https://iraq.fabletour.com — 35 blogs: 34 languages (incl. Central Kurdish / Sorani `ckb`) + Traditional Chinese (`zh-tw`).
 
 ## 0. Publishing schedule — 7-weekday rotation (Saif's rule, from 2026-11-11)
-ONE run per day (Baghdad date, Asia/Baghdad). Each run writes exactly ONE new article for every blog in that weekday's group, and nothing for any other blog. Every blog therefore gets one article per week (English only on Wednesday; Saif's update 2026-11-12) — 34 articles per week in total. The same table is in `_blog/plan.json` → `schedule`.
+ONE run per day (Baghdad date, Asia/Baghdad). Each run writes exactly ONE new article for every blog in that weekday's group, and nothing for any other blog. Every blog therefore gets one article per week (English only on Wednesday; Saif's update 2026-11-12) — 35 articles per week in total. The same table is in `_blog/plan.json` → `schedule`.
 
 | Day (Baghdad) | Blogs |
 |---|---|
 | Sunday | ckb, hi, ur, id, cs |
 | Monday | ms, th, vi, ta, el |
-| Tuesday | ro, sk, hr, ka |
+| Tuesday | ro, sk, hr, ka, hu |
 | Wednesday | ar (root `/blog/`), en, de, ja, sv |
 | Thursday | fr, es, ru, ko, fi |
 | Friday | it, pt, tr, zh, da |
@@ -35,7 +35,7 @@ If another language of this topic already exists (check `langs_done`; the files 
 ## 3. Write each article — native, not a word-for-word translation
 For each language L:
 - 1,000–1,500 words (CJK incl. Korean and zh-tw: 2,000–3,000 characters; Thai similar length) of natural, fluent text for travellers from that country. Adapt the hook to the reader (Italian/Romanian: Verdi's Nabucco for Babylon; German: the Ishtar Gate in Berlin's Pergamon Museum; Malay/Indonesian/Persian/Arabic/Turkish/Urdu/Hindi/Tamil readers: religious-heritage (ziyarat) visitors are common — Urdu: use customary honorifics (ؑ after the Imams, ؐ/ﷺ after the Prophet); Hindi/Tamil: plain respectful wording; Chinese/Japanese/Korean: practical tone, clear structure. Korean (ko): South Korea currently bans its citizens from travelling to Iraq (MOFA travel-ban list), so never address the reader as a traveller from Korea or suggest booking from Korea; write cultural/historical guides for Korean speakers).
-- Do local keyword thinking in L: the main keyword as people in that country search it (e.g. de "Babylon Irak besichtigen", fr "visiter Babylone", ru "Вавилон Ирак экскурсия", ja "バビロン遺跡 行き方", ko "바빌론 유적 이라크 여행", fi "Babylon Irak nähtävyydet", sv "besöka Babylon Irak", da "besøge Babylon Irak", no "besøke Babylon Irak", sk "Babylon Irak návšteva", hr "posjet Babilonu Irak", ro "vizită Babilon Irak", nl "Babylon Irak bezoeken", pt "visitar Babilónia Iraque", ckb "سەردانی بابل", vi "du lịch Babylon Iraq"). Use it in title, h1, first paragraph, one h2 and description — naturally.
+- Do local keyword thinking in L: the main keyword as people in that country search it (e.g. de "Babylon Irak besichtigen", fr "visiter Babylone", ru "Вавилон Ирак экскурсия", ja "バビロン遺跡 行き方", ko "바빌론 유적 이라크 여행", fi "Babylon Irak nähtävyydet", sv "besöka Babylon Irak", da "besøge Babylon Irak", no "besøke Babylon Irak", sk "Babylon Irak návšteva", hr "posjet Babilonu Irak", ro "vizită Babilon Irak", nl "Babylon Irak bezoeken", pt "visitar Babilónia Iraque", ckb "سەردانی بابل", vi "du lịch Babylon Iraq", hu "Babilon Irak látogatás"). Use it in title, h1, first paragraph, one h2 and description — naturally.
 - Body fragment → `_blog/L/posts/<slug>.html`:
   - Starts with `<p class="lead">…</p>`; then 5–8 `<h2>` sections, `<h3>` sub-points, one `<ul>` of practical tips, optional `<blockquote>` with a first-person note from the guide Saif.
   - Sections like: where it is / history / what to see / how to get there (from Baghdad or nearest city) / best time to visit / practical tips / the place in an Iraq trip.
@@ -73,6 +73,9 @@ Write natural Sorani (Central Kurdish) in Arabic script for Kurdish readers in I
 
 ## Vietnamese (vi) notes
 Write natural Vietnamese (tiếng Việt) for travellers from Vietnam and the Vietnamese diaspora. Vietnam is a growing source market for Iraq (Saif: many Vietnamese tourists). Lead with history, archaeology and the Marshes; holy-shrine topics are explained respectfully as cultural and religious heritage. Practical notes: flights usually connect via Doha, Dubai or Istanbul; prices in USD. Tour links: `/vi/#tour-7-days`, `/vi/#tour-9-days`; blog: `/vi/blog/<slug>/`. Vietnamese started on 2026-11-04 with no articles; older topics are filled by the backlog rule in §1 (one per week, oldest first).
+
+## Hungarian (hu) notes
+Write natural Hungarian for travellers from Hungary and Hungarians abroad (Hungary is a new market: Saif's first group from Budapest, Nov 2026). Use the Hungarian forms of place names used on the site (Bagdad, Babilon, Kerbela, Nedzsef, Bászra, Számarra, Moszul, Erbil, Ur, Uruk). Practical notes: no direct flights from Budapest — connections via Istanbul, Dubai, Doha or Amman; prices in USD, payable in euros on arrival. Slug: Hungarian words without accents (`babilon-irak-latogatas`). Tour links: `/hu/#tour-7-days`, `/hu/#tour-9-days`; blog: `/hu/blog/<slug>/`. Hungarian started on 2026-11-12 with no articles; older topics are filled by the backlog rule in §1 (one per week, oldest first).
 
 ## Traditional Chinese (zh-tw) notes
 Write natural Traditional Chinese with Taiwan usage (部落格, 資訊, 行程, 簡訊…) for readers in Taiwan, Hong Kong and the overseas Chinese community — adapt, do not just convert the Simplified article character by character (if the zh article of the topic exists, use it as the factual base). Sources: `_blog/zh-tw/posts.json` + `_blog/zh-tw/posts/<slug>.html`; output `/zh-tw/blog/<slug>/`. Slug: English words, preferably the same slug as the zh article of the topic. hreflang: `build.py` pairs zh-tw with the other languages by `topic` (zh-tw is inserted right after zh-Hans as `zh-Hant`; `<html lang="zh-Hant-TW">`). Tour links: `/zh-tw/#tour-7-days`, `/zh-tw/#tour-9-days`. Categories used so far: 考古遺址 (Archaeological sites), 聖地與陵寺 (Holy shrines); use 城市與文化 (Cities & culture) and 自然 (Nature). The two first articles (babylon, imam-ali-shrine-in-najaf, Oct 2026) were static pages migrated into the builder on 2026-11-11 with unchanged URLs and text.

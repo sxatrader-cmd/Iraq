@@ -62,7 +62,7 @@
     } catch (e) {}
   }
 
-  var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh","ckb","vi"];
+  var LANGS = ["zh-tw","cs","da","de","el","en","es","fa","fi","fr","hi","hr","id","it","ja","ka","ko","ms","nl","no","pl","pt","ro","ru","sk","sv","ta","th","tr","ur","zh","ckb","vi","hu"];
   var SL = {"assyria":"assyria-hatra-nimrud","nippur":"nippur","ziyara":"baghdad-holy-shrines","oldtown":"baghdad-old-town","aqarquf":"aqar-quf","madain":"al-madain-ctesiphon","samarra":"samarra","babylon":"babylon","babylon4":"babylon-borsippa-kifl","holy":"kufa-najaf-karbala","south":"ur-marshes"};
 
   var seg = (location.pathname.split("/")[1] || "").toLowerCase();
@@ -110,7 +110,8 @@
     ka:["Fable Tour-ის ასისტენტი","გამარჯობა! გიპასუხებთ კითხვებზე ერაყში ჩვენი ტურების შესახებ. აირჩიეთ თემა ან დაწერეთ კითხვა.","დაწერეთ თქვენი კითხვა…","ამ კითხვაზე პასუხი ვერ ვიპოვე. მოგვწერეთ WhatsApp-ზე, სწრაფად გიპასუხებთ.","მოგვწერეთ WhatsApp-ზე","სხვა თემები","პროგრამები და ფასები","ერთდღიანი ექსკურსიები","აეროპორტში დახვედრა","ხშირი კითხვები","დაჯავშნეთ მოგზაურობა","1 ადამიანზე","დეტალები","გაქვთ კითხვა?","არაფრის! კიდევ რამე?","გაგზავნა","დახურვა","დაჯავშნის ფორმის გახსნა"],
     ko:["Fable Tour 도우미","안녕하세요! 이라크 투어에 관한 질문에 답해 드립니다. 주제를 선택하거나 질문을 입력하세요.","질문을 입력하세요…","해당 질문에 대한 답을 찾지 못했습니다. WhatsApp으로 문의해 주시면 빠르게 답변드리겠습니다.","WhatsApp으로 문의","다른 주제","프로그램 및 가격","당일 투어","공항 픽업","자주 묻는 질문","여행 예약","1인 기준","자세히","궁금한 점이 있으신가요?","천만에요! 더 궁금한 점이 있으신가요?","보내기","닫기","예약 양식 열기"],
     pt:["Assistente Fable Tour","Olá! Respondo às suas perguntas sobre os nossos circuitos no Iraque. Escolha um tema ou escreva a sua pergunta.","Escreva a sua pergunta…","Não encontrei resposta para essa pergunta. Escreva-nos pelo WhatsApp e respondemos rapidamente.","Falar pelo WhatsApp","Outros temas","Programas e preços","Passeios de um dia","Recolha no aeroporto","Perguntas frequentes","Reservar a viagem","para 1 pessoa","Detalhes","Tem uma pergunta?","De nada! Mais alguma coisa?","Enviar","Fechar","Abrir o formulário de reserva"],
-    vi:["Trợ lý Fable Tour","Xin chào! Tôi trả lời các câu hỏi của bạn về tour Iraq của chúng tôi. Hãy chọn một chủ đề hoặc gõ câu hỏi.","Nhập câu hỏi của bạn…","Tôi chưa tìm thấy câu trả lời cho câu hỏi này. Hãy nhắn cho chúng tôi qua WhatsApp, chúng tôi sẽ trả lời nhanh.","Nhắn qua WhatsApp","Chủ đề khác","Chương trình và giá","Tour trong ngày","Đón tại sân bay","Câu hỏi thường gặp","Đặt chuyến đi","cho 1 người","Chi tiết","Bạn có câu hỏi?","Không có gì! Bạn cần gì thêm không?","Gửi","Đóng","Mở biểu mẫu đặt tour"]
+    vi:["Trợ lý Fable Tour","Xin chào! Tôi trả lời các câu hỏi của bạn về tour Iraq của chúng tôi. Hãy chọn một chủ đề hoặc gõ câu hỏi.","Nhập câu hỏi của bạn…","Tôi chưa tìm thấy câu trả lời cho câu hỏi này. Hãy nhắn cho chúng tôi qua WhatsApp, chúng tôi sẽ trả lời nhanh.","Nhắn qua WhatsApp","Chủ đề khác","Chương trình và giá","Tour trong ngày","Đón tại sân bay","Câu hỏi thường gặp","Đặt chuyến đi","cho 1 người","Chi tiết","Bạn có câu hỏi?","Không có gì! Bạn cần gì thêm không?","Gửi","Đóng","Mở biểu mẫu đặt tour"],
+    hu:["Fable Tour asszisztens","Jó napot! Válaszolok az iraki körutainkkal kapcsolatos kérdéseire. Válasszon témát, vagy írja be kérdését.","Írja be kérdését…","Erre a kérdésre nem találtam választ. Írjon nekünk WhatsAppon, gyorsan válaszolunk.","Írjon WhatsAppon","Egyéb témák","Programok és árak","Egynapos kirándulások","Repülőtéri transzfer","Gyakori kérdések","Utazás foglalása","1 főre","Részletek","Kérdése van?","Szívesen! Segíthetek még valamiben?","Küldés","Bezárás","Foglalási űrlap megnyitása"]
   };
   var T = {}; function setT() { var a = S[LG] || S.en; for (var i = 0; i < K.length; i++) T[K[i]] = a[i]; } setT();
 
@@ -148,7 +149,8 @@
     nl:"Ja, dat is op aanvraag mogelijk. Laat ons via WhatsApp weten wat je nodig hebt en het Fable Tour-team regelt het.",
     ka:"დიახ, მოთხოვნისამებრ შესაძლებელია. მოგვწერეთ WhatsApp-ზე რა გჭირდებათ და Fable Tour-ის გუნდი მოაგვარებს.",
     pt:"Sim, é possível mediante pedido. Escreva-nos pelo WhatsApp o que precisa e a equipa Fable Tour trata de tudo.",
-    vi:"Có, chúng tôi có thể sắp xếp theo yêu cầu. Hãy nhắn cho chúng tôi qua WhatsApp điều bạn cần và đội ngũ Fable Tour sẽ lo liệu."
+    vi:"Có, chúng tôi có thể sắp xếp theo yêu cầu. Hãy nhắn cho chúng tôi qua WhatsApp điều bạn cần và đội ngũ Fable Tour sẽ lo liệu.",
+    hu:"Igen, kérésre ez megoldható. Írja meg nekünk WhatsAppon, mire van szüksége, és a Fable Tour csapata mindent elintéz."
   };
   T.svc = SV[LG] || SV.en; var T0 = {}; for (var k0 in T) T0[k0] = T[k0];
 
@@ -291,10 +293,11 @@
     tr:"{a} ile {b} arasındaki karayolu mesafesi yaklaşık {k} km, arabayla yaklaşık {h}.",
     pt:"A distância por estrada entre {a} e {b} é de cerca de {k} km, aproximadamente {h} de carro.",
     vi:"Quãng đường bộ giữa {a} và {b} khoảng {k} km, đi ô tô mất khoảng {h}.",
+    hu:"A közúti távolság {a} és {b} között körülbelül {k} km, autóval nagyjából {h}.",
     fa:"فاصله زمینی بین {a} و {b} حدود {k} کیلومتر است، یعنی حدود {h} با خودرو.",
     ur:"{a} اور {b} کے درمیان سڑک کا فاصلہ تقریباً {k} کلومیٹر ہے، یعنی گاڑی سے تقریباً {h}۔"
   };
-  var HR = {ar:["ساعة","ساعات"],en:["hour","hours"],ru:["часа","часов"],de:["Stunde","Stunden"],fr:["heure","heures"],es:["hora","horas"],it:["ora","ore"],tr:["saat","saat"],pt:["hora","horas"],vi:["giờ","giờ"],fa:["ساعت","ساعت"],ur:["گھنٹہ","گھنٹے"]};
+  var HR = {hu:["óra","óra"],ar:["ساعة","ساعات"],en:["hour","hours"],ru:["часа","часов"],de:["Stunde","Stunden"],fr:["heure","heures"],es:["hora","horas"],it:["ora","ore"],tr:["saat","saat"],pt:["hora","horas"],vi:["giờ","giờ"],fa:["ساعت","ساعت"],ur:["گھنٹہ","گھنٹے"]};
   function hrs(km) {
     var h = Math.max(0.5, Math.round(km / 85 * 2) / 2), w = HR[LG];
     if (!w) return "≈ " + h + " h";
@@ -330,10 +333,11 @@
     tr:"Bağdat'ta şu an saat {t}\n(Irak saati UTC+3, yaz saati uygulaması yok)",
     pt:"Agora em Bagdá são {t}\n(hora do Iraque UTC+3, sem horário de verão)",
     vi:"Bây giờ ở Baghdad là {t}\n(giờ Iraq UTC+3, không đổi giờ mùa hè)",
+    hu:"Bagdadban most {t} van\n(iraki idő UTC+3, nyári időszámítás nélkül)",
     fa:"ساعت اکنون در بغداد: {t}\n(وقت عراق UTC+3، بدون ساعت تابستانی)",
     ur:"بغداد میں اس وقت: {t}\n(عراق کا وقت UTC+3، ڈے لائٹ سیونگ نہیں)"
   };
-  var DIF = {ar:"الفرق عن توقيتك: {d} ساعة",en:"Difference from your time: {d} h",ru:"Разница с вашим временем: {d} ч",de:"Unterschied zu Ihrer Zeit: {d} Std.",fr:"Décalage avec votre heure : {d} h",es:"Diferencia con tu hora: {d} h",it:"Differenza con la tua ora: {d} h",tr:"Sizin saatinizle fark: {d} saat",pt:"Diferença para o seu horário: {d} h",vi:"Chênh lệch với giờ của bạn: {d} giờ"};
+  var DIF = {hu:"Eltérés az ön idejétől: {d} óra",ar:"الفرق عن توقيتك: {d} ساعة",en:"Difference from your time: {d} h",ru:"Разница с вашим временем: {d} ч",de:"Unterschied zu Ihrer Zeit: {d} Std.",fr:"Décalage avec votre heure : {d} h",es:"Diferencia con tu hora: {d} h",it:"Differenza con la tua ora: {d} h",tr:"Sizin saatinizle fark: {d} saat",pt:"Diferença para o seu horário: {d} h",vi:"Chênh lệch với giờ của bạn: {d} giờ"};
   function timeAnswer() {
     var loc = LG === "zh-tw" ? "zh-TW" : LG === "ar" ? "ar-IQ-u-nu-latn" : LG, t;
     try { t = new Intl.DateTimeFormat(loc, { timeZone: "Asia/Baghdad", weekday: "long", day: "numeric", month: "long", hour: "numeric", minute: "2-digit" }).format(new Date()); }
@@ -421,7 +425,7 @@
 
   /* ---------- blog knowledge (every article of this language, /blog-kb/<lang>.json) ---------- */
   var BK = null, bkWait = [];
-  var RD = { ar:"اقرأ المقال كاملاً", ckb:"هەموو بابەتەکە بخوێنەوە", en:"Read the full article", ru:"Читать статью полностью", de:"Ganzen Artikel lesen", fr:"Lire l'article complet", es:"Leer el artículo completo", it:"Leggi l'articolo completo", tr:"Yazının tamamını okuyun", fa:"خواندن کامل مقاله", ur:"پورا مضمون پڑھیں", pl:"Przeczytaj cały artykuł", nl:"Lees het hele artikel", pt:"Ler o artigo completo", cs:"Přečíst celý článek", sk:"Prečítať celý článok", hr:"Pročitajte cijeli članak", ro:"Citește articolul complet", el:"Διαβάστε όλο το άρθρο", fi:"Lue koko artikkeli", sv:"Läs hela artikeln", da:"Læs hele artiklen", no:"Les hele artikkelen", ka:"სრული სტატიის წაკითხვა", zh:"阅读全文", "zh-tw":"閱讀全文", ja:"記事を全文読む", ko:"전체 글 읽기", ms:"Baca artikel penuh", id:"Baca artikel lengkap", th:"อ่านบทความฉบับเต็ม", hi:"पूरा लेख पढ़ें", ta:"முழு கட்டுரையைப் படிக்க", vi:"Đọc toàn bộ bài viết" };
+  var RD = { hu:"A teljes cikk elolvasása", ar:"اقرأ المقال كاملاً", ckb:"هەموو بابەتەکە بخوێنەوە", en:"Read the full article", ru:"Читать статью полностью", de:"Ganzen Artikel lesen", fr:"Lire l'article complet", es:"Leer el artículo completo", it:"Leggi l'articolo completo", tr:"Yazının tamamını okuyun", fa:"خواندن کامل مقاله", ur:"پورا مضمون پڑھیں", pl:"Przeczytaj cały artykuł", nl:"Lees het hele artikel", pt:"Ler o artigo completo", cs:"Přečíst celý článek", sk:"Prečítať celý článok", hr:"Pročitajte cijeli članak", ro:"Citește articolul complet", el:"Διαβάστε όλο το άρθρο", fi:"Lue koko artikkeli", sv:"Läs hela artikeln", da:"Læs hele artiklen", no:"Les hele artikkelen", ka:"სრული სტატიის წაკითხვა", zh:"阅读全文", "zh-tw":"閱讀全文", ja:"記事を全文読む", ko:"전체 글 읽기", ms:"Baca artikel penuh", id:"Baca artikel lengkap", th:"อ่านบทความฉบับเต็ม", hi:"पूरा लेख पढ़ें", ta:"முழு கட்டுரையைப் படிக்க", vi:"Đọc toàn bộ bài viết" };
   var RDT = RD[LG] || RD.en;
   /* question words that say nothing about the subject */
   var QW = "who,was,were,is,are,did,does,do,can,the,an,how much,what,where,when,which,whom,whose,wer,war,ist,sind,hat,qui,est,etait,quien,era,chi,kto,был,была,это,هل,كان,كانت,tell,about,explain,know,information,please,there,their,this,that,with,from,have,does,story,history,iraq,visit,ماهي,ماهو,اريد,اعرف,معلومات,احكيلي,حدثني,اخبرني,عن,ما,هي,هو,من,شنو,شني,شو,وين,اين,متى,كيف,ليش,لماذا,قصه,قصة,تاريخ,العراق,عراق,زياره,زيارة,что,такое,кто,такой,расскажи,расскажите,про,где,когда,история,ирак,erzahl,erzahlen,etwas,uber,wann,geschichte,irak,qu est,quoi,parle,moi,histoire,parlame,raccontami,storia,cuentame,sobre,historia,nedir,kimdir,hakkinda,tarihi,nedir".split(",").map(norm);
@@ -709,10 +713,11 @@
     tr:"ne,kadar,nasıl,nasil,mı,mi,mu,mü,var,fiyat,fiyatı,nedir,için,icin,merhaba,teşekkür,nerede,hangi,kaç,kac,ve,güvenli,guvenli,ücret,ucret,tur,turu,gezi",
     id:"berapa,harga,apa,bagaimana,saya,ini,itu,ada,untuk,dan,bisa,kapan,tidak,perjalanan,halo,terima,kasih,di,mana,yang",
     ms:"berapa,harga,apa,bagaimana,saya,ini,itu,ada,untuk,dan,boleh,bila,tidak,lawatan,helo,terima,kasih,di,mana,yang,berapakah,awak",
-    vi:"giá,bao,nhiêu,không,có,là,tôi,của,và,được,đi,ngày,xin,chào,cảm,ơn,ở,đâu,nào,bạn,toàn,những,cho,với,này,người,gì,sao,thế,khi,mấy,muốn,xem,đến,mất,nhiều,tiền,chuyến,thì,hay"
+    vi:"giá,bao,nhiêu,không,có,là,tôi,của,và,được,đi,ngày,xin,chào,cảm,ơn,ở,đâu,nào,bạn,toàn,những,cho,với,này,người,gì,sao,thế,khi,mấy,muốn,xem,đến,mất,nhiều,tiền,chuyến,thì,hay",
+    hu:"mennyi,mennyibe,kerül,kerul,hogyan,hogy,mi,mit,van,az,egy,és,es,nem,jó,napot,köszönöm,koszonom,hol,melyik,lehet,ár,ar,utazás,utazas,körút,korut,kirándulás,kirandulas,biztonságos,biztonsagos,mikor"
   };
   var LWS = {}; for (var lw in LW) LWS[lw] = LW[lw].split(",");
-  var LCH = { vi:/[ơưđạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ]/g, tr:/[ğış]/g, pl:/[ąęłńśźż]/g, cs:/[ěřů]/g, sk:/[ľĺŕôä]/g, ro:/[ășțşţâî]/g,
+  var LCH = { hu:/[őű]/g, vi:/[ơưđạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ]/g, tr:/[ğış]/g, pl:/[ąęłńśźż]/g, cs:/[ěřů]/g, sk:/[ľĺŕôä]/g, ro:/[ășțşţâî]/g,
     hr:/[đćčšž]/g, de:/[ßäöü]/g, da:/[æøå]/g, no:/[æøå]/g, sv:/[åäö]/g, fi:/[äö]/g, pt:/[ãõçáéêó]/g, es:/[ñ¿¡áéíóú]/g, fr:/[çèêëœàùûîé]/g, it:/[àèéìòù]/g };
   function detect(q) {
     var s = String(q || "").toLowerCase();
