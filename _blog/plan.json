@@ -1,6 +1,6 @@
 {
   "rule": "Only places and stories connected to the cities/sites of the 7-day and 9-day tour programmes.",
-  "frequency": "7-weekday rotation (Asia/Baghdad weekday): each run writes ONE article for every blog in that day's `schedule` row and nothing else. Every blog = 1 article/week, English = 2 (Tue + Wed) = 35/week. Topic per blog: oldest dated queue item it lacks, else the next date:null item. See DAILY.md sections 0-1. ('ar' = root /blog/.)",
+  "frequency": "7-weekday rotation (Asia/Baghdad weekday): each run writes ONE article for every blog in that day's `schedule` row and nothing else. Every blog = 1 article/week (English on Wednesday only) = 34/week. Topic per blog: oldest dated queue item it lacks, else the next date:null item. See DAILY.md sections 0-1. ('ar' = root /blog/.)",
   "schedule": {
     "Sunday": [
       "ckb",
@@ -20,8 +20,7 @@
       "ro",
       "sk",
       "hr",
-      "ka",
-      "en"
+      "ka"
     ],
     "Wednesday": [
       "ar",

@@ -3,13 +3,13 @@
 Site: https://iraq.fabletour.com — 34 blogs: 33 languages (incl. Central Kurdish / Sorani `ckb`) + Traditional Chinese (`zh-tw`).
 
 ## 0. Publishing schedule — 7-weekday rotation (Saif's rule, from 2026-11-11)
-ONE run per day (Baghdad date, Asia/Baghdad). Each run writes exactly ONE new article for every blog in that weekday's group, and nothing for any other blog. Every blog therefore gets one article per week; English gets two (Tuesday and Wednesday) — 35 articles per week in total. The same table is in `_blog/plan.json` → `schedule`.
+ONE run per day (Baghdad date, Asia/Baghdad). Each run writes exactly ONE new article for every blog in that weekday's group, and nothing for any other blog. Every blog therefore gets one article per week (English only on Wednesday; Saif's update 2026-11-12) — 34 articles per week in total. The same table is in `_blog/plan.json` → `schedule`.
 
 | Day (Baghdad) | Blogs |
 |---|---|
 | Sunday | ckb, hi, ur, id, cs |
 | Monday | ms, th, vi, ta, el |
-| Tuesday | ro, sk, hr, ka, en |
+| Tuesday | ro, sk, hr, ka |
 | Wednesday | ar (root `/blog/`), en, de, ja, sv |
 | Thursday | fr, es, ru, ko, fi |
 | Friday | it, pt, tr, zh, da |
