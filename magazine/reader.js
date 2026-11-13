@@ -1,15 +1,7 @@
 /* Renders a translated MESOPOTAMIA issue inside the same page-flip viewer.
    Photographs are cropped from the English press pages so the pictures stay. */
 (function(){
-var LANGS=[
-  ["ar","العربية"],["ckb","کوردی"],["en","English"],["tr","Türkçe"],["ru","Русский"],
-  ["de","Deutsch"],["fr","Français"],["es","Español"],["it","Italiano"],["el","Ελληνικά"],
-  ["cs","Čeština"],["pl","Polski"],["zh","简体中文"],["zh-tw","繁體中文"],["ja","日本語"],
-  ["fa","فارسی"],["ms","Bahasa Melayu"],["id","Bahasa Indonesia"],["th","ไทย"],["hi","हिन्दी"],
-  ["ur","اردو"],["ta","தமிழ்"],["fi","Suomi"],["sv","Svenska"],["da","Dansk"],
-  ["no","Norsk"],["sk","Slovenčina"],["hr","Hrvatski"],["ro","Română"],["nl","Nederlands"],
-  ["ka","ქართული"],["ko","한국어"],["pt","Português"],["vi","Tiếng Việt"],["hu","Magyar"]
-];
+var LANGS=[["ar","العربية"],["en","English"],["ru","Русский"],["fr","Français"],["it","Italiano"],["es","Español"]];
 var RTL={ar:1,ckb:1,fa:1,ur:1};
 function hrefOf(code){return code==="en"?"/magazine/":"/"+code+"/magazine/";}
 function homeOf(code){return code==="ar"?"/":code==="en"?"/en/":"/"+code+"/";}
@@ -448,11 +440,10 @@ function build(n){
   img.className="base";
   img.alt="";
   img.draggable=false;
-  img.src="/magazine/p/"+(n<10?"0":"")+n+".jpg";
+  /* Each edition has its own designed page images; no text is laid over them. */
+  img.src="/magazine/"+M.lang+"/"+(n<10?"0":"")+n+".jpg";
+  img.alt=(M.brand||"")+" — "+n;
   pg.appendChild(img);
-  var layer=el("div","ovs");
-  if(window.MagOverlay) window.MagOverlay.paint(layer, n, {M:M, P:P, L:L, esc:esc});
-  pg.appendChild(layer);
   return pg;
 }
 function fitOverlays(){
