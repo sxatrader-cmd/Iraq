@@ -1,0 +1,657 @@
+{
+  "lang": "fi",
+  "dir": "ltr",
+  "metaTitle": "MESOPOTAMIA — Irakin matkailulehti | Fable Tour",
+  "metaDesc": "MESOPOTAMIA, Fable Tourin Irakin matkailulehti. Käännä sivuja: Bagdad, Babylon, Ur ja Uruk, suoalueet, Samarra, Hatra, Mosul ja Erbil, sekä 7 ja 9 päivän matkamme.",
+  "brand": "MESOPOTAMIA",
+  "ui": {
+    "hint": "Vedä sivun kulmasta tai napauta nuolia kääntääksesi sivua",
+    "first": "Ensimmäinen sivu",
+    "prev": "Edellinen sivu",
+    "next": "Seuraava sivu",
+    "sound": "Ääni päälle tai pois",
+    "full": "Koko näyttö",
+    "lang": "Kieli"
+  },
+  "home": {
+    "nav": "Lehti",
+    "eyebrow": "Lehtemme",
+    "title": "Mesopotamia: Irakin matkailulehti",
+    "lead": "Vedä sivun kulmasta tai käytä nuolia sivujen kääntämiseen.",
+    "open": "Avaa koko näytöllä"
+  },
+  "label": {
+    "above": "YLLÄ",
+    "feature": "TÄSSÄ ARTIKKELISSA",
+    "miss": "ÄLÄ OHITA",
+    "day": "PÄIVÄ",
+    "overnight": "Yöpyminen",
+    "included": "SISÄLTYY",
+    "excluded": "EI SISÄLLY",
+    "good": "HYVÄ TIETÄÄ",
+    "scan": "Katso päivämäärät ja varaus"
+  },
+  "pages": {
+    "1": {
+      "kicker": "Fable Tour  |  Irakin matkailulehti  |  Numero 01",
+      "sub": "Tutustu Irakiin Fable Tourin kanssa",
+      "headline": "Irak: siellä missä sivilisaatio alkoi",
+      "deck": "Tutustu muinaisen Mesopotamian ajattomiin ihmeisiin",
+      "cols": [
+        {"t": "Babylon", "d": "Kulje kuninkaiden perinnössä"},
+        {"t": "Bagdad", "d": "Tutustu Rauhan kaupunkiin"},
+        {"t": "Suoalueet", "d": "Elämää kahden joen välissä"},
+        {"t": "Ur ja Uruk", "d": "Sivilisaation sarastus"}
+      ],
+      "credit": "Kansi: Ishtarin portin nykyaikainen rekonstruktio muinaisen Babylonin sisäänkäynnillä, Irak"
+    },
+    "2": {
+      "issue": "Numero 01",
+      "title": "Tervetuloa Mesopotamiaan",
+      "text": "Tigrisin ja Eufratin välissä ihmiset rakensivat ensimmäiset kaupungit, kirjoittivat lakinsa muistiin ja kohottivat temppeleitä kohti taivasta. Maa on yhä täällä, samoin sen muistomerkit. Tämä lehti on kutsu nähdä ne.",
+      "cap": "Vieraita Aqar Qufin 3 400 vuotta vanhalla kassiittien zikkuratilla, Bagdadista länteen."
+    },
+    "3": {
+      "run": "Tervetuloa",
+      "kicker": "Perustajalta",
+      "title": "Henkilökohtainen kutsu tutustua Irakiin",
+      "paras": [
+        "Synnyin Irakissa vuonna 1991 ja kasvoin nimien keskellä, jotka koko maailma tuntee: Babylon, Ur, Bagdad. Vuosia opiskelin ja matkustin ulkomailla. Kouluttauduin hammaslääkäriksi Ukrainassa ja kävin turistina kolmessatoista maassa, ja kaikkialla minulta kysyttiin samaa: millainen Irak oikeastaan on?",
+        "Fable Tour on vastaukseni. Ryhdyin oppaaksi, koska halusin vierailijoiden seisovan siellä, missä historia tapahtui, ja tapaavan ihmiset, jotka elävät sen rinnalla tänään. Zikkurat on enemmän kuin valokuva, kun joku kertoo, kuka sen rakensi ja miksi. Lasillinen teetä vanhassa bagdadilaisessa kahvilassa on enemmän kuin juoma, kun tietää, ketkä ovat istuneet siinä ennen sinua.",
+        "Matkamme ovat yksityisiä tai pienryhmissä, itse valitsemassasi tahdissa. Matkustamme luvallisten oppaiden kanssa englanniksi, venäjäksi ja arabiaksi, yövymme huolella valituissa hotelleissa ja hoidamme luvat, kuljetukset ja aikataulut, jotta voit vain katsoa, kuunnella ja kysyä.",
+        "Uskomme myös vastuulliseen matkustamiseen. Se merkitsee pyhien paikkojen ja paikallisten tapojen kunnioittamista, perheyritysten ravintoloiden ja suoalueen veneilijöiden tukemista sekä jokaisen kohteen jättämistä sellaiseksi kuin sen löysimme.",
+        "Seuraavilta sivuilta löydät paikat, joita rakastan eniten. Toivon, että ne saavat sinut tulemaan, ja odotan saavani toivottaa sinut henkilökohtaisesti tervetulleeksi lentoasemalla."
+      ],
+      "sign": "Saif Al-Tamimi",
+      "role": "Perustaja ja opas, Fable Tour",
+      "cap": "Saif Al-Tamimi, perustaja ja opas, Fable Tour."
+    },
+    "4": {
+      "run": "Sisällys",
+      "kicker": "Tässä numerossa",
+      "title": "Sisällys",
+      "items": [
+        {"n": "06", "t": "Bagdad", "d": "Rauhan kaupunki"},
+        {"n": "09", "t": "Al-Kadhimiya", "d": "Kahden imaamin pyhäkkö"},
+        {"n": "10", "t": "Babylon", "d": "Kulje kuninkaiden valtakunnassa"},
+        {"n": "12", "t": "Borsippa", "d": "Nabun perintö"},
+        {"n": "13", "t": "Ktesifon ja Aqar Quf", "d": "Kaksi jättiläistä Bagdadin laidalla"},
+        {"n": "14", "t": "Ur ja Uruk", "d": "Sivilisaation sarastus"},
+        {"n": "18", "t": "Suoalueet", "d": "Elämää jokien välissä"},
+        {"n": "21", "t": "Basra", "d": "Jokien ja palmujen kaupunki"},
+        {"n": "22", "t": "Najaf, Karbala ja Kufa", "d": "Mesopotamian pyhät kaupungit"},
+        {"n": "25", "t": "Samarra", "d": "Abbasidien loisto"},
+        {"n": "28", "t": "Pohjois-Irak", "d": "Valtakuntia, kaupunkeja ja sivilisaatioita"},
+        {"n": "31", "t": "Erbil", "d": "Siellä missä historia kohtaa vuoret"},
+        {"n": "32", "t": "Irakin maut", "d": "Ruoka ja vieraanvaraisuus"},
+        {"n": "33", "t": "Fable Tour -kokemus", "d": "Enemmän kuin matka"},
+        {"n": "34", "t": "Seitsemän päivää", "d": "Tutustu Mesopotamiaan"},
+        {"n": "36", "t": "Yhdeksän päivää", "d": "Suuri Irakin matka"},
+        {"n": "38", "t": "Ennen matkaa", "d": "Olennainen opas"},
+        {"n": "39", "t": "Suunnittele matkasi", "d": "Varaus ja yhteystiedot"}
+      ],
+      "fig": "Sivu 12. Borsippan zikkurat, jonka kruunaa muinaisessa tulipalossa yhteen sulanut tiili.",
+      "pub": [
+        "MESOPOTAMIA. Numero 01. Julkaissut Fable Tour, Bagdadin kansainvälinen lentoasema, Al-Karkh, Bagdad, Irak.",
+        "Kaikki valokuvat on ottanut Fable Tour omien matkojensa aikana.",
+        "iraq.fabletour.com"
+      ]
+    },
+    "5": {
+      "run": "Kartta",
+      "kicker": "Kohteet",
+      "title": "Irak yhdellä silmäyksellä",
+      "places": [
+        {"t": "Mosul ja Ninive", "d": "Sivu 30"},
+        {"t": "Erbil", "d": "Sivu 31"},
+        {"t": "Nimrud", "d": "Sivu 30"},
+        {"t": "Hatra", "d": "Sivu 29 · UNESCO"},
+        {"t": "Ashur", "d": "Sivu 30 · UNESCO"},
+        {"t": "Samarra", "d": "Sivu 25 · UNESCO"},
+        {"t": "Bagdad", "d": "Sivu 06"},
+        {"t": "Ktesifon", "d": "Sivu 13"},
+        {"t": "Karbala", "d": "Sivu 24"},
+        {"t": "Babylon", "d": "Sivu 10 · UNESCO"},
+        {"t": "Borsippa", "d": "Sivu 12"},
+        {"t": "Najaf ja Kufa", "d": "Sivu 22"},
+        {"t": "Uruk", "d": "Sivu 16"},
+        {"t": "Suoalueet", "d": "Sivu 18 · UNESCO"},
+        {"t": "Ur", "d": "Sivu 14"},
+        {"t": "Basra", "d": "Sivu 21"}
+      ],
+      "note": "Kulta merkitsee UNESCO-maailmanperintökohdetta; laivastonsininen merkitsee toista tämän numeron kohdetta. Rajat on piirretty kaavamaisesti Natural Earthin mukaan, ja joet ovat kaavamaisia. Kuusi irakilaista kohdetta on maailmanperintöluettelossa: Hatra (1985), Ashur (2003), Samarra (2007), Erbilin sitadelli (2014), Etelä-Irakin Ahwar, johon kuuluvat Ur ja Uruk (2016), sekä Babylon (2019)."
+    },
+    "6": {
+      "kicker": "Kohde · Bagdad",
+      "title": "Bagdad: Rauhan kaupunki",
+      "stand": "Vuonna 762 Madinat al-Salamina perustettu abbasidien pääkaupunki oli kerran maan suurin kaupunki. Sen kirjakauppiaat, teehuoneet ja joenrannat kantavat yhä tuota perintöä.",
+      "cap": "900-luvun runoilijan al-Mutanabbin patsas hänen nimeään kantavan kadun jokipäässä, vastarannan Tigrisin valot takanaan.",
+      "feature": ["Al-Mutanabbi-katu", "Al-Mustansiriya", "Qishla", "Shabandar Café", "Al-Kadhimiya"]
+    },
+    "7": {
+      "run": "Bagdad",
+      "drop": true,
+      "paras": [
+        "Kesällä 762 abbasidikalifi al-Mansur valitsi paikan Tigrisin länsirannalta ja käski rakentaa pääkaupungin suunnitelman mukaan, jota yksikään kaupunki ei ollut aiemmin noudattanut: täydellinen ympyrä, palatsi ja moskeija keskellä ja neljä porttia, jotka avautuivat valtakunnan teille. Hän antoi sille nimen Madinat al-Salam, Rauhan kaupunki.",
+        "Pyöreästä kaupungista ei seiso maan päällä tänään mitään, mutta sen luoma ajatus Bagdadista ei ole koskaan poistunut. Vuosisadan kuluessa tästä tuli paikka, jossa kreikkalainen, persialainen ja intialainen oppineisuus käännettiin arabiaksi, jossa paperi korvasi pergamentin ja jonne oppineet ja runoilijat tulivat tekemään nimeä.",
+        "Tuon ajan parhaiten säilynyt todistaja on Al-Mustansiriya, kalifi al-Mustansirin perustama ja vuonna 1233 avattu oppilaitos. Sen pitkä tiilipiha, suippokaarten ja veistettyjen geometristen paneelien kehystämä, majoitti kerran kaikki neljä sunnilaisen oikeuden koulukuntaa saman katon alle. Kulje sen läpi aikaisin, ennen hellettä, niin mittasuhteet selittävät loput.",
+        "Muutaman minuutin päässä Abbasidien palatsiksi kutsuttu rakennus näyttää saman tiilityön asuinmittakaavassa: holvattuja käytäviä, syviä iwaneja ja kattoja, jotka on leikattu kennomaisiksi muqarnas-kuvioiksi.",
+        "Sitten tulee Al-Mutanabbi-katu. Bagdadilaiset siteeraavat mielellään vanhaa lausetta, että Kairo kirjoittaa, Beirut painaa ja Bagdad lukee, ja perjantaiaamuisin katu todistaa sen, kun kirjoja levitetään jalkakäytävälle päästä päähän. Kauimmaisessa päässä seisoo runoilija itse pronssissa, käsi kohotettuna jokea kohti.",
+        "Hänen vieressään on Shabandar Café, joka on tarjonnut teetä vuodesta 1917 vanhojen valokuvien peittämien seinien alla, ja Qishla, osmanien kasarmi, jonka kellotorni on mitannut aikaa Tigrisin yllä 1800-luvulta asti."
+      ],
+      "caps": [
+        "Al-Mustansiriya. Kaksi kerrosta suippokaaria ja veistettyjä tiilipaneeleja oppilaitoksen pihan ympärillä, avattu 1233.",
+        "Qishla. Vieras kehystää osmanien kellotornin arkadista.",
+        "Shabandar Café. Messinkikyltti kaupungin tunnetuimman teehuoneen oven yllä."
+      ],
+      "miss": [
+        {"t": "Al-Mutanabbi-katu", "d": "Perjantain kirjamarkkinat"},
+        {"t": "Al-Mustansiriya", "d": "Avattu 1233"},
+        {"t": "Qishla", "d": "Kellotorni Tigrisin varrella"},
+        {"t": "Al-Kadhimiya-pyhäkkö", "d": "Katso sivu 9"}
+      ],
+      "promo": "Tutustu Bagdadiin paikallisen oppaan kanssa — iraq.fabletour.com"
+    },
+    "8": {
+      "kicker": "Ilta vanhassa Bagdadissa",
+      "photoTop": true,
+      "paras": [
+        "Paras tapa ymmärtää Bagdad on jalkaisin, ja kävely on lyhyt. Aloita Al-Rashid-kadun arkadien alta, jotka avattiin 1916 ja joissa Haj Zbala on kaatanut rusinasherbetiä vuodesta 1900.",
+        "Sieltä Al-Mutanabbi-katu kulkee suoraan joelle. Päivisin se on Irakin kirjamarkkinat. Pimeän tullen valot syttyvät, parvekkeet täyttyvät, ja koko kaupunki tuntuu kävelevän läpi: perheitä, opiskelijoita, muusikoita, keramiikan ja kahvin myyjiä.",
+        "Käytä aikaa kirjakojuilla ja istu sitten Shabandarissa teelle pieneen vyötärölliseen lasiin. Sen tuolla puolen kunnostettu Saray-kortteli ja Qishla johtavat runoilijan patsaalle ja Tigrisille."
+      ],
+      "caps": [
+        "Al-Mutanabbi-katu. Kirjamarkkinat pimeän tullen, tiiliarkadien ja parvekkeiden alla.",
+        "Kirjakojuja. Saif pysähtyy lukemaan.",
+        "Katumusiikkia. Saksofonisti Saray-korttelissa.",
+        "Haj Zbala. Sherbetiä Al-Rashid-kadulla vuodesta 1900."
+      ],
+      "promo": "Tutustu Bagdadiin paikallisen oppaan kanssa — iraq.fabletour.com"
+    },
+    "9": {
+      "run": "Bagdad",
+      "kicker": "Bagdad · Al-Kadhimiya",
+      "title": "Kahden imaamin pyhäkkö",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Bagdadin pohjoisosassa, Tigrisin länsirannalla, seisoo kaksi kultaista kupolia rinnakkain. Niiden alla lepäävät isoisä ja hänen pojanpoikansa: Musa al-Kadhim, kaksitoistašiialaisen islamin seitsemäs imaami, ja Muhammad al-Jawad, yhdeksäs. Kaupunginosa on saanut nimensä heistä. Al-Kadhimiya eli Kadhimayn merkitsee kahden Kadhimin paikkaa.",
+        "Musa ibn Ja'far syntyi vuonna 745 lähellä Medinaa, suuren oppineen imaami Ja'far al-Sadiqin poikana. Hänet tunnettiin kärsivällisyydestään ja anteliaisuudestaan, ja arvonimi al-Kadhim merkitsee sitä, joka hillitsee vihansa. Monet kutsuvat häntä myös Bab al-Hawa'ijiksi, Tarpeiden portiksi. Abbasidikalifit näkivät hänen kannattajansa uhkana. Harun al-Rashid pidätytti hänet Medinassa ja toi Irakiin, jossa hän vietti vuosia vankilassa. Hän kuoli Bagdadin vankilassa vuonna 799. Šiialainen perinne katsoo, että hänet myrkytettiin. Hänet haudattiin Qurayshin hautausmaalle, jonka Bagdadin perustaja oli perustanut Pyöreän kaupungin ulkopuolelle.",
+        "Hänen pojanpoikansa Muhammad ibn Ali syntyi Medinassa vuonna 811, imaami Ali al-Ridan poikana; Ali al-Rida on haudattu Mashhadiin. Hänestä tuli imaami noin seitsemänvuotiaana, kahdestatoista nuorimpana, ja hänet muistetaan siitä, että hän vastasi kalifi al-Ma'munin hovin johtaville oikeusoppineille vielä poikana. Hänen arvonimensä al-Jawad merkitsee anteliasta. Kalifi al-Mu'tasimin Bagdadiin kutsumana hän kuoli siellä vuonna 835 kaksikymmentäviisivuotiaana, myrkkyyn šiialaisen perinteen mukaan, ja hänet laskettiin isoisänsä viereen.",
+        "Pyhäkkö kasvoi kahden haudan ympärille. Sen nykyinen muoto on suurelta osin 1500-luvulta, ja kupolit päällystettiin myöhemmin kullalla. Joka vuosi imaami al-Kadhimin kuoleman vuosipäivä 25. rajab tuo suuria joukkoja jalan eri puolilta kaupunkia. Kaikkien uskontojen vierailijat ovat tervetulleita pihoille; naiset käyttävät abayaa, jota saa portilta."
+      ],
+      "caps": ["Al-Kadhimiya. Pyhäkön kaksi kultaista kupolia ja neljä minareettia, valaistuina illaksi."]
+    },
+    "10": {
+      "kicker": "Kohde · Babilin kuvernementti",
+      "title": "Babylon: kulje kuninkaiden valtakunnassa",
+      "stand": "Kahdentuhannen vuoden ajan sen nimi merkitsi suurinta kaupunkia, jonka kukaan saattoi kuvitella. Yhdeksänkymmentä minuuttia Bagdadista etelään muurit kantavat yhä sen rakentaneen kuninkaan leimaa.",
+      "cap": "Härkiä ja lohikäärmeitä Ishtarin portin nykyaikaisessa rekonstruktiossa, joka on rakennettu pienemmässä mittakaavassa alueen sisäänkäynnille.",
+      "feature": ["Ishtarin portti", "Prosessiokatu", "Babylonin leijona", "Todisteet ja tarina"]
+    },
+    "11": {
+      "run": "Babylon",
+      "drop": true,
+      "paras": [
+        "Babylon oli jo ikivanha, kun Hammurabi teki siitä valtakunnan pääkaupungin 1700-luvulla eaa. ja antoi hakata lakinsa kiveen. Mutta kaupunki, jonka läpi vierailijat tänään kulkevat, on suurelta osin yhden miehen työtä, Nebukadnessar II:n, joka hallitsi vuosina 605–562 eaa.",
+        "Hän rakensi sen uudelleen mittakaavassa, jonka oli määrä hämmästyttää. Kaksoismuurit sulkivat sisäänsä temppeleitä, palatseja ja zikkuratin. Noin vuonna 575 eaa. hän kohotti Ishtarin portin pohjoissivulle, syvänsinisellä lasitetulla tiilellä verhotun ja härkien ja lohikäärmeiden rivein koristetun, jumalten Adadin ja Mardukin eläimin. Leijonat, Ishtarin tunnus, reunustivat sille johtavaa katua.",
+        "Moniin tiiliin on leimattu hänen nimensä. Katso tarkkaan Eteläisen palatsin muureja, niin löydät nuolenpääkirjoitusleiman yhä uudelleen: Nebukadnessar, Babylonin kuningas. Niiden yläpuolella on vaaleampia kerroksia 1980-luvun jälleenrakennuksesta, jotta kaksi kautta erottuu yhdellä silmäyksellä.",
+        "Babylon siirtyi persialaisille Kyyroksen aikana vuonna 539 eaa., ja vuonna 323 eaa. Aleksanteri Suuri kuoli täällä. Vuonna 2019 kohde merkittiin UNESCOn maailmanperintöluetteloon."
+      ],
+      "tableTitle": "Todisteet ja tarina",
+      "tableHead": ["Aihe", "Mitä arkeologia näyttää"],
+      "rows": [
+        {"s": "Ishtarin portti", "w": "Robert Koldeweyn kaivama vuodesta 1899. Lasitettu yläportti rakennettiin uudelleen Berliinin Pergamon-museoon. Babylonissa näet varhaisemmat lasittamattomat tiilivaiheet yhä paikoillaan ja nykyaikaisen jäljennöksen sisäänkäynnillä."},
+        {"s": "Prosessiokatu", "w": "Kivetty katu kulki portilta Mardukin temppeliä kohti. Osuuksia sen alkuperäisestä päällysteestä ja muotoilluin eläimin koristelluista tiilimuureista voi kulkea yhä."},
+        {"s": "Babylonin leijona", "w": "Basalttileijona kaatuneen hahmon yllä, löydetty paikalta 1700-luvulla. Sen ajoitus ja alkuperä ovat yhä kiistanalaisia."},
+        {"s": "Riippuvat puutarhat", "w": "Myöhempien kreikkalaisten kirjoittajien kuvailemat. Jäännöksiä ei ole tunnistettu Babylonissa, ja jotkut tutkijat katsovat tarinan kuuluvan Niniveen."},
+        {"s": "Baabelin torni", "w": "Mardukille omistettu zikkurat Etemenanki on todellinen. Vain sen pohjakaava on säilynyt, neliön ääriviivana maassa."}
+      ],
+      "quote": "”Nebukadnessar, Babylonin kuningas, Esagilan ja Ezidan ylläpitäjä, Nabopolassarin vanhin poika.”",
+      "quoteBy": "Vakiokaiverrus, joka on leimattu kuninkaan tiiliin.",
+      "caps": ["Paikalla. Vieraat tutkivat taulua Babylonista löydetyistä nuolenpääkirjoitustauluista."]
+    },
+    "12": {
+      "kicker": "Kohde · Babilin kuvernementti",
+      "title": "Borsippa: Nabun perintö",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Seitsemäntoista kilometriä Babylonista lounaaseen seisoo rosoinen tiilitorni yksin kummulla tasangon yllä. Tämä on Borsippa, Babylonin sisarkaupunki ja Nabun, kirjurien ja kirjoituksen jumalan, koti.",
+        "Joka kevät Nabun patsas lähti temppelistään Ezidasta ja matkasi Babyloniin uudenvuodenjuhlaan. Nebukadnessar II rakensi hänen zikkuratinsa uudelleen täällä 500-luvulla eaa., ja vuonna 1854 löydetyt perustuslieriöt kertovat työstä kuninkaan omin sanoin.",
+        "Huipulla tiili on sulanut ja sulautunut lasimaisiksi lohkareiksi, tavattoman kuuman tulen seurauksena. Vuosisatojen ajan matkailijat pitivät rauniota Baabelin tornina. Paikka on hiljainen, harvoin täynnä väkeä, ja yksi Irakin tunnelmallisimmista."
+      ],
+      "sideTitle": "Lyhyesti",
+      "side": [
+        {"t": "Muinainen nimi", "d": "Barsipa; tänään Birs Nimrud"},
+        {"t": "Suojelusjumala", "d": "Nabu, kirjoituksen jumala"},
+        {"t": "Babylonista", "d": "Noin 17 km"}
+      ]
+    },
+    "13": {
+      "run": "Bagdadin ympärillä",
+      "kicker": "Lähellä Bagdadia",
+      "title": "Ktesifon ja Aqar Quf",
+      "photoTop": true,
+      "paras": [
+        "Kaksi muistomerkkiä seisoo tunnin matkan päässä pääkaupungista, ja niitä erottaa lähes kaksituhatta vuotta.",
+        "Taq Kasra on kaikki, mitä sasanidikuninkaiden palatsista Ktesifonissa on jäljellä. Sen holvi kohoaa noin 37 metriä ja kattaa noin 25, suurin raudoittamattomasta tiilestä koskaan rakennettu yksiaukkoinen holvikaari. Tutkijat kiistelevät yhä, onko se 200- vai 500-luvulta.",
+        "Kaupungista länteen Aqar Quf on Dur-Kurigalzun zikkurat, jonka kassiittikuningas Kurigalzu perusti 1300-luvulla eaa. Sen rapautunut ydin seisoo yhä noin 57 metriä korkeana, ja ruokomattojen kerrokset näkyvät savitiilikerrosten välissä."
+      ],
+      "caps": [
+        "Taq Kasra. Sasanidipalatsin suuri holvi Ktesifonissa, Bagdadista kaakkoon.",
+        "Aqar Quf. Zikkurat, leimattu tiili ja näkymä kunnostetun portin läpi."
+      ]
+    },
+    "14": {
+      "kicker": "Kohde · Etelä-Irak",
+      "title": "Sivilisaation sarastus",
+      "stand": "Urissa ja Urukissa, muinaisen Sumerin tasangolla, ihmiset asuivat ensin kaupungeissa, pitivät kirjallista kirjanpitoa ja rakensivat temppeleitä, jotka näkyivät päivän kävelyn päähän.",
+      "cap": "Vieraita Urin zikkuratin edessä, joka rakennettiin noin vuonna 2100 eaa. kuujumala Nannalle.",
+      "feature": ["Urin zikkurat", "Kuninkaallinen hautausmaa", "Uruk ja ensimmäinen kirjoitus", "Mesopotamian aikajana"]
+    },
+    "15": {
+      "run": "Ur ja Uruk",
+      "kicker": "Ur",
+      "drop": true,
+      "paras": [
+        "Urin zikkurat on Irakin parhaiten säilynyt. Kuningas Ur-Nammu aloitti sen noin vuonna 2100 eaa., ja hänen poikansa Shulgi viimeisteli sen: porrastettu savitiilinen lava, joka on verhoiltu poltetulla tiilellä ja sidottu bitumilla, omistettu Nannalle, kuujumalalle ja kaupungin suojelijalle.",
+        "Kolme sadan askelman porrasta kohtaa porttirakennuksessa ensimmäisellä terassilla. Viisitoista vuosisataa myöhemmin babylonialainen kuningas Nabonidus kunnosti tornin, ja alempi julkisivu rakennettiin uudelleen 1900-luvulla. Sille voi yhä kiivetä.",
+        "Vuosina 1922–1934 Leonard Woolley kaivoi Uria British Museumille ja Pennsylvanian yliopistolle. Kuninkaalliselta hautausmaalta, joka ajoittuu noin vuosiin 2600–2500 eaa., hän löysi kuningatar Puabin haudan, kultakypäriä, lyyria ja mosaiikkilevyn, joka tunnetaan Urin standaarina.",
+        "Perinne nimeää Urin myös Abrahamin synnyinpaikaksi, ja zikkuratin lähellä oleva jälleenrakennettu talo esitetään hänen talonaan. Vuodesta 2016 kohde on ollut osa UNESCO-maailmanperintöä Etelä-Irakin Ahwar."
+      ],
+      "sideTitle": "Ur lyhyesti",
+      "side": [
+        {"t": "Rakennettu", "d": "Noin 2100 eaa."},
+        {"t": "Omistettu", "d": "Nannalle, kuujumalalle"},
+        {"t": "Kaivettu", "d": "Woolley, 1922–1934"},
+        {"t": "Lähin kaupunki", "d": "Nasiriyah"}
+      ],
+      "caps": ["Myös Sumerissa. Nippurin kulunut zikkurat, jumala Enlilin istuin ja sumerilaisen maailman uskonnollinen keskus."],
+      "promo": "Vieraile Urissa seitsemän ja yhdeksän päivän matkoillamme — iraq.fabletour.com"
+    },
+    "16": {
+      "kicker": "Uruk",
+      "title": "Ensimmäinen kaupunki",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Urukilla, nykyisellä Warkalla, on vahvin vaade kaikista maan paikoista tulla kutsutuksi ensimmäiseksi kaupungiksi. Noin vuonna 3100 eaa. täällä asui kymmeniätuhansia ihmisiä, enemmän kuin missään muualla maailmassa tuolloin.",
+        "Tuon kokoinen kaupunki tarvitsi kirjanpitoa. Eanna-alueelta, joka oli pyhitetty jumalatar Inannalle, arkeologit löysivät tuhansia savitauluja, joihin oli merkitty lukuja ja merkkejä. Vanhimmat ovat noin vuosilta 3400–3200 eaa. ja ovat vanhin tähän asti löydetty kirjoitus.",
+        "Uruk antoi kirjallisuudelle myös sen ensimmäisen sankarin. Gilgamesh muistettiin sen kuninkaana, ja eepos lukee hänen ansiokseen kaupunginmuurin, noin yhdeksän kilometriä ympäri.",
+        "Valkoinen temppeli kruunaa yhä taivaanjumala Anun kumpua, ja Warkan vaasi ja Warkan naamio, molemmat täältä löydetyt, ovat nyt Irakin museossa Bagdadissa.",
+        "Alue on valtava, hiljainen ja lähes koskematon. Oppaan kanssa matalat kummut erottuvat temppeleiksi, pihoiksi ja kaduiksi."
+      ],
+      "caps": ["Yllä. Vieraita Urukin sisäänkäynnillä, zikkuratin kumpu takanaan. Ensimmäiset kirjoitetut sanat alkoivat täällä."]
+    },
+    "17": {
+      "run": "Ur ja Uruk",
+      "kicker": "Aikajana",
+      "title": "Seitsemän tuhatta vuotta kahden joen välissä",
+      "events": [
+        {"y": "n. 5400 eaa.", "t": "Eridu perustetaan. Myöhemmät sumerilaiset muistivat sen kaikkein ensimmäisenä kaupunkina."},
+        {"y": "n. 3400–3200 eaa.", "t": "Vanhin tunnettu kirjoitus ilmestyy savitauluille Urukissa."},
+        {"y": "n. 2600–2500 eaa.", "t": "Kuninkaita ja kuningattaria haudataan kullan ja lapislatsulin kanssa Urin kuninkaalliselle hautausmaalle."},
+        {"y": "n. 2334 eaa.", "t": "Akkadin Sargon yhdistää Mesopotamian kaupungit yhden hallitsijan alle."},
+        {"y": "n. 2100 eaa.", "t": "Ur-Nammu rakentaa Urin zikkuratin."},
+        {"y": "n. 1792–1750 eaa.", "t": "Hammurabi hallitsee Babylonista ja antaa lakikokoelmansa."},
+        {"y": "1300-luku eaa.", "t": "Kassiittikuningas Kurigalzu perustaa Dur-Kurigalzun, nykyisen Aqar Qufin."},
+        {"y": "883–859 eaa.", "t": "Ashurnasirpal II tekee Nimrudista Assyrian pääkaupungin."},
+        {"y": "612 eaa.", "t": "Ninive kukistuu, ja Assyrian valtakunta päättyy."},
+        {"y": "605–562 eaa.", "t": "Nebukadnessar II rakentaa Babylonin uudelleen ja kohottaa Ishtarin portin."},
+        {"y": "539 eaa.", "t": "Persian Kyyros valtaa Babylonin."},
+        {"y": "323 eaa.", "t": "Aleksanteri Suuri kuolee Babylonissa."},
+        {"y": "n. 100–240 jaa.", "t": "Aavikkokaupunki Hatra kukoistaa ja torjuu roomalaisarmeijat kahdesti."},
+        {"y": "638 jaa.", "t": "Kufa perustetaan. Basra perustetaan samalla vuosikymmenellä."},
+        {"y": "680 jaa.", "t": "Karbalan taistelu."},
+        {"y": "762 jaa.", "t": "Kalifi al-Mansur perustaa Bagdadin."},
+        {"y": "836 jaa.", "t": "Abbasidihovi muuttaa Samarraan."},
+        {"y": "1233 jaa.", "t": "Al-Mustansiriya avataan Bagdadissa."}
+      ],
+      "note": "Ajoitukset ennen vuotta 1500 eaa. noudattavat vakiintunutta keskikronologiaa ja ovat likimääräisiä."
+    },
+    "18": {
+      "kicker": "Kohde · Etelä-Irak",
+      "title": "Suoalueet: elämää jokien välissä",
+      "stand": "Siellä missä Tigris ja Eufrat hidastuvat ja leviävät, ihmiset ovat rakentaneet ruo’osta viidentuhannen vuoden ajan. UNESCOn vuonna 2016 luetteloon merkitsemä Etelä-Irakin Ahwar nähdään parhaiten mashoofista ensivalossa.",
+      "cap": "Mudhif, suoarabien holvattu vierashuone, rakennettu kokonaan niputetusta ruo’osta omalle pienelle saarelleen."
+    },
+    "19": {
+      "run": "Suoalueet",
+      "drop": true,
+      "paras": [
+        "Basrasta pohjoiseen kaksi jokea menettävät rantansa. Vesi leviää järvien, uomien ja ruovikoiden labyrintiksi, joka kattoi kerran pienen maan kokoisen alueen, ja sen keskellä ihmiset elävät saarilla, jotka he ovat itse rakentaneet.",
+        "Suoarabit, Ma’dan, tekevät lähes kaiken ympärillään kasvavasta jättiläisruo’osta: taloja, mattoja, aitoja, rehua ja polttoainetta. Heidän hienoin rakennuksensa on mudhif, holvatuista ruokonipuista tehty vierassali ilman nauloja ja ilman puutavaraa. Sama muoto esiintyy viidentuhannen vuoden ikäisissä sumerilaisissa reliefeissä.",
+        "Elämä seuraa vesipuhvelia. Perheet sauvovat aamunkoitteessa kapealla puisella mashoofilla leikkaamaan tuoretta ruokoa, ja puhvelit uivat takaisin hämärässä. Niiden maidosta tulee geymaria, paksua kermaa, joka syödään taatelisiirapin ja lämpimän leivän kanssa aamiaiseksi.",
+        "1990-luvulla suoalueet kuivattiin tahallaan, ja suurin osa niiden asukkaista lähti. Vuoden 2003 jälkeen vallit murrettiin, ja vesi palasi suurelle osalle aluetta. Vuonna 2016 UNESCO merkitsi Etelä-Irakin Ahwarin maailmanperinnöksi sekä luonnon että kulttuurin vuoksi: neljä kosteikkoaluetta yhdessä muinaisten kaupunkien Urin, Urukin ja Eridun kanssa."
+      ],
+      "sideTitle": "Matkusta vastuullisesti",
+      "side": [
+        {"t": "Lähde paikallisten veneilijöiden mukaan", "d": "Maksusi tukee suoperheitä suoraan."},
+        {"t": "Kysy ennen kuvaamista", "d": "Erityisesti naisia ja kodeissa."},
+        {"t": "Älä ota mitään, älä jätä mitään", "d": "Kosteikko on hauras, ja vedenkorkeus vaihtelee vuodenajan mukaan."}
+      ],
+      "caps": ["Yllä. Vesipuhveleita laiduntamassa ruo’on saarella keskisillä suoalueilla."],
+      "promo": "Koe Mesopotamian suoalueet — iraq.fabletour.com"
+    },
+    "20": {
+      "photoTop": true,
+      "quote": "”Moni vieraistamme sanoo, että tämä on Irakin rauhallisin paikka.”",
+      "quoteBy": "Fable Tour",
+      "caps": ["Yllä. Veneellä ruokokäytäviä pitkin lähellä Al-Chibayishia. Suoalueen retki, ja lounas grillattua masgoufia, voidaan järjestää ohjelmissamme."]
+    },
+    "21": {
+      "run": "Basra",
+      "kicker": "Kohde · Etelä-Irak",
+      "title": "Basra: jokien ja palmujen kaupunki",
+      "drop": true,
+      "paras": [
+        "Basra on siellä, missä Irak kohtaa meren. 630-luvulla varhaisen kalifaatin varuskuntakaupungiksi perustettu se kasvoi satamaksi, joka kävi kauppaa Intian, Itä-Afrikan ja Kiinan kanssa, ja kielioppineiden, teologien ja runoilijoiden kaupungiksi. Tuhannessa ja yhdessä yössä Sinbad Merenkulkija lähtee täältä.",
+        "Tigris ja Eufrat yhtyvät Qurnassa, tunnin matkan pohjoiseen, ja muodostavat Shatt al-Arabin. Joki virtaa leveänä ja hitaana kaupungin ohi taatelipalmulehtojen välissä. Ilta rantakadulla tai vesillä valon hiipuessa on Basran olennainen kokemus.",
+        "Vanhassa kaupunginosassa kanaalien varsilla on kauppiaiden taloja, joiden yläkerrat työntyvät kadun ylle veistetyn puun säleikköjen taakse. Nämä parvekkeet, shanasheel, ovat kaupungin tunnus. Basran museo, joka avattiin 2016 entisessä palatsissa joen varrella, kertoo etelän tarinan Sumerista islamilaiseen aikaan."
+      ],
+      "caps": ["Qurna. Aitaus, joka tunnetaan Aadamin puuna ja jonne paikallinen perinne sijoittaa Eedenin puutarhan, kahden joen yhtymäkohdassa."],
+      "miss": [
+        {"t": "Auringonlasku Shatt al-Arabilla", "d": "Näkyy parhaiten veneestä"},
+        {"t": "Shanasheel-talot", "d": "Vanhan Basran veistetyt parvekkeet"},
+        {"t": "Basran museo", "d": "Neljä galleriaa joen varrella"}
+      ]
+    },
+    "22": {
+      "kicker": "Kohde · Keski-Eufrat",
+      "title": "Mesopotamian pyhät kaupungit",
+      "stand": "Najaf, Karbala ja Kufa kuuluvat maan vierailluimpiin paikkoihin. Miljoonat pyhiinvaeltajat tulevat joka vuosi, ja kaiken taustan matkailijat otetaan vastaan kohteliaasti.",
+      "cap": "Kufan suuren moskeijan marmoripiha hämärässä.",
+      "feature": ["Kufa", "Najaf ja Wadi al-Salam", "Karbala", "Vierailu kunnioittaen"]
+    },
+    "23": {
+      "run": "Pyhät kaupungit",
+      "kicker": "Kufa ja Najaf",
+      "drop": true,
+      "paras": [
+        "Kufa perustettiin vuonna 638 sotilasleiriksi Eufratin varrelle, ja yhden sukupolven kuluessa siitä tuli yksi islamin älyllisistä keskuksista. Kulmikas kufalainen kirjoitus on saanut nimensä kaupungista. Ali ibn Abi Talib, profeetta Muhammedin serkku ja vävy ja neljäs kalifi, hallitsi täältä, ja Kufan suuressa moskeijassa hänet kaadettiin vuonna 661.",
+        "Moskeija kuuluu maailman vanhimpiin. Sen avaraa pihaa reunustavat asemat, jotka perinne liittää profeettoihin, ja sen vieressä seisovat Muslim ibn Aqilin ja Hani ibn Urwan pyhäköt. Lyhyen kävelyn päässä on vaatimaton talo, jossa imaami Ali asui.",
+        "Kymmenen kilometriä länteen Najaf kasvoi hänen hautansa ympärille. Imaami Alin pyhäkön kultainen kupoli ja kaksoisminareetit kohoavat vanhan kaupungin ylle, ja sen salit on vuorattu peilimosaiikilla, joka hajottaa valon. Tuhannen vuoden ajan Najaf on ollut myös oppineiden kaupunki. Sen seminaarit, hawza, vetävät opiskelijoita eri puolilta maailmaa.",
+        "Kaupungin vieressä on Wadi al-Salam, Rauhan laakso. Se on yksi maan suurimmista hautausmaista, kupolien ja tiiliholvien maisema, joka ulottuu horisonttiin, ja se on ollut jatkuvassa käytössä yli vuosituhannen."
+      ],
+      "caps": ["Wadi al-Salam. Rauhan laakso ylhäältä nähtynä, Najafin tasanko sen tuolla puolen."]
+    },
+    "24": {
+      "run": "Pyhät kaupungit",
+      "kicker": "Karbala",
+      "paras": [
+        "Muharramin kymmenentenä päivänä vuonna 680 Husayn ibn Ali, profeetan pojanpoika, surmattiin seuralaisineen Karbalan tasangolla. Tapahtuma muistetaan joka vuosi Ashurana, ja neljäkymmentä päivää myöhemmin Arbaeen-pyhiinvaellus tuo miljoonia ihmisiä kaupunkiin jalan.",
+        "Imaami Husaynin ja hänen veljensä Al-Abbasin pyhäköt ovat vastakkain leveän kävelyaukion yli. Molemmat on kruunattu kullalla ja päällystetty sisältä peilityöllä ja sinisillä laatoilla. Illalla, kun kupolit on valaistu ja pihat täyttyvät, tunnelma on rauhallinen ja vastaanottava."
+      ],
+      "caps": [
+        "Al-Kadhimiya, Bagdad. Vieras kuvaa kupoleja ja minareetteja pihalta.",
+        "Bagdadin hiljaisemmat pyhäköt. Junayd al-Baghdadin hauta.",
+        "Bahlulin hauta."
+      ],
+      "sideTitle": "Vierailu kunnioittaen",
+      "side": [
+        {"t": "Pukeutuminen", "d": "Miehille pitkät hihat ja pitkät housut. Naiset käyttävät abayaa ja huivia pyhäkköjen alueella; niitä voi lainata sisäänkäynniltä."},
+        {"t": "Pääsy", "d": "Pihat ovat yleensä avoimia kaikille vierailijoille. Sisäsalien säännöt vaihtelevat pyhäköittäin ja päivittäin, ja oppaasi neuvoo paikan päällä."},
+        {"t": "Ajankohta", "d": "Ashuran ja Arbaeenin aikana kaupungit ovat äärimmäisen vilkkaita. Suunnittelemme näiden päivien ympäri, ellet halua kokea niitä."},
+        {"t": "Sisäänkäynti", "d": "Kengät, laukut ja kamerat jätetään maksuttomiin narikoihin. Miehet ja naiset käyttävät eri sisäänkäyntejä."},
+        {"t": "Valokuvaaminen", "d": "Puhelimet hyväksytään yleensä pihoilla. Kysy aina ennen kuin kuvaat ihmisiä rukouksessa."},
+        {"t": "Vieraanvaraisuus", "d": "Teetä, vettä ja ruokaa tarjotaan usein ilmaiseksi vierailijoille. Vastaanottaminen on kohteliaisuus."}
+      ]
+    },
+    "25": {
+      "kicker": "Kohde · Salah ad-Din",
+      "title": "Samarra: abbasidien loisto",
+      "stand": "Puolen vuosisadan ajan tämä oli valtakunnan pääkaupunki, joka ulottui Pohjois-Afrikasta Keski-Aasiaan. Sen kierreportainen minareetti on Irakin tunnetuin siluetti.",
+      "cap": "Malwiya, Samarran suuren moskeijan kierreportainen minareetti, valmistui 852."
+    },
+    "26": {
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Vuonna 836 kalifi al-Mu'tasim lähti Bagdadista ja rakensi uuden pääkaupungin 125 kilometriä ylävirtaan. Samarra perustettiin avoimelle maalle kujineen, palatseineen, kasarmeineen, kilparatoineen ja metsästyspuistoineen. Lopulta se ulottui yli neljäkymmentä kilometriä Tigrisin itärantaa pitkin.",
+        "Hänen poikansa al-Mutawakkil lisäsi Suuren moskeijan vuosina 848–852. Se oli tuolloin maailman suurin moskeija, poltetusta tiilestä muurattu suorakulmio, joka oli kyllin suuri koko armeijan yhteiselle rukoukselle. Pohjoismuurin ulkopuolelle hän kohotti Malwiyan, 52 metriä korkean minareetin, jonka ramppi kiertää ulkopuolta viisi kertaa.",
+        "Hovi palasi Bagdadiin vuonna 892, ja suuri osa Samarraa yksinkertaisesti hylättiin, minkä vuoksi sen pohjakaava on säilynyt niin täydellisenä. UNESCO merkitsi Samarran arkeologisen kaupungin maailmanperintöluetteloon vuonna 2007."
+      ],
+      "caps": ["Suuri moskeija. Ulkomuuri puoliympyrän muotoisine torneineen ja Malwiya kohoamassa sen takana."],
+      "sideTitle": "Samarra lyhyesti",
+      "side": [
+        {"t": "Pääkaupunki", "d": "836–892"},
+        {"t": "Malwiya", "d": "52 m, valmistui 852"},
+        {"t": "Bagdadista", "d": "Noin 125 km pohjoiseen"},
+        {"t": "UNESCO", "d": "Merkitty 2007"}
+      ]
+    },
+    "27": {
+      "run": "Samarra",
+      "photoTop": true,
+      "paras": [
+        "Samarra on myös pyhiinvaelluskaupunki. Al-Askarin pyhäkössä lepäävät kymmenennen ja yhdennentoista imaamin, Ali al-Hadin ja Hasan al-Askarin, haudat yhden islamilaisen maailman suurimman kultakupolin alla.",
+        "Lähellä paikkaa, joka esitetään imaami Ali al-Hadin vankilana, on Qasr al-Birka, Altaan palatsi. Sen pyöreä allas hakattiin syvälle maahan ja ympäröitiin holvatuilla saleilla, joissa abbasidihovi pakeni kesän hellettä.",
+        "Keskustasta pohjoiseen Abu Dulafin moskeija toistaa kierreportaisen minareetin pienemmässä mittakaavassa.",
+        "Päivä Samarrassa Fable Tourin kanssa käsittää Malwiyan, pyhäkön, imaami Ali al-Hadin vankilan ja Qasr al-Birkan."
+      ],
+      "caps": [
+        "Qasr al-Birka. Abbasidipalatsin upotettu allaspiha, holvattujen salien ympäröimä, lähellä imaami Ali al-Hadin vankilaa.",
+        "Al-Askarin pyhäkkö. Kultainen kupoli kaakeloidun portin yllä."
+      ],
+      "promo": "Vieraile Samarrassa Fable Tourin kanssa — iraq.fabletour.com"
+    },
+    "28": {
+      "kicker": "Kohde · Niniven kuvernementti",
+      "title": "Pohjois-Irak: valtakuntia, kaupunkeja ja sivilisaatioita",
+      "stand": "Pohjoinen oli Assyrian ydinaluetta ja myöhemmin rajaseutua Rooman ja Persian välillä. Sen kohteet kuuluvat maan vähiten vierailluihin ja antoisimpiin.",
+      "cap": "Vieraita Maranin temppelin portailla Hatrassa.",
+      "feature": ["Hatra", "Mosul ja Ninive", "Nimrud", "Ashur"]
+    },
+    "29": {
+      "run": "Pohjois-Irak",
+      "kicker": "Hatra",
+      "drop": true,
+      "paras": [
+        "Hatra seisoo yksin autiomaassa sata kilometriä Mosulista lounaaseen. Ensimmäisellä ja toisella vuosisadalla jaa. se oli rikas karavaanikaupunki partilaisvaltakunnan laidalla, omien arabikuningaidensa hallitsema ja kahden muurikehän ympäröimä.",
+        "Sen keskellä on suuri pyhä aitaus. Temppelit on rakennettu hunajanvärisestä kalkkikivestä, ja ne yhdistävät idän holvatut salit, iwanit, kreikkalais-roomalaisen maailman pylväisiin ja veistettyyn koristeluun. Pääjumala oli Shamash, aurinko.",
+        "Hatra piti puolensa Rooman keisareita Trajanusta ja Septimius Severusta vastaan; molemmat piirittivät sitä ja epäonnistuivat. Se lankesi lopulta sasanidikuningas Shapur I:lle noin vuonna 240 eikä sitä asutettu enää koskaan.",
+        "Vuonna 1985 siitä tuli ensimmäinen paikka Irakissa, joka merkittiin UNESCOn maailmanperintöluetteloon. Vierailu edellyttää turvallisuuslupaa, jonka Fable Tour hankkii etukäteen."
+      ],
+      "caps": [
+        "Kivi kiveltä. Veistetty oviaukko temppeliaitauksessa.",
+        "Suuret iwanit. Holvatut salit avautuvat keskuspihalle."
+      ]
+    },
+    "30": {
+      "run": "Pohjois-Irak",
+      "kicker": "Mosul, Ninive, Nimrud ja Ashur",
+      "drop": true,
+      "paras": [
+        "Mosul on vastapäätä muinaisen Niniven kumpuja Tigrisin toisella puolen. Noin vuonna 700 eaa. assyrialaiskuningas Sanherib teki Ninivestä pääkaupunkinsa ja ympäröi sen kahdentoista kilometrin muurilla. Hänen pojanpoikansa Assurbanipal kokosi sinne savitaulujen kirjaston, joka on lähde suurelle osalle sitä, mitä mesopotamialaisesta kirjallisuudesta tiedetään. Kaupunki kukistui vuonna 612 eaa.",
+        "Keskiajan Mosul rikastui kaupalla ja antoi nimensä musliinille. Al-Nurin suuri moskeija rakennettiin vuonna 1172, ja sen kallistunut minareetti al-Hadba tuli kaupungin tunnukseksi. Molemmat tuhottiin vuonna 2017. Ne on sittemmin rakennettu uudelleen alkuperäisistä tiilistä UNESCOn johtamassa ohjelmassa, ja moskeija avattiin uudelleen vuonna 2025.",
+        "Kolmekymmentä kilometriä etelään on Nimrud, assyrialainen Kalhu. Ashurnasirpal II teki siitä pääkaupunkinsa 800-luvulla eaa. ja täytti palatsinsa veistetyillä reliefeillä ja valtavilla siivekkäillä häillä. Kohde vaurioitui pahoin vuonna 2015, ja konservointi on käynnissä. Kirjoitettuja laattoja ja tiiliä makaa yhä siellä, minne ne putosivat.",
+        "Edempänä Tigristä alavirtaan Ashur oli ensimmäinen pääkaupunki ja Assyrian uskonnollinen sydän. Se on ollut maailmanperintökohde vuodesta 2003."
+      ],
+      "caps": [
+        "Mosul. Uudelleen rakennettu al-Hadba-minareetti nähtynä al-Nurin moskeijan alueelta.",
+        "Ashur. Nuolenpääkirjoituksella leimattu tiili paikalla.",
+        "Nimrud. Vieraita kirjoitetun laatan kanssa palatsikummulla. Kuten Hatraan, Nimrudiin mennään luvalla; jos lupa evätään samana päivänä, tarjoamme toisen kohteen."
+      ]
+    },
+    "31": {
+      "kicker": "Kohde · Kurdistanin alue",
+      "title": "Pohjoinen: siellä missä historia kohtaa vuoret",
+      "deck": "Erbilin sitadellissa on asuttu niin kauan, että sen alla oleva kumpu on tehty aiemmista Erbileistä.",
+      "drop": true,
+      "wide": true,
+      "paras": [
+        "Erbilin sitadelli kohoaa noin kolmekymmentä metriä nykyisen kaupungin ylle soikealla kummulla, tellillä, joka on kasvanut kerros kerrokselta tuhansien asutusvuosien aikana. Kaupunki esiintyy kirjallisissa lähteissä jo kolmannella vuosituhannella eaa., ja sitä kuvataan usein yhdeksi maailman vanhimmista yhtäjaksoisesti asutuista paikoista.",
+        "1800-luvun talojen julkisivujen muuri kiertää lakea kuin linnoitus. Sisällä on kujia, pihoja, moskeija ja hammam. Sitadelli merkittiin UNESCOn maailmanperintöluetteloon vuonna 2014, ja restaurointi jatkuu, joten jotkin alueet voivat olla suljettuja.",
+        "Sen juurella katettu Qaysari Bazaar myy hunajaa, pähkinöitä, juustoa, mausteita ja kurdien tekstiilejä, ja pääaukion teehuoneet ovat paikka, jossa kaupungin kulkua katsellaan.",
+        "Mosulista tulevalla tiellä Mar Mattai -luostari tarrautuu Alfaf-vuoren rinteeseen. 300-luvulla perustettu se on yksi vanhimmista yhä käytössä olevista kristillisistä luostareista. Erbilin tuolla puolen tasanko väistyy Zagrosin tieltä: rotkoja, vesiputouksia ja vuoriteitä, jotka yllättävät jokaisen, joka ajattelee Irakin olevan tasainen."
+      ],
+      "miss": [
+        {"t": "Erbilin sitadelli", "d": "UNESCO-maailmanperintö, 2014"},
+        {"t": "Qaysari Bazaar", "d": "Sitadellin juurella"},
+        {"t": "Mar Mattai -luostari", "d": "Alfaf-vuorella"},
+        {"t": "Yhdeksän päivän matka", "d": "Päättyy Erbiliin; katso sivu 36"}
+      ],
+      "promo": "Matkusta Basrasta Erbiliin Fable Tourin kanssa — iraq.fabletour.com"
+    },
+    "32": {
+      "kicker": "Keittiö · Vieraanvaraisuus",
+      "title": "Irakin maut",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Irakilainen pöytä katetaan useammalle kuin odotetaan, koska vieraita oletetaan. Kansallisruoka on masgouf: jokikarppi halkaistaan, suolataan, tuetaan seipäisiin nuotion viereen ja kypsennetään hitaasti, kunnes nahka rapeutuu. Se syödään ohuen leivän, marinoidun mangon ja raa’an sipulin kanssa.",
+        "Juhlapäivät tuovat quzin, kokonaisen karitsan, joka paistetaan riisin päällä manteleiden ja rusinoiden kanssa, ja dolman, maustetulla riisillä täytetyt vihannekset, jotka haudutetaan happamassa makeassa kastikkeessa. Aamiainen Bagdadissa on kahi, lehtevä leivonnainen puhvelinkerman ja siirapin kanssa.",
+        "Tee seuraa jokaista ateriaa. Se haudutetaan vahvana, kardemummalla maustettuna, ja tarjoillaan pienessä lasissa, jota kutsutaan istikaniksi. Basrassa pyydä kuivatuista limeteistä tehtyä teetä. Irakin taatelit eivät kaipaa esittelyä, ja lajikkeita on satoja."
+      ],
+      "caps": ["Yllä. Saif kirjailija William Frejin ja hänen ryhmänsä kanssa illallisella Mosulissa."],
+      "sideTitle": "Pöydässä",
+      "side": [
+        {"t": "Masgouf", "d": "Tulella grillattu jokikarppi"},
+        {"t": "Quzi", "d": "Karitsaa maustetun riisin päällä"},
+        {"t": "Dolma", "d": "Täytettyjä vihanneksia"},
+        {"t": "Kahi ja geymar", "d": "Bagdadin aamiainen"}
+      ]
+    },
+    "33": {
+      "run": "Fable Tour",
+      "kicker": "Fable Tour -kokemus",
+      "title": "Enemmän kuin matka. Tarina, joka jää mieleen.",
+      "paras": [
+        "Fable Tour on irakilainen yhtiö, jonka kotipaikka on Bagdad. Suunnittelemme yksityisiä ja pienryhmämatkoja läpi koko maan, Basrasta Erbiliin, ja toteutamme ne itse.",
+        "Jokainen matka alkaa samalla tavalla: oppaasi odottaa tuloaulassa. Siitä hetkestä yksityinen ilmastoitu auto, ammattitaitoinen opas ja kuljettaja ovat mukanasi lähtöösi asti. Opastamme englanniksi, venäjäksi ja arabiaksi.",
+        "Valitsemme jokaisessa kaupungissa neljän ja viiden tähden hotellit, sisällytämme päivittäisen aamiaisen ja pääsymaksut ja hankimme luvat kohteisiin kuten Hatraan ja Nimrudiin. Sinä valitset päivän; me hoidamme loput.",
+        "Perustajamme Saif Al-Tamimi esiintyy valokuvaaja William Frejin teoksessa Unohtumaton: muinaiskaupunkeja kaukaisesta menneisyydestä; hän opasti Frejin ryhmän Pohjois-Irakin läpi."
+      ],
+      "caps": [
+        "Saapumiset. Oppaasi kohtaa sinut Bagdadin kansainvälisen lentoaseman sisällä.",
+        "Matkalla. Vieraita Qishlassa, Bagdadissa."
+      ],
+      "sideTitle": "Mitä sisältyy",
+      "side": [
+        {"t": "Yksityinen tai ryhmä", "d": "Valitsemanasi päivänä"},
+        {"t": "Kolme kieltä", "d": "Englanti, venäjä, arabia"},
+        {"t": "Valitut hotellit", "d": "Neljä ja viisi tähteä, aamiainen"},
+        {"t": "Kaikki järjestetty", "d": "Kuljetus, pääsymaksut, luvat"}
+      ],
+      "promo": "Löydät meidät GetYourGuidesta ja Tripadvisorista nimellä ”Fable Tour in Iraq” ja Instagramista @fable_tour. Suunnittele yksityinen Irakin matkasi — iraq.fabletour.com"
+    },
+    "34": {
+      "kicker": "Matkat · Fable Tour",
+      "tour": "Irakin kulttuuriperintömatka · 7 päivää / 6 yötä",
+      "title": "Tutustu Mesopotamiaan seitsemässä päivässä",
+      "deck": "Babylonista suoalueille, Samarraan ja Hatraan, alku ja loppu Bagdadin kansainvälisellä lentoasemalla.",
+      "days": [
+        {"n": "01", "title": "Babylon ja Karbala", "route": "Bagdad – Babylon – Karbala", "text": "Vastaanotto lentoasemalla, sitten Prosessiokatu, Ishtarin portti ja Babylonin leijona. Edelleen Borsippan zikkuratille ja Karbalan pyhäköille illaksi.", "stay": "Karbala · Al-Baron Hotel"},
+        {"n": "02", "title": "Kufa ja Najaf", "route": "Kufa – Najaf", "text": "Kufan suuri moskeija, Wadi al-Salamin hautausmaan kujat ja imaami Alin pyhäkön kultainen kupoli.", "stay": "Najaf · Granada, Do Najaf tai Naseem Al-Najaf"},
+        {"n": "03", "title": "Uruk ja Basra auringonlaskussa", "route": "Uruk – Basra", "text": "Uruk, Gilgameshin kaupunki ja varhainen kirjoitus, sitten etelään Shatt al-Arabille ja vanhan Basran shanasheel-taloihin.", "stay": "Basra · Mövenpick Zinat Al-Hayat tai Corniche Hotel"},
+        {"n": "04", "title": "Aadamin puu, suoalueet ja Ur", "route": "Qurna – Suoalueet – Ur – Bagdad", "text": "Siellä missä kaksi jokea kohtaavat Qurnassa, venematka ruovikon läpi ja portaat Urin zikkuratille.", "stay": "Bagdad · Do Baghdad, Alabasly Suites tai Bilitum"},
+        {"n": "05", "title": "Samarra ja tie pohjoiseen", "route": "Samarra – Mosul", "text": "Kierreportainen Malwiya-minareetti ja Al-Askarin pyhäkkö, sitten edelleen Mosuliin.", "stay": "Mosul · Ramada Hotel"},
+        {"n": "06", "title": "Mosul, Nimrud ja Hatra", "route": "Mosul – Nimrud – Hatra – Bagdad", "text": "Vanha Mosul ja al-Nurin moskeija, assyrialainen Nimrud ja Hatran temppelit autiomaassa.", "stay": "Bagdad · Do Baghdad, Alabasly Suites tai Bilitum"},
+        {"n": "07", "title": "Bagdad, suuri päätös", "route": "Bagdad – lentoasema", "text": "Al-Kadhimiya-pyhäkkö, Al-Mutanabbi-katu ja Qishla, Aqar Qufin kassiittien zikkurat, sitten lentosi.", "stay": ""}
+      ]
+    },
+    "35": {
+      "included": [
+        "Yksityinen ilmastoitu kuljetus koko matkan",
+        "Ammattitaitoinen opas englanniksi, venäjäksi tai arabiaksi",
+        "6 yötä neljän ja viiden tähden hotelleissa, kahden hengen tai twin-huone",
+        "Aamiainen joka päivä",
+        "Pääsymaksut kaikkiin matkasuunnitelman kohteisiin",
+        "Vastaanotto lentoasemalla ja lähtiäiskuljetus Bagdadissa"
+      ],
+      "excluded": "Kansainväliset lennot · Irakin viisumi · lounaat ja illalliset · matkavakuutus · henkilökohtaiset kulut ja juomarahat",
+      "good": "Yksityisiä tai pienryhmälähtöjä. Hatra ja Nimrud edellyttävät turvallisuuslupia, jotka me järjestämme; jos lupa evätään, tarjotaan toinen kohde. Vierailujen järjestystä voidaan muuttaa paikan päällä aikataulun ja aukioloaikojen mukaan.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "36": {
+      "kicker": "Matkat · Fable Tour",
+      "tour": "Koko Irak, Basrasta Erbiliin · 9 päivää / 8 yötä",
+      "title": "Suuri Irakin matka, yhdeksän päivää",
+      "deck": "Koko maa yhtenä linjana, etelästä pohjoiseen. Saapuminen Basraan, lähtö Erbilistä.",
+      "days": [
+        {"n": "01", "title": "Basra, etelän portti", "route": "Basra", "text": "Armenialainen Neitsyt Marian kirkko, Basran museo ja auringonlasku Shatt al-Arabilla.", "stay": "Basra · Mövenpick Zinat Al-Hayat"},
+        {"n": "02", "title": "Suoalueet ja Urin zikkurat", "route": "Suoalueet – Ur – Najaf", "text": "Ruokosaaria, vesipuhveleita ja mudhif-vierastaloja, sitten suuri zikkurat ja kuninkaalliset haudat.", "stay": "Najaf · Do Najaf Hotel"},
+        {"n": "03", "title": "Najaf, Kufa ja Karbala", "route": "Najaf – Kufa – Karbala", "text": "Imaami Alin pyhäkkö, Wadi al-Salam, Kufan suuri moskeija ja Karbalan pyhäköt.", "stay": "Karbala · The Baron Hotel"},
+        {"n": "04", "title": "Babylon ja Borsippa", "route": "Babylon – Borsippa – Bagdad", "text": "Prosessiokatu, Ishtarin portti ja Nebukadnessarin palatsit, sitten Nabun zikkurat.", "stay": "Bagdad · Alabasly Suites"},
+        {"n": "05", "title": "Bagdad, Rauhan kaupunki", "route": "Bagdad – Aqar Quf", "text": "Al-Mutanabbi-katu ja Qishla, Marttyyrien muistomerkki, Al-Kadhimiya-pyhäkkö ja Aqar Quf.", "stay": "Bagdad · Alabasly Suites"},
+        {"n": "06", "title": "Samarra ja Hatra", "route": "Samarra – Hatra – Mosul", "text": "Malwiya, Al-Askarin pyhäkkö ja aavikkokaupunki Hatra.", "stay": "Mosul · Ramada Plaza by Wyndham Mosul Corniche"},
+        {"n": "07", "title": "Mosul, Nimrud ja Mar Mattai", "route": "Mosul – Nimrud – Mar Mattai – Erbil", "text": "Vanha Mosul ja al-Nurin moskeija, assyrialainen Nimrud ja vuoristoluostari.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "08", "title": "Erbil ja sen muinainen sitadelli", "route": "Erbil", "text": "Sitadelli ja Qaysari Bazaar.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "09", "title": "Lähtö", "route": "Erbil – lentoasema", "text": "Kuljetus Erbilin kansainväliselle lentoasemalle.", "stay": ""}
+      ]
+    },
+    "37": {
+      "included": [
+        "8 yötä neljän ja viiden tähden hotelleissa, kahden hengen tai twin-huone",
+        "Aamiainen joka päivä",
+        "Yksityinen ilmastoitu kuljetus koko reitille",
+        "Ammattitaitoinen opas englanniksi, venäjäksi tai arabiaksi",
+        "Pääsymaksut kaikkiin kohteisiin, mukaan lukien luvat Hatraan ja Nimrudiin",
+        "Vastaanotto Basran lentoasemalla ja jättö Erbilin lentoasemalle"
+      ],
+      "excluded": "Kansainväliset lennot · Irakin e-viisumi (voimassa myös Kurdistanin alueella) · sairausvakuutus · lounaat ja illalliset · veneretki suoalueella (pyynnöstä) · henkilökohtaiset kulut ja juomarahat",
+      "good": "Yksityisiä tai pienryhmälähtöjä. Hatra ja Nimrud edellyttävät turvallisuuslupia, jotka me järjestämme; jos lupa evätään, tarjotaan toinen kohde. Vierailujen järjestystä voidaan muuttaa paikan päällä aikataulun ja aukioloaikojen mukaan.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "38": {
+      "kicker": "Matkaopas",
+      "title": "Olennainen Irakin matkaopas",
+      "groups": [
+        {"h": "Ennen matkaa", "items": [
+          {"t": "Viisumi.", "d": "Irak myöntää sähköisiä viisumeja monille kansalaisuuksille virallisen e-viisumiportaalinsa kautta. Jos kansalaisuutesi ei ole oikeutettu, Fable Tour voi hankkia viisumin puolestasi osana koko matkan varausta. Säännöt muuttuvat: varmista meiltä tai Irakin suurlähetystöstä ennen kuin varaat lennot."},
+          {"t": "Passi.", "d": "Pidä mukanasi passi, joka on voimassa vähintään kuusi kuukautta saapumispäiväsi jälkeen, ja säilytä paperikopio kuvasivusta."},
+          {"t": "Milloin matkustaa.", "d": "Lokakuusta huhtikuuhun on sesonki, leutoine päivineen ja viileine öineen. Kesäkuusta syyskuuhun päivälämpötilat ylittävät säännöllisesti 45°C maan keskiosassa ja etelässä."}
+        ]},
+        {"h": "Raha, pukeutuminen ja tavat", "items": [
+          {"t": "Raha.", "d": "Valuutta on Irakin dinaari. Irak on suurelta osin käteisestä riippuvainen talous. Tuo Yhdysvaltain dollareita puhtaina, uudehkoina seteleinä ja vaihda ne paikan päällä; kortit toimivat suuremmissa hotelleissa."},
+          {"t": "Pukeutuminen.", "d": "Pukeudu säädyllisesti kaikkialla: hartiat ja polvet peitettynä miehillä ja naisilla. Naisten kannattaa ottaa huivi mukaan, ja abaya vaaditaan pyhäköissä."},
+          {"t": "Tavat.", "d": "Perjantai on lepopäivä. Tervehdi oikealla kädellä, ota tee vastaan kun sitä tarjotaan, ja kysy ennen kuin kuvaat ihmisiä. Älä kuvaa tarkastuspisteitä tai turvallisuushenkilöstöä."}
+        ]},
+        {"h": "Kieli ja käytännön asiat", "items": [
+          {"t": "Kieli.", "d": "Arabia ja kurdi ovat viralliset kielet. Englanti ymmärretään hotelleissa; oppaasi tulkkaa kaikkialla muualla."},
+          {"t": "Terveys ja vakuutus.", "d": "Ota säännöllinen lääkityksesi mukaan ja juo pullovettä. Matkavakuutusta, joka kattaa Irakin, suositellaan vahvasti, eikä se sisälly ohjelmiimme."},
+          {"t": "Käytännön asiat.", "d": "Aikavyöhyke UTC+3. Sähkö 230 V; pistorasiat vaihtelevat, joten ota yleisadapteri mukaan. Paikallisia SIM-kortteja myydään lentoasemilla."}
+        ]}
+      ],
+      "noteTitle": "Tiedot, jotka voivat muuttua.",
+      "note": "Viisumisäännöt, maahantulovaatimukset, aukioloajat ja pääsy kohteisiin määräävät Irakin viranomaiset, ja ne voivat muuttua lyhyellä varoitusajalla. Tarkista oman hallituksesi matkustustiedote ja Irakin ulkoministeriö ennen matkaa, ja kysy meiltä ajantasainen tilanne varatessasi."
+    },
+    "39": {
+      "run": "Varaus",
+      "kicker": "Suunnittele matkasi",
+      "title": "Irakin seikkailusi alkaa täällä",
+      "intro": "Valitse ohjelma, avaa sen sivu ja valitse päiväsi. Jokainen matka voidaan tehdä yksityisesti seurueellesi tai pienryhmänä, ja jokaista voidaan muokata.",
+      "cards": [
+        {"days": "6 päivää", "title": "Bagdad, Babylon ja Samarra", "text": "Kuusi päivää yhteen Bagdadin hotelliin tukeutuen: Irakin museo ja vanha Bagdad, Aqar Quf ja Taq Kasra, Samarra, Babylon ja Borsippa.", "scan": "Matkasuunnitelma ja päivät"},
+        {"days": "7 päivää", "title": "Irakin kulttuuriperintömatka", "text": "Seitsemän päivää Bagdadista: Babylon, Karbala, Najaf, Uruk, Basra, suoalueet, Ur, Samarra, Mosul ja Hatra.", "scan": "Matkasuunnitelma ja päivät"},
+        {"days": "9 päivää", "title": "Koko Irak, Basrasta Erbiliin", "text": "Yhdeksän päivää etelästä pohjoiseen, ja mukaan tulevat Nimrud, Mar Mattai -luostari ja Erbilin sitadelli.", "scan": "Matkasuunnitelma ja päivät"}
+      ],
+      "howTitle": "Näin varaat",
+      "how": "Lähetä päiväsi ja matkustajien määrä WhatsAppilla, sähköpostilla tai verkkosivustomme lomakkeella. Vastaamme saatavuudella ja kirjallisella vahvistuksella. Päiväretket Bagdadista ja lentoasemakuljetukset voi varata samalla tavalla.",
+      "contactTitle": "Yhteystiedot",
+      "lines": [
+        "iraq.fabletour.com",
+        "support@fabletour.com",
+        "WhatsApp +964 771 174 5353",
+        "Asiakaspalvelu ympäri vuorokauden +1 (212) 433-8608",
+        "Bagdadin kansainvälinen lentoasema, Al-Karkh, Bagdad, Irak",
+        "Instagram @fable_tour"
+      ],
+      "promo": "Suunnittele yksityinen Irakin matkasi — iraq.fabletour.com"
+    },
+    "40": {
+      "title": "Matkasi Mesopotamian halki alkaa täällä.",
+      "text": "Tutustu Irakin poikkeukselliseen historiaan, eläviin perinteisiin ja unohtumattomiin kohteisiin Fable Tourin kanssa. Babylonin muinaisista ihmeistä Bagdadin vilkkaille kaduille ja eteläisen Mesopotamian ajattomiin maisemiin asti löydät Irakin aitojen, asiantuntevasti opastettujen matkakokemusten kautta.",
+      "url": "iraq.fabletour.com",
+      "email": "support@fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353",
+      "service": "Asiakaspalvelu ympäri vuorokauden +1 (212) 433-8608",
+      "address": "Bagdadin kansainvälinen lentoasema, Al-Karkh, Bagdad, Irak",
+      "scan": "Suunnittele matkasi",
+      "credit": "Valokuva: auringonlasku Shatt al-Arabilla, Basra"
+    }
+  }
+}
