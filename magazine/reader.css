@@ -22,10 +22,10 @@ html[dir="rtl"] .ov .k{letter-spacing:0;text-transform:none;font-size:.92em}
 .ov.n .k{color:#C5A46A}
 .ov.n .stand,.ov.n p,.ov.n li{color:#F1EBDD}
 .ov.n b{color:#fff}
-.ov.sky{-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);padding:.7em 1.6em;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(transparent,#000 14%,#000 86%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(transparent,#000 14%,#000 86%,transparent);mask-composite:intersect}
+.ov.sky{-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);padding:.7em 1.6em;-webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent),linear-gradient(transparent,#000 14%,#000 86%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent),linear-gradient(transparent,#000 14%,#000 86%,transparent);mask-composite:intersect}
 .ov.n{padding:2.2% 5.5%}
 .ov.sky .k{color:#fff}
-.ov .days.ev li{grid-template-columns:7.5em 1fr}
+.ov .days.ev li{grid-template-columns:8.8em 1fr}
 .ov .q4i ul{display:grid;grid-template-columns:repeat(4,1fr);gap:.6em}
 .ov .q4i li b,.ov .cols3 li b{display:block}
 .ov .cols3 ul{margin:0}
@@ -160,3 +160,15 @@ button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;s
 .langpick option{color:#1B2A47}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media(max-width:700px){.quad{grid-template-columns:1fr 1fr;gap:.35em}.cards{grid-template-columns:1fr}.split{grid-template-columns:1fr}.cols3{column-count:2}.events li{grid-template-columns:5.4em 1fr}}
+/* Layout helpers for the translated overlays */
+.ov.c{padding:.25em .55em}
+.ov.pic{overflow:hidden;padding:0;background:#ddd}
+.ov.pic img{position:absolute;max-width:none;display:block}
+.ov.bot{display:flex;flex-direction:column;justify-content:flex-end}
+.ov.bot .run{margin-bottom:auto}
+.ov.mid{display:flex;flex-direction:column;justify-content:center}
+.ov.big h2{font-size:2.9em;margin:.1em 0 .25em}
+.ov.big .stand{font-size:1.25em}
+.ov .rule{height:2px;width:14%;background:#C5A46A;margin:.45em 0 0}
+.ov .sig{margin-top:.9em}
+.ov.top p{margin-bottom:.6em}
