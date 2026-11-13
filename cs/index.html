@@ -1400,6 +1400,20 @@ function kbInit(){
 document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',kbInit) : kbInit();
 </script>
 <!-- ================= END: KARBALA SECTION ================= -->
+<!-- ================= START: MAGAZINE SECTION ================= -->
+<style>
+#magazine .mag-frame{width:100%;aspect-ratio:420/318;background:#0C2746;border-radius:6px;overflow:hidden}
+#magazine .mag-frame iframe{width:100%;height:100%;border:0;display:block}
+#magazine .mag-open{display:inline-block;margin-top:14px;color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){#magazine .mag-frame{aspect-ratio:210/340}}
+</style>
+<section class="block in" style="padding-bottom:0" id="magazine" aria-label="Mesopotamia magazine">
+  <div class="sec-head"><span class="eyebrow">Náš magazín</span><h2 class="disp">Mesopotamia: cestovatelský magazín o Iráku</h2><p>Listujte tažením za roh stránky nebo šipkami. Magazín je v angličtině.</p></div>
+  <div class="mag-frame"><iframe src="/magazine/" title="MESOPOTAMIA magazine" loading="lazy" allow="fullscreen" allowfullscreen></iframe></div>
+  <a class="mag-open" href="/magazine/" target="_blank" rel="noopener">Otevřít na celou obrazovku ↗</a>
+</section>
+<!-- ================= END: MAGAZINE SECTION ================= -->
+
 
   <section class="block in" style="padding-top:0" id="usa-canada" aria-labelledby="usa-canada-h">
     <div class="us-ar">

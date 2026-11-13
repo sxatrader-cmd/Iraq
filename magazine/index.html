@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MESOPOTAMIA — Iraq Travel Magazine | Fable Tour</title>
+<meta name="description" content="MESOPOTAMIA, the Iraq travel magazine by Fable Tour. Turn the pages: Baghdad, Babylon, Ur and Uruk, the Marshes, Samarra, Hatra, Mosul and Erbil, with our 7-day and 9-day tours.">
+<link rel="canonical" href="https://iraq.fabletour.com/magazine/">
+<meta property="og:title" content="MESOPOTAMIA — Iraq Travel Magazine | Fable Tour">
+<meta property="og:description" content="Turn the pages of our Iraq travel magazine.">
+<meta property="og:image" content="https://iraq.fabletour.com/magazine/p/01.jpg">
+<meta property="og:url" content="https://iraq.fabletour.com/magazine/">
+<link rel="icon" href="/favicon.png">
+<style>
+:root{--navy:#0C2746;--gold:#C5A46A;--ivory:#F4F0E7}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--navy);color:var(--ivory);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;display:flex;flex-direction:column;overflow:hidden;-webkit-tap-highlight-color:transparent}
+#stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:10px 10px 4px;position:relative}
+#wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+#book{visibility:hidden}
+#book.ready{visibility:visible}
+.pg{background:var(--ivory);overflow:hidden}
+.pg img{width:100%;height:100%;display:block;object-fit:cover;user-select:none;-webkit-user-drag:none;pointer-events:none}
+#bar{flex:none;display:flex;align-items:center;justify-content:center;gap:8px;padding:6px 10px calc(8px + env(safe-area-inset-bottom));font-size:13px}
+button,a.b{appearance:none;border:1px solid rgba(197,164,106,.55);background:transparent;color:var(--ivory);border-radius:4px;height:38px;min-width:42px;padding:0 12px;font:inherit;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+button:hover,a.b:hover{background:rgba(197,164,106,.16)}
+button:disabled{opacity:.35;cursor:default}
+button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#count{min-width:74px;text-align:center;letter-spacing:.08em;color:var(--gold)}
+#hint{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-size:12px;letter-spacing:.06em;color:rgba(244,240,231,.8);pointer-events:none;transition:opacity .6s}
+#load{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;letter-spacing:.3em;font-size:12px;color:var(--gold)}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="load">MESOPOTAMIA</div>
+  <div id="wrap"><div id="book"></div></div>
+  <div id="hint">Drag a page corner or tap the arrows to turn the page</div>
+</div>
+<div id="bar">
+  <button id="first" aria-label="First page"><svg viewBox="0 0 24 24"><path d="M18 6l-6 6 6 6M7 5v14"/></svg></button>
+  <button id="prev" aria-label="Previous page"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <span id="count">1 / 40</span>
+  <button id="next" aria-label="Next page"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+  <button id="snd" aria-label="Sound on or off" aria-pressed="true"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path id="w" d="M16.5 8.5a5 5 0 010 7M19 6a8.5 8.5 0 010 12"/></svg></button>
+  <button id="fs" aria-label="Full screen"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+</div>
+<script src="page-flip.js"></script>
+<script>
+(function(){
+var N=40,W=1075,H=1521,book=document.getElementById('book');
+function src(i){return 'p/'+(i<10?'0':'')+i+'.jpg'}
+var imgs=[];
+for(var i=1;i<=N;i++){
+  var d=document.createElement('div');d.className='pg';
+  if(i===1||i===N)d.setAttribute('data-density','hard');
+  var im=document.createElement('img');im.alt='MESOPOTAMIA magazine, page '+i;im.decoding='async';
+  if(i<=4)im.src=src(i);else im.setAttribute('data-src',src(i));
+  d.appendChild(im);book.appendChild(d);imgs.push(im);
+}
+function preload(p){for(var k=Math.max(0,p-2);k<Math.min(N,p+6);k++){var m=imgs[k];if(m&&!m.src&&m.getAttribute('data-src')){m.src=m.getAttribute('data-src')}}}
+
+var pf=new St.PageFlip(book,{width:W,height:H,size:'stretch',minWidth:330,maxWidth:1300,minHeight:300,maxHeight:1840,
+  showCover:true,maxShadowOpacity:.45,mobileScrollSupport:false,flippingTime:850,usePortrait:true,autoSize:true,drawShadow:true});
+pf.loadFromHTML(document.querySelectorAll('.pg'));
+
+/* fit the book inside the stage (the library only fits to width) */
+var stage=document.getElementById('stage'),wrap=document.getElementById('wrap');
+function fit(){
+  var sw=stage.clientWidth-20,sh=stage.clientHeight-14;
+  var wl=Math.min(sw,sh*2*W/H),portrait=wl<=680;
+  var ratio=portrait?W/H:2*W/H;
+  var w=portrait?Math.min(sw,sh*ratio,660):wl;
+  wrap.style.width=Math.floor(w)+'px';wrap.style.height=Math.floor(w/ratio)+'px';
+  try{pf.update()}catch(e){}
+}
+window.addEventListener('resize',fit);fit();setTimeout(fit,150);
+
+/* paper sound, synthesised so no audio file is needed */
+var ctx=null,soundOn=true;
+function swish(){
+  if(!soundOn)return;
+  try{
+    var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+    if(!ctx)ctx=new AC();if(ctx.state==='suspended')ctx.resume();
+    var dur=.42,sr=ctx.sampleRate,buf=ctx.createBuffer(1,Math.floor(sr*dur),sr),ch=buf.getChannelData(0),last=0;
+    for(var i=0;i<ch.length;i++){var t=i/ch.length,wh=Math.random()*2-1;last=(last+.12*wh)/1.12;
+      var env=Math.pow(Math.sin(Math.PI*Math.min(1,t*1.15)),1.6)*(1-.35*t);
+      var crackle=(Math.random()<.012?(Math.random()*2-1)*.9:0);
+      ch[i]=(wh*.55+last*3.2+crackle)*env;}
+    var s=ctx.createBufferSource();s.buffer=buf;
+    var bp=ctx.createBiquadFilter();bp.type='bandpass';bp.Q.value=.7;
+    var t0=ctx.currentTime;bp.frequency.setValueAtTime(900,t0);bp.frequency.exponentialRampToValueAtTime(4200,t0+dur*.55);bp.frequency.exponentialRampToValueAtTime(1500,t0+dur);
+    var hp=ctx.createBiquadFilter();hp.type='highpass';hp.frequency.value=500;
+    var g=ctx.createGain();g.gain.value=.5;
+    s.connect(bp);bp.connect(hp);hp.connect(g);g.connect(ctx.destination);s.start();
+    var thud=ctx.createOscillator(),tg=ctx.createGain();thud.frequency.setValueAtTime(140,t0+dur*.8);thud.frequency.exponentialRampToValueAtTime(60,t0+dur+.08);
+    tg.gain.setValueAtTime(0,t0);tg.gain.setValueAtTime(.12,t0+dur*.8);tg.gain.exponentialRampToValueAtTime(.001,t0+dur+.1);
+    thud.connect(tg);tg.connect(ctx.destination);thud.start(t0+dur*.8);thud.stop(t0+dur+.12);
+  }catch(e){}
+}
+var count=document.getElementById('count'),hint=document.getElementById('hint'),prev=document.getElementById('prev'),next=document.getElementById('next'),first=document.getElementById('first');
+function ui(){var p=pf.getCurrentPageIndex();count.textContent=(p+1)+' / '+N;prev.disabled=first.disabled=p<=0;next.disabled=p>=N-1;preload(p)}
+pf.on('flip',function(){ui();hint.style.opacity=0});
+pf.on('changeState',function(e){if(e.data==='flipping')swish()});
+pf.on('init',function(){book.classList.add('ready');document.getElementById('load').style.display='none';ui()});
+setTimeout(function(){book.classList.add('ready');document.getElementById('load').style.display='none';ui()},1200);
+prev.onclick=function(){pf.flipPrev()};next.onclick=function(){pf.flipNext()};first.onclick=function(){pf.flip(0)};
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')pf.flipNext();if(e.key==='ArrowLeft')pf.flipPrev()});
+var snd=document.getElementById('snd');
+snd.onclick=function(){soundOn=!soundOn;snd.setAttribute('aria-pressed',soundOn);document.getElementById('w').style.display=soundOn?'':'none';snd.style.opacity=soundOn?1:.55;if(soundOn)swish()};
+var fs=document.getElementById('fs');
+fs.onclick=function(){
+  var el=document.documentElement;
+  if(window.self!==window.top){window.open(location.href,'_blank');return}
+  if(document.fullscreenElement){document.exitFullscreen()}else if(el.requestFullscreen){el.requestFullscreen()}
+};
+})();
+</script>
+</body>
+</html>
