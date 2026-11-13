@@ -1,0 +1,657 @@
+{
+  "lang": "hu",
+  "dir": "ltr",
+  "metaTitle": "MESOPOTAMIA — Iraki útimagazin | Fable Tour",
+  "metaDesc": "A MESOPOTAMIA, a Fable Tour iraki útimagazinja. Lapozzon: Bagdad, Babilon, Ur és Uruk, a mocsárvidék, Számarra, Hatra, Moszul és Erbil, 7 és 9 napos körútjainkkal.",
+  "brand": "MESOPOTAMIA",
+  "ui": {
+    "hint": "Húzza meg a lap sarkát, vagy koppintson a nyilakra a lapozáshoz",
+    "first": "Első oldal",
+    "prev": "Előző oldal",
+    "next": "Következő oldal",
+    "sound": "Hang be vagy ki",
+    "full": "Teljes képernyő",
+    "lang": "Nyelv"
+  },
+  "home": {
+    "nav": "Magazin",
+    "eyebrow": "Magazinunk",
+    "title": "Mezopotámia: az iraki útimagazin",
+    "lead": "Húzza meg a lap sarkát, vagy használja a nyilakat a lapozáshoz.",
+    "open": "Megnyitás teljes képernyőn"
+  },
+  "label": {
+    "above": "FENT",
+    "feature": "EBBEN A RIPORTBAN",
+    "miss": "NE HAGYJA KI",
+    "day": "NAP",
+    "overnight": "Éjszakázás",
+    "included": "TARTALMAZZA",
+    "excluded": "NEM TARTALMAZZA",
+    "good": "JÓ TUDNI",
+    "scan": "Időpontok és foglalás"
+  },
+  "pages": {
+    "1": {
+      "kicker": "Fable Tour  |  Iraki útimagazin  |  01. szám",
+      "sub": "Fedezze fel Irakot a Fable Tourral",
+      "headline": "Irak: ahol a civilizáció kezdődött",
+      "deck": "Fedezze fel az ókori Mezopotámia időtlen csodáit",
+      "cols": [
+        {"t": "Babilon", "d": "Séta a királyok örökségén át"},
+        {"t": "Bagdad", "d": "Fedezze fel a Béke Városát"},
+        {"t": "A mocsárvidék", "d": "Élet két folyó között"},
+        {"t": "Ur és Uruk", "d": "A civilizáció hajnala"}
+      ],
+      "credit": "Borító: az Istár-kapu modern rekonstrukciója az ókori Babilon bejáratánál, Irakban"
+    },
+    "2": {
+      "issue": "01. szám",
+      "title": "Üdvözöljük Mezopotámiában",
+      "text": "A Tigris és az Eufrátesz között építettek az emberek először városokat, írták le törvényeiket, és emeltek templomokat az ég felé. A föld ma is itt van, és vele a műemlékei is. Ez a magazin meghívás, hogy lássuk őket.",
+      "cap": "Látogatók az Akar Kúf-i kassú zikkuraton, Bagdadtól nyugatra; a torony 3400 éves."
+    },
+    "3": {
+      "run": "Üdvözlet",
+      "kicker": "Az alapítótól",
+      "title": "Személyes meghívás Irak felfedezésére",
+      "paras": [
+        "1991-ben születtem Irakban, és olyan nevek között nőttem fel, amelyeket az egész világ ismer: Babilon, Ur, Bagdad. Éveken át külföldön tanultam és utaztam. Fogorvosnak képeztek Ukrajnában, és turistaként tizenhárom országot jártam be, és mindenhol ugyanazt kérdezték tőlem: milyen is Irak valójában?",
+        "A Fable Tour a válaszom. Azért lettem idegenvezető, mert azt akartam, hogy a látogatók ott álljanak, ahol a történelem megtörtént, és találkozzanak azokkal, akik ma mellette élnek. Egy zikkurat több egy fényképnél, ha valaki elmondja, ki építette és miért. Egy pohár tea egy régi bagdadi kávéházban több egy italnál, ha tudja, ki ült ott ön előtt.",
+        "Utazásaink magánutak vagy kis csoportosak, az ön által választott tempóban. Engedéllyel rendelkező idegenvezetőkkel utazunk angolul, oroszul és arabul, gondosan válogatott szállodákban szállunk meg, és intézzük az engedélyeket, a közlekedést és az időzítést, hogy ön egyszerűen nézhessen, hallgathasson és kérdezhessen.",
+        "Hiszünk a felelős utazásban is. Ez azt jelenti, hogy tiszteletben tartjuk a szent helyeket és a helyi szokásokat, támogatjuk a családi éttermeket és a mocsárvidék csónakosait, és minden helyszínt úgy hagyunk, ahogy találtuk.",
+        "A következő oldalakon azokat a helyeket találja, amelyeket a legjobban szeretek. Remélem, meggyőzik önt, hogy eljöjjön, és személyesen várom a repülőtéren."
+      ],
+      "sign": "Saif Al-Tamimi",
+      "role": "Alapító és idegenvezető, Fable Tour",
+      "cap": "Saif Al-Tamimi, a Fable Tour alapítója és idegenvezetője."
+    },
+    "4": {
+      "run": "Tartalom",
+      "kicker": "Ebben a számban",
+      "title": "Tartalom",
+      "items": [
+        {"n": "06", "t": "Bagdad", "d": "A Béke Városa"},
+        {"n": "09", "t": "Al-Kázimijja", "d": "A két imám szentélye"},
+        {"n": "10", "t": "Babilon", "d": "Séta a királyok birodalmán át"},
+        {"n": "12", "t": "Borszippa", "d": "Nabú öröksége"},
+        {"n": "13", "t": "Ktésziphón és Akar Kúf", "d": "Két óriás Bagdad peremén"},
+        {"n": "14", "t": "Ur és Uruk", "d": "A civilizáció hajnala"},
+        {"n": "18", "t": "A mocsárvidék", "d": "Élet a folyók között"},
+        {"n": "21", "t": "Bászra", "d": "A folyók és a datolyapálmák városa"},
+        {"n": "22", "t": "Nedzsef, Kerbela és Kúfa", "d": "Mezopotámia szent városai"},
+        {"n": "25", "t": "Számarra", "d": "Az abbászidák nagysága"},
+        {"n": "28", "t": "Észak-Irak", "d": "Birodalmak, városok és civilizációk"},
+        {"n": "31", "t": "Erbil", "d": "Ahol a történelem a hegyekkel találkozik"},
+        {"n": "32", "t": "Irak ízei", "d": "Konyha és vendégszeretet"},
+        {"n": "33", "t": "A Fable Tour-élmény", "d": "Több, mint egy utazás"},
+        {"n": "34", "t": "Hét nap", "d": "Fedezze fel Mezopotámiát"},
+        {"n": "36", "t": "Kilenc nap", "d": "A nagy iraki utazás"},
+        {"n": "38", "t": "Mielőtt útra kel", "d": "Alapvető útmutató"},
+        {"n": "39", "t": "Tervezze meg az utazását", "d": "Foglalás és kapcsolat"}
+      ],
+      "fig": "12. oldal. A borszippai zikkurat, amelyet egy ősi tűzben összeolvadt tégla koronáz.",
+      "pub": [
+        "MESOPOTAMIA. 01. szám. Kiadja a Fable Tour, Bagdadi nemzetközi repülőtér, Al-Karkh, Bagdad, Irak.",
+        "Minden fénykép a Fable Touré, saját utazásainkon készült.",
+        "iraq.fabletour.com"
+      ]
+    },
+    "5": {
+      "run": "Térkép",
+      "kicker": "Úti célok",
+      "title": "Irak egy pillantásra",
+      "places": [
+        {"t": "Moszul és Ninive", "d": "30. oldal"},
+        {"t": "Erbil", "d": "31. oldal"},
+        {"t": "Nimrúd", "d": "30. oldal"},
+        {"t": "Hatra", "d": "29. oldal · UNESCO"},
+        {"t": "Assur", "d": "30. oldal · UNESCO"},
+        {"t": "Számarra", "d": "25. oldal · UNESCO"},
+        {"t": "Bagdad", "d": "06. oldal"},
+        {"t": "Ktésziphón", "d": "13. oldal"},
+        {"t": "Kerbela", "d": "24. oldal"},
+        {"t": "Babilon", "d": "10. oldal · UNESCO"},
+        {"t": "Borszippa", "d": "12. oldal"},
+        {"t": "Nedzsef és Kúfa", "d": "22. oldal"},
+        {"t": "Uruk", "d": "16. oldal"},
+        {"t": "A mocsárvidék", "d": "18. oldal · UNESCO"},
+        {"t": "Ur", "d": "14. oldal"},
+        {"t": "Bászra", "d": "21. oldal"}
+      ],
+      "note": "Az arany UNESCO-világörökségi helyszínt jelöl; a sötétkék e szám egy másik úti célját jelöli. A határokat sematikusan rajzoltuk, a Natural Earth nyomán, és a folyók is sematikusak. Hat iraki helyszín szerepel a világörökségi listán: Hatra (1985), Assur (2003), Számarra (2007), az erbili fellegvár (2014), Dél-Irak Ahwarja, amely magában foglalja Urt és Urukot (2016), valamint Babilon (2019)."
+    },
+    "6": {
+      "kicker": "Úti cél · Bagdad",
+      "title": "Bagdad: a Béke Városa",
+      "stand": "A Madinat al-Salamként 762-ben alapított abbászida főváros egykor a föld legnagyobb városa volt. Könyvárusai, teaházai és folyópartjai ma is hordozzák ezt az örökséget.",
+      "cap": "A tizedik századi költő, al-Mutanabbi szobra az utca folyó felőli végén, amely a nevét viseli; mögötte a Tigris túlsó partjának fényei.",
+      "feature": ["Az al-Mutanabbi utca", "Az al-Musztanszirijja", "A Kisla", "A Shabandar-teaház", "Az al-Kázimijja"]
+    },
+    "7": {
+      "run": "Bagdad",
+      "drop": true,
+      "paras": [
+        "762 nyarán al-Manszúr abbászida kalifa helyet választott a Tigris nyugati partján, és olyan fővárost rendelt el, amilyen tervet addig egyetlen város sem követett: tökéletes kört, középen a palotával és a mecsettel, és négy kapuval, amelyek a birodalom útjaira nyíltak. Madinat al-Salamnak, a Béke Városának nevezte el.",
+        "A Kerek Városból ma semmi sem áll a föld felszíne fölött, de a Bagdadról alkotott eszme, amelyet teremtett, sosem tűnt el. Egy évszázadon belül ez volt az a hely, ahol a görög, perzsa és indiai tudást arabra fordították, ahol a papír felváltotta a pergament, és ahová tudósok és költők jöttek, hogy nevet szerezzenek maguknak.",
+        "Annak a kornak legépebben fennmaradt tanúja az al-Musztanszirijja, a madrasza, amelyet al-Musztanszir kalifa alapított, és 1233-ban nyitottak meg. Hosszú téglaudvarát csúcsívek és faragott geometrikus mezők keretezik; egykor a szunnita jog mind a négy iskolája egy fedél alatt kapott helyet. Menjen végig rajta korán, még a hőség előtt, és a méretei maguk magyaráznak.",
+        "Néhány percnyire az Abbászida palotaként ismert épület ugyanezt a téglaépítést mutatja házi léptékben: boltozatos folyosók, mély ivánok és méhsejtszerű muqarnasszá vágott mennyezetek.",
+        "Aztán következik az al-Mutanabbi utca. A bagdadiak szívesen idézik a régi sort, hogy Kairó ír, Bejrút nyomtat, Bagdad pedig olvas, és péntek reggelenként az utca bizonyítja: a könyveket egyik végétől a másikig kirakják a járdára. A túlsó végén maga a költő áll bronzban, karját a folyó felé emelve.",
+        "Mellette a Shabandar-teaház, amely 1917 óta szolgál fel teát régi fényképek fala alatt, és a Kisla, az oszmán laktanya, amelynek óratornya a tizenkilencedik század óta méri az időt a Tigris fölött."
+      ],
+      "caps": [
+        "Az al-Musztanszirijja. Két szint csúcsív és faragott téglamező a madrasza udvara körül, amelyet 1233-ban nyitottak meg.",
+        "A Kisla. Egy vendég az árkádsorból keretezi az oszmán óratornyot.",
+        "A Shabandar-teaház. A réztábla a város legismertebb teaházának ajtaja fölött."
+      ],
+      "miss": [
+        {"t": "Az al-Mutanabbi utca", "d": "A pénteki könyvpiac"},
+        {"t": "Az al-Musztanszirijja", "d": "Megnyílt 1233-ban"},
+        {"t": "A Kisla", "d": "Óratorony a Tigrisen"},
+        {"t": "Az al-Kázimijja szentély", "d": "Lásd a 9. oldalon"}
+      ],
+      "promo": "Fedezze fel Bagdadot helyi idegenvezetővel — iraq.fabletour.com"
+    },
+    "8": {
+      "kicker": "Egy este a régi Bagdadban",
+      "photoTop": true,
+      "paras": [
+        "Bagdadot gyalog lehet a legjobban megérteni, és a séta rövid. Kezdje az ar-Rasíd utca árkádjai alatt, amelyet 1916-ban nyitottak meg, ahol Haj Zbala 1900 óta tölti a mazsolás serbetet.",
+        "Onnan az al-Mutanabbi utca egyenesen a folyóig fut. Nappal Irak könyvpiaca. Sötétedés után kigyulladnak a fények, megtelnek az erkélyek, és úgy tűnik, az egész város átsétál rajta: családok, diákok, zenészek, cserépedény- és kávéárusok.",
+        "Időzzön a könyvesstandoknál, aztán üljön le a Shabandarban teára, egy kis, karcsú derekú pohárban. Azon túl a helyreállított Szaraj-negyed és a Kisla a költő szobrához és a Tigrishez vezet."
+      ],
+      "caps": [
+        "Az al-Mutanabbi utca. A könyvpiac sötétedés után, téglaárkádjai és erkélyei alatt.",
+        "Könyvesstandok. Saif megáll, hogy olvasson.",
+        "Utcai zene. Egy szaxofonos a Szaraj-negyedben.",
+        "Haj Zbala. Serbet az ar-Rasíd utcán 1900 óta."
+      ],
+      "promo": "Fedezze fel Bagdadot helyi idegenvezetővel — iraq.fabletour.com"
+    },
+    "9": {
+      "run": "Bagdad",
+      "kicker": "Bagdad · Al-Kázimijja",
+      "title": "A két imám szentélye",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Bagdad északi részén, a Tigris nyugati partján két aranykupola áll egymás mellett. Alattuk egy nagyapa és az unokája nyugszik: Músza al-Kázim, a tizenkettes síita iszlám hetedik imámja, és Muhammad al-Dzsavád, a kilencedik. A kerület róluk kapta a nevét. Az al-Kázimijja, vagyis Kázimajn, a két Kázim helyét jelenti.",
+        "Músza ibn Dzsaafar 745-ben született Medina közelében, a nagy tudós Dzsaafar asz-Szádik imám fiaként. Türeleméről és bőkezűségéről ismerték, és az al-Kázim cím azt jelenti: aki visszafogja haragját. Sokan Báb al-Haváidzsnak, a Szükségletek Kapujának is nevezik. Az abbászida kalifák fenyegetésnek látták a követőit. Hárún ar-Rasíd Medinában letartóztatta, és Irakba vitette, ahol éveket töltött börtönben. 799-ben halt meg egy bagdadi börtönben. A síita hagyomány szerint megmérgezték. A Kurajs temetőjében temették el, amelyet Bagdad alapítója a Kerek Város falain kívül jelölt ki.",
+        "Unokája, Muhammad ibn Ali 811-ben született Medinában, Ali ar-Ridá imám fia, akit Meshedben temettek el. Körülbelül hétévesen lett imám, a tizenkettő közül a legfiatalabb, és arról emlékeznek rá, hogy még gyermekként felelt al-Ma’mún kalifa udvarának vezető jogtudósainak. Az al-Dzsavád cím a nagylelkűt jelenti. Al-Mu’taszim kalifa Bagdadba hívatta; 835-ben halt meg ott, huszonöt évesen, a síita hagyomány szerint méregtől, és nagyapja mellé fektették.",
+        "A szentély a két sír körül nőtt. Mai formája jórészt a tizenhatodik századból való, a kupolákat később arannyal borították. Minden évben al-Kázim imám radzsab 25-i halálának évfordulója nagy tömegeket hoz gyalog a város minden részéből. Minden vallás látogatóit fogadják az udvarokban; a nők abaját viselnek, amely a kapunál kapható."
+      ],
+      "caps": ["Az al-Kázimijja. A szentély két aranykupolája és négy minaretje, az estére kivilágítva."]
+    },
+    "10": {
+      "kicker": "Úti cél · Babil kormányzóság",
+      "title": "Babilon: séta a királyok birodalmán át",
+      "stand": "Kétezer éven át a neve a legnagyobb várost jelentette, amelyet el lehetett képzelni. Kilencven percre Bagdadtól délre a falai ma is viselik az őket építő király bélyegét.",
+      "cap": "Bikák és sárkányok az Istár-kapu modern rekonstrukcióján, amelyet kisebb léptékben emeltek a helyszín bejáratánál.",
+      "feature": ["Az Istár-kapu", "A Körmeneti út", "A Babiloni oroszlán", "Bizonyíték és legenda"]
+    },
+    "11": {
+      "run": "Babilon",
+      "drop": true,
+      "paras": [
+        "Babilon már ősi volt, amikor Hammurapi a Kr. e. 18. században birodalma fővárosává tette, és törvényeit kőbe vésette. De a város, amelyen a látogatók ma végigsétálnak, jórészt egyetlen ember műve: II. Nabukodonozoré, aki Kr. e. 605-től 562-ig uralkodott.",
+        "Olyan léptékben építette újjá, amelynek ámulatba kellett ejtenie. Kettős falak zártak közre templomokat, palotákat és egy zikkuratot. Kr. e. 575 körül emelte az északi oldalon az Istár-kaput, mélykék mázas téglával burkolva, bikák és sárkányok soraival díszítve: Adad és Marduk istenek állataival. Oroszlánok, Istár jelvénye, szegélyezték az odavezető utcát.",
+        "Sok tégla a nevét viseli. Nézze meg közelről a Déli Palota falait, és újra meg újra megtalálja az ékírásos bélyeget: Nabukodonozor, Babilon királya. Fölöttük halványabb sorok ülnek az 1980-as évek rekonstrukciójából, így a két korszak egy pillantásra megkülönböztethető.",
+        "Babilon Kr. e. 539-ben Kürosz alatt a perzsáké lett, és Kr. e. 323-ban Nagy Sándor itt halt meg. 2019-ben a helyszín felkerült az UNESCO világörökségi listájára."
+      ],
+      "tableTitle": "Bizonyíték és legenda",
+      "tableHead": ["Tárgy", "Amit a régészet mutat"],
+      "rows": [
+        {"s": "Istár-kapu", "w": "Robert Koldewey ásta ki 1899-től. A mázas felső kaput Berlin Pergamon Múzeumában építették újjá. Babilonban a korábbi, mázatlan téglaszinteket látja a helyükön, és egy modern másolatot a bejáratnál."},
+        {"s": "Körmeneti út", "w": "Burkolt utca vezetett a kaputól Marduk temploma felé. Eredeti burkolatának szakaszai és a mintázott állatos téglafalak ma is járhatók."},
+        {"s": "Babiloni oroszlán", "w": "Bazaltoroszlán egy elesett alak fölött, a helyszínen találták a tizennyolcadik században. Korát és eredetét máig vitatják."},
+        {"s": "Függőkertek", "w": "Későbbi görög írók írták le. Babilonban nem azonosítottak maradványt, és egyes tudósok szerint a történet Ninivéhez tartozik."},
+        {"s": "Bábel tornya", "w": "Az Etemenanki zikkurat, amelyet Marduknak szenteltek, valós. Csak az alaprajza maradt meg, négyzetes körvonalként a földben."}
+      ],
+      "quote": "„Nabukodonozor, Babilon királya, Eszagíla és Ezida gondviselője, Nabú-apal-uszur legidősebb fia.”",
+      "quoteBy": "A király tégláira nyomott szokásos felirat.",
+      "caps": ["A helyszínen. Vendégek egy táblát néznek a Babilonban talált ékírásos táblákról."]
+    },
+    "12": {
+      "kicker": "Úti cél · Babil kormányzóság",
+      "title": "Borszippa: Nabú öröksége",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Tizenhét kilométerre Babilontól délnyugatra egy csipkézett téglatorony áll magában egy halmon a síkság fölött. Ez Borszippa, Babilon testvérvárosa és Nabú, az írnokok és az írás istenének otthona.",
+        "Minden tavasszal Nabú szobra elhagyta templomát, az Ezidát, és Babilonba utazott az újévi ünnepre. II. Nabukodonozor a Kr. e. hatodik században építette újjá itt a zikkuratját, és az 1854-ben talált alapítóhengerek a király saját szavaival jegyzik fel a munkát.",
+        "A csúcson a tégla megolvadt és üveges tömbökké forrt össze, egy rendkívüli hőjű tűz nyomán. Évszázadokon át az utazók Bábel tornyának vélték a romot. A helyszín csendes, ritkán zsúfolt, és Irak egyik leghangulatosabbja."
+      ],
+      "sideTitle": "Egy pillantásra",
+      "side": [
+        {"t": "Ókori név", "d": "Barszipa; ma Bírsz Nimrúd"},
+        {"t": "Védőisten", "d": "Nabú, az írás istene"},
+        {"t": "Babilontól", "d": "Mintegy 17 km"}
+      ]
+    },
+    "13": {
+      "run": "Bagdad körül",
+      "kicker": "Bagdad közelében",
+      "title": "Ktésziphón és Akar Kúf",
+      "photoTop": true,
+      "paras": [
+        "Két emlékmű áll egyórás útra a fővárostól, és csaknem kétezer év választja el őket.",
+        "A Ták-i Kiszrá minden, ami a szászánida királyok ktésziphóni palotájából megmaradt. Boltozata mintegy 37 méterre emelkedik, és mintegy 25-öt hidal át: a valaha épített legnagyobb egynyílású, vasalatlan téglaboltozat. A tudósok máig vitatják, hogy a harmadik vagy a hatodik századból való-e.",
+        "A várostól nyugatra Akar Kúf Dúr-Kurigalzu zikkuratja, amelyet I. Kurigalzu kassú király alapított a Kr. e. tizennegyedik században. Málla magja ma is mintegy 57 méter magas, és a vályogtégla sorai között nádgyékény rétegei látszanak."
+      ],
+      "caps": [
+        "Ták-i Kiszrá. A szászánida palota nagy boltozata Ktésziphónban, Bagdadtól délkeletre.",
+        "Akar Kúf. A zikkurat, egy bélyeges tégla, és a kilátás a helyreállított kapun át."
+      ]
+    },
+    "14": {
+      "kicker": "Úti cél · Dél-Irak",
+      "title": "A civilizáció hajnala",
+      "stand": "Urban és Urukban, az ókori Sumer síkságán éltek az emberek először városokban, vezettek írásos számadást, és építettek templomokat, amelyeket egy napi járóföldről látni lehetett.",
+      "cap": "Vendégek az uri zikkurat előtt, amelyet Kr. e. 2100 körül építettek Nanna holdistennek.",
+      "feature": ["Az uri zikkurat", "A Királyi temető", "Uruk és az első írás", "Mezopotámia idővonala"]
+    },
+    "15": {
+      "run": "Ur és Uruk",
+      "kicker": "Ur",
+      "drop": true,
+      "paras": [
+        "Az uri zikkurat a legjobb állapotban fennmaradt Irakban. Ur-Nammu király kezdte Kr. e. 2100 körül, és fia, Sulgi fejezte be: vályogtéglából rakott, lépcsős emelvény, égetett téglával burkolva és bitumennel rögzítve, Nannának, a holdistennek és a város védnökének szentelve.",
+        "Három, egyenként száz lépcsőfokos feljáró találkozik egy kapuházban az első teraszon. Tizenöt évszázaddal később Nabú-naid babiloni király helyreállította a tornyot, az alsó homlokzatot pedig a huszadik században építették újra. Ma is meg lehet mászni.",
+        "1922 és 1934 között Leonard Woolley ásta Urt a British Múzeum és a Pennsylvaniai Egyetem számára. A Királyi temetőben, amelyet körülbelül Kr. e. 2600 és 2500 közé datálnak, megtalálta Puabi királynő sírját, aranysisakokat, lírákat és a mozaiklapot, amelyet Uri standardként ismernek.",
+        "A hagyomány Urt Ábrahám szülőhelyének is mondja, és a zikkurat közelében egy rekonstruált házat az övéként mutatnak. 2016 óta a helyszín a dél-iraki Ahwar UNESCO-világörökségi helyszín része."
+      ],
+      "sideTitle": "Ur röviden",
+      "side": [
+        {"t": "Épült", "d": "Kr. e. 2100 körül"},
+        {"t": "Felszentelve", "d": "Nannának, a holdistennek"},
+        {"t": "Ásatás", "d": "Woolley, 1922-től 1934-ig"},
+        {"t": "Legközelebbi város", "d": "Násziríja"}
+      ],
+      "caps": ["Szintén Sumerben. Nippur lekopott zikkuratja, Enlil isten székhelye és a sumer világ vallási központja."],
+      "promo": "Látogasson el Urba hét- és kilencnapos utazásainkon — iraq.fabletour.com"
+    },
+    "16": {
+      "kicker": "Uruk",
+      "title": "Az első város",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Uruknak, a mai Varkának van a legerősebb igénye a föld bármely helye közül arra, hogy az első városnak nevezzék. Kr. e. 3100 körül tízezrek éltek itt, többen, mint akkor bárhol máshol a világon.",
+        "Egy ekkora városnak feljegyzésekre volt szüksége. Az Eanna-negyedben, amely Inanna istennőé volt, a régészek ezernyi agyagtáblát találtak számokkal és jelekkel. A legkorábbiak Kr. e. 3400 és 3200 tájáról valók, és a legrégebbi eddig felfedezett írás.",
+        "Uruk adta az irodalom első hősét is. Gilgamest a királyaként őrizte meg az emlékezet, és az eposz neki tulajdonítja a városfalat, amely mintegy kilenc kilométer kerületű volt.",
+        "A Fehér templom ma is Anu égisten halmát koronázza, a warkai váza és a warkai maszk, mindkettőt itt találták, ma a bagdadi Iraki Múzeumban van.",
+        "A helyszín hatalmas, néma és szinte érintetlen. Idegenvezetővel az alacsony halmok templomokká, udvarokká és utcákká rendeződnek."
+      ],
+      "caps": ["Fent. Vendégek Uruk bejáratánál, mögöttük a zikkurat halma. Az első leírt szavak itt kezdődtek."]
+    },
+    "17": {
+      "run": "Ur és Uruk",
+      "kicker": "Idővonal",
+      "title": "Hétezer év két folyó között",
+      "events": [
+        {"y": "Kr. e. 5400 k.", "t": "Megalapítják Eridut. A későbbi sumerek minden város közül az elsőnek emlékeztek rá."},
+        {"y": "Kr. e. 3400–3200 k.", "t": "A legkorábbi ismert írás agyagtáblákon jelenik meg Urukban."},
+        {"y": "Kr. e. 2600–2500 k.", "t": "Királyokat és királynőket temetnek arannyal és lapis lazuliival Ur királyi temetőjében."},
+        {"y": "Kr. e. 2334 k.", "t": "Akkád Sarrukín egy uralkodó alatt egyesíti Mezopotámia városait."},
+        {"y": "Kr. e. 2100 k.", "t": "Ur-Nammu felépíti az uri zikkuratot."},
+        {"y": "Kr. e. 1792–1750 k.", "t": "Hammurapi Babilonból uralkodik, és kiadja törvénykönyvét."},
+        {"y": "Kr. e. 14. század", "t": "Kurigalzu kassú király megalapítja Dúr-Kurigalzut, a mai Akar Kúfot."},
+        {"y": "Kr. e. 883–859", "t": "II. Assur-nászir-apli Nimrúdot teszi Asszíria fővárosává."},
+        {"y": "Kr. e. 612", "t": "Ninive elesik, és véget ér az asszír birodalom."},
+        {"y": "Kr. e. 605–562", "t": "II. Nabukodonozor újjáépíti Babilont, és felépíti az Istár-kaput."},
+        {"y": "Kr. e. 539", "t": "Perzsia Kürosza elfoglalja Babilont."},
+        {"y": "Kr. e. 323", "t": "Nagy Sándor meghal Babilonban."},
+        {"y": "Kr. u. 100–240 k.", "t": "Hatra sivatagi városa virágzik, és kétszer áll ellen a római seregeknek."},
+        {"y": "Kr. u. 638", "t": "Megalapítják Kúfát. Bászrát ugyanabban az évtizedben alapítják."},
+        {"y": "Kr. u. 680", "t": "A kerbelai csata."},
+        {"y": "Kr. u. 762", "t": "Al-Manszúr kalifa megalapítja Bagdadot."},
+        {"y": "Kr. u. 836", "t": "Az abbászida udvar Számarrába költözik."},
+        {"y": "Kr. u. 1233", "t": "Megnyílik az al-Musztanszirijja Bagdadban."}
+      ],
+      "note": "A Kr. e. 1500 előtti évszámok a szokásos középső kronológiát követik, és hozzávetőlegesek."
+    },
+    "18": {
+      "kicker": "Úti cél · Dél-Irak",
+      "title": "A mocsárvidék: élet a folyók között",
+      "stand": "Ahol a Tigris és az Eufrátesz lelassul és szétterül, az emberek ötezer éve nádból építkeznek. Az UNESCO 2016-ban vette fel a listára; Dél-Irak Ahwarját mashoofból, az első fénynél a legjobb látni.",
+      "cap": "Egy mudhíf, a mocsári arabok íves vendégháza, teljes egészében kötegelt nádból, a saját kis szigetén."
+    },
+    "19": {
+      "run": "A mocsárvidék",
+      "drop": true,
+      "paras": [
+        "Bászrától északra a két folyó elveszíti partját. A víz tavak, csatornák és nádasok útvesztőjévé terül, amely egykor egy kis országnyi területet borított, és a közepén az emberek saját maguk építette szigeteken élnek.",
+        "A mocsári arabok, a ma’dánok, szinte mindent az óriásnádból készítenek, amely körülöttük nő: házat, gyékényt, kerítést, takarmányt és tüzelőt. Legszebb épületük a mudhíf, íves nádkötegekből rakott vendégcsarnok, szög és fa nélkül. Ugyanez a forma ötezer éves sumer faragványokon is megjelenik.",
+        "Az élet a vízibivalyt követi. A családok hajnalban karcsú famashoofban eveznek ki friss nádat vágni, a bivalyok alkonyatkor úsznak vissza. Tejükből geymar lesz, sűrű tejszín, amelyet datolyasziruppal és meleg kenyérrel esznek reggelire.",
+        "Az 1990-es években a mocsarakat szándékosan lecsapolták, és lakóik többsége elment. 2003 után áttörték a gátakat, és a víz a terület nagy részére visszatért. 2016-ban az UNESCO természeti és kulturális értékként egyaránt felvette a világörökség listájára Dél-Irak Ahwarját: négy vizes élőhelyet Ur, Uruk és Eridu ókori városaival együtt."
+      ],
+      "sideTitle": "Utazzon felelősen",
+      "side": [
+        {"t": "Menjen helyi csónakosokkal", "d": "A viteldíj közvetlenül a mocsári családokat támogatja."},
+        {"t": "Kérjen engedélyt fényképezés előtt", "d": "Különösen a nőktől és a házon belül."},
+        {"t": "Ne vigyen el semmit, ne hagyjon semmit", "d": "A vizes élőhely sérülékeny, és a vízszint évszakonként változik."}
+      ],
+      "caps": ["Fent. Vízibivalyok legelnek egy nádszigeten a Középső-mocsarakban."],
+      "promo": "Élje át a mezopotámiai mocsárvidéket — iraq.fabletour.com"
+    },
+    "20": {
+      "photoTop": true,
+      "quote": "„Sok vendégünk azt mondja, ez Irak legbékésebb helye.”",
+      "quoteBy": "Fable Tour",
+      "caps": ["Fent. Csónakkal a nádas csatornákon Al-Csibájis közelében. Mocsári utat, grillezett maszgúf ebéddel, programjainkon meg lehet szervezni."]
+    },
+    "21": {
+      "run": "Bászra",
+      "kicker": "Úti cél · Dél-Irak",
+      "title": "Bászra: a folyók és a datolyapálmák városa",
+      "drop": true,
+      "paras": [
+        "Bászra az, ahol Irak találkozik a tengerrel. A 630-as években alapították a korai kalifátus helyőrségi városaként, és kikötővé nőtt, amely Indiával, Kelet-Afrikával és Kínával kereskedett, valamint nyelvészek, teológusok és költők városává. Az Ezeregyéjszakában Szindbád, a tengerész innen indul útnak.",
+        "A Tigris és az Eufrátesz Kurnánál, egyórányira északra egyesül, és létrehozza a Satt al-Arabot. A folyó szélesen és lassan halad a város mellett datolyapálma-ligetek között. Egy este a corniche-on, vagy a vízen, ahogy a fény elhalványul: ez Bászra lényege.",
+        "A régi negyedben a csatornákat kereskedőházak szegélyezik, amelyek emelete faragott fa rácsok mögött nyúlik az utca fölé. Ezek az erkélyek, a sanasílek, a város ismertetőjegyei. A Bászrai Múzeum, amelyet 2016-ban nyitottak meg egy egykori folyóparti palotában, a dél történetét meséli el Sumertől az iszlám korig."
+      ],
+      "caps": ["Kurna. A kerítés, amelyet Ádám fájaként ismernek, ahol a helyi hagyomány az Édenkertet helyezi el, a két folyó találkozásánál."],
+      "miss": [
+        {"t": "Naplemente a Satt al-Arabon", "d": "Csónakról a legszebb"},
+        {"t": "A sanasíl-házak", "d": "Óbászra faragott erkélyei"},
+        {"t": "A Bászrai Múzeum", "d": "Négy terem a folyónál"}
+      ]
+    },
+    "22": {
+      "kicker": "Úti cél · A Középső-Eufrátesz",
+      "title": "Mezopotámia szent városai",
+      "stand": "Nedzsef, Kerbela és Kúfa a föld leglátogatottabb helyei közé tartozik. Évente zarándokok milliói jönnek, és minden hátterű utazót udvariasan fogadnak.",
+      "cap": "A kúfai Nagymecset márványudvara alkonyatkor.",
+      "feature": ["Kúfa", "Nedzsef és a Vádi asz-Szalám", "Kerbela", "Látogatás tisztelettel"]
+    },
+    "23": {
+      "run": "Szent városok",
+      "kicker": "Kúfa és Nedzsef",
+      "drop": true,
+      "paras": [
+        "Kúfát 638-ban alapították katonai tábornak az Eufrátesz mellett, és egy nemzedéken belül az iszlám egyik szellemi fővárosa lett. A szögletes kúfi írás a városról kapta a nevét. Ali ibn Abi Tálib, Mohamed próféta unokatestvére és veje, a negyedik kalifa innen kormányzott, és a kúfai Nagymecsetben terítették le 661-ben.",
+        "A mecset a világ legrégebbiei közé tartozik. Széles udvarát állomások gyűrűzik, amelyeket a hagyomány a prófétákhoz köt, mellette pedig Muszlim ibn Akíl és Háni ibn Urva szentélye áll. Rövid sétára van a szerény ház, ahol Ali imám élt.",
+        "Tíz kilométerre nyugatra Nedzsef a sírja körül nőtt fel. Az Ali imám-szentély aranykupolája és két minaretje a régi város fölé emelkedik, termeit tükörmozaik borítja, amely szétoszlatja a fényt. Ezer éve Nedzsef a tudósok városa is. Szemináriumai, a hauza, a világ minden tájáról vonzzák a diákokat.",
+        "A város mellett fekszik a Vádi asz-Szalám, a Béke Völgye. A föld egyik legnagyobb temetője, kupolák és téglaboltozatok tája, amely a látóhatárig ér, és több mint egy évezrede folyamatosan használják."
+      ],
+      "caps": ["Vádi asz-Szalám. A Béke Völgye felülről, azon túl a nedzsefi síkság."]
+    },
+    "24": {
+      "run": "Szent városok",
+      "kicker": "Kerbela",
+      "paras": [
+        "680-ban, muharram tizedik napján Huszein ibn Alit, a Próféta unokáját társaival együtt megölték Kerbela síkságán. Az eseményre minden évben Ásúrákor emlékeznek, és negyven nappal később az Arbaín zarándoklat emberek millióit hozza gyalog a városba.",
+        "Huszein imám és testvére, Al-Abbász szentélye egy széles gyalogos sétány két oldalán néz szembe egymással. Mindkettőt arany koronázza, belül tükörmunka és kék csempe borítja. Estére, amikor a kupolák kigyulladnak és az udvarok megtelnek, a hangulat nyugodt és befogadó."
+      ],
+      "caps": [
+        "Al-Kázimijja, Bagdad. Egy vendég az udvarból fényképezi a kupolákat és a minareteket.",
+        "Bagdad csendesebb szentélyei. Dzsunajd al-Bagdádi sírja.",
+        "Bahlúl sírja."
+      ],
+      "sideTitle": "Látogatás tisztelettel",
+      "side": [
+        {"t": "Öltözék", "d": "Hosszú ujj és hosszú nadrág a férfiaknak. A nők abaját és fejkendőt viselnek a szentély területén belül; a bejáratnál kölcsönözhetők."},
+        {"t": "Belépés", "d": "Az udvarok általában minden látogató előtt nyitva állnak. A belső termek szabályai szentélyenként és naponként változnak, és az idegenvezető a helyszínen tanácsol."},
+        {"t": "Időzítés", "d": "Ásúrá és Arbaín idején a városok rendkívül zsúfoltak. Ezeket a dátumokat kikerüljük, hacsak ön nem szeretné látni őket."},
+        {"t": "Belépéskor", "d": "A cipőt, a táskát és a fényképezőgépet az ingyenes ruhatárban hagyják. A férfiak és a nők külön bejáratot használnak."},
+        {"t": "Fényképezés", "d": "A telefonokat az udvarokban általában elfogadják. Imádkozó embereket mindig csak engedéllyel fényképezzen."},
+        {"t": "Vendégszeretet", "d": "Teát, vizet és ételt gyakran ingyen kínálnak a látogatóknak. Elfogadni udvariasság."}
+      ]
+    },
+    "25": {
+      "kicker": "Úti cél · Szaláh ad-Dín",
+      "title": "Számarra: az abbászidák nagysága",
+      "stand": "Fél évszázadon át ez volt egy birodalom fővárosa, amely Észak-Afrikától Közép-Áziáig ért. Spirális minaretje Irak legismertebb sziluettje.",
+      "cap": "A Malvijja, a számarrái Nagymecset spirális minaretje, 852-ben készült el."
+    },
+    "26": {
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "836-ban al-Mu’taszim kalifa elhagyta Bagdadot, és új fővárost épített 125 kilométerrel feljebb a folyón. Számarrát nyílt terepen fektették ki sugárutakkal, palotákkal, laktanyákkal, lóversenypályákkal és vadászparkokkal. Végül több mint negyven kilométer hosszan nyúlt el a Tigris keleti partján.",
+        "Fia, al-Mutavakkil 848 és 852 között hozzáadta a Nagymecsetet. Akkor a világ legnagyobb mecsete volt, égetett téglából rakott, fallal kerített téglalap, elég nagy ahhoz, hogy az egész hadsereg együtt imádkozzon. Az északi falon kívül emelte a Malvijját, az 52 méter magas minaretet, amelynek rámpája ötször tekeredik körbe kívül.",
+        "Az udvar 892-ben visszatért Bagdadba, és Számarra nagy részét egyszerűen elhagyták, ezért maradt meg a terve ilyen teljes egészében. Az UNESCO 2007-ben vette fel Számarra régészeti városát a világörökségi listára."
+      ],
+      "caps": ["A Nagymecset. A külső fal félköríves tornyaival, és mögötte a Malvijja."],
+      "sideTitle": "Számarra röviden",
+      "side": [
+        {"t": "Főváros", "d": "836-tól 892-ig"},
+        {"t": "A Malvijja", "d": "52 m, elkészült 852-ben"},
+        {"t": "Bagdadtól", "d": "Mintegy 125 km-re északra"},
+        {"t": "UNESCO", "d": "Felvették 2007-ben"}
+      ]
+    },
+    "27": {
+      "run": "Számarra",
+      "photoTop": true,
+      "paras": [
+        "Számarra zarándokváros is. Az al-Aszkari-szentély a tizedik és a tizenegyedik imám, Ali al-Hádi és Haszan al-Aszkari sírját őrzi, az iszlám világ egyik legnagyobb aranykupolája alatt.",
+        "Közel ahhoz a helyhez, amelyet Ali al-Hádi imám börtöneként mutatnak, fekszik a Kaszr al-Birka, a Medence Palotája. Kerek medencéjét mélyen a földbe vágták, és boltozatos termek vették körül, ahol az abbászida udvar a nyári hőség elől menekült.",
+        "A központtól északra Abú Dulaf mecsete kisebb léptékben ismétli a spirális minaretet.",
+        "Egy nap Számarrában a Fable Tourral magában foglalja a Malvijját, a szentélyt, Ali al-Hádi imám börtönét és a Kaszr al-Birkát."
+      ],
+      "caps": [
+        "Kaszr al-Birka. Egy abbászida palota süllyesztett medencés udvara, íves termekkel övezve, Ali al-Hádi imám börtöne közelében.",
+        "Az al-Aszkari-szentély. Az aranykupola a csempés kapuzat fölött."
+      ],
+      "promo": "Látogasson el Számarrába a Fable Tourral — iraq.fabletour.com"
+    },
+    "28": {
+      "kicker": "Úti cél · Ninive kormányzóság",
+      "title": "Észak-Irak: birodalmak, városok és civilizációk",
+      "stand": "Észak Asszíria szíve volt, később pedig határ Róma és Perzsia között. Helyszínei az ország legritkábban látogatott és legtöbbet adó helyei közé tartoznak.",
+      "cap": "Vendégek a hatrai Márán-templom lépcsőjén.",
+      "feature": ["Hatra", "Moszul és Ninive", "Nimrúd", "Assur"]
+    },
+    "29": {
+      "run": "Észak-Irak",
+      "kicker": "Hatra",
+      "drop": true,
+      "paras": [
+        "Hatra magában áll a sivatagban, száz kilométerre Moszultól délnyugatra. Az első és a második században gazdag karavánváros volt a pártus birodalom peremén, saját arab királyai uralták, és két falgyűrű zárta körül.",
+        "Középen nagy szent körzet van. A templomok mézszínű mészkőből épültek, és a Kelet boltozatos termeit, az ivánokat a görög és római világ oszlopaival és faragott díszítésével egyesítik. A főisten Samas, a nap volt.",
+        "Hatra kitartott Traianus és Septimius Severus római császárral szemben, akik mindketten ostrom alá vették, és kudarcot vallottak. Végül I. Sápur szászánida királynak esett el 240 körül, és soha nem települt újra.",
+        "1985-ben ez lett az első hely Irakban, amelyet felvettek az UNESCO világörökségi listájára. A látogatáshoz biztonsági engedély kell, amelyet a Fable Tour előre intéz."
+      ],
+      "caps": [
+        "Kő a kövön. Faragott kapuzat a templomkörzetben.",
+        "A nagy ivánok. Boltozatos termek nyílnak a központi udvarra."
+      ]
+    },
+    "30": {
+      "run": "Észak-Irak",
+      "kicker": "Moszul, Ninive, Nimrúd és Assur",
+      "drop": true,
+      "paras": [
+        "Moszul a Tigris túlpartján az ókori Ninive halmaira néz. Kr. e. 700 körül Szín-ahhé-eríba asszír király Ninivét tette fővárosává, és tizenkét kilométernyi fallal vette körül. Unokája, Assur-bán-apli agyagtáblák könyvtárát gyűjtötte ott össze, amelyből a mezopotámiai irodalomról tudott dolgok nagy része származik. A város Kr. e. 612-ben esett el.",
+        "A középkori Moszul a kereskedelemből gazdagodott meg, és a nevét adta a muszlinnak. Az an-Núri Nagymecsetet 1172-ben építették, ferde minaretje, az al-Hadba a város jelképe lett. Mindkettőt 2017-ben pusztították el. Azóta az eredeti téglákkal építették újjá őket egy UNESCO vezette programban, és a mecset 2025-ben nyílt meg újra.",
+        "Harminc kilométerre délre fekszik Nimrúd, az asszír Kalhu. II. Assur-nászir-apli a Kr. e. kilencedik században tette fővárosává, és palotáját faragott domborművekkel és kolosszális szárnyas bikákkal töltötte meg. A helyszín 2015-ben súlyosan megsérült, a műemlékvédelem folyamatban van. Feliratos lapok és téglák ma is ott hevernek, ahol leestek.",
+        "Lejjebb a Tigrisen Assur volt az első főváros és Asszíria vallási szíve. 2003 óta világörökségi helyszín."
+      ],
+      "caps": [
+        "Moszul. Az újjáépített al-Hadba minaret az an-Núri-mecset területéről.",
+        "Assur. Ékírással bélyegzett tégla a helyszínen.",
+        "Nimrúd. Vendégek egy feliratos kőlappal a palota halmán. Hatrahoz hasonlóan Nimrúdot engedéllyel látogatják; ha azt a napon megtagadják, másik helyszínt kínálunk."
+      ]
+    },
+    "31": {
+      "kicker": "Úti cél · Kurdisztáni Régió",
+      "title": "Észak: ahol a történelem a hegyekkel találkozik",
+      "deck": "Erbil fellegvárát olyan régóta lakják, hogy az alatta lévő halom korábbi Erbilekből áll.",
+      "drop": true,
+      "wide": true,
+      "paras": [
+        "Erbil fellegvára mintegy harminc méterrel emelkedik a modern város fölé egy ovális halmon, egy tellen, amely rétegről rétegre épült fel több ezer év településéből. A város már a Kr. e. harmadik évezredben megjelenik írott forrásokban, és gyakran a világ egyik legrégebben folyamatosan lakott helyeként írják le.",
+        "Tizenkilencedik századi házhomlokzatok fala gyűrűzi a csúcsot, akár egy erőd. Belül utcácskák, udvarok, egy mecset és egy hamam van. A fellegvárat 2014-ben vették fel az UNESCO világörökségi listájára, és a helyreállítás tart, ezért egyes részek zárva lehetnek.",
+        "A lábánál a fedett Qaysari bazár mézet, dióféléket, sajtot, fűszereket és kurd textileket árul, a főtér teaházai pedig arra valók, hogy az ember nézze, ahogy a város elmegy előtte.",
+        "A Moszul felől vezető úton a Már Mattai-kolostor az Alfaf-hegy oldalába kapaszkodik. A negyedik században alapították, és az egyik legrégebbi keresztény kolostor, amely ma is használatban van. Erbilen túl a síkság átadja a helyét a Zagrosznak: szurdokok, vízesések és hegyi utak, amelyek meglepik azt, aki Irakot síknak gondolja."
+      ],
+      "miss": [
+        {"t": "Az erbili fellegvár", "d": "UNESCO-világörökség, 2014"},
+        {"t": "A Qaysari bazár", "d": "A fellegvár lábánál"},
+        {"t": "A Már Mattai-kolostor", "d": "Az Alfaf-hegyen"},
+        {"t": "A kilencnapos utazás", "d": "Erbilben ér véget; lásd a 36. oldalon"}
+      ],
+      "promo": "Utazzon Bászrától Erbilig a Fable Tourral — iraq.fabletour.com"
+    },
+    "32": {
+      "kicker": "Konyha · Vendégszeretet",
+      "title": "Irak ízei",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Az iraki asztalt több emberre terítik, mint ahányat várnak, mert a vendéggel számolnak. A nemzeti étel a maszgúf: folyami ponty, kettéhasítva, sózva, cövekekre támasztva egy fatűz mellett, és lassan sütve, amíg a bőre ropog. Lepénykenyérrel, ecetes mangóval és nyers hagymával eszik.",
+        "Ünnepnapokon jön a kúzi, egy egész bárány, rizs fölött sütve mandulával és mazsolával, és a dolma, fűszeres rizzsel töltött zöldség, savanykás-édes szószban párolva. A bagdadi reggeli a kahi, leveles tészta bivalytejszínnel és sziruppal.",
+        "Minden étkezést tea követ. Erősre főzik, kardamommal illatosítják, és egy istikánnak nevezett kis pohárban szolgálják fel. Bászrában kérje a szárított lime-ból készült teát. Irak datolyája nem szorul bemutatásra, és több száz fajtája van."
+      ],
+      "caps": ["Fent. Saif William Frej szerzővel és csoportjával vacsoránál Moszulban."],
+      "sideTitle": "Az asztalon",
+      "side": [
+        {"t": "Maszgúf", "d": "Tűzön sült folyami ponty"},
+        {"t": "Kúzi", "d": "Bárány fűszeres rizsen"},
+        {"t": "Dolma", "d": "Töltött zöldség"},
+        {"t": "Kahi és gejmár", "d": "A bagdadi reggeli"}
+      ]
+    },
+    "33": {
+      "run": "Fable Tour",
+      "kicker": "A Fable Tour-élmény",
+      "title": "Több, mint egy utazás. Egy történet, amelyre emlékezni fog.",
+      "paras": [
+        "A Fable Tour bagdadi székhelyű iraki vállalat. Magán- és kis csoportos utazásokat tervezünk az egész országon át, Bászrától Erbilig, és magunk bonyolítjuk le őket.",
+        "Minden utazás ugyanúgy kezdődik: az idegenvezetője az érkezési csarnokban várja. Attól a pillanattól egy privát, légkondicionált jármű, egy hivatásos idegenvezető és egy sofőr marad önnel az indulásig. Angolul, oroszul és arabul vezetünk.",
+        "Minden városban négy- és ötcsillagos szállodákat választunk, a napi reggelit és a belépőket beleértjük, és beszerezzük a Hatra és Nimrúd féle helyszínekhez szükséges engedélyeket. Ön választja a dátumot; a többit mi intézzük.",
+        "Alapítónk, Saif Al-Tamimi szerepel William Frej fényképész El nem feledett: ősi városok egy távoli múltból című könyvében; az ő csoportját vezette Észak-Irakon át."
+      ],
+      "caps": [
+        "Érkezés. Az idegenvezetője a Bagdadi nemzetközi repülőtér épületében várja önt.",
+        "Úton. Vendégek a Kislánál, Bagdadban."
+      ],
+      "sideTitle": "Mit tartalmaz",
+      "side": [
+        {"t": "Magán vagy csoportos", "d": "Az ön által választott napon"},
+        {"t": "Három nyelv", "d": "angol, orosz, arab"},
+        {"t": "Válogatott szállodák", "d": "Négy és öt csillag, reggelivel"},
+        {"t": "Minden elintézve", "d": "Közlekedés, belépők, engedélyek"}
+      ],
+      "promo": "Keressen minket a GetYourGuide-on és a Tripadvisoron „Fable Tour in Iraq” néven, és az Instagramon: @fable_tour. Tervezze meg privát iraki utazását — iraq.fabletour.com"
+    },
+    "34": {
+      "kicker": "Utazások · Fable Tour",
+      "tour": "Irak kulturális öröksége · 7 nap / 6 éjszaka",
+      "title": "Fedezze fel Mezopotámiát hét nap alatt",
+      "deck": "Babilontól a mocsárvidéken, Számarrán és Hatrán át, indulás és érkezés a Bagdadi nemzetközi repülőtéren.",
+      "days": [
+        {"n": "01", "title": "Babilon és Kerbela", "route": "Bagdad – Babilon – Kerbela", "text": "Fogadás a repülőtéren, aztán a Körmeneti út, az Istár-kapu és a Babiloni oroszlán. Tovább a borszippai zikkurathoz és estére Kerbela szentélyeihez.", "stay": "Kerbela · Al-Baron Hotel"},
+        {"n": "02", "title": "Kúfa és Nedzsef", "route": "Kúfa – Nedzsef", "text": "A kúfai Nagymecset, a Vádi asz-Szalám temető utcácskái és Ali imám szentélyének aranykupolája.", "stay": "Nedzsef · Granada, Do Najaf vagy Naseem Al-Najaf"},
+        {"n": "03", "title": "Uruk és Bászra naplementében", "route": "Uruk – Bászra", "text": "Uruk, Gilgames városa és a korai írásé, aztán délre a Satt al-Arabhoz és óbászra sanasíl-házaihoz.", "stay": "Bászra · Mövenpick Zinat Al-Hayat vagy Corniche Hotel"},
+        {"n": "04", "title": "Ádám fája, a mocsárvidék és Ur", "route": "Kurna – mocsárvidék – Ur – Bagdad", "text": "Ahol a két folyó Kurnánál találkozik, csónak a nádas mocsarakon át, és az uri zikkurat lépcsője.", "stay": "Bagdad · Do Baghdad, Alabasly Suites vagy Bilitum"},
+        {"n": "05", "title": "Számarra és az út északra", "route": "Számarra – Moszul", "text": "A spirális Malvijja-minaret és az al-Aszkari-szentély, aztán tovább Moszulba.", "stay": "Moszul · Ramada Hotel"},
+        {"n": "06", "title": "Moszul, Nimrúd és Hatra", "route": "Moszul – Nimrúd – Hatra – Bagdad", "text": "Ómoszul és az an-Núri-mecset, az asszír Nimrúd, és Hatra templomai a sivatagban.", "stay": "Bagdad · Do Baghdad, Alabasly Suites vagy Bilitum"},
+        {"n": "07", "title": "Bagdad, a nagy finálé", "route": "Bagdad – repülőtér", "text": "Az al-Kázimijja szentély, az al-Mutanabbi utca és a Kisla, az Akar Kúf-i kassú zikkurat, aztán a járata.", "stay": ""}
+      ]
+    },
+    "35": {
+      "included": [
+        "Privát, légkondicionált közlekedés az egész úton",
+        "Hivatásos idegenvezető angolul, oroszul vagy arabul",
+        "6 éjszaka négy- és ötcsillagos szállodákban, franciaágyas vagy kétágyas szoba",
+        "Reggeli minden nap",
+        "Belépők az útiterv minden helyszínére",
+        "Fogadás a repülőtéren, és búcsútranszfer Bagdadban"
+      ],
+      "excluded": "Nemzetközi repülőjáratok · Iraki vízum · Ebédek és vacsorák · Utasbiztosítás · Személyes kiadások és borravaló",
+      "good": "Magán vagy kis csoportos indulások. Hatra és Nimrúd biztonsági engedélyt igényel, amelyet intézünk; ha az engedélyt megtagadják, másik helyszínt kínálunk. A látogatások sorrendje a helyszínen módosulhat az időzítés és a nyitvatartás miatt.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "36": {
+      "kicker": "Utazások · Fable Tour",
+      "tour": "Egész Irak, Bászrától Erbilig · 9 nap / 8 éjszaka",
+      "title": "A nagy iraki utazás, kilenc nap",
+      "deck": "Az egész ország egy vonalban, délről északra. Érkezés Bászrába, indulás Erbilből.",
+      "days": [
+        {"n": "01", "title": "Bászra, a dél kapuja", "route": "Bászra", "text": "A Szent Szűz Mária örmény temploma, a Bászrai Múzeum és naplemente a Satt al-Arabon.", "stay": "Bászra · Mövenpick Zinat Al-Hayat"},
+        {"n": "02", "title": "A mocsárvidék és az uri zikkurat", "route": "mocsárvidék – Ur – Nedzsef", "text": "Nádszigetek, vízibivalyok és mudhíf vendégházak, aztán a Nagy Zikkurat és a királyi sírok.", "stay": "Nedzsef · Do Najaf Hotel"},
+        {"n": "03", "title": "Nedzsef, Kúfa és Kerbela", "route": "Nedzsef – Kúfa – Kerbela", "text": "Ali imám szentélye, a Vádi asz-Szalám, a kúfai Nagymecset és Kerbela szentélyei.", "stay": "Kerbela · The Baron Hotel"},
+        {"n": "04", "title": "Babilon és Borszippa", "route": "Babilon – Borszippa – Bagdad", "text": "A Körmeneti út, az Istár-kapu és Nabukodonozor palotái, aztán Nabú zikkuratja.", "stay": "Bagdad · Alabasly Suites"},
+        {"n": "05", "title": "Bagdad, a Béke Városa", "route": "Bagdad – Akar Kúf", "text": "Az al-Mutanabbi utca és a Kisla, a Mártírok emlékműve, az al-Kázimijja szentély és Akar Kúf.", "stay": "Bagdad · Alabasly Suites"},
+        {"n": "06", "title": "Számarra és Hatra", "route": "Számarra – Hatra – Moszul", "text": "A Malvijja, az al-Aszkari-szentély és Hatra sivatagi városa.", "stay": "Moszul · Ramada Plaza by Wyndham Mosul Corniche"},
+        {"n": "07", "title": "Moszul, Nimrúd és Már Mattai", "route": "Moszul – Nimrúd – Már Mattai – Erbil", "text": "Ómoszul és az an-Núri-mecset, az asszír Nimrúd és a hegyi kolostor.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "08", "title": "Erbil és ősi fellegvára", "route": "Erbil", "text": "A fellegvár és a Qaysari bazár.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "09", "title": "Indulás", "route": "Erbil – repülőtér", "text": "Transzfer az Erbili nemzetközi repülőtérre.", "stay": ""}
+      ]
+    },
+    "37": {
+      "included": [
+        "8 éjszaka négy- és ötcsillagos szállodákban, franciaágyas vagy kétágyas szoba",
+        "Reggeli minden nap",
+        "Privát, légkondicionált közlekedés az egész útvonalon",
+        "Hivatásos idegenvezető angolul, oroszul vagy arabul",
+        "Belépők minden helyszínre, beleértve Hatra és Nimrúd engedélyeit",
+        "Fogadás a repülőtéren Bászrában, és kiszállítás az erbili repülőtéren"
+      ],
+      "excluded": "Nemzetközi repülőjáratok · Iraki e-vízum (a Kurdisztáni Régióra is érvényes) · Egészségbiztosítás · Ebédek és vacsorák · Csónakázás a mocsárvidéken (kérésre) · Személyes kiadások és borravaló",
+      "good": "Magán vagy kis csoportos indulások. Hatra és Nimrúd biztonsági engedélyt igényel, amelyet intézünk; ha az engedélyt megtagadják, másik helyszínt kínálunk. A látogatások sorrendje a helyszínen módosulhat az időzítés és a nyitvatartás miatt.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "38": {
+      "kicker": "Útikalauz",
+      "title": "Alapvető iraki útikalauz",
+      "groups": [
+        {"h": "Mielőtt útra kel", "items": [
+          {"t": "Vízum.", "d": "Irak sok állampolgárságnak elektronikus vízumot ad ki a hivatalos e-vízumportálján. Ha az öné nem jogosult, a Fable Tour egy teljes körutazás foglalásának részeként megszerezheti önnek a vízumot. A szabályok változnak: egyeztessen velünk vagy egy iraki nagykövetséggel, mielőtt repülőjegyet foglal."},
+          {"t": "Útlevél.", "d": "Vigyen magával olyan útlevelet, amely az érkezése napján túl legalább hat hónapig érvényes, és tartson papírmásolatot a fényképes oldalról."},
+          {"t": "Mikor érdemes menni.", "d": "Októbertől áprilisig tart a szezon, enyhe nappalokkal és hűvös éjszakákkal. Júniustól szeptemberig a nappali hőmérséklet a középső és a déli országrészben rendszeresen meghaladja a 45°C-ot."}
+        ]},
+        {"h": "Pénz, öltözék és szokások", "items": [
+          {"t": "Pénz.", "d": "A pénznem az iraki dinár. Irak jórészt készpénzes gazdaság. Hozzon amerikai dollárt tiszta, új bankjegyekben, és váltsa át helyben; a kártyák a nagyobb szállodákban működnek."},
+          {"t": "Öltözék.", "d": "Mindenhol öltözzön szerényen: váll és térd fedve, férfiaknak és nőknek. A nők vigyenek fejkendőt, a szentélyeken belül abaja kötelező."},
+          {"t": "Szokások.", "d": "A péntek a pihenés napja. A jobb kézzel köszönjön, fogadja el a teát, ha kínálják, és kérjen engedélyt, mielőtt embereket fényképez. Ne fényképezzen ellenőrző pontokat vagy biztonsági személyzetet."}
+        ]},
+        {"h": "Nyelv és gyakorlati tudnivalók", "items": [
+          {"t": "Nyelv.", "d": "Az arab és a kurd a hivatalos nyelv. A szállodákban értik az angolt; az idegenvezetője mindenhol máshol tolmácsol."},
+          {"t": "Egészség és biztosítás.", "d": "Hozza magával a rendszeres gyógyszereit, és igyon palackozott vizet. Az Irakot fedező utasbiztosítást nagyon ajánljuk, és programjaink nem tartalmazzák."},
+          {"t": "Gyakorlati.", "d": "Időzóna: UTC+3. Áram: 230 V; a csatlakozók különböznek, ezért hozzon univerzális adaptert. Helyi SIM-kártyát a repülőtereken árulnak."}
+        ]}
+      ],
+      "noteTitle": "Információ, amely változhat.",
+      "note": "A vízumszabályokat, a beutazási feltételeket, a nyitvatartást és a helyszínek megközelítését az iraki hatóságok szabják meg, és rövid időn belül változhatnak. Utazás előtt nézze meg saját kormánya utazási tanácsát és az iraki Külügyminisztériumot, és foglaláskor kérdezzen minket az aktuális helyzetről."
+    },
+    "39": {
+      "run": "Foglalás",
+      "kicker": "Tervezze meg az utazását",
+      "title": "Az iraki kalandja itt kezdődik",
+      "intro": "Válasszon programot, nyissa meg az oldalát, és válassza ki a dátumát. Minden utazás futhat magánútként az ön társaságának, vagy kis csoportként, és mindegyik alakítható.",
+      "cards": [
+        {"days": "6 nap", "title": "Bagdad, Babilon és Számarra", "text": "Hat nap egyetlen bagdadi szállodából: az Iraki Múzeum és a régi Bagdad, Akar Kúf és a Ták-i Kiszrá, Számarra, Babilon és Borszippa.", "scan": "Útiterv és időpontok"},
+        {"days": "7 nap", "title": "Irak kulturális öröksége", "text": "Hét nap Bagdadból: Babilon, Kerbela, Nedzsef, Uruk, Bászra, a mocsárvidék, Ur, Számarra, Moszul és Hatra.", "scan": "Útiterv és időpontok"},
+        {"days": "9 nap", "title": "Egész Irak, Bászrától Erbilig", "text": "Kilenc nap délről északra, Nimrúddal, a Már Mattai-kolostorral és Erbil fellegvárával kiegészítve.", "scan": "Útiterv és időpontok"}
+      ],
+      "howTitle": "Hogyan foglaljon",
+      "how": "Küldje el a dátumait és az utazók számát WhatsAppon, e-mailben vagy a weboldalunk űrlapján. Elérhetőséggel és írásos visszaigazolással válaszolunk. A bagdadi egynapos kirándulások és a reptéri transzferek ugyanígy foglalhatók.",
+      "contactTitle": "Kapcsolat",
+      "lines": [
+        "iraq.fabletour.com",
+        "support@fabletour.com",
+        "WhatsApp +964 771 174 5353",
+        "0–24 ügyfélszolgálat +1 (212) 433-8608",
+        "Bagdadi nemzetközi repülőtér, Al-Karkh, Bagdad, Irak",
+        "Instagram @fable_tour"
+      ],
+      "promo": "Tervezze meg privát iraki utazását — iraq.fabletour.com"
+    },
+    "40": {
+      "title": "Az útja Mezopotámián át itt kezdődik.",
+      "text": "Fedezze fel Irak rendkívüli történelmét, élő hagyományait és felejthetetlen úti céljait a Fable Tourral. Babilon ősi csodáitól Bagdad élénk utcáin át Dél-Mezopotámia időtlen tájaiig ismerje meg Irakot hiteles, szakértően vezetett utazásokon.",
+      "url": "iraq.fabletour.com",
+      "email": "support@fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353",
+      "service": "0–24 ügyfélszolgálat +1 (212) 433-8608",
+      "address": "Bagdadi nemzetközi repülőtér, Al-Karkh, Bagdad, Irak",
+      "scan": "Tervezze meg az utazását",
+      "credit": "Fénykép: naplemente a Satt al-Arabon, Bászra"
+    }
+  }
+}

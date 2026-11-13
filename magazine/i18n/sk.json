@@ -1,0 +1,657 @@
+{
+  "lang": "sk",
+  "dir": "ltr",
+  "metaTitle": "MEZOPOTÁMIA — cestovateľský magazín o Iraku | Fable Tour",
+  "metaDesc": "MEZOPOTÁMIA, cestovateľský magazín o Iraku od Fable Tour. Otáčajte stránky: Bagdad, Babylon, Ur a Uruk, močiare, Samarra, Hatra, Mosul a Irbíl, spolu s našimi 7-dňovými a 9-dňovými zájazdmi.",
+  "brand": "MEZOPOTÁMIA",
+  "ui": {
+    "hint": "Potiahnite roh strany alebo ťuknite na šípky a otočte stranu",
+    "first": "Prvá strana",
+    "prev": "Predchádzajúca strana",
+    "next": "Nasledujúca strana",
+    "sound": "Zvuk zapnutý alebo vypnutý",
+    "full": "Celá obrazovka",
+    "lang": "Jazyk"
+  },
+  "home": {
+    "nav": "Magazín",
+    "eyebrow": "Náš magazín",
+    "title": "Mezopotámia: cestovateľský magazín o Iraku",
+    "lead": "Potiahnite roh strany alebo použite šípky a otočte stránky.",
+    "open": "Otvoriť na celú obrazovku"
+  },
+  "label": {
+    "above": "HORE",
+    "feature": "V TEJTO REPORTÁŽI",
+    "miss": "NEPREHLIADNITE",
+    "day": "DEŇ",
+    "overnight": "Nocľah",
+    "included": "ZAHRNUTÉ",
+    "excluded": "NIE JE ZAHRNUTÉ",
+    "good": "DOBRÉ VEDIEŤ",
+    "scan": "Pozrite termíny a rezerváciu"
+  },
+  "pages": {
+    "1": {
+      "kicker": "Fable Tour  |  cestovateľský magazín o Iraku  |  Číslo 01",
+      "sub": "Objavte Irak s Fable Tour",
+      "headline": "Irak: tam, kde sa začala civilizácia",
+      "deck": "Objavte nadčasové divy starovekej Mezopotámie",
+      "cols": [
+        {"t": "Babylon", "d": "Prejdite odkazom kráľov"},
+        {"t": "Bagdad", "d": "Objavte Mesto mieru"},
+        {"t": "Močiare", "d": "Život medzi dvoma riekami"},
+        {"t": "Ur a Uruk", "d": "Úsvit civilizácie"}
+      ],
+      "credit": "Obálka: moderná rekonštrukcia Ištarskej brány pri vstupe do starovekého Babylonu v Iraku"
+    },
+    "2": {
+      "issue": "Číslo 01",
+      "title": "Vitajte v Mezopotámii",
+      "text": "Medzi Tigrisom a Eufratom ľudia po prvý raz budovali mestá, zapisovali svoje zákony a dvíhali chrámy k nebu. Tá krajina je tu stále, a s ňou aj jej pamiatky. Tento magazín je pozvánkou, aby ste ich videli.",
+      "cap": "Návštevníci na 3 400 rokov starom kasitskom zikkurate v Akarkúfe, západne od Bagdadu."
+    },
+    "3": {
+      "run": "Vitajte",
+      "kicker": "Od zakladateľa",
+      "title": "Osobné pozvanie objaviť Irak",
+      "paras": [
+        "Narodil som sa v Iraku v roku 1991 a vyrastal som medzi menami, ktoré pozná celý svet: Babylon, Ur, Bagdad. Roky som študoval a cestoval v zahraničí. Vyštudoval som zubné lekárstvo na Ukrajine a ako turista som navštívil trinásť krajín a všade, kam som prišiel, sa ma ľudia pýtali to isté: aký je Irak naozaj?",
+        "Fable Tour je moja odpoveď. Stal som sa sprievodcom, lebo som chcel, aby návštevníci stáli tam, kde sa odohrali dejiny, a stretli ľudí, ktorí vedľa nich žijú dnes. Zikkurat je viac než fotografia, keď vám niekto povie, kto ho postavil a prečo. Pohár čaju v starej bagdadskej kaviarni je viac než nápoj, keď viete, kto tam sedel pred vami.",
+        "Naše cesty sú súkromné alebo v malých skupinách, tempom, ktoré si zvolíte. Cestujeme s licencovanými sprievodcami po anglicky, rusky a arabsky, bývame v starostlivo vybraných hoteloch a staráme sa o povolenia, dopravu a časový rozvrh, aby ste sa mohli len dívať, počúvať a pýtať.",
+        "Veríme aj v zodpovedné cestovanie. Znamená to úctu k svätým miestam a miestnym zvykom, podporu rodinných reštaurácií a člnkárov v močiaroch a to, že každú lokalitu necháme tak, ako sme ju našli.",
+        "Na nasledujúcich stranách nájdete miesta, ktoré mám najradšej. Dúfam, že vás presvedčia prísť, a teším sa, že vás na letisku privítam osobne."
+      ],
+      "sign": "Saif Al-Tamimi",
+      "role": "Zakladateľ a sprievodca, Fable Tour",
+      "cap": "Saif Al-Tamimi, zakladateľ a sprievodca, Fable Tour."
+    },
+    "4": {
+      "run": "Obsah",
+      "kicker": "V tomto čísle",
+      "title": "Obsah",
+      "items": [
+        {"n": "06", "t": "Bagdad", "d": "Mesto mieru"},
+        {"n": "09", "t": "Al-Kázimíja", "d": "Svätyňa dvoch imámov"},
+        {"n": "10", "t": "Babylon", "d": "Prejdite ríšou kráľov"},
+        {"n": "12", "t": "Borsippa", "d": "Odkaz Nabúa"},
+        {"n": "13", "t": "Ktésifón a Akarkúf", "d": "Dva velikáni na okraji Bagdadu"},
+        {"n": "14", "t": "Ur a Uruk", "d": "Úsvit civilizácie"},
+        {"n": "18", "t": "Močiare", "d": "Život medzi riekami"},
+        {"n": "21", "t": "Basra", "d": "Mesto riek a paliem"},
+        {"n": "22", "t": "Nadžaf, Karbalá a Kúfa", "d": "Posvätné mestá Mezopotámie"},
+        {"n": "25", "t": "Samarra", "d": "Veľkoleposť Abbásovcov"},
+        {"n": "28", "t": "Severný Irak", "d": "Ríše, mestá a civilizácie"},
+        {"n": "31", "t": "Irbíl", "d": "Tam, kde sa dejiny stretávajú s horami"},
+        {"n": "32", "t": "Chute Iraku", "d": "Kuchyňa a pohostinnosť"},
+        {"n": "33", "t": "Zážitok Fable Tour", "d": "Viac než zájazd"},
+        {"n": "34", "t": "Sedem dní", "d": "Objavte Mezopotámiu"},
+        {"n": "36", "t": "Deväť dní", "d": "Veľká cesta Irakom"},
+        {"n": "38", "t": "Skôr než odcestujete", "d": "Základný sprievodca"},
+        {"n": "39", "t": "Naplánujte si cestu", "d": "Rezervácia a kontakt"}
+      ],
+      "fig": "Strana 12. Zikkurat v Borsippe, korunovaný tehlou spečenou v dávnom požiari.",
+      "pub": [
+        "MEZOPOTÁMIA. Číslo 01. Vydáva Fable Tour, Medzinárodné letisko Bagdad, Al-Karch, Bagdad, Irak.",
+        "Všetky fotografie sú od Fable Tour, nasnímané na našich vlastných cestách.",
+        "iraq.fabletour.com"
+      ]
+    },
+    "5": {
+      "run": "Mapa",
+      "kicker": "Destinácie",
+      "title": "Irak jedným pohľadom",
+      "places": [
+        {"t": "Mosul a Ninive", "d": "Strana 30"},
+        {"t": "Irbíl", "d": "Strana 31"},
+        {"t": "Nimrud", "d": "Strana 30"},
+        {"t": "Hatra", "d": "Strana 29 · UNESCO"},
+        {"t": "Aššur", "d": "Strana 30 · UNESCO"},
+        {"t": "Samarra", "d": "Strana 25 · UNESCO"},
+        {"t": "Bagdad", "d": "Strana 06"},
+        {"t": "Ktésifón", "d": "Strana 13"},
+        {"t": "Karbalá", "d": "Strana 24"},
+        {"t": "Babylon", "d": "Strana 10 · UNESCO"},
+        {"t": "Borsippa", "d": "Strana 12"},
+        {"t": "Nadžaf a Kúfa", "d": "Strana 22"},
+        {"t": "Uruk", "d": "Strana 16"},
+        {"t": "Močiare", "d": "Strana 18 · UNESCO"},
+        {"t": "Ur", "d": "Strana 14"},
+        {"t": "Basra", "d": "Strana 21"}
+      ],
+      "note": "Zlatá farba označuje lokalitu svetového dedičstva UNESCO; tmavomodrá označuje ďalšiu destináciu v tomto čísle. Hranice sú zakreslené schematicky podľa Natural Earth a rieky sú schematické. Na Zozname svetového dedičstva je šesť irackých lokalít: Hatra (1985), Aššur (2003), Samarra (2007), citadela v Irbíle (2014), Ahvár južného Iraku, ktorý zahŕňa Ur a Uruk (2016), a Babylon (2019)."
+    },
+    "6": {
+      "kicker": "Destinácia · Bagdad",
+      "title": "Bagdad: Mesto mieru",
+      "stand": "Založené ako Madínat al-Salám v roku 762, abbásovské hlavné mesto bolo kedysi najväčším mestom na svete. Jeho kníhkupci, čajovne a nábrežia ten odkaz nesú dodnes.",
+      "cap": "Socha básnika Al-Mutanabbího z desiateho storočia na riečnom konci ulice, ktorá nesie jeho meno, so svetlami protiľahlého brehu Tigrisu v pozadí.",
+      "feature": ["Ulica Al-Mutanabbího", "Al-Mustansiríja", "Kišla", "Kaviareň Šabandar", "Al-Kázimíja"]
+    },
+    "7": {
+      "run": "Bagdad",
+      "drop": true,
+      "paras": [
+        "V lete roku 762 si abbásovský kalif al-Mansúr vybral miesto na západnom brehu Tigrisu a nariadil postaviť hlavné mesto podľa plánu, aký dovtedy nijaké mesto nemalo: dokonalý kruh, s palácom a mešitou v strede a so štyrmi bránami otvorenými k cestám ríše. Nazval ho Madínat al-Salám, Mesto mieru.",
+        "Z Okrúhleho mesta dnes nad zemou nestojí nič, no predstava Bagdadu, ktorú vytvorilo, nikdy nezmizla. V priebehu jedného storočia to bolo miesto, kde sa grécka, perzská a indická vzdelanosť prekladala do arabčiny, kde papier nahradil pergamen a kam prichádzali učenci a básnici, aby si urobili meno.",
+        "Najzachovalejším svedkom toho veku je Al-Mustansiríja, vysoká škola, ktorú založil kalif al-Mustansir a otvorili ju v roku 1233. Jej dlhé tehlové nádvorie, rámované lomenými oblúkmi a vyrezávanými geometrickými panelmi, kedysi pod jednou strechou združovalo všetky štyri školy sunnitského práva. Prejdite ňou včas, kým nastane horúčava, a proporcie vysvetlia všetko samy.",
+        "O pár minút ďalej budova známa ako Abbásovský palác ukazuje to isté tehlové murivo v domácom meradle: klenuté chodby, hlboké ívány a stropy vyrezané do voštinových mukarnasov.",
+        "Potom prichádza ulica Al-Mutanabbího. Bagdadčania radi citujú starú vetu, že Káhira píše, Bejrút tlačí a Bagdad číta, a v piatok ráno to ulica dokazuje, keď sú knihy vyložené na chodníku od jedného konca po druhý. Na vzdialenom konci stojí sám básnik v bronze, so zdvihnutou rukou k rieke.",
+        "Vedľa neho je kaviareň Šabandar, ktorá podáva čaj od roku 1917 pod stenami starých fotografií, a Kišla, osmanské kasárne, ktorých hodinová veža meria čas nad Tigrisom od devätnásteho storočia."
+      ],
+      "caps": [
+        "Al-Mustansiríja. Dva rady lomených oblúkov a vyrezávané tehlové panely okolo nádvoria vysokej školy, otvorenej v roku 1233.",
+        "Kišla. Hosť z arkády zarámováva osmanskú hodinovú vežu.",
+        "Kaviareň Šabandar. Mosadzný nápis nad dverami najznámejšej čajovne v meste."
+      ],
+      "miss": [
+        {"t": "Ulica Al-Mutanabbího", "d": "Piatkový knižný trh"},
+        {"t": "Al-Mustansiríja", "d": "Otvorená v roku 1233"},
+        {"t": "Kišla", "d": "Hodinová veža na Tigrise"},
+        {"t": "Svätyňa Al-Kázimíja", "d": "Pozri stranu 9"}
+      ],
+      "promo": "Objavte Bagdad s miestnym sprievodcom — iraq.fabletour.com"
+    },
+    "8": {
+      "kicker": "Večer v starom Bagdade",
+      "photoTop": true,
+      "paras": [
+        "Bagdad najlepšie pochopíte pešo a prechádzka je krátka. Začnite pod arkádami ulice Al-Rašíd, otvorenej v roku 1916, kde Hadž Zbala nalieva hrozienkový šerbet od roku 1900.",
+        "Odtiaľ ulica Al-Mutanabbího vedie priamo k rieke. Cez deň je to knižný trh Iraku. Po zotmení sa rozsvecujú svetlá, balkóny sa zapĺňajú a celé mesto akoby sa tadiaľ prechádzalo: rodiny, študenti, hudobníci, predavači keramiky a kávy.",
+        "Dajte si načas pri knižných stánkoch a potom si v Šabandare sadnite na čaj v malom pohári zúženom v páse. Za ním vedú obnovená štvrť Saraj a Kišla k soche básnika a k Tigrisu."
+      ],
+      "caps": [
+        "Ulica Al-Mutanabbího. Knižný trh po zotmení, pod tehlovými arkádami a balkónmi.",
+        "Knižné stánky. Saif sa zastaví, aby si čítal.",
+        "Uličná hudba. Saxofonista v štvrti Saraj.",
+        "Hadž Zbala. Šerbet na ulici Al-Rašíd od roku 1900."
+      ],
+      "promo": "Objavte Bagdad s miestnym sprievodcom — iraq.fabletour.com"
+    },
+    "9": {
+      "run": "Bagdad",
+      "kicker": "Bagdad · Al-Kázimíja",
+      "title": "Svätyňa dvoch imámov",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Na severe Bagdadu, na západnom brehu Tigrisu, stoja vedľa seba dve zlaté kupoly. Pod nimi ležia starý otec a jeho vnuk: Músá al-Kázim, siedmy imám dvanástich imámov šíitského islamu, a Muhammad al-Džavád, deviaty. Štvrť má meno podľa nich. Al-Kázimíja, čiže Kázimajn, znamená miesto dvoch Kázimov.",
+        "Músá ibn Dža'far sa narodil v roku 745 pri Medíne ako syn veľkého učenca imáma Dža'fara al-Sádika. Bol známy trpezlivosťou a štedrosťou a titul al-Kázim znamená ten, kto kroti svoj hnev. Mnohí ho volajú aj Báb al-Havá'idž, Brána potrieb. Abbásovskí kalifovia videli v jeho stúpencoch hrozbu. Hárún al-Rašíd ho dal zatknúť v Medíne a priviesť do Iraku, kde strávil roky vo väzení. Zomrel v bagdadskom väzení v roku 799. Šíitska tradícia hovorí, že bol otrávený. Pochovali ho na cintoríne Kurajšovcov, ktorý zakladateľ Bagdadu založil mimo Okrúhleho mesta.",
+        "Jeho vnuk Muhammad ibn Alí sa narodil v Medíne v roku 811 ako syn imáma Alího al-Ridá, ktorý je pochovaný v Mašhade. Imámom sa stal približne v siedmich rokoch, ako najmladší z dvanástich, a pamätajú si ho preto, že ešte ako chlapec odpovedal popredným právnikom na dvore kalifa al-Ma'múna. Jeho titul al-Džavád znamená štedrý. Kalif al-Mu'tasim ho povolal do Bagdadu, kde v roku 835 zomrel vo veku dvadsaťpäť rokov, podľa šíitskej tradície na jed, a uložili ho vedľa starého otca.",
+        "Svätyňa vyrástla okolo oboch hrobov. Jej dnešná podoba pochádza prevažne zo šestnásteho storočia a kupoly neskôr pokryli zlatom. Každý rok výročie smrti imáma al-Kázima 25. radžabu privedie veľké zástupy pešo z celého mesta. Návštevníci všetkých vier sú na nádvoriach vítaní; ženy nosia abáju, ktorú dostanú pri bráne."
+      ],
+      "caps": ["Al-Kázimíja. Dvojica zlatých kupol a štyri minarety svätyne, osvetlené na večer."]
+    },
+    "10": {
+      "kicker": "Destinácia · guvernorát Bábil",
+      "title": "Babylon: prejdite ríšou kráľov",
+      "stand": "Dvetisíc rokov jeho meno znamenalo najväčšie mesto, aké si kto vedel predstaviť. Deväťdesiat minút južne od Bagdadu jeho hradby stále nesú pečať kráľa, ktorý ich postavil.",
+      "cap": "Býky a draky na modernej rekonštrukcii Ištarskej brány, postavenej v zmenšenej mierke pri vstupe do lokality.",
+      "feature": ["Ištarská brána", "Slávnostná cesta", "Babylonský lev", "Dôkazy a legenda"]
+    },
+    "11": {
+      "run": "Babylon",
+      "drop": true,
+      "paras": [
+        "Babylon bol už starobylý, keď z neho Chammurapi v osemnástom storočí pred n. l. urobil hlavné mesto ríše a dal svoje zákony vytesať do kameňa. Mesto, ktorým dnes návštevníci prechádzajú, je však prevažne dielom jedného muža, Nabuchodonozora II., ktorý vládol od roku 605 do roku 562 pred n. l.",
+        "Znovu ho postavil v mierke, ktorá mala ohromiť. Dvojité hradby obklopovali chrámy, paláce a zikkurat. Okolo roku 575 pred n. l. vztýčil na severnej strane Ištarskú bránu, obloženú sýtomodrými glazovanými tehlami a ozdobenú radmi býkov a drakov, zvierat bohov Adada a Marduka. Levy, znak Ištary, lemovali ulicu, ktorá k nej viedla.",
+        "Mnohé tehly nesú jeho meno. Pozrite sa zblízka na múry Južného paláca a nájdete klinopisnú pečiatku opakovanú znova a znova: Nabuchodonozor, kráľ Babylonu. Nad nimi ležia svetlejšie vrstvy z rekonštrukcie z osemdesiatych rokov 20. storočia, takže obe obdobia rozoznáte na prvý pohľad.",
+        "V roku 539 pred n. l. prešiel Babylon Peržanom za Kýra a v roku 323 pred n. l. tu zomrel Alexander Veľký. V roku 2019 lokalitu zapísali na Zoznam svetového dedičstva UNESCO."
+      ],
+      "tableTitle": "Dôkazy a legenda",
+      "tableHead": ["Predmet", "Čo ukazuje archeológia"],
+      "rows": [
+        {"s": "Ištarská brána", "w": "Vykopával ju Robert Koldewey od roku 1899. Glazovanú hornú bránu znovu postavili v Pergamonskom múzeu v Berlíne. V Babylone vidíte staršie, neglazované tehlové stupne stále na mieste a pri vstupe modernú repliku."},
+        {"s": "Slávnostná cesta", "w": "Dláždená ulica viedla od brány k chrámu Marduka. Úseky jej pôvodnej dlažby a tehlové múry s vymodelovanými zvieratami sa dajú prejsť aj dnes."},
+        {"s": "Babylonský lev", "w": "Čadičový lev stojaci nad padnutou postavou, nájdený na lokalite v osemnástom storočí. O jeho datovaní a pôvode sa stále diskutuje."},
+        {"s": "Visuté záhrady", "w": "Opísali ich neskorší grécki autori. V Babylone sa nijaké zvyšky nepodarilo určiť a niektorí bádatelia tvrdia, že príbeh patrí Ninive."},
+        {"s": "Babylonská veža", "w": "Zikkurat Etemenanki, zasvätený Mardukovi, je skutočný. Zachoval sa len jeho pôdorys, ako štvorcový obrys v zemi."}
+      ],
+      "quote": "„Nabuchodonozor, kráľ Babylonu, zaopatrovateľ Esagily a Ezidy, najstarší syn Nabopolasara.“",
+      "quoteBy": "Štandardný nápis vyrazený na kráľových tehlách.",
+      "caps": ["Na lokalite. Hostia študujú panel o klinopisných tabuľkách nájdených v Babylone."]
+    },
+    "12": {
+      "kicker": "Destinácia · guvernorát Bábil",
+      "title": "Borsippa: odkaz Nabúa",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Sedemnásť kilometrov juhozápadne od Babylonu stojí na pahorku nad rovinou osamelá zubatá tehlová veža. To je Borsippa, sesterské mesto Babylonu a domov Nabúa, boha pisárov a písma.",
+        "Každú jar socha Nabúa opúšťala jeho chrám Ezida a putovala do Babylonu na slávnosť Nového roka. Nabuchodonozor II. tu v šiestom storočí pred n. l. znovu postavil jeho zikkurat a základové valce nájdené v roku 1854 zaznamenávajú dielo kráľovými vlastnými slovami.",
+        "Na vrchole sa tehla roztavila a spekla do sklovitých blokov, následkom požiaru mimoriadnej horúčavy. Stáročia pokladali cestovatelia tú zrúcaninu za Babylonskú vežu. Lokalita je tichá, málokedy preplnená a patrí k miestam s najsilnejšou atmosférou v Iraku."
+      ],
+      "sideTitle": "V skratke",
+      "side": [
+        {"t": "Staroveké meno", "d": "Barsipa; dnes Birs Nimrud"},
+        {"t": "Ochranný boh", "d": "Nabú, boh písma"},
+        {"t": "Z Babylonu", "d": "Asi 17 km"}
+      ]
+    },
+    "13": {
+      "run": "Okolie Bagdadu",
+      "kicker": "Blízko Bagdadu",
+      "title": "Ktésifón a Akarkúf",
+      "photoTop": true,
+      "paras": [
+        "Dve pamiatky stoja do hodiny od hlavného mesta a delí ich takmer dvetisíc rokov.",
+        "Ták Kasra je všetko, čo zostalo z paláca sásánovských kráľov v Ktésifóne. Jeho klenba sa dvíha asi 37 metrov a preklenie približne 25 metrov, najväčší oblúk z jedného poľa z nevystuženej tehly, aký kedy postavili. Bádatelia sa stále dohadujú, či pochádza z tretieho, alebo zo šiesteho storočia.",
+        "Západne od mesta je Akarkúf zikkuratom Dur-Kurigalzu, ktorý v štrnástom storočí pred n. l. založil kasitský kráľ Kurigalzu. Jeho zvetrané jadro stále stojí asi 57 metrov vysoko a medzi vrstvami nepálenej tehly sú viditeľné vrstvy tŕstinových rohoží."
+      ],
+      "caps": [
+        "Ták Kasra. Veľká klenba sásánovského paláca v Ktésifóne, juhovýchodne od Bagdadu.",
+        "Akarkúf. Zikkurat, pečiatkovaná tehla a pohľad cez obnovenú bránu."
+      ]
+    },
+    "14": {
+      "kicker": "Destinácia · Južný Irak",
+      "title": "Úsvit civilizácie",
+      "stand": "V Ure a Uruku, na rovine starovekého Sumeru, ľudia po prvý raz žili v mestách, viedli písomné záznamy a stavali chrámy, ktoré bolo vidieť na deň chôdze.",
+      "cap": "Hostia pred zikkuratom v Ure, postaveným okolo roku 2100 pred n. l. pre boha mesiaca Nannu.",
+      "feature": ["Zikkurat v Ure", "Kráľovský cintorín", "Uruk a prvé písmo", "Časová os Mezopotámie"]
+    },
+    "15": {
+      "run": "Ur a Uruk",
+      "kicker": "Ur",
+      "drop": true,
+      "paras": [
+        "Zikkurat v Ure je najlepšie zachovaný v Iraku. Kráľ Ur-Nammu ho začal okolo roku 2100 pred n. l. a jeho syn Šulgi ho dokončil: stupňovitá plošina z nepálenej tehly, obložená pálenou tehlou a stmelená bitúmenom, zasvätená Nannovi, bohu mesiaca a patrónovi mesta.",
+        "Tri schodiská po sto stupňoch sa stretávajú pri bránovej budove na prvej terase. O pätnásť storočí neskôr babylonský kráľ Nabonid vežu obnovil a dolné priečelie znovu postavili v dvadsiatom storočí. Stále sa na ňu dá vystúpiť.",
+        "V rokoch 1922 až 1934 Leonard Woolley vykopával Ur pre Britské múzeum a Pensylvánsku univerzitu. Na Kráľovskom cintoríne, datovanom približne do rokov 2600 až 2500 pred n. l., našiel hrobku kráľovnej Puabi, zlaté prilby, lýry a mozaikový panel známy ako Štandarda z Uru.",
+        "Tradícia tiež označuje Ur za rodisko Abraháma a zrekonštruovaný dom pri zikkurate sa ukazuje ako Abrahámov. Od roku 2016 je lokalita súčasťou lokality svetového dedičstva UNESCO Ahvár južného Iraku."
+      ],
+      "sideTitle": "Ur v skratke",
+      "side": [
+        {"t": "Postavený", "d": "Okolo roku 2100 pred n. l."},
+        {"t": "Zasvätený", "d": "Nannovi, bohu mesiaca"},
+        {"t": "Vykopaný", "d": "Woolley, 1922 až 1934"},
+        {"t": "Najbližšie mesto", "d": "Násiríja"}
+      ],
+      "caps": ["Tiež v Sumeri. Eróziou narušený zikkurat v Nippure, sídlo boha Enlila a náboženské stredisko sumerského sveta."],
+      "promo": "Navštívte Ur na našich sedemdňových a deväťdňových cestách — iraq.fabletour.com"
+    },
+    "16": {
+      "kicker": "Uruk",
+      "title": "Prvé mesto",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Uruk, dnešná Varka, má spomedzi všetkých miest na zemi najsilnejší nárok, aby sa mu hovorilo prvé mesto. Okolo roku 3100 pred n. l. tu žili desaťtisíce ľudí, viac než kdekoľvek inde na svete v tej dobe.",
+        "Mesto takej veľkosti potrebovalo záznamy. V štvrti Eanna, zasvätenej bohyni Inanne, archeológovia našli tisíce hlinených tabuliek označených číslami a znakmi. Najstaršie pochádzajú približne z rokov 3400 až 3200 pred n. l. a sú najstarším písmom, aké sa doteraz objavilo.",
+        "Uruk dal literatúre aj jej prvého hrdinu. Gilgameša si pamätali ako jeho kráľa a epos mu pripisuje mestský múr v obvode asi deväť kilometrov.",
+        "Biely chrám stále korunuje pahorok boha nebies Anua a Váza z Varky aj Maska z Varky, obe nájdené tu, sú dnes v Irackom múzeu v Bagdade.",
+        "Lokalita je rozsiahla, tichá a takmer nedotknutá. So sprievodcom sa z nízkych pahorkov vynoria chrámy, nádvoria a ulice."
+      ],
+      "caps": ["Hore. Hostia pri vstupe do Uruku, s pahorkom zikkuratu v pozadí. Prvé zapísané slová vznikli tu."]
+    },
+    "17": {
+      "run": "Ur a Uruk",
+      "kicker": "Časová os",
+      "title": "Sedemtisíc rokov medzi dvoma riekami",
+      "events": [
+        {"y": "okolo 5400 pred n. l.", "t": "Zakladá sa Eridu. Neskorší Sumeri si ho pamätali ako vôbec prvé mesto."},
+        {"y": "okolo 3400–3200 pred n. l.", "t": "Na hlinených tabuľkách v Uruku sa objavuje najstaršie známe písmo."},
+        {"y": "okolo 2600–2500 pred n. l.", "t": "Na Kráľovskom cintoríne v Ure pochovávajú kráľov a kráľovné so zlatom a lapisom lazuli."},
+        {"y": "okolo 2334 pred n. l.", "t": "Sargon Akkadský zjednocuje mestá Mezopotámie pod jedným vládcom."},
+        {"y": "okolo 2100 pred n. l.", "t": "Ur-Nammu stavia zikkurat v Ure."},
+        {"y": "okolo 1792–1750 pred n. l.", "t": "Chammurapi vládne z Babylonu a vydáva svoj zákonník."},
+        {"y": "14. storočie pred n. l.", "t": "Kasitský kráľ Kurigalzu zakladá Dur-Kurigalzu, dnešný Akarkúf."},
+        {"y": "883–859 pred n. l.", "t": "Aššurnasirpal II. robí z Nimrudu hlavné mesto Asýrie."},
+        {"y": "612 pred n. l.", "t": "Ninive padá a asýrska ríša končí."},
+        {"y": "605–562 pred n. l.", "t": "Nabuchodonozor II. znovu buduje Babylon a vztýči Ištarskú bránu."},
+        {"y": "539 pred n. l.", "t": "Kýros Perzský dobýja Babylon."},
+        {"y": "323 pred n. l.", "t": "V Babylone zomiera Alexander Veľký."},
+        {"y": "okolo 100–240 n. l.", "t": "Púštne mesto Hatra prekvitá a dvakrát odoláva rímskym vojskám."},
+        {"y": "638 n. l.", "t": "Zakladá sa Kúfa. Basra vzniká v tom istom desaťročí."},
+        {"y": "680 n. l.", "t": "Bitka pri Karbale."},
+        {"y": "762 n. l.", "t": "Kalif al-Mansúr zakladá Bagdad."},
+        {"y": "836 n. l.", "t": "Abbásovský dvor sa sťahuje do Samarry."},
+        {"y": "1233 n. l.", "t": "V Bagdade otvárajú Al-Mustansiríju."}
+      ],
+      "note": "Dátumy pred rokom 1500 pred n. l. sa riadia konvenčnou strednou chronológiou a sú približné."
+    },
+    "18": {
+      "kicker": "Destinácia · Južný Irak",
+      "title": "Močiare: život medzi riekami",
+      "stand": "Tam, kde sa Tigris a Eufrat spomaľujú a rozlievajú, ľudia stavajú z tŕstia už päťtisíc rokov. Ahvár južného Iraku, ktorý UNESCO zapísalo v roku 2016, je najlepšie vidieť z mašúfu za prvého svetla.",
+      "cap": "Mudíf, klenutý hosťovský dom močiarnych Arabov, postavený celý zo zväzkov tŕstia na vlastnom malom ostrove."
+    },
+    "19": {
+      "run": "Močiare",
+      "drop": true,
+      "paras": [
+        "Severne od Basry obe rieky strácajú brehy. Voda sa rozlieva do bludiska jazier, kanálov a tŕstinových porastov, ktoré kedysi pokrývali plochu veľkú ako malá krajina, a uprostred toho ľudia žijú na ostrovoch, ktoré si postavili sami.",
+        "Močiarni Arabi, Ma'dán, robia takmer všetko z obrovského tŕstia, ktoré rastie okolo nich: domy, rohože, ohrady, krmivo aj palivo. Ich najkrajšou stavbou je mudíf, hosťovská sieň z klenutých zväzkov tŕstia, bez klincov a bez dreva. Ten istý tvar sa objavuje na sumerských rezbách starých päťtisíc rokov.",
+        "Život sa riadi vodným byvolom. Rodiny sa za úsvitu odrážajú tyčou na štíhlom drevenom mašúfe, aby narezali čerstvé tŕstie, a byvoly sa za súmraku plávajú späť. Z ich mlieka sa stáva gejmar, hustá smotana, ktorá sa na raňajky je s datľovým sirupom a teplým chlebom.",
+        "V deväťdesiatych rokoch 20. storočia močiare zámerne vysušili a väčšina ich obyvateľov odišla. Po roku 2003 hrádze prerazili a voda sa vrátila do veľkej časti územia. V roku 2016 UNESCO zapísalo Ahvár južného Iraku ako lokalitu svetového dedičstva pre prírodu aj kultúru: štyri mokrade spolu so starovekými mestami Ur, Uruk a Eridu."
+      ],
+      "sideTitle": "Cestujte zodpovedne",
+      "side": [
+        {"t": "Choďte s miestnymi člnkármi", "d": "Vaše plavné podporuje močiarne rodiny priamo."},
+        {"t": "Pýtajte sa pred fotografovaním", "d": "Najmä ženy a vnútri domov."},
+        {"t": "Nič neberte, nič nenechávajte", "d": "Mokraď je krehká a hladina vody sa mení podľa ročného obdobia."}
+      ],
+      "caps": ["Hore. Vodné byvoly sa pasú na tŕstinovom ostrove v Centrálnych močiaroch."],
+      "promo": "Zažite mezopotámske močiare — iraq.fabletour.com"
+    },
+    "20": {
+      "photoTop": true,
+      "quote": "„Mnohí naši hostia hovoria, že toto je najpokojnejšie miesto v Iraku.“",
+      "quoteBy": "Fable Tour",
+      "caps": ["Hore. Člnom cez tŕstinové kanály pri Al-Čibájiši. Cestu močiarmi s obedom z grilovaného maskúfu možno dohodnúť v našich programoch."]
+    },
+    "21": {
+      "run": "Basra",
+      "kicker": "Destinácia · Južný Irak",
+      "title": "Basra: mesto riek a paliem",
+      "drop": true,
+      "paras": [
+        "Basra je miesto, kde sa Irak stretáva s morom. Založili ju v tridsiatych rokoch siedmeho storočia ako posádkové mesto raného kalifátu, vyrástla na prístav, ktorý obchodoval s Indiou, východnou Afrikou a Čínou, a na mesto gramatikov, teológov a básnikov. V Tisíc a jednej noci odtiaľto vypláva Sindibád námorník.",
+        "Tigris a Eufrat sa spájajú v Kurne, hodinu severne, a tvoria Šatt al-Arab. Rieka tečie široko a pomaly popri meste medzi hájmi datľových paliem. Večer na nábrežnej promenáde alebo vonku na vode, keď hasne svetlo, je ten podstatný zážitok z Basry.",
+        "V starej štvrti lemujú kanály domy kupcov, ktorých horné podlažia vyčnievajú nad ulicu za zástenami z vyrezávaného dreva. Tieto balkóny, šanášíl, sú podpisom mesta. Múzeum v Basre, otvorené v roku 2016 v bývalom paláci pri rieke, rozpráva príbeh juhu od Sumeru po islamskú dobu."
+      ],
+      "caps": ["Kurna. Ohrada známa ako Adamov strom, kam miestna tradícia kladie záhradu Eden, pri sútoku oboch riek."],
+      "miss": [
+        {"t": "Západ slnka na Šatt al-Arabe", "d": "Najlepšie z člna"},
+        {"t": "Domy so šanášíl", "d": "Vyrezávané balkóny starej Basry"},
+        {"t": "Múzeum v Basre", "d": "Štyri galérie pri rieke"}
+      ]
+    },
+    "22": {
+      "kicker": "Destinácia · Stredný Eufrat",
+      "title": "Posvätné mestá Mezopotámie",
+      "stand": "Nadžaf, Karbalá a Kúfa patria k najnavštevovanejším miestam na svete. Každý rok prichádzajú milióny pútnikov a cestovateľov každého pôvodu prijímajú zdvorilo.",
+      "cap": "Mramorové nádvorie Veľkej mešity v Kúfe za súmraku.",
+      "feature": ["Kúfa", "Nadžaf a Vádí al-Salám", "Karbalá", "Návšteva s úctou"]
+    },
+    "23": {
+      "run": "Posvätné mestá",
+      "kicker": "Kúfa a Nadžaf",
+      "drop": true,
+      "paras": [
+        "Kúfu založili v roku 638 ako vojenský tábor na Eufrate a v priebehu jednej generácie sa stala jednou z intelektuálnych metropol islamu. Hranaté kúfické písmo má meno podľa mesta. Alí ibn Abí Tálib, bratranec a zať proroka Mohameda a štvrtý kalif, odtiaľto vládol a práve vo Veľkej mešite v Kúfe ho v roku 661 smrteľne ranili.",
+        "Mešita patrí k najstarším na svete. Jej široké nádvorie lemujú zastavenia, ktoré tradícia spája s prorokmi, a vedľa nej stoja svätyne Muslima ibn Akíla a Háního ibn Urwu. Krátka prechádzka odtiaľ je skromný dom, kde žil imám Alí.",
+        "Desať kilometrov na západ vyrástol Nadžaf okolo jeho hrobu. Zlatá kupola a dvojica minaretov svätyne imáma Alího sa dvíhajú nad starým mestom a jej siene lemuje zrkadlová mozaika, ktorá rozptyľuje svetlo. Tisíc rokov je Nadžaf aj mestom učencov. Jeho semináre, hauza, priťahujú študentov z celého sveta.",
+        "Vedľa mesta leží Vádí al-Salám, Údolie mieru. Je to jeden z najväčších cintorínov na svete, krajina kupol a tehlových klenieb, ktorá siaha po obzor, a používa sa nepretržite viac než tisícročie."
+      ],
+      "caps": ["Vádí al-Salám. Údolie mieru videné zhora, s nadžafskou rovinou v diaľke."]
+    },
+    "24": {
+      "run": "Posvätné mestá",
+      "kicker": "Karbalá",
+      "paras": [
+        "Desiateho dňa muharramu roku 680 zabili Husajna ibn Alího, vnuka Proroka, spolu s jeho spoločníkmi na rovine Karbaly. Udalosť sa každý rok pripomína na Ašúru a o štyridsať dní neskôr púť Arbaín privádza do mesta pešo milióny ľudí.",
+        "Svätyne imáma Husajna a jeho brata al-Abbása stoja oproti sebe cez širokú pešiu esplanádu. Obe korunuje zlato a vnútri ich pokrýva zrkadlová výzdoba a modré kachličky. Večer, keď sú kupoly osvetlené a nádvoria sa zaplnia, je atmosféra pokojná a vľúdna."
+      ],
+      "caps": [
+        "Al-Kázimíja, Bagdad. Hosť fotografuje kupoly a minarety z nádvoria.",
+        "Tichšie svätyne Bagdadu. Hrob Džunajda al-Bagdádího.",
+        "Hrob Bahlúla."
+      ],
+      "sideTitle": "Návšteva s úctou",
+      "side": [
+        {"t": "Odev", "d": "Dlhé rukávy a dlhé nohavice pre mužov. Ženy nosia v areáli svätýň abáju a šatku na hlavu; dajú sa požičať pri vchode."},
+        {"t": "Prístup", "d": "Nádvoria sú spravidla otvorené všetkým návštevníkom. Pravidlá pre vnútorné siene sa líšia podľa svätyne a podľa dňa a sprievodca poradí na mieste."},
+        {"t": "Čas", "d": "Počas Ašúry a Arbaínu sú mestá mimoriadne plné. Tieto termíny obchádzame, pokiaľ ich nechcete zažiť."},
+        {"t": "Pri vstupe", "d": "Topánky, tašky a fotoaparáty sa nechávajú v bezplatných šatniach. Muži a ženy používajú oddelené vchody."},
+        {"t": "Fotografovanie", "d": "Telefóny sa na nádvoriach zvyčajne povoľujú. Vždy sa opýtajte, kým fotografujete ľudí pri modlitbe."},
+        {"t": "Pohostinnosť", "d": "Čaj, vodu a jedlo návštevníkom často ponúkajú zadarmo. Prijať je zdvorilosť."}
+      ]
+    },
+    "25": {
+      "kicker": "Destinácia · Saláh ad-Dín",
+      "title": "Samarra: veľkoleposť Abbásovcov",
+      "stand": "Pol storočia to bolo hlavné mesto ríše, ktorá siahala od severnej Afriky po strednú Áziu. Jej špirálový minaret je najznámejšou siluetou v Iraku.",
+      "cap": "Malwíja, špirálový minaret Veľkej mešity v Samarri, dokončený v roku 852."
+    },
+    "26": {
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "V roku 836 kalif al-Mu'tasim opustil Bagdad a 125 kilometrov proti prúdu postavil nové hlavné mesto. Samarru založili na voľnom priestranstve s alejami, palácmi, kasárňami, dostihovými dráhami a poľovnými parkami. Napokon sa tiahla viac než štyridsať kilometrov pozdĺž východného brehu Tigrisu.",
+        "Jeho syn al-Mutawakkil pridal Veľkú mešitu medzi rokmi 848 a 852. Bola to vtedy najväčšia mešita na svete, ohradený obdĺžnik z pálenej tehly dosť veľký na to, aby sa celé vojsko pomodlilo spolu. Za jej severným múrom vztýčil Malwíju, minaret vysoký 52 metrov s rampou, ktorá sa zvonku ovíja päťkrát.",
+        "Dvor sa vrátil do Bagdadu v roku 892 a veľkú časť Samarry jednoducho opustili, a preto sa jej pôdorys zachoval tak úplne. UNESCO zapísalo archeologické mesto Samarra na Zoznam svetového dedičstva v roku 2007."
+      ],
+      "caps": ["Veľká mešita. Vonkajší múr s polkruhovými vežami a Malwíja, ktorá sa dvíha za ním."],
+      "sideTitle": "Samarra v skratke",
+      "side": [
+        {"t": "Hlavné mesto", "d": "836 až 892"},
+        {"t": "Malwíja", "d": "52 m, dokončená v roku 852"},
+        {"t": "Z Bagdadu", "d": "Asi 125 km na sever"},
+        {"t": "UNESCO", "d": "Zápis v roku 2007"}
+      ]
+    },
+    "27": {
+      "run": "Samarra",
+      "photoTop": true,
+      "paras": [
+        "Samarra je aj mestom pútnikov. Svätyňa Al-Askarí uchováva hroby desiateho a jedenásteho imáma, Alího al-Hádího a Hasana al-Askarího, pod jednou z najväčších zlatých kupol islamského sveta.",
+        "Blízko miesta, ktoré sa ukazuje ako väzenie imáma Alího al-Hádího, leží Kasr al-Birka, Palác bazéna. Jeho okrúhlu nádrž vyhĺbili hlboko do zeme a obklopili klenutými sieňami, kde abbásovský dvor unikal letnej horúčave.",
+        "Severne od stredu opakuje mešita Abú Dulafa špirálový minaret v menšom meradle.",
+        "Deň v Samarri s Fable Tour zahŕňa Malwíju, svätyňu, väzenie imáma Alího al-Hádího a Kasr al-Birka."
+      ],
+      "caps": [
+        "Kasr al-Birka. Zapustené bazénové nádvorie abbásovského paláca, lemované klenutými sieňami, pri väzení imáma Alího al-Hádího.",
+        "Svätyňa Al-Askarí. Zlatá kupola nad kachličkovou bránou."
+      ],
+      "promo": "Navštívte Samarru s Fable Tour — iraq.fabletour.com"
+    },
+    "28": {
+      "kicker": "Destinácia · guvernorát Ninive",
+      "title": "Severný Irak: ríše, mestá a civilizácie",
+      "stand": "Sever bol srdcom Asýrie a neskôr pohraničím medzi Rímom a Perziou. Jeho lokality patria k najmenej navštevovaným a najobohacujúcejším v krajine.",
+      "cap": "Hostia na schodoch chrámu Marana v Hatre.",
+      "feature": ["Hatra", "Mosul a Ninive", "Nimrud", "Aššur"]
+    },
+    "29": {
+      "run": "Severný Irak",
+      "kicker": "Hatra",
+      "drop": true,
+      "paras": [
+        "Hatra stojí osamelo v púšti sto kilometrov juhozápadne od Mosulu. V prvom a druhom storočí n. l. to bolo bohaté karavánové mesto na okraji partskej ríše, ktorému vládli vlastní arabskí králi a obklopovali ho dva prstence hradieb.",
+        "V jej strede je veľký posvätný okruh. Chrámy sú postavené z medovo sfarbeného vápenca a spájajú klenuté siene Východu, ívány, so stĺpmi a vyrezávanou výzdobou gréckeho a rímskeho sveta. Hlavným bohom bol Šamaš, slnko.",
+        "Hatra odolala rímskym cisárom Trajánovi a Septimiovi Severovi, ktorí ju obaja obliehali a neuspeli. Napokon padla sásánovskému kráľovi Šápúrovi I. okolo roku 240 a už ju nikdy znovu neosídlili.",
+        "V roku 1985 sa stala prvým miestom v Iraku zapísaným na Zoznam svetového dedičstva UNESCO. Návšteva si vyžaduje bezpečnostné povolenie, ktoré Fable Tour vybavuje vopred."
+      ],
+      "caps": [
+        "Kameň na kameni. Vytesaný portál v chrámovom okruhu.",
+        "Veľké ívány. Klenuté siene sa otvárajú do ústredného nádvoria."
+      ]
+    },
+    "30": {
+      "run": "Severný Irak",
+      "kicker": "Mosul, Ninive, Nimrud a Aššur",
+      "drop": true,
+      "paras": [
+        "Mosul hľadí cez Tigris na pahorky starovekého Ninive. Okolo roku 700 pred n. l. urobil asýrsky kráľ Sinacherib z Ninive svoje hlavné mesto a obohnil ho dvanástimi kilometrami hradieb. Jeho vnuk Aššurbanipal tu zhromaždil knižnicu hlinených tabuliek, zdroj veľkej časti toho, čo sa vie o mezopotámskej literatúre. Mesto padlo v roku 612 pred n. l.",
+        "Stredoveký Mosul zbohatol na obchode a dal meno mušelínu. Veľkú mešitu al-Núrí postavili v roku 1172 a jej naklonený minaret al-Hadbá sa stal znakom mesta. Obe zničili v roku 2017. Odvtedy ich znovu postavili z pôvodných tehál v programe, ktorý vedie UNESCO, a mešitu znovu otvorili v roku 2025.",
+        "Tridsať kilometrov južne leží Nimrud, asýrsky Kalchu. Aššurnasirpal II. z neho v deviatom storočí pred n. l. urobil svoje hlavné mesto a naplnil palác vyrezávanými reliéfmi a kolosálnymi okrídlenými býkmi. Lokalitu v roku 2015 ťažko poškodili a konzervácia prebieha. Dosky a tehly s nápismi stále ležia tam, kde popadali.",
+        "Ďalej po Tigrise bol Aššur prvým hlavným mestom a náboženským srdcom Asýrie. Lokalitou svetového dedičstva je od roku 2003."
+      ],
+      "caps": [
+        "Mosul. Znovu postavený minaret al-Hadbá, videný z areálu mešity al-Núrí.",
+        "Aššur. Tehla s vyrazeným klinopisom na lokalite.",
+        "Nimrud. Hostia s doskou s nápisom na palácovom pahorku. Podobne ako Hatra sa Nimrud navštevuje na povolenie; ak ho v ten deň odmietnu, ponúkneme náhradnú lokalitu."
+      ]
+    },
+    "31": {
+      "kicker": "Destinácia · región Kurdistan",
+      "title": "Sever: tam, kde sa dejiny stretávajú s horami",
+      "deck": "V citadele Irbílu sa býva tak dlho, že pahorok pod ňou tvoria staršie Irbíly.",
+      "drop": true,
+      "wide": true,
+      "paras": [
+        "Citadela Irbílu sa dvíha asi tridsať metrov nad moderné mesto na oválnom pahorku, telle, ktorý vrstvu po vrstve narastal tisícročia osídlenia. Mesto sa v písomných záznamoch objavuje už v treťom tisícročí pred n. l. a často ho opisujú ako jedno z najstarších nepretržite obývaných miest na svete.",
+        "Múr priečelí domov z devätnásteho storočia obopína vrchol ako pevnosť. Vnútri sú uličky, nádvoria, mešita a hamám. Citadelu zapísali na Zoznam svetového dedičstva UNESCO v roku 2014 a obnova pokračuje, takže niektoré časti môžu byť zatvorené.",
+        "Pod ňou krytý bazár Kajsárí predáva med, orechy, syr, korenie a kurdské textílie a čajovne na hlavnom námestí sú miestom, odkiaľ sa dá sledovať, ako mesto plynie.",
+        "Na ceste z Mosulu sa ku svahu hory Alfaf tisne kláštor Mar Mattai. Založili ho vo štvrtom storočí a je jedným z najstarších kresťanských kláštorov, ktoré sa dodnes používajú. Za Irbílom rovina ustupuje Zagrosu: tiesňavy, vodopády a horské cesty, ktoré prekvapia každého, kto si Irak predstavuje ako rovinu."
+      ],
+      "miss": [
+        {"t": "Citadela Irbílu", "d": "Svetové dedičstvo UNESCO, 2014"},
+        {"t": "Bazár Kajsárí", "d": "Pod citadelou"},
+        {"t": "Kláštor Mar Mattai", "d": "Na hore Alfaf"},
+        {"t": "Deväťdňová cesta", "d": "Končí v Irbíle; pozri stranu 36"}
+      ],
+      "promo": "Cestujte z Basry do Irbílu s Fable Tour — iraq.fabletour.com"
+    },
+    "32": {
+      "kicker": "Kuchyňa · Pohostinnosť",
+      "title": "Chute Iraku",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Iracký stôl sa prestiera pre viac ľudí, než koľko sa ich čaká, lebo s hosťami sa počíta. Národným jedlom je maskúf: riečny kapor rozrezaný, osolený, opretý o koly pri drevenom ohni a pomaly pečený, kým koža nezapraská. Je sa s plochým chlebom, nakladaným mangom a surovou cibuľou.",
+        "Sviatočné dni prinášajú kuzí, celé jahňa pečené nad ryžou s mandľami a hrozienkami, a dolmu, zeleninu plnenú korenenou ryžou a dusenú v kyslosladkej omáčke. Raňajky v Bagdade sú kahí, lístkové pečivo s byvolou smotanou a sirupom.",
+        "Čaj nasleduje po každom jedle. Varí sa silný, prevonia ho kardamón a podáva sa v malom pohári, ktorý sa volá istikán. V Basre si vypýtajte čaj zo sušených limetiek. Iracké datle netreba predstavovať a je ich stovky odrôd."
+      ],
+      "caps": ["Hore. Saif s autorom Williamom Frejom a jeho skupinou pri večeri v Mosule."],
+      "sideTitle": "Na stole",
+      "side": [
+        {"t": "Maskúf", "d": "Riečny kapor grilovaný na ohni"},
+        {"t": "Kuzí", "d": "Jahňa na korenenej ryži"},
+        {"t": "Dolma", "d": "Plnená zelenina"},
+        {"t": "Kahí a gejmar", "d": "Bagdadské raňajky"}
+      ]
+    },
+    "33": {
+      "run": "Fable Tour",
+      "kicker": "Zážitok Fable Tour",
+      "title": "Viac než zájazd. Príbeh, na ktorý sa nezabúda.",
+      "paras": [
+        "Fable Tour je iracká spoločnosť so sídlom v Bagdade. Pripravujeme súkromné cesty a cesty malých skupín celou krajinou, od Basry po Irbíl, a sami ich aj vedieme.",
+        "Každá cesta sa začína rovnako: váš sprievodca čaká v príletovej hale. Od tej chvíle sú s vami až do odchodu súkromné klimatizované vozidlo, profesionálny sprievodca a vodič. Sprevádzame po anglicky, rusky a arabsky.",
+        "V každom meste vyberáme štvor- a päťhviezdičkové hotely, zahŕňame denné raňajky a vstupné a vybavujeme povolenia potrebné pre lokality ako Hatra a Nimrud. Dátum si zvolíte vy; o zvyšok sa postaráme my.",
+        "Náš zakladateľ Saif Al-Tamimi vystupuje v knihe Nezabudnuté: staroveké mestá z dávnej minulosti od fotografa Williama Freja, ktorého skupinu sprevádzal severným Irakom."
+      ],
+      "caps": [
+        "Prílet. Sprievodca vás víta vnútri Medzinárodného letiska Bagdad.",
+        "Na zájazde. Hostia pri Kišle v Bagdade."
+      ],
+      "sideTitle": "Čo je zahrnuté",
+      "side": [
+        {"t": "Súkromne alebo v skupine", "d": "V termíne, ktorý si zvolíte"},
+        {"t": "Tri jazyky", "d": "Angličtina, ruština, arabčina"},
+        {"t": "Vybrané hotely", "d": "Štyri a päť hviezdičiek, s raňajkami"},
+        {"t": "Všetko vybavené", "d": "Doprava, vstupné, povolenia"}
+      ],
+      "promo": "Nájdete nás na GetYourGuide a Tripadvisor ako „Fable Tour in Iraq“ a na Instagrame @fable_tour. Naplánujte si súkromnú cestu Irakom — iraq.fabletour.com"
+    },
+    "34": {
+      "kicker": "Cesty · Fable Tour",
+      "tour": "Zájazd dedičstvom Iraku · 7 dní / 6 nocí",
+      "title": "Objavte Mezopotámiu za sedem dní",
+      "deck": "Od Babylonu po močiare, Samarru a Hatru, so začiatkom aj koncom na Medzinárodnom letisku Bagdad.",
+      "days": [
+        {"n": "01", "title": "Babylon a Karbalá", "route": "Bagdad – Babylon – Karbalá", "text": "Privítanie na letisku, potom Slávnostná cesta, Ištarská brána a Babylonský lev. Ďalej k zikkuratu v Borsippe a do večera k svätyniam Karbaly.", "stay": "Karbalá · Al-Baron Hotel"},
+        {"n": "02", "title": "Kúfa a Nadžaf", "route": "Kúfa – Nadžaf", "text": "Veľká mešita v Kúfe, uličky cintorína Vádí al-Salám a zlatá kupola svätyne imáma Alího.", "stay": "Nadžaf · Granada, Do Najaf alebo Naseem Al-Najaf"},
+        {"n": "03", "title": "Uruk a Basra pri západe slnka", "route": "Uruk – Basra", "text": "Uruk, mesto Gilgameša a raného písma, potom na juh k Šatt al-Arabu a k domom so šanášíl v starej Basre.", "stay": "Basra · Mövenpick Zinat Al-Hayat alebo Corniche Hotel"},
+        {"n": "04", "title": "Adamov strom, močiare a Ur", "route": "Kurna – močiare – Ur – Bagdad", "text": "Tam, kde sa obe rieky spájajú v Kurne, plavba tŕstinovými močiarmi a schodisko zikkuratu v Ure.", "stay": "Bagdad · Do Baghdad, Alabasly Suites alebo Bilitum"},
+        {"n": "05", "title": "Samarra a cesta na sever", "route": "Samarra – Mosul", "text": "Špirálový minaret Malwíja a svätyňa Al-Askarí, potom ďalej do Mosulu.", "stay": "Mosul · Ramada Hotel"},
+        {"n": "06", "title": "Mosul, Nimrud a Hatra", "route": "Mosul – Nimrud – Hatra – Bagdad", "text": "Starý Mosul a mešita al-Núrí, asýrsky Nimrud a chrámy Hatry v púšti.", "stay": "Bagdad · Do Baghdad, Alabasly Suites alebo Bilitum"},
+        {"n": "07", "title": "Bagdad, veľké finále", "route": "Bagdad – letisko", "text": "Svätyňa Al-Kázimíja, ulica Al-Mutanabbího a Kišla, kasitský zikkurat v Akarkúfe a potom váš let.", "stay": ""}
+      ]
+    },
+    "35": {
+      "included": [
+        "Súkromná klimatizovaná doprava po celý čas",
+        "Profesionálny sprievodca po anglicky, rusky alebo arabsky",
+        "6 nocí v štvor- a päťhviezdičkových hoteloch, dvojlôžková izba alebo izba s dvomi oddelenými lôžkami",
+        "Denné raňajky",
+        "Vstupné na všetky lokality v itinerári",
+        "Privítanie na letisku a odvoz na rozlúčku v Bagdade"
+      ],
+      "excluded": "Medzinárodné lety · iracké vízum · obedy a večere · cestovné poistenie · osobné výdavky a prepitné",
+      "good": "Odchody súkromne alebo v malej skupine. Hatra a Nimrud vyžadujú bezpečnostné povolenia, ktoré vybavujeme; ak povolenie odmietnu, ponúkne sa náhradná lokalita. Poradie návštev sa môže na mieste upraviť kvôli času a otváracím hodinám.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "36": {
+      "kicker": "Cesty · Fable Tour",
+      "tour": "Celý Irak, z Basry do Irbílu · 9 dní / 8 nocí",
+      "title": "Veľká cesta Irakom, deväť dní",
+      "deck": "Celá krajina v jednej línii, od juhu na sever. Prílet do Basry, odlet z Irbílu.",
+      "days": [
+        {"n": "01", "title": "Basra, brána juhu", "route": "Basra", "text": "Arménsky kostol Svätej Panny Márie, Múzeum v Basre a západ slnka na Šatt al-Arabe.", "stay": "Basra · Mövenpick Zinat Al-Hayat"},
+        {"n": "02", "title": "Močiare a zikkurat v Ure", "route": "Močiare – Ur – Nadžaf", "text": "Tŕstinové ostrovy, vodné byvoly a hosťovské domy mudíf, potom Veľký zikkurat a kráľovské hrobky.", "stay": "Nadžaf · Do Najaf Hotel"},
+        {"n": "03", "title": "Nadžaf, Kúfa a Karbalá", "route": "Nadžaf – Kúfa – Karbalá", "text": "Svätyňa imáma Alího, Vádí al-Salám, Veľká mešita v Kúfe a svätyne Karbaly.", "stay": "Karbalá · The Baron Hotel"},
+        {"n": "04", "title": "Babylon a Borsippa", "route": "Babylon – Borsippa – Bagdad", "text": "Slávnostná cesta, Ištarská brána a paláce Nabuchodonozora, potom zikkurat Nabúa.", "stay": "Bagdad · Alabasly Suites"},
+        {"n": "05", "title": "Bagdad, Mesto mieru", "route": "Bagdad – Akarkúf", "text": "Ulica Al-Mutanabbího a Kišla, Pamätník mučeníkov, svätyňa Al-Kázimíja a Akarkúf.", "stay": "Bagdad · Alabasly Suites"},
+        {"n": "06", "title": "Samarra a Hatra", "route": "Samarra – Hatra – Mosul", "text": "Malwíja, svätyňa Al-Askarí a púštne mesto Hatra.", "stay": "Mosul · Ramada Plaza by Wyndham Mosul Corniche"},
+        {"n": "07", "title": "Mosul, Nimrud a Mar Mattai", "route": "Mosul – Nimrud – Mar Mattai – Irbíl", "text": "Starý Mosul a mešita al-Núrí, asýrsky Nimrud a horský kláštor.", "stay": "Irbíl · Medzinárodný hotel Irbíl"},
+        {"n": "08", "title": "Irbíl a jeho starobylá citadela", "route": "Irbíl", "text": "Citadela a bazár Kajsárí.", "stay": "Irbíl · Medzinárodný hotel Irbíl"},
+        {"n": "09", "title": "Odchod", "route": "Irbíl – letisko", "text": "Odvoz na Medzinárodné letisko Irbíl.", "stay": ""}
+      ]
+    },
+    "37": {
+      "included": [
+        "8 nocí v štvor- a päťhviezdičkových hoteloch, dvojlôžková izba alebo izba s dvomi oddelenými lôžkami",
+        "Denné raňajky",
+        "Súkromná klimatizovaná doprava na celej trase",
+        "Profesionálny sprievodca po anglicky, rusky alebo arabsky",
+        "Vstupné na všetky lokality vrátane povolení pre Hatru a Nimrud",
+        "Privítanie na letisku v Basre a odvoz na letisko v Irbíle"
+      ],
+      "excluded": "Medzinárodné lety · iracké e-vízum (platné aj pre región Kurdistan) · zdravotné poistenie · obedy a večere · plavba člnom v močiaroch (na požiadanie) · osobné výdavky a prepitné",
+      "good": "Odchody súkromne alebo v malej skupine. Hatra a Nimrud vyžadujú bezpečnostné povolenia, ktoré vybavujeme; ak povolenie odmietnu, ponúkne sa náhradná lokalita. Poradie návštev sa môže na mieste upraviť kvôli času a otváracím hodinám.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "38": {
+      "kicker": "Cestovný sprievodca",
+      "title": "Základný sprievodca cestovaním po Iraku",
+      "groups": [
+        {"h": "Skôr než odcestujete", "items": [
+          {"t": "Vízum.", "d": "Irak vydáva elektronické víza mnohým štátnym príslušnostiam cez svoj oficiálny portál elektronických víz. Ak vaša štátna príslušnosť nemá nárok, Fable Tour vám môže vízum vybaviť ako súčasť rezervácie celého zájazdu. Pravidlá sa menia: overte si ich u nás alebo na irackom veľvyslanectve, skôr než si rezervujete lety."},
+          {"t": "Pas.", "d": "Majte pri sebe pas platný aspoň šesť mesiacov po dátume príchodu a uschovajte papierovú kópiu strany s fotografiou."},
+          {"t": "Kedy ísť.", "d": "Od októbra do apríla je sezóna, s miernymi dňami a chladnými nocami. Od júna do septembra denné teploty v strede a na juhu pravidelne presahujú 45°C."}
+        ]},
+        {"h": "Peniaze, odev a zvyky", "items": [
+          {"t": "Peniaze.", "d": "Menou je iracký dinár. Irak je prevažne hotovostná ekonomika. Prineste si americké doláre v čistých, novších bankovkách a zmeňte ich na mieste; karty fungujú vo väčších hoteloch."},
+          {"t": "Odev.", "d": "Všade sa obliekajte skromne: muži aj ženy so zakrytými ramenami a kolenami. Ženy by mali mať so sebou šatku na hlavu a vnútri svätýň sa vyžaduje abája."},
+          {"t": "Zvyky.", "d": "Piatok je dňom odpočinku. Zdravte pravou rukou, prijmite čaj, keď vám ho ponúknu, a skôr než fotografujete ľudí, opýtajte sa. Nefotografujte kontrolné stanovištia ani bezpečnostný personál."}
+        ]},
+        {"h": "Jazyk a praktické veci", "items": [
+          {"t": "Jazyk.", "d": "Úradnými jazykmi sú arabčina a kurdčina. V hoteloch sa dohovoríte po anglicky; všade inde prekladá váš sprievodca."},
+          {"t": "Zdravie a poistenie.", "d": "Prineste si so sebou všetky lieky, ktoré pravidelne užívate, a pite balenú vodu. Cestovné poistenie, ktoré kryje Irak, dôrazne odporúčame a v našich programoch nie je zahrnuté."},
+          {"t": "Praktické.", "d": "Časové pásmo UTC+3. Elektrina 230 V; zásuvky sa líšia, preto si prineste univerzálny adaptér. Miestne SIM karty sa predávajú na letiskách."}
+        ]}
+      ],
+      "noteTitle": "Informácie, ktoré sa môžu zmeniť.",
+      "note": "Pravidlá víz, podmienky vstupu, otváracie hodiny a prístup na lokality stanovujú iracké úrady a môžu sa zmeniť aj krátko vopred. Pred cestou si overte cestovné odporúčanie vlastnej vlády a irackého ministerstva zahraničných vecí a pri rezervácii sa nás opýtajte na aktuálny stav."
+    },
+    "39": {
+      "run": "Rezervácia",
+      "kicker": "Naplánujte si cestu",
+      "title": "Vaše iracké dobrodružstvo sa začína tu",
+      "intro": "Vyberte si program, otvorte jeho stránku a zvoľte si dátum. Každá cesta môže prebehnúť súkromne pre vašu skupinu alebo ako malá skupina a každú možno prispôsobiť.",
+      "cards": [
+        {"days": "6 dní", "title": "Bagdad, Babylon a Samarra", "text": "Šesť dní so základňou v jednom bagdadskom hoteli: Iracké múzeum a starý Bagdad, Akarkúf a Ták Kasra, Samarra, Babylon a Borsippa.", "scan": "Itinerár a termíny"},
+        {"days": "7 dní", "title": "Zájazd dedičstvom Iraku", "text": "Sedem dní z Bagdadu: Babylon, Karbalá, Nadžaf, Uruk, Basra, močiare, Ur, Samarra, Mosul a Hatra.", "scan": "Itinerár a termíny"},
+        {"days": "9 dní", "title": "Celý Irak, z Basry do Irbílu", "text": "Deväť dní od juhu na sever, s pridaním Nimrudu, kláštora Mar Mattai a citadely Irbílu.", "scan": "Itinerár a termíny"}
+      ],
+      "howTitle": "Ako rezervovať",
+      "how": "Pošlite nám svoje termíny a počet cestujúcich cez WhatsApp, e-mailom alebo formulárom na našej webovej stránke. Odpovieme dostupnosťou a písomným potvrdením. Denné výlety z Bagdadu a transfery na letisko a z letiska sa dajú rezervovať rovnako.",
+      "contactTitle": "Kontakt",
+      "lines": [
+        "iraq.fabletour.com",
+        "support@fabletour.com",
+        "WhatsApp +964 771 174 5353",
+        "zákaznícky servis 24/7 +1 (212) 433-8608",
+        "Medzinárodné letisko Bagdad, Al-Karch, Bagdad, Irak",
+        "Instagram @fable_tour"
+      ],
+      "promo": "Naplánujte si súkromnú cestu Irakom — iraq.fabletour.com"
+    },
+    "40": {
+      "title": "Vaša cesta Mezopotámiou sa začína tu.",
+      "text": "Spoločne s Fable Tour objavte mimoriadne dejiny, živé tradície a nezabudnuteľné destinácie Iraku. Od starovekých divov Babylonu po živé ulice Bagdadu a nadčasové krajiny južnej Mezopotámie spoznajte Irak cez autentické cestovateľské zážitky s odborným sprievodom.",
+      "url": "iraq.fabletour.com",
+      "email": "support@fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353",
+      "service": "zákaznícky servis 24/7 +1 (212) 433-8608",
+      "address": "Medzinárodné letisko Bagdad, Al-Karch, Bagdad, Irak",
+      "scan": "Naplánujte si cestu",
+      "credit": "Fotografia: západ slnka na Šatt al-Arabe, Basra"
+    }
+  }
+}

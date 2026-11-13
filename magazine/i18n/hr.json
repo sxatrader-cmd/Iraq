@@ -1,0 +1,657 @@
+{
+  "lang": "hr",
+  "dir": "ltr",
+  "metaTitle": "MESOPOTAMIA — Irački putopisni magazin | Fable Tour",
+  "metaDesc": "MESOPOTAMIA, irački putopisni magazin Fable Toura. Listajte stranice: Bagdad, Babilon, Ur i Uruk, močvare, Samara, Hatra, Mosul i Erbil, uz naše ture od 7 i 9 dana.",
+  "brand": "MESOPOTAMIA",
+  "ui": {
+    "hint": "Povucite kut stranice ili dodirnite strelice za listanje",
+    "first": "Prva stranica",
+    "prev": "Prethodna stranica",
+    "next": "Sljedeća stranica",
+    "sound": "Zvuk uključen ili isključen",
+    "full": "Cijeli zaslon",
+    "lang": "Jezik"
+  },
+  "home": {
+    "nav": "Magazin",
+    "eyebrow": "Naš magazin",
+    "title": "Mezopotamija: irački putopisni magazin",
+    "lead": "Povucite kut stranice ili upotrijebite strelice za listanje.",
+    "open": "Otvori na cijelom zaslonu"
+  },
+  "label": {
+    "above": "IZNAD",
+    "feature": "U OVOM PRILOGU",
+    "miss": "NE PROPUSTITE",
+    "day": "DAN",
+    "overnight": "Noćenje",
+    "included": "UKLJUČENO",
+    "excluded": "NIJE UKLJUČENO",
+    "good": "DOBRO JE ZNATI",
+    "scan": "Datumi i rezervacija"
+  },
+  "pages": {
+    "1": {
+      "kicker": "Fable Tour  |  Irački putopisni magazin  |  Broj 01",
+      "sub": "Otkrijte Irak s Fable Tourom",
+      "headline": "Irak: gdje je civilizacija počela",
+      "deck": "Otkrijte bezvremenska čuda drevne Mezopotamije",
+      "cols": [
+        {"t": "Babilon", "d": "Prošetajte baštinom kraljeva"},
+        {"t": "Bagdad", "d": "Otkrijte Grad mira"},
+        {"t": "Močvare", "d": "Život između dviju rijeka"},
+        {"t": "Ur i Uruk", "d": "Zora civilizacije"}
+      ],
+      "credit": "Naslovnica: moderna rekonstrukcija Ištarinih vrata na ulazu u drevni Babilon, Irak"
+    },
+    "2": {
+      "issue": "Broj 01",
+      "title": "Dobrodošli u Mezopotamiju",
+      "text": "Između Tigrisa i Eufrata ljudi su prvi put podigli gradove, zapisali svoje zakone i uzdigli hramove prema nebu. Ta je zemlja još uvijek tu, a s njom i njezini spomenici. Ovaj magazin poziv je da ih vidite.",
+      "cap": "Posjetitelji na kasitskom ziguratu Aqar Qufa, starom 3.400 godina, zapadno od Bagdada."
+    },
+    "3": {
+      "run": "Dobrodošlica",
+      "kicker": "Od osnivača",
+      "title": "Osoban poziv da otkrijete Irak",
+      "paras": [
+        "Rođen sam u Iraku 1991. i odrastao među imenima koja cijeli svijet poznaje: Babilon, Ur, Bagdad. Godinama sam učio i putovao u inozemstvu. Školovao sam se za stomatologa u Ukrajini i kao turist posjetio trinaest zemalja, a kamo god sam došao ljudi su me pitali isto: kakav je Irak zapravo?",
+        "Fable Tour moj je odgovor. Postao sam vodič jer sam htio da posjetitelji stanu ondje gdje se povijest dogodila i upoznaju ljude koji danas žive uz nju. Zigurat je više od fotografije kad vam netko kaže tko ga je sagradio i zašto. Čaša čaja u staroj bagdadskoj kavani više je od pića kad znate tko je sjedio ondje prije vas.",
+        "Naša su putovanja privatna ili u malim skupinama, tempom koji vi odaberete. Putujemo s licenciranim vodičima na engleskom, ruskom i arapskom, odsjedamo u pomno odabranim hotelima i brinemo o dozvolama, prijevozu i vremenu, tako da vi možete samo gledati, slušati i pitati.",
+        "Vjerujemo i u odgovorno putovanje. To znači poštovati sveta mjesta i lokalne običaje, podupirati obiteljske restorane i čamdžije u močvarama te svaki lokalitet ostaviti onakvim kakvim smo ga zatekli.",
+        "Na stranicama koje slijede naći ćete mjesta koja najviše volim. Nadam se da će vas uvjeriti da dođete, i radujem se što ću vas osobno dočekati u zračnoj luci."
+      ],
+      "sign": "Saif Al-Tamimi",
+      "role": "Osnivač i vodič, Fable Tour",
+      "cap": "Saif Al-Tamimi, osnivač i vodič, Fable Tour."
+    },
+    "4": {
+      "run": "Sadržaj",
+      "kicker": "U ovom broju",
+      "title": "Sadržaj",
+      "items": [
+        {"n": "06", "t": "Bagdad", "d": "Grad mira"},
+        {"n": "09", "t": "Al-Kadhimiya", "d": "Svetište dvojice imama"},
+        {"n": "10", "t": "Babilon", "d": "Prošetajte carstvom kraljeva"},
+        {"n": "12", "t": "Borsipa", "d": "Baština boga Nabua"},
+        {"n": "13", "t": "Ktezifont i Aqar Quf", "d": "Dva diva na rubu Bagdada"},
+        {"n": "14", "t": "Ur i Uruk", "d": "Zora civilizacije"},
+        {"n": "18", "t": "Močvare", "d": "Život među rijekama"},
+        {"n": "21", "t": "Basra", "d": "Grad rijeka i palmi datulja"},
+        {"n": "22", "t": "Nadžaf, Kerbala i Kufa", "d": "Sveti gradovi Mezopotamije"},
+        {"n": "25", "t": "Samara", "d": "Veličina Abasida"},
+        {"n": "28", "t": "Sjeverni Irak", "d": "Carstva, gradovi i civilizacije"},
+        {"n": "31", "t": "Erbil", "d": "Gdje povijest susreće planine"},
+        {"n": "32", "t": "Okusi Iraka", "d": "Kuhinja i gostoljubivost"},
+        {"n": "33", "t": "Iskustvo Fable Toura", "d": "Više od ture"},
+        {"n": "34", "t": "Sedam dana", "d": "Istražite Mezopotamiju"},
+        {"n": "36", "t": "Devet dana", "d": "Veliko iračko putovanje"},
+        {"n": "38", "t": "Prije nego što krenete", "d": "Osnovni vodič"},
+        {"n": "39", "t": "Isplanirajte putovanje", "d": "Rezervacija i kontakt"}
+      ],
+      "fig": "Stranica 12. Zigurat u Borsipi, okrunjen opekom sraslom u drevnoj vatri.",
+      "pub": [
+        "MESOPOTAMIA. Broj 01. Izdaje Fable Tour, Međunarodna zračna luka Bagdad, al-Karkh, Bagdad, Irak.",
+        "Sve fotografije Fable Toura, snimljene na našim putovanjima.",
+        "iraq.fabletour.com"
+      ]
+    },
+    "5": {
+      "run": "Karta",
+      "kicker": "Odredišta",
+      "title": "Irak na prvi pogled",
+      "places": [
+        {"t": "Mosul i Niniva", "d": "Stranica 30"},
+        {"t": "Erbil", "d": "Stranica 31"},
+        {"t": "Nimrud", "d": "Stranica 30"},
+        {"t": "Hatra", "d": "Stranica 29 · UNESCO"},
+        {"t": "Ašur", "d": "Stranica 30 · UNESCO"},
+        {"t": "Samara", "d": "Stranica 25 · UNESCO"},
+        {"t": "Bagdad", "d": "Stranica 06"},
+        {"t": "Ktezifont", "d": "Stranica 13"},
+        {"t": "Kerbala", "d": "Stranica 24"},
+        {"t": "Babilon", "d": "Stranica 10 · UNESCO"},
+        {"t": "Borsipa", "d": "Stranica 12"},
+        {"t": "Nadžaf i Kufa", "d": "Stranica 22"},
+        {"t": "Uruk", "d": "Stranica 16"},
+        {"t": "Močvare", "d": "Stranica 18 · UNESCO"},
+        {"t": "Ur", "d": "Stranica 14"},
+        {"t": "Basra", "d": "Stranica 21"}
+      ],
+      "note": "Zlatna boja označuje dobro svjetske baštine UNESCO-a; tamnoplava označuje drugo odredište u ovom broju. Granice su nacrtane shematski, prema Natural Earthu, a i rijeke su shematske. Šest iračkih dobara nalazi se na Popisu svjetske baštine: Hatra (1985.), Ašur (2003.), Samara (2007.), citadela Erbil (2014.), Ahwar južnog Iraka, koji obuhvaća Ur i Uruk (2016.), i Babilon (2019.)."
+    },
+    "6": {
+      "kicker": "Odredište · Bagdad",
+      "title": "Bagdad: Grad mira",
+      "stand": "Osnovan kao Madinat al-Salam 762., abasidska je prijestolnica nekoć bila najveći grad na zemlji. Njegovi knjižari, čajdžinice i riječne obale još nose tu baštinu.",
+      "cap": "Kip pjesnika al-Mutanabija iz desetog stoljeća na riječnom kraju ulice koja nosi njegovo ime, a iza njega svjetla daleke obale Tigrisa.",
+      "feature": ["Ulica al-Mutanabi", "Al-Mustansiriya", "Kišla", "Kavana Šabandar", "Al-Kadhimiya"]
+    },
+    "7": {
+      "run": "Bagdad",
+      "drop": true,
+      "paras": [
+        "U ljeto 762. abasidski kalif al-Mansur odabrao je mjesto na zapadnoj obali Tigrisa i naredio da se prijestolnica sagradi po planu kakav nijedan grad dotad nije slijedio: savršen krug, s palačom i džamijom u središtu i četirima vratima koja se otvaraju na ceste carstva. Nazvao ju je Madinat al-Salam, Grad mira.",
+        "Od Okruglog grada danas ništa ne stoji iznad zemlje, ali zamisao Bagdada koju je taj grad stvorio nikad nije nestala. Unutar jednog stoljeća ovo je bilo mjesto gdje se grčko, perzijsko i indijsko znanje prevodilo na arapski, gdje je papir zamijenio pergament i kamo su učenjaci i pjesnici dolazili da steknu ime.",
+        "Najsačuvaniji svjedok tog doba jest Al-Mustansiriya, medresa koju je osnovao kalif al-Mustansir i koja je otvorena 1233. Njezino dugo dvorište od opeke, uokvireno šiljatim lukovima i rezbarenim geometrijskim pločama, nekoć je pod jednim krovom primalo sve četiri škole sunitskog prava. Prođite njome rano, prije vrućine, i razmjeri će sami objasniti.",
+        "Nekoliko minuta dalje zgrada poznata kao Abasidska palača pokazuje istu opeku u kućnom mjerilu: nadsvođene hodnike, duboke ivane i stropove izrezane u muqarnas u obliku saća.",
+        "Zatim dolazi ulica al-Mutanabi. Bagdađani vole citirati staru rečenicu da Kairo piše, Bejrut tiska, a Bagdad čita, i petkom ujutro ulica to dokazuje: knjige se polažu na pločnik od jednog kraja do drugog. Na dalekom kraju stoji sam pjesnik u bronci, s rukom podignutom prema rijeci.",
+        "Kraj njega je kavana Šabandar, koja poslužuje čaj od 1917. pod zidovima starih fotografija, i Kišla, osmanska vojarna čiji satni toranj mjeri vrijeme nad Tigrisom od devetnaestog stoljeća."
+      ],
+      "caps": [
+        "Al-Mustansiriya. Dva niza šiljatih lukova i rezbarenih ploča od opeke oko dvorišta medrese, otvorene 1233.",
+        "Kišla. Gost uokviruje osmanski satni toranj iz arkada.",
+        "Kavana Šabandar. Mjedeni natpis nad vratima najpoznatije čajdžinice u gradu."
+      ],
+      "miss": [
+        {"t": "Ulica al-Mutanabi", "d": "Petkom sajam knjiga"},
+        {"t": "Al-Mustansiriya", "d": "Otvorena 1233."},
+        {"t": "Kišla", "d": "Satni toranj na Tigrisu"},
+        {"t": "Svetište al-Kadhimiya", "d": "Vidi stranicu 9"}
+      ],
+      "promo": "Otkrijte Bagdad s lokalnim vodičem — iraq.fabletour.com"
+    },
+    "8": {
+      "kicker": "Večer u starom Bagdadu",
+      "photoTop": true,
+      "paras": [
+        "Bagdad se najbolje razumije pješice, a šetnja je kratka. Počnite pod arkadama ulice al-Rashid, otvorene 1916., gdje Haj Zbala toči šerbet od grožđica od 1900.",
+        "Odatle ulica al-Mutanabi ide ravno do rijeke. Danju je to irački sajam knjiga. Po mraku pale se svjetla, balkoni se pune i čini se da cijeli grad prolazi: obitelji, studenti, glazbenici, prodavači lončarije i kave.",
+        "Zadržite se uz tezge s knjigama, zatim sjednite u Šabandaru na čaj u maloj čaši suženoj u struku. Dalje obnovljena četvrt Saray i Kišla vode do kipa pjesnika i do Tigrisa."
+      ],
+      "caps": [
+        "Ulica al-Mutanabi. Sajam knjiga po mraku, pod svojim arkadama od opeke i balkonima.",
+        "Tezge s knjigama. Saif staje čitati.",
+        "Ulična glazba. Saksofonist u četvrti Saray.",
+        "Haj Zbala. Šerbet u ulici al-Rashid od 1900."
+      ],
+      "promo": "Otkrijte Bagdad s lokalnim vodičem — iraq.fabletour.com"
+    },
+    "9": {
+      "run": "Bagdad",
+      "kicker": "Bagdad · Al-Kadhimiya",
+      "title": "Svetište dvojice imama",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Na sjeveru Bagdada, na zapadnoj obali Tigrisa, dvije zlatne kupole stoje jedna uz drugu. Pod njima leže djed i njegov unuk: Musa al-Kadhim, sedmi imam dvanaest imama šijitskog islama, i Muhammad al-Jawad, deveti. Četvrt po njima nosi ime. Al-Kadhimiya, ili Kadhimayn, znači mjesto dvojice Kadhima.",
+        "Musa ibn Ja'far rođen je 745. kraj Medine, sin velikog učenjaka imama Ja'fara al-Sadiqa. Bio je poznat po strpljenju i darežljivosti, a titula al-Kadhim znači onaj koji suspreže srdžbu. Mnogi ga zovu i Bab al-Hawa'ij, Vrata potreba. Abasidski kalifi njegovo su sljedbeništvo vidjeli kao prijetnju. Harun al-Rašid dao ga je uhititi u Medini i dovesti u Irak, gdje je godine proveo u zatvoru. Umro je u bagdadskom zatvoru 799. Šijitska predaja drži da je otrovan. Pokopan je na groblju Kurejša, koje je utemeljitelj Bagdada razmjerio izvan Okruglog grada.",
+        "Njegov unuk Muhammad ibn Ali rođen je u Medini 811., sin imama Alija al-Ride, koji je pokopan u Mašhadu. Imam je postao s otprilike sedam godina, najmlađi od dvanaestorice, i pamti ga se po tome što je još kao dječak odgovarao vodećim pravnicima na dvoru kalifa al-Ma'muna. Titula al-Jawad znači velikodušni. Pozvan u Bagdad od kalifa al-Mu'tasima, ondje je umro 835. u dobi od dvadeset pet godina, od otrova prema šijitskoj predaji, i položen je kraj djeda.",
+        "Svetište je izraslo oko dvaju grobova. Sadašnji oblik uglavnom potječe iz šesnaestog stoljeća, a kupole su kasnije obložene zlatom. Svake godine godišnjica smrti imama al-Kadhima, 25. radžaba, dovodi velike množine pješice iz cijelog grada. Posjetitelji svih vjera dobrodošli su u dvorišta; žene nose abaju, koja je dostupna na vratima."
+      ],
+      "caps": ["Al-Kadhimiya. Dvije zlatne kupole i četiri minareta svetišta, osvijetljeni za večer."]
+    },
+    "10": {
+      "kicker": "Odredište · Pokrajina Babil",
+      "title": "Babilon: prošetajte carstvom kraljeva",
+      "stand": "Dvije tisuće godina njegovo je ime značilo najveći grad koji se mogao zamisliti. Devedeset minuta južno od Bagdada njegovi zidovi još nose pečat kralja koji ih je sagradio.",
+      "cap": "Bikovi i zmajevi na modernoj rekonstrukciji Ištarinih vrata, podignutoj u smanjenom mjerilu na ulazu u lokalitet.",
+      "feature": ["Ištarina vrata", "Procesijski put", "Babilonski lav", "Dokazi i legenda"]
+    },
+    "11": {
+      "run": "Babilon",
+      "drop": true,
+      "paras": [
+        "Babilon je već bio star kad ga je Hamurabi u 18. stoljeću pr. Kr. učinio prijestolnicom carstva i dao svoje zakone uklesati u kamen. Ali grad kojim posjetitelji danas prolaze uglavnom je djelo jednog čovjeka, Nabukodonozora II., koji je vladao od 605. do 562. pr. Kr.",
+        "Obnovio ga je u mjerilu koje je trebalo zadiviti. Dvostruki zidovi okruživali su hramove, palače i zigurat. Oko 575. pr. Kr. podigao je Ištarina vrata na sjevernoj strani, obložena tamnoplavom glaziranom opekom i ukrašena redovima bikova i zmajeva, životinja bogova Adada i Marduka. Lavovi, amblem Ištar, nizali su se ulicom koja je vodila do njih.",
+        "Mnoge opeke nose njegovo ime. Pogledajte izbliza zidove Južne palače i naći ćete pečat klinastog pisma koji se ponavlja iznova i iznova: Nabukodonozor, kralj Babilona. Iznad njih sjede svjetliji slojevi iz obnove 1980-ih, pa se dva razdoblja razlikuju na prvi pogled.",
+        "Babilon je 539. pr. Kr. prešao Perzijancima pod Kirom, a 323. pr. Kr. ovdje je umro Aleksandar Veliki. Godine 2019. lokalitet je upisan na UNESCO-ov Popis svjetske baštine."
+      ],
+      "tableTitle": "Dokazi i legenda",
+      "tableHead": ["Predmet", "Što pokazuje arheologija"],
+      "rows": [
+        {"s": "Ištarina vrata", "w": "Iskopavao ih je Robert Koldewey od 1899. Glazirana gornja vrata obnovljena su u berlinskom Pergamonskom muzeju. U Babilonu vidite ranije, neglazirane stupnjeve od opeke još na mjestu, i modernu repliku na ulazu."},
+        {"s": "Procesijski put", "w": "Popločana ulica vodila je od vrata prema hramu Marduka. Dijelovi izvornog popločenja i zidovi od opeke s oblikovanim životinjama mogu se i danas proći."},
+        {"s": "Babilonski lav", "w": "Bazaltni lav koji stoji nad oborenom figurom, nađen na lokalitetu u osamnaestom stoljeću. Datum i podrijetlo još se raspravljaju."},
+        {"s": "Viseći vrtovi", "w": "Opisali su ih kasniji grčki pisci. U Babilonu nisu utvrđeni ostaci, a neki znanstvenici tvrde da priča pripada Ninivi."},
+        {"s": "Babilonska kula", "w": "Zigurat Etemenanki, posvećen Marduku, stvaran je. Sačuvan je samo tlocrt, kao kvadratni obris u zemlji."}
+      ],
+      "quote": "„Nabukodonozor, kralj Babilona, skrbnik Esagile i Ezide, najstariji sin Nabopolasara.”",
+      "quoteBy": "Uobičajeni natpis utisnut na kraljeve opeke.",
+      "caps": ["Na lokalitetu. Gosti proučavaju ploču o pločicama klinastog pisma nađenima u Babilonu."]
+    },
+    "12": {
+      "kicker": "Odredište · Pokrajina Babil",
+      "title": "Borsipa: baština boga Nabua",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Sedamnaest kilometara jugozapadno od Babilona nazubljena kula od opeke stoji sama na humku iznad ravnice. To je Borsipa, Babilonov sestrinski grad i dom Nabua, boga pisara i pisma.",
+        "Svakog proljeća Nabuov kip napuštao je svoj hram, Ezidu, i putovao u Babilon na novogodišnju svetkovinu. Nabukodonozor II. obnovio je ovdje njegov zigurat u šestom stoljeću pr. Kr., a temeljni cilindri nađeni 1854. bilježe taj posao kraljevim vlastitim riječima.",
+        "Na vrhu se opeka rastopila i srasla u staklaste blokove, posljedica vatre izvanredne žestine. Stoljećima su putnici ruševinu držali Babilonskom kulom. Lokalitet je tih, rijetko prepun, i jedan od najatmosferičnijih u Iraku."
+      ],
+      "sideTitle": "Na prvi pogled",
+      "side": [
+        {"t": "Drevno ime", "d": "Barsipa; danas Birs Nimrud"},
+        {"t": "Bog zaštitnik", "d": "Nabu, bog pisma"},
+        {"t": "Od Babilona", "d": "Oko 17 km"}
+      ]
+    },
+    "13": {
+      "run": "Oko Bagdada",
+      "kicker": "Blizu Bagdada",
+      "title": "Ktezifont i Aqar Quf",
+      "photoTop": true,
+      "paras": [
+        "Dva spomenika stoje unutar sat vremena od prijestolnice, a dijeli ih gotovo dvije tisuće godina.",
+        "Taq Kasra sve je što je ostalo od palače sasanidskih kraljeva u Ktezifontu. Njezin se svod diže oko 37 metara i premošćuje oko 25, najveći jednorasponski luk od nearmirane opeke ikad sagrađen. Znanstvenici još raspravljaju potječe li iz trećeg ili iz šestog stoljeća.",
+        "Zapadno od grada Aqar Quf je zigurat Dur-Kurigalzua, koji je osnovao kasitski kralj Kurigalzu u 14. stoljeću pr. Kr. Njegova olujama izjedena jezgra još stoji oko 57 metara, a između redova opeke od blata vide se slojevi trščanih prostirača."
+      ],
+      "caps": [
+        "Taq Kasra. Veliki svod sasanidske palače u Ktezifontu, jugoistočno od Bagdada.",
+        "Aqar Quf. Zigurat, opeka s pečatom i pogled kroz obnovljena vrata."
+      ]
+    },
+    "14": {
+      "kicker": "Odredište · Južni Irak",
+      "title": "Zora civilizacije",
+      "stand": "U Uru i Uruku, na ravnici drevnog Sumera, ljudi su prvi put živjeli u gradovima, vodili pisane račune i gradili hramove koje se vidjelo s hoda od jednog dana.",
+      "cap": "Gosti ispred zigurata u Uru, sagrađenog oko 2100. pr. Kr. za boga mjeseca Nannu.",
+      "feature": ["Zigurat u Uru", "Kraljevsko groblje", "Uruk i prvo pismo", "Vremenska crta Mezopotamije"]
+    },
+    "15": {
+      "run": "Ur i Uruk",
+      "kicker": "Ur",
+      "drop": true,
+      "paras": [
+        "Zigurat u Uru najbolje je sačuvan u Iraku. Kralj Ur-Nammu počeo ga je oko 2100. pr. Kr., a sin mu Šulgi dovršio: stepenasta platforma od nepečene opeke, obložena pečenom opekom i učvršćena bitumenom, posvećena Nanni, bogu mjeseca i zaštitniku grada.",
+        "Tri stubišta od po stotinu stuba sastaju se u kućici vrata na prvoj terasi. Petnaest stoljeća kasnije babilonski kralj Nabonid obnovio je toranj, a donje pročelje ponovno je sagrađeno u dvadesetom stoljeću. Još se možete popeti.",
+        "Između 1922. i 1934. Leonard Woolley iskapao je Ur za Britanski muzej i Sveučilište Pennsylvania. U Kraljevskom groblju, datiranom oko 2600. do 2500. pr. Kr., našao je grobnicu kraljice Puabi, zlatne kacige, lire i mozaik ploču poznatu kao Standard iz Ura.",
+        "Predaja Ur imenuje i rodnim mjestom Abrahama, a obnovljena kuća kraj zigurata pokazuje se kao njegova. Od 2016. lokalitet je dio UNESCO-ova svjetskog baštinskog dobra Ahwar južnog Iraka."
+      ],
+      "sideTitle": "Ur ukratko",
+      "side": [
+        {"t": "Sagrađen", "d": "Oko 2100. pr. Kr."},
+        {"t": "Posvećen", "d": "Nanni, bogu mjeseca"},
+        {"t": "Iskapan", "d": "Woolley, 1922. do 1934."},
+        {"t": "Najbliži grad", "d": "Nasirija"}
+      ],
+      "caps": ["Također u Sumeru. Nagrizen zigurat u Nippuru, sjedište boga Enlila i vjersko središte sumerskog svijeta."],
+      "promo": "Posjetite Ur na našim putovanjima od sedam i devet dana — iraq.fabletour.com"
+    },
+    "16": {
+      "kicker": "Uruk",
+      "title": "Prvi grad",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Uruk, današnja Warka, ima najjače pravo od bilo kojeg mjesta na zemlji da se nazove prvim gradom. Oko 3100. pr. Kr. ovdje je živjelo nekoliko desetaka tisuća ljudi, više nego igdje drugdje u svijetu u to vrijeme.",
+        "Grad te veličine trebao je zapise. U četvrti Eanna, svetoj božici Inanni, arheolozi su našli tisuće glinenih pločica označenih brojevima i znakovima. Najranije potječu otprilike iz 3400. do 3200. pr. Kr. i najstarije su pismo dosad otkriveno.",
+        "Uruk je književnosti dao i prvog junaka. Gilgameša se pamtilo kao njegova kralja, a ep mu pripisuje gradski zid, oko devet kilometara u opsegu.",
+        "Bijeli hram još kruni humak nebeskog boga Anua, a vaza iz Warke i maska iz Warke, obje ovdje nađene, sada su u Iračkom muzeju u Bagdadu.",
+        "Lokalitet je golem, tih i gotovo netaknut. S vodičem se niski humci razlažu u hramove, dvorišta i ulice."
+      ],
+      "caps": ["Iznad. Gosti na ulazu u Uruk, s humkom zigurata iza. Prve zapisane riječi počele su ovdje."]
+    },
+    "17": {
+      "run": "Ur i Uruk",
+      "kicker": "Vremenska crta",
+      "title": "Sedam tisuća godina između dviju rijeka",
+      "events": [
+        {"y": "oko 5400. pr. Kr.", "t": "Osnovan je Eridu. Kasniji Sumerani pamtili su ga kao prvi grad od svih."},
+        {"y": "oko 3400.–3200. pr. Kr.", "t": "Najranije poznato pismo pojavljuje se na glinenim pločicama u Uruku."},
+        {"y": "oko 2600.–2500. pr. Kr.", "t": "Kraljeve i kraljice sahranjuju sa zlatom i lapis lazuli u Kraljevskom groblju u Uru."},
+        {"y": "oko 2334. pr. Kr.", "t": "Sargon Akadski ujedinjuje gradove Mezopotamije pod jednim vladarom."},
+        {"y": "oko 2100. pr. Kr.", "t": "Ur-Nammu gradi zigurat u Uru."},
+        {"y": "oko 1792.–1750. pr. Kr.", "t": "Hamurabi vlada iz Babilona i izdaje svoj zakonik."},
+        {"y": "14. stoljeće pr. Kr.", "t": "Kasitski kralj Kurigalzu osniva Dur-Kurigalzu, današnji Aqar Quf."},
+        {"y": "883.–859. pr. Kr.", "t": "Asurnasirpal II. čini Nimrud prijestolnicom Asirije."},
+        {"y": "612. pr. Kr.", "t": "Niniva pada i asirsko carstvo završava."},
+        {"y": "605.–562. pr. Kr.", "t": "Nabukodonozor II. obnavlja Babilon i podiže Ištarina vrata."},
+        {"y": "539. pr. Kr.", "t": "Kir Perzijski zauzima Babilon."},
+        {"y": "323. pr. Kr.", "t": "Aleksandar Veliki umire u Babilonu."},
+        {"y": "oko 100.–240. po Kr.", "t": "Pustinjski grad Hatra cvjeta i dvaput odolijeva rimskim vojskama."},
+        {"y": "638. po Kr.", "t": "Osnovana je Kufa. Basra je utemeljena u istom desetljeću."},
+        {"y": "680. po Kr.", "t": "Bitka kod Kerbale."},
+        {"y": "762. po Kr.", "t": "Kalif al-Mansur osniva Bagdad."},
+        {"y": "836. po Kr.", "t": "Abasidski dvor seli se u Samaru."},
+        {"y": "1233. po Kr.", "t": "Al-Mustansiriya otvara se u Bagdadu."}
+      ],
+      "note": "Datumi prije 1500. pr. Kr. slijede uobičajenu srednju kronologiju i približni su."
+    },
+    "18": {
+      "kicker": "Odredište · Južni Irak",
+      "title": "Močvare: život među rijekama",
+      "stand": "Gdje Tigris i Eufrat uspore i rasprostru se, ljudi grade od trske već pet tisuća godina. UNESCO ih je upisao 2016.; Ahwar južnog Iraka najbolje se vidi iz mashoofa u prvoj svjetlosti.",
+      "cap": "Mudhif, lučna gostinjska kuća močvarnih Arapa, sagrađena posve od snopova trske na vlastitom malom otoku."
+    },
+    "19": {
+      "run": "Močvare",
+      "drop": true,
+      "paras": [
+        "Sjeverno od Basre dvije rijeke gube obale. Voda se širi u labirint jezera, kanala i tršćaka koji je nekoć pokrivao površinu male zemlje, a usred toga ljudi žive na otocima koje su sami sagradili.",
+        "Močvarni Arapi, Ma'dani, gotovo sve prave od divovske trske koja raste oko njih: kuće, hasure, ograde, krmu i gorivo. Njihova najljepša građevina je mudhif, gostinjska dvorana od lučnih snopova trske, bez čavala i bez drvene građe. Isti se oblik pojavljuje na sumerskim rezbarijama starim pet tisuća godina.",
+        "Život slijedi vodenog bivola. Obitelji u zoru isplove vitkim drvenim mashoofom rezati svježu trsku, a bivoli doplivaju u sumrak. Njihovo mlijeko postaje geymar, gusta pavlaka koja se jede sa sirupom od datulja i toplim kruhom za doručak.",
+        "Devedesetih su močvare namjerno isušene i većina njihova stanovništva otišla je. Nakon 2003. nasipi su probijeni i voda se vratila na velik dio područja. Godine 2016. UNESCO je upisao Ahwar južnog Iraka kao svjetsko baštinsko dobro i zbog prirode i zbog kulture: četiri močvarna područja zajedno s drevnim gradovima Urom, Urukom i Eriduom."
+      ],
+      "sideTitle": "Putujte odgovorno",
+      "side": [
+        {"t": "Idite s lokalnim čamdžijama", "d": "Vožarina izravno podupire močvarne obitelji."},
+        {"t": "Pitajte prije fotografiranja", "d": "Osobito žene i unutar kuća."},
+        {"t": "Ne uzimajte ništa, ne ostavljajte ništa", "d": "Močvara je krhka, a razina vode mijenja se s godišnjim dobom."}
+      ],
+      "caps": ["Iznad. Vodeni bivoli pasu na trščanom otoku u Središnjim močvarama."],
+      "promo": "Doživite mezopotamijske močvare — iraq.fabletour.com"
+    },
+    "20": {
+      "photoTop": true,
+      "quote": "„Mnogi naši gosti kažu da je ovo najmirnije mjesto u Iraku.”",
+      "quoteBy": "Fable Tour",
+      "caps": ["Iznad. Čamcem kroz trščane kanale kraj Al-Chibayisha. Močvarni izlet, s ručkom od masgoufa s roštilja, može se dogovoriti u našim programima."]
+    },
+    "21": {
+      "run": "Basra",
+      "kicker": "Odredište · Južni Irak",
+      "title": "Basra: grad rijeka i palmi datulja",
+      "drop": true,
+      "paras": [
+        "Basra je mjesto gdje Irak susreće more. Osnovana u 630-ima kao garnizonski grad ranog kalifata, izrasla je u luku koja je trgovala s Indijom, istočnom Afrikom i Kinom, i u grad gramatičara, teologa i pjesnika. U Tisuću i jednoj noći Sinbad moreplovac odavde kreće.",
+        "Tigris i Eufrat spajaju se u Qurni, sat sjevernije, i tvore Šat al-Arab. Rijeka teče široko i sporo pokraj grada između šumaraka datulja. Večer na cornicheu, ili na vodi dok svjetlost gasne, osnovno je iskustvo Basre.",
+        "U staroj četvrti kanali su obrubljeni kućama trgovaca čiji katovi izbijaju nad ulicu iza zastora rezbarenog drva. Ti balkoni, šanašili, potpis su grada. Muzej Basre, otvoren 2016. u nekadašnjoj palači na rijeci, pripovijeda priču juga od Sumera do islamskog doba."
+      ],
+      "caps": ["Qurna. Ograda poznata kao Adamovo drvo, gdje lokalna predaja smješta Edenski vrt, na sutoku dviju rijeka."],
+      "miss": [
+        {"t": "Zalazak na Šat al-Arabu", "d": "Najljepši s čamca"},
+        {"t": "Kuće sa šanašilima", "d": "Rezbareni balkoni stare Basre"},
+        {"t": "Muzej Basre", "d": "Četiri galerije na rijeci"}
+      ]
+    },
+    "22": {
+      "kicker": "Odredište · Srednji Eufrat",
+      "title": "Sveti gradovi Mezopotamije",
+      "stand": "Nadžaf, Kerbala i Kufa među su najposjećenijim mjestima na zemlji. Milijuni hodočasnika dolaze svake godine, a putnike svakog podrijetla primaju uljudno.",
+      "cap": "Mramorno dvorište Velike džamije u Kufi u sumrak.",
+      "feature": ["Kufa", "Nadžaf i Wadi al-Salam", "Kerbala", "Posjet s poštovanjem"]
+    },
+    "23": {
+      "run": "Sveti gradovi",
+      "kicker": "Kufa i Nadžaf",
+      "drop": true,
+      "paras": [
+        "Kufa je osnovana 638. kao vojni logor na Eufratu i unutar jednog naraštaja postala je jedna od intelektualnih prijestolnica islama. Kutato kufsko pismo ime je dobilo po gradu. Ali ibn Abi Talib, bratić i zet poslanika Muhameda i četvrti kalif, odavde je vladao, i u Velikoj džamiji u Kufi smrtno je stradao 661.",
+        "Džamija je među najstarijima na svijetu. Njezino široko dvorište opasano je postajama koje predaja vezuje uz proroke, a kraj nje stoje svetišta Muslima ibn Akila i Hanija ibn Urwe. Kratka šetnja dalje skromna je kuća u kojoj je imam Ali živio.",
+        "Deset kilometara zapadno Nadžaf je izrastao oko njegova groba. Zlatna kupola i dva minareta svetišta imama Alija dižu se nad starim gradom, a dvorane su obložene zrcalnim mozaikom koji rasipa svjetlost. Tisuću godina Nadžaf je i grad učenjaka. Njegova sjemeništa, Hawza, privlače studente iz cijelog svijeta.",
+        "Uz grad leži Wadi al-Salam, Dolina mira. To je jedno od najvećih groblja na zemlji, krajolik kupola i svodova od opeke koji doseže obzor, i u neprekidnoj je uporabi više od tisućljeća."
+      ],
+      "caps": ["Wadi al-Salam. Dolina mira viđena odozgo, a iza nje nadžafska ravnica."]
+    },
+    "24": {
+      "run": "Sveti gradovi",
+      "kicker": "Kerbala",
+      "paras": [
+        "Desetog dana muharema 680. Husejn ibn Ali, unuk Poslanika, ubijen je sa svojim drugovima na ravnici Kerbale. Događaj se svake godine spominje na ašuru, a četrdeset dana kasnije hodočašće arbein dovodi milijune ljudi u grad pješice.",
+        "Svetišta imama Husejna i njegova brata Al-Abbasa gledaju se preko široke pješačke esplanade. Oba su okrunjena zlatom i iznutra pokrivena zrcalnim radom i plavim pločicama. Navečer, kad se kupole upale i dvorišta napune, ozračje je mirno i gostoljubivo."
+      ],
+      "caps": [
+        "Al-Kadhimiya, Bagdad. Gost fotografira kupole i minarete iz dvorišta.",
+        "Tiša bagdadska svetišta. Grob Junayda al-Baghdadija.",
+        "Grob Bahlula."
+      ],
+      "sideTitle": "Posjet s poštovanjem",
+      "side": [
+        {"t": "Odjeća", "d": "Dugi rukavi i duge hlače za muškarce. Žene nose abaju i maramu unutar svetišta; mogu se posuditi na ulazu."},
+        {"t": "Pristup", "d": "Dvorišta su uglavnom otvorena svim posjetiteljima. Pravila za unutarnje dvorane razlikuju se po svetištu i po danu, a vodič će savjetovati na licu mjesta."},
+        {"t": "Vrijeme", "d": "Za ašure i arbeina gradovi su iznimno puni. Te datume zaobilazimo osim ako ih želite svjedočiti."},
+        {"t": "Ulazak", "d": "Cipele, torbe i fotoaparati ostavljaju se u besplatnim garderobama. Muškarci i žene koriste odvojene ulaze."},
+        {"t": "Fotografiranje", "d": "Telefoni se u dvorištima obično prihvaćaju. Uvijek pitajte prije nego što fotografirate ljude na molitvi."},
+        {"t": "Gostoljubivost", "d": "Čaj, voda i hrana često se posjetiteljima nude besplatno. Prihvatiti je uljudnost."}
+      ]
+    },
+    "25": {
+      "kicker": "Odredište · Salah ad-Din",
+      "title": "Samara: veličina Abasida",
+      "stand": "Pola stoljeća ovo je bila prijestolnica carstva koje je sezalo od sjeverne Afrike do središnje Azije. Njezin spiralni minaret najpoznatija je silueta u Iraku.",
+      "cap": "Malwiya, spiralni minaret Velike džamije u Samari, dovršen 852."
+    },
+    "26": {
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Godine 836. kalif al-Mu'tasim napustio je Bagdad i sagradio novu prijestolnicu 125 kilometara uzvodno. Samara je razmjerena na otvorenom tlu s avenijama, palačama, vojarnama, trkalištima i lovištima. Naposljetku se protezala više od četrdeset kilometara duž istočne obale Tigrisa.",
+        "Njegov sin al-Mutawakkil dodao je Veliku džamiju između 848. i 852. Bila je tada najveća džamija na svijetu, ograđeni pravokutnik od pečene opeke dovoljno velik da cijela vojska moli zajedno. Izvan njezina sjevernog zida podigao je Malwiyu, minaret visok 52 metra s rampom koja se izvana ovija pet puta.",
+        "Dvor se vratio u Bagdad 892. i velik dio Samare jednostavno je napušten, zato joj se tlocrt sačuvao tako potpuno. UNESCO je 2007. upisao Arheološki grad Samaru na Popis svjetske baštine."
+      ],
+      "caps": ["Velika džamija. Vanjski zid s polukružnim kulama, a iza njega diže se Malwiya."],
+      "sideTitle": "Samara ukratko",
+      "side": [
+        {"t": "Prijestolnica", "d": "836. do 892."},
+        {"t": "Malwiya", "d": "52 m, dovršena 852."},
+        {"t": "Od Bagdada", "d": "Oko 125 km sjeverno"},
+        {"t": "UNESCO", "d": "Upisana 2007."}
+      ]
+    },
+    "27": {
+      "run": "Samara",
+      "photoTop": true,
+      "paras": [
+        "Samara je i grad hodočašća. Svetište al-Askari čuva grobnice desetog i jedanaestog imama, Alija al-Hadija i Hasana al-Askarija, pod jednom od najvećih zlatnih kupola u islamskom svijetu.",
+        "Blizu mjesta koje se pokazuje kao zatvor imama Alija al-Hadija leži Qasr al-Birka, Palača bazena. Njezin okrugli bazen usječen je duboko u zemlju i okružen nadsvođenim dvoranama, kamo je abasidski dvor bježao od ljetne žege.",
+        "Sjeverno od središta džamija Abu Dulafa ponavlja spiralni minaret u manjem mjerilu.",
+        "Dan u Samari s Fable Tourom obuhvaća Malwiyu, svetište, zatvor imama Alija al-Hadija i Qasr al-Birku."
+      ],
+      "caps": [
+        "Qasr al-Birka. Utonulo dvorište s bazenom abasidske palače, opasano lučnim dvoranama, kraj zatvora imama Alija al-Hadija.",
+        "Svetište al-Askari. Zlatna kupola iznad popločanog portala."
+      ],
+      "promo": "Posjetite Samaru s Fable Tourom — iraq.fabletour.com"
+    },
+    "28": {
+      "kicker": "Odredište · Pokrajina Niniva",
+      "title": "Sjeverni Irak: carstva, gradovi i civilizacije",
+      "stand": "Sjever je bio srce Asirije, a kasnije granica između Rima i Perzije. Njegovi lokaliteti među su najmanje posjećenima i najvrjednijima u zemlji.",
+      "cap": "Gosti na stubama hrama Marana u Hatri.",
+      "feature": ["Hatra", "Mosul i Niniva", "Nimrud", "Ašur"]
+    },
+    "29": {
+      "run": "Sjeverni Irak",
+      "kicker": "Hatra",
+      "drop": true,
+      "paras": [
+        "Hatra stoji sama u pustinji stotinu kilometara jugozapadno od Mosula. U prvom i drugom stoljeću po Kr. bila je bogat karavanski grad na rubu partskog carstva, pod vlašću vlastitih arapskih kraljeva i opasana dvama prstenovima zida.",
+        "U središtu je veliki sveti ograđeni prostor. Hramovi su od vapnenca boje meda i spajaju nadsvođene dvorane Istoka, ivane, sa stupovima i rezbarenim ukrasom grčkog i rimskog svijeta. Glavni bog bio je Šamaš, sunce.",
+        "Hatra je odolijevala rimskim carevima Trajanu i Septimiju Severu, koji su je obojica opsjedali i nisu uspjeli. Naposljetku je pala pred sasanidskim kraljem Šapurom I. oko 240. i nikad nije ponovno naseljena.",
+        "Godine 1985. postala je prvo mjesto u Iraku upisano na UNESCO-ov Popis svjetske baštine. Posjet zahtijeva sigurnosnu dozvolu, koju Fable Tour uređuje unaprijed."
+      ],
+      "caps": [
+        "Kamen na kamenu. Rezbarena vrata u hramskom ograđenom prostoru.",
+        "Veliki ivani. Nadsvođene dvorane otvaraju se na središnje dvorište."
+      ]
+    },
+    "30": {
+      "run": "Sjeverni Irak",
+      "kicker": "Mosul, Niniva, Nimrud i Ašur",
+      "drop": true,
+      "paras": [
+        "Mosul gleda humke drevne Ninive preko Tigrisa. Oko 700. pr. Kr. asirski kralj Sanherib učinio je Ninivu svojom prijestolnicom i opasao je dvanaest kilometara zida. Njegov unuk Asurbanipal ondje je skupio knjižnicu glinenih pločica, izvor velikog dijela onoga što se zna o mezopotamijskoj književnosti. Grad je pao 612. pr. Kr.",
+        "Srednjovjekovni Mosul obogatio se na trgovini i dao ime muslinu. Velika džamija al-Nuri sagrađena je 1172., a njezin nagnuti minaret, al-Hadba, postao je amblem grada. Oboje je uništeno 2017. Od tada su obnovljeni izvornom opekom u programu pod vodstvom UNESCO-a, a džamija je ponovno otvorena 2025.",
+        "Trideset kilometara južnije leži Nimrud, asirski Kalhu. Asurnasirpal II. učinio ga je prijestolnicom u devetom stoljeću pr. Kr. i napunio palaču rezbarenim reljefima i kolosalnim krilatim bikovima. Lokalitet je teško oštećen 2015. i konzervacija je u tijeku. Ploče i opeke s natpisima još leže ondje gdje su pale.",
+        "Dalje niz Tigris Ašur je bio prva prijestolnica i vjersko srce Asirije. Svjetsko je baštinsko dobro od 2003."
+      ],
+      "caps": [
+        "Mosul. Obnovljeni minaret al-Hadba viđen iz ograđenog prostora džamije al-Nuri.",
+        "Ašur. Opeka s pečatom klinastog pisma na lokalitetu.",
+        "Nimrud. Gosti s pločom s natpisom na humku palače. Kao i Hatra, Nimrud se posjećuje uz dozvolu; ako je toga dana odbiju, nudimo drugi lokalitet."
+      ]
+    },
+    "31": {
+      "kicker": "Odredište · Regija Kurdistan",
+      "title": "Sjever: gdje povijest susreće planine",
+      "deck": "Erbilska citadela nastanjena je tako dugo da je humak pod njom sazdan od ranijih Erbila.",
+      "drop": true,
+      "wide": true,
+      "paras": [
+        "Citadela Erbila diže se oko trideset metara iznad modernog grada na ovalnom humku, tellu građenom sloj po sloj kroz tisuće godina naselja. Grad se u pisanim zapisima javlja već u trećem tisućljeću pr. Kr. i često ga opisuju kao jedno od najstarijih neprekidno nastanjenih mjesta na svijetu.",
+        "Zid pročelja kuća iz devetnaestog stoljeća opasuje vrh poput tvrđave. Unutra su prolazi, dvorišta, džamija i hamam. Citadela je upisana na UNESCO-ov Popis svjetske baštine 2014. i obnova traje, pa neki dijelovi mogu biti zatvoreni.",
+        "U podnožju natkriveni bazar Qaysari prodaje med, orašaste plodove, sir, začine i kurdske tkanine, a čajdžinice na glavnom trgu mjesto su s kojeg se gleda kako grad prolazi.",
+        "Na cesti od Mosula samostan Mar Mattai prianja uz bok planine Alfaf. Osnovan u četvrtom stoljeću, jedan je od najstarijih kršćanskih samostana još u uporabi. Iza Erbila ravnica ustupa mjesto Zagrosu: klancima, slapovima i planinskim cestama koje iznenade svakoga tko Irak drži ravnim."
+      ],
+      "miss": [
+        {"t": "Citadela Erbil", "d": "Svjetska baština UNESCO-a, 2014."},
+        {"t": "Bazar Qaysari", "d": "U podnožju citadele"},
+        {"t": "Samostan Mar Mattai", "d": "Na planini Alfaf"},
+        {"t": "Devetodnevno putovanje", "d": "Završava u Erbilu; vidi stranicu 36"}
+      ],
+      "promo": "Putujte od Basre do Erbila s Fable Tourom — iraq.fabletour.com"
+    },
+    "32": {
+      "kicker": "Kuhinja · Gostoljubivost",
+      "title": "Okusi Iraka",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Irački stol prostire se za više ljudi nego što ih se očekuje, jer se s gostima računa. Nacionalno jelo je masgouf: riječni šaran rasječen, posoljen, poduprt na kolcima uz vatru od drva i polako pečen dok koža ne zapucketa. Jede se s plosnatim kruhom, ukiseljenim mangom i sirovim lukom.",
+        "Blagdani donose quzi, cijelo janje pečeno nad rižom s bademima i grožđicama, i dolmu, povrće punjeno začinjenom rižom i krčkano u kiselo-slatkom umaku. Doručak u Bagdadu je kahi, lisnato tijesto s bivoljom pavlakom i sirupom.",
+        "Čaj slijedi svaki obrok. Kuha se jak, zamiriše kardamomom i poslužuje u maloj čaši koja se zove istikan. U Basri tražite čaj od sušenih limeta. Iračke datulje ne trebaju predstavljanje, a ima ih stotine vrsta."
+      ],
+      "caps": ["Iznad. Saif s autorom Williamom Frejem i njegovom skupinom na večeri u Mosulu."],
+      "sideTitle": "Na stolu",
+      "side": [
+        {"t": "Masgouf", "d": "Riječni šaran s vatre"},
+        {"t": "Quzi", "d": "Janje na začinjenoj riži"},
+        {"t": "Dolma", "d": "Punjeno povrće"},
+        {"t": "Kahi i geymar", "d": "Bagdadski doručak"}
+      ]
+    },
+    "33": {
+      "run": "Fable Tour",
+      "kicker": "Iskustvo Fable Toura",
+      "title": "Više od ture. Priča za pamćenje.",
+      "paras": [
+        "Fable Tour iračka je tvrtka sa sjedištem u Bagdadu. Smišljamo privatna putovanja i putovanja u malim skupinama kroz cijelu zemlju, od Basre do Erbila, i sami ih vodimo.",
+        "Svako putovanje počinje jednako: vodič vas čeka u dvorani dolazaka. Od tog trenutka privatno klimatizirano vozilo, profesionalni vodič i vozač ostaju s vama do odlaska. Vodimo na engleskom, ruskom i arapskom.",
+        "U svakom gradu biramo hotele s četiri i pet zvjezdica, uključujemo svakodnevni doručak i ulaznice te pribavljamo dozvole potrebne za lokalitete poput Hatre i Nimruda. Vi birate datum; mi sredimo ostalo.",
+        "Naš osnivač, Saif Al-Tamimi, pojavljuje se u knjizi Nezaboravljeno: drevni gradovi iz daleke prošlosti fotografa Williama Freja, čiju je skupinu vodio kroz sjeverni Irak."
+      ],
+      "caps": [
+        "Dolasci. Vodič vas dočekuje unutar Međunarodne zračne luke Bagdad.",
+        "Na turi. Gosti kod Kišle, Bagdad."
+      ],
+      "sideTitle": "Što je uključeno",
+      "side": [
+        {"t": "Privatno ili u skupini", "d": "Na datum koji odaberete"},
+        {"t": "Tri jezika", "d": "engleski, ruski, arapski"},
+        {"t": "Odabrani hoteli", "d": "Četiri i pet zvjezdica, s doručkom"},
+        {"t": "Sve uređeno", "d": "Prijevoz, ulaznice, dozvole"}
+      ],
+      "promo": "Nađite nas na GetYourGuideu i Tripadvisoru kao „Fable Tour in Iraq”, i na Instagramu @fable_tour. Isplanirajte privatno putovanje Irakom — iraq.fabletour.com"
+    },
+    "34": {
+      "kicker": "Putovanja · Fable Tour",
+      "tour": "Kulturna baština Iraka · 7 dana / 6 noćenja",
+      "title": "Istražite Mezopotamiju u sedam dana",
+      "deck": "Od Babilona do močvara, Samare i Hatre, s početkom i krajem u Međunarodnoj zračnoj luci Bagdad.",
+      "days": [
+        {"n": "01", "title": "Babilon i Kerbala", "route": "Bagdad – Babilon – Kerbala", "text": "Doček u zračnoj luci, zatim Procesijski put, Ištarina vrata i Babilonski lav. Dalje do zigurata u Borsipi i svetišta Kerbale do večeri.", "stay": "Kerbala · Al-Baron Hotel"},
+        {"n": "02", "title": "Kufa i Nadžaf", "route": "Kufa – Nadžaf", "text": "Velika džamija u Kufi, prolazi groblja Wadi al-Salam i zlatna kupola svetišta imama Alija.", "stay": "Nadžaf · Granada, Do Najaf ili Naseem Al-Najaf"},
+        {"n": "03", "title": "Uruk i Basra u zalasku", "route": "Uruk – Basra", "text": "Uruk, grad Gilgameša i ranog pisma, zatim na jug do Šat al-Araba i šanašil kuća stare Basre.", "stay": "Basra · Mövenpick Zinat Al-Hayat ili Corniche Hotel"},
+        {"n": "04", "title": "Adamovo drvo, močvare i Ur", "route": "Qurna – močvare – Ur – Bagdad", "text": "Gdje se dvije rijeke sastaju u Qurni, čamac kroz trščane močvare i stubište zigurata u Uru.", "stay": "Bagdad · Do Baghdad, Alabasly Suites ili Bilitum"},
+        {"n": "05", "title": "Samara i put na sjever", "route": "Samara – Mosul", "text": "Spiralni minaret Malwiya i svetište al-Askari, zatim dalje u Mosul.", "stay": "Mosul · Ramada Hotel"},
+        {"n": "06", "title": "Mosul, Nimrud i Hatra", "route": "Mosul – Nimrud – Hatra – Bagdad", "text": "Stari Mosul i džamija al-Nuri, asirski Nimrud i hramovi Hatre u pustinji.", "stay": "Bagdad · Do Baghdad, Alabasly Suites ili Bilitum"},
+        {"n": "07", "title": "Bagdad, veliki finale", "route": "Bagdad – zračna luka", "text": "Svetište al-Kadhimiya, ulica al-Mutanabi i Kišla, kasitski zigurat Aqar Quf, zatim vaš let.", "stay": ""}
+      ]
+    },
+    "35": {
+      "included": [
+        "Privatni klimatizirani prijevoz cijelim putem",
+        "Profesionalni vodič na engleskom, ruskom ili arapskom",
+        "6 noćenja u hotelima s četiri i pet zvjezdica, dvokrevetna ili twin soba",
+        "Svakodnevni doručak",
+        "Ulaznice za sve lokalitete u planu puta",
+        "Doček u zračnoj luci i oproštajni transfer u Bagdadu"
+      ],
+      "excluded": "Međunarodni letovi · Iračka viza · Ručkovi i večere · Putno osiguranje · Osobni troškovi i napojnice",
+      "good": "Privatni ili polasci u malim skupinama. Hatra i Nimrud traže sigurnosne dozvole, koje mi uređujemo; ako dozvolu odbiju, nudi se drugi lokalitet. Redoslijed posjeta može se na terenu prilagoditi zbog vremena i radnog vremena.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "36": {
+      "kicker": "Putovanja · Fable Tour",
+      "tour": "Cijeli Irak, od Basre do Erbila · 9 dana / 8 noćenja",
+      "title": "Veliko iračko putovanje, devet dana",
+      "deck": "Cijela zemlja u jednoj crti, od juga prema sjeveru. Dolazak u Basru, odlazak iz Erbila.",
+      "days": [
+        {"n": "01", "title": "Basra, vrata juga", "route": "Basra", "text": "Armenska crkva Svete Djevice Marije, Muzej Basre i zalazak na Šat al-Arabu.", "stay": "Basra · Mövenpick Zinat Al-Hayat"},
+        {"n": "02", "title": "Močvare i zigurat u Uru", "route": "močvare – Ur – Nadžaf", "text": "Trščani otoci, vodeni bivoli i gostinjske kuće mudhif, zatim Veliki zigurat i kraljevske grobnice.", "stay": "Nadžaf · Do Najaf Hotel"},
+        {"n": "03", "title": "Nadžaf, Kufa i Kerbala", "route": "Nadžaf – Kufa – Kerbala", "text": "Svetište imama Alija, Wadi al-Salam, Velika džamija u Kufi i svetišta Kerbale.", "stay": "Kerbala · The Baron Hotel"},
+        {"n": "04", "title": "Babilon i Borsipa", "route": "Babilon – Borsipa – Bagdad", "text": "Procesijski put, Ištarina vrata i Nabukodonozorove palače, zatim zigurat boga Nabua.", "stay": "Bagdad · Alabasly Suites"},
+        {"n": "05", "title": "Bagdad, Grad mira", "route": "Bagdad – Aqar Quf", "text": "Ulica al-Mutanabi i Kišla, Spomenik mučenicima, svetište al-Kadhimiya i Aqar Quf.", "stay": "Bagdad · Alabasly Suites"},
+        {"n": "06", "title": "Samara i Hatra", "route": "Samara – Hatra – Mosul", "text": "Malwiya, svetište al-Askari i pustinjski grad Hatra.", "stay": "Mosul · Ramada Plaza by Wyndham Mosul Corniche"},
+        {"n": "07", "title": "Mosul, Nimrud i Mar Mattai", "route": "Mosul – Nimrud – Mar Mattai – Erbil", "text": "Stari Mosul i džamija al-Nuri, asirski Nimrud i planinski samostan.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "08", "title": "Erbil i njegova drevna citadela", "route": "Erbil", "text": "Citadela i bazar Qaysari.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "09", "title": "Odlazak", "route": "Erbil – zračna luka", "text": "Transfer do Međunarodne zračne luke Erbil.", "stay": ""}
+      ]
+    },
+    "37": {
+      "included": [
+        "8 noćenja u hotelima s četiri i pet zvjezdica, dvokrevetna ili twin soba",
+        "Svakodnevni doručak",
+        "Privatni klimatizirani prijevoz cijelom rutom",
+        "Profesionalni vodič na engleskom, ruskom ili arapskom",
+        "Ulaznice za sve lokalitete, uključujući dozvole za Hatru i Nimrud",
+        "Doček u zračnoj luci u Basri i iskrcaj u zračnoj luci Erbil"
+      ],
+      "excluded": "Međunarodni letovi · Iračka e-viza (vrijedi i za Regiju Kurdistan) · Zdravstveno osiguranje · Ručkovi i večere · Vožnja čamcem u močvarama (na upit) · Osobni troškovi i napojnice",
+      "good": "Privatni ili polasci u malim skupinama. Hatra i Nimrud traže sigurnosne dozvole, koje mi uređujemo; ako dozvolu odbiju, nudi se drugi lokalitet. Redoslijed posjeta može se na terenu prilagoditi zbog vremena i radnog vremena.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "38": {
+      "kicker": "Vodič za putovanje",
+      "title": "Osnovni vodič za putovanje Irakom",
+      "groups": [
+        {"h": "Prije nego što krenete", "items": [
+          {"t": "Viza.", "d": "Irak izdaje elektroničke vize mnogim državljanstvima putem svojeg službenog portala za e-vize. Ako vaše nije prihvatljivo, Fable Tour vam može ishoditi vizu u sklopu rezervacije cijelog putovanja. Pravila se mijenjaju: potvrdite ih kod nas ili u iračkom veleposlanstvu prije nego što rezervirate letove."},
+          {"t": "Putovnica.", "d": "Nosite putovnicu valjanu najmanje šest mjeseci nakon datuma dolaska i čuvajte papirnatu kopiju stranice s fotografijom."},
+          {"t": "Kad krenuti.", "d": "Od listopada do travnja je sezona, s blagim danima i svježim noćima. Od lipnja do rujna dnevne temperature u središtu i na jugu redovito prelaze 45°C."}
+        ]},
+        {"h": "Novac, odjeća i običaji", "items": [
+          {"t": "Novac.", "d": "Valuta je irački dinar. Irak je uglavnom gotovinsko gospodarstvo. Donesite američke dolare u čistim, novijim novčanicama i zamijenite ih na licu mjesta; kartice rade u većim hotelima."},
+          {"t": "Odjeća.", "d": "Odijevajte se skromno posvuda: ramena i koljena pokrivena, za muškarce i žene. Žene neka ponesu maramu, a unutar svetišta obavezna je abaja."},
+          {"t": "Običaji.", "d": "Petak je dan odmora. Pozdravljajte desnom rukom, prihvatite čaj kad vam ga ponude i pitajte prije nego što fotografirate ljude. Ne fotografirajte kontrolne točke ni osoblje osiguranja."}
+        ]},
+        {"h": "Jezik i praktične stvari", "items": [
+          {"t": "Jezik.", "d": "Arapski i kurdski službeni su jezici. U hotelima se razumije engleski; vodič prevodi svugdje drugdje."},
+          {"t": "Zdravlje i osiguranje.", "d": "Ponesite sve lijekove koje redovito uzimate i pijte vodu u boci. Putno osiguranje koje pokriva Irak snažno se preporučuje i nije uključeno u naše programe."},
+          {"t": "Praktično.", "d": "Vremenska zona UTC+3. Struja 230 V; utičnice se razlikuju, zato ponesite univerzalni adapter. Lokalne SIM kartice prodaju se u zračnim lukama."}
+        ]}
+      ],
+      "noteTitle": "Informacije koje se mogu promijeniti.",
+      "note": "Pravila o vizama, uvjete ulaska, radno vrijeme i pristup lokalitetima određuju iračke vlasti i mogu se promijeniti u kratkom roku. Prije putovanja provjerite putne savjete vlastite vlade i iračko Ministarstvo vanjskih poslova, a pri rezervaciji pitajte nas za trenutačno stanje."
+    },
+    "39": {
+      "run": "Rezervacija",
+      "kicker": "Isplanirajte putovanje",
+      "title": "Vaša iračka pustolovina počinje ovdje",
+      "intro": "Odaberite program, otvorite njegovu stranicu i izaberite datum. Svako putovanje može ići privatno za vaše društvo ili kao mala skupina, i svako se može prilagoditi.",
+      "cards": [
+        {"days": "6 dana", "title": "Bagdad, Babilon i Samara", "text": "Šest dana s bazom u jednom bagdadskom hotelu: Irački muzej i stari Bagdad, Aqar Quf i Taq Kasra, Samara, Babilon i Borsipa.", "scan": "Plan puta i datumi"},
+        {"days": "7 dana", "title": "Kulturna baština Iraka", "text": "Sedam dana iz Bagdada: Babilon, Kerbala, Nadžaf, Uruk, Basra, močvare, Ur, Samara, Mosul i Hatra.", "scan": "Plan puta i datumi"},
+        {"days": "9 dana", "title": "Cijeli Irak, od Basre do Erbila", "text": "Devet dana od juga prema sjeveru, uz Nimrud, samostan Mar Mattai i citadelu Erbila.", "scan": "Plan puta i datumi"}
+      ],
+      "howTitle": "Kako rezervirati",
+      "how": "Pošaljite nam datume i broj putnika putem WhatsAppa, e-pošte ili obrasca na našoj stranici. Odgovaramo dostupnošću i pisanom potvrdom. Dnevni izleti iz Bagdada i transferi iz zračne luke rezerviraju se na isti način.",
+      "contactTitle": "Kontakt",
+      "lines": [
+        "iraq.fabletour.com",
+        "support@fabletour.com",
+        "WhatsApp +964 771 174 5353",
+        "Korisnička služba 24/7 +1 (212) 433-8608",
+        "Međunarodna zračna luka Bagdad, al-Karkh, Bagdad, Irak",
+        "Instagram @fable_tour"
+      ],
+      "promo": "Isplanirajte privatno putovanje Irakom — iraq.fabletour.com"
+    },
+    "40": {
+      "title": "Vaše putovanje kroz Mezopotamiju počinje ovdje.",
+      "text": "Istražite izvanrednu povijest, žive tradicije i nezaboravna odredišta Iraka s Fable Tourom. Od drevnih čuda Babilona do živahnih ulica Bagdada i bezvremenskih krajolika južne Mezopotamije, otkrijte Irak kroz autentična putovanja vođena stručno.",
+      "url": "iraq.fabletour.com",
+      "email": "support@fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353",
+      "service": "Korisnička služba 24/7 +1 (212) 433-8608",
+      "address": "Međunarodna zračna luka Bagdad, al-Karkh, Bagdad, Irak",
+      "scan": "Isplanirajte putovanje",
+      "credit": "Fotografija: zalazak na Šat al-Arabu, Basra"
+    }
+  }
+}

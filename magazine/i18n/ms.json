@@ -1,0 +1,657 @@
+{
+  "lang": "ms",
+  "dir": "ltr",
+  "metaTitle": "MESOPOTAMIA — Majalah Pelancongan Iraq | Fable Tour",
+  "metaDesc": "MESOPOTAMIA, majalah pelancongan Iraq oleh Fable Tour. Balik halamannya: Baghdad, Babylon, Ur dan Uruk, Paya, Samarra, Hatra, Mosul dan Erbil, bersama lawatan 7 hari dan 9 hari kami.",
+  "brand": "MESOPOTAMIA",
+  "ui": {
+    "hint": "Seret sudut halaman atau ketik anak panah untuk membalik halaman",
+    "first": "Halaman pertama",
+    "prev": "Halaman sebelumnya",
+    "next": "Halaman seterusnya",
+    "sound": "Bunyi hidup atau mati",
+    "full": "Skrin penuh",
+    "lang": "Bahasa"
+  },
+  "home": {
+    "nav": "Majalah",
+    "eyebrow": "Majalah kami",
+    "title": "Mesopotamia: majalah pelancongan Iraq",
+    "lead": "Seret sudut halaman atau gunakan anak panah untuk membalik halaman.",
+    "open": "Buka skrin penuh"
+  },
+  "label": {
+    "above": "DI ATAS",
+    "feature": "DALAM SOROTAN INI",
+    "miss": "JANGAN TERLEPAS",
+    "day": "HARI",
+    "overnight": "Bermalam",
+    "included": "TERMASUK",
+    "excluded": "TIDAK TERMASUK",
+    "good": "BAIK UNTUK DIKETAHUI",
+    "scan": "Lihat tarikh dan tempahan"
+  },
+  "pages": {
+    "1": {
+      "kicker": "Fable Tour  |  Majalah pelancongan Iraq  |  Isu 01",
+      "sub": "Temui Iraq bersama Fable Tour",
+      "headline": "Iraq: tempat tamadun bermula",
+      "deck": "Temui keajaiban abadi Mesopotamia purba",
+      "cols": [
+        {"t": "Babylon", "d": "Berjalan melalui warisan raja-raja"},
+        {"t": "Baghdad", "d": "Temui Kota Damai"},
+        {"t": "Paya", "d": "Kehidupan di antara dua sungai"},
+        {"t": "Ur & Uruk", "d": "Fajar tamadun"}
+      ],
+      "credit": "Kulit: pembinaan semula moden Pintu Ishtar di pintu masuk Babylon purba, Iraq"
+    },
+    "2": {
+      "issue": "Isu 01",
+      "title": "Selamat datang ke Mesopotamia",
+      "text": "Di antara Tigris dan Furat, manusia mula-mula membina kota, mencatat undang-undang mereka dan meninggikan kuil ke langit. Tanah itu masih ada, dan begitu juga monumennya. Majalah ini ialah jemputan untuk melihatnya.",
+      "cap": "Pengunjung di ziggurat Kassite Aqar Quf yang berusia 3,400 tahun, di barat Baghdad."
+    },
+    "3": {
+      "run": "Selamat datang",
+      "kicker": "Daripada pengasas",
+      "title": "Jemputan peribadi untuk menemui Iraq",
+      "paras": [
+        "Saya dilahirkan di Iraq pada tahun 1991 dan membesar dalam kalangan nama yang dikenali seluruh dunia: Babylon, Ur, Baghdad. Selama bertahun-tahun saya belajar dan mengembara di luar negara. Saya dilatih sebagai doktor gigi di Ukraine dan melawat tiga belas negara sebagai pelancong, dan di mana-mana sahaja orang mengajukan soalan yang sama: bagaimanakah Iraq yang sebenarnya?",
+        "Fable Tour ialah jawapan saya. Saya menjadi pemandu kerana saya mahu pengunjung berdiri di tempat sejarah berlaku, dan bertemu orang yang hidup di sisinya hari ini. Sebuah ziggurat lebih daripada sekadar gambar apabila seseorang memberitahu anda siapa yang membinanya dan mengapa. Segelas teh di kafe lama Baghdad lebih daripada sekadar minuman apabila anda tahu siapa yang pernah duduk di situ sebelum anda.",
+        "Perjalanan kami bersifat peribadi atau dalam kumpulan kecil, mengikut rentak yang anda pilih. Kami mengembara bersama pemandu berlesen dalam bahasa Inggeris, Rusia dan Arab, menginap di hotel yang dipilih dengan teliti, dan mengurus permit, pengangkutan serta masa supaya anda boleh sekadar melihat, mendengar dan bertanya.",
+        "Kami juga percaya pada perjalanan yang bertanggungjawab. Itu bermakna menghormati tempat suci dan adat tempatan, menyokong restoran keluarga dan tukang perahu di Paya, serta meninggalkan setiap tapak sebagaimana kami menjumpainya.",
+        "Pada halaman yang berikutnya anda akan menemui tempat yang paling saya cintai. Saya berharap tempat-tempat itu meyakinkan anda untuk datang, dan saya menantikan untuk menyambut anda sendiri di lapangan terbang."
+      ],
+      "sign": "Saif Al-Tamimi",
+      "role": "Pengasas dan pemandu, Fable Tour",
+      "cap": "Saif Al-Tamimi, pengasas dan pemandu, Fable Tour."
+    },
+    "4": {
+      "run": "Kandungan",
+      "kicker": "Dalam isu ini",
+      "title": "Kandungan",
+      "items": [
+        {"n": "06", "t": "Baghdad", "d": "Kota Damai"},
+        {"n": "09", "t": "Al-Kadhimiya", "d": "Makam dua imam"},
+        {"n": "10", "t": "Babylon", "d": "Berjalan melalui empayar raja-raja"},
+        {"n": "12", "t": "Borsippa", "d": "Warisan Nabu"},
+        {"n": "13", "t": "Ctesiphon & Aqar Quf", "d": "Dua gergasi di pinggir Baghdad"},
+        {"n": "14", "t": "Ur & Uruk", "d": "Fajar tamadun"},
+        {"n": "18", "t": "Paya", "d": "Kehidupan di antara sungai"},
+        {"n": "21", "t": "Basra", "d": "Kota sungai dan pokok kurma"},
+        {"n": "22", "t": "Najaf, Karbala & Kufah", "d": "Kota suci Mesopotamia"},
+        {"n": "25", "t": "Samarra", "d": "Kegemilangan Abbasiyah"},
+        {"n": "28", "t": "Iraq Utara", "d": "Empayar, kota dan tamadun"},
+        {"n": "31", "t": "Erbil", "d": "Tempat sejarah bertemu gunung"},
+        {"n": "32", "t": "Citarasa Iraq", "d": "Masakan dan keramahan"},
+        {"n": "33", "t": "Pengalaman Fable Tour", "d": "Lebih daripada sekadar lawatan"},
+        {"n": "34", "t": "Tujuh hari", "d": "Jelajah Mesopotamia"},
+        {"n": "36", "t": "Sembilan hari", "d": "Perjalanan agung Iraq"},
+        {"n": "38", "t": "Sebelum anda mengembara", "d": "Panduan penting"},
+        {"n": "39", "t": "Rancang perjalanan anda", "d": "Tempahan dan hubungan"}
+      ],
+      "fig": "Halaman 12. Ziggurat Borsippa, dimahkotai bata yang melebur dalam api purba.",
+      "pub": [
+        "MESOPOTAMIA. Isu 01. Diterbitkan oleh Fable Tour, Lapangan Terbang Antarabangsa Baghdad, Al-Karkh, Baghdad, Iraq.",
+        "Semua gambar oleh Fable Tour, diambil dalam perjalanan kami sendiri.",
+        "iraq.fabletour.com"
+      ]
+    },
+    "5": {
+      "run": "Peta",
+      "kicker": "Destinasi",
+      "title": "Iraq sepintas lalu",
+      "places": [
+        {"t": "Mosul & Niniwe", "d": "Halaman 30"},
+        {"t": "Erbil", "d": "Halaman 31"},
+        {"t": "Nimrud", "d": "Halaman 30"},
+        {"t": "Hatra", "d": "Halaman 29 · UNESCO"},
+        {"t": "Ashur", "d": "Halaman 30 · UNESCO"},
+        {"t": "Samarra", "d": "Halaman 25 · UNESCO"},
+        {"t": "Baghdad", "d": "Halaman 06"},
+        {"t": "Ctesiphon", "d": "Halaman 13"},
+        {"t": "Karbala", "d": "Halaman 24"},
+        {"t": "Babylon", "d": "Halaman 10 · UNESCO"},
+        {"t": "Borsippa", "d": "Halaman 12"},
+        {"t": "Najaf & Kufah", "d": "Halaman 22"},
+        {"t": "Uruk", "d": "Halaman 16"},
+        {"t": "Paya", "d": "Halaman 18 · UNESCO"},
+        {"t": "Ur", "d": "Halaman 14"},
+        {"t": "Basra", "d": "Halaman 21"}
+      ],
+      "note": "Emas menandakan tapak Warisan Dunia UNESCO; biru navy menandakan destinasi lain dalam isu ini. Sempadan dilukis secara skema, mengikut Natural Earth, dan sungai-sungainya juga skema. Enam tapak Iraq tersenarai dalam Senarai Warisan Dunia: Hatra (1985), Ashur (2003), Samarra (2007), Kubu Erbil (2014), Ahwar Iraq Selatan, yang merangkumi Ur dan Uruk (2016), serta Babylon (2019)."
+    },
+    "6": {
+      "kicker": "Destinasi · Baghdad",
+      "title": "Baghdad: Kota Damai",
+      "stand": "Diasaskan sebagai Madinat al-Salam pada tahun 762, ibu kota Abbasiyah ini pernah menjadi kota terbesar di bumi. Penjual bukunya, rumah tehnya dan tebing sungainya masih membawa warisan itu.",
+      "cap": "Patung penyair abad kesepuluh al-Mutanabbi di hujung sungai jalan yang membawa namanya, dengan lampu tebing seberang Tigris di belakang.",
+      "feature": ["Jalan Mutanabbi", "Al-Mustansiriyah", "Qishla", "Kafe Shabandar", "Al-Kadhimiya"]
+    },
+    "7": {
+      "run": "Baghdad",
+      "drop": true,
+      "paras": [
+        "Pada musim panas 762, khalifah Abbasiyah al-Mansur memilih tapak di tebing barat Tigris dan memerintahkan sebuah ibu kota dibina mengikut pelan yang belum pernah diikuti mana-mana kota: bulatan sempurna, dengan istana dan masjid di pusatnya serta empat pintu yang terbuka ke jalan-jalan empayar. Baginda menamakannya Madinat al-Salam, Kota Damai.",
+        "Tiada apa-apa daripada Kota Bulat yang masih berdiri di atas tanah hari ini, tetapi gagasan Baghdad yang dilahirkannya tidak pernah pergi. Dalam masa satu abad, inilah tempat ilmu Yunani, Parsi dan India diterjemahkan ke dalam bahasa Arab, tempat kertas menggantikan kulit binatang, dan tempat ulama serta penyair datang untuk mengukir nama.",
+        "Saksi yang paling banyak terselamat dari zaman itu ialah Al-Mustansiriyah, madrasah yang diasaskan oleh khalifah al-Mustansir dan dibuka pada tahun 1233. Halaman batanya yang panjang, dibingkai gerbang runcing dan panel geometri berukir, pernah menempatkan keempat-empat mazhab undang-undang Sunni di bawah satu bumbung. Berjalanlah melaluinya awal-awal, sebelum panas, dan perkadarannya sendiri yang menerangkan.",
+        "Beberapa minit dari situ, bangunan yang dikenali sebagai Istana Abbasiyah menunjukkan kerja bata yang sama pada skala rumah: koridor berkubah, iwan yang dalam dan siling yang dipotong menjadi muqarnas sarang lebah.",
+        "Kemudian tibalah Jalan Mutanabbi. Orang Baghdad suka memetik ungkapan lama bahawa Kaherah menulis, Beirut mencetak dan Baghdad membaca, dan pada pagi Jumaat jalan ini membuktikannya, apabila buku dibentangkan di kaki lima dari satu hujung ke hujung yang lain. Di hujung jauh berdiri penyair itu sendiri dalam gangsa, lengan terangkat ke arah sungai.",
+        "Di sisinya ialah Kafe Shabandar, yang menghidangkan teh sejak 1917 di bawah dinding penuh gambar lama, dan Qishla, berek Uthmaniyah yang menara jamnya telah menjaga waktu di atas Tigris sejak abad kesembilan belas."
+      ],
+      "caps": [
+        "Al-Mustansiriyah. Dua tingkat gerbang runcing dan panel bata berukir mengelilingi halaman madrasah, dibuka pada tahun 1233.",
+        "Qishla. Seorang tetamu membingkai menara jam Uthmaniyah dari arked.",
+        "Kafe Shabandar. Papan tanda loyang di atas pintu rumah teh paling terkenal di kota ini."
+      ],
+      "miss": [
+        {"t": "Jalan Mutanabbi", "d": "Pasar buku hari Jumaat"},
+        {"t": "Al-Mustansiriyah", "d": "Dibuka 1233"},
+        {"t": "Qishla", "d": "Menara jam di Tigris"},
+        {"t": "Makam Al-Kadhimiya", "d": "Lihat halaman 9"}
+      ],
+      "promo": "Temui Baghdad bersama pemandu tempatan — iraq.fabletour.com"
+    },
+    "8": {
+      "kicker": "Satu petang di Baghdad lama",
+      "photoTop": true,
+      "paras": [
+        "Cara terbaik untuk memahami Baghdad ialah dengan berjalan kaki, dan jalannya singkat. Bermula di bawah arked Jalan Al-Rashid, yang dibuka pada tahun 1916, tempat Haj Zbala menuang serbat kismis sejak 1900.",
+        "Dari situ Jalan Mutanabbi terus ke sungai. Pada siang hari ia ialah pasar buku Iraq. Selepas gelap lampu menyala, balkoni penuh, dan seluruh kota seolah-olah bersiar-siar melaluinya: keluarga, pelajar, pemuzik, penjual tembikar dan kopi.",
+        "Luangkan masa di gerai buku, kemudian duduk di Shabandar untuk teh dalam gelas kecil berpinggang. Di sebaliknya, kawasan Saray yang dipulihkan dan Qishla membawa anda ke patung penyair dan ke Tigris."
+      ],
+      "caps": [
+        "Jalan Mutanabbi. Pasar buku selepas gelap, di bawah arked bata dan balkoninya.",
+        "Gerai buku. Saif berhenti untuk membaca.",
+        "Muzik jalanan. Seorang pemain saksofon di kawasan Saray.",
+        "Haj Zbala. Serbat di Jalan Al-Rashid sejak 1900."
+      ],
+      "promo": "Temui Baghdad bersama pemandu tempatan — iraq.fabletour.com"
+    },
+    "9": {
+      "run": "Baghdad",
+      "kicker": "Baghdad · Al-Kadhimiya",
+      "title": "Makam dua imam",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Di utara Baghdad, di tebing barat Tigris, dua kubah emas berdiri bersebelahan. Di bawahnya terbaring seorang datuk dan cucunya: Musa al-Kadhim, Imam ketujuh Islam Syiah Dua Belas Imam, dan Muhammad al-Jawad, yang kesembilan. Daerah ini mengambil namanya daripada mereka. Al-Kadhimiya, atau Kadhimayn, bermaksud tempat dua Kadhim.",
+        "Musa ibn Ja'far dilahirkan pada tahun 745 dekat Madinah, putera ulama besar Imam Ja'far al-Sadiq. Beliau dikenali kerana kesabaran dan kemurahannya, dan gelaran al-Kadhim bermaksud orang yang menahan marahnya. Ramai juga memanggilnya Bab al-Hawa'ij, Pintu Hajat. Khalifah Abbasiyah melihat pengikutnya sebagai ancaman. Harun al-Rasyid menangkapnya di Madinah dan membawanya ke Iraq, tempat beliau menghabiskan bertahun-tahun dalam penjara. Beliau meninggal dunia di sebuah penjara Baghdad pada tahun 799. Tradisi Syiah berpendapat bahawa beliau diracun. Beliau dikebumikan di perkuburan Quraisy, yang dibentangkan oleh pengasas Baghdad di luar Kota Bulat.",
+        "Cucunya Muhammad ibn Ali dilahirkan di Madinah pada tahun 811, putera Imam Ali al-Rida, yang dikebumikan di Masyhad. Beliau menjadi imam pada usia kira-kira tujuh tahun, yang termuda antara dua belas, dan dikenang kerana menjawab para fuqaha terkemuka di istana khalifah al-Ma'mun ketika masih kanak-kanak. Gelarannya al-Jawad bermaksud yang pemurah. Dipanggil ke Baghdad oleh khalifah al-Mu'tasim, beliau meninggal dunia di sana pada tahun 835 pada usia dua puluh lima tahun, akibat racun menurut tradisi Syiah, dan dikebumikan di sisi datuknya.",
+        "Makam itu tumbuh di sekeliling dua kubur. Bentuknya sekarang sebahagian besarnya berasal dari abad keenam belas, dan kubah-kubahnya kemudian disalut emas. Setiap tahun ulang tahun kewafatan Imam al-Kadhim pada 25 Rajab membawa ramai orang berjalan kaki dari seluruh kota. Pengunjung semua agama dialu-alukan di halaman; wanita memakai abaya, yang disediakan di pintu."
+      ],
+      "caps": ["Al-Kadhimiya. Dua kubah emas kembar dan empat menara makam, diterangi untuk petang."]
+    },
+    "10": {
+      "kicker": "Destinasi · Kegubernuran Babil",
+      "title": "Babylon: berjalan melalui empayar raja-raja",
+      "stand": "Selama dua ribu tahun namanya bermaksud kota terbesar yang dapat dibayangkan sesiapa pun. Sembilan puluh minit di selatan Baghdad, temboknya masih membawa cap raja yang membinanya.",
+      "cap": "Lembu dan naga pada pembinaan semula moden Pintu Ishtar, dibina pada skala yang dikecilkan di pintu masuk tapak.",
+      "feature": ["Pintu Ishtar", "Jalan Perarakan", "Singa Babylon", "Bukti dan legenda"]
+    },
+    "11": {
+      "run": "Babylon",
+      "drop": true,
+      "paras": [
+        "Babylon sudah pun purba apabila Hammurabi menjadikannya ibu kota sebuah empayar pada abad ke-18 SM dan menitahkan undang-undangnya diukir pada batu. Tetapi kota yang dilalui pengunjung hari ini sebahagian besarnya hasil kerja seorang lelaki, Nebuchadnezzar II, yang memerintah dari 605 hingga 562 SM.",
+        "Baginda membinanya semula pada skala yang dimaksudkan untuk mengagumkan. Tembok berganda mengelilingi kuil, istana dan sebuah ziggurat. Sekitar 575 SM baginda meninggikan Pintu Ishtar di sebelah utara, berhadapan bata berglazir biru tua dan dihiasi barisan lembu serta naga, haiwan dewa Adad dan Marduk. Singa, lambang Ishtar, berbaris di jalan yang menuju ke pintu itu.",
+        "Banyak bata membawa namanya. Perhatikan dengan teliti dinding Istana Selatan dan anda akan menemui cap tulisan paku yang berulang-ulang: Nebuchadnezzar, raja Babylon. Di atasnya terletak lapisan yang lebih pucat daripada pembinaan semula tahun 1980-an, supaya kedua-dua zaman dapat dibezakan sepintas lalu.",
+        "Babylon beralih kepada orang Parsi di bawah Koresh pada tahun 539 SM, dan pada tahun 323 SM Alexander Agung meninggal dunia di sini. Pada tahun 2019 tapak ini dicatatkan dalam Senarai Warisan Dunia UNESCO."
+      ],
+      "tableTitle": "Bukti dan legenda",
+      "tableHead": ["Subjek", "Apa yang ditunjukkan arkeologi"],
+      "rows": [
+        {"s": "Pintu Ishtar", "w": "Digali oleh Robert Koldewey mulai 1899. Pintu atas yang berglazir dibina semula di Muzium Pergamon Berlin. Di Babylon anda melihat peringkat bata yang lebih awal, tanpa glazir, masih di tempatnya, dan sebuah replika moden di pintu masuk."},
+        {"s": "Jalan Perarakan", "w": "Sebuah jalan berturap terbentang dari pintu menuju kuil Marduk. Bahagian turapan asalnya dan dinding bata dengan haiwan acuan masih boleh dilalui hari ini."},
+        {"s": "Singa Babylon", "w": "Seekor singa basalt berdiri di atas sosok yang rebah, dijumpai di tapak pada abad kelapan belas. Tarikh dan asalnya masih diperdebatkan."},
+        {"s": "Taman Tergantung", "w": "Diceritakan oleh penulis Yunani yang kemudian. Tiada tinggalan dikenal pasti di Babylon, dan sebahagian sarjana berpendapat kisah itu milik Niniwe."},
+        {"s": "Menara Babel", "w": "Ziggurat Etemenanki, yang dikhaskan kepada Marduk, memang wujud. Hanya pelan tapaknya yang terselamat, sebagai garis segi empat di bumi."}
+      ],
+      "quote": "“Nebuchadnezzar, raja Babylon, pemelihara Esagila dan Ezida, putera sulung Nabopolassar.”",
+      "quoteBy": "Inskripsi lazim yang dicap pada bata raja.",
+      "caps": ["Di tapak. Tetamu meneliti panel tentang loh tulisan paku yang dijumpai di Babylon."]
+    },
+    "12": {
+      "kicker": "Destinasi · Kegubernuran Babil",
+      "title": "Borsippa: warisan Nabu",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Tujuh belas kilometer di barat daya Babylon, sebuah menara bata yang bergerigi berdiri sendirian di atas busut di dataran. Inilah Borsippa, kota saudara Babylon dan rumah Nabu, dewa jurutulis dan tulisan.",
+        "Setiap musim bunga patung Nabu meninggalkan kuilnya, Ezida, dan menuju ke Babylon untuk perayaan Tahun Baru. Nebuchadnezzar II membina semula zigguratnya di sini pada abad ke-6 SM, dan silinder asas yang dijumpai pada tahun 1854 mencatat kerja itu dengan kata-kata raja sendiri.",
+        "Di puncak, bata telah melebur dan bercantum menjadi bongkah kaca, akibat api yang luar biasa panasnya. Selama berabad-abad pengembara menyangka runtuhan itu Menara Babel. Tapak ini sunyi, jarang sesak, dan antara yang paling beratmosfera di Iraq."
+      ],
+      "sideTitle": "Sepintas lalu",
+      "side": [
+        {"t": "Nama purba", "d": "Barsipa; hari ini Birs Nimrud"},
+        {"t": "Dewa penaung", "d": "Nabu, dewa tulisan"},
+        {"t": "Dari Babylon", "d": "Kira-kira 17 km"}
+      ]
+    },
+    "13": {
+      "run": "Sekitar Baghdad",
+      "kicker": "Dekat Baghdad",
+      "title": "Ctesiphon & Aqar Quf",
+      "photoTop": true,
+      "paras": [
+        "Dua monumen berdiri dalam masa sejam dari ibu kota, dan keduanya dipisahkan oleh hampir dua ribu tahun.",
+        "Taq Kasra ialah semua yang tinggal daripada istana raja-raja Sasan di Ctesiphon. Lengkungnya menjulang kira-kira 37 meter dan merentangi sekitar 25, iaitu gerbang bata tanpa tetulang satu rentang terbesar yang pernah dibina. Para sarjana masih berdebat sama ada ia berasal dari abad ketiga atau keenam.",
+        "Di barat kota, Aqar Quf ialah ziggurat Dur-Kurigalzu, yang diasaskan oleh raja Kassite Kurigalzu pada abad ke-14 SM. Terasnya yang terluluhawa masih berdiri kira-kira 57 meter tinggi, dengan lapisan tikar gelagah kelihatan di antara susunan bata lumpur."
+      ],
+      "caps": [
+        "Taq Kasra. Lengkung besar istana Sasan di Ctesiphon, di tenggara Baghdad.",
+        "Aqar Quf. Ziggurat, seketul bata bercap, dan pemandangan melalui pintu yang dipulihkan."
+      ]
+    },
+    "14": {
+      "kicker": "Destinasi · Iraq Selatan",
+      "title": "Fajar tamadun",
+      "stand": "Di Ur dan Uruk, di dataran Sumer purba, manusia mula-mula hidup di kota, menyimpan catatan bertulis dan membina kuil yang dapat dilihat dari perjalanan sehari.",
+      "cap": "Tetamu di hadapan Ziggurat Ur, dibina sekitar 2100 SM untuk dewa bulan Nanna.",
+      "feature": ["Ziggurat Ur", "Tanah Perkuburan Diraja", "Uruk dan tulisan pertama", "Garis masa Mesopotamia"]
+    },
+    "15": {
+      "run": "Ur & Uruk",
+      "kicker": "Ur",
+      "drop": true,
+      "paras": [
+        "Ziggurat Ur ialah yang paling terpelihara di Iraq. Raja Ur-Nammu memulakannya sekitar 2100 SM dan puteranya Shulgi menyiapkannya, pelantar bertangga daripada bata lumpur yang disalut bata bakar dan dipasang dengan bitumen, dikhaskan kepada Nanna, dewa bulan dan penaung kota.",
+        "Tiga tangga, masing-masing seratus anak tangga, bertemu di sebuah rumah pintu di teres pertama. Lima belas abad kemudian raja Babylon Nabonidus memulihkan menara itu, dan fasad bawah dibina semula lagi pada abad kedua puluh. Anda masih boleh memanjatnya.",
+        "Antara 1922 dan 1934 Leonard Woolley menggali Ur untuk Muzium British dan Universiti Pennsylvania. Di Tanah Perkuburan Diraja, yang ditarikhkan sekitar 2600 hingga 2500 SM, beliau menemui makam Ratu Puabi, topi keledar emas, kecapi dan panel mozek yang dikenali sebagai Panji Ur.",
+        "Tradisi juga menamakan Ur sebagai tempat kelahiran Ibrahim, dan sebuah rumah yang dibina semula dekat ziggurat ditunjukkan sebagai rumahnya. Sejak 2016 tapak ini menjadi sebahagian daripada tapak Warisan Dunia UNESCO Ahwar Iraq Selatan."
+      ],
+      "sideTitle": "Ur secara ringkas",
+      "side": [
+        {"t": "Dibina", "d": "Sekitar 2100 SM"},
+        {"t": "Dikhaskan kepada", "d": "Nanna, dewa bulan"},
+        {"t": "Digali", "d": "Woolley, 1922 hingga 1934"},
+        {"t": "Kota terdekat", "d": "Nasiriyah"}
+      ],
+      "caps": ["Juga di Sumer. Ziggurat Nippur yang terhakis, tempat duduk dewa Enlil dan pusat keagamaan dunia Sumer."],
+      "promo": "Lawati Ur dalam perjalanan tujuh dan sembilan hari kami — iraq.fabletour.com"
+    },
+    "16": {
+      "kicker": "Uruk",
+      "title": "Kota pertama",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Uruk, Warka moden, mempunyai tuntutan paling kuat antara mana-mana tempat di bumi untuk dipanggil kota pertama. Menjelang kira-kira 3100 SM puluhan ribu orang tinggal di sini, lebih ramai daripada di mana-mana tempat lain di dunia pada masa itu.",
+        "Kota sebesar itu memerlukan catatan. Di daerah Eanna, yang suci bagi dewi Inanna, ahli arkeologi menemui beribu-ribu loh tanah liat yang bertanda nombor dan lambang. Yang terawal berasal dari sekitar 3400 hingga 3200 SM dan merupakan tulisan tertua yang pernah ditemui.",
+        "Uruk juga memberikan sastera wiranya yang pertama. Gilgamesh dikenang sebagai rajanya, dan epik itu mengkreditkannya dengan tembok kota, kira-kira sembilan kilometer keliling.",
+        "Kuil Putih masih memahkotai busut dewa langit Anu, dan Pasu Warka serta Topeng Warka, kedua-duanya dijumpai di sini, kini berada di Muzium Iraq di Baghdad.",
+        "Tapak ini luas, sunyi dan hampir tidak tersentuh. Bersama pemandu, busut-busut rendah itu tersusun menjadi kuil, halaman dan jalan."
+      ],
+      "caps": ["Di atas. Tetamu di pintu masuk Uruk, dengan busut ziggurat di belakang. Kata-kata bertulis yang pertama bermula di sini."]
+    },
+    "17": {
+      "run": "Ur & Uruk",
+      "kicker": "Garis masa",
+      "title": "Tujuh ribu tahun di antara dua sungai",
+      "events": [
+        {"y": "kira-kira 5400 SM", "t": "Eridu diasaskan. Orang Sumer yang kemudian mengingatinya sebagai kota pertama sekali."},
+        {"y": "kira-kira 3400–3200 SM", "t": "Tulisan terawal yang diketahui muncul pada loh tanah liat di Uruk."},
+        {"y": "kira-kira 2600–2500 SM", "t": "Raja dan ratu dikebumikan bersama emas dan lapis lazuli di Tanah Perkuburan Diraja Ur."},
+        {"y": "kira-kira 2334 SM", "t": "Sargon dari Akkad menyatukan kota-kota Mesopotamia di bawah seorang pemerintah."},
+        {"y": "kira-kira 2100 SM", "t": "Ur-Nammu membina Ziggurat Ur."},
+        {"y": "kira-kira 1792–1750 SM", "t": "Hammurabi memerintah dari Babylon dan mengeluarkan kod undang-undangnya."},
+        {"y": "abad ke-14 SM", "t": "Raja Kassite Kurigalzu mengasaskan Dur-Kurigalzu, hari ini Aqar Quf."},
+        {"y": "883–859 SM", "t": "Ashurnasirpal II menjadikan Nimrud ibu kota Assyria."},
+        {"y": "612 SM", "t": "Niniwe jatuh dan empayar Assyria berakhir."},
+        {"y": "605–562 SM", "t": "Nebuchadnezzar II membina semula Babylon dan meninggikan Pintu Ishtar."},
+        {"y": "539 SM", "t": "Koresh dari Parsi menawan Babylon."},
+        {"y": "323 SM", "t": "Alexander Agung meninggal dunia di Babylon."},
+        {"y": "kira-kira 100–240 M", "t": "Kota gurun Hatra berkembang dan dua kali menentang tentera Rom."},
+        {"y": "638 M", "t": "Kufah diasaskan. Basra ditubuhkan pada dekad yang sama."},
+        {"y": "680 M", "t": "Pertempuran Karbala."},
+        {"y": "762 M", "t": "Khalifah al-Mansur mengasaskan Baghdad."},
+        {"y": "836 M", "t": "Istana Abbasiyah berpindah ke Samarra."},
+        {"y": "1233 M", "t": "Al-Mustansiriyah dibuka di Baghdad."}
+      ],
+      "note": "Tarikh sebelum 1500 SM mengikut kronologi pertengahan yang lazim dan bersifat anggaran."
+    },
+    "18": {
+      "kicker": "Destinasi · Iraq Selatan",
+      "title": "Paya: kehidupan di antara sungai",
+      "stand": "Di tempat Tigris dan Furat menjadi perlahan dan merebak, orang telah membina dengan gelagah selama lima ribu tahun. Dicatatkan oleh UNESCO pada tahun 2016, Ahwar Iraq selatan paling baik dilihat dari mashoof pada cahaya pertama.",
+      "cap": "Sebuah mudhif, rumah tetamu bergerbang orang Paya, dibina sepenuhnya daripada gelagah berikat di pulaunya sendiri yang kecil."
+    },
+    "19": {
+      "run": "Paya",
+      "drop": true,
+      "paras": [
+        "Di utara Basra dua sungai itu kehilangan tebingnya. Air merebak menjadi labirin tasik, saluran dan hamparan gelagah yang pernah meliputi kawasan seluas sebuah negara kecil, dan di tengah-tengahnya orang tinggal di pulau yang mereka bina sendiri.",
+        "Orang Paya, kaum Ma’dan, membuat hampir segala-galanya daripada gelagah gergasi yang tumbuh di sekeliling mereka: rumah, tikar, pagar, makanan ternakan dan bahan api. Bangunan mereka yang paling halus ialah mudhif, dewan tetamu daripada berkas gelagah bergerbang tanpa paku dan tanpa kayu. Bentuk yang sama muncul pada ukiran Sumer yang berusia lima ribu tahun.",
+        "Kehidupan mengikut kerbau air. Keluarga bertolak pada waktu subuh dengan mashoof kayu yang langsing untuk memotong gelagah segar, dan kerbau berenang pulang pada senja. Susunya menjadi geymar, krim pekat yang dimakan dengan sirap kurma dan roti hangat untuk sarapan.",
+        "Pada tahun 1990-an Paya sengaja dikeringkan dan kebanyakan penduduknya pergi. Selepas 2003 tambak dipecahkan dan air kembali ke sebahagian besar kawasan itu. Pada tahun 2016 UNESCO mencatatkan Ahwar Iraq Selatan sebagai tapak Warisan Dunia untuk alam dan budaya sekaligus: empat kawasan tanah lembap bersama kota purba Ur, Uruk dan Eridu."
+      ],
+      "sideTitle": "Mengembara dengan bertanggungjawab",
+      "side": [
+        {"t": "Pergi bersama tukang perahu tempatan", "d": "Tambang anda menyokong keluarga paya secara langsung."},
+        {"t": "Minta izin sebelum mengambil gambar", "d": "Terutama wanita dan di dalam rumah."},
+        {"t": "Jangan ambil apa-apa, jangan tinggalkan apa-apa", "d": "Tanah lembap ini rapuh dan paras air berubah mengikut musim."}
+      ],
+      "caps": ["Di atas. Kerbau air meragut di sebuah pulau gelagah di Paya Tengah."],
+      "promo": "Alami Paya Mesopotamia — iraq.fabletour.com"
+    },
+    "20": {
+      "photoTop": true,
+      "quote": "“Ramai tetamu kami mengatakan inilah tempat paling damai di Iraq.”",
+      "quoteBy": "Fable Tour",
+      "caps": ["Di atas. Dengan perahu melalui saluran gelagah dekat Al-Chibayish. Perjalanan paya, dengan makan tengah hari masgouf bakar, boleh diatur dalam program kami."]
+    },
+    "21": {
+      "run": "Basra",
+      "kicker": "Destinasi · Iraq Selatan",
+      "title": "Basra: kota sungai dan pokok kurma",
+      "drop": true,
+      "paras": [
+        "Basra ialah tempat Iraq bertemu laut. Diasaskan pada tahun 630-an sebagai kota garison khilafah awal, ia berkembang menjadi pelabuhan yang berdagang dengan India, Afrika Timur dan China, serta menjadi kota ahli nahu, ahli teologi dan penyair. Dalam Hikayat Seribu Satu Malam, Sinbad Si Pelaut bertolak dari sini.",
+        "Tigris dan Furat bertemu di Qurna, sejam ke utara, untuk membentuk Shatt al-Arab. Sungai itu mengalir lebar dan perlahan melepasi kota di antara kebun pokok kurma. Satu petang di corniche, atau di atas air ketika cahaya pudar, ialah pengalaman Basra yang utama.",
+        "Di kawasan lama, terusan dipenuhi rumah saudagar yang tingkat atasnya menganjur ke atas jalan di sebalik tirai kayu berukir. Balkoni ini, shanasheel, ialah tandatangan kota. Muzium Basra, yang dibuka pada tahun 2016 di sebuah bekas istana di tepi sungai, menceritakan sejarah selatan dari Sumer hingga zaman Islam."
+      ],
+      "caps": ["Qurna. Kawasan yang dikenali sebagai Pokok Adam, tempat tradisi tempatan meletakkan Taman Eden, di pertemuan dua sungai."],
+      "miss": [
+        {"t": "Matahari terbenam di Shatt al-Arab", "d": "Paling baik dilihat dari perahu"},
+        {"t": "Rumah shanasheel", "d": "Balkoni berukir Basra lama"},
+        {"t": "Muzium Basra", "d": "Empat galeri di tepi sungai"}
+      ]
+    },
+    "22": {
+      "kicker": "Destinasi · Furat Tengah",
+      "title": "Kota suci Mesopotamia",
+      "stand": "Najaf, Karbala dan Kufah ialah antara tempat yang paling banyak dikunjungi di bumi. Jutaan jemaah datang setiap tahun, dan pengembara dari setiap latar belakang disambut dengan sopan.",
+      "cap": "Halaman marmar Masjid Agung Kufah pada waktu senja.",
+      "feature": ["Kufah", "Najaf dan Wadi al-Salam", "Karbala", "Berkunjung dengan hormat"]
+    },
+    "23": {
+      "run": "Kota suci",
+      "kicker": "Kufah dan Najaf",
+      "drop": true,
+      "paras": [
+        "Kufah diasaskan pada tahun 638 sebagai kem tentera di Furat dan dalam masa satu generasi ia menjadi salah satu ibu kota intelektual Islam. Tulisan Kufi yang bersudut mengambil namanya daripada kota ini. Ali bin Abi Talib, sepupu dan menantu lelaki Nabi Muhammad serta khalifah keempat, memerintah dari sini, dan di Masjid Agung Kufah beliau ditumbangkan pada tahun 661.",
+        "Masjid ini antara yang tertua di dunia. Halamannya yang luas dikelilingi tempat yang dikaitkan oleh tradisi dengan para nabi, dan di sisinya berdiri makam Muslim bin Aqil dan Hani bin Urwa. Tidak jauh berjalan kaki ialah rumah sederhana tempat Imam Ali tinggal.",
+        "Sepuluh kilometer ke barat, Najaf tumbuh di sekeliling makamnya. Kubah emas dan dua menara kembar Makam Imam Ali menjulang di atas kota lama, dan dewannya dipenuhi mozek cermin yang menyerakkan cahaya. Selama seribu tahun Najaf juga menjadi kota ulama. Seminari-seminarinya, Hawza, menarik pelajar dari seluruh dunia.",
+        "Di sisi kota terbentang Wadi al-Salam, Lembah Kedamaian. Ia salah satu perkuburan terbesar di bumi, landskap kubah dan ruang berkubah bata yang sampai ke ufuk, dan ia telah digunakan tanpa putus selama lebih daripada satu milenium."
+      ],
+      "caps": ["Wadi al-Salam. Lembah Kedamaian dilihat dari atas, dengan dataran Najaf di sebalik."]
+    },
+    "24": {
+      "run": "Kota suci",
+      "kicker": "Karbala",
+      "paras": [
+        "Pada hari kesepuluh Muharram tahun 680, Husain bin Ali, cucu Nabi, dibunuh bersama sahabatnya di dataran Karbala. Peristiwa itu dikenang setiap tahun pada Asyura, dan empat puluh hari kemudian ziarah Arbaeen membawa jutaan orang ke kota ini dengan berjalan kaki.",
+        "Makam Imam Husain dan saudaranya Al-Abbas berhadap-hadapan di seberang esplanad pejalan kaki yang luas. Kedua-duanya dimahkotai emas dan disalut di dalam dengan kerja cermin dan jubin biru. Pada waktu petang, apabila kubah diterangi dan halaman penuh, suasananya tenang dan menyambut."
+      ],
+      "caps": [
+        "Al-Kadhimiya, Baghdad. Seorang tetamu mengambil gambar kubah dan menara dari halaman.",
+        "Makam Baghdad yang lebih sunyi. Makam Junayd al-Baghdadi.",
+        "Makam Bahlul."
+      ],
+      "sideTitle": "Berkunjung dengan hormat",
+      "side": [
+        {"t": "Pakaian", "d": "Lengan panjang dan seluar panjang untuk lelaki. Wanita memakai abaya dan tudung di dalam kawasan makam; keduanya boleh dipinjam di pintu masuk."},
+        {"t": "Masuk", "d": "Halaman umumnya terbuka kepada semua pengunjung. Peraturan dewan dalam berbeza mengikut makam dan hari, dan pemandu anda akan menasihati di tempat."},
+        {"t": "Masa", "d": "Semasa Asyura dan Arbaeen kota-kota ini amat sesak. Kami merancang di luar tarikh ini melainkan anda ingin menyaksikannya."},
+        {"t": "Memasuki", "d": "Kasut, beg dan kamera ditinggalkan di bilik simpanan percuma. Lelaki dan wanita menggunakan pintu masuk yang berasingan."},
+        {"t": "Fotografi", "d": "Telefon biasanya diterima di halaman. Sentiasa minta izin sebelum mengambil gambar orang yang sedang solat."},
+        {"t": "Keramahan", "d": "Teh, air dan makanan sering ditawarkan percuma kepada pengunjung. Menerimanya ialah suatu budi bahasa."}
+      ]
+    },
+    "25": {
+      "kicker": "Destinasi · Salah ad-Din",
+      "title": "Samarra: kegemilangan Abbasiyah",
+      "stand": "Selama setengah abad inilah ibu kota sebuah empayar yang sampai dari Afrika Utara hingga Asia Tengah. Menara berpilinnya ialah siluet paling dikenali di Iraq.",
+      "cap": "Malwiya, menara berpilin Masjid Agung Samarra, siap pada tahun 852."
+    },
+    "26": {
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Pada tahun 836 khalifah al-Mu'tasim meninggalkan Baghdad dan membina ibu kota baharu 125 kilometer ke hulu sungai. Samarra dibentangkan di tanah terbuka dengan lebuhraya, istana, berek, padang lumba dan taman buruan. Akhirnya ia terbentang lebih daripada empat puluh kilometer di sepanjang tebing timur Tigris.",
+        "Puteranya al-Mutawakkil menambah Masjid Agung antara 848 dan 852. Ia masjid terbesar di dunia pada masa itu, segi empat bata bakar yang cukup besar untuk seluruh tentera solat bersama. Di luar tembok utaranya baginda meninggikan Malwiya, menara setinggi 52 meter dengan tanjakan yang berpilin lima kali di bahagian luar.",
+        "Istana kembali ke Baghdad pada tahun 892 dan sebahagian besar Samarra sekadar ditinggalkan, sebab itulah pelannya terselamat dengan begitu lengkap. UNESCO mencatatkan Kota Arkeologi Samarra dalam Senarai Warisan Dunia pada tahun 2007."
+      ],
+      "caps": ["Masjid Agung. Tembok luar dengan menara separuh bulatannya, dan Malwiya menjulang di belakang."],
+      "sideTitle": "Samarra secara ringkas",
+      "side": [
+        {"t": "Ibu kota", "d": "836 hingga 892"},
+        {"t": "Malwiya", "d": "52 m, siap 852"},
+        {"t": "Dari Baghdad", "d": "Kira-kira 125 km ke utara"},
+        {"t": "UNESCO", "d": "Dicatatkan 2007"}
+      ]
+    },
+    "27": {
+      "run": "Samarra",
+      "photoTop": true,
+      "paras": [
+        "Samarra juga kota ziarah. Makam Al-Askari menyimpan makam imam kesepuluh dan kesebelas, Ali al-Hadi dan Hasan al-Askari, di bawah salah satu kubah emas terbesar di dunia Islam.",
+        "Dekat tempat yang ditunjukkan sebagai penjara Imam Ali al-Hadi terletak Qasr al-Birka, Istana Kolam. Lembangan bulatnya digali dalam ke dalam tanah dan dikelilingi dewan berkubah, tempat istana Abbasiyah melepaskan diri daripada panas musim panas.",
+        "Di utara pusat, masjid Abu Dulaf mengulangi menara berpilin pada skala yang lebih kecil.",
+        "Sehari di Samarra bersama Fable Tour merangkumi Malwiya, makam, penjara Imam Ali al-Hadi dan Qasr al-Birka."
+      ],
+      "caps": [
+        "Qasr al-Birka. Halaman kolam terbenam sebuah istana Abbasiyah, dikelilingi dewan bergerbang, dekat penjara Imam Ali al-Hadi.",
+        "Makam Al-Askari. Kubah emas di atas pintu gerbang berjubin."
+      ],
+      "promo": "Lawati Samarra bersama Fable Tour — iraq.fabletour.com"
+    },
+    "28": {
+      "kicker": "Destinasi · Kegubernuran Niniwe",
+      "title": "Iraq Utara: empayar, kota dan tamadun",
+      "stand": "Utara ialah jantung Assyria dan kemudian sempadan antara Rom dan Parsi. Tapaknya antara yang paling jarang dikunjungi dan paling berbaloi di negara ini.",
+      "cap": "Tetamu di tangga kuil Maran di Hatra.",
+      "feature": ["Hatra", "Mosul dan Niniwe", "Nimrud", "Ashur"]
+    },
+    "29": {
+      "run": "Iraq Utara",
+      "kicker": "Hatra",
+      "drop": true,
+      "paras": [
+        "Hatra berdiri sendirian di gurun seratus kilometer di barat daya Mosul. Pada abad pertama dan kedua M ia sebuah kota kafilah yang kaya di pinggir empayar Parthia, diperintah oleh raja Arabnya sendiri dan dikelilingi dua gelang tembok.",
+        "Di pusatnya terdapat kawasan suci yang besar. Kuil-kuilnya dibina daripada batu kapur berwarna madu dan menggabungkan dewan berkubah Timur, iwan, dengan tiang dan hiasan ukir dunia Yunani dan Rom. Dewa utamanya ialah Shamash, matahari.",
+        "Hatra bertahan menentang maharaja Rom Trajan dan Septimius Severus, yang kedua-duanya mengepungnya dan gagal. Ia akhirnya jatuh kepada raja Sasan Shapur I sekitar tahun 240 dan tidak pernah diduduki semula.",
+        "Pada tahun 1985 ia menjadi tempat pertama di Iraq yang dicatatkan dalam Senarai Warisan Dunia UNESCO. Lawatan memerlukan permit keselamatan, yang diatur oleh Fable Tour terlebih dahulu."
+      ],
+      "caps": [
+        "Batu di atas batu. Sebuah pintu berukir di kawasan kuil.",
+        "Iwan besar. Dewan berkubah terbuka ke halaman tengah."
+      ]
+    },
+    "30": {
+      "run": "Iraq Utara",
+      "kicker": "Mosul, Niniwe, Nimrud dan Ashur",
+      "drop": true,
+      "paras": [
+        "Mosul menghadap busut Niniwe purba di seberang Tigris. Sekitar 700 SM raja Assyria Sanherib menjadikan Niniwe ibu kotanya dan mengelilinginya dengan dua belas kilometer tembok. Cucunya Asyurbanipal mengumpulkan sebuah perpustakaan loh tanah liat di sana, sumber sebahagian besar apa yang diketahui tentang sastera Mesopotamia. Kota itu jatuh pada tahun 612 SM.",
+        "Mosul zaman pertengahan menjadi kaya melalui perdagangan dan memberikan namanya kepada muslin. Masjid Agung al-Nuri dibina pada tahun 1172 dan menara condongnya, al-Hadba, menjadi lambang kota. Kedua-duanya dimusnahkan pada tahun 2017. Sejak itu keduanya dibina semula dengan bata asal di bawah program pimpinan UNESCO, dan masjid dibuka semula pada tahun 2025.",
+        "Tiga puluh kilometer ke selatan terletak Nimrud, Kalhu Assyria. Ashurnasirpal II menjadikannya ibu kotanya pada abad ke-9 SM dan memenuhi istananya dengan relief berukir dan lembu bersayap yang kolosal. Tapak itu rosak teruk pada tahun 2015 dan kerja pemuliharaan sedang berjalan. Papak dan bata berinskripsi masih terletak di tempat ia jatuh.",
+        "Lebih jauh ke hilir Tigris, Ashur ialah ibu kota pertama dan jantung keagamaan Assyria. Ia menjadi tapak Warisan Dunia sejak 2003."
+      ],
+      "caps": [
+        "Mosul. Menara al-Hadba yang dibina semula dilihat dari kawasan Masjid al-Nuri.",
+        "Ashur. Sebatang bata bercap tulisan paku di tapak.",
+        "Nimrud. Tetamu bersama papak berinskripsi di busut istana. Seperti Hatra, Nimrud dilawati dengan permit; jika permit ditolak pada hari itu, kami menawarkan tapak alternatif."
+      ]
+    },
+    "31": {
+      "kicker": "Destinasi · Wilayah Kurdistan",
+      "title": "Utara: tempat sejarah bertemu gunung",
+      "deck": "Kubu Erbil telah didiami begitu lama sehingga busut di bawahnya terdiri daripada Erbil yang lebih awal.",
+      "drop": true,
+      "wide": true,
+      "paras": [
+        "Kubu Erbil menjulang kira-kira tiga puluh meter di atas kota moden pada busut bujur, sebuah tell yang terbina lapisan demi lapisan sepanjang beribu-ribu tahun petempatan. Kota ini muncul dalam catatan bertulis seawal milenium ketiga SM, dan ia sering digambarkan sebagai salah satu tempat yang paling lama didiami tanpa putus di dunia.",
+        "Dinding muka rumah abad kesembilan belas mengelilingi puncak seperti kubu. Di dalamnya ada lorong, halaman, sebuah masjid dan hammam. Kubu ini dicatatkan dalam Senarai Warisan Dunia UNESCO pada tahun 2014 dan pemulihan berterusan, jadi sesetengah kawasan mungkin ditutup.",
+        "Di kakinya, Bazar Qaysari yang beratap menjual madu, kacang, keju, rempah dan tekstil Kurdi, dan rumah teh di dataran utama ialah tempat untuk melihat kota berlalu.",
+        "Di jalan dari Mosul, biara Mar Mattai melekat di sisi Gunung Alfaf. Diasaskan pada abad keempat, ia salah satu biara Kristian tertua yang masih digunakan. Di sebalik Erbil dataran memberi laluan kepada Zagros: gaung, air terjun dan jalan gunung yang mengejutkan sesiapa yang menyangka Iraq rata."
+      ],
+      "miss": [
+        {"t": "Kubu Erbil", "d": "Warisan Dunia UNESCO, 2014"},
+        {"t": "Bazar Qaysari", "d": "Di kaki kubu"},
+        {"t": "Biara Mar Mattai", "d": "Di Gunung Alfaf"},
+        {"t": "Perjalanan sembilan hari", "d": "Berakhir di Erbil; lihat halaman 36"}
+      ],
+      "promo": "Mengembara dari Basra ke Erbil bersama Fable Tour — iraq.fabletour.com"
+    },
+    "32": {
+      "kicker": "Masakan · Keramahan",
+      "title": "Citarasa Iraq",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Meja Iraq dihidang untuk lebih ramai orang daripada yang dijangka, kerana tetamu dianggap sudah semestinya ada. Hidangan kebangsaannya ialah masgouf: kap sungai yang dibelah, digaram, disandarkan pada pancang di sisi api kayu dan dimasak perlahan-lahan sehingga kulitnya rangup. Ia dimakan dengan roti leper, mangga jeruk dan bawang mentah.",
+        "Hari raya membawa quzi, seekor kambing biri-biri yang dipanggang di atas nasi bersama badam dan kismis, dan dolma, sayur yang disumbat nasi berempah dan direneh dalam sos masam-manis. Sarapan di Baghdad ialah kahi, pastri berlapis dengan krim kerbau dan sirap.",
+        "Teh menyusul setiap hidangan. Ia diseduh pekat, diharumkan dengan buah pelaga dan dihidang dalam gelas kecil yang dipanggil istikan. Di Basra mintalah teh yang dibuat daripada limau kering. Kurma Iraq tidak memerlukan pengenalan, dan terdapat ratusan jenis."
+      ],
+      "caps": ["Di atas. Saif bersama penulis William Frej dan kumpulannya semasa makan malam di Mosul."],
+      "sideTitle": "Di atas meja",
+      "side": [
+        {"t": "Masgouf", "d": "Kap sungai bakar api"},
+        {"t": "Quzi", "d": "Kambing biri-biri di atas nasi berempah"},
+        {"t": "Dolma", "d": "Sayur sumbat"},
+        {"t": "Kahi dan geymar", "d": "Sarapan Baghdad"}
+      ]
+    },
+    "33": {
+      "run": "Fable Tour",
+      "kicker": "Pengalaman Fable Tour",
+      "title": "Lebih daripada sekadar lawatan. Sebuah kisah untuk dikenang.",
+      "paras": [
+        "Fable Tour ialah syarikat Iraq yang berpangkalan di Baghdad. Kami merancang perjalanan peribadi dan kumpulan kecil merentasi seluruh negara, dari Basra ke Erbil, dan kami menjalankannya sendiri.",
+        "Setiap perjalanan bermula dengan cara yang sama: pemandu anda menunggu di dewan ketibaan. Dari saat itu kenderaan peribadi berhawa dingin, pemandu profesional dan pemandu kenderaan kekal bersama anda sehingga keberangkatan. Kami memandu dalam bahasa Inggeris, Rusia dan Arab.",
+        "Kami memilih hotel empat dan lima bintang di setiap kota, memasukkan sarapan harian dan bayaran masuk, serta mendapatkan permit yang diperlukan untuk tapak seperti Hatra dan Nimrud. Anda memilih tarikh; kami mengurus yang selebihnya.",
+        "Pengasas kami, Saif Al-Tamimi, tampil dalam Unforgotten: Bandar-bandar Purba dari Masa Silam oleh jurugambar William Frej, yang kumpulannya dipandunya melalui Iraq utara."
+      ],
+      "caps": [
+        "Ketibaan. Pemandu anda menemui anda di dalam Lapangan Terbang Antarabangsa Baghdad.",
+        "Dalam lawatan. Tetamu di Qishla, Baghdad."
+      ],
+      "sideTitle": "Apa yang termasuk",
+      "side": [
+        {"t": "Peribadi atau berkumpulan", "d": "Pada tarikh yang anda pilih"},
+        {"t": "Tiga bahasa", "d": "Inggeris, Rusia, Arab"},
+        {"t": "Hotel terpilih", "d": "Empat dan lima bintang, dengan sarapan"},
+        {"t": "Semuanya diatur", "d": "Pengangkutan, bayaran masuk, permit"}
+      ],
+      "promo": "Cari kami di GetYourGuide dan Tripadvisor sebagai “Fable Tour in Iraq”, dan di Instagram @fable_tour. Rancang perjalanan peribadi Iraq anda — iraq.fabletour.com"
+    },
+    "34": {
+      "kicker": "Perjalanan · Fable Tour",
+      "tour": "Lawatan Warisan Iraq · 7 hari / 6 malam",
+      "title": "Jelajah Mesopotamia dalam tujuh hari",
+      "deck": "Dari Babylon ke Paya, Samarra dan Hatra, bermula dan berakhir di Lapangan Terbang Antarabangsa Baghdad.",
+      "days": [
+        {"n": "01", "title": "Babylon dan Karbala", "route": "Baghdad – Babylon – Karbala", "text": "Sambutan di lapangan terbang, kemudian Jalan Perarakan, Pintu Ishtar dan Singa Babylon. Seterusnya ke Ziggurat Borsippa dan makam Karbala menjelang petang.", "stay": "Karbala · Al-Baron Hotel"},
+        {"n": "02", "title": "Kufah dan Najaf", "route": "Kufah – Najaf", "text": "Masjid Agung Kufah, lorong perkuburan Wadi al-Salam dan kubah emas Makam Imam Ali.", "stay": "Najaf · Granada, Do Najaf atau Naseem Al-Najaf"},
+        {"n": "03", "title": "Uruk dan Basra pada matahari terbenam", "route": "Uruk – Basra", "text": "Uruk, kota Gilgamesh dan tulisan awal, kemudian ke selatan ke Shatt al-Arab dan rumah shanasheel Basra lama.", "stay": "Basra · Mövenpick Zinat Al-Hayat atau Corniche Hotel"},
+        {"n": "04", "title": "Pokok Adam, Paya dan Ur", "route": "Qurna – Paya – Ur – Baghdad", "text": "Tempat dua sungai bertemu di Qurna, perahu melalui paya gelagah, dan tangga Ziggurat Ur.", "stay": "Baghdad · Do Baghdad, Alabasly Suites atau Bilitum"},
+        {"n": "05", "title": "Samarra dan jalan ke utara", "route": "Samarra – Mosul", "text": "Menara berpilin Malwiya dan Makam Al-Askari, kemudian ke Mosul.", "stay": "Mosul · Ramada Hotel"},
+        {"n": "06", "title": "Mosul, Nimrud dan Hatra", "route": "Mosul – Nimrud – Hatra – Baghdad", "text": "Mosul lama dan Masjid al-Nuri, Nimrud Assyria, dan kuil Hatra di gurun.", "stay": "Baghdad · Do Baghdad, Alabasly Suites atau Bilitum"},
+        {"n": "07", "title": "Baghdad, penutup agung", "route": "Baghdad – Lapangan Terbang", "text": "Makam Al-Kadhimiya, Jalan Mutanabbi dan Qishla, ziggurat Kassite Aqar Quf, kemudian penerbangan anda.", "stay": ""}
+      ]
+    },
+    "35": {
+      "included": [
+        "Pengangkutan peribadi berhawa dingin sepanjang perjalanan",
+        "Pemandu profesional dalam bahasa Inggeris, Rusia atau Arab",
+        "6 malam di hotel empat dan lima bintang, bilik double atau twin",
+        "Sarapan setiap hari",
+        "Bayaran masuk ke semua tapak dalam jadual perjalanan",
+        "Sambutan di lapangan terbang, dan pemindahan perpisahan di Baghdad"
+      ],
+      "excluded": "Penerbangan antarabangsa · Visa Iraq · Makan tengah hari dan makan malam · Insurans perjalanan · Perbelanjaan peribadi dan tip",
+      "good": "Keberangkatan peribadi atau kumpulan kecil. Hatra dan Nimrud memerlukan permit keselamatan, yang kami uruskan; jika permit ditolak, tapak alternatif ditawarkan. Susunan lawatan boleh disesuaikan di lapangan untuk masa dan waktu buka.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "36": {
+      "kicker": "Perjalanan · Fable Tour",
+      "tour": "Seluruh Iraq, Basra ke Erbil · 9 hari / 8 malam",
+      "title": "Perjalanan agung Iraq, sembilan hari",
+      "deck": "Seluruh negara dalam satu garis, selatan ke utara. Tiba di Basra, berlepas dari Erbil.",
+      "days": [
+        {"n": "01", "title": "Basra, pintu selatan", "route": "Basra", "text": "Gereja Armenia Santa Perawan Maria, Muzium Basra dan matahari terbenam di Shatt al-Arab.", "stay": "Basra · Mövenpick Zinat Al-Hayat"},
+        {"n": "02", "title": "Paya dan Ziggurat Ur", "route": "Paya – Ur – Najaf", "text": "Pulau gelagah, kerbau air dan rumah tetamu mudhif, kemudian Ziggurat Agung dan Makam Diraja.", "stay": "Najaf · Do Najaf Hotel"},
+        {"n": "03", "title": "Najaf, Kufah dan Karbala", "route": "Najaf – Kufah – Karbala", "text": "Makam Imam Ali, Wadi al-Salam, Masjid Agung Kufah dan makam Karbala.", "stay": "Karbala · The Baron Hotel"},
+        {"n": "04", "title": "Babylon dan Borsippa", "route": "Babylon – Borsippa – Baghdad", "text": "Jalan Perarakan, Pintu Ishtar dan istana Nebuchadnezzar, kemudian Ziggurat Nabu.", "stay": "Baghdad · Alabasly Suites"},
+        {"n": "05", "title": "Baghdad, Kota Damai", "route": "Baghdad – Aqar Quf", "text": "Jalan Mutanabbi dan Qishla, Tugu Syahid, Makam Al-Kadhimiya dan Aqar Quf.", "stay": "Baghdad · Alabasly Suites"},
+        {"n": "06", "title": "Samarra dan Hatra", "route": "Samarra – Hatra – Mosul", "text": "Malwiya, Makam Al-Askari dan kota gurun Hatra.", "stay": "Mosul · Ramada Plaza by Wyndham Mosul Corniche"},
+        {"n": "07", "title": "Mosul, Nimrud dan Mar Mattai", "route": "Mosul – Nimrud – Mar Mattai – Erbil", "text": "Mosul lama dan Masjid al-Nuri, Nimrud Assyria dan biara gunung.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "08", "title": "Erbil dan kubu purbanya", "route": "Erbil", "text": "Kubu dan Bazar Qaysari.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "09", "title": "Keberangkatan", "route": "Erbil – Lapangan Terbang", "text": "Pemindahan ke Lapangan Terbang Antarabangsa Erbil.", "stay": ""}
+      ]
+    },
+    "37": {
+      "included": [
+        "8 malam di hotel empat dan lima bintang, bilik double atau twin",
+        "Sarapan setiap hari",
+        "Pengangkutan peribadi berhawa dingin untuk seluruh laluan",
+        "Pemandu profesional dalam bahasa Inggeris, Rusia atau Arab",
+        "Bayaran masuk ke semua tapak, termasuk permit untuk Hatra dan Nimrud",
+        "Sambutan di lapangan terbang di Basra dan penghantaran di lapangan terbang Erbil"
+      ],
+      "excluded": "Penerbangan antarabangsa · E-visa Iraq (juga sah untuk Wilayah Kurdistan) · Insurans kesihatan · Makan tengah hari dan makan malam · Naik perahu di Paya (atas permintaan) · Perbelanjaan peribadi dan tip",
+      "good": "Keberangkatan peribadi atau kumpulan kecil. Hatra dan Nimrud memerlukan permit keselamatan, yang kami uruskan; jika permit ditolak, tapak alternatif ditawarkan. Susunan lawatan boleh disesuaikan di lapangan untuk masa dan waktu buka.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "38": {
+      "kicker": "Panduan perjalanan",
+      "title": "Panduan penting pelancongan Iraq",
+      "groups": [
+        {"h": "Sebelum anda mengembara", "items": [
+          {"t": "Visa.", "d": "Iraq mengeluarkan visa elektronik kepada banyak warganegara melalui portal e-visa rasminya. Jika warganegara anda tidak layak, Fable Tour boleh mendapatkan visa untuk anda sebagai sebahagian daripada tempahan lawatan penuh. Peraturan berubah: sahkan dengan kami atau dengan kedutaan Iraq sebelum anda menempah penerbangan."},
+          {"t": "Pasport.", "d": "Bawa pasport yang sah sekurang-kurangnya enam bulan selepas tarikh ketibaan anda, dan simpan salinan kertas halaman foto."},
+          {"t": "Bila hendak pergi.", "d": "Oktober hingga April ialah musimnya, dengan siang yang sederhana dan malam yang sejuk. Dari Jun hingga September suhu siang kerap melebihi 45°C di tengah dan selatan."}
+        ]},
+        {"h": "Wang, pakaian dan adat", "items": [
+          {"t": "Wang.", "d": "Mata wang ialah dinar Iraq. Iraq sebahagian besarnya ekonomi tunai. Bawa dolar AS dalam wang kertas yang bersih dan baharu, dan tukarkannya di sana; kad berfungsi di hotel yang lebih besar."},
+          {"t": "Pakaian.", "d": "Berpakaian sopan di mana-mana: bahu dan lutut tertutup untuk lelaki dan wanita. Wanita hendaklah membawa tudung, dan abaya diwajibkan di dalam makam."},
+          {"t": "Adat.", "d": "Jumaat ialah hari rehat. Beri salam dengan tangan kanan, terimalah teh apabila ditawarkan, dan minta izin sebelum mengambil gambar orang. Jangan ambil gambar pusat pemeriksaan atau petugas keselamatan."}
+        ]},
+        {"h": "Bahasa dan perkara praktikal", "items": [
+          {"t": "Bahasa.", "d": "Bahasa Arab dan Kurdish ialah bahasa rasmi. Bahasa Inggeris difahami di hotel; pemandu anda menterjemah di tempat lain."},
+          {"t": "Kesihatan dan insurans.", "d": "Bawa sebarang ubat biasa anda dan minum air botol. Insurans perjalanan yang meliputi Iraq sangat disyorkan dan tidak termasuk dalam program kami."},
+          {"t": "Praktikal.", "d": "Zon waktu UTC+3. Elektrik 230 V; soket berbeza-beza, jadi bawa penyesuai universal. Kad SIM tempatan dijual di lapangan terbang."}
+        ]}
+      ],
+      "noteTitle": "Maklumat yang boleh berubah.",
+      "note": "Peraturan visa, syarat kemasukan, waktu buka dan akses tapak ditetapkan oleh pihak berkuasa Iraq dan boleh berubah pada notis singkat. Semak nasihat perjalanan kerajaan anda sendiri dan Kementerian Luar Negeri Iraq sebelum anda mengembara, dan tanyakan kepada kami kedudukan semasa apabila anda menempah."
+    },
+    "39": {
+      "run": "Tempahan",
+      "kicker": "Rancang perjalanan anda",
+      "title": "Pengembaraan Iraq anda bermula di sini",
+      "intro": "Pilih program, buka halamannya dan pilih tarikh anda. Setiap perjalanan boleh dijalankan secara peribadi untuk rombongan anda atau sebagai kumpulan kecil, dan masing-masing boleh disesuaikan.",
+      "cards": [
+        {"days": "6 hari", "title": "Baghdad, Babylon & Samarra", "text": "Enam hari berpangkalan di satu hotel Baghdad: Muzium Iraq dan Baghdad lama, Aqar Quf dan Taq Kasra, Samarra, Babylon dan Borsippa.", "scan": "Jadual perjalanan dan tarikh"},
+        {"days": "7 hari", "title": "Lawatan Warisan Iraq", "text": "Tujuh hari dari Baghdad: Babylon, Karbala, Najaf, Uruk, Basra, Paya, Ur, Samarra, Mosul dan Hatra.", "scan": "Jadual perjalanan dan tarikh"},
+        {"days": "9 hari", "title": "Seluruh Iraq, Basra ke Erbil", "text": "Sembilan hari selatan ke utara, dengan tambahan Nimrud, Biara Mar Mattai dan kubu Erbil.", "scan": "Jadual perjalanan dan tarikh"}
+      ],
+      "howTitle": "Cara menempah",
+      "how": "Hantar tarikh anda dan bilangan pengembara melalui WhatsApp, e-mel atau borang di laman web kami. Kami membalas dengan kekosongan dan pengesahan bertulis. Lawatan sehari dari Baghdad dan pemindahan lapangan terbang boleh ditempah dengan cara yang sama.",
+      "contactTitle": "Hubungi",
+      "lines": [
+        "iraq.fabletour.com",
+        "support@fabletour.com",
+        "WhatsApp +964 771 174 5353",
+        "Perkhidmatan pelanggan 24/7 +1 (212) 433-8608",
+        "Lapangan Terbang Antarabangsa Baghdad, Al-Karkh, Baghdad, Iraq",
+        "Instagram @fable_tour"
+      ],
+      "promo": "Rancang perjalanan peribadi Iraq anda — iraq.fabletour.com"
+    },
+    "40": {
+      "title": "Perjalanan anda merentasi Mesopotamia bermula di sini.",
+      "text": "Jelajah sejarah yang luar biasa, tradisi yang hidup dan destinasi Iraq yang sukar dilupakan bersama Fable Tour. Dari keajaiban purba Babylon ke jalan Baghdad yang meriah dan landskap abadi Mesopotamia selatan, temui Iraq melalui pengalaman perjalanan yang tulen dan dipandu dengan pakar.",
+      "url": "iraq.fabletour.com",
+      "email": "support@fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353",
+      "service": "Perkhidmatan pelanggan 24/7 +1 (212) 433-8608",
+      "address": "Lapangan Terbang Antarabangsa Baghdad, Al-Karkh, Baghdad, Iraq",
+      "scan": "Rancang perjalanan anda",
+      "credit": "Gambar: matahari terbenam di Shatt al-Arab, Basra"
+    }
+  }
+}
