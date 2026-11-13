@@ -1,0 +1,657 @@
+{
+  "lang": "de",
+  "dir": "ltr",
+  "metaTitle": "MESOPOTAMIEN — Irak-Reisemagazin | Fable Tour",
+  "metaDesc": "MESOPOTAMIEN, das Irak-Reisemagazin von Fable Tour. Blättern Sie um: Bagdad, Babylon, Ur und Uruk, die Marschen, Samarra, Hatra, Mossul und Erbil, mit unseren Reisen über 7 und 9 Tage.",
+  "brand": "MESOPOTAMIEN",
+  "ui": {
+    "hint": "Ziehen Sie an einer Seitenecke oder tippen Sie auf die Pfeile, um umzublättern",
+    "first": "Erste Seite",
+    "prev": "Vorherige Seite",
+    "next": "Nächste Seite",
+    "sound": "Ton an oder aus",
+    "full": "Vollbild",
+    "lang": "Sprache"
+  },
+  "home": {
+    "nav": "Magazin",
+    "eyebrow": "Unser Magazin",
+    "title": "Mesopotamien: das Irak-Reisemagazin",
+    "lead": "Ziehen Sie an einer Seitenecke oder nutzen Sie die Pfeile, um umzublättern.",
+    "open": "Im Vollbild öffnen"
+  },
+  "label": {
+    "above": "OBEN",
+    "feature": "IN DIESEM BEITRAG",
+    "miss": "NICHT VERPASSEN",
+    "day": "TAG",
+    "overnight": "Übernachtung",
+    "included": "INKLUSIVE",
+    "excluded": "NICHT ENTHALTEN",
+    "good": "GUT ZU WISSEN",
+    "scan": "Termine und Buchung"
+  },
+  "pages": {
+    "1": {
+      "kicker": "Fable Tour  |  Irak-Reisemagazin  |  Ausgabe 01",
+      "sub": "Entdecken Sie den Irak mit Fable Tour",
+      "headline": "Irak: wo die Zivilisation begann",
+      "deck": "Entdecken Sie die zeitlosen Wunder des alten Mesopotamien",
+      "cols": [
+        {"t": "Babylon", "d": "Gehen Sie durch das Erbe der Könige"},
+        {"t": "Bagdad", "d": "Entdecken Sie die Stadt des Friedens"},
+        {"t": "Die Marschen", "d": "Leben zwischen zwei Flüssen"},
+        {"t": "Ur und Uruk", "d": "Die Morgenröte der Zivilisation"}
+      ],
+      "credit": "Titel: der moderne Wiederaufbau des Ischtar-Tors am Eingang des alten Babylon, Irak"
+    },
+    "2": {
+      "issue": "Ausgabe 01",
+      "title": "Willkommen in Mesopotamien",
+      "text": "Zwischen Tigris und Euphrat bauten Menschen zuerst Städte, schrieben ihre Gesetze nieder und hoben Tempel dem Himmel entgegen. Das Land ist noch da, und seine Denkmäler auch. Dieses Magazin ist eine Einladung, sie zu sehen.",
+      "cap": "Besucher auf der 3.400 Jahre alten kassitischen Zikkurat von Aqar Quf, westlich von Bagdad."
+    },
+    "3": {
+      "run": "Willkommen",
+      "kicker": "Vom Gründer",
+      "title": "Eine persönliche Einladung, den Irak zu entdecken",
+      "paras": [
+        "Ich wurde 1991 im Irak geboren und wuchs unter Namen auf, die die ganze Welt kennt: Babylon, Ur, Bagdad. Jahrelang habe ich im Ausland studiert und bin gereist. Ich habe mich in der Ukraine zum Zahnarzt ausbilden lassen und dreizehn Länder als Tourist besucht, und überall stellte man mir dieselbe Frage: Wie ist der Irak wirklich?",
+        "Fable Tour ist meine Antwort. Ich wurde Reiseleiter, weil ich wollte, dass Besucher dort stehen, wo Geschichte geschehen ist, und den Menschen begegnen, die heute neben ihr leben. Eine Zikkurat ist mehr als ein Foto, wenn jemand erzählt, wer sie gebaut hat und warum. Ein Glas Tee in einem alten Café in Bagdad ist mehr als ein Getränk, wenn man weiß, wer vor einem dort gesessen hat.",
+        "Unsere Reisen sind privat oder in kleinen Gruppen, in dem Tempo, das Sie wählen. Wir reisen mit lizenzierten Reiseleitern auf Englisch, Russisch und Arabisch, übernachten in sorgfältig ausgewählten Hotels und kümmern uns um Genehmigungen, Transport und Zeitplanung, damit Sie einfach schauen, zuhören und fragen können.",
+        "Wir glauben auch an verantwortungsvolles Reisen. Das bedeutet, heilige Orte und lokale Bräuche zu achten, familiengeführte Restaurants und die Bootsleute in den Marschen zu unterstützen und jede Stätte so zu hinterlassen, wie wir sie vorgefunden haben.",
+        "Auf den folgenden Seiten finden Sie die Orte, die ich am meisten liebe. Ich hoffe, sie überzeugen Sie zu kommen, und ich freue mich darauf, Sie persönlich am Flughafen zu empfangen."
+      ],
+      "sign": "Saif Al-Tamimi",
+      "role": "Gründer und Reiseleiter, Fable Tour",
+      "cap": "Saif Al-Tamimi, Gründer und Reiseleiter, Fable Tour."
+    },
+    "4": {
+      "run": "Inhalt",
+      "kicker": "In dieser Ausgabe",
+      "title": "Inhalt",
+      "items": [
+        {"n": "06", "t": "Bagdad", "d": "Die Stadt des Friedens"},
+        {"n": "09", "t": "Al-Kadhimiya", "d": "Der Schrein der beiden Imame"},
+        {"n": "10", "t": "Babylon", "d": "Ein Gang durch das Reich der Könige"},
+        {"n": "12", "t": "Borsippa", "d": "Das Erbe des Nabu"},
+        {"n": "13", "t": "Ktesiphon und Aqar Quf", "d": "Zwei Giganten am Rand von Bagdad"},
+        {"n": "14", "t": "Ur und Uruk", "d": "Die Morgenröte der Zivilisation"},
+        {"n": "18", "t": "Die Marschen", "d": "Leben zwischen den Flüssen"},
+        {"n": "21", "t": "Basra", "d": "Die Stadt der Flüsse und Palmen"},
+        {"n": "22", "t": "Nadschaf, Kerbela und Kufa", "d": "Heilige Städte Mesopotamiens"},
+        {"n": "25", "t": "Samarra", "d": "Die Pracht der Abbasiden"},
+        {"n": "28", "t": "Nordirak", "d": "Reiche, Städte und Zivilisationen"},
+        {"n": "31", "t": "Erbil", "d": "Wo Geschichte auf die Berge trifft"},
+        {"n": "32", "t": "Die Aromen des Irak", "d": "Küche und Gastfreundschaft"},
+        {"n": "33", "t": "Das Erlebnis Fable Tour", "d": "Mehr als eine Reise"},
+        {"n": "34", "t": "Sieben Tage", "d": "Mesopotamien entdecken"},
+        {"n": "36", "t": "Neun Tage", "d": "Die große Irakreise"},
+        {"n": "38", "t": "Vor der Reise", "d": "Wesentlicher Leitfaden"},
+        {"n": "39", "t": "Planen Sie Ihre Reise", "d": "Buchung und Kontakt"}
+      ],
+      "fig": "Seite 12. Die Zikkurat von Borsippa, gekrönt von Ziegeln, die in einem alten Feuer verschmolzen sind.",
+      "pub": [
+        "MESOPOTAMIEN. Ausgabe 01. Herausgegeben von Fable Tour, Internationaler Flughafen Bagdad, Al-Karkh, Bagdad, Irak.",
+        "Alle Fotografien von Fable Tour, aufgenommen auf unseren eigenen Reisen.",
+        "iraq.fabletour.com"
+      ]
+    },
+    "5": {
+      "run": "Karte",
+      "kicker": "Reiseziele",
+      "title": "Der Irak auf einen Blick",
+      "places": [
+        {"t": "Mossul und Ninive", "d": "Seite 30"},
+        {"t": "Erbil", "d": "Seite 31"},
+        {"t": "Nimrud", "d": "Seite 30"},
+        {"t": "Hatra", "d": "Seite 29 · UNESCO"},
+        {"t": "Assur", "d": "Seite 30 · UNESCO"},
+        {"t": "Samarra", "d": "Seite 25 · UNESCO"},
+        {"t": "Bagdad", "d": "Seite 06"},
+        {"t": "Ktesiphon", "d": "Seite 13"},
+        {"t": "Kerbela", "d": "Seite 24"},
+        {"t": "Babylon", "d": "Seite 10 · UNESCO"},
+        {"t": "Borsippa", "d": "Seite 12"},
+        {"t": "Nadschaf und Kufa", "d": "Seite 22"},
+        {"t": "Uruk", "d": "Seite 16"},
+        {"t": "Die Marschen", "d": "Seite 18 · UNESCO"},
+        {"t": "Ur", "d": "Seite 14"},
+        {"t": "Basra", "d": "Seite 21"}
+      ],
+      "note": "Gold markiert eine UNESCO-Welterbestätte; Marineblau markiert ein weiteres Reiseziel dieser Ausgabe. Die Grenzen sind schematisch gezeichnet, nach Natural Earth, und die Flüsse sind schematisch. Sechs irakische Stätten stehen auf der Welterbeliste: Hatra (1985), Assur (2003), Samarra (2007), die Zitadelle von Erbil (2014), die Ahwar des südlichen Irak, zu denen Ur und Uruk gehören (2016), und Babylon (2019)."
+    },
+    "6": {
+      "kicker": "Reiseziel · Bagdad",
+      "title": "Bagdad: die Stadt des Friedens",
+      "stand": "762 als Madinat al-Salam gegründet, war die abbasidische Hauptstadt einst die größte Stadt der Erde. Ihre Buchhändler, Teehäuser und Flussufer tragen dieses Erbe noch.",
+      "cap": "Die Statue des Dichters al-Mutanabbi aus dem zehnten Jahrhundert am Flussende der Straße, die seinen Namen trägt, dahinter die Lichter des anderen Tigrisufers.",
+      "feature": ["Al-Mutanabbi-Straße", "Al-Mustansiriya", "Die Qishla", "Café Shabandar", "Al-Kadhimiya"]
+    },
+    "7": {
+      "run": "Bagdad",
+      "drop": true,
+      "paras": [
+        "Im Sommer 762 wählte der abbasidische Kalif al-Mansur einen Ort am Westufer des Tigris und befahl, eine Hauptstadt nach einem Plan zu bauen, dem noch keine Stadt gefolgt war: ein vollkommener Kreis, mit Palast und Moschee in der Mitte und vier Toren, die sich zu den Straßen des Reiches öffneten. Er nannte sie Madinat al-Salam, die Stadt des Friedens.",
+        "Von der Runden Stadt steht heute nichts mehr über der Erde, doch die Vorstellung von Bagdad, die sie schuf, ist nie verschwunden. Binnen eines Jahrhunderts war dies ein Ort, an dem griechisches, persisches und indisches Wissen ins Arabische übertragen wurde, an dem Papier das Pergament ablöste und an dem Gelehrte und Dichter kamen, um sich einen Namen zu machen.",
+        "Der am besten erhaltene Zeuge jener Zeit ist Al-Mustansiriya, die Hochschule, die der Kalif al-Mustansir gründete und die 1233 eröffnet wurde. Ihr langer Ziegelhof, gerahmt von Spitzbögen und geschnitzten geometrischen Feldern, beherbergte einst alle vier Schulen des sunnitischen Rechts unter einem Dach. Gehen Sie früh hindurch, bevor die Hitze kommt, und die Proportionen erklären den Rest.",
+        "Wenige Minuten entfernt zeigt das Gebäude, das als Abbasidenpalast bekannt ist, dasselbe Ziegelwerk im häuslichen Maßstab: gewölbte Gänge, tiefe Iwane und Decken, die zu wabenförmigen Muqarnas geschnitten sind.",
+        "Dann kommt die Al-Mutanabbi-Straße. Die Bagdader zitieren gern den alten Satz, Kairo schreibe, Beirut drucke und Bagdad lese, und an Freitagmorgen beweist es die Straße, wenn die Bücher von einem Ende zum anderen auf dem Pflaster ausgelegt werden. Am fernen Ende steht der Dichter selbst in Bronze, den Arm zum Fluss erhoben.",
+        "Neben ihm liegt das Café Shabandar, das seit 1917 unter Wänden voller alter Fotografien Tee ausschenkt, und die Qishla, die osmanische Kaserne, deren Uhrturm seit dem neunzehnten Jahrhundert die Zeit über dem Tigris hält."
+      ],
+      "caps": [
+        "Al-Mustansiriya. Zwei Geschosse von Spitzbögen und geschnitzten Ziegelfeldern um den Hof der Hochschule, eröffnet 1233.",
+        "Die Qishla. Ein Gast fasst den osmanischen Uhrturm von der Arkade aus ins Bild.",
+        "Café Shabandar. Das Messingschild über der Tür des bekanntesten Teehauses der Stadt."
+      ],
+      "miss": [
+        {"t": "Al-Mutanabbi-Straße", "d": "Der Freitagsbuchmarkt"},
+        {"t": "Al-Mustansiriya", "d": "Eröffnet 1233"},
+        {"t": "Die Qishla", "d": "Uhrturm am Tigris"},
+        {"t": "Schrein al-Kadhimiya", "d": "Siehe Seite 9"}
+      ],
+      "promo": "Entdecken Sie Bagdad mit einem örtlichen Reiseleiter — iraq.fabletour.com"
+    },
+    "8": {
+      "kicker": "Ein Abend im alten Bagdad",
+      "photoTop": true,
+      "paras": [
+        "Bagdad versteht man am besten zu Fuß, und der Weg ist kurz. Beginnen Sie unter den Arkaden der al-Rashid-Straße, die 1916 eröffnet wurde; dort schenkt Haj Zbala seit 1900 Rosinen-Scherbet aus.",
+        "Von dort läuft die Al-Mutanabbi-Straße geradeaus zum Fluss. Bei Tag ist sie der Buchmarkt des Irak. Nach Einbruch der Dunkelheit gehen die Lichter an, die Balkone füllen sich, und die ganze Stadt scheint hindurchzuschlendern: Familien, Studenten, Musiker, Händler von Töpferware und Kaffee.",
+        "Nehmen Sie sich Zeit an den Buchständen, dann setzen Sie sich im Shabandar zu einem Tee in einem kleinen, taillierten Glas. Dahinter führen das wiederhergestellte Saray-Viertel und die Qishla zur Statue des Dichters und zum Tigris."
+      ],
+      "caps": [
+        "Al-Mutanabbi-Straße. Der Buchmarkt nach Einbruch der Dunkelheit, unter seinen Ziegelarkaden und Balkonen.",
+        "Buchstände. Saif bleibt stehen, um zu lesen.",
+        "Straßenmusik. Ein Saxophonist im Saray-Viertel.",
+        "Haj Zbala. Scherbet in der al-Rashid-Straße seit 1900."
+      ],
+      "promo": "Entdecken Sie Bagdad mit einem örtlichen Reiseleiter — iraq.fabletour.com"
+    },
+    "9": {
+      "run": "Bagdad",
+      "kicker": "Bagdad · Al-Kadhimiya",
+      "title": "Der Schrein der beiden Imame",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Im Norden von Bagdad, am Westufer des Tigris, stehen zwei goldene Kuppeln Seite an Seite. Unter ihnen liegen ein Großvater und sein Enkel: Musa al-Kadhim, der siebte Imam der Zwölfer-Schia, und Muhammad al-Jawad, der neunte. Das Viertel trägt ihren Namen. Al-Kadhimiya, oder Kadhimayn, bedeutet der Ort der beiden Kadhims.",
+        "Musa ibn Ja'far wurde 745 nahe Medina geboren, als Sohn des großen Gelehrten Imam Ja'far al-Sadiq. Er war bekannt für seine Geduld und seine Großzügigkeit, und der Beiname al-Kadhim bedeutet derjenige, der seinen Zorn zurückhält. Viele nennen ihn auch Bab al-Hawa'ij, das Tor der Bedürfnisse. Die abbasidischen Kalifen sahen in seiner Anhängerschaft eine Bedrohung. Harun ar-Raschid ließ ihn in Medina festnehmen und in den Irak bringen, wo er Jahre im Gefängnis verbrachte. Er starb 799 in einem Bagdader Kerker. Die schiitische Überlieferung hält fest, dass er vergiftet wurde. Er wurde auf dem Friedhof der Quraisch bestattet, den der Gründer Bagdads außerhalb der Runden Stadt angelegt hatte.",
+        "Sein Enkel Muhammad ibn Ali wurde 811 in Medina geboren, als Sohn von Imam Ali al-Rida, der in Maschhad begraben liegt. Er wurde mit etwa sieben Jahren Imam, der jüngste der zwölf, und man erinnert sich an ihn, weil er noch als Knabe den führenden Rechtsgelehrten am Hof des Kalifen al-Ma'mun antwortete. Sein Beiname al-Jawad bedeutet der Großzügige. Vom Kalifen al-Mu'tasim nach Bagdad gerufen, starb er dort 835 im Alter von fünfundzwanzig Jahren, nach schiitischer Überlieferung durch Gift, und wurde neben seinem Großvater beigesetzt.",
+        "Der Schrein wuchs um die beiden Gräber. Seine heutige Gestalt stammt weitgehend aus dem sechzehnten Jahrhundert, und die Kuppeln wurden später mit Gold überzogen. Jedes Jahr bringt der Jahrestag des Todes von Imam al-Kadhim am 25. Rajab große Menschenmengen zu Fuß aus der ganzen Stadt herbei. Besucher aller Glaubensrichtungen sind in den Höfen willkommen; Frauen tragen eine Abaya, die am Tor erhältlich ist."
+      ],
+      "caps": ["Al-Kadhimiya. Die Zwillingskuppeln aus Gold und die vier Minarette des Schreins, für den Abend beleuchtet."]
+    },
+    "10": {
+      "kicker": "Reiseziel · Gouvernement Babil",
+      "title": "Babylon: ein Gang durch das Reich der Könige",
+      "stand": "Zweitausend Jahre lang bedeutete sein Name die größte Stadt, die sich jemand vorstellen konnte. Neunzig Minuten südlich von Bagdad tragen seine Mauern noch den Stempel des Königs, der sie baute.",
+      "cap": "Stiere und Drachen am modernen Wiederaufbau des Ischtar-Tors, in verkleinertem Maßstab am Eingang der Stätte errichtet.",
+      "feature": ["Das Ischtar-Tor", "Die Prozessionsstraße", "Der Löwe von Babylon", "Befund und Legende"]
+    },
+    "11": {
+      "run": "Babylon",
+      "drop": true,
+      "paras": [
+        "Babylon war schon alt, als Hammurabi es im 18. Jahrhundert v. Chr. zur Hauptstadt eines Reiches machte und seine Gesetze in Stein meißeln ließ. Doch die Stadt, durch die Besucher heute gehen, ist weitgehend das Werk eines einzigen Mannes, Nebukadnezar II., der von 605 bis 562 v. Chr. herrschte.",
+        "Er baute sie in einem Maßstab wieder auf, der Staunen erregen sollte. Doppelte Mauern umschlossen Tempel, Paläste und eine Zikkurat. Um 575 v. Chr. errichtete er an der Nordseite das Ischtar-Tor, verkleidet mit tiefblau glasierten Ziegeln und geschmückt mit Reihen von Stieren und Drachen, den Tieren der Götter Adad und Marduk. Löwen, das Sinnbild der Ischtar, säumten die Straße, die zu ihm führte.",
+        "Viele der Ziegel tragen seinen Namen. Sehen Sie sich die Mauern des Südpalasts genau an, und Sie finden den Keilschriftstempel immer wieder: Nebukadnezar, König von Babylon. Darüber liegen hellere Lagen aus dem Wiederaufbau der 1980er Jahre, sodass sich die beiden Zeiten auf einen Blick unterscheiden lassen.",
+        "Babylon ging 539 v. Chr. unter Kyros an die Perser über, und 323 v. Chr. starb Alexander der Große hier. 2019 wurde die Stätte in die UNESCO-Welterbeliste aufgenommen."
+      ],
+      "tableTitle": "Befund und Legende",
+      "tableHead": ["Gegenstand", "Was die Archäologie zeigt"],
+      "rows": [
+        {"s": "Ischtar-Tor", "w": "Ab 1899 von Robert Koldewey ausgegraben. Das glasierte obere Tor wurde im Pergamonmuseum in Berlin wiedererrichtet. In Babylon sehen Sie die älteren, noch an Ort und Stelle stehenden unglasierten Ziegelstufen und am Eingang eine moderne Nachbildung."},
+        {"s": "Prozessionsstraße", "w": "Eine gepflasterte Straße führte vom Tor zum Tempel des Marduk. Abschnitte ihrer ursprünglichen Pflasterung und Ziegelmauern mit geformten Tieren kann man heute begehen."},
+        {"s": "Löwe von Babylon", "w": "Ein Basaltlöwe, der über einer gestürzten Gestalt steht, im 18. Jahrhundert an der Stätte gefunden. Seine Datierung und Herkunft sind noch umstritten."},
+        {"s": "Hängende Gärten", "w": "Von späteren griechischen Schriftstellern beschrieben. In Babylon sind keine Überreste nachgewiesen, und manche Gelehrte meinen, die Geschichte gehöre nach Ninive."},
+        {"s": "Turm zu Babel", "w": "Die Zikkurat Etemenanki, dem Marduk geweiht, ist wirklich. Erhalten ist nur ihr Grundriss, als quadratischer Umriss in der Erde."}
+      ],
+      "quote": "„Nebukadnezar, König von Babylon, Versorger von Esagila und Ezida, ältester Sohn des Nabopolassar.“",
+      "quoteBy": "Die Standardinschrift, die auf die Ziegel des Königs gestempelt ist.",
+      "caps": ["An der Stätte. Gäste betrachten eine Tafel über Keilschrifttafeln, die in Babylon gefunden wurden."]
+    },
+    "12": {
+      "kicker": "Reiseziel · Gouvernement Babil",
+      "title": "Borsippa: das Erbe des Nabu",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Siebzehn Kilometer südwestlich von Babylon steht ein zerrissener Ziegelturm allein auf einem Hügel über der Ebene. Das ist Borsippa, die Schwesterstadt Babylons und die Heimat des Nabu, des Gottes der Schreiber und der Schrift.",
+        "Jeden Frühling verließ die Statue des Nabu seinen Tempel, das Ezida, und zog zum Neujahrsfest nach Babylon. Nebukadnezar II. baute seine Zikkurat hier im 6. Jahrhundert v. Chr. neu, und 1854 gefundene Gründungszylinder halten die Arbeit in den eigenen Worten des Königs fest.",
+        "Am Gipfel ist der Ziegel geschmolzen und zu glasigen Blöcken verschmolzen, die Folge eines Feuers von außergewöhnlicher Hitze. Jahrhundertelang hielten Reisende die Ruine für den Turm zu Babel. Die Stätte ist still, selten überlaufen und eine der stimmungsvollsten im Irak."
+      ],
+      "sideTitle": "Auf einen Blick",
+      "side": [
+        {"t": "Antiker Name", "d": "Barsipa; heute Birs Nimrud"},
+        {"t": "Schutzgott", "d": "Nabu, Gott der Schrift"},
+        {"t": "Von Babylon", "d": "Rund 17 km"}
+      ]
+    },
+    "13": {
+      "run": "Rund um Bagdad",
+      "kicker": "Nahe Bagdad",
+      "title": "Ktesiphon und Aqar Quf",
+      "photoTop": true,
+      "paras": [
+        "Zwei Denkmäler stehen keine Stunde von der Hauptstadt entfernt, und fast zweitausend Jahre liegen zwischen ihnen.",
+        "Taq Kasra ist alles, was vom Palast der sasanidischen Könige in Ktesiphon geblieben ist. Sein Gewölbe steigt etwa 37 Meter auf und überspannt rund 25 Meter: der größte Bogen aus unverstärktem Ziegel mit einer einzigen Spannweite, der je gebaut wurde. Gelehrte streiten noch, ob er aus dem dritten oder dem sechsten Jahrhundert stammt.",
+        "Westlich der Stadt ist Aqar Quf die Zikkurat von Dur-Kurigalzu, gegründet vom kassitischen König Kurigalzu im 14. Jahrhundert v. Chr. Ihr verwitterter Kern steht noch rund 57 Meter hoch, und zwischen den Lagen aus Lehmziegeln sind Schichten aus Schilfmatten zu sehen."
+      ],
+      "caps": [
+        "Taq Kasra. Das große Gewölbe des sasanidischen Palasts in Ktesiphon, südöstlich von Bagdad.",
+        "Aqar Quf. Die Zikkurat, ein gestempelter Ziegel und der Blick durch das wiederhergestellte Tor."
+      ]
+    },
+    "14": {
+      "kicker": "Reiseziel · Südirak",
+      "title": "Die Morgenröte der Zivilisation",
+      "stand": "In Ur und Uruk, in der Ebene des alten Sumer, lebten Menschen zuerst in Städten, führten schriftliche Abrechnungen und bauten Tempel, die man einen Tagesmarsch weit sehen konnte.",
+      "cap": "Gäste vor der Zikkurat von Ur, um 2100 v. Chr. für den Mondgott Nanna erbaut.",
+      "feature": ["Die Zikkurat von Ur", "Der Königsfriedhof", "Uruk und die erste Schrift", "Eine Zeittafel Mesopotamiens"]
+    },
+    "15": {
+      "run": "Ur und Uruk",
+      "kicker": "Ur",
+      "drop": true,
+      "paras": [
+        "Die Zikkurat von Ur ist die am besten erhaltene im Irak. König Ur-Nammu begann sie um 2100 v. Chr., und sein Sohn Schulgi vollendete sie, eine gestufte Plattform aus Lehmziegeln, mit gebrannten Ziegeln verkleidet und mit Bitumen gefügt, geweiht dem Nanna, dem Mondgott und Schutzherrn der Stadt.",
+        "Drei Treppen mit je hundert Stufen treffen sich an einem Torhaus auf der ersten Terrasse. Fünfzehn Jahrhunderte später stellte der babylonische König Nabonid den Turm wieder her, und die untere Fassade wurde im zwanzigsten Jahrhundert erneut aufgebaut. Man kann ihn noch besteigen.",
+        "Zwischen 1922 und 1934 grub Leonard Woolley Ur für das British Museum und die Universität von Pennsylvania aus. Im Königsfriedhof, datiert auf etwa 2600 bis 2500 v. Chr., fand er das Grab der Königin Puabi, goldene Helme, Leiern und das Mosaikfeld, das als Standarte von Ur bekannt ist.",
+        "Die Überlieferung nennt Ur auch als Geburtsort Abrahams, und ein wiederaufgebautes Haus nahe der Zikkurat wird als seines gezeigt. Seit 2016 gehört die Stätte zum UNESCO-Welterbe der Ahwar des südlichen Irak."
+      ],
+      "sideTitle": "Ur in Kürze",
+      "side": [
+        {"t": "Erbaut", "d": "Um 2100 v. Chr."},
+        {"t": "Geweiht", "d": "Nanna, der Mondgott"},
+        {"t": "Ausgegraben", "d": "Woolley, 1922 bis 1934"},
+        {"t": "Nächste Stadt", "d": "Nasiriya"}
+      ],
+      "caps": ["Ebenfalls in Sumer. Die erodierte Zikkurat von Nippur, Sitz des Gottes Enlil und religiöses Zentrum der sumerischen Welt."],
+      "promo": "Besuchen Sie Ur auf unseren Reisen über sieben und neun Tage — iraq.fabletour.com"
+    },
+    "16": {
+      "kicker": "Uruk",
+      "title": "Die erste Stadt",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Uruk, das heutige Warka, hat von allen Orten der Erde den stärksten Anspruch, die erste Stadt genannt zu werden. Um 3100 v. Chr. lebten hier Zehntausende von Menschen, mehr als damals irgendwo sonst auf der Welt.",
+        "Eine Stadt dieser Größe brauchte Aufzeichnungen. Im Bezirk Eanna, der Göttin Inanna heilig, fanden Archäologen Tausende von Tontafeln mit Zahlen und Zeichen. Die ältesten stammen aus der Zeit um 3400 bis 3200 v. Chr. und sind die älteste bisher entdeckte Schrift.",
+        "Uruk schenkte der Literatur auch ihren ersten Helden. Gilgamesch wurde als ihr König erinnert, und das Epos schreibt ihm die Stadtmauer zu, rund neun Kilometer im Umfang.",
+        "Der Weiße Tempel krönt noch den Hügel des Himmelsgottes Anu, und die Warka-Vase und die Maske von Warka, beide hier gefunden, stehen heute im Irak-Museum in Bagdad.",
+        "Die Stätte ist weit, still und nahezu unberührt. Mit einem Reiseleiter lösen sich die niedrigen Hügel in Tempel, Höfe und Straßen auf."
+      ],
+      "caps": ["Oben. Gäste am Eingang von Uruk, dahinter der Hügel der Zikkurat. Hier begannen die ersten geschriebenen Wörter."]
+    },
+    "17": {
+      "run": "Ur und Uruk",
+      "kicker": "Zeittafel",
+      "title": "Siebentausend Jahre zwischen zwei Flüssen",
+      "events": [
+        {"y": "um 5400 v. Chr.", "t": "Eridu wird gegründet. Spätere Sumerer erinnerten es als die erste Stadt von allen."},
+        {"y": "um 3400–3200 v. Chr.", "t": "Die älteste bekannte Schrift erscheint auf Tontafeln in Uruk."},
+        {"y": "um 2600–2500 v. Chr.", "t": "Könige und Königinnen werden mit Gold und Lapislazuli im Königsfriedhof von Ur bestattet."},
+        {"y": "um 2334 v. Chr.", "t": "Sargon von Akkad eint die Städte Mesopotamiens unter einem Herrscher."},
+        {"y": "um 2100 v. Chr.", "t": "Ur-Nammu erbaut die Zikkurat von Ur."},
+        {"y": "um 1792–1750 v. Chr.", "t": "Hammurabi herrscht von Babylon aus und erlässt sein Gesetzbuch."},
+        {"y": "14. Jahrhundert v. Chr.", "t": "Der kassitische König Kurigalzu gründet Dur-Kurigalzu, das heutige Aqar Quf."},
+        {"y": "883–859 v. Chr.", "t": "Assurnasirpal II. macht Nimrud zur Hauptstadt Assyriens."},
+        {"y": "612 v. Chr.", "t": "Ninive fällt, und das assyrische Reich endet."},
+        {"y": "605–562 v. Chr.", "t": "Nebukadnezar II. baut Babylon wieder auf und errichtet das Ischtar-Tor."},
+        {"y": "539 v. Chr.", "t": "Kyros von Persien nimmt Babylon ein."},
+        {"y": "323 v. Chr.", "t": "Alexander der Große stirbt in Babylon."},
+        {"y": "um 100–240 n. Chr.", "t": "Die Wüstenstadt Hatra blüht und widersteht zweimal römischen Heeren."},
+        {"y": "638 n. Chr.", "t": "Kufa wird gegründet. Basra entsteht im selben Jahrzehnt."},
+        {"y": "680 n. Chr.", "t": "Die Schlacht von Kerbela."},
+        {"y": "762 n. Chr.", "t": "Der Kalif al-Mansur gründet Bagdad."},
+        {"y": "836 n. Chr.", "t": "Der abbasidische Hof zieht nach Samarra."},
+        {"y": "1233 n. Chr.", "t": "Al-Mustansiriya wird in Bagdad eröffnet."}
+      ],
+      "note": "Daten vor 1500 v. Chr. folgen der herkömmlichen mittleren Chronologie und sind ungefähr."
+    },
+    "18": {
+      "kicker": "Reiseziel · Südirak",
+      "title": "Die Marschen: Leben zwischen den Flüssen",
+      "stand": "Wo Tigris und Euphrat langsamer werden und sich ausbreiten, bauen Menschen seit fünftausend Jahren mit Schilf. 2016 von der UNESCO eingetragen, sieht man die Ahwar des südlichen Irak am besten im ersten Licht von einem Mashoof aus.",
+      "cap": "Ein Mudhif, das gewölbte Gästehaus der Marsch-Araber, ganz aus gebündeltem Schilf auf seiner eigenen kleinen Insel erbaut."
+    },
+    "19": {
+      "run": "Die Marschen",
+      "drop": true,
+      "paras": [
+        "Nördlich von Basra verlieren die beiden Flüsse ihre Ufer. Das Wasser breitet sich in ein Labyrinth aus Seen, Kanälen und Schilfgürteln aus, das einst eine Fläche von der Größe eines kleinen Landes bedeckte, und mittendrin leben Menschen auf Inseln, die sie selbst aufgeschüttet haben.",
+        "Die Marsch-Araber, die Ma’dan, machen fast alles aus dem Riesenschilf, das um sie wächst: Häuser, Matten, Zäune, Futter und Brennstoff. Ihr schönster Bau ist der Mudhif, eine Gästehalle aus gewölbten Schilfbündeln, ohne Nägel und ohne Bauholz. Dieselbe Form erscheint auf sumerischen Reliefs, die fünftausend Jahre alt sind.",
+        "Das Leben folgt dem Wasserbüffel. Familien staken im Morgengrauen in einem schlanken hölzernen Mashoof hinaus, um frisches Schilf zu schneiden, und die Büffel schwimmen in der Dämmerung zurück. Ihre Milch wird zu Geymar, einer dicken Sahne, die mit Dattelsirup und warmem Brot zum Frühstück gegessen wird.",
+        "In den 1990er Jahren wurden die Marschen absichtlich trockengelegt, und die meisten ihrer Bewohner zogen fort. Nach 2003 wurden die Dämme durchbrochen, und das Wasser kehrte in weite Teile des Gebiets zurück. 2016 trug die UNESCO die Ahwar des südlichen Irak als Welterbe für Natur und Kultur zugleich ein: vier Feuchtgebiete zusammen mit den alten Städten Ur, Uruk und Eridu."
+      ],
+      "sideTitle": "Verantwortungsvoll reisen",
+      "side": [
+        {"t": "Fahren Sie mit örtlichen Bootsleuten", "d": "Ihr Fahrgeld unterstützt Marschfamilien unmittelbar."},
+        {"t": "Fragen Sie, bevor Sie fotografieren", "d": "Besonders Frauen und im Inneren von Häusern."},
+        {"t": "Nehmen Sie nichts mit, lassen Sie nichts zurück", "d": "Das Feuchtgebiet ist empfindlich, und die Wasserstände wechseln mit der Jahreszeit."}
+      ],
+      "caps": ["Oben. Wasserbüffel weiden auf einer Schilfinsel in den zentralen Marschen."],
+      "promo": "Erleben Sie die mesopotamischen Marschen — iraq.fabletour.com"
+    },
+    "20": {
+      "photoTop": true,
+      "quote": "„Viele unserer Gäste sagen, dies sei der friedlichste Ort im Irak.“",
+      "quoteBy": "Fable Tour",
+      "caps": ["Oben. Mit dem Boot durch die Schilfkanäle bei Tschibaisch. Eine Marschfahrt mit einem Mittagessen aus gegrilltem Masgouf lässt sich in unseren Programmen einrichten."]
+    },
+    "21": {
+      "run": "Basra",
+      "kicker": "Reiseziel · Südirak",
+      "title": "Basra: die Stadt der Flüsse und Palmen",
+      "drop": true,
+      "paras": [
+        "Basra ist der Ort, an dem der Irak auf das Meer trifft. In den 630er Jahren als Garnisonsstadt des frühen Kalifats gegründet, wurde es zu einem Hafen, der mit Indien, Ostafrika und China Handel trieb, und zu einer Stadt der Grammatiker, Theologen und Dichter. In Tausendundeiner Nacht bricht Sindbad der Seefahrer von hier auf.",
+        "Tigris und Euphrat vereinigen sich in Qurna, eine Stunde nördlich, zum Schatt al-Arab. Der Fluss zieht breit und langsam an der Stadt vorbei, zwischen Hainen von Dattelpalmen. Ein Abend auf der Uferpromenade oder draußen auf dem Wasser, wenn das Licht geht, ist das eigentliche Basra-Erlebnis.",
+        "Im alten Viertel säumen Kanäle die Häuser der Kaufleute, deren Obergeschosse hinter Schirmen aus geschnitztem Holz über die Straße vorkragen. Diese Balkone, die Shanasheel, sind das Kennzeichen der Stadt. Das Basra-Museum, 2016 in einem ehemaligen Palast am Fluss eröffnet, erzählt die Geschichte des Südens von Sumer bis in die islamische Zeit."
+      ],
+      "caps": ["Qurna. Das Gehege, das als Adamsbaum bekannt ist und an dem die örtliche Überlieferung den Garten Eden verortet, am Zusammenfluss der beiden Flüsse."],
+      "miss": [
+        {"t": "Sonnenuntergang auf dem Schatt al-Arab", "d": "Am besten vom Boot aus"},
+        {"t": "Die Shanasheel-Häuser", "d": "Die geschnitzten Balkone des alten Basra"},
+        {"t": "Das Basra-Museum", "d": "Vier Galerien am Fluss"}
+      ]
+    },
+    "22": {
+      "kicker": "Reiseziel · Der mittlere Euphrat",
+      "title": "Heilige Städte Mesopotamiens",
+      "stand": "Nadschaf, Kerbela und Kufa gehören zu den meistbesuchten Orten der Erde. Millionen von Pilgern kommen jedes Jahr, und Reisende jeder Herkunft werden mit Höflichkeit empfangen.",
+      "cap": "Der Marmorhof der Großen Moschee von Kufa in der Dämmerung.",
+      "feature": ["Kufa", "Nadschaf und Wadi al-Salam", "Kerbela", "Mit Respekt zu Besuch"]
+    },
+    "23": {
+      "run": "Heilige Städte",
+      "kicker": "Kufa und Nadschaf",
+      "drop": true,
+      "paras": [
+        "Kufa wurde 638 als Heerlager am Euphrat gegründet und war binnen einer Generation eine der geistigen Hauptstädte des Islam. Die eckige kufische Schrift trägt den Namen der Stadt. Ali ibn Abi Talib, Cousin und Schwiegersohn des Propheten Muhammad und der vierte Kalif, regierte von hier aus, und in der Großen Moschee von Kufa wurde er 661 niedergestreckt.",
+        "Die Moschee gehört zu den ältesten der Welt. Ihr weiter Hof ist von Stätten umgeben, die die Überlieferung mit den Propheten verbindet, und daneben stehen die Schreine von Muslim ibn Aqil und Hani ibn Urwa. Wenige Schritte entfernt liegt das schlichte Haus, in dem Imam Ali wohnte.",
+        "Zehn Kilometer westlich wuchs Nadschaf um sein Grab. Die goldene Kuppel und die Zwillingsminarette des Imam-Ali-Schreins erheben sich über die Altstadt, und seine Hallen sind mit Spiegelmosaik ausgekleidet, das das Licht streut. Seit tausend Jahren ist Nadschaf auch eine Stadt der Gelehrten. Seine Seminare, die Hawza, ziehen Studenten aus der ganzen Welt an.",
+        "Neben der Stadt liegt Wadi al-Salam, das Tal des Friedens. Es ist einer der größten Friedhöfe der Erde, eine Landschaft aus Kuppeln und Ziegelgewölben, die bis zum Horizont reicht, und es wird seit mehr als einem Jahrtausend ununterbrochen genutzt."
+      ],
+      "caps": ["Wadi al-Salam. Das Tal des Friedens von oben, dahinter die Ebene von Nadschaf."]
+    },
+    "24": {
+      "run": "Heilige Städte",
+      "kicker": "Kerbela",
+      "paras": [
+        "Am zehnten Tag des Muharram im Jahr 680 wurde Husain ibn Ali, der Enkel des Propheten, mit seinen Gefährten in der Ebene von Kerbela getötet. Des Ereignisses wird jedes Jahr an Aschura gedacht, und vierzig Tage später bringt die Arba'in-Wallfahrt Millionen von Menschen zu Fuß in die Stadt.",
+        "Die Schreine von Imam Husain und von seinem Bruder al-Abbas stehen einander über eine breite Fußgängerfläche gegenüber. Beide sind mit Gold gekrönt und innen mit Spiegelarbeit und blauen Fliesen bedeckt. Am Abend, wenn die Kuppeln beleuchtet sind und sich die Höfe füllen, ist die Atmosphäre ruhig und einladend."
+      ],
+      "caps": [
+        "Al-Kadhimiya, Bagdad. Ein Gast fotografiert Kuppeln und Minarette vom Hof aus.",
+        "Die stilleren Schreine Bagdads. Das Grab von Junayd al-Baghdadi.",
+        "Das Grab von Bahlul."
+      ],
+      "sideTitle": "Mit Respekt zu Besuch",
+      "side": [
+        {"t": "Kleidung", "d": "Lange Ärmel und lange Hosen für Männer. Frauen tragen innerhalb der Schreinbezirke eine Abaya und ein Kopftuch; beides kann am Eingang ausgeliehen werden."},
+        {"t": "Zugang", "d": "Die Höfe sind in der Regel für alle Besucher offen. Die Regeln für die inneren Hallen unterscheiden sich nach Schrein und Tag, und Ihr Reiseleiter berät Sie an Ort und Stelle."},
+        {"t": "Zeitpunkt", "d": "Während Aschura und Arba'in sind die Städte äußerst belebt. Wir planen um diese Daten herum, es sei denn, Sie möchten sie miterleben."},
+        {"t": "Beim Eintreten", "d": "Schuhe, Taschen und Kameras bleiben in den kostenlosen Garderoben. Männer und Frauen benutzen getrennte Eingänge."},
+        {"t": "Fotografieren", "d": "Telefone werden in den Höfen gewöhnlich geduldet. Fragen Sie immer, bevor Sie Menschen beim Gebet fotografieren."},
+        {"t": "Gastfreundschaft", "d": "Tee, Wasser und Essen werden Besuchern oft unentgeltlich angeboten. Annehmen ist eine Höflichkeit."}
+      ]
+    },
+    "25": {
+      "kicker": "Reiseziel · Salah ad-Din",
+      "title": "Samarra: die Pracht der Abbasiden",
+      "stand": "Ein halbes Jahrhundert lang war dies die Hauptstadt eines Reiches, das von Nordafrika bis Zentralasien reichte. Sein Spiralminarett ist die bekannteste Silhouette im Irak.",
+      "cap": "Die Malwiya, das Spiralminarett der Großen Moschee von Samarra, vollendet 852."
+    },
+    "26": {
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "836 verließ der Kalif al-Mu'tasim Bagdad und baute 125 Kilometer flussaufwärts eine neue Hauptstadt. Samarra wurde auf offenem Gelände angelegt, mit Alleen, Palästen, Kasernen, Rennbahnen und Jagdparks. Schließlich erstreckte es sich mehr als vierzig Kilometer am Ostufer des Tigris.",
+        "Sein Sohn al-Mutawakkil fügte zwischen 848 und 852 die Große Moschee hinzu. Sie war damals die größte Moschee der Welt, ein ummauertes Rechteck aus gebrannten Ziegeln, groß genug, dass das ganze Heer gemeinsam beten konnte. Außerhalb ihrer Nordmauer errichtete er die Malwiya, ein 52 Meter hohes Minarett mit einer Rampe, die sich außen fünfmal herumwindet.",
+        "Der Hof kehrte 892 nach Bagdad zurück, und große Teile von Samarra wurden einfach verlassen; deshalb ist der Grundriss so vollständig erhalten. Die UNESCO nahm die archäologische Stadt Samarra 2007 in die Welterbeliste auf."
+      ],
+      "caps": ["Die Große Moschee. Die Außenmauer mit ihren halbrunden Türmen und dahinter die aufsteigende Malwiya."],
+      "sideTitle": "Samarra in Kürze",
+      "side": [
+        {"t": "Hauptstadt", "d": "836 bis 892"},
+        {"t": "Die Malwiya", "d": "52 m, vollendet 852"},
+        {"t": "Von Bagdad", "d": "Rund 125 km nördlich"},
+        {"t": "UNESCO", "d": "Eingetragen 2007"}
+      ]
+    },
+    "27": {
+      "run": "Samarra",
+      "photoTop": true,
+      "paras": [
+        "Samarra ist auch eine Wallfahrtsstadt. Der al-Askari-Schrein birgt die Gräber des zehnten und elften Imams, Ali al-Hadi und Hasan al-Askari, unter einer der größten goldenen Kuppeln der islamischen Welt.",
+        "Nahe der Stelle, die als Gefängnis von Imam Ali al-Hadi gezeigt wird, liegt Qasr al-Birka, der Palast des Beckens. Sein rundes Bassin wurde tief in den Boden geschnitten und von gewölbten Hallen umgeben, in denen der abbasidische Hof der Sommerhitze entkam.",
+        "Nördlich des Zentrums wiederholt die Moschee des Abu Dulaf das Spiralminarett in kleinerem Maßstab.",
+        "Ein Tag in Samarra mit Fable Tour umfasst die Malwiya, den Schrein, das Gefängnis von Imam Ali al-Hadi und Qasr al-Birka."
+      ],
+      "caps": [
+        "Qasr al-Birka. Der versenkte Beckenhof eines abbasidischen Palasts, umringt von Bogenhallen, nahe dem Gefängnis von Imam Ali al-Hadi.",
+        "Al-Askari-Schrein. Die goldene Kuppel über dem gefliesten Tor."
+      ],
+      "promo": "Besuchen Sie Samarra mit Fable Tour — iraq.fabletour.com"
+    },
+    "28": {
+      "kicker": "Reiseziel · Gouvernement Ninive",
+      "title": "Nordirak: Reiche, Städte und Zivilisationen",
+      "stand": "Der Norden war das Kernland Assyriens und später ein Grenzraum zwischen Rom und Persien. Seine Stätten gehören zu den am wenigsten besuchten und lohnendsten des Landes.",
+      "cap": "Gäste auf den Stufen des Maran-Tempels in Hatra.",
+      "feature": ["Hatra", "Mossul und Ninive", "Nimrud", "Assur"]
+    },
+    "29": {
+      "run": "Nordirak",
+      "kicker": "Hatra",
+      "drop": true,
+      "paras": [
+        "Hatra steht allein in der Wüste, hundert Kilometer südwestlich von Mossul. Im ersten und zweiten Jahrhundert n. Chr. war es eine reiche Karawanenstadt am Rand des Partherreichs, regiert von eigenen arabischen Königen und von zwei Mauerringen umschlossen.",
+        "In seiner Mitte liegt ein großer heiliger Bezirk. Die Tempel sind aus honigfarbenem Kalkstein gebaut und verbinden die gewölbten Hallen des Ostens, die Iwane, mit den Säulen und dem geschnitzten Schmuck der griechischen und römischen Welt. Der Hauptgott war Schamasch, die Sonne.",
+        "Hatra hielt den römischen Kaisern Trajan und Septimius Severus stand, die es beide belagerten und scheiterten. Es fiel schließlich um 240 an den sasanidischen König Schapur I. und wurde nie wieder besiedelt.",
+        "1985 wurde es der erste Ort im Irak, der in die UNESCO-Welterbeliste aufgenommen wurde. Besuche erfordern eine Sicherheitsgenehmigung, die Fable Tour im Voraus einholt."
+      ],
+      "caps": [
+        "Stein auf Stein. Ein geschnitztes Portal im Tempelbezirk.",
+        "Die großen Iwane. Gewölbte Hallen öffnen sich zum mittleren Hof."
+      ]
+    },
+    "30": {
+      "run": "Nordirak",
+      "kicker": "Mossul, Ninive, Nimrud und Assur",
+      "drop": true,
+      "paras": [
+        "Mossul blickt über den Tigris auf die Hügel des alten Ninive. Um 700 v. Chr. machte der assyrische König Sanherib Ninive zu seiner Hauptstadt und umgab es mit zwölf Kilometern Mauer. Sein Enkel Assurbanipal versammelte dort eine Bibliothek aus Tontafeln, die Quelle eines großen Teils dessen, was man über die mesopotamische Literatur weiß. Die Stadt fiel 612 v. Chr.",
+        "Das mittelalterliche Mossul wurde durch den Handel reich und gab dem Musselin seinen Namen. Die Große Moschee al-Nuri wurde 1172 erbaut, und ihr geneigtes Minarett, al-Hadba, wurde zum Wahrzeichen der Stadt. Beide wurden 2017 zerstört. Seither sind sie unter einem von der UNESCO geleiteten Programm mit den ursprünglichen Ziegeln wiederaufgebaut worden, und die Moschee wurde 2025 wiedereröffnet.",
+        "Dreißig Kilometer südlich liegt Nimrud, das assyrische Kalhu. Assurnasirpal II. machte es im 9. Jahrhundert v. Chr. zu seiner Hauptstadt und füllte seinen Palast mit geschnitzten Reliefs und kolossalen geflügelten Stieren. Die Stätte wurde 2015 schwer beschädigt, und die Konservierung ist im Gang. Beschriftete Platten und Ziegel liegen noch dort, wo sie fielen.",
+        "Weiter den Tigris hinab war Assur die erste Hauptstadt und das religiöse Herz Assyriens. Seit 2003 ist es Welterbe."
+      ],
+      "caps": [
+        "Mossul. Das wiederaufgebaute Minarett al-Hadba, gesehen vom Bezirk der Moschee al-Nuri.",
+        "Assur. Ein mit Keilschrift gestempelter Ziegel an der Stätte.",
+        "Nimrud. Gäste mit einer beschrifteten Platte auf dem Palasthügel. Wie Hatra wird Nimrud mit Genehmigung besucht; wird sie am Tag verweigert, bieten wir eine andere Stätte an."
+      ]
+    },
+    "31": {
+      "kicker": "Reiseziel · Region Kurdistan",
+      "title": "Der Norden: wo Geschichte auf die Berge trifft",
+      "deck": "Die Zitadelle von Erbil ist so lange bewohnt, dass der Hügel darunter aus früheren Erbils besteht.",
+      "drop": true,
+      "wide": true,
+      "paras": [
+        "Die Zitadelle von Erbil erhebt sich etwa dreißig Meter über die heutige Stadt auf einem ovalen Hügel, einem Tell, der sich über Jahrtausende der Besiedlung Schicht um Schicht aufgebaut hat. Die Stadt erscheint in schriftlichen Zeugnissen schon im dritten Jahrtausend v. Chr., und sie wird oft als einer der ältesten durchgehend bewohnten Orte der Welt beschrieben.",
+        "Eine Wand aus Hausfronten des neunzehnten Jahrhunderts umgibt den Gipfel wie eine Festung. Drinnen liegen Gassen, Höfe, eine Moschee und ein Hammam. Die Zitadelle wurde 2014 in die UNESCO-Welterbeliste aufgenommen, und die Restaurierung geht weiter, sodass manche Bereiche geschlossen sein können.",
+        "Zu ihren Füßen verkauft der überdachte Qaysari-Basar Honig, Nüsse, Käse, Gewürze und kurdische Stoffe, und die Teehäuser am Hauptplatz sind der Ort, um die Stadt vorbeiziehen zu sehen.",
+        "An der Straße von Mossul klammert sich das Kloster Mar Mattai an die Flanke des Berges Alfaf. Im vierten Jahrhundert gegründet, ist es eines der ältesten christlichen Klöster, die noch in Gebrauch sind. Jenseits von Erbil weicht die Ebene dem Zagros: Schluchten, Wasserfälle und Bergstraßen, die jeden überraschen, der den Irak für flach hält."
+      ],
+      "miss": [
+        {"t": "Zitadelle von Erbil", "d": "UNESCO-Welterbe, 2014"},
+        {"t": "Qaysari-Basar", "d": "Am Fuß der Zitadelle"},
+        {"t": "Kloster Mar Mattai", "d": "Am Berg Alfaf"},
+        {"t": "Die neuntägige Reise", "d": "Endet in Erbil; siehe Seite 36"}
+      ],
+      "promo": "Reisen Sie mit Fable Tour von Basra nach Erbil — iraq.fabletour.com"
+    },
+    "32": {
+      "kicker": "Küche · Gastfreundschaft",
+      "title": "Die Aromen des Irak",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Ein irakischer Tisch wird für mehr Menschen gedeckt, als erwartet werden, denn Gäste setzt man voraus. Das Nationalgericht ist Masgouf: Flusskarpfen, aufgeschnitten, gesalzen, an Pfählen neben einem Holzfeuer aufgestellt und langsam gegart, bis die Haut knuspert. Man isst ihn mit Fladenbrot, eingelegtem Mango und roher Zwiebel.",
+        "Festtage bringen Quzi, ein ganzes Lamm, über Reis mit Mandeln und Rosinen gebraten, und Dolma, Gemüse, gefüllt mit gewürztem Reis und in einer süßsauren Sauce geschmort. Das Frühstück in Bagdad ist Kahi, ein blättriges Gebäck mit Büffelsahne und Sirup.",
+        "Auf jede Mahlzeit folgt Tee. Er wird stark aufgebrüht, mit Kardamom aromatisiert und in einem kleinen Glas serviert, das Istikan heißt. In Basra bitten Sie um den Tee aus getrockneten Limetten. Die Datteln des Irak bedürfen keiner Vorstellung, und es gibt Hunderte von Sorten."
+      ],
+      "caps": ["Oben. Saif mit dem Autor William Frej und seiner Gruppe beim Abendessen in Mossul."],
+      "sideTitle": "Auf dem Tisch",
+      "side": [
+        {"t": "Masgouf", "d": "Am Feuer gegrillter Flusskarpfen"},
+        {"t": "Quzi", "d": "Lamm auf gewürztem Reis"},
+        {"t": "Dolma", "d": "Gefülltes Gemüse"},
+        {"t": "Kahi und Geymar", "d": "Das Bagdader Frühstück"}
+      ]
+    },
+    "33": {
+      "run": "Fable Tour",
+      "kicker": "Das Erlebnis Fable Tour",
+      "title": "Mehr als eine Reise. Eine Geschichte, an die man sich erinnert.",
+      "paras": [
+        "Fable Tour ist ein irakisches Unternehmen mit Sitz in Bagdad. Wir entwerfen private Reisen und Kleingruppenreisen durch das ganze Land, von Basra bis Erbil, und wir führen sie selbst durch.",
+        "Jede Reise beginnt auf dieselbe Weise: Ihr Reiseleiter wartet in der Ankunftshalle. Von diesem Augenblick an bleiben ein privates klimatisiertes Fahrzeug, ein professioneller Reiseleiter und ein Fahrer bei Ihnen bis zu Ihrer Abreise. Wir führen auf Englisch, Russisch und Arabisch.",
+        "Wir wählen in jeder Stadt Vier- und Fünf-Sterne-Hotels, schließen das tägliche Frühstück und die Eintrittsgelder ein und besorgen die Genehmigungen, die Stätten wie Hatra und Nimrud verlangen. Sie wählen das Datum; den Rest übernehmen wir.",
+        "Unser Gründer Saif Al-Tamimi kommt in dem Buch des Fotografen William Frej vor, Unvergessen: Antike Städte aus einer fernen Vergangenheit; er hat Frejs Gruppe durch den Nordirak geführt."
+      ],
+      "caps": [
+        "Ankunft. Ihr Reiseleiter empfängt Sie im Internationalen Flughafen Bagdad.",
+        "Unterwegs. Gäste an der Qishla, Bagdad."
+      ],
+      "sideTitle": "Was enthalten ist",
+      "side": [
+        {"t": "Privat oder Gruppe", "d": "An dem Datum, das Sie wählen"},
+        {"t": "Drei Sprachen", "d": "Englisch, Russisch, Arabisch"},
+        {"t": "Ausgewählte Hotels", "d": "Vier und fünf Sterne, mit Frühstück"},
+        {"t": "Alles besorgt", "d": "Transport, Eintrittsgelder, Genehmigungen"}
+      ],
+      "promo": "Finden Sie uns auf GetYourGuide und Tripadvisor als „Fable Tour in Iraq“ und auf Instagram unter @fable_tour. Planen Sie Ihre private Irakreise — iraq.fabletour.com"
+    },
+    "34": {
+      "kicker": "Reisen · Fable Tour",
+      "tour": "Reise zum Kulturerbe des Irak · 7 Tage / 6 Nächte",
+      "title": "Mesopotamien in sieben Tagen entdecken",
+      "deck": "Von Babylon zu den Marschen, nach Samarra und Hatra, mit Beginn und Ende am Internationalen Flughafen Bagdad.",
+      "days": [
+        {"n": "01", "title": "Babylon und Kerbela", "route": "Bagdad – Babylon – Kerbela", "text": "Empfang am Flughafen, dann die Prozessionsstraße, das Ischtar-Tor und der Löwe von Babylon. Weiter zur Zikkurat von Borsippa und am Abend zu den Schreinen von Kerbela.", "stay": "Kerbela · Al-Baron Hotel"},
+        {"n": "02", "title": "Kufa und Nadschaf", "route": "Kufa – Nadschaf", "text": "Die Große Moschee von Kufa, die Gassen des Friedhofs Wadi al-Salam und die goldene Kuppel des Imam-Ali-Schreins.", "stay": "Nadschaf · Granada, Do Najaf oder Naseem Al-Najaf"},
+        {"n": "03", "title": "Uruk und Basra bei Sonnenuntergang", "route": "Uruk – Basra", "text": "Uruk, die Stadt Gilgameschs und der frühen Schrift, dann südwärts zum Schatt al-Arab und zu den Shanasheel-Häusern des alten Basra.", "stay": "Basra · Mövenpick Zinat Al-Hayat oder Corniche Hotel"},
+        {"n": "04", "title": "Adamsbaum, die Marschen und Ur", "route": "Qurna – Marschen – Ur – Bagdad", "text": "Wo sich die beiden Flüsse in Qurna treffen, eine Bootsfahrt durch die Schilfmarschen und die Treppe der Zikkurat von Ur.", "stay": "Bagdad · Do Baghdad, Alabasly Suites oder Bilitum"},
+        {"n": "05", "title": "Samarra und die Straße nach Norden", "route": "Samarra – Mossul", "text": "Das spiralförmige Minarett Malwiya und der al-Askari-Schrein, dann weiter nach Mossul.", "stay": "Mossul · Ramada Hotel"},
+        {"n": "06", "title": "Mossul, Nimrud und Hatra", "route": "Mossul – Nimrud – Hatra – Bagdad", "text": "Das alte Mossul und die Moschee al-Nuri, das assyrische Nimrud und die Tempel von Hatra in der Wüste.", "stay": "Bagdad · Do Baghdad, Alabasly Suites oder Bilitum"},
+        {"n": "07", "title": "Bagdad, das große Finale", "route": "Bagdad – Flughafen", "text": "Der Schrein al-Kadhimiya, die al-Mutanabbi-Straße und die Qishla, die kassitische Zikkurat von Aqar Quf, dann Ihr Flug.", "stay": ""}
+      ]
+    },
+    "35": {
+      "included": [
+        "Privater klimatisierter Transport auf der ganzen Strecke",
+        "Professioneller Reiseleiter auf Englisch, Russisch oder Arabisch",
+        "6 Nächte in Vier- und Fünf-Sterne-Hotels, Doppel- oder Zweibettzimmer",
+        "Tägliches Frühstück",
+        "Eintrittsgelder für alle Stätten des Reiseverlaufs",
+        "Empfang am Flughafen und Abschiedstransfer in Bagdad"
+      ],
+      "excluded": "Internationale Flüge · irakisches Visum · Mittag- und Abendessen · Reiseversicherung · persönliche Ausgaben und Trinkgelder",
+      "good": "Abreisen privat oder in kleiner Gruppe. Hatra und Nimrud erfordern Sicherheitsgenehmigungen, die wir einholen; wird eine Genehmigung verweigert, bieten wir eine andere Stätte an. Die Reihenfolge der Besuche kann vor Ort wegen der Zeitplanung und der Öffnungszeiten angepasst werden.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "36": {
+      "kicker": "Reisen · Fable Tour",
+      "tour": "Ganz Irak, Basra bis Erbil · 9 Tage / 8 Nächte",
+      "title": "Die große Irakreise, neun Tage",
+      "deck": "Das ganze Land in einer Linie, von Süden nach Norden. Ankunft in Basra, Abreise von Erbil.",
+      "days": [
+        {"n": "01", "title": "Basra, Tor zum Süden", "route": "Basra", "text": "Die armenische Kirche der Heiligen Jungfrau Maria, das Basra-Museum und Sonnenuntergang auf dem Schatt al-Arab.", "stay": "Basra · Mövenpick Zinat Al-Hayat"},
+        {"n": "02", "title": "Die Marschen und die Zikkurat von Ur", "route": "Marschen – Ur – Nadschaf", "text": "Schilfinseln, Wasserbüffel und Mudhif-Gästehäuser, dann die Große Zikkurat und die Königsgräber.", "stay": "Nadschaf · Do Najaf Hotel"},
+        {"n": "03", "title": "Nadschaf, Kufa und Kerbela", "route": "Nadschaf – Kufa – Kerbela", "text": "Der Imam-Ali-Schrein, Wadi al-Salam, die Große Moschee von Kufa und die Schreine von Kerbela.", "stay": "Kerbela · The Baron Hotel"},
+        {"n": "04", "title": "Babylon und Borsippa", "route": "Babylon – Borsippa – Bagdad", "text": "Die Prozessionsstraße, das Ischtar-Tor und die Paläste Nebukadnezars, dann die Zikkurat des Nabu.", "stay": "Bagdad · Alabasly Suites"},
+        {"n": "05", "title": "Bagdad, Stadt des Friedens", "route": "Bagdad – Aqar Quf", "text": "Die al-Mutanabbi-Straße und die Qishla, das Märtyrerdenkmal, der Schrein al-Kadhimiya und Aqar Quf.", "stay": "Bagdad · Alabasly Suites"},
+        {"n": "06", "title": "Samarra und Hatra", "route": "Samarra – Hatra – Mossul", "text": "Die Malwiya, der al-Askari-Schrein und die Wüstenstadt Hatra.", "stay": "Mossul · Ramada Plaza by Wyndham Mosul Corniche"},
+        {"n": "07", "title": "Mossul, Nimrud und Mar Mattai", "route": "Mossul – Nimrud – Mar Mattai – Erbil", "text": "Das alte Mossul und die Moschee al-Nuri, das assyrische Nimrud und das Bergkloster.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "08", "title": "Erbil und seine alte Zitadelle", "route": "Erbil", "text": "Die Zitadelle und der Qaysari-Basar.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "09", "title": "Abreise", "route": "Erbil – Flughafen", "text": "Transfer zum Internationalen Flughafen Erbil.", "stay": ""}
+      ]
+    },
+    "37": {
+      "included": [
+        "8 Nächte in Vier- und Fünf-Sterne-Hotels, Doppel- oder Zweibettzimmer",
+        "Tägliches Frühstück",
+        "Privater klimatisierter Transport für die ganze Strecke",
+        "Professioneller Reiseleiter auf Englisch, Russisch oder Arabisch",
+        "Eintrittsgelder für alle Stätten, einschließlich der Genehmigungen für Hatra und Nimrud",
+        "Empfang am Flughafen in Basra und Absetzen am Flughafen Erbil"
+      ],
+      "excluded": "Internationale Flüge · irakisches E-Visum (auch für die Region Kurdistan gültig) · Krankenversicherung · Mittag- und Abendessen · Bootsfahrt in den Marschen (auf Wunsch) · persönliche Ausgaben und Trinkgelder",
+      "good": "Abreisen privat oder in kleiner Gruppe. Hatra und Nimrud erfordern Sicherheitsgenehmigungen, die wir einholen; wird eine Genehmigung verweigert, bieten wir eine andere Stätte an. Die Reihenfolge der Besuche kann vor Ort wegen der Zeitplanung und der Öffnungszeiten angepasst werden.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "38": {
+      "kicker": "Reiseführer",
+      "title": "Wesentlicher Reiseführer für den Irak",
+      "groups": [
+        {"h": "Vor der Reise", "items": [
+          {"t": "Visum.", "d": "Der Irak stellt vielen Staatsangehörigkeiten elektronische Visa über sein offizielles E-Visum-Portal aus. Ist Ihres nicht zulässig, kann Fable Tour das Visum für Sie im Rahmen einer vollständigen Reisebuchung einholen. Die Regeln ändern sich: bestätigen Sie sie bei uns oder bei einer irakischen Botschaft, bevor Sie Flüge buchen."},
+          {"t": "Reisepass.", "d": "Führen Sie einen Reisepass mit, der mindestens sechs Monate über Ihr Ankunftsdatum hinaus gültig ist, und bewahren Sie eine Papierkopie der Lichtbildseite auf."},
+          {"t": "Wann reisen.", "d": "Oktober bis April ist die Saison, mit milden Tagen und kühlen Nächten. Von Juni bis September überschreiten die Tagestemperaturen in der Mitte und im Süden regelmäßig 45°C."}
+        ]},
+        {"h": "Geld, Kleidung und Bräuche", "items": [
+          {"t": "Geld.", "d": "Die Währung ist der irakische Dinar. Der Irak ist weitgehend eine Bargeldwirtschaft. Bringen Sie US-Dollar in sauberen Scheinen neuerer Ausgabe mit und wechseln Sie sie vor Ort; Karten funktionieren in den größeren Hotels."},
+          {"t": "Kleidung.", "d": "Kleiden Sie sich überall zurückhaltend: Schultern und Knie bedeckt, für Männer und Frauen. Frauen sollten ein Kopftuch dabeihaben, und innerhalb der Schreine ist eine Abaya erforderlich."},
+          {"t": "Bräuche.", "d": "Freitag ist der Ruhetag. Grüßen Sie mit der rechten Hand, nehmen Sie Tee an, wenn er angeboten wird, und fragen Sie, bevor Sie Menschen fotografieren. Fotografieren Sie keine Kontrollpunkte und kein Sicherheitspersonal."}
+        ]},
+        {"h": "Sprache und Praktisches", "items": [
+          {"t": "Sprache.", "d": "Arabisch und Kurdisch sind die Amtssprachen. In den Hotels versteht man Englisch; überall sonst übersetzt Ihr Reiseleiter."},
+          {"t": "Gesundheit und Versicherung.", "d": "Bringen Sie regelmäßig benötigte Medikamente mit und trinken Sie Wasser aus Flaschen. Eine Reiseversicherung, die den Irak abdeckt, wird nachdrücklich empfohlen und ist in unseren Programmen nicht enthalten."},
+          {"t": "Praktisches.", "d": "Zeitzone UTC+3. Strom 230 V; die Steckdosen unterscheiden sich, bringen Sie also einen Universaladapter mit. Lokale SIM-Karten werden an den Flughäfen verkauft."}
+        ]}
+      ],
+      "noteTitle": "Angaben, die sich ändern können.",
+      "note": "Visabestimmungen, Einreisevorschriften, Öffnungszeiten und der Zugang zu Stätten werden von den irakischen Behörden festgelegt und können kurzfristig wechseln. Prüfen Sie vor der Reise den Reisehinweis Ihrer eigenen Regierung und das irakische Außenministerium, und fragen Sie uns bei der Buchung nach dem aktuellen Stand."
+    },
+    "39": {
+      "run": "Buchung",
+      "kicker": "Planen Sie Ihre Reise",
+      "title": "Ihr Irak-Abenteuer beginnt hier",
+      "intro": "Wählen Sie ein Programm, öffnen Sie seine Seite und bestimmen Sie Ihr Datum. Jede Reise kann privat für Ihre Gesellschaft oder als kleine Gruppe stattfinden, und jede lässt sich anpassen.",
+      "cards": [
+        {"days": "6 Tage", "title": "Bagdad, Babylon und Samarra", "text": "Sechs Tage mit einem Hotel in Bagdad als Basis: das Irak-Museum und das alte Bagdad, Aqar Quf und Taq Kasra, Samarra, Babylon und Borsippa.", "scan": "Reiseverlauf und Termine"},
+        {"days": "7 Tage", "title": "Reise zum Kulturerbe des Irak", "text": "Sieben Tage ab Bagdad: Babylon, Kerbela, Nadschaf, Uruk, Basra, die Marschen, Ur, Samarra, Mossul und Hatra.", "scan": "Reiseverlauf und Termine"},
+        {"days": "9 Tage", "title": "Ganz Irak, Basra bis Erbil", "text": "Neun Tage von Süden nach Norden, dazu Nimrud, das Kloster Mar Mattai und die Zitadelle von Erbil.", "scan": "Reiseverlauf und Termine"}
+      ],
+      "howTitle": "So buchen Sie",
+      "how": "Senden Sie uns Ihre Daten und die Zahl der Reisenden per WhatsApp, E-Mail oder über das Formular auf unserer Website. Wir antworten mit der Verfügbarkeit und einer schriftlichen Bestätigung. Tagesausflüge von Bagdad und Flughafentransfers lassen sich auf demselben Weg buchen.",
+      "contactTitle": "Kontakt",
+      "lines": [
+        "iraq.fabletour.com",
+        "support@fabletour.com",
+        "WhatsApp +964 771 174 5353",
+        "Kundendienst rund um die Uhr +1 (212) 433-8608",
+        "Internationaler Flughafen Bagdad, Al-Karkh, Bagdad, Irak",
+        "Instagram @fable_tour"
+      ],
+      "promo": "Planen Sie Ihre private Irakreise — iraq.fabletour.com"
+    },
+    "40": {
+      "title": "Ihre Reise durch Mesopotamien beginnt hier.",
+      "text": "Erkunden Sie mit Fable Tour die außergewöhnliche Geschichte, die lebendigen Traditionen und die unvergesslichen Reiseziele des Irak. Von den alten Wundern Babylons zu den lebendigen Straßen Bagdads und den zeitlosen Landschaften des südlichen Mesopotamien entdecken Sie den Irak durch authentische, fachkundig geführte Reiseerlebnisse.",
+      "url": "iraq.fabletour.com",
+      "email": "support@fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353",
+      "service": "Kundendienst rund um die Uhr +1 (212) 433-8608",
+      "address": "Internationaler Flughafen Bagdad, Al-Karkh, Bagdad, Irak",
+      "scan": "Planen Sie Ihre Reise",
+      "credit": "Fotografie: Sonnenuntergang auf dem Schatt al-Arab, Basra"
+    }
+  }
+}
