@@ -18,7 +18,8 @@ ALL = {"ar": "كل رحلات العراق", "en": "All Iraq tours", "ru": "Вс
        "fa": "همه تورهای عراق", "ms": "Semua lawatan Iraq", "id": "Semua tur Irak", "th": "ทัวร์อิรักทั้งหมด",
        "ta": "அனைத்து ஈராக் சுற்றுலாக்கள்", "hi": "इराक के सभी टूर", "ur": "عراق کے تمام ٹورز", "fi": "Kaikki Irakin matkat",
        "sv": "Alla Irakresor", "da": "Alle Irak-ture", "no": "Alle Irak-turer", "sk": "Všetky zájazdy do Iraku",
-       "hr": "Sva putovanja po Iraku", "ro": "Toate tururile în Irak", "nl": "Alle Irak-reizen", "ka": "ერაყის ყველა ტური", "ko": "이라크 투어 전체 보기", "pt": "Todas as viagens ao Iraque"}
+       "hr": "Sva putovanja po Iraku", "ro": "Toate tururile în Irak", "nl": "Alle Irak-reizen", "ka": "ერაყის ყველა ტური", "ko": "이라크 투어 전체 보기", "pt": "Todas as viagens ao Iraque",
+       "ckb": "هەموو گەشتەکانی عێراق", "vi": "Tất cả tour Iraq", "hu": "Az összes iraki túra"}
 
 CSS = ("body.ap-solo .hero,body.ap-solo .hero-band,body.ap-solo main>*:not(#airport-transfer){display:none!important}"
        "body.ap-solo #airport-transfer{padding-top:26px!important;max-width:820px;margin-inline:auto}"
@@ -33,7 +34,9 @@ def homes():
     out = [ROOT / "index.html"]
     for p in sorted(glob.glob(str(ROOT / "*/index.html"))):
         p = pathlib.Path(p)
-        if p.parent.name in ("blog", "_blog", "day-trips", SLUG) or p.parent.name.startswith("iraq-tours-from"):
+        # language homepages only (ar at the root, others in /<lang>/); keyword landing pages
+        # also carry the airport section but must never overwrite /airport-transfer/
+        if not re.fullmatch(r"[a-z]{2,3}(-tw)?", p.parent.name) or p.parent.name in ("ar",):
             continue
         if 'id="airport-transfer"' in p.read_text(encoding="utf-8"):
             out.append(p)
@@ -123,6 +126,8 @@ def build(src):
     s = s.replace('.dt-cp.ok{', CSS + ".dt-cp.ok{", 1)
     s = s.replace('href="#interest"', 'href="#airport-transfer"').replace('href="#itinerary"', f'href="{home}#itinerary"')
     s = s.replace('href="#day-trips"', f'href="{home}#day-trips"')
+    # the homepage script renames the tab; keep this page's own title
+    s = s.replace("document.title=t.title;", "if(!/ap-solo/.test(document.body&&document.body.className))document.title=t.title;")
 
     dst = ROOT / home.strip("/") / SLUG / "index.html" if home != "/" else ROOT / SLUG / "index.html"
     dst.parent.mkdir(parents=True, exist_ok=True)

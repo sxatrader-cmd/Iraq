@@ -576,6 +576,10 @@
     if (u.pathname === here && u.hash) {
       e.preventDefault(); openSection(u.hash.slice(1));
       if (window.innerWidth <= 560) close();
+    } else if (u.pathname === here && document.body.classList.contains("ap-solo")) {
+      /* already on the airport page: show the booking form instead of reloading */
+      e.preventDefault(); openSection("airport-transfer");
+      if (window.innerWidth <= 560) close();
     }
   }
   function openSection(id) {
