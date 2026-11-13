@@ -12,7 +12,7 @@ html[lang="ar"] body,html[lang="fa"] body,html[lang="ckb"] body{font-family:"Not
 #book.ready{visibility:visible}
 .pg{background:var(--ivory);color:var(--ink);overflow:hidden!important;line-height:1.45}
 html[dir="rtl"] .pg{line-height:1.75}
-.sheet{position:absolute;inset:0;width:auto;height:auto;overflow:auto;font-size:1.72cqw;padding:3.2% 4.4% 2.8%;display:flex;flex-direction:column;gap:.35em;container-type:inline-size}
+.sheet{position:absolute;inset:0;width:auto;height:auto;overflow:auto;font-size:1.72cqw;padding:3.2% 4.4% 2.8%;display:flex;flex-direction:column;gap:.35em}
 .pg{container-type:size}
 .kicker{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:.72em;font-weight:700;margin:0}
 html[dir="rtl"] .kicker{letter-spacing:.04em;text-transform:none;font-size:.85em}
@@ -30,8 +30,8 @@ h2{font-size:1.55em}
 html[dir="rtl"] .drop::first-letter{float:right;padding:.08em 0 0 .08em}
 .cols{column-count:2;column-gap:1.1em}
 .cols3{column-count:3;column-gap:.9em}
-.crop{position:relative;overflow:hidden;width:100%;max-height:44%;background:#d9d1c3;flex:none}
-.crop-fill{max-height:none;flex:1 1 auto;min-height:0;aspect-ratio:auto!important;height:auto}
+/* Width is the same fraction of the page as in the printed issue; height follows that crop's aspect ratio, so the photograph is never stretched. */
+.crop{position:relative;overflow:hidden;flex:0 0 auto;align-self:flex-start;justify-self:start;width:min(100%,calc(var(--fx,1) * 100cqi));aspect-ratio:var(--ar,1);height:auto;max-height:none;background:#d9d1c3;direction:ltr}
 .crop img{position:absolute;max-width:none;display:block}
 .cap{margin:.25em 0 0;font-size:.78em;color:#3d4a63}
 .cap b{color:var(--navy);letter-spacing:.06em;text-transform:uppercase;font-size:.86em}
@@ -54,7 +54,7 @@ html[dir="rtl"] .aside h3{letter-spacing:0;text-transform:none}
 .cover{padding:0;background:#F3EEE4;color:var(--navy);display:flex;flex-direction:column;height:100%;overflow:hidden}
 .cover-top{padding:3.2% 6% 1.2%;text-align:center}
 .cover-top .brand{font-size:2.05em;letter-spacing:.04em;margin:.06em 0;line-height:.95}
-.cover .crop{flex:1 1 auto}
+.cover .crop{width:100%;align-self:stretch}
 .cover-top .sub{letter-spacing:.18em;font-size:.72em;text-transform:uppercase;margin:.4em 0 0}
 html[dir="rtl"] .cover-top .sub{letter-spacing:.04em;text-transform:none;font-size:.9em}
 .cover-foot{background:var(--navy);color:#fff;padding:2% 4% 1.8%;margin-top:0}
