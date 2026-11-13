@@ -72,11 +72,13 @@ function crop(n,i,alt){
   var x0=box[0],y0=box[1],x1=box[2],y1=box[3];
   var aw=((x1-x0)/(y1-y0))*(1075/1521);
   var d=el("div","crop");
-  d.style.aspectRatio=String(aw);
+  d.style.setProperty("--fx",String(x1-x0));
+  d.style.setProperty("--ar",String(aw));
   var img=document.createElement("img");
   img.src="/magazine/p/"+(n<10?"0":"")+n+".jpg";
   img.alt=alt||M.brand||"";
   img.decoding="async";
+  /* Map the printed crop onto the box. The box aspect matches the crop, so this does not stretch. */
   img.style.width=(100/(x1-x0))+"%";
   img.style.height=(100/(y1-y0))+"%";
   img.style.left=(-x0/(x1-x0)*100)+"%";
@@ -133,7 +135,7 @@ function pageCover(t){
   top.appendChild(rule);
   top.appendChild(el("p","sub",esc(t.sub)));
   s.appendChild(top);
-  var ph=crop(1,0,t.credit); if(ph){ph.classList.add("crop-fill"); s.appendChild(ph)}
+  var ph=crop(1,0,t.credit); if(ph) s.appendChild(ph);
   var foot=el("div","cover-foot");
   foot.appendChild(el("h1","",esc(t.headline)));
   foot.appendChild(el("p","deck",esc(t.deck)));
@@ -148,7 +150,7 @@ function pageCover(t){
 }
 function pageWelcome(t){
   var s=el("article","sheet"); s.style.padding="0"; s.style.gap="0";
-  var ph=crop(2,0,t.cap); if(ph){ph.classList.add("crop-fill"); s.appendChild(ph)}
+  var ph=crop(2,0,t.cap); if(ph) s.appendChild(ph);
   var band=el("div","navy"); band.style.padding="4.5% 5.5% 4%"; band.style.flex="1"; band.style.display="flex"; band.style.flexDirection="column";
   band.appendChild(el("p","kicker",esc(t.issue)));
   band.appendChild(el("h1","",esc(t.title)));
@@ -212,7 +214,7 @@ function pageMap(t){
   s.appendChild(el("p","kicker",esc(t.kicker)));
   s.appendChild(el("h1","",esc(t.title)));
   s.appendChild(el("hr","rule"));
-  var ph=crop(5,0,t.title); if(ph){ph.style.maxHeight="46%"; s.appendChild(ph)}
+  var ph=crop(5,0,t.title); if(ph) s.appendChild(ph);
   var g=el("div","pills");
   (t.places||[]).forEach(function(it){
     var d=el("div"); d.innerHTML="<b>"+esc(it.t)+"</b>"+esc(it.d); g.appendChild(d);
@@ -247,7 +249,7 @@ function pageOpener(n,t){
 }
 function pageBleed(n,t){
   var s=el("article","sheet"); s.style.padding="0"; s.style.position="relative";
-  var ph=crop(n,0,t.title); if(ph){ph.classList.add("crop-fill"); s.appendChild(ph)}
+  var ph=crop(n,0,t.title); if(ph) s.appendChild(ph);
   var over=el("div"); over.style.position="absolute"; over.style.insetInlineStart="6%"; over.style.top="5%"; over.style.maxWidth="70%"; over.style.color="#fff"; over.style.textShadow="0 1px 8px rgba(0,0,0,.45)";
   over.appendChild(el("p","kicker",esc(t.kicker)));
   var h=el("h1"); h.style.color="#fff"; h.textContent=t.title; over.appendChild(h);
@@ -265,9 +267,11 @@ function photoGrid(n,t,from,to){
   var boxes=BOX[n]||[];
   var count=Math.max(0,(to==null?boxes.length:to)-from);
   if(!count) return null;
-  var g=el("div");
-  g.style.display="grid";
-  g.style.gridTemplateColumns="repeat("+Math.min(count,3)+",1fr)";
+  var g=el("div","phrow");
+  g.style.display="flex";
+  g.style.flexWrap="wrap";
+  g.style.alignItems="flex-start";
+  g.style.justifyContent="space-between";
   g.style.gap=".45em";
   for(var i=from;i<(to==null?boxes.length:to);i++){
     var cell=el("div");
