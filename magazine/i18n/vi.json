@@ -1,0 +1,657 @@
+{
+  "lang": "vi",
+  "dir": "ltr",
+  "metaTitle": "MESOPOTAMIA — Tạp chí du lịch Iraq | Fable Tour",
+  "metaDesc": "MESOPOTAMIA, tạp chí du lịch Iraq của Fable Tour. Lật trang: Baghdad, Babylon, Ur và Uruk, vùng đầm lầy, Samarra, Hatra, Mosul và Erbil, cùng các hành trình 7 ngày và 9 ngày của chúng tôi.",
+  "brand": "MESOPOTAMIA",
+  "ui": {
+    "hint": "Kéo góc trang hoặc chạm mũi tên để lật trang",
+    "first": "Trang đầu",
+    "prev": "Trang trước",
+    "next": "Trang sau",
+    "sound": "Bật hoặc tắt âm thanh",
+    "full": "Toàn màn hình",
+    "lang": "Ngôn ngữ"
+  },
+  "home": {
+    "nav": "Tạp chí",
+    "eyebrow": "Tạp chí của chúng tôi",
+    "title": "Lưỡng Hà: tạp chí du lịch Iraq",
+    "lead": "Kéo góc trang hoặc dùng mũi tên để lật trang.",
+    "open": "Mở toàn màn hình"
+  },
+  "label": {
+    "above": "PHÍA TRÊN",
+    "feature": "TRONG BÀI NÀY",
+    "miss": "ĐỪNG BỎ LỠ",
+    "day": "NGÀY",
+    "overnight": "Nghỉ đêm",
+    "included": "BAO GỒM",
+    "excluded": "KHÔNG BAO GỒM",
+    "good": "NÊN BIẾT",
+    "scan": "Xem ngày và đặt chỗ"
+  },
+  "pages": {
+    "1": {
+      "kicker": "Fable Tour  |  Tạp chí du lịch Iraq  |  Số 01",
+      "sub": "Khám phá Iraq cùng Fable Tour",
+      "headline": "Iraq: nơi văn minh bắt đầu",
+      "deck": "Khám phá những kỳ quan vượt thời gian của Lưỡng Hà cổ",
+      "cols": [
+        {"t": "Babylon", "d": "Bước qua di sản của các vua"},
+        {"t": "Baghdad", "d": "Khám phá Thành phố Hòa bình"},
+        {"t": "Vùng đầm lầy", "d": "Đời sống giữa hai dòng sông"},
+        {"t": "Ur và Uruk", "d": "Bình minh của văn minh"}
+      ],
+      "credit": "Bìa: công trình dựng lại hiện đại của Cổng Ishtar tại lối vào Babylon cổ, Iraq"
+    },
+    "2": {
+      "issue": "Số 01",
+      "title": "Chào mừng đến Lưỡng Hà",
+      "text": "Giữa sông Tigris và sông Euphrates, con người lần đầu dựng thành phố, chép luật của mình và nâng đền thờ về phía trời. Vùng đất ấy vẫn còn đây, và các công trình của nó cũng vậy. Tạp chí này là lời mời đến xem chúng.",
+      "cap": "Du khách trên ziggurat Kassite 3.400 năm tuổi ở Aqar Quf, phía tây Baghdad."
+    },
+    "3": {
+      "run": "Chào mừng",
+      "kicker": "Từ người sáng lập",
+      "title": "Lời mời riêng để khám phá Iraq",
+      "paras": [
+        "Tôi sinh ra ở Iraq năm 1991 và lớn lên giữa những cái tên cả thế giới đều biết: Babylon, Ur, Baghdad. Nhiều năm tôi học và đi xa. Tôi học làm nha sĩ ở Ukraina và đến mười ba nước với tư cách khách du lịch, và đi đến đâu người ta cũng hỏi tôi cùng một câu: Iraq thực sự như thế nào?",
+        "Fable Tour là câu trả lời của tôi. Tôi trở thành hướng dẫn viên vì muốn khách đứng đúng nơi lịch sử đã xảy ra, và gặp những người hôm nay vẫn sống bên cạnh nó. Một ziggurat hơn một bức ảnh khi có người kể ai đã xây và vì sao. Một ly trà trong quán cà phê cũ ở Baghdad hơn một thức uống khi bạn biết ai đã ngồi đó trước bạn.",
+        "Hành trình của chúng tôi là riêng hoặc theo nhóm nhỏ, theo nhịp bạn chọn. Chúng tôi đi cùng hướng dẫn viên có giấy phép bằng tiếng Anh, tiếng Nga và tiếng Ả Rập, ở những khách sạn được chọn kỹ, và lo giấy phép, phương tiện cùng thời gian, để bạn chỉ việc nhìn, nghe và hỏi.",
+        "Chúng tôi cũng tin vào việc du lịch có trách nhiệm. Điều đó có nghĩa là tôn trọng nơi thánh và phong tục địa phương, hỗ trợ nhà hàng gia đình và người chèo thuyền ở vùng đầm lầy, và để mọi di tích như khi chúng tôi đến.",
+        "Ở những trang sau bạn sẽ thấy những nơi tôi yêu nhất. Tôi hy vọng chúng thuyết phục bạn đến, và tôi mong được đích thân đón bạn ở sân bay."
+      ],
+      "sign": "Saif Al-Tamimi",
+      "role": "Nhà sáng lập và hướng dẫn viên, Fable Tour",
+      "cap": "Saif Al-Tamimi, nhà sáng lập và hướng dẫn viên, Fable Tour."
+    },
+    "4": {
+      "run": "Mục lục",
+      "kicker": "Trong số này",
+      "title": "Mục lục",
+      "items": [
+        {"n": "06", "t": "Baghdad", "d": "Thành phố Hòa bình"},
+        {"n": "09", "t": "Al-Kadhimiya", "d": "Đền thờ của hai imam"},
+        {"n": "10", "t": "Babylon", "d": "Bước qua đế quốc của các vua"},
+        {"n": "12", "t": "Borsippa", "d": "Di sản của Nabu"},
+        {"n": "13", "t": "Ctesiphon và Aqar Quf", "d": "Hai người khổng lồ bên rìa Baghdad"},
+        {"n": "14", "t": "Ur và Uruk", "d": "Bình minh của văn minh"},
+        {"n": "18", "t": "Vùng đầm lầy", "d": "Đời sống giữa các dòng sông"},
+        {"n": "21", "t": "Basra", "d": "Thành phố của sông và chà là"},
+        {"n": "22", "t": "Najaf, Karbala và Kufa", "d": "Những thành phố thiêng của Lưỡng Hà"},
+        {"n": "25", "t": "Samarra", "d": "Vẻ huy hoàng của nhà Abbasid"},
+        {"n": "28", "t": "Miền bắc Iraq", "d": "Đế quốc, thành phố và nền văn minh"},
+        {"n": "31", "t": "Erbil", "d": "Nơi lịch sử gặp núi"},
+        {"n": "32", "t": "Hương vị Iraq", "d": "Ẩm thực và lòng hiếu khách"},
+        {"n": "33", "t": "Trải nghiệm Fable Tour", "d": "Hơn một chuyến tham quan"},
+        {"n": "34", "t": "Bảy ngày", "d": "Khám phá Lưỡng Hà"},
+        {"n": "36", "t": "Chín ngày", "d": "Hành trình lớn khắp Iraq"},
+        {"n": "38", "t": "Trước khi đi", "d": "Cẩm nang thiết yếu"},
+        {"n": "39", "t": "Lên kế hoạch hành trình", "d": "Đặt chỗ và liên hệ"}
+      ],
+      "fig": "Trang 12. Ziggurat Borsippa, đội vương miện bằng gạch nóng chảy dính lại trong một đám cháy cổ.",
+      "pub": [
+        "MESOPOTAMIA. Số 01. Xuất bản bởi Fable Tour, Sân bay Quốc tế Baghdad, Al-Karkh, Baghdad, Iraq.",
+        "Mọi bức ảnh của Fable Tour, chụp trong chính những chuyến đi của chúng tôi.",
+        "iraq.fabletour.com"
+      ]
+    },
+    "5": {
+      "run": "Bản đồ",
+      "kicker": "Điểm đến",
+      "title": "Iraq trong một cái nhìn",
+      "places": [
+        {"t": "Mosul và Nineveh", "d": "Trang 30"},
+        {"t": "Erbil", "d": "Trang 31"},
+        {"t": "Nimrud", "d": "Trang 30"},
+        {"t": "Hatra", "d": "Trang 29 · UNESCO"},
+        {"t": "Ashur", "d": "Trang 30 · UNESCO"},
+        {"t": "Samarra", "d": "Trang 25 · UNESCO"},
+        {"t": "Baghdad", "d": "Trang 06"},
+        {"t": "Ctesiphon", "d": "Trang 13"},
+        {"t": "Karbala", "d": "Trang 24"},
+        {"t": "Babylon", "d": "Trang 10 · UNESCO"},
+        {"t": "Borsippa", "d": "Trang 12"},
+        {"t": "Najaf và Kufa", "d": "Trang 22"},
+        {"t": "Uruk", "d": "Trang 16"},
+        {"t": "Vùng đầm lầy", "d": "Trang 18 · UNESCO"},
+        {"t": "Ur", "d": "Trang 14"},
+        {"t": "Basra", "d": "Trang 21"}
+      ],
+      "note": "Màu vàng đánh dấu một di sản thế giới của UNESCO; màu xanh đậm đánh dấu một điểm đến khác trong số này. Biên giới được vẽ theo sơ đồ, dựa trên Natural Earth, và các dòng sông cũng là sơ đồ. Sáu di sản của Iraq nằm trong Danh sách Di sản Thế giới: Hatra (1985), Ashur (2003), Samarra (2007), Thành cổ Erbil (2014), Ahwar miền nam Iraq, bao gồm Ur và Uruk (2016), và Babylon (2019)."
+    },
+    "6": {
+      "kicker": "Điểm đến · Baghdad",
+      "title": "Baghdad: Thành phố Hòa bình",
+      "stand": "Được lập với tên Madinat al-Salam năm 762, kinh đô Abbasid từng là thành phố lớn nhất trái đất. Những người bán sách, quán trà và bờ sông của nó vẫn mang gia tài ấy.",
+      "cap": "Tượng nhà thơ thế kỷ mười al-Mutanabbi ở đầu phía sông của con phố mang tên ông, với đèn bờ bên kia sông Tigris phía sau.",
+      "feature": ["Phố Al-Mutanabbi", "Al-Mustansiriya", "Qishla", "Quán Shabandar", "Al-Kadhimiya"]
+    },
+    "7": {
+      "run": "Baghdad",
+      "drop": true,
+      "paras": [
+        "Mùa hè năm 762, khalip Abbasid al-Mansur chọn một chỗ trên bờ tây sông Tigris và ra lệnh xây một kinh đô theo sơ đồ chưa thành phố nào theo: một vòng tròn hoàn hảo, cung điện và thánh đường ở giữa, bốn cổng mở ra các con đường của đế quốc. Ông đặt tên Madinat al-Salam, Thành phố Hòa bình.",
+        "Không còn gì của Thành phố Tròn đứng trên mặt đất hôm nay, nhưng ý niệm về Baghdad mà nó tạo ra chưa từng rời đi. Trong một thế kỷ, đây là nơi học thuật Hy Lạp, Ba Tư và Ấn Độ được dịch sang tiếng Ả Rập, nơi giấy thay da thuộc, và nơi học giả cùng thi sĩ đến để lập tên tuổi.",
+        "Nhân chứng còn lại nhiều nhất của thời ấy là Al-Mustansiriya, học viện do khalip al-Mustansir lập và mở cửa năm 1233. Sân gạch dài của nó, được những vòm nhọn và các tấm hình học chạm khắc bao quanh, từng chứa cả bốn trường phái luật Sunni dưới một mái. Hãy đi qua đó thật sớm, trước khi nóng, và các tỷ lệ sẽ tự giải thích.",
+        "Cách vài phút, tòa nhà được gọi là Cung điện Abbasid cho thấy cùng một nghệ thuật gạch ở quy mô nhà ở: hành lang vòm, iwan sâu và trần cắt thành muqarnas tổ ong.",
+        "Rồi đến phố Al-Mutanabbi. Người Baghdad thích dẫn câu cũ rằng Cairo viết, Beirut in và Baghdad đọc, và sáng thứ Sáu con phố chứng minh điều đó, khi sách được trải trên vỉa hè từ đầu này đến đầu kia. Ở đầu xa, chính nhà thơ đứng bằng đồng, tay giơ về phía sông.",
+        "Bên ông là quán Shabandar, phục vụ trà từ năm 1917 dưới những bức tường ảnh cũ, và Qishla, doanh trại Ottoman có tháp đồng hồ giữ giờ trên sông Tigris từ thế kỷ mười chín."
+      ],
+      "caps": [
+        "Al-Mustansiriya. Hai tầng vòm nhọn và các tấm gạch chạm quanh sân học viện, mở cửa năm 1233.",
+        "Qishla. Một vị khách lấy khung tháp đồng hồ Ottoman từ hàng vòm.",
+        "Quán Shabandar. Biển đồng trên cửa quán trà nổi tiếng nhất thành phố."
+      ],
+      "miss": [
+        {"t": "Phố Al-Mutanabbi", "d": "Chợ sách thứ Sáu"},
+        {"t": "Al-Mustansiriya", "d": "Mở cửa năm 1233"},
+        {"t": "Qishla", "d": "Tháp đồng hồ trên sông Tigris"},
+        {"t": "Đền thờ Al-Kadhimiya", "d": "Xem trang 9"}
+      ],
+      "promo": "Khám phá Baghdad cùng hướng dẫn viên địa phương — iraq.fabletour.com"
+    },
+    "8": {
+      "kicker": "Một buổi tối ở Baghdad cũ",
+      "photoTop": true,
+      "paras": [
+        "Cách tốt nhất để hiểu Baghdad là đi bộ, và quãng đi ấy ngắn. Bắt đầu dưới hàng vòm phố Al-Rashid, mở năm 1916, nơi Haj Zbala rót nước giải khát nho khô từ năm 1900.",
+        "Từ đó phố Al-Mutanabbi chạy thẳng ra sông. Ban ngày đó là chợ sách của Iraq. Sau khi tối, đèn bật, ban công đầy người, và cả thành phố như dạo qua: gia đình, sinh viên, nhạc công, người bán gốm và cà phê.",
+        "Hãy thong thả với các sạp sách, rồi ngồi ở Shabandar uống trà trong chiếc ly nhỏ eo. Phía xa hơn, khu Saray được trùng tu và Qishla dẫn tới tượng nhà thơ và sông Tigris."
+      ],
+      "caps": [
+        "Phố Al-Mutanabbi. Chợ sách sau khi tối, dưới hàng vòm gạch và ban công.",
+        "Sạp sách. Saif dừng lại để đọc.",
+        "Nhạc đường phố. Một người thổi saxophone ở khu Saray.",
+        "Haj Zbala. Nước giải khát trên phố Al-Rashid từ năm 1900."
+      ],
+      "promo": "Khám phá Baghdad cùng hướng dẫn viên địa phương — iraq.fabletour.com"
+    },
+    "9": {
+      "run": "Baghdad",
+      "kicker": "Baghdad · Al-Kadhimiya",
+      "title": "Đền thờ của hai imam",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Phía bắc Baghdad, trên bờ tây sông Tigris, hai mái vòm vàng đứng cạnh nhau. Bên dưới là một ông và cháu: Musa al-Kadhim, Imam thứ bảy của Hồi giáo Shia mười hai imam, và Muhammad al-Jawad, Imam thứ chín. Khu phố lấy tên từ hai người. Al-Kadhimiya, hay Kadhimayn, nghĩa là nơi của hai Kadhim.",
+        "Musa ibn Ja'far sinh năm 745 gần Medina, con của học giả lớn Imam Ja'far al-Sadiq. Ông được biết đến vì sự kiên nhẫn và rộng lượng, và danh hiệu al-Kadhim nghĩa là người kìm cơn giận. Nhiều người cũng gọi ông Bab al-Hawa'ij, Cổng của những nhu cầu. Các khalip Abbasid xem những người theo ông là mối đe dọa. Harun al-Rashid cho bắt ông ở Medina và đưa về Iraq, nơi ông trải nhiều năm trong tù. Ông mất trong một nhà tù Baghdad năm 799. Truyền thống Shia cho rằng ông bị đầu độc. Ông được chôn ở nghĩa trang của bộ tộc Quraysh, do người sáng lập Baghdad bố trí bên ngoài Thành phố Tròn.",
+        "Cháu ông, Muhammad ibn Ali, sinh ở Medina năm 811, con của Imam Ali al-Rida, người được chôn ở Mashhad. Ông trở thành imam khoảng bảy tuổi, trẻ nhất trong mười hai vị, và được nhớ vì đã trả lời các luật gia hàng đầu của triều khalip al-Ma'mun khi vẫn còn là một cậu bé. Danh hiệu al-Jawad nghĩa là người rộng lượng. Được khalip al-Mu'tasim triệu về Baghdad, ông mất ở đó năm 835 lúc hai mươi lăm tuổi, theo truyền thống Shia là do thuốc độc, và được đặt bên ông mình.",
+        "Đền thờ lớn lên quanh hai ngôi mộ. Hình thức hiện nay phần lớn từ thế kỷ mười sáu, và các mái vòm sau này được bọc vàng. Mỗi năm, ngày giỗ Imam al-Kadhim vào 25 tháng Rajab đưa đám đông lớn đi bộ từ khắp thành phố. Khách mọi tín ngưỡng đều được chào đón trong sân; phụ nữ mặc abaya, có sẵn ở cổng."
+      ],
+      "caps": ["Al-Kadhimiya. Hai mái vòm vàng song sinh và bốn tháp của đền thờ, thắp sáng cho buổi tối."]
+    },
+    "10": {
+      "kicker": "Điểm đến · Tỉnh Babil",
+      "title": "Babylon: bước qua đế quốc của các vua",
+      "stand": "Trong hai nghìn năm, tên của nó có nghĩa là thành phố vĩ đại nhất mà ai cũng có thể hình dung. Chín mươi phút về phía nam Baghdad, tường thành vẫn mang dấu của vị vua đã xây chúng.",
+      "cap": "Bò và rồng trên công trình dựng lại hiện đại của Cổng Ishtar, xây ở tỷ lệ nhỏ hơn tại lối vào di tích.",
+      "feature": ["Cổng Ishtar", "Đường diễu hành", "Sư tử Babylon", "Bằng chứng và truyền thuyết"]
+    },
+    "11": {
+      "run": "Babylon",
+      "drop": true,
+      "paras": [
+        "Babylon đã cổ khi Hammurabi biến nó thành kinh đô của một đế quốc vào thế kỷ 18 TCN và cho khắc luật của mình lên đá. Nhưng thành phố khách đi qua hôm nay phần lớn là công trình của một người, Nebuchadnezzar II, trị vì từ năm 605 đến 562 TCN.",
+        "Ông xây lại nó ở quy mô nhằm làm người ta kinh ngạc. Tường kép bao đền thờ, cung điện và một ziggurat. Khoảng năm 575 TCN ông dựng Cổng Ishtar ở phía bắc, ốp gạch men xanh đậm và trang trí bằng những hàng bò và rồng, loài vật của các vị thần Adad và Marduk. Sư tử, biểu tượng của Ishtar, xếp dọc con đường dẫn tới cổng.",
+        "Nhiều viên gạch mang tên ông. Nhìn gần các bức tường của Cung điện phía Nam, bạn sẽ thấy dấu chữ hình nêm lặp đi lặp lại: Nebuchadnezzar, vua Babylon. Phía trên là những hàng nhạt hơn từ lần trùng tu thập niên 1980, nên hai thời kỳ có thể phân biệt trong một cái nhìn.",
+        "Babylon về tay người Ba Tư dưới Cyrus năm 539 TCN, và năm 323 TCN Alexander Đại đế mất tại đây. Năm 2019 di tích được ghi vào Danh sách Di sản Thế giới của UNESCO."
+      ],
+      "tableTitle": "Bằng chứng và truyền thuyết",
+      "tableHead": ["Chủ đề", "Khảo cổ học cho thấy gì"],
+      "rows": [
+        {"s": "Cổng Ishtar", "w": "Robert Koldewey khai quật từ năm 1899. Cổng trên có men được dựng lại ở Bảo tàng Pergamon tại Berlin. Ở Babylon bạn thấy các tầng gạch không men sớm hơn vẫn còn tại chỗ, và một bản sao hiện đại ở lối vào."},
+        {"s": "Đường diễu hành", "w": "Một phố lát chạy từ cổng về đền Marduk. Những đoạn nền lát gốc và tường gạch có thú đúc khuôn vẫn có thể đi được hôm nay."},
+        {"s": "Sư tử Babylon", "w": "Một sư tử bazan đứng trên một hình người ngã, tìm thấy tại chỗ vào thế kỷ mười tám. Niên đại và nguồn gốc của nó vẫn đang được tranh luận."},
+        {"s": "Vườn treo", "w": "Được các tác giả Hy Lạp về sau mô tả. Chưa xác định được di tích nào ở Babylon, và một số học giả cho rằng câu chuyện thuộc về Nineveh."},
+        {"s": "Tháp Babel", "w": "Ziggurat Etemenanki, dâng cho Marduk, là có thật. Chỉ mặt bằng còn lại, như một đường viền vuông trên mặt đất."}
+      ],
+      "quote": "“Nebuchadnezzar, vua Babylon, người cung phụng Esagila và Ezida, con trai cả của Nabopolassar.”",
+      "quoteBy": "Dòng chữ chuẩn đóng trên gạch của nhà vua.",
+      "caps": ["Tại di tích. Khách xem một bảng về các phiến chữ hình nêm tìm thấy ở Babylon."]
+    },
+    "12": {
+      "kicker": "Điểm đến · Tỉnh Babil",
+      "title": "Borsippa: di sản của Nabu",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Mười bảy kilômét về phía tây nam Babylon, một tháp gạch lởm chởm đứng một mình trên gò phía trên đồng bằng. Đây là Borsippa, thành phố chị em của Babylon và nhà của Nabu, thần của người chép và của chữ viết.",
+        "Mỗi mùa xuân, tượng Nabu rời đền của mình, Ezida, và đi đến Babylon cho lễ năm mới. Nebuchadnezzar II xây lại ziggurat của mình ở đây vào thế kỷ 6 TCN, và những ống trụ móng tìm thấy năm 1854 ghi công trình ấy bằng chính lời của nhà vua.",
+        "Ở đỉnh, gạch đã chảy và kết thành những khối như thủy tinh, kết quả của một đám cháy nóng phi thường. Nhiều thế kỷ khách đường xa tưởng phế tích này là Tháp Babel. Nơi này yên tĩnh, hiếm khi đông, và là một trong những chỗ có không khí nhất ở Iraq."
+      ],
+      "sideTitle": "Trong một cái nhìn",
+      "side": [
+        {"t": "Tên cổ", "d": "Barsipa; nay là Birs Nimrud"},
+        {"t": "Vị thần bảo trợ", "d": "Nabu, thần của chữ viết"},
+        {"t": "Từ Babylon", "d": "Khoảng 17 km"}
+      ]
+    },
+    "13": {
+      "run": "Quanh Baghdad",
+      "kicker": "Gần Baghdad",
+      "title": "Ctesiphon và Aqar Quf",
+      "photoTop": true,
+      "paras": [
+        "Hai công trình đứng trong vòng một giờ từ thủ đô, và chúng cách nhau gần hai nghìn năm.",
+        "Taq Kasra là tất cả những gì còn lại của cung điện các vua Sasanian ở Ctesiphon. Vòm của nó cao khoảng 37 mét và vươn khoảng 25 mét, vòm gạch không cốt một nhịp lớn nhất từng được xây. Các học giả vẫn tranh luận liệu nó thuộc thế kỷ thứ ba hay thứ sáu.",
+        "Phía tây thành phố, Aqar Quf là ziggurat của Dur-Kurigalzu, do vua Kassite Kurigalzu lập vào thế kỷ 14 TCN. Lõi đã phong hóa vẫn cao khoảng 57 mét, với các lớp chiếu cói thấy được giữa những hàng gạch bùn."
+      ],
+      "caps": [
+        "Taq Kasra. Vòm lớn của cung điện Sasanian ở Ctesiphon, đông nam Baghdad.",
+        "Aqar Quf. Ziggurat, một viên gạch đóng dấu, và tầm nhìn qua cổng đã trùng tu."
+      ]
+    },
+    "14": {
+      "kicker": "Điểm đến · Miền nam Iraq",
+      "title": "Bình minh của văn minh",
+      "stand": "Ở Ur và Uruk, trên đồng bằng Sumer cổ, con người lần đầu sống trong thành phố, giữ sổ sách bằng chữ viết và dựng những ngôi đền có thể thấy từ một ngày đường đi bộ.",
+      "cap": "Khách trước Ziggurat Ur, xây khoảng năm 2100 TCN cho thần mặt trăng Nanna.",
+      "feature": ["Ziggurat Ur", "Nghĩa trang Hoàng gia", "Uruk và chữ viết đầu tiên", "Dòng thời gian Lưỡng Hà"]
+    },
+    "15": {
+      "run": "Ur và Uruk",
+      "kicker": "Ur",
+      "drop": true,
+      "paras": [
+        "Ziggurat Ur được bảo tồn tốt nhất ở Iraq. Vua Ur-Nammu khởi công khoảng năm 2100 TCN và con trai Shulgi hoàn thành: một bệ bậc bằng gạch bùn bọc gạch nung và gắn nhựa đường, dâng cho Nanna, thần mặt trăng và vị bảo trợ của thành phố.",
+        "Ba cầu thang, mỗi cầu một trăm bậc, gặp nhau ở một nhà cổng trên sân thứ nhất. Mười lăm thế kỷ sau, vua Babylon Nabonidus tu bổ ngọn tháp, và mặt đứng phía dưới được xây lại lần nữa vào thế kỷ hai mươi. Bạn vẫn có thể leo lên.",
+        "Từ năm 1922 đến 1934 Leonard Woolley khai quật Ur cho Bảo tàng Anh và Đại học Pennsylvania. Trong Nghĩa trang Hoàng gia, định niên đại khoảng 2600 đến 2500 TCN, ông tìm thấy mộ Nữ hoàng Puabi, mũ vàng, đàn lyre và tấm khảm được gọi là Cờ hiệu Ur.",
+        "Truyền thống cũng gọi Ur là nơi sinh của Abraham, và một ngôi nhà dựng lại gần ziggurat được giới thiệu là của ông. Từ năm 2016 di tích là một phần của di sản thế giới UNESCO Ahwar miền nam Iraq."
+      ],
+      "sideTitle": "Ur ngắn gọn",
+      "side": [
+        {"t": "Xây", "d": "Khoảng 2100 TCN"},
+        {"t": "Dâng cho", "d": "Nanna, thần mặt trăng"},
+        {"t": "Khai quật", "d": "Woolley, 1922 đến 1934"},
+        {"t": "Thành phố gần nhất", "d": "Nasiriyah"}
+      ],
+      "caps": ["Cũng ở Sumer. Ziggurat bị bào mòn của Nippur, ngai của thần Enlil và trung tâm tôn giáo của thế giới Sumer."],
+      "promo": "Đến Ur trong các hành trình bảy và chín ngày của chúng tôi — iraq.fabletour.com"
+    },
+    "16": {
+      "kicker": "Uruk",
+      "title": "Thành phố đầu tiên",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Uruk, tức Warka ngày nay, có lý lẽ mạnh nhất so với bất kỳ nơi nào trên trái đất để được gọi là thành phố đầu tiên. Khoảng năm 3100 TCN hàng chục nghìn người sống ở đây, nhiều hơn bất cứ nơi nào khác trên thế giới lúc bấy giờ.",
+        "Một thành phố cỡ ấy cần sổ sách. Ở khu Eanna, thiêng liêng với nữ thần Inanna, các nhà khảo cổ tìm thấy hàng nghìn phiến đất sét khắc số và ký hiệu. Những phiến sớm nhất khoảng năm 3400 đến 3200 TCN và là chữ viết cổ nhất từng được phát hiện.",
+        "Uruk cũng cho văn chương người anh hùng đầu tiên. Gilgamesh được nhớ như vua của nó, và sử thi ghi công tường thành cho ông, khoảng chín kilômét vòng quanh.",
+        "Đền Trắng vẫn đội đỉnh gò của thần trời Anu, và Bình Warka cùng Mặt nạ Warka, cả hai tìm thấy ở đây, nay ở Bảo tàng Iraq tại Baghdad.",
+        "Di tích rộng, lặng và gần như chưa bị đụng tới. Với một hướng dẫn viên, những gò thấp hiện ra thành đền, sân và phố."
+      ],
+      "caps": ["Phía trên. Khách ở lối vào Uruk, gò ziggurat phía sau. Những chữ viết đầu tiên bắt đầu ở đây."]
+    },
+    "17": {
+      "run": "Ur và Uruk",
+      "kicker": "Dòng thời gian",
+      "title": "Bảy nghìn năm giữa hai dòng sông",
+      "events": [
+        {"y": "khoảng 5400 TCN", "t": "Eridu được thành lập. Người Sumer về sau nhớ đó là thành phố đầu tiên của tất cả."},
+        {"y": "khoảng 3400–3200 TCN", "t": "Chữ viết được biết sớm nhất xuất hiện trên phiến đất sét ở Uruk."},
+        {"y": "khoảng 2600–2500 TCN", "t": "Vua và hoàng hậu được chôn cùng vàng và đá lapis lazuli trong Nghĩa trang Hoàng gia của Ur."},
+        {"y": "khoảng 2334 TCN", "t": "Sargon của Akkad hợp nhất các thành phố Lưỡng Hà dưới một người trị vì."},
+        {"y": "khoảng 2100 TCN", "t": "Ur-Nammu xây Ziggurat Ur."},
+        {"y": "khoảng 1792–1750 TCN", "t": "Hammurabi trị vì từ Babylon và ban hành bộ luật của mình."},
+        {"y": "thế kỷ 14 TCN", "t": "Vua Kassite Kurigalzu lập Dur-Kurigalzu, nay là Aqar Quf."},
+        {"y": "883–859 TCN", "t": "Ashurnasirpal II đưa Nimrud thành kinh đô Assyria."},
+        {"y": "612 TCN", "t": "Nineveh sụp đổ và đế quốc Assyria kết thúc."},
+        {"y": "605–562 TCN", "t": "Nebuchadnezzar II xây lại Babylon và dựng Cổng Ishtar."},
+        {"y": "539 TCN", "t": "Cyrus của Ba Tư chiếm Babylon."},
+        {"y": "323 TCN", "t": "Alexander Đại đế mất ở Babylon."},
+        {"y": "khoảng 100–240 SCN", "t": "Thành phố sa mạc Hatra thịnh vượng và hai lần chống lại quân La Mã."},
+        {"y": "năm 638 SCN", "t": "Kufa được thành lập. Basra được lập trong cùng thập niên."},
+        {"y": "năm 680 SCN", "t": "Trận Karbala."},
+        {"y": "năm 762 SCN", "t": "Khalip al-Mansur lập Baghdad."},
+        {"y": "năm 836 SCN", "t": "Triều đình Abbasid chuyển đến Samarra."},
+        {"y": "năm 1233 SCN", "t": "Al-Mustansiriya mở cửa ở Baghdad."}
+      ],
+      "note": "Các mốc trước năm 1500 TCN theo niên đại giữa thông dụng và chỉ là xấp xỉ."
+    },
+    "18": {
+      "kicker": "Điểm đến · Miền nam Iraq",
+      "title": "Vùng đầm lầy: đời sống giữa các dòng sông",
+      "stand": "Nơi sông Tigris và Euphrates chậm lại và tỏa rộng, người ta đã xây bằng cói năm nghìn năm. Được UNESCO ghi danh năm 2016, Ahwar miền nam Iraq đẹp nhất khi nhìn từ một chiếc mashoof lúc ánh sáng đầu ngày.",
+      "cap": "Một mudhif, nhà khách vòm của người Ả Rập đầm lầy, xây hoàn toàn bằng bó cói trên hòn đảo nhỏ của riêng nó."
+    },
+    "19": {
+      "run": "Vùng đầm lầy",
+      "drop": true,
+      "paras": [
+        "Phía bắc Basra hai dòng sông mất bờ. Nước tỏa thành mê cung hồ, lạch và bãi cói từng phủ một diện tích cỡ một nước nhỏ, và giữa đó người ta sống trên những hòn đảo họ tự đắp.",
+        "Người Ả Rập đầm lầy, tộc Ma’dan, làm gần như mọi thứ từ cây cói khổng lồ mọc quanh họ: nhà, chiếu, hàng rào, thức ăn gia súc và chất đốt. Công trình đẹp nhất của họ là mudhif, sảnh khách bằng những bó cói vòm, không đinh và không gỗ. Hình ấy xuất hiện trên các phù điêu Sumer năm nghìn năm tuổi.",
+        "Đời sống đi theo trâu nước. Các gia đình chống sào ra đi lúc bình minh trên chiếc mashoof gỗ mảnh để cắt cói tươi, và đàn trâu bơi về lúc chạng vạng. Sữa của chúng thành geymar, một lớp kem đặc ăn với siro chà là và bánh ấm vào bữa sáng.",
+        "Những năm 1990 vùng đầm lầy bị tháo nước có chủ đích và phần lớn dân cư ra đi. Sau năm 2003 các đê bị phá và nước trở lại phần lớn khu vực. Năm 2016 UNESCO ghi danh Ahwar miền nam Iraq là di sản thế giới vì cả thiên nhiên lẫn văn hóa: bốn vùng đất ngập nước cùng các thành phố cổ Ur, Uruk và Eridu."
+      ],
+      "sideTitle": "Du lịch có trách nhiệm",
+      "side": [
+        {"t": "Đi với người chèo thuyền địa phương", "d": "Tiền thuyền của bạn nuôi trực tiếp các gia đình đầm lầy."},
+        {"t": "Hỏi trước khi chụp ảnh", "d": "Nhất là phụ nữ và bên trong nhà."},
+        {"t": "Không lấy gì, không để lại gì", "d": "Đất ngập nước mong manh và mực nước đổi theo mùa."}
+      ],
+      "caps": ["Phía trên. Trâu nước gặm cỏ trên một đảo cói ở Đầm lầy Trung tâm."],
+      "promo": "Trải nghiệm vùng đầm lầy Lưỡng Hà — iraq.fabletour.com"
+    },
+    "20": {
+      "photoTop": true,
+      "quote": "“Nhiều khách của chúng tôi nói đây là nơi yên bình nhất ở Iraq.”",
+      "quoteBy": "Fable Tour",
+      "caps": ["Phía trên. Bằng thuyền qua các lạch cói gần Al-Chibayish. Một chuyến đầm lầy, với bữa trưa masgouf nướng, có thể sắp xếp trong các chương trình của chúng tôi."]
+    },
+    "21": {
+      "run": "Basra",
+      "kicker": "Điểm đến · Miền nam Iraq",
+      "title": "Basra: thành phố của sông và chà là",
+      "drop": true,
+      "paras": [
+        "Basra là nơi Iraq gặp biển. Được lập vào thập niên 630 như một thị trấn đồn trú của nhà nước khalip buổi đầu, nó lớn thành một cảng buôn với Ấn Độ, Đông Phi và Trung Quốc, và thành một đô thị của nhà ngữ pháp, nhà thần học và thi sĩ. Trong Nghìn lẻ một đêm, Sinbad thủy thủ ra đi từ đây.",
+        "Sông Tigris và Euphrates hợp lưu ở Qurna, một giờ về phía bắc, để thành Shatt al-Arab. Dòng sông chảy rộng và chậm qua thành phố giữa những vườn chà là. Một buổi tối trên bờ kè, hoặc ra mặt nước khi ánh sáng tắt, là trải nghiệm Basra không thể thiếu.",
+        "Ở khu cũ, kênh rạch có nhà thương nhân mà tầng trên nhô ra phố sau những tấm gỗ chạm. Những ban công ấy, shanasheel, là chữ ký của thành phố. Bảo tàng Basra, mở năm 2016 trong một cung điện cũ bên sông, kể câu chuyện miền nam từ Sumer đến thời kỳ Hồi giáo."
+      ],
+      "caps": ["Qurna. Khuôn viên được gọi là Cây của Adam, nơi truyền thống địa phương đặt Vườn Địa đàng, tại chỗ hai dòng sông gặp nhau."],
+      "miss": [
+        {"t": "Hoàng hôn trên Shatt al-Arab", "d": "Đẹp nhất khi nhìn từ thuyền"},
+        {"t": "Những ngôi nhà shanasheel", "d": "Ban công chạm của Basra cũ"},
+        {"t": "Bảo tàng Basra", "d": "Bốn phòng trưng bày bên sông"}
+      ]
+    },
+    "22": {
+      "kicker": "Điểm đến · Euphrates trung lưu",
+      "title": "Những thành phố thiêng của Lưỡng Hà",
+      "stand": "Najaf, Karbala và Kufa nằm trong số những nơi được đến nhiều nhất trên trái đất. Hàng triệu người hành hương đến mỗi năm, và du khách mọi xuất thân đều được đón với sự lịch thiệp.",
+      "cap": "Sân cẩm thạch của Đại thánh đường Kufa lúc chạng vạng.",
+      "feature": ["Kufa", "Najaf và Wadi al-Salam", "Karbala", "Đến với sự tôn trọng"]
+    },
+    "23": {
+      "run": "Thành phố thiêng",
+      "kicker": "Kufa và Najaf",
+      "drop": true,
+      "paras": [
+        "Kufa được lập năm 638 như một trại quân trên sông Euphrates và trong một thế hệ đã là một trong những kinh đô trí tuệ của Hồi giáo. Chữ Kufic góc cạnh lấy tên từ thành phố. Ali ibn Abi Talib, anh họ và con rể của Tiên tri Muhammad và là khalip thứ tư, trị vì từ đây, và chính tại Đại thánh đường Kufa ông bị hạ gục năm 661.",
+        "Thánh đường này thuộc số cổ nhất thế giới. Sân rộng của nó được vòng bởi những điểm mà truyền thống gắn với các nhà tiên tri, và bên cạnh là đền thờ của Muslim ibn Aqil và Hani ibn Urwa. Đi bộ một quãng ngắn là ngôi nhà khiêm nhường nơi Imam Ali từng sống.",
+        "Mười kilômét về phía tây, Najaf lớn lên quanh mộ của ông. Mái vòm vàng và hai tháp đôi của Đền Imam Ali vươn trên phố cổ, và các sảnh được ốp khảm gương làm ánh sáng tán ra. Một nghìn năm nay Najaf cũng là thành phố của học giả. Các trường của nó, Hawza, kéo sinh viên từ khắp thế giới.",
+        "Bên thành phố là Wadi al-Salam, Thung lũng Hòa bình. Đây là một trong những nghĩa trang lớn nhất trái đất, một cảnh quan mái vòm và vòm gạch chạy tới chân trời, và đã được dùng liên tục hơn một thiên niên kỷ."
+      ],
+      "caps": ["Wadi al-Salam. Thung lũng Hòa bình nhìn từ trên cao, đồng bằng Najaf ở phía xa."]
+    },
+    "24": {
+      "run": "Thành phố thiêng",
+      "kicker": "Karbala",
+      "paras": [
+        "Ngày thứ mười tháng Muharram năm 680, Husayn ibn Ali, cháu của Tiên tri, bị giết cùng các bạn đồng hành trên đồng bằng Karbala. Sự kiện được nhớ mỗi năm vào ngày Ashura, và bốn mươi ngày sau cuộc hành hương Arbaeen đưa hàng triệu người đến thành phố bằng đường bộ.",
+        "Đền Imam Husayn và đền của người em Al-Abbas nhìn nhau qua một quảng trường đi bộ rộng. Cả hai đội vàng và bên trong phủ công trình gương cùng gạch men xanh. Buổi tối, khi các mái vòm được thắp và sân đầy người, không khí điềm tĩnh và hiếu khách."
+      ],
+      "caps": [
+        "Al-Kadhimiya, Baghdad. Một vị khách chụp các mái vòm và tháp từ sân.",
+        "Những đền thờ yên hơn của Baghdad. Mộ Junayd al-Baghdadi.",
+        "Mộ Bahlul."
+      ],
+      "sideTitle": "Đến với sự tôn trọng",
+      "side": [
+        {"t": "Trang phục", "d": "Tay áo dài và quần dài cho nam. Phụ nữ mặc abaya và khăn trùm trong khu đền; có thể mượn ở lối vào."},
+        {"t": "Vào cửa", "d": "Sân nói chung mở cho mọi khách. Quy định các sảnh trong khác nhau theo đền và theo ngày, và hướng dẫn viên của bạn sẽ chỉ dẫn tại chỗ."},
+        {"t": "Thời điểm", "d": "Trong Ashura và Arbaeen các thành phố cực kỳ đông. Chúng tôi sắp lịch tránh những ngày này trừ khi bạn muốn chứng kiến."},
+        {"t": "Khi bước vào", "d": "Giày, túi và máy ảnh để ở phòng gửi đồ miễn phí. Nam và nữ dùng lối vào riêng."},
+        {"t": "Chụp ảnh", "d": "Điện thoại thường được chấp nhận trong sân. Luôn hỏi trước khi chụp người đang cầu nguyện."},
+        {"t": "Hiếu khách", "d": "Trà, nước và thức ăn thường được mời khách không lấy tiền. Nhận là một phép lịch sự."}
+      ]
+    },
+    "25": {
+      "kicker": "Điểm đến · Salah ad-Din",
+      "title": "Samarra: vẻ huy hoàng của nhà Abbasid",
+      "stand": "Trong nửa thế kỷ đây là kinh đô của một đế quốc trải từ Bắc Phi đến Trung Á. Tháp xoắn của nó là bóng dáng được biết đến nhất ở Iraq.",
+      "cap": "Malwiya, tháp xoắn của Đại thánh đường Samarra, hoàn thành năm 852."
+    },
+    "26": {
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Năm 836 khalip al-Mu'tasim rời Baghdad và xây một kinh đô mới cách 125 kilômét ngược sông. Samarra được bố trí trên đất trống với đại lộ, cung điện, doanh trại, trường đua và vườn săn. Cuối cùng nó trải hơn bốn mươi kilômét dọc bờ đông sông Tigris.",
+        "Con trai ông, al-Mutawakkil, thêm Đại thánh đường giữa năm 848 và 852. Đó là thánh đường lớn nhất thế giới lúc bấy giờ, một hình chữ nhật có tường bằng gạch nung đủ chỗ cho cả đạo quân cầu nguyện cùng nhau. Ngoài tường phía bắc ông dựng Malwiya, tháp cao 52 mét với một đường dốc quấn năm vòng bên ngoài.",
+        "Triều đình trở về Baghdad năm 892 và phần lớn Samarra đơn giản bị bỏ, đó là lý do mặt bằng của nó còn lại trọn vẹn đến vậy. UNESCO ghi danh Thành phố khảo cổ Samarra vào Danh sách Di sản Thế giới năm 2007."
+      ],
+      "caps": ["Đại thánh đường. Tường ngoài với các tháp hình bán nguyệt, và Malwiya vươn phía sau."],
+      "sideTitle": "Samarra ngắn gọn",
+      "side": [
+        {"t": "Kinh đô", "d": "836 đến 892"},
+        {"t": "Malwiya", "d": "52 m, hoàn thành 852"},
+        {"t": "Từ Baghdad", "d": "Khoảng 125 km về phía bắc"},
+        {"t": "UNESCO", "d": "Ghi danh 2007"}
+      ]
+    },
+    "27": {
+      "run": "Samarra",
+      "photoTop": true,
+      "paras": [
+        "Samarra cũng là một thành phố hành hương. Đền Al-Askari giữ mộ của imam thứ mười và thứ mười một, Ali al-Hadi và Hasan al-Askari, dưới một trong những mái vòm vàng lớn nhất thế giới Hồi giáo.",
+        "Gần nơi được chỉ là nhà tù của Imam Ali al-Hadi là Qasr al-Birka, Cung điện Hồ nước. Bồn tròn của nó được đào sâu xuống đất và bao bởi các sảnh vòm, nơi triều đình Abbasid tránh cái nóng mùa hè.",
+        "Phía bắc trung tâm, thánh đường Abu Dulaf lặp lại tháp xoắn ở quy mô nhỏ hơn.",
+        "Một ngày ở Samarra cùng Fable Tour gồm Malwiya, đền thờ, nhà tù của Imam Ali al-Hadi và Qasr al-Birka."
+      ],
+      "caps": [
+        "Qasr al-Birka. Sân hồ hạ thấp của một cung điện Abbasid, vòng bởi các sảnh vòm, gần nhà tù của Imam Ali al-Hadi.",
+        "Đền Al-Askari. Mái vòm vàng phía trên cổng ốp gạch."
+      ],
+      "promo": "Đến Samarra cùng Fable Tour — iraq.fabletour.com"
+    },
+    "28": {
+      "kicker": "Điểm đến · Tỉnh Nineveh",
+      "title": "Miền bắc Iraq: đế quốc, thành phố và nền văn minh",
+      "stand": "Miền bắc từng là trung tâm Assyria và sau là biên giới giữa La Mã và Ba Tư. Các di tích của nó thuộc số ít khách đến nhất và đáng nhất trong nước.",
+      "cap": "Khách trên bậc đền Maran ở Hatra.",
+      "feature": ["Hatra", "Mosul và Nineveh", "Nimrud", "Ashur"]
+    },
+    "29": {
+      "run": "Miền bắc Iraq",
+      "kicker": "Hatra",
+      "drop": true,
+      "paras": [
+        "Hatra đứng một mình trong sa mạc, một trăm kilômét về phía tây nam Mosul. Ở thế kỷ thứ nhất và thứ hai SCN đây là một thành phố đoàn thương nhân giàu có bên rìa đế quốc Parthia, do các vua Ả Rập của chính mình cai trị và được hai vòng tường bao.",
+        "Ở giữa là một khu thánh lớn. Các đền xây bằng đá vôi màu mật ong và kết hợp những sảnh vòm của phương Đông, các iwan, với cột và hoa văn chạm của thế giới Hy Lạp và La Mã. Vị thần chính là Shamash, mặt trời.",
+        "Hatra chống lại các hoàng đế La Mã Trajan và Septimius Severus; cả hai đều vây thành và thất bại. Cuối cùng nó thất thủ trước vua Sasanian Shapur I khoảng năm 240 và không bao giờ có người ở lại.",
+        "Năm 1985 nó trở thành nơi đầu tiên ở Iraq được ghi vào Danh sách Di sản Thế giới của UNESCO. Việc đến thăm cần giấy phép an ninh, mà Fable Tour sắp xếp trước."
+      ],
+      "caps": [
+        "Đá trên đá. Một cửa chạm trong khu đền.",
+        "Những iwan lớn. Các sảnh vòm mở ra sân giữa."
+      ]
+    },
+    "30": {
+      "run": "Miền bắc Iraq",
+      "kicker": "Mosul, Nineveh, Nimrud và Ashur",
+      "drop": true,
+      "paras": [
+        "Mosul nhìn các gò của Nineveh cổ qua sông Tigris. Khoảng năm 700 TCN vua Assyria Sennacherib đưa Nineveh thành kinh đô và bao nó bằng mười hai kilômét tường. Cháu ông, Ashurbanipal, tập hợp ở đó một thư viện phiến đất sét, nguồn của phần lớn những gì được biết về văn chương Lưỡng Hà. Thành phố thất thủ năm 612 TCN.",
+        "Mosul thời trung đại giàu lên nhờ buôn bán và cho vải muslin cái tên của mình. Đại thánh đường al-Nuri được xây năm 1172 và tháp nghiêng của nó, al-Hadba, trở thành biểu tượng của thành phố. Cả hai bị phá năm 2017. Từ đó chúng được dựng lại bằng gạch gốc trong một chương trình do UNESCO chủ trì, và thánh đường mở cửa trở lại năm 2025.",
+        "Ba mươi kilômét về phía nam là Nimrud, Kalhu của Assyria. Ashurnasirpal II đưa nó thành kinh đô vào thế kỷ 9 TCN và chất đầy cung điện bằng phù điêu chạm cùng những con bò có cánh khổng lồ. Di tích bị hư hại nặng năm 2015 và việc bảo tồn đang diễn ra. Các phiến và gạch có chữ vẫn nằm nơi chúng đổ.",
+        "Xuôi sông Tigris thêm nữa, Ashur là kinh đô đầu tiên và trái tim tôn giáo của Assyria. Nó là di sản thế giới từ năm 2003."
+      ],
+      "caps": [
+        "Mosul. Tháp al-Hadba được dựng lại, nhìn từ khuôn viên Thánh đường al-Nuri.",
+        "Ashur. Một viên gạch đóng dấu chữ hình nêm tại di tích.",
+        "Nimrud. Khách với một phiến có chữ trên gò cung điện. Như Hatra, Nimrud được đến bằng giấy phép; nếu giấy phép bị từ chối trong ngày, chúng tôi đề nghị một di tích khác."
+      ]
+    },
+    "31": {
+      "kicker": "Điểm đến · Vùng Kurdistan",
+      "title": "Miền bắc: nơi lịch sử gặp núi",
+      "deck": "Thành cổ Erbil đã có người ở lâu đến mức gò bên dưới được làm từ những Erbil trước đó.",
+      "drop": true,
+      "wide": true,
+      "paras": [
+        "Thành cổ Erbil nhô khoảng ba mươi mét trên thành phố hiện đại, trên một gò hình bầu dục, một tell được đắp từng lớp qua hàng nghìn năm định cư. Thị trấn xuất hiện trong văn bản từ sớm như thiên niên kỷ thứ ba TCN, và thường được mô tả là một trong những nơi có người ở liên tục lâu đời nhất thế giới.",
+        "Một bức tường mặt nhà thế kỷ mười chín vòng đỉnh như một pháo đài. Bên trong là ngõ, sân, một thánh đường và một hammam. Thành cổ được ghi vào Danh sách Di sản Thế giới của UNESCO năm 2014 và việc trùng tu vẫn tiếp tục, nên một số khu có thể đóng.",
+        "Dưới chân, chợ có mái Qaysari bán mật ong, hạt, phô mai, gia vị và vải Kurd, và các quán trà ở quảng trường chính là chỗ xem thành phố trôi qua.",
+        "Trên đường từ Mosul, tu viện Mar Mattai bám sườn núi Alfaf. Được lập vào thế kỷ thứ tư, đây là một trong những tu viện Kitô giáo cổ nhất vẫn đang dùng. Qua Erbil, đồng bằng nhường chỗ cho dãy Zagros: hẻm núi, thác và những con đường núi khiến bất kỳ ai nghĩ Iraq bằng phẳng phải ngạc nhiên."
+      ],
+      "miss": [
+        {"t": "Thành cổ Erbil", "d": "Di sản thế giới UNESCO, 2014"},
+        {"t": "Chợ Qaysari", "d": "Dưới chân thành cổ"},
+        {"t": "Tu viện Mar Mattai", "d": "Trên núi Alfaf"},
+        {"t": "Hành trình chín ngày", "d": "Kết thúc ở Erbil; xem trang 36"}
+      ],
+      "promo": "Đi từ Basra đến Erbil cùng Fable Tour — iraq.fabletour.com"
+    },
+    "32": {
+      "kicker": "Ẩm thực · Hiếu khách",
+      "title": "Hương vị Iraq",
+      "photoTop": true,
+      "drop": true,
+      "paras": [
+        "Một bàn ăn Iraq được bày cho nhiều người hơn số được chờ, vì khách được xem là đương nhiên. Món quốc hồn là masgouf: cá chép sông mổ dọc, ướp muối, dựng trên cọc bên lửa củi và nướng chậm đến khi da giòn. Ăn với bánh dẹt, xoài muối và hành sống.",
+        "Ngày lễ mang đến quzi, cả con cừu quay trên cơm với hạnh nhân và nho khô, và dolma, rau nhồi cơm gia vị hầm trong nước sốt chua ngọt. Bữa sáng ở Baghdad là kahi, bánh nhiều lớp với kem trâu và siro.",
+        "Trà theo sau mọi bữa. Nó được pha đậm, thơm thảo quả và rót trong một ly nhỏ gọi là istikan. Ở Basra hãy gọi trà làm từ chanh khô. Chà là Iraq không cần giới thiệu, và có hàng trăm giống."
+      ],
+      "caps": ["Phía trên. Saif cùng tác giả William Frej và đoàn của ông trong bữa tối ở Mosul."],
+      "sideTitle": "Trên bàn",
+      "side": [
+        {"t": "Masgouf", "d": "Cá chép sông nướng lửa"},
+        {"t": "Quzi", "d": "Cừu trên cơm gia vị"},
+        {"t": "Dolma", "d": "Rau nhồi"},
+        {"t": "Kahi và geymar", "d": "Bữa sáng Baghdad"}
+      ]
+    },
+    "33": {
+      "run": "Fable Tour",
+      "kicker": "Trải nghiệm Fable Tour",
+      "title": "Hơn một chuyến tham quan. Một câu chuyện để nhớ.",
+      "paras": [
+        "Fable Tour là một công ty Iraq đặt tại Baghdad. Chúng tôi thiết kế các hành trình riêng và nhóm nhỏ khắp cả nước, từ Basra đến Erbil, và tự điều hành chúng.",
+        "Mọi hành trình bắt đầu cùng một cách: hướng dẫn viên của bạn đợi ở sảnh đến. Từ khoảnh khắc ấy một xe riêng có điều hòa, một hướng dẫn viên chuyên nghiệp và một tài xế ở cùng bạn cho đến lúc khởi hành. Chúng tôi hướng dẫn bằng tiếng Anh, tiếng Nga và tiếng Ả Rập.",
+        "Chúng tôi chọn khách sạn bốn và năm sao ở mỗi thành phố, gồm bữa sáng hằng ngày và phí vào cửa, và xin các giấy phép cần cho những di tích như Hatra và Nimrud. Bạn chọn ngày; chúng tôi lo phần còn lại.",
+        "Nhà sáng lập của chúng tôi, Saif Al-Tamimi, có mặt trong sách Unforgotten: Ancient Cities from a Distant Past của nhiếp ảnh gia William Frej, người mà ông đã dẫn đoàn đi qua miền bắc Iraq."
+      ],
+      "caps": [
+        "Đến nơi. Hướng dẫn viên của bạn gặp bạn bên trong Sân bay Quốc tế Baghdad.",
+        "Trong chuyến đi. Khách ở Qishla, Baghdad."
+      ],
+      "sideTitle": "Những gì được bao gồm",
+      "side": [
+        {"t": "Riêng hoặc nhóm", "d": "Vào ngày bạn chọn"},
+        {"t": "Ba ngôn ngữ", "d": "Tiếng Anh, tiếng Nga, tiếng Ả Rập"},
+        {"t": "Khách sạn được chọn", "d": "Bốn và năm sao, có bữa sáng"},
+        {"t": "Đều được lo", "d": "Đi lại, phí vào cửa, giấy phép"}
+      ],
+      "promo": "Tìm chúng tôi trên GetYourGuide và Tripadvisor với tên “Fable Tour in Iraq”, và trên Instagram @fable_tour. Lên kế hoạch hành trình Iraq riêng của bạn — iraq.fabletour.com"
+    },
+    "34": {
+      "kicker": "Hành trình · Fable Tour",
+      "tour": "Tour di sản Iraq · 7 ngày / 6 đêm",
+      "title": "Khám phá Lưỡng Hà trong bảy ngày",
+      "deck": "Từ Babylon đến vùng đầm lầy, Samarra và Hatra, bắt đầu và kết thúc tại Sân bay Quốc tế Baghdad.",
+      "days": [
+        {"n": "01", "title": "Babylon và Karbala", "route": "Baghdad – Babylon – Karbala", "text": "Đón ở sân bay, rồi Đường diễu hành, Cổng Ishtar và Sư tử Babylon. Tiếp đến Ziggurat Borsippa và các đền thờ Karbala trước tối.", "stay": "Karbala · Al-Baron Hotel"},
+        {"n": "02", "title": "Kufa và Najaf", "route": "Kufa – Najaf", "text": "Đại thánh đường Kufa, các ngõ nghĩa trang Wadi al-Salam và mái vòm vàng của Đền Imam Ali.", "stay": "Najaf · Granada, Do Najaf hoặc Naseem Al-Najaf"},
+        {"n": "03", "title": "Uruk và Basra lúc hoàng hôn", "route": "Uruk – Basra", "text": "Uruk, thành phố của Gilgamesh và chữ viết sớm, rồi xuống nam tới Shatt al-Arab và các nhà shanasheel của Basra cũ.", "stay": "Basra · Mövenpick Zinat Al-Hayat hoặc Corniche Hotel"},
+        {"n": "04", "title": "Cây của Adam, vùng đầm lầy và Ur", "route": "Qurna – vùng đầm lầy – Ur – Baghdad", "text": "Nơi hai dòng sông gặp nhau ở Qurna, một chuyến thuyền qua đầm cói, và cầu thang của Ziggurat Ur.", "stay": "Baghdad · Do Baghdad, Alabasly Suites hoặc Bilitum"},
+        {"n": "05", "title": "Samarra và đường lên bắc", "route": "Samarra – Mosul", "text": "Tháp xoắn Malwiya và Đền Al-Askari, rồi tiếp đến Mosul.", "stay": "Mosul · Ramada Hotel"},
+        {"n": "06", "title": "Mosul, Nimrud và Hatra", "route": "Mosul – Nimrud – Hatra – Baghdad", "text": "Mosul cũ và Thánh đường al-Nuri, Nimrud của Assyria, và các đền Hatra giữa sa mạc.", "stay": "Baghdad · Do Baghdad, Alabasly Suites hoặc Bilitum"},
+        {"n": "07", "title": "Baghdad, khúc cuối hoành tráng", "route": "Baghdad – Sân bay", "text": "Đền Al-Kadhimiya, phố Al-Mutanabbi và Qishla, ziggurat Kassite của Aqar Quf, rồi chuyến bay của bạn.", "stay": ""}
+      ]
+    },
+    "35": {
+      "included": [
+        "Xe riêng có điều hòa suốt hành trình",
+        "Hướng dẫn viên chuyên nghiệp tiếng Anh, tiếng Nga hoặc tiếng Ả Rập",
+        "6 đêm ở khách sạn bốn và năm sao, phòng đôi hoặc phòng twin",
+        "Bữa sáng hằng ngày",
+        "Phí vào cửa mọi di tích trong lịch trình",
+        "Đón tại sân bay và xe tiễn ở Baghdad"
+      ],
+      "excluded": "Vé máy bay quốc tế · Thị thực Iraq · Bữa trưa và bữa tối · Bảo hiểm du lịch · Chi tiêu cá nhân và tiền tip",
+      "good": "Khởi hành riêng hoặc nhóm nhỏ. Hatra và Nimrud cần giấy phép an ninh, chúng tôi lo; nếu giấy phép bị từ chối, một di tích thay thế được đề nghị. Thứ tự tham quan có thể điều chỉnh tại chỗ vì thời gian và giờ mở cửa.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "36": {
+      "kicker": "Hành trình · Fable Tour",
+      "tour": "Toàn Iraq, từ Basra đến Erbil · 9 ngày / 8 đêm",
+      "title": "Hành trình lớn khắp Iraq, chín ngày",
+      "deck": "Cả nước trên một tuyến, từ nam lên bắc. Đến Basra, rời từ Erbil.",
+      "days": [
+        {"n": "01", "title": "Basra, cửa ngõ miền nam", "route": "Basra", "text": "Nhà thờ Armenia Đức Mẹ Đồng trinh, Bảo tàng Basra và hoàng hôn trên Shatt al-Arab.", "stay": "Basra · Mövenpick Zinat Al-Hayat"},
+        {"n": "02", "title": "Vùng đầm lầy và Ziggurat Ur", "route": "Vùng đầm lầy – Ur – Najaf", "text": "Đảo cói, trâu nước và nhà khách mudhif, rồi Ziggurat lớn và các lăng hoàng gia.", "stay": "Najaf · Do Najaf Hotel"},
+        {"n": "03", "title": "Najaf, Kufa và Karbala", "route": "Najaf – Kufa – Karbala", "text": "Đền Imam Ali, Wadi al-Salam, Đại thánh đường Kufa và các đền thờ Karbala.", "stay": "Karbala · The Baron Hotel"},
+        {"n": "04", "title": "Babylon và Borsippa", "route": "Babylon – Borsippa – Baghdad", "text": "Đường diễu hành, Cổng Ishtar và các cung điện của Nebuchadnezzar, rồi ziggurat của Nabu.", "stay": "Baghdad · Alabasly Suites"},
+        {"n": "05", "title": "Baghdad, Thành phố Hòa bình", "route": "Baghdad – Aqar Quf", "text": "Phố Al-Mutanabbi và Qishla, Đài tưởng niệm các liệt sĩ, Đền Al-Kadhimiya và Aqar Quf.", "stay": "Baghdad · Alabasly Suites"},
+        {"n": "06", "title": "Samarra và Hatra", "route": "Samarra – Hatra – Mosul", "text": "Malwiya, Đền Al-Askari và thành phố sa mạc Hatra.", "stay": "Mosul · Ramada Plaza by Wyndham Mosul Corniche"},
+        {"n": "07", "title": "Mosul, Nimrud và Mar Mattai", "route": "Mosul – Nimrud – Mar Mattai – Erbil", "text": "Mosul cũ và Thánh đường al-Nuri, Nimrud của Assyria và tu viện trên núi.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "08", "title": "Erbil và thành cổ", "route": "Erbil", "text": "Thành cổ và chợ Qaysari.", "stay": "Erbil · Erbil International Hotel"},
+        {"n": "09", "title": "Khởi hành", "route": "Erbil – Sân bay", "text": "Đưa ra Sân bay Quốc tế Erbil.", "stay": ""}
+      ]
+    },
+    "37": {
+      "included": [
+        "8 đêm ở khách sạn bốn và năm sao, phòng đôi hoặc phòng twin",
+        "Bữa sáng hằng ngày",
+        "Xe riêng có điều hòa cho toàn tuyến",
+        "Hướng dẫn viên chuyên nghiệp tiếng Anh, tiếng Nga hoặc tiếng Ả Rập",
+        "Phí vào cửa mọi di tích, gồm giấy phép Hatra và Nimrud",
+        "Đón tại sân bay Basra và trả khách tại sân bay Erbil"
+      ],
+      "excluded": "Vé máy bay quốc tế · Thị thực điện tử Iraq (cũng có giá trị cho Vùng Kurdistan) · Bảo hiểm sức khỏe · Bữa trưa và bữa tối · Đi thuyền ở vùng đầm lầy (theo yêu cầu) · Chi tiêu cá nhân và tiền tip",
+      "good": "Khởi hành riêng hoặc nhóm nhỏ. Hatra và Nimrud cần giấy phép an ninh, chúng tôi lo; nếu giấy phép bị từ chối, một di tích thay thế được đề nghị. Thứ tự tham quan có thể điều chỉnh tại chỗ vì thời gian và giờ mở cửa.",
+      "url": "iraq.fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353"
+    },
+    "38": {
+      "kicker": "Cẩm nang du lịch",
+      "title": "Cẩm nang du lịch Iraq thiết yếu",
+      "groups": [
+        {"h": "Trước khi đi", "items": [
+          {"t": "Thị thực.", "d": "Iraq cấp thị thực điện tử cho nhiều quốc tịch qua cổng e-visa chính thức. Nếu quốc tịch của bạn không đủ điều kiện, Fable Tour có thể xin thị thực cho bạn như một phần của việc đặt trọn tour. Quy định thay đổi: xác nhận với chúng tôi hoặc với một đại sứ quán Iraq trước khi đặt vé máy bay."},
+          {"t": "Hộ chiếu.", "d": "Mang hộ chiếu còn hiệu lực ít nhất sáu tháng sau ngày đến, và giữ một bản giấy của trang ảnh."},
+          {"t": "Nên đi khi nào.", "d": "Từ tháng Mười đến tháng Tư là mùa, ngày dịu và đêm mát. Từ tháng Sáu đến tháng Chín nhiệt độ ban ngày ở miền trung và miền nam thường vượt 45°C."}
+        ]},
+        {"h": "Tiền, trang phục và phong tục", "items": [
+          {"t": "Tiền.", "d": "Đồng tiền là dinar Iraq. Iraq phần lớn là nền kinh tế tiền mặt. Mang đô la Mỹ bằng tờ mới, sạch và đổi tại chỗ; thẻ dùng được ở các khách sạn lớn."},
+          {"t": "Trang phục.", "d": "Ăn mặc kín đáo khắp nơi: vai và gối được che cho cả nam và nữ. Phụ nữ nên mang khăn trùm, và abaya là bắt buộc bên trong các đền thờ."},
+          {"t": "Phong tục.", "d": "Thứ Sáu là ngày nghỉ. Chào bằng tay phải, nhận trà khi được mời, và hỏi trước khi chụp người. Đừng chụp trạm kiểm soát hoặc nhân viên an ninh."}
+        ]},
+        {"h": "Ngôn ngữ và việc thực tế", "items": [
+          {"t": "Ngôn ngữ.", "d": "Tiếng Ả Rập và tiếng Kurd là ngôn ngữ chính thức. Tiếng Anh được hiểu ở khách sạn; hướng dẫn viên của bạn dịch ở mọi nơi khác."},
+          {"t": "Sức khỏe và bảo hiểm.", "d": "Mang theo thuốc dùng thường xuyên và uống nước đóng chai. Bảo hiểm du lịch có phạm vi Iraq được khuyên mạnh và không gồm trong các chương trình của chúng tôi."},
+          {"t": "Thực tế.", "d": "Múi giờ UTC+3. Điện 230 V; ổ cắm khác nhau, nên mang bộ chuyển đổi phổ thông. Thẻ SIM nội địa được bán ở các sân bay."}
+        ]}
+      ],
+      "noteTitle": "Thông tin có thể thay đổi.",
+      "note": "Quy định thị thực, điều kiện nhập cảnh, giờ mở cửa và việc vào di tích do chính quyền Iraq đặt ra và có thể đổi trong thời gian ngắn. Hãy xem khuyến cáo du lịch của chính phủ bạn và Bộ Ngoại giao Iraq trước khi đi, và hỏi chúng tôi tình hình hiện tại khi đặt chỗ."
+    },
+    "39": {
+      "run": "Đặt chỗ",
+      "kicker": "Lên kế hoạch hành trình",
+      "title": "Cuộc phiêu lưu Iraq của bạn bắt đầu tại đây",
+      "intro": "Chọn một chương trình, mở trang của nó và chọn ngày. Mọi hành trình có thể đi riêng cho đoàn của bạn hoặc theo nhóm nhỏ, và mỗi chương trình đều có thể điều chỉnh.",
+      "cards": [
+        {"days": "6 ngày", "title": "Baghdad, Babylon và Samarra", "text": "Sáu ngày dựa trên một khách sạn ở Baghdad: Bảo tàng Iraq và Baghdad cũ, Aqar Quf và Taq Kasra, Samarra, Babylon và Borsippa.", "scan": "Lịch trình và ngày"},
+        {"days": "7 ngày", "title": "Tour di sản Iraq", "text": "Bảy ngày từ Baghdad: Babylon, Karbala, Najaf, Uruk, Basra, vùng đầm lầy, Ur, Samarra, Mosul và Hatra.", "scan": "Lịch trình và ngày"},
+        {"days": "9 ngày", "title": "Toàn Iraq, từ Basra đến Erbil", "text": "Chín ngày từ nam lên bắc, thêm Nimrud, Tu viện Mar Mattai và thành cổ Erbil.", "scan": "Lịch trình và ngày"}
+      ],
+      "howTitle": "Cách đặt",
+      "how": "Gửi cho chúng tôi ngày đi và số khách qua WhatsApp, email hoặc mẫu trên trang web. Chúng tôi trả lời bằng chỗ trống và một xác nhận bằng văn bản. Các chuyến trong ngày từ Baghdad và xe sân bay có thể đặt theo cách ấy.",
+      "contactTitle": "Liên hệ",
+      "lines": [
+        "iraq.fabletour.com",
+        "support@fabletour.com",
+        "WhatsApp +964 771 174 5353",
+        "Dịch vụ khách hàng 24/7 +1 (212) 433-8608",
+        "Sân bay Quốc tế Baghdad, Al-Karkh, Baghdad, Iraq",
+        "Instagram @fable_tour"
+      ],
+      "promo": "Lên kế hoạch hành trình Iraq riêng của bạn — iraq.fabletour.com"
+    },
+    "40": {
+      "title": "Hành trình của bạn qua Lưỡng Hà bắt đầu tại đây.",
+      "text": "Khám phá lịch sử phi thường, những truyền thống đang sống và các điểm đến khó quên của Iraq cùng Fable Tour. Từ những kỳ quan cổ của Babylon đến các phố sôi động của Baghdad và phong cảnh vượt thời gian của Lưỡng Hà miền nam, hãy biết Iraq qua những trải nghiệm du lịch chân thực, được hướng dẫn bởi người thành thạo.",
+      "url": "iraq.fabletour.com",
+      "email": "support@fabletour.com",
+      "phone": "WhatsApp +964 771 174 5353",
+      "service": "Dịch vụ khách hàng 24/7 +1 (212) 433-8608",
+      "address": "Sân bay Quốc tế Baghdad, Al-Karkh, Baghdad, Iraq",
+      "scan": "Lên kế hoạch hành trình",
+      "credit": "Ảnh: hoàng hôn trên Shatt al-Arab, Basra"
+    }
+  }
+}
