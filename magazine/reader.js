@@ -135,7 +135,9 @@ function pageCover(t){
   top.appendChild(rule);
   top.appendChild(el("p","sub",esc(t.sub)));
   s.appendChild(top);
-  var ph=crop(1,0,t.credit); if(ph) s.appendChild(ph);
+  var slot=el("div","cover-slot");
+  var ph=crop(1,0,t.credit); if(ph) slot.appendChild(ph);
+  s.appendChild(slot);
   var foot=el("div","cover-foot");
   foot.appendChild(el("h1","",esc(t.headline)));
   foot.appendChild(el("p","deck",esc(t.deck)));
@@ -462,7 +464,46 @@ function build(n){
   return pg;
 }
 
-function fit(){ /* pages are pinned to the book; long translations scroll inside the sheet */ }
+function fitCover(sheet){
+  var slot=sheet.querySelector(".cover-slot");
+  var cropEl=slot&&slot.querySelector(".crop");
+  if(!cropEl) return;
+  var ar=parseFloat(cropEl.style.getPropertyValue("--ar"))||1;
+  var sw=slot.clientWidth, sh=slot.clientHeight;
+  if(!sw||!sh) return;
+  var w=sw, h=w/ar;
+  if(h>sh){ h=sh; w=h*ar; }
+  cropEl.style.width=Math.floor(w)+"px";
+  cropEl.style.height=Math.floor(h)+"px";
+  cropEl.style.aspectRatio="auto";
+  cropEl.style.maxHeight="none";
+}
+function fit(pg){
+  var sheet=pg.querySelector(".sheet");
+  if(!sheet||!pg.clientHeight) return;
+  var rtl=document.documentElement.dir==="rtl";
+  sheet.style.transform="none";
+  sheet.style.left="0";
+  sheet.style.right="0";
+  sheet.style.width="100%";
+  sheet.style.height="100%";
+  sheet.style.overflow="hidden";
+  if(sheet.classList.contains("cover")){ fitCover(sheet); return; }
+  sheet.style.height="auto";
+  var host=pg.clientHeight, need=sheet.scrollHeight;
+  if(need<=host+2){ sheet.style.height="100%"; return; }
+  var s=host/need;
+  sheet.style.width=(100/s)+"%";
+  if(rtl){ sheet.style.left="auto"; sheet.style.right="0"; }
+  else { sheet.style.left="0"; sheet.style.right="auto"; }
+  var need2=sheet.scrollHeight;
+  var s2=Math.min(1, host/Math.max(need2,1));
+  s2=Math.max(0.46, Math.round(s2*1000)/1000);
+  sheet.style.width=(100/s2)+"%";
+  sheet.style.height="auto";
+  sheet.style.transformOrigin=rtl?"top right":"top left";
+  sheet.style.transform="scale("+s2+")";
+}
 
 var book=document.getElementById("book");
 for(var i=1;i<=40;i++) book.appendChild(build(i));
