@@ -91,7 +91,8 @@
         "nl",
         "ka",
         "ckb",
-        "zh-tw"
+        "zh-tw",
+        "pt"
       ],
       "source_article": "_blog/it/posts/babilonia-iraq-guida-visita.html"
     },
@@ -240,7 +241,8 @@
         "cs",
         "el",
         "es",
-        "th"
+        "th",
+        "tr"
       ]
     },
     {
@@ -409,7 +411,9 @@
         "ckb",
         "ja",
         "sv",
-        "es"
+        "es",
+        "zh",
+        "da"
       ]
     },
     {
@@ -422,7 +426,8 @@
       "langs_done": [
         "en",
         "de",
-        "ar"
+        "ar",
+        "it"
       ]
     },
     {
