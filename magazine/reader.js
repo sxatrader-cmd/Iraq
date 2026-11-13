@@ -1,7 +1,7 @@
 /* Renders a translated MESOPOTAMIA issue inside the same page-flip viewer.
    Photographs are cropped from the English press pages so the pictures stay. */
 (function(){
-var LANGS=[["ar","العربية"],["en","English"],["ru","Русский"],["fr","Français"],["it","Italiano"],["es","Español"]];
+var LANGS=[["ar", "العربية"], ["ckb", "کوردی"], ["en", "English"], ["tr", "Türkçe"], ["ru", "Русский"], ["de", "Deutsch"], ["fr", "Français"], ["es", "Español"], ["it", "Italiano"], ["el", "Ελληνικά"], ["cs", "Čeština"], ["pl", "Polski"], ["zh", "简体中文"], ["zh-tw", "繁體中文"], ["ja", "日本語"], ["fa", "فارسی"], ["ms", "Bahasa Melayu"], ["id", "Bahasa Indonesia"], ["th", "ไทย"], ["hi", "हिन्दी"], ["ur", "اردو"], ["ta", "தமிழ்"], ["fi", "Suomi"], ["sv", "Svenska"], ["da", "Dansk"], ["no", "Norsk"], ["sk", "Slovenčina"], ["hr", "Hrvatski"], ["ro", "Română"], ["nl", "Nederlands"], ["ka", "ქართული"], ["ko", "한국어"], ["pt", "Português"], ["vi", "Tiếng Việt"], ["hu", "Magyar"]];
 var RTL={ar:1,ckb:1,fa:1,ur:1};
 function hrefOf(code){return code==="en"?"/magazine/":"/"+code+"/magazine/";}
 function homeOf(code){return code==="ar"?"/":code==="en"?"/en/":"/"+code+"/";}
@@ -500,7 +500,8 @@ function fit(pg){
 }
 
 var book=document.getElementById("book");
-for(var i=1;i<=40;i++) book.appendChild(build(i));
+/* Right-to-left editions are bound on the right: the book is loaded back to front so it opens on the cover and pages turn towards the left. */
+for(var i=1;i<=40;i++){ var pgEl=build(rtl?41-i:i); book.appendChild(pgEl); }
 
 document.getElementById("hint").textContent=ui.hint||"";
 document.getElementById("load").textContent=M.brand||"MESOPOTAMIA";
@@ -519,6 +520,7 @@ sel.addEventListener("change",function(){ location.href=hrefOf(sel.value); });
 var N=40, W=1075, H=1521;
 var startPage=0;
 try{ var qm=/[?#&]p=(\d+)/.exec(location.href); if(qm) startPage=Math.max(0, Math.min(N-1, (+qm[1])-1)); }catch(e){}
+if(rtl) startPage=N-1-startPage;
 var pf=new St.PageFlip(book,{width:W,height:H,size:"stretch",minWidth:280,maxWidth:1300,minHeight:280,maxHeight:1840,
   showCover:true,maxShadowOpacity:.45,mobileScrollSupport:false,flippingTime:850,usePortrait:true,autoSize:true,drawShadow:true,startPage:startPage});
 pf.loadFromHTML(book.querySelectorAll(".pg"));
@@ -554,14 +556,16 @@ function swish(){
   }catch(e){}
 }
 var count=document.getElementById("count"), hint=document.getElementById("hint"), prev=document.getElementById("prev"), next=document.getElementById("next"), first=document.getElementById("first");
-function uiState(){var p=pf.getCurrentPageIndex(); count.textContent=(p+1)+" / "+N; prev.disabled=first.disabled=p<=0; next.disabled=p>=N-1;}
+function uiState(){var p=pf.getCurrentPageIndex(); if(rtl) p=N-1-p; count.textContent=(p+1)+" / "+N;
+  /* In a right-bound book the closed cover sits on the right-hand side. */
+  if(rtl){ var land=pf.getOrientation&&pf.getOrientation()==="landscape"; wrap.style.transition="transform .5s"; wrap.style.transform=(land&&p===0)?"translateX(25%)":(land&&p===N-1)?"translateX(-25%)":""; } prev.disabled=first.disabled=p<=0; next.disabled=p>=N-1;}
 pf.on("flip",function(){uiState(); hint.style.opacity=0; setTimeout(doFit,30)});
 pf.on("changeState",function(e){if(e.data==="flipping") swish()});
 pf.on("init",function(){book.classList.add("ready"); document.getElementById("load").style.display="none"; uiState(); setTimeout(doFit,80)});
 setTimeout(function(){book.classList.add("ready"); document.getElementById("load").style.display="none"; uiState(); doFit()}, 900);
-function goNext(){pf.flipNext()}
-function goPrev(){pf.flipPrev()}
-prev.onclick=goPrev; next.onclick=goNext; first.onclick=function(){pf.flip(0)};
+function goNext(){rtl?pf.flipPrev():pf.flipNext()}
+function goPrev(){rtl?pf.flipNext():pf.flipPrev()}
+prev.onclick=goPrev; next.onclick=goNext; first.onclick=function(){pf.flip(rtl?N-1:0)};
 document.addEventListener("keydown",function(e){
   if(e.key==="ArrowRight") (rtl?goPrev:goNext)();
   if(e.key==="ArrowLeft") (rtl?goNext:goPrev)();
