@@ -442,26 +442,29 @@ function pageClose(t){
 }
 
 function build(n){
-  var t=P[String(n)]||P[n]||{};
-  var sheet;
-  if(n===1) sheet=pageCover(t);
-  else if(n===2) sheet=pageWelcome(t);
-  else if(n===3) sheet=pageLetter(t);
-  else if(n===4) sheet=pageContents(t);
-  else if(n===5) sheet=pageMap(t);
-  else if(n===6||n===10||n===14||n===22||n===28) sheet=pageOpener(n,t);
-  else if(n===18||n===25) sheet=pageBleed(n,t);
-  else if(n===17) sheet=pageTimeline(t);
-  else if(n===34||n===36) sheet=pageItinerary(n,t);
-  else if(n===35||n===37) sheet=pageIncluded(n,t);
-  else if(n===38) sheet=pageGuide(t);
-  else if(n===39) sheet=pageBooking(t);
-  else if(n===40) sheet=pageClose(t);
-  else sheet=pageStory(n,t);
   var pg=el("div","pg");
   if(n===1||n===40) pg.setAttribute("data-density","hard");
-  pg.appendChild(sheet);
+  var img=document.createElement("img");
+  img.className="base";
+  img.alt="";
+  img.draggable=false;
+  img.src="/magazine/p/"+(n<10?"0":"")+n+".jpg";
+  pg.appendChild(img);
+  var layer=el("div","ovs");
+  if(window.MagOverlay) window.MagOverlay.paint(layer, n, {M:M, P:P, L:L, esc:esc});
+  pg.appendChild(layer);
   return pg;
+}
+function fitOverlays(){
+  document.querySelectorAll(".ov").forEach(function(el){
+    if(!el.clientHeight) return;
+    if(!el.dataset.maxPx) el.dataset.maxPx=String(parseFloat(getComputedStyle(el).fontSize)||12);
+    var max=parseFloat(el.dataset.maxPx), s=max, min=Math.max(5, max*0.45), g=0;
+    el.style.fontSize=s+"px";
+    while(el.scrollHeight>el.clientHeight+1 && s>min && g<14){
+      s*=0.9; el.style.fontSize=s+"px"; g++;
+    }
+  });
 }
 
 function fitCover(sheet){
@@ -529,7 +532,7 @@ var pf=new St.PageFlip(book,{width:W,height:H,size:"stretch",minWidth:280,maxWid
   showCover:true,maxShadowOpacity:.45,mobileScrollSupport:false,flippingTime:850,usePortrait:true,autoSize:true,drawShadow:true,startPage:startPage});
 pf.loadFromHTML(book.querySelectorAll(".pg"));
 var stage=document.getElementById("stage"), wrap=document.getElementById("wrap");
-function doFit(){ book.querySelectorAll(".pg").forEach(fit); }
+function doFit(){ fitOverlays(); }
 function fitStage(){
   var sw=stage.clientWidth-16, sh=stage.clientHeight-8;
   var wl=Math.min(sw, sh*2*W/H), portrait=wl<=680;
@@ -540,6 +543,7 @@ function fitStage(){
   setTimeout(doFit, 40);
 }
 window.addEventListener("resize", fitStage); fitStage(); setTimeout(fitStage, 200);
+window.addEventListener("load", function(){ setTimeout(fitOverlays, 80); });
 
 var ctx=null, soundOn=true;
 function swish(){

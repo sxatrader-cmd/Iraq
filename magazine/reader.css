@@ -11,6 +11,37 @@ html[lang="ar"] body,html[lang="fa"] body,html[lang="ckb"] body{font-family:"Not
 #book{visibility:hidden}
 #book.ready{visibility:visible}
 .pg{background:var(--ivory);color:var(--ink);overflow:hidden!important;line-height:1.45}
+.base{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;display:block;pointer-events:none}
+.ovs{position:absolute;inset:0;pointer-events:none}
+.ov{position:absolute;box-sizing:border-box;overflow:hidden;pointer-events:auto;font-size:1.55cqh;line-height:1.32}
+.ov.c{background:#F4F0E7;color:#0C2745}
+.ov.n{background:#0C2745;color:#F7F1E6}
+.ov.sky{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.ov .k{color:#B8955A;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78em;margin:0 0 .25em}
+html[dir="rtl"] .ov .k{letter-spacing:0;text-transform:none;font-size:.92em}
+.ov.n .k{color:#C5A46A}
+.ov h2,.ov .mast{font-weight:400;line-height:1.02;margin:0;color:inherit}
+.ov .mast{font-size:3.6em;text-align:center;letter-spacing:.02em}
+.ov h2{font-size:2.05em}
+.ov .stand{font-style:italic;margin:.35em 0 0}
+.ov .cols{column-count:2;column-gap:1.1em}
+.ov .cols3{column-count:3;column-gap:.8em}
+.ov p{margin:0 0 .45em}
+.ov ul{margin:.2em 0 0;padding:0;list-style:none}
+.ov li{margin:0 0 .28em}
+.ov .split{display:grid;grid-template-columns:1.2fr .8fr;gap:.8em}
+.ov .q4{display:grid;grid-template-columns:repeat(4,1fr);gap:.4em;text-align:center;margin-top:.45em}
+.ov .q4 b{display:block;font-size:.82em;letter-spacing:.04em}
+.ov .q4 span{display:block;font-style:italic;font-size:.75em;color:#E4D8C4}
+.ov .toc{list-style:none;margin:0;padding:0}
+.ov .toc li{display:grid;grid-template-columns:2.4em 1fr;gap:.4em;border-bottom:1px solid rgba(12,39,70,.16);padding:.16em 0}
+.ov .days{list-style:none;margin:0;padding:0}
+.ov .days li{display:grid;grid-template-columns:3.2em 1fr;gap:.35em;border-top:1px solid rgba(12,39,70,.16);padding:.22em 0}
+.ov .box{border-top:2px solid #0C2745;padding-top:.3em}
+.ov.center{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.ov table{width:100%;border-collapse:collapse;font-size:.92em}
+.ov td{vertical-align:top;padding:.15em .4em .15em 0;border-bottom:1px solid rgba(12,39,70,.12)}
+.ov td:first-child{font-weight:700;width:28%}
 html[dir="rtl"] .pg{line-height:1.75}
 .sheet{position:absolute;inset:0;width:auto;height:auto;overflow:auto;font-size:1.72cqw;padding:3.2% 4.4% 2.8%;display:flex;flex-direction:column;gap:.35em}
 .pg{container-type:size}
