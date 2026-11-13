@@ -20,6 +20,19 @@ html[lang="ar"] body,html[lang="fa"] body,html[lang="ckb"] body{font-family:"Not
 .ov .k{color:#B8955A;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78em;margin:0 0 .25em}
 html[dir="rtl"] .ov .k{letter-spacing:0;text-transform:none;font-size:.92em}
 .ov.n .k{color:#C5A46A}
+.ov.n .stand,.ov.n p,.ov.n li{color:#F1EBDD}
+.ov.n b{color:#fff}
+.ov.sky{-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);padding:.7em 1.6em;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(transparent,#000 14%,#000 86%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(transparent,#000 14%,#000 86%,transparent);mask-composite:intersect}
+.ov.n{padding:2.2% 5.5%}
+.ov.sky .k{color:#fff}
+.ov .days.ev li{grid-template-columns:7.5em 1fr}
+.ov .q4i ul{display:grid;grid-template-columns:repeat(4,1fr);gap:.6em}
+.ov .q4i li b,.ov .cols3 li b{display:block}
+.ov .cols3 ul{margin:0}
+.ov .cols3 li{break-inside:avoid}
+.ov h3{font-size:1.15em;margin:.15em 0 .3em;font-weight:700}
+.ov .big{font-size:1.8em;color:#B8955A}
+.ov .capl{color:#3d4a63;font-size:.9em}
 .ov h2,.ov .mast{font-weight:400;line-height:1.02;margin:0;color:inherit}
 .ov .mast{font-size:3.6em;text-align:center;letter-spacing:.02em}
 .ov h2{font-size:2.05em}
