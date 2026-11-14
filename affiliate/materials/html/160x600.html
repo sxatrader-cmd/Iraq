@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=160">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:160px;height:600px;overflow:hidden;background:#1B2A47}
+a.go{display:block;position:relative;width:160px;height:600px;text-decoration:none;color:#fff;overflow:hidden;font-family:"IBM Plex Sans Arabic","Noto Naskh Arabic",Tahoma,sans-serif}
+.slides,.slides span{position:absolute;inset:0}
+.slides span{background:center/cover no-repeat;opacity:0;animation:show 12s infinite;transform:scale(1.08)}
+.slides span:nth-child(1){animation-delay:0s}
+.slides span:nth-child(2){animation-delay:3s}
+.slides span:nth-child(3){animation-delay:6s}
+.slides span:nth-child(4){animation-delay:9s}
+@keyframes show{0%{opacity:0;transform:scale(1.08)}8%{opacity:1}25%{opacity:1;transform:scale(1)}33%{opacity:0}100%{opacity:0}}
+html.frame .slides span{animation:none!important;opacity:0!important;transform:none!important}
+html.frame-0 .slides span:nth-child(1),
+html.frame-1 .slides span:nth-child(2),
+html.frame-2 .slides span:nth-child(3),
+html.frame-3 .slides span:nth-child(4){opacity:1!important}
+.veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,42,71,.92) 0%,rgba(27,42,71,.55) 46%,rgba(27,42,71,.15) 100%)}
+.gold{position:absolute;left:0;right:0;bottom:0;height:5px;background:#B8955A}
+.copy{position:absolute;inset:0;display:flex;color:#fff}
+.logo{width:var(--logo);height:var(--logo);border-radius:50%;background:#fff;box-shadow:0 0 0 3px #B8955A;object-fit:cover;flex:none}
+.name{font-family:"Libre Baskerville",Georgia,serif;letter-spacing:.14em;text-transform:uppercase;color:#EFE3C8}
+.ar{font-weight:700;line-height:1.15}
+.en{color:#D9C08E;letter-spacing:.04em}
+.cta{display:inline-block;background:#B8955A;color:#1B2A47;font-weight:700;border-radius:3px;line-height:1}
+body.micro{--logo:34px}
+body.micro .veil{background:linear-gradient(90deg,rgba(27,42,71,.94),rgba(27,42,71,.72))}
+body.micro .copy{align-items:center;gap:8px;padding:0 10px}
+body.micro .ar{font-size:15px}
+body.micro .en{font-size:11px}
+body.micro .stack{display:flex;flex-direction:column;min-width:0}
+body.leader{--logo:52px}
+body.leader .copy{align-items:center;gap:14px;padding:0 16px}
+body.leader .ar{font-size:22px}
+body.leader .en{font-size:13px}
+body.leader .cta{margin-inline-start:auto;padding:8px 12px;font-size:14px}
+body.board .veil{background:linear-gradient(90deg,rgba(27,42,71,.94) 0%,rgba(27,42,71,.72) 42%,rgba(27,42,71,.1) 100%)}
+body.board{--logo:84px}
+body.board .copy{flex-direction:column;justify-content:center;align-items:flex-start;gap:8px;padding:22px 28px;max-width:62%}
+body.board .ar{font-size:42px;font-family:Amiri,Georgia,serif}
+body.board .en{font-size:18px}
+body.board .cta{margin-top:6px;padding:10px 16px;font-size:16px}
+body.rect .veil,body.half .veil,body.sky .veil,body.square .veil,body.story .veil{background:linear-gradient(180deg,rgba(27,42,71,.15) 0%,rgba(27,42,71,.2) 40%,rgba(27,42,71,.94) 100%)}
+body.rect{--logo:48px}
+body.rect .copy,body.half .copy,body.sky .copy,body.square .copy,body.story .copy{flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:4px;padding:14px}
+body.rect .ar{font-size:22px}
+body.rect .en{font-size:13px}
+body.rect .cta{margin-top:6px;padding:7px 10px;font-size:13px}
+body.half{--logo:64px}
+body.half .ar{font-size:32px;font-family:Amiri,Georgia,serif}
+body.half .en{font-size:15px}
+body.half .cta{margin-top:8px;padding:10px 14px;font-size:15px}
+body.sky{--logo:64px}
+body.sky .copy{align-items:center;text-align:center;padding:16px 10px}
+body.sky .ar{font-size:26px;font-family:Amiri,Georgia,serif}
+body.sky .en{font-size:13px}
+body.sky .cta{margin-top:10px;padding:8px 10px;font-size:13px}
+body.square{--logo:96px}
+body.square .copy{padding:36px;gap:8px}
+body.square .ar{font-size:64px;font-family:Amiri,Georgia,serif}
+body.square .en{font-size:22px}
+body.square .cta{margin-top:12px;padding:14px 22px;font-size:20px}
+body.story{--logo:120px}
+body.story .copy{padding:48px 36px 64px;gap:10px}
+body.story .ar{font-size:72px;font-family:Amiri,Georgia,serif}
+body.story .en{font-size:26px}
+body.story .cta{margin-top:16px;padding:16px 26px;font-size:24px}
+</style>
+</head>
+<body class="sky">
+<a class="go" id="go" href="https://iraq.fabletour.com/">
+  <div class="slides"><span style="background-image:url('https://iraq.fabletour.com/img/babylon-ishtar-gate.webp')"></span>
+<span style="background-image:url('https://iraq.fabletour.com/img/ur-ziggurat.webp')"></span>
+<span style="background-image:url('https://iraq.fabletour.com/img/marshes-mashoof.webp')"></span>
+<span style="background-image:url('https://iraq.fabletour.com/img/samarra-malwiya.webp')"></span></div>
+  <div class="veil"></div>
+  <div class="copy"><img class="logo" src="https://iraq.fabletour.com/logo.png" alt="">
+<div class="name">Fable Tour</div>
+<div class="ar">العراق</div>
+<div class="en">Babylon<br>Ur<br>Marshes</div>
+<span class="cta">احجز · Book</span></div>
+  <div class="gold"></div>
+</a>
+<script>
+var ref = new URLSearchParams(location.search).get("ref") || "";
+var frame = new URLSearchParams(location.search).get("frame");
+if (frame !== null && frame !== "") document.documentElement.className = "frame frame-" + frame;
+if (/^[A-Za-z0-9]{4,12}$/.test(ref)) {
+  document.getElementById("go").href = "https://iraq.fabletour.com/?ref=" + encodeURIComponent(ref.toUpperCase());
+}
+</script>
+</body>
+</html>

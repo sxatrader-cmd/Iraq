@@ -124,6 +124,17 @@ footer .logo b{font-size:16px}
 .sites b{font-weight:500;opacity:.75}
 .sites a{color:var(--gold);text-decoration:none}
 .sites a:hover{text-decoration:underline}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.filters button{background:#fff;color:var(--navy);border:1px solid var(--gold);border-radius:999px;padding:6px 12px;font:600 13px inherit;cursor:pointer}
+.filters button.on{background:var(--gold);color:var(--navy)}
+.mat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.mat{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.mat-prev{background:var(--navy);border-radius:4px;display:grid;place-items:center;min-height:120px;overflow:hidden}
+.mat-prev img,.mat-prev iframe{max-width:100%;max-height:280px;border:0}
+.mat-prev.wide img{max-height:120px}
+.mat b.dim{font:600 13px var(--sans-en);color:var(--navy);letter-spacing:.04em}
+.mat .row{display:flex;flex-wrap:wrap;gap:8px}
+.mat textarea{width:100%;min-height:72px;border:1px solid var(--line);border-radius:4px;padding:8px;font:12px ui-monospace,monospace;color:var(--ink);background:var(--panel);direction:ltr;text-align:left}
 .wa-float{position:fixed;inset-inline-start:18px;bottom:20px;z-index:30;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(37,211,102,.4)}
 .wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:30px;height:30px;fill:#fff}

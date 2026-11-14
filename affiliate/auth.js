@@ -347,7 +347,7 @@ function ensureLib(done) {
       sb.auth.signInWithPassword({ email: email, password: password }).then(function (result) {
         if (result.error) throw result.error;
         var next = new URLSearchParams(location.search).get("next");
-        location.href = next === "admin" ? "admin.html" : "dashboard.html";
+        location.href = next === "admin" ? "admin.html" : next === "materials" ? "materials.html" : "dashboard.html";
       }).catch(function (error) {
         show("f-msg", human(error), "err");
         button.disabled = false;
@@ -473,6 +473,10 @@ function ensureLib(done) {
         window.FT_PW.apply(lang.value, true);
         return;
       }
+      if (page === "materials" && window.FTMaterials) {
+        window.FTMaterials.apply(lang.value, true);
+        return;
+      }
       var value = lang.value;
       location.href = "/" + (value === "ar" ? "" : value + "/");
     });
@@ -500,8 +504,31 @@ function ensureLib(done) {
           if (!result.data.session) return;
           if (page === "signup") { location.href = "dashboard.html"; return; }
           var next = new URLSearchParams(location.search).get("next");
-          location.href = next === "admin" ? "admin.html" : "dashboard.html";
+          location.href = next === "admin" ? "admin.html" : next === "materials" ? "materials.html" : "dashboard.html";
         }).catch(function () {});
+      });
+      return;
+    }
+
+    if (page === "materials") {
+      connect(function (sb, code) {
+        if (!sb) { showProblem("gate", code || "library"); return; }
+        sb.auth.getSession().then(function (result) {
+          var session = result.data.session;
+          if (!session) { location.replace("login.html?next=materials"); return null; }
+          return sb.from("aff_affiliates").select("referral_code,full_name").eq("id", session.user.id).maybeSingle();
+        }).then(function (profile) {
+          if (!profile) return;
+          if (profile.error || !profile.data) {
+            showProblem("gate", "keys");
+            return;
+          }
+          if (window.FTMaterials) window.FTMaterials.show(profile.data.referral_code);
+          logout(sb);
+        }).catch(function (error) {
+          var gate = document.getElementById("gate");
+          if (gate) { gate.hidden = false; gate.textContent = human(error); }
+        });
       });
       return;
     }
