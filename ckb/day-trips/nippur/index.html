@@ -1390,7 +1390,7 @@ function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0"
 function upd(){var priv=sel.value==="";pf.hidden=!priv;pd.required=priv;var t=prog&&prog.selectedIndex===1?"9":"7";var m=new Date();m.setDate(m.getDate()+LEAD[t]);pd.min=iso(m);if(pd.value&&pd.value<pd.min)pd.value="";}
 sel.addEventListener("change",upd);if(prog)prog.addEventListener("change",function(){setTimeout(upd,0);});
 new MutationObserver(function(){setTimeout(upd,0);}).observe(sel,{childList:true});
-document.addEventListener("click",function(e){if(e.target.closest("[data-book]"))setTimeout(upd,0);});upd();})();</script><script id="dts-js">(function(){
+document.addEventListener("click",function(e){if(e.target.closest("[data-book]"))setTimeout(upd,0);});upd();})();</script><script src="/pdate-dmy.js" defer></script><script id="dts-js">(function(){
 var cards=[].slice.call(document.querySelectorAll(".dt-ph[data-full]")).filter(function(p){return p.dataset.full.indexOf("|")>-1;});
 if(!cards.length)return;
 cards.forEach(function(ph){
