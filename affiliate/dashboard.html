@@ -66,6 +66,32 @@
         <button class="ft-bk-b" type="button" id="copy" data-ui="copy">نسخ الرابط</button>
       </div>
       <p class="note" data-ui="daNote">الزيارة تُحسب عند فتح الرابط. الحجز يُحسب فقط إذا أرسل الزائر نموذج الحجز الموجود في الموقع، ويبقى البريد إلى فريق Fable Tour كما هو.</p>
+      <div class="sec-head" id="team">
+        <span class="eyebrow" data-team="eye">الفريق</span>
+        <h2 class="disp" data-team="h">التجنيد والعمولات</h2>
+        <p data-team="lead">العمولة 10٪ من قيمة الحجز. بلا راعٍ تأخذها كلها. مع راعٍ واحد: 5٪ لك و5٪ له. ومع راعٍ أعلى: 5٪ لك و2.5٪ لكل منهما. لا مستوى ثالث.</p>
+      </div>
+      <div class="ft-book">
+        <span class="ft-bk-x"><span class="ft-bk-k" data-team="recruit">رابط التجنيد</span><span class="ft-bk-t ref-url" id="sponsor-link"></span></span>
+        <button class="ft-bk-b" type="button" id="sponsor-copy" data-team="copy">نسخ الرابط</button>
+      </div>
+      <p class="note" id="team-wait" hidden></p>
+      <div class="stats" id="earn-stats" aria-label="الأرباح">
+        <div class="stat"><strong id="e-own-p">—</strong><span data-team="ownPending">مبيعاتي المعلّقة</span></div>
+        <div class="stat"><strong id="e-own-c">—</strong><span data-team="ownOk">مبيعاتي المؤكدة</span></div>
+        <div class="stat"><strong id="e-team-p">—</strong><span data-team="teamPending">عمولة الفريق المعلّقة</span></div>
+        <div class="stat"><strong id="e-team-c">—</strong><span data-team="teamOk">عمولة الفريق المؤكدة</span></div>
+      </div>
+      <div class="sec-head"><h2 class="disp" data-team="direct">المجنّدون مباشرة</h2></div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th data-team="name">الاسم</th><th data-team="joined">تاريخ الانضمام</th><th data-team="books">الحجوزات</th></tr></thead>
+        <tbody id="team-direct"></tbody>
+      </table></div>
+      <div class="sec-head"><h2 class="disp" data-team="second">المستوى الثاني</h2></div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th data-team="name">الاسم</th><th data-team="joined">تاريخ الانضمام</th><th data-team="books">الحجوزات</th></tr></thead>
+        <tbody id="team-second"></tbody>
+      </table></div>
       
     <div class="stats" aria-label="الملخص">
       <div class="stat"><strong id="n-clicks">0</strong><span data-ui="visits">الزيارات</span></div>
@@ -132,8 +158,9 @@
 <a class="wa-float" href="https://wa.me/9647711745353" target="_blank" rel="noopener" data-ui-aria="wa" aria-label="واتساب"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.6 3.6 0 0 0-1.1 2.6 6.2 6.2 0 0 0 1.3 3.3 14.2 14.2 0 0 0 5.4 4.8c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.1 24l6.4-1.7A11.8 11.8 0 0 0 12 23.7 11.8 11.8 0 0 0 20.4 3.5z"/></svg></a>
 <script src="/affiliate/config.js?v=9"></script>
 <script src="/affiliate/ui.js?v=9"></script>
-<script src="/affiliate/materials.js?v=9"></script>
+<script src="/affiliate/team.js?v=10"></script>
+<script src="/affiliate/materials.js?v=10"></script>
 <script src="/affiliate/vendor/supabase.js?v=9"></script>
-<script src="/affiliate/auth.js?v=9"></script>
+<script src="/affiliate/auth.js?v=10"></script>
 </body>
 </html>

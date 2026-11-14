@@ -4,6 +4,66 @@
 
   var CFG = window.FT_AFFILIATE_CONFIG || {};
   var STATUS = { pending: "مبدئي", confirmed: "مؤكد", cancelled: "ملغي" };
+  var SPONSOR_MS = 10 * 365 * 24 * 60 * 60 * 1000;
+
+  function normSponsor(raw) {
+    if (raw == null) return "";
+    var code = String(raw).trim().toUpperCase();
+    return /^[A-Z0-9]{4,12}$/.test(code) ? code : "";
+  }
+  function readCookie(name) {
+    var parts = String(document.cookie || "").split(";");
+    var i, bit;
+    for (i = 0; i < parts.length; i++) {
+      bit = parts[i].replace(/^\s+/, "");
+      if (bit.indexOf(name + "=") === 0) return decodeURIComponent(bit.slice(name.length + 1));
+    }
+    return "";
+  }
+  function parseSponsor(raw, now) {
+    if (!raw) return null;
+    var text = String(raw).trim();
+    var dot = text.lastIndexOf(".");
+    if (dot > 0) {
+      var code = normSponsor(text.slice(0, dot));
+      var exp = parseInt(text.slice(dot + 1), 10);
+      if (!code || !exp || now > exp) return null;
+      return { code: code, exp: exp };
+    }
+    var legacy = normSponsor(text);
+    return legacy ? { code: legacy, exp: now + SPONSOR_MS } : null;
+  }
+  function writeSponsor(code, exp) {
+    var bag = code + "." + exp;
+    var maxAge = Math.max(0, Math.round((exp - Date.now()) / 1000));
+    var secure = location.protocol === "https:" ? "; Secure" : "";
+    document.cookie = "ft_sponsor=" + encodeURIComponent(bag) + "; Max-Age=" + maxAge + "; Path=/; SameSite=Lax" + secure;
+    try { localStorage.setItem("ft_sponsor", bag); } catch (e) {}
+  }
+  function currentSponsor() {
+    var now = Date.now();
+    var cookie = "", storage = "";
+    try { cookie = readCookie("ft_sponsor"); } catch (e) {}
+    try { storage = localStorage.getItem("ft_sponsor") || ""; } catch (e) {}
+    var bag = parseSponsor(cookie, now) || parseSponsor(storage, now);
+    return bag ? bag.code : "";
+  }
+  function captureSponsor() {
+    var now = Date.now();
+    var query = "";
+    try { query = normSponsor(new URLSearchParams(location.search).get("sponsor")); } catch (e) {}
+    if (query) { writeSponsor(query, now + SPONSOR_MS); return; }
+    var cookie = "", storage = "";
+    try { cookie = readCookie("ft_sponsor"); } catch (e) {}
+    try { storage = localStorage.getItem("ft_sponsor") || ""; } catch (e) {}
+    var bag = parseSponsor(cookie, now) || parseSponsor(storage, now);
+    if (bag && storage !== bag.code + "." + bag.exp) writeSponsor(bag.code, bag.exp);
+  }
+  function missingFeature(error) {
+    var message = ((error && (error.message || error.details || error.hint)) || "") + "";
+    var code = (error && error.code) || "";
+    return code === "PGRST202" || code === "42883" || code === "42P01" || code === "42703" || /schema cache|could not find|does not exist|aff_my_team|aff_confirm_booking|aff_commissions|sponsor_id/i.test(message);
+  }
 
 var MSG = {
   keys: "مفاتيح Supabase غير موجودة في الملف affiliate/config.js. الصق رابط المشروع والمفتاح العام ثم أعد نشر الموقع.",
@@ -160,7 +220,7 @@ function ensureLib(done) {
   }
 
   function bookingRows(list, names, admin) {
-    var cols = admin ? 8 : 7;
+    var cols = admin ? 9 : 7;
     if (!list.length) {
       var empty = admin ? "لا توجد حجوزات بعد." : t("empty");
       return '<tr><td class="empty" colspan="' + cols + '">' + esc(empty) + "</td></tr>";
@@ -172,7 +232,7 @@ function ensureLib(done) {
       if (admin) {
         var commission = row.commission == null ? "" : String(row.commission);
         actions = '<td><div class="act">' +
-          '<input class="comm" type="number" min="0" step="0.01" inputmode="decimal" placeholder="العمولة $" value="' + esc(commission) + '" aria-label="مبلغ العمولة">' +
+          '<input class="comm" type="number" min="0" step="0.01" inputmode="decimal" placeholder="قيمة الحجز $" value="' + esc(row.amount != null ? row.amount : "") + '" aria-label="قيمة الحجز">' +
           '<button class="btn slim" type="button" data-act="confirmed" data-id="' + esc(row.id) + '">تأكيد</button>' +
           '<button class="btn slim quiet" type="button" data-act="cancelled" data-id="' + esc(row.id) + '">رفض</button>' +
           (row.status === "pending" ? "" : '<button class="btn slim quiet" type="button" data-act="pending" data-id="' + esc(row.id) + '">إرجاع</button>') +
@@ -187,6 +247,7 @@ function ensureLib(done) {
         "<td>" + people + "</td>" +
         "<td><span class=\"badge " + esc(row.status) + "\">" + esc(admin ? (STATUS[row.status] || row.status) : t({ pending: "stPending", confirmed: "stConfirmed", cancelled: "stCancelled" }[row.status] || "stPending")) + "</span>" +
           (row.status === "confirmed" ? '<span class="who">' + esc(money(row.commission)) + "</span>" : "") + "</td>" +
+        (admin ? '<td class="split" data-split="' + esc(row.id) + '"></td>' : "") +
         actions +
         "</tr>";
     }).join("");
@@ -194,15 +255,26 @@ function ensureLib(done) {
 
   function sample() {
     var affiliates = [
-      { id: "a1", full_name: "أحمد كريم", phone: "+9647701234567", email: "ahmad@example.com", referral_code: "A7K3QM", is_admin: false, created_at: "2026-10-02T09:00:00Z", clicks: 18, bookings: 2, confirmed: 1, commission: 150 },
-      { id: "a2", full_name: "سارة محمد", phone: "+9647809876543", email: "sara@example.com", referral_code: "S4M8PL", is_admin: false, created_at: "2026-11-01T12:30:00Z", clicks: 7, bookings: 1, confirmed: 0, commission: 0 }
+      { id: "a1", full_name: "أحمد كريم", phone: "+9647701234567", email: "ahmad@example.com", referral_code: "A7K3QM", is_admin: false, sponsor_id: null, sponsor_name: null, sponsor_code: null, created_at: "2026-10-02T09:00:00Z", clicks: 18, bookings: 1, confirmed: 1, commission: 250 },
+      { id: "a2", full_name: "سارة محمد", phone: "+9647809876543", email: "sara@example.com", referral_code: "S4M8PL", is_admin: false, sponsor_id: "a1", sponsor_name: "أحمد كريم", sponsor_code: "A7K3QM", created_at: "2026-11-01T12:30:00Z", clicks: 7, bookings: 1, confirmed: 0, commission: 0 },
+      { id: "a3", full_name: "ليلى كريم", phone: "+9647901122334", email: "layla.k@example.com", referral_code: "L2K9RT", is_admin: false, sponsor_id: "a2", sponsor_name: "سارة محمد", sponsor_code: "S4M8PL", created_at: "2026-11-10T08:00:00Z", clicks: 4, bookings: 2, confirmed: 1, commission: 100 }
     ];
     var bookings = [
-      { id: "b1", affiliate_id: "a1", customer_name: "علي حسين", customer_phone: "+9647501112233", customer_email: "ali@example.com", program: "رحلة التراث العراقي: 7 أيام / 6 ليالٍ — $2,500", travel_date: "2026-12-20", people: "4", language: "ar", page_url: "/", status: "pending", commission: null, created_at: "2026-11-12T14:05:00Z" },
-      { id: "b2", affiliate_id: "a1", customer_name: "ليلى أحمد", customer_phone: "+9647510009988", customer_email: "layla@example.com", program: "العراق كله من البصرة إلى أربيل: 9 أيام / 8 ليالٍ — $3,400", travel_date: "الجمعة، 4 ديسمبر 2026", people: "—", language: "ar", page_url: "/tours/iraq-9-day-tour/", status: "confirmed", commission: 150, created_at: "2026-11-08T10:20:00Z" },
-      { id: "b3", affiliate_id: "a2", customer_name: "جون سميث", customer_phone: "+447700900123", customer_email: "john@example.com", program: "رحلة بغداد وبابل وسامراء: 6 أيام / 5 ليالٍ — $1,200", travel_date: "2027-01-15", people: "2", language: "en", page_url: "/en/", status: "cancelled", commission: null, created_at: "2026-11-10T16:40:00Z" }
+      { id: "b1", affiliate_id: "a1", customer_name: "علي حسين", customer_phone: "+9647501112233", customer_email: "ali@example.com", program: "رحلة التراث العراقي: 7 أيام / 6 ليالٍ — $2,500", travel_date: "2026-12-20", people: "4", language: "ar", page_url: "/", status: "pending", amount: null, commission: null, created_at: "2026-11-12T14:05:00Z" },
+      { id: "b2", affiliate_id: "a1", customer_name: "ليلى أحمد", customer_phone: "+9647510009988", customer_email: "layla@example.com", program: "العراق كله من البصرة إلى أربيل: 9 أيام / 8 ليالٍ — $3,400", travel_date: "الجمعة، 4 ديسمبر 2026", people: "—", language: "ar", page_url: "/tours/iraq-9-day-tour/", status: "confirmed", amount: 2500, commission: 250, created_at: "2026-11-08T10:20:00Z" },
+      { id: "b4", affiliate_id: "a3", customer_name: "نورا سعيد", customer_phone: "+9647705556677", customer_email: "nora@example.com", program: "رحلة التراث العراقي: 7 أيام / 6 ليالٍ — $2,500", travel_date: "2026-12-04", people: "2", language: "ar", page_url: "/", status: "confirmed", amount: 2000, commission: 100, created_at: "2026-11-11T09:00:00Z" },
+      { id: "b5", affiliate_id: "a3", customer_name: "هدى جاسم", customer_phone: "+9647718889900", customer_email: "huda@example.com", program: "رحلة بغداد وبابل وسامراء: 6 أيام / 5 ليالٍ — $1,200", travel_date: "2027-01-08", people: "2", language: "ar", page_url: "/", status: "pending", amount: 1000, commission: null, created_at: "2026-11-13T11:00:00Z" }
     ];
-    return { affiliates: affiliates, bookings: bookings, me: affiliates[0] };
+    var commissions = [
+      { booking_id: "b2", affiliate_id: "a1", level: 0, rate: 0.1, amount: 250, status: "confirmed" },
+      { booking_id: "b4", affiliate_id: "a3", level: 0, rate: 0.05, amount: 100, status: "confirmed" },
+      { booking_id: "b4", affiliate_id: "a2", level: 1, rate: 0.025, amount: 50, status: "confirmed" },
+      { booking_id: "b4", affiliate_id: "a1", level: 2, rate: 0.025, amount: 50, status: "confirmed" },
+      { booking_id: "b5", affiliate_id: "a3", level: 0, rate: 0.05, amount: 50, status: "pending" },
+      { booking_id: "b5", affiliate_id: "a2", level: 1, rate: 0.025, amount: 25, status: "pending" },
+      { booking_id: "b5", affiliate_id: "a1", level: 2, rate: 0.025, amount: 25, status: "pending" }
+    ];
+    return { affiliates: affiliates, bookings: bookings, commissions: commissions, me: affiliates[0] };
   }
 
   function copyLink(button, text) {
@@ -267,7 +339,7 @@ function ensureLib(done) {
         email: email,
         password: password,
         options: {
-          data: { full_name: name, phone: phone },
+          data: { full_name: name, phone: phone, sponsor: currentSponsor() || undefined },
           emailRedirectTo: location.origin + "/affiliate/login.html"
         }
       }).then(function (result) {
@@ -405,10 +477,80 @@ function ensureLib(done) {
     copy.onclick = function () { copyLink(copy, url); };
     paintStats(totals(bookings), clicks);
     document.getElementById("rows").innerHTML = bookingRows(bookings, null, false);
+    if (window.FTTeam) {
+      var origin = String(CFG.siteOrigin || "https://iraq.fabletour.com").replace(/\/$/, "");
+      FTTeam.setLink(origin + "/affiliate/?sponsor=" + encodeURIComponent(me.referral_code));
+    }
     if (window.FTMaterials) window.FTMaterials.show(me.referral_code);
   }
 
-  function drawAdmin(affiliates, bookings) {
+  function paintSplits(rows, names) {
+    document.querySelectorAll("[data-split]").forEach(function (cell) {
+      var id = cell.getAttribute("data-split");
+      var mine = (rows || []).filter(function (row) { return row.booking_id === id; });
+      mine.sort(function (a, b) { return a.level - b.level; });
+      if (!mine.length) { cell.textContent = "—"; return; }
+      cell.innerHTML = mine.map(function (row) {
+        var who = names[row.affiliate_id] || "";
+        var label = row.level === 0 ? "البائع" : row.level === 1 ? "الراعي" : "الأعلى";
+        var pct = Math.round(Number(row.rate) * 1000) / 10;
+        return "<div><b>" + esc(label) + "</b> " + esc(who) + " · " + esc(money(row.amount)) + ' <span class="who" dir="ltr">' + esc(pct) + "%</span></div>";
+      }).join("");
+    });
+  }
+
+  function legacyShare(amount) {
+    if (amount == null || amount === "") return null;
+    var number = Number(amount);
+    if (!isFinite(number)) return null;
+    return Math.round(number * 10) / 100;
+  }
+  function saveBooking(sb, id, status, amount) {
+    return sb.rpc("aff_confirm_booking", { p_id: id, p_status: status, p_amount: amount }).then(function (result) {
+      if (result.error && missingFeature(result.error)) {
+        return sb.rpc("aff_set_booking_status", {
+          p_id: id,
+          p_status: status,
+          p_commission: status === "confirmed" ? legacyShare(amount) : null
+        });
+      }
+      if (result.error) throw result.error;
+      return result;
+    });
+  }
+  function loadTeam(sb, me) {
+    if (!window.FTTeam) return;
+    sb.rpc("aff_my_team").then(function (team) {
+      if (team.error) {
+        if (missingFeature(team.error)) { FTTeam.unavailable(); return null; }
+        throw team.error;
+      }
+      FTTeam.showTeam(team.data || []);
+      return sb.from("aff_commissions").select("level,amount,status").eq("affiliate_id", me.id);
+    }).then(function (pay) {
+      if (!pay) return;
+      if (pay.error) {
+        if (missingFeature(pay.error)) FTTeam.unavailable();
+        return;
+      }
+      var sum = sumEarnings(pay.data || []);
+      FTTeam.showEarnings(sum.ownP, sum.ownC, sum.teamP, sum.teamC);
+    }).catch(function (error) {
+      if (missingFeature(error) && window.FTTeam) FTTeam.unavailable();
+    });
+  }
+  function sumEarnings(rows) {
+    var out = { ownP: 0, ownC: 0, teamP: 0, teamC: 0 };
+    (rows || []).forEach(function (row) {
+      var n = Number(row.amount) || 0;
+      var own = Number(row.level) === 0;
+      if (row.status === "confirmed") { if (own) out.ownC += n; else out.teamC += n; }
+      else if (row.status === "pending") { if (own) out.ownP += n; else out.teamP += n; }
+    });
+    return out;
+  }
+
+  function drawAdmin(affiliates, bookings, splits) {
     var app = document.getElementById("app");
     app.hidden = false;
     var clicks = 0;
@@ -418,11 +560,17 @@ function ensureLib(done) {
       names[row.id] = row.full_name;
     });
     var sum = totals(bookings);
+    var paid = sum.commission;
+    if (splits && splits.length) {
+      paid = splits.reduce(function (acc, row) {
+        return acc + (row.status === "confirmed" ? Number(row.amount) || 0 : 0);
+      }, 0);
+    }
     var nodes = {
       "a-partners": affiliates.length,
       "a-clicks": clicks,
       "a-ok": sum.confirmed,
-      "a-money": money(sum.commission)
+      "a-money": money(paid)
     };
     Object.keys(nodes).forEach(function (id) {
       var node = document.getElementById(id);
@@ -433,13 +581,15 @@ function ensureLib(done) {
         "<span class=\"who\" dir=\"ltr\">" + esc(row.email) + "</span></td>" +
         "<td dir=\"ltr\">" + esc(row.phone || "—") + "</td>" +
         "<td dir=\"ltr\">" + esc(row.referral_code) + "</td>" +
+        "<td>" + (row.sponsor_code ? esc(row.sponsor_name || "—") + ' <span class="who" dir="ltr">' + esc(row.sponsor_code) + "</span>" : "—") + "</td>" +
         "<td class=\"num\">" + esc(row.clicks) + "</td>" +
         "<td class=\"num\">" + esc(row.bookings) + "</td>" +
         "<td class=\"num\">" + esc(row.confirmed) + "</td>" +
         "<td class=\"num\">" + esc(money(row.commission)) + "</td>" +
         "<td>" + esc(when(row.created_at)) + "</td></tr>";
-    }).join("") : '<tr><td class="empty" colspan="8">لا يوجد شركاء بعد.</td></tr>';
+    }).join("") : '<tr><td class="empty" colspan="9">لا يوجد شركاء بعد.</td></tr>';
     document.getElementById("rows").innerHTML = bookingRows(bookings, names, true);
+    paintSplits(splits, names);
   }
 
   function bindAdminActions(apply) {
@@ -457,7 +607,7 @@ function ensureLib(done) {
         if (raw !== "") {
           commission = Number(raw);
           if (!isFinite(commission) || commission < 0) {
-            show("act-msg", "اكتب مبلغ عمولة صفراً أو أكثر، أو اترك الحقل فارغاً.", "err");
+            show("act-msg", "اكتب قيمة الحجز صفراً أو أكثر، أو اترك الحقل فارغاً.", "err");
             return;
           }
         }
@@ -499,6 +649,7 @@ function ensureLib(done) {
   }
 
   function start() {
+    captureSponsor();
     var page = document.body.getAttribute("data-page");
     if (page !== "reset" && window.FT_PW && window.FT_PW.isRecovery()) {
       location.replace("/affiliate/reset.html" + location.search + location.hash);
@@ -510,6 +661,7 @@ function ensureLib(done) {
       if (window.FT_UI) window.FT_UI.apply(lang.value, true);
       if (window.FT_PW) window.FT_PW.apply(lang.value, false);
       if (window.FTMaterials) window.FTMaterials.apply(lang.value, false);
+      if (window.FTTeam) window.FTTeam.apply();
       if (dashCache) drawDashboard(dashCache.me, dashCache.clicks, dashCache.bookings);
     });
 
@@ -569,27 +721,30 @@ function ensureLib(done) {
       var demo = sample();
       document.getElementById("preview").hidden = false;
       drawDashboard(demo.me, demo.me.clicks, demo.bookings.filter(function (row) { return row.affiliate_id === demo.me.id; }));
+      if (window.FTTeam) {
+        var mine = demo.commissions.filter(function (row) { return row.affiliate_id === demo.me.id; });
+        var earned = sumEarnings(mine);
+        FTTeam.showTeam([
+          { full_name: "سارة محمد", created_at: "2026-11-01T12:30:00Z", depth: 1, bookings: 1 },
+          { full_name: "ليلى كريم", created_at: "2026-11-10T08:00:00Z", depth: 2, bookings: 2 }
+        ]);
+        FTTeam.showEarnings(earned.ownP, earned.ownC, earned.teamP, earned.teamC);
+      }
       logout(null);
       return;
     }
     if (page === "admin" && preview) {
       var data = sample();
       document.getElementById("preview").hidden = false;
-      drawAdmin(data.affiliates, data.bookings);
-      bindAdminActions(function (id, status, commission) {
+      drawAdmin(data.affiliates, data.bookings, data.commissions);
+      bindAdminActions(function (id, status, amount) {
         data.bookings.forEach(function (row) {
           if (row.id !== id) return;
           row.status = status;
-          row.commission = status === "confirmed" ? commission : null;
+          row.amount = status === "pending" ? null : (status === "confirmed" ? amount : row.amount);
+          row.commission = status === "confirmed" && amount != null ? legacyShare(amount) : null;
         });
-        data.affiliates.forEach(function (person) {
-          var mine = data.bookings.filter(function (row) { return row.affiliate_id === person.id; });
-          var sum = totals(mine);
-          person.bookings = sum.all;
-          person.confirmed = sum.confirmed;
-          person.commission = sum.commission;
-        });
-        drawAdmin(data.affiliates, data.bookings);
+        drawAdmin(data.affiliates, data.bookings, data.commissions);
       });
       logout(null);
       return;
@@ -619,6 +774,7 @@ function ensureLib(done) {
             ]).then(function (parts) {
               if (parts[1].error) throw parts[1].error;
               drawDashboard(profile.data, parts[0].count || 0, parts[1].data || []);
+              loadTeam(sb, profile.data);
               var adminLink = document.getElementById("admin-link");
               if (adminLink) adminLink.hidden = !profile.data.is_admin;
             });
@@ -644,11 +800,15 @@ function ensureLib(done) {
           }
           return Promise.all([
             sb.from("aff_affiliate_stats").select("*").order("created_at", { ascending: false }),
-            sb.from("aff_bookings").select("*").order("created_at", { ascending: false })
+            sb.from("aff_bookings").select("*").order("created_at", { ascending: false }),
+            sb.from("aff_commissions").select("booking_id,affiliate_id,level,rate,amount,status")
           ]).then(function (parts) {
             if (parts[0].error) throw parts[0].error;
             if (parts[1].error) throw parts[1].error;
-            drawAdmin(parts[0].data || [], parts[1].data || []);
+            var splits = [];
+            if (parts[2] && !parts[2].error) splits = parts[2].data || [];
+            else if (parts[2] && parts[2].error && !missingFeature(parts[2].error)) throw parts[2].error;
+            drawAdmin(parts[0].data || [], parts[1].data || [], splits);
           });
         }).catch(function (error) {
           document.getElementById("gate").hidden = false;
@@ -656,7 +816,7 @@ function ensureLib(done) {
         });
       };
       bindAdminActions(function (id, status, commission) {
-        return sb.rpc("aff_set_booking_status", { p_id: id, p_status: status, p_commission: commission }).then(function (result) {
+        return saveBooking(sb, id, status, commission).then(function (result) {
           if (result.error) throw result.error;
           return loadAdmin();
         });
