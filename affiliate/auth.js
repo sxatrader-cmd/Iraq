@@ -5,14 +5,87 @@
   var CFG = window.FT_AFFILIATE_CONFIG || {};
   var STATUS = { pending: "مبدئي", confirmed: "مؤكد", cancelled: "ملغي" };
 
-function ready() {
+var MSG = {
+  keys: "مفاتيح Supabase غير موجودة في الملف affiliate/config.js. الصق رابط المشروع والمفتاح العام ثم أعد نشر الموقع.",
+  library: "تعذّر تحميل مكتبة الاتصال من الموقع نفسه. حدّث الصفحة بقوة. إذا استمر العطل فالمتصفح يمنع الملف /affiliate/vendor/supabase.js.",
+  network: "تعذّر الاتصال بخادم Supabase. تحقق من الإنترنت، وأن المشروع غير متوقف.",
+  badLogin: "البريد أو كلمة المرور غير صحيحة.",
+  already: "هذا البريد مسجّل مسبقاً. انتقل إلى تسجيل الدخول.",
+  short: "كلمة المرور قصيرة. استخدم 6 أحرف على الأقل.",
+  mismatch: "كلمتا المرور غير متطابقتين.",
+  badEmail: "البريد الإلكتروني غير صحيح.",
+  db: "قاعدة البيانات غير جاهزة أو الحساب ليس مديراً. نفّذ ملف SQL كما في دليل الإعداد.",
+  generic: "حدث خطأ. حاول مرة أخرى.",
+  badForm: "يرجى كتابة الاسم ورقم واتساب وبريد صحيح.",
+  suCreating: "جارٍ إنشاء الحساب…",
+  suCreated: "أُنشئ الحساب. افتح رسالة البريد لتأكيده ثم سجّل الدخول. لبدء العمل فوراً أوقف تأكيد البريد كما في دليل الإعداد.",
+  suNoRow: "تم الدخول، لكن صف الشريك غير موجود. نفّذ ملف SQL في Supabase ثم حدّث الصفحة.",
+  suSubmit: "إنشاء الحساب",
+  needBoth: "اكتب البريد وكلمة المرور.",
+  liEntering: "جارٍ الدخول…",
+  liSubmit: "دخول",
+  hello: "مرحباً، {name}. هذا رابطك وحجوزات الزوار الذين دخلوا عن طريقه.",
+  copied: "تم النسخ",
+  copyFail: "انسخ الرابط يدوياً",
+  empty: "لا توجد حجوزات بعد.",
+  stPending: "مبدئي",
+  stConfirmed: "مؤكد",
+  stCancelled: "ملغي"
+};
+
+function keysOk() {
   var cfg = window.FT_AFFILIATE_CONFIG || CFG;
-  if (window.FableAffiliate && typeof window.FableAffiliate.isConfigured === "function") {
-    return window.FableAffiliate.isConfigured(cfg);
-  }
   if (!cfg || !cfg.supabaseUrl || !cfg.supabaseKey) return false;
   if (/YOUR_/i.test(String(cfg.supabaseUrl)) || /YOUR_/i.test(String(cfg.supabaseKey))) return false;
   return /^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/i.test(cfg.supabaseUrl) && String(cfg.supabaseKey).length > 20;
+}
+
+function hasLib() {
+  return !!(window.supabase && typeof window.supabase.createClient === "function");
+}
+
+function problem() {
+  if (!keysOk()) return "keys";
+  if (!hasLib()) return "library";
+  return "";
+}
+
+function isAdmin() {
+  return !!(document.body && document.body.getAttribute("data-page") === "admin");
+}
+
+function t(key) {
+  if (!isAdmin() && window.FT_UI) return window.FT_UI.t(key);
+  return MSG[key] || key;
+}
+
+function showProblem(id, code) {
+  var text = t(code) || MSG.network;
+  if (id === "gate") {
+    var gate = document.getElementById("gate");
+    if (!gate) return;
+    gate.hidden = false;
+    gate.textContent = text;
+    return;
+  }
+  show(id, text, "err");
+}
+
+function ensureLib(done) {
+  if (hasLib()) { done(true); return; }
+  var finished = false;
+  function finish(ok) {
+    if (finished) return;
+    finished = true;
+    done(!!ok && hasLib());
+  }
+  var script = document.createElement("script");
+  script.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.js";
+  script.async = true;
+  script.onload = function () { finish(true); };
+  script.onerror = function () { finish(false); };
+  document.head.appendChild(script);
+  setTimeout(function () { finish(false); }, 8000);
 }
 
   function esc(value) {
@@ -30,8 +103,11 @@ function ready() {
 
   function when(iso) {
     if (!iso) return "—";
+    var loc = "ar";
+    if (!isAdmin() && window.FT_UI) loc = window.FT_UI.lang() || "ar";
+    if (loc === "zh-tw") loc = "zh-TW";
     try {
-      return new Intl.DateTimeFormat("ar-u-nu-latn", { dateStyle: "medium", timeStyle: "short" }).format(new Date(iso));
+      return new Intl.DateTimeFormat(loc, { dateStyle: "medium", timeStyle: "short" }).format(new Date(iso));
     } catch (e) {
       return String(iso).replace("T", " ").slice(0, 16);
     }
@@ -39,13 +115,13 @@ function ready() {
 
   function human(error) {
     var message = (error && (error.message || error.error_description || error.details) || "") + "";
-    if (/invalid login|invalid credentials/i.test(message)) return "البريد أو كلمة المرور غير صحيحة.";
-    if (/already registered|already been registered|user already/i.test(message)) return "هذا البريد مسجّل مسبقاً. انتقل إلى تسجيل الدخول.";
-    if (/password/i.test(message)) return "كلمة المرور قصيرة. استخدم 6 أحرف على الأقل.";
-    if (/email/i.test(message) && /invalid|valid/i.test(message)) return "البريد الإلكتروني غير صحيح.";
-    if (/fetch|network|failed to fetch|load failed/i.test(message)) return "تعذّر الاتصال بـ Supabase. راجع دليل الإعداد وتأكد أن المشروع يعمل.";
-    if (/relation|schema|function|permission|not found|pgrst|42501|jwt/i.test(message)) return "قاعدة البيانات غير جاهزة أو الحساب ليس مديراً. نفّذ ملف SQL كما في دليل الإعداد.";
-    return "حدث خطأ. حاول مرة أخرى.";
+    if (/invalid login|invalid credentials/i.test(message)) return t("badLogin");
+    if (/already registered|already been registered|user already/i.test(message)) return t("already");
+    if (/password/i.test(message)) return t("short");
+    if (/email/i.test(message) && /invalid|valid/i.test(message)) return t("badEmail");
+    if (/fetch|network|failed to fetch|load failed|timeout/i.test(message)) return t("network");
+    if (/relation|schema|function|permission|not found|pgrst|42501|jwt/i.test(message)) return t("db");
+    return t("generic");
   }
 
   function client() {
@@ -86,7 +162,8 @@ function ready() {
   function bookingRows(list, names, admin) {
     var cols = admin ? 8 : 7;
     if (!list.length) {
-      return '<tr><td class="empty" colspan="' + cols + '">لا توجد حجوزات بعد.</td></tr>';
+      var empty = admin ? "لا توجد حجوزات بعد." : t("empty");
+      return '<tr><td class="empty" colspan="' + cols + '">' + esc(empty) + "</td></tr>";
     }
     return list.map(function (row) {
       var people = row.people ? esc(row.people) : "—";
@@ -108,7 +185,7 @@ function ready() {
         "<td>" + esc(row.program || "—") + "</td>" +
         "<td>" + esc(row.travel_date || "—") + "</td>" +
         "<td>" + people + "</td>" +
-        "<td><span class=\"badge " + esc(row.status) + "\">" + esc(STATUS[row.status] || row.status) + "</span>" +
+        "<td><span class=\"badge " + esc(row.status) + "\">" + esc(admin ? (STATUS[row.status] || row.status) : t({ pending: "stPending", confirmed: "stConfirmed", cancelled: "stCancelled" }[row.status] || "stPending")) + "</span>" +
           (row.status === "confirmed" ? '<span class="who">' + esc(money(row.commission)) + "</span>" : "") + "</td>" +
         actions +
         "</tr>";
@@ -131,7 +208,7 @@ function ready() {
   function copyLink(button, text) {
     function done(ok) {
       var previous = button.textContent;
-      button.textContent = ok ? "تم النسخ" : "انسخ الرابط يدوياً";
+      button.textContent = ok ? t("copied") : t("copyFail");
       button.classList.toggle("ok", ok);
       setTimeout(function () { button.textContent = previous; button.classList.remove("ok"); }, 2200);
     }
@@ -170,28 +247,22 @@ function ready() {
       var password = form.password.value;
       var again = form.again.value;
       if (!name || phone.replace(/\D/g, "").length < 8 || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-        show("f-msg", "يرجى كتابة الاسم ورقم واتساب وبريد صحيح.", "err");
+        show("f-msg", t("badForm"), "err");
         return;
       }
       if (password.length < 6) {
-        show("f-msg", "كلمة المرور قصيرة. استخدم 6 أحرف على الأقل.", "err");
+        show("f-msg", t("short"), "err");
         return;
       }
       if (password !== again) {
-        show("f-msg", "كلمتا المرور غير متطابقتين.", "err");
+        show("f-msg", t("mismatch"), "err");
         return;
       }
-      if (!ready()) {
-        show("f-msg", "لم تُلصق مفاتيح Supabase بعد. افتح affiliate/config.js واتبع دليل الإعداد.", "err");
-        return;
-      }
-      if (!sb) {
-        show("f-msg", "تعذّر تحميل مكتبة الاتصال. حدّث الصفحة.", "err");
-        return;
-      }
+      if (!keysOk()) { showProblem("f-msg", "keys"); return; }
+      if (!sb || !hasLib()) { showProblem("f-msg", "library"); return; }
       var button = document.getElementById("f-btn");
       button.disabled = true;
-      button.textContent = "جارٍ إنشاء الحساب…";
+      button.textContent = t("suCreating");
       sb.auth.signUp({
         email: email,
         password: password,
@@ -202,16 +273,16 @@ function ready() {
       }).then(function (result) {
         if (result.error) throw result.error;
         if (!result.data.session) {
-          show("f-msg", "أُنشئ الحساب. افتح رسالة البريد لتأكيده ثم سجّل الدخول. لبدء العمل فوراً أوقف تأكيد البريد كما في دليل الإعداد.", "ok");
+          show("f-msg", t("suCreated"), "ok");
           button.disabled = false;
-          button.textContent = "إنشاء الحساب";
+          button.textContent = t("suSubmit");
           return;
         }
         return sb.rpc("aff_ensure_affiliate").then(function (made) {
           if (made.error || !made.data) {
-            show("f-msg", "تم الدخول، لكن صف الشريك غير موجود. نفّذ ملف SQL في Supabase ثم حدّث الصفحة.", "err");
+            show("f-msg", t("suNoRow"), "err");
             button.disabled = false;
-            button.textContent = "إنشاء الحساب";
+            button.textContent = t("suSubmit");
             return;
           }
           location.href = "dashboard.html";
@@ -219,7 +290,7 @@ function ready() {
       }).catch(function (error) {
         show("f-msg", human(error), "err");
         button.disabled = false;
-        button.textContent = "إنشاء الحساب";
+        button.textContent = t("suSubmit");
       });
     });
   }
@@ -235,14 +306,8 @@ function ready() {
         if (emailEl) emailEl.focus();
         return;
       }
-      if (!ready()) {
-        show("f-msg", "لم تُلصق مفاتيح Supabase بعد. افتح affiliate/config.js واتبع دليل الإعداد.", "err");
-        return;
-      }
-      if (!sb) {
-        show("f-msg", "تعذّر تحميل مكتبة الاتصال. حدّث الصفحة.", "err");
-        return;
-      }
+      if (!keysOk()) { showProblem("f-msg", "keys"); return; }
+      if (!sb || !hasLib()) { showProblem("f-msg", "library"); return; }
       button.disabled = true;
       sb.auth.resetPasswordForEmail(email, { redirectTo: window.FT_PW.REDIRECT }).then(function (result) {
         if (result.error) throw result.error;
@@ -256,7 +321,7 @@ function ready() {
   function bindReset(sb) {
     var form = document.getElementById("join");
     var wait = document.getElementById("reset-wait");
-    if (!form || !window.FT_PW) return;
+    if (!form) return;
     form.dataset.ready = "1";
     var saw = false;
     function arm(session) {
@@ -274,7 +339,7 @@ function ready() {
     setTimeout(function () {
       if (saw) return;
       if (wait) wait.hidden = true;
-      show("f-msg", window.FT_PW.t("expired"), "err");
+      show("f-msg", window.FT_PW ? window.FT_PW.t("expired") : "", "err");
     }, 8000);
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -282,7 +347,7 @@ function ready() {
       var again = form.again.value;
       if (password.length < 6) { show("f-msg", window.FT_PW.t("short"), "err"); return; }
       if (password !== again) { show("f-msg", window.FT_PW.t("mismatch"), "err"); return; }
-      if (!sb) { show("f-msg", "تعذّر تحميل مكتبة الاتصال. حدّث الصفحة.", "err"); return; }
+      if (!sb) { showProblem("f-msg", "library"); return; }
       var button = document.getElementById("f-btn");
       button.disabled = true;
       button.textContent = window.FT_PW.t("saving");
@@ -306,38 +371,34 @@ function ready() {
       var email = form.email.value.trim();
       var password = form.password.value;
       if (!email || !password) {
-        show("f-msg", "اكتب البريد وكلمة المرور.", "err");
+        show("f-msg", t("needBoth"), "err");
         return;
       }
-      if (!ready()) {
-        show("f-msg", "لم تُلصق مفاتيح Supabase بعد. افتح affiliate/config.js واتبع دليل الإعداد.", "err");
-        return;
-      }
-      if (!sb) {
-        show("f-msg", "تعذّر تحميل مكتبة الاتصال. حدّث الصفحة.", "err");
-        return;
-      }
+      if (!keysOk()) { showProblem("f-msg", "keys"); return; }
+      if (!sb || !hasLib()) { showProblem("f-msg", "library"); return; }
       var button = document.getElementById("f-btn");
       button.disabled = true;
-      button.textContent = "جارٍ الدخول…";
+      button.textContent = t("liEntering");
       sb.auth.signInWithPassword({ email: email, password: password }).then(function (result) {
         if (result.error) throw result.error;
         var next = new URLSearchParams(location.search).get("next");
-        location.href = next === "admin" ? "admin.html" : "dashboard.html";
+        location.href = next === "admin" ? "admin.html" : next === "materials" ? "materials.html" : "dashboard.html";
       }).catch(function (error) {
         show("f-msg", human(error), "err");
         button.disabled = false;
-        button.textContent = "دخول";
+        button.textContent = t("liSubmit");
       });
     });
     bindForgot(sb);
   }
 
+  var dashCache = null;
   function drawDashboard(me, clicks, bookings) {
+    dashCache = { me: me, clicks: clicks, bookings: bookings };
     var app = document.getElementById("app");
     app.hidden = false;
     var hello = document.getElementById("hello");
-    if (hello) hello.textContent = "مرحباً، " + me.full_name + ". هذا رابطك وحجوزات الزوار الذين دخلوا عن طريقه.";
+    if (hello) hello.textContent = t("hello").replace("{name}", me.full_name);
     var url = linkFor(me.referral_code);
     document.getElementById("ref-link").textContent = url;
     var copy = document.getElementById("copy");
@@ -444,38 +505,61 @@ function ready() {
     }
     var preview = new URLSearchParams(location.search).get("preview") === "1";
     var lang = document.getElementById("langSel");
-    if (lang) lang.addEventListener("change", function () {
-      if (page === "reset" && window.FT_PW) {
-        window.FT_PW.apply(lang.value, true);
-        return;
-      }
-      var value = lang.value;
-      location.href = "/" + (value === "ar" ? "" : value + "/");
+    if (lang && page !== "admin") lang.addEventListener("change", function () {
+      if (window.FT_UI) window.FT_UI.apply(lang.value, true);
+      if (window.FT_PW) window.FT_PW.apply(lang.value, false);
+      if (window.FTMaterials) window.FTMaterials.apply(lang.value, false);
+      if (dashCache) drawDashboard(dashCache.me, dashCache.clicks, dashCache.bookings);
     });
 
-    var sb = null;
-    if (!preview && ready() && window.supabase && window.supabase.createClient) {
-      try { sb = client(); } catch (e) { sb = null; }
+    function connect(then) {
+      if (!keysOk()) { then(null, "keys"); return; }
+      ensureLib(function (ok) {
+        if (!ok) { then(null, "library"); return; }
+        try { then(client(), ""); }
+        catch (e) { then(null, "library"); }
+      });
     }
 
-    if (page === "signup") {
-      bindSignup(sb);
-      if (sb) sb.auth.getSession().then(function (result) {
-        if (result.data.session) location.href = "dashboard.html";
+    if (page === "reset") {
+      connect(function (sb) { bindReset(sb); });
+      return;
+    }
+
+    if (page === "signup" || page === "login") {
+      connect(function (sb, code) {
+        if (page === "signup") bindSignup(sb);
+        else bindLogin(sb);
+        if (code) return;
+        sb.auth.getSession().then(function (result) {
+          if (!result.data.session) return;
+          if (page === "signup") { location.href = "dashboard.html"; return; }
+          var next = new URLSearchParams(location.search).get("next");
+          location.href = next === "admin" ? "admin.html" : next === "materials" ? "materials.html" : "dashboard.html";
+        }).catch(function () {});
       });
       return;
     }
-    if (page === "reset") {
-      bindReset(sb);
-      return;
-    }
-    if (page === "login") {
-      bindLogin(sb);
-      if (sb) sb.auth.getSession().then(function (result) {
-        if (result.data.session) {
-          var next = new URLSearchParams(location.search).get("next");
-          location.href = next === "admin" ? "admin.html" : "dashboard.html";
-        }
+
+    if (page === "materials") {
+      connect(function (sb, code) {
+        if (!sb) { showProblem("gate", code || "library"); return; }
+        sb.auth.getSession().then(function (result) {
+          var session = result.data.session;
+          if (!session) { location.replace("login.html?next=materials"); return null; }
+          return sb.from("aff_affiliates").select("referral_code,full_name").eq("id", session.user.id).maybeSingle();
+        }).then(function (profile) {
+          if (!profile) return;
+          if (profile.error || !profile.data) {
+            showProblem("gate", "keys");
+            return;
+          }
+          if (window.FTMaterials) window.FTMaterials.show(profile.data.referral_code);
+          logout(sb);
+        }).catch(function (error) {
+          var gate = document.getElementById("gate");
+          if (gate) { gate.hidden = false; gate.textContent = human(error); }
+        });
       });
       return;
     }
@@ -510,16 +594,8 @@ function ready() {
       return;
     }
 
-    if (!ready()) {
-      document.getElementById("gate").hidden = false;
-      document.getElementById("gate").textContent = "لم تُلصق مفاتيح Supabase بعد. افتح affiliate/config.js واتبع دليل الإعداد.";
-      return;
-    }
-    if (!sb) {
-      document.getElementById("gate").hidden = false;
-      document.getElementById("gate").textContent = "تعذّر تحميل مكتبة الاتصال. حدّث الصفحة.";
-      return;
-    }
+    connect(function (sb, code) {
+    if (!sb) { showProblem("gate", code || "library"); return; }
 
     sb.auth.getSession().then(function (result) {
       var session = result.data.session;
@@ -588,8 +664,16 @@ function ready() {
       watch(sb, loadAdmin);
       var refreshAdmin = document.getElementById("refresh");
       if (refreshAdmin) refreshAdmin.addEventListener("click", loadAdmin);
+    }).catch(function (error) {
+      var gate = document.getElementById("gate");
+      if (!gate) return;
+      gate.hidden = false;
+      gate.textContent = human(error);
+    });
     });
   }
+
+  window.FTAuth = { keysOk: keysOk, hasLib: hasLib, problem: problem, message: function (code) { return t(code) || ""; } };
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
   else start();
