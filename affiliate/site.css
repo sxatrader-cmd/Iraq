@@ -15,8 +15,12 @@
 html,body{margin:0}
 body{background:var(--ground);color:var(--ink);font-family:var(--sans-ar);font-size:16.5px;line-height:1.85;-webkit-font-smoothing:antialiased;
   padding:24px max(12px,env(safe-area-inset-right,0px)) 24px max(12px,env(safe-area-inset-left,0px))}
+html:not([lang="ar"]) body{font-family:var(--sans-en);line-height:1.7}
 img{max-width:100%;display:block}
 .disp{font-family:var(--serif-ar);font-weight:700}
+html:not([lang="ar"]) .disp,html:not([lang="ar"]) .stat strong{font-family:var(--serif-en);font-weight:400}
+html:not([lang="ar"]) .formcard label{letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+html:not([lang="ar"]) .btn{letter-spacing:.1em;text-transform:uppercase;font-size:15px}
 h1,h2,h3{text-wrap:balance;margin:0}
 a{color:var(--navy-2)}
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
