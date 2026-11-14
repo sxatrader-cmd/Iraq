@@ -66,7 +66,6 @@
         <button class="ft-bk-b" type="button" id="copy" data-ui="copy">نسخ الرابط</button>
       </div>
       <p class="note" data-ui="daNote">الزيارة تُحسب عند فتح الرابط. الحجز يُحسب فقط إذا أرسل الزائر نموذج الحجز الموجود في الموقع، ويبقى البريد إلى فريق Fable Tour كما هو.</p>
-      <p><a class="ft-cta" href="materials.html" data-ui="materialsLink">المواد الإعلانية</a></p>
       
     <div class="stats" aria-label="الملخص">
       <div class="stat"><strong id="n-clicks">0</strong><span data-ui="visits">الزيارات</span></div>
@@ -87,6 +86,30 @@
           <tbody id="rows"></tbody>
         </table>
       </div>
+      <div class="sec-head" id="materials">
+        <span class="eyebrow" data-mat="eye">الإعلانات</span>
+        <h2 class="disp" data-mat="h1">المواد الإعلانية</h2>
+        <p data-mat="lead">بانرات جاهزة بهوية Fable Tour. انسخ الشفرة وفيها رمز إحالتك، أو نزّل الملف.</p>
+      </div>
+      <label class="mat-lang"><span data-mat-langlabel>لغة البانر</span>
+        <select id="mat-lang"></select>
+      </label>
+      <div class="filters" id="mat-filters">
+        <button type="button" class="on" data-kind="size" data-value="all" data-mat="all">الكل</button>
+        <button type="button" data-kind="size" data-value="728x90">728×90</button>
+        <button type="button" data-kind="size" data-value="300x250">300×250</button>
+        <button type="button" data-kind="size" data-value="336x280">336×280</button>
+        <button type="button" data-kind="size" data-value="160x600">160×600</button>
+        <button type="button" data-kind="size" data-value="300x600">300×600</button>
+        <button type="button" data-kind="size" data-value="320x50">320×50</button>
+        <button type="button" data-kind="size" data-value="970x250">970×250</button>
+        <button type="button" data-kind="size" data-value="1080x1080">1080×1080</button>
+        <button type="button" data-kind="size" data-value="1080x1920">1080×1920</button>
+        <button type="button" data-kind="type" data-value="static" data-mat="static">ثابت</button>
+        <button type="button" data-kind="type" data-value="animated" data-mat="animated">متحرك</button>
+        <button type="button" data-kind="type" data-value="html">HTML5</button>
+      </div>
+      <div class="mat-grid" id="mat-grid"></div>
     </div>
   </section>
 </main>
@@ -107,9 +130,10 @@
 </footer>
 </div>
 <a class="wa-float" href="https://wa.me/9647711745353" target="_blank" rel="noopener" data-ui-aria="wa" aria-label="واتساب"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.6 3.6 0 0 0-1.1 2.6 6.2 6.2 0 0 0 1.3 3.3 14.2 14.2 0 0 0 5.4 4.8c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.1 24l6.4-1.7A11.8 11.8 0 0 0 12 23.7 11.8 11.8 0 0 0 20.4 3.5z"/></svg></a>
-<script src="/affiliate/config.js?v=8"></script>
-<script src="/affiliate/ui.js?v=8"></script>
-<script src="/affiliate/vendor/supabase.js?v=8"></script>
-<script src="/affiliate/auth.js?v=8"></script>
+<script src="/affiliate/config.js?v=9"></script>
+<script src="/affiliate/ui.js?v=9"></script>
+<script src="/affiliate/materials.js?v=9"></script>
+<script src="/affiliate/vendor/supabase.js?v=9"></script>
+<script src="/affiliate/auth.js?v=9"></script>
 </body>
 </html>

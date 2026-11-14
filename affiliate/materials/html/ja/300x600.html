@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=300">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Noto+Serif+JP:wght@700&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/affiliate/materials/banner.css">
+</head>
+<body class="s600 script-ja">
+<a class="go" id="go" href="https://iraq.fabletour.com/ja/">
+  <div class="slides"><span style="background-image:url('/img/babylon-ishtar-gate.webp')"></span>
+<span style="background-image:url('/img/ur-ziggurat.webp')"></span>
+<span style="background-image:url('/img/marshes-mashoof.webp')"></span>
+<span style="background-image:url('/img/samarra-malwiya.webp')"></span></div>
+  <div class="mast">
+    <img class="mark" src="/logo.png" alt="">
+    <span class="lock">
+      <b class="word" dir="ltr">Fable Tour</b>
+      <span class="tag cycle"><span>イラク · 3つのツアー</span>
+<span>バビロン · イシュタル門</span>
+<span>ウル · 湿原</span>
+<span>サーマッラー · エルビル</span></span>
+      <span class="hed">イラク：メソポタミアを巡る旅</span>
+    </span>
+    <span class="cta full">今すぐ予約</span>
+    <span class="cta short">予約</span>
+  </div>
+  <div class="band">
+    <span class="eyebrow">貸切とグループ</span>
+    <span class="ar">イラク：メソポタミアを巡る旅</span>
+    <span class="hed">イラク：メソポタミアを巡る旅</span>
+    <span class="en">バビロン · ウル · 湿原</span>
+    <span class="cta full">今すぐ予約</span>
+  </div>
+  <i class="rule"></i>
+</a>
+<script>
+var LANG='ja';
+var BASE='https://iraq.fabletour.com/ja/';
+var ref=new URLSearchParams(location.search).get("ref")||"";
+var frame=new URLSearchParams(location.search).get("frame");
+if(frame!==null&&frame!=="")document.documentElement.className="frame frame-"+frame;
+if(/^[A-Za-z0-9]{4,12}$/.test(ref))document.getElementById("go").href=BASE+"?ref="+encodeURIComponent(ref.toUpperCase());
+</script>
+</body>
+</html>

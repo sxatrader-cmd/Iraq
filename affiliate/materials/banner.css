@@ -14,8 +14,19 @@
 html,body{margin:0;background:var(--navy)}
 a.go{
   display:block;position:relative;overflow:hidden;text-decoration:none;color:#fff;
-  font-family:var(--sans-ar);background:var(--navy);
+  font-family:var(--ui, var(--sans-ar));background:var(--navy);
 }
+body.script-ar{--hed:var(--serif-ar);--ui:var(--sans-ar)}
+body.script-lat{--hed:var(--serif-en);--ui:var(--sans-en)}
+body.script-cyr,body.script-el{--hed:"PT Serif", Georgia, serif;--ui:"IBM Plex Sans", "Helvetica Neue", Arial, sans-serif}
+body.script-zh{--hed:"Noto Serif SC", serif;--ui:"Noto Sans SC", sans-serif}
+body.script-zht{--hed:"Noto Serif TC", serif;--ui:"Noto Sans TC", sans-serif}
+body.script-ja{--hed:"Noto Serif JP", serif;--ui:"Noto Sans JP", sans-serif}
+body.script-ko{--hed:"Noto Serif KR", serif;--ui:"Noto Sans KR", sans-serif}
+body.script-th{--hed:"Noto Serif Thai", serif;--ui:"Noto Sans Thai", sans-serif}
+body.script-hi{--hed:"Noto Serif Devanagari", serif;--ui:"Noto Sans Devanagari", sans-serif}
+body.script-ta{--hed:"Noto Serif Tamil", serif;--ui:"Noto Sans Tamil", sans-serif}
+body.script-ka{--hed:"Noto Serif Georgian", serif;--ui:"Noto Sans Georgian", sans-serif}
 .slides,.slides span{position:absolute;inset:0}
 .slides span{
   background:var(--navy-2) center/cover no-repeat;opacity:0;
@@ -45,41 +56,49 @@ html.frame-3 .tag span:nth-child(4){opacity:1!important}
 .tag{display:block;position:relative;color:var(--tag);font-weight:500;line-height:1.35}
 .tag span{display:block}
 .tag.cycle{height:1.35em}
-.tag.cycle span{position:absolute;inset:0;opacity:0;white-space:nowrap;animation:fade 16s infinite}
+.tag.cycle span{position:absolute;inset:0;opacity:0;white-space:normal;overflow:hidden;animation:fade 16s infinite}
 .tag.cycle span:nth-child(1){animation-delay:0s}
 .tag.cycle span:nth-child(2){animation-delay:4s}
 .tag.cycle span:nth-child(3){animation-delay:8s}
 .tag.cycle span:nth-child(4){animation-delay:12s}
 .eyebrow{display:block;color:var(--gold);font-weight:500;line-height:1.3}
-.ar{font-family:var(--serif-ar);font-weight:700;line-height:1.25;color:#fff}
-.en{font-family:var(--sans-en);font-weight:500;color:var(--lead);line-height:1.35}
+.ar,.hed{font-family:var(--hed, var(--serif-ar));font-weight:700;line-height:1.3;color:#fff;max-width:100%;overflow-wrap:anywhere}
+body.script-ar .ar,body.script-ar .hed{line-height:1.55}
+.en{font-family:var(--ui, var(--sans-en));font-weight:500;color:var(--lead);line-height:1.35}
 .cta{
-  display:inline-flex;align-items:center;background:var(--gold);color:var(--navy);
-  font-family:var(--sans-ar);font-weight:700;border-radius:4px;line-height:1;white-space:nowrap;
+  display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy);
+  font-family:var(--ui, var(--sans-ar));font-weight:700;border-radius:4px;line-height:1;white-space:nowrap;
 }
+.cta.short{display:none}
+.lock{min-width:0}
+.hed{display:none}
 .rule{position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--gold);z-index:3}
 .band{position:relative;z-index:2;background:var(--navy);display:flex;flex-direction:column;align-items:flex-start}
 
-/* 320×50 — the masthead, tightened the way the site header tightens on a phone */
+/* 320×50 — logo, two-line line, short gold button. No wordmark: the mark already is the logo. */
 body.s320 .go{width:320px;height:50px}
-body.s320 .slides{display:none}
-body.s320 .band{display:none}
-body.s320 .mast{height:50px;gap:8px;padding:0 8px 3px}
-body.s320 .mark{width:34px;height:34px;box-shadow:0 0 0 2px var(--gold)}
-body.s320 .word{font-size:13px;letter-spacing:.12em}
-body.s320 .tag{font-size:11px}
-body.s320 .mast .cta{margin-inline-start:auto;padding:6px 8px;font-size:12px}
+body.s320 .slides,body.s320 .band,body.s320 .word,body.s320 .hed{display:none}
+body.s320 .mast{height:50px;gap:6px;padding:0 6px 3px}
+body.s320 .mark{width:32px;height:32px;box-shadow:0 0 0 2px var(--gold)}
+body.s320 .lock{flex:1}
+body.s320 .tag{font-size:11px;font-weight:600;line-height:1.15;color:#fff}
+body.s320 .tag.cycle{height:2.3em}
+body.s320 .cta.full{display:none}
+body.s320 .cta.short{display:inline-flex;margin-inline-start:auto;padding:7px 8px;font-size:12px;flex:none}
 body.s320 .rule{height:3px}
 
-/* 728×90 — same lockup as .topbar */
+/* 728×90 — photo, gold eyebrow, two-line headline, clear button */
 body.s728 .go{width:728px;height:90px}
-body.s728 .slides{display:none}
-body.s728 .band{display:none}
-body.s728 .mast{height:90px;gap:14px;padding:0 18px 5px}
-body.s728 .mark{width:58px;height:58px}
-body.s728 .word{font-size:22px}
-body.s728 .tag{font-size:12px}
-body.s728 .mast .cta{margin-inline-start:auto;padding:10px 16px;font-size:15px}
+body.s728 .band,body.s728 .word{display:none}
+body.s728 .hed{display:block;font-size:16px;line-height:1.25;max-height:2.7em;overflow:hidden}
+body.script-ar.s728 .hed{font-size:15px;line-height:1.55;max-height:3.2em}
+body.s728 .slides{top:0;bottom:4px;height:auto;width:150px;left:auto;right:auto;inset-inline-end:0;z-index:4}
+body.s728 .mast{height:90px;gap:10px;padding:0 12px 4px;padding-inline-end:162px}
+body.s728 .mark{width:48px;height:48px}
+body.s728 .tag{font-size:12px;font-weight:600;color:var(--gold);line-height:1.2}
+body.s728 .tag.cycle{height:1.2em}
+body.s728 .tag.cycle span{white-space:nowrap}
+body.s728 .mast .cta{margin-inline-start:auto;padding:10px 14px;font-size:14px;flex:none}
 
 /* 970×250 — masthead, then the hero band beside a program photo */
 body.s970 .go{width:970px;height:250px;display:grid;grid-template-rows:72px 1fr}
@@ -88,8 +107,8 @@ body.s970 .mast .cta{display:none}
 body.s970 .mark{width:48px;height:48px}
 body.s970 .word{font-size:20px}
 body.s970 .tag{font-size:13px}
-body.s970 .slides{top:72px;bottom:5px;left:0;right:auto;width:46%}
-body.s970 .band{position:absolute;top:72px;bottom:5px;right:0;left:46%;justify-content:center;gap:8px;padding:16px 28px}
+body.s970 .slides{top:72px;bottom:5px;height:auto;left:auto;right:auto;width:46%;inset-inline-start:0}
+body.s970 .band{position:absolute;top:72px;bottom:5px;left:auto;right:auto;inset-inline-start:46%;inset-inline-end:0;justify-content:center;gap:8px;padding:16px 28px}
 body.s970 .eyebrow{font-size:14px}
 body.s970 .ar{font-size:32px}
 body.s970 .en{font-size:16px}
@@ -98,19 +117,21 @@ body.s970 .band .cta{margin-top:6px;padding:12px 20px;font-size:16px}
 /* rectangles echo a program card: photo, navy copy, gold rule */
 body.s300 .go{width:300px;height:250px}
 body.s336 .go{width:336px;height:280px}
-body.s300 .mast,body.s336 .mast{gap:8px;padding:8px 10px}
+body.s300 .mast,body.s336 .mast{gap:8px;padding:6px 8px}
 body.s300 .mast .cta,body.s336 .mast .cta{display:none}
-body.s300 .mark,body.s336 .mark{width:36px;height:36px;box-shadow:0 0 0 2px var(--gold)}
-body.s300 .word,body.s336 .word{font-size:13px;letter-spacing:.12em}
+body.s300 .mark,body.s336 .mark{width:32px;height:32px;box-shadow:0 0 0 2px var(--gold)}
+body.s300 .word,body.s336 .word{font-size:12px;letter-spacing:.1em}
 body.s300 .tag,body.s336 .tag{display:none}
-body.s300 .slides{top:52px;bottom:92px}
-body.s336 .slides{top:52px;bottom:102px}
-body.s300 .band,body.s336 .band{position:absolute;left:0;right:0;bottom:4px;gap:3px;padding:8px 12px 8px}
-body.s300 .eyebrow,body.s336 .eyebrow{font-size:12px;color:var(--gold-2)}
-body.s300 .ar{font-size:20px}
-body.s336 .ar{font-size:22px}
-body.s300 .en,body.s336 .en{font-size:12px}
-body.s300 .band .cta,body.s336 .band .cta{display:none}
+body.s300 .slides{top:44px;bottom:128px}
+body.s336 .slides{top:44px;bottom:132px}
+body.s300 .band,body.s336 .band{position:absolute;left:0;right:0;bottom:4px;gap:2px;padding:6px 10px 8px}
+body.s300 .eyebrow,body.s336 .eyebrow{font-size:11px;color:var(--gold-2)}
+body.s300 .ar,body.s336 .ar{display:none}
+body.s300 .band .hed,body.s336 .band .hed{display:block;font-size:15px;line-height:1.3;max-height:4.2em;overflow:hidden}
+body.s336 .band .hed{font-size:16px}
+body.script-ar.s300 .band .hed,body.script-ar.s336 .band .hed{line-height:1.5;max-height:4.6em;font-size:14px}
+body.s300 .en,body.s336 .en{display:none}
+body.s300 .band .cta,body.s336 .band .cta{margin-top:4px;padding:7px 10px;font-size:13px}
 body.s300 .rule,body.s336 .rule{height:4px}
 
 /* skyscrapers */
@@ -121,23 +142,27 @@ body.s160 .mast .cta,body.s600 .mast .cta{display:none}
 body.s160 .lock,body.s600 .lock{display:flex;flex-direction:column;align-items:center;gap:4px}
 body.s160 .mast{padding:14px 8px 10px}
 body.s600 .mast{padding:16px 14px 12px}
-body.s160 .mark{width:64px;height:64px}
+body.s160 .mark{width:52px;height:52px}
 body.s600 .mark{width:72px;height:72px}
-body.s160 .word{font-size:13px;letter-spacing:.12em}
+body.s160 .word{font-size:11px;letter-spacing:.04em}
 body.s600 .word{font-size:18px}
-body.s160 .tag{font-size:11px}
+body.s160 .tag{font-size:11px;line-height:1.25}
+body.s160 .tag.cycle{height:2.5em}
 body.s600 .tag{font-size:13px}
-body.s160 .slides{top:148px;height:180px}
+body.s160 .slides{top:118px;height:150px}
 body.s600 .slides{top:150px;height:210px}
-body.s160 .band{position:absolute;left:0;right:0;top:328px;bottom:5px;align-items:center;text-align:center;gap:8px;padding:14px 10px}
+body.s160 .band{position:absolute;left:0;right:0;top:268px;bottom:5px;align-items:center;text-align:center;gap:6px;padding:10px 8px}
 body.s600 .band{position:absolute;left:0;right:0;top:360px;bottom:5px;gap:8px;padding:16px 16px}
-body.s160 .eyebrow{font-size:12px;color:var(--gold-2)}
+body.s160 .eyebrow{font-size:11px;color:var(--gold-2)}
 body.s600 .eyebrow{font-size:14px}
-body.s160 .ar{font-size:22px}
-body.s600 .ar{font-size:32px}
-body.s160 .en{font-size:12px}
+body.s160 .ar{display:none}
+body.s160 .band{overflow:hidden}
+body.s160 .band .hed{display:block;font-size:14px;line-height:1.35;max-height:7.2em;overflow:hidden}
+body.script-ar.s160 .band .hed{line-height:1.5;font-size:14px;max-height:7.5em}
+body.s600 .ar{font-size:28px}
+body.s160 .en{display:none}
 body.s600 .en{font-size:15px}
-body.s160 .band .cta{margin-top:6px;padding:8px 10px;font-size:13px}
+body.s160 .band .cta{margin-top:auto;padding:8px 8px;font-size:13px;width:100%}
 body.s600 .band .cta{margin-top:8px;padding:12px 16px;font-size:16px}
 
 /* social */

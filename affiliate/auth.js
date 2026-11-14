@@ -382,7 +382,7 @@ function ensureLib(done) {
       sb.auth.signInWithPassword({ email: email, password: password }).then(function (result) {
         if (result.error) throw result.error;
         var next = new URLSearchParams(location.search).get("next");
-        location.href = next === "admin" ? "admin.html" : next === "materials" ? "materials.html" : "dashboard.html";
+        location.href = next === "admin" ? "admin.html" : "dashboard.html";
       }).catch(function (error) {
         show("f-msg", human(error), "err");
         button.disabled = false;
@@ -405,6 +405,7 @@ function ensureLib(done) {
     copy.onclick = function () { copyLink(copy, url); };
     paintStats(totals(bookings), clicks);
     document.getElementById("rows").innerHTML = bookingRows(bookings, null, false);
+    if (window.FTMaterials) window.FTMaterials.show(me.referral_code);
   }
 
   function drawAdmin(affiliates, bookings) {
@@ -535,7 +536,7 @@ function ensureLib(done) {
           if (!result.data.session) return;
           if (page === "signup") { location.href = "dashboard.html"; return; }
           var next = new URLSearchParams(location.search).get("next");
-          location.href = next === "admin" ? "admin.html" : next === "materials" ? "materials.html" : "dashboard.html";
+          location.href = next === "admin" ? "admin.html" : "dashboard.html";
         }).catch(function () {});
       });
       return;

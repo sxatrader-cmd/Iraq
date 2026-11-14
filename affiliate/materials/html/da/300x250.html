@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=300">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=PT+Serif:wght@700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/affiliate/materials/banner.css">
+</head>
+<body class="s300 script-lat">
+<a class="go" id="go" href="https://iraq.fabletour.com/da/">
+  <div class="slides"><span style="background-image:url('/img/babylon-ishtar-gate.webp')"></span>
+<span style="background-image:url('/img/ur-ziggurat.webp')"></span>
+<span style="background-image:url('/img/marshes-mashoof.webp')"></span>
+<span style="background-image:url('/img/samarra-malwiya.webp')"></span></div>
+  <div class="mast">
+    <img class="mark" src="/logo.png" alt="">
+    <span class="lock">
+      <b class="word" dir="ltr">Fable Tour</b>
+      <span class="tag cycle"><span>Irak · Tre programmer</span>
+<span>Babylon · Ishtarporten</span>
+<span>Ur · sumpene</span>
+<span>Samarra · Erbil</span></span>
+      <span class="hed">Irak: en rejse gennem Mesopotamien</span>
+    </span>
+    <span class="cta full">Book nu</span>
+    <span class="cta short">Book</span>
+  </div>
+  <div class="band">
+    <span class="eyebrow">Private og grupperejser</span>
+    <span class="ar">Irak: en rejse gennem Mesopotamien</span>
+    <span class="hed">Irak: en rejse gennem Mesopotamien</span>
+    <span class="en">Babylon · Ur · sumpene</span>
+    <span class="cta full">Book nu</span>
+  </div>
+  <i class="rule"></i>
+</a>
+<script>
+var LANG='da';
+var BASE='https://iraq.fabletour.com/da/';
+var ref=new URLSearchParams(location.search).get("ref")||"";
+var frame=new URLSearchParams(location.search).get("frame");
+if(frame!==null&&frame!=="")document.documentElement.className="frame frame-"+frame;
+if(/^[A-Za-z0-9]{4,12}$/.test(ref))document.getElementById("go").href=BASE+"?ref="+encodeURIComponent(ref.toUpperCase());
+</script>
+</body>
+</html>
