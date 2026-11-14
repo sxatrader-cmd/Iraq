@@ -15,13 +15,13 @@ test("normalizes referral codes and rejects junk", () => {
   assert.equal(A.normalizeCode("A".repeat(13)), "");
 });
 
-test("a fresh ?ref= wins, is stored for 30 days, and counts as a click", () => {
+test("a fresh ?ref= wins, is stored for 10 years, and counts as a click", () => {
   const decision = A.decide({ query: "ab12cd", cookie: "OLD999." + (NOW + 1000), storage: "", now: NOW });
   assert.equal(decision.code, "AB12CD");
   assert.equal(decision.countClick, true);
   assert.equal(decision.write, true);
   assert.equal(decision.exp, NOW + A.WINDOW_MS);
-  assert.equal(decision.exp - NOW, 30 * 24 * 60 * 60 * 1000);
+  assert.equal(decision.exp - NOW, 10 * 365 * 24 * 60 * 60 * 1000);
 });
 
 test("cookie keeps the code after the query is gone, without a new click", () => {

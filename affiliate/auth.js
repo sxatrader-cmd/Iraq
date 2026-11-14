@@ -197,7 +197,7 @@
           button.textContent = "إنشاء الحساب";
           return;
         }
-        return sb.rpc("ensure_affiliate").then(function (made) {
+        return sb.rpc("aff_ensure_affiliate").then(function (made) {
           if (made.error || !made.data) {
             show("f-msg", "تم الدخول، لكن صف الشريك غير موجود. نفّذ ملف SQL في Supabase ثم حدّث الصفحة.", "err");
             button.disabled = false;
@@ -341,8 +341,8 @@
     }
     window.addEventListener("focus", quiet);
     try {
-      sb.channel("booking-status")
-        .on("postgres_changes", { event: "*", schema: "public", table: "bookings" }, quiet)
+      sb.channel("aff-booking-status")
+        .on("postgres_changes", { event: "*", schema: "public", table: "aff_bookings" }, quiet)
         .subscribe();
     } catch (e) {}
   }
@@ -424,15 +424,15 @@
       if (page === "dashboard") {
         logout(sb);
         var load = function () {
-          return sb.rpc("ensure_affiliate").then(function (made) {
+          return sb.rpc("aff_ensure_affiliate").then(function (made) {
             if (made.error) throw made.error;
-            return sb.from("affiliates").select("*").eq("id", session.user.id).maybeSingle();
+            return sb.from("aff_affiliates").select("*").eq("id", session.user.id).maybeSingle();
           }).then(function (profile) {
             if (profile.error) throw profile.error;
-            if (!profile.data) throw new Error("relation affiliates");
+            if (!profile.data) throw new Error("relation aff_affiliates");
             return Promise.all([
-              sb.from("referral_clicks").select("id", { count: "exact", head: true }).eq("affiliate_id", session.user.id),
-              sb.from("bookings").select("*").eq("affiliate_id", session.user.id).order("created_at", { ascending: false })
+              sb.from("aff_referral_clicks").select("id", { count: "exact", head: true }).eq("affiliate_id", session.user.id),
+              sb.from("aff_bookings").select("*").eq("affiliate_id", session.user.id).order("created_at", { ascending: false })
             ]).then(function (parts) {
               if (parts[1].error) throw parts[1].error;
               drawDashboard(profile.data, parts[0].count || 0, parts[1].data || []);
@@ -452,7 +452,7 @@
       }
       logout(sb);
       var loadAdmin = function () {
-        return sb.from("affiliates").select("is_admin").eq("id", session.user.id).maybeSingle().then(function (me) {
+        return sb.from("aff_affiliates").select("is_admin").eq("id", session.user.id).maybeSingle().then(function (me) {
           if (me.error) throw me.error;
           if (!me.data || !me.data.is_admin) {
             document.getElementById("gate").hidden = false;
@@ -460,8 +460,8 @@
             return;
           }
           return Promise.all([
-            sb.from("affiliate_stats").select("*").order("created_at", { ascending: false }),
-            sb.from("bookings").select("*").order("created_at", { ascending: false })
+            sb.from("aff_affiliate_stats").select("*").order("created_at", { ascending: false }),
+            sb.from("aff_bookings").select("*").order("created_at", { ascending: false })
           ]).then(function (parts) {
             if (parts[0].error) throw parts[0].error;
             if (parts[1].error) throw parts[1].error;
@@ -473,7 +473,7 @@
         });
       };
       bindAdminActions(function (id, status, commission) {
-        return sb.rpc("set_booking_status", { p_id: id, p_status: status, p_commission: commission }).then(function (result) {
+        return sb.rpc("aff_set_booking_status", { p_id: id, p_status: status, p_commission: commission }).then(function (result) {
           if (result.error) throw result.error;
           return loadAdmin();
         });

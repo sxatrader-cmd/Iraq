@@ -1,11 +1,12 @@
 /* Referral attribution for the static Fable Tour site.
-   Persists ?ref= for 30 days (cookie + localStorage) and, after a successful
-   Web3Forms booking, records a pending booking. Does not change the request
+   Persists ?ref= for 10 years (cookie + localStorage) and, after a successful
+   Web3Forms booking, records a pending booking. Server-side customer lock
+   attributes later bookings with the same WhatsApp or email to the first affiliate. Does not change the request
    the booking form already sends. */
 (function (root) {
   "use strict";
 
-  var WINDOW_MS = 30 * 24 * 60 * 60 * 1000;
+  var WINDOW_MS = 10 * 365 * 24 * 60 * 60 * 1000;
   var CODE_RE = /^[A-Z0-9]{4,12}$/;
   var SECRET = {
     access_key: 1, botcheck: 1, password: 1, apikey: 1, token: 1,
@@ -280,14 +281,14 @@
   }
 
   function recordBooking(cfg, body, snap) {
-    if (!isConfigured(cfg) || !active) return;
+    if (!isConfigured(cfg)) return;
     var payload = buildBooking(body || {}, snap, {
       pageUrl: pagePath(),
       lang: document.documentElement.lang || "",
       title: document.title || ""
     });
     if (!payload) return;
-    post(cfg, "record_referral_booking", { p_code: active, p_payload: payload });
+    post(cfg, "aff_record_referral_booking", { p_code: active || "", p_payload: payload });
   }
 
   function install() {
@@ -309,7 +310,7 @@
       try { seen = sessionStorage.getItem("ft_ref_hit") || ""; } catch (e) {}
       if (seen !== decision.code) {
         try { sessionStorage.setItem("ft_ref_hit", decision.code); } catch (e) {}
-        post(cfg, "record_referral_click", { p_code: decision.code, p_page: pagePath() });
+        post(cfg, "aff_record_referral_click", { p_code: decision.code, p_page: pagePath() });
       }
     }
     document.addEventListener("submit", function (event) {

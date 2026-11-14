@@ -80,12 +80,12 @@ try {
       req.respond({ status: 200, headers: CORS, body: JSON.stringify({ success: true }) });
       return;
     }
-    if (url.includes("/rpc/record_referral_click")) {
+    if (url.includes("/rpc/aff_record_referral_click")) {
       clicks.push(req.postData() || "");
       req.respond({ status: 200, headers: CORS, body: "null" });
       return;
     }
-    if (url.includes("/rpc/record_referral_booking")) {
+    if (url.includes("/rpc/aff_record_referral_booking")) {
       bookings.push(req.postData() || "");
       req.respond({ status: 200, headers: CORS, body: "null" });
       return;
