@@ -260,6 +260,74 @@ function ensureLib(done) {
     });
   }
 
+  function bindForgot(sb) {
+    var button = document.getElementById("forgot");
+    if (!button || !window.FT_PW) return;
+    button.addEventListener("click", function () {
+      var emailEl = document.getElementById("f-email");
+      var email = emailEl ? emailEl.value.trim() : "";
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        show("f-msg", window.FT_PW.t("needEmail"), "err");
+        if (emailEl) emailEl.focus();
+        return;
+      }
+      if (!keysOk()) { showProblem("f-msg", "keys"); return; }
+      if (!sb || !hasLib()) { showProblem("f-msg", "library"); return; }
+      button.disabled = true;
+      sb.auth.resetPasswordForEmail(email, { redirectTo: window.FT_PW.REDIRECT }).then(function (result) {
+        if (result.error) throw result.error;
+        show("f-msg", window.FT_PW.t("sent"), "ok");
+      }).catch(function (error) {
+        show("f-msg", human(error), "err");
+      }).then(function () { button.disabled = false; });
+    });
+  }
+
+  function bindReset(sb) {
+    var form = document.getElementById("join");
+    var wait = document.getElementById("reset-wait");
+    if (!form) return;
+    form.dataset.ready = "1";
+    var saw = false;
+    function arm(session) {
+      if (!session) return;
+      saw = true;
+      if (wait) wait.hidden = true;
+      form.hidden = false;
+    }
+    if (sb) {
+      sb.auth.onAuthStateChange(function (event, session) {
+        if (event === "PASSWORD_RECOVERY" || event === "SIGNED_IN" || event === "INITIAL_SESSION" || event === "TOKEN_REFRESHED") arm(session);
+      });
+      sb.auth.getSession().then(function (result) { arm(result.data.session); }).catch(function () {});
+    }
+    setTimeout(function () {
+      if (saw) return;
+      if (wait) wait.hidden = true;
+      show("f-msg", window.FT_PW ? window.FT_PW.t("expired") : "", "err");
+    }, 8000);
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var password = form.password.value;
+      var again = form.again.value;
+      if (password.length < 6) { show("f-msg", window.FT_PW.t("short"), "err"); return; }
+      if (password !== again) { show("f-msg", window.FT_PW.t("mismatch"), "err"); return; }
+      if (!sb) { showProblem("f-msg", "library"); return; }
+      var button = document.getElementById("f-btn");
+      button.disabled = true;
+      button.textContent = window.FT_PW.t("saving");
+      sb.auth.updateUser({ password: password }).then(function (result) {
+        if (result.error) throw result.error;
+        show("f-msg", window.FT_PW.t("done"), "ok");
+        setTimeout(function () { location.href = "dashboard.html"; }, 700);
+      }).catch(function (error) {
+        show("f-msg", human(error), "err");
+        button.disabled = false;
+        button.textContent = window.FT_PW.t("save");
+      });
+    });
+  }
+
   function bindLogin(sb) {
     var form = document.getElementById("join");
     form.dataset.ready = "1";
@@ -286,6 +354,7 @@ function ensureLib(done) {
         button.textContent = "دخول";
       });
     });
+    bindForgot(sb);
   }
 
   function drawDashboard(me, clicks, bookings) {
@@ -393,9 +462,17 @@ function ensureLib(done) {
 
   function start() {
     var page = document.body.getAttribute("data-page");
+    if (page !== "reset" && window.FT_PW && window.FT_PW.isRecovery()) {
+      location.replace("/affiliate/reset.html" + location.search + location.hash);
+      return;
+    }
     var preview = new URLSearchParams(location.search).get("preview") === "1";
     var lang = document.getElementById("langSel");
     if (lang) lang.addEventListener("change", function () {
+      if (page === "reset" && window.FT_PW) {
+        window.FT_PW.apply(lang.value, true);
+        return;
+      }
       var value = lang.value;
       location.href = "/" + (value === "ar" ? "" : value + "/");
     });
@@ -407,6 +484,11 @@ function ensureLib(done) {
         try { then(client(), ""); }
         catch (e) { then(null, "library"); }
       });
+    }
+
+    if (page === "reset") {
+      connect(function (sb) { bindReset(sb); });
+      return;
     }
 
     if (page === "signup" || page === "login") {
