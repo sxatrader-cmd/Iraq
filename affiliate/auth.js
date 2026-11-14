@@ -5,9 +5,15 @@
   var CFG = window.FT_AFFILIATE_CONFIG || {};
   var STATUS = { pending: "مبدئي", confirmed: "مؤكد", cancelled: "ملغي" };
 
-  function ready() {
-    return window.FableAffiliate && window.FableAffiliate.isConfigured(CFG);
+function ready() {
+  var cfg = window.FT_AFFILIATE_CONFIG || CFG;
+  if (window.FableAffiliate && typeof window.FableAffiliate.isConfigured === "function") {
+    return window.FableAffiliate.isConfigured(cfg);
   }
+  if (!cfg || !cfg.supabaseUrl || !cfg.supabaseKey) return false;
+  if (/YOUR_/i.test(String(cfg.supabaseUrl)) || /YOUR_/i.test(String(cfg.supabaseKey))) return false;
+  return /^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/i.test(cfg.supabaseUrl) && String(cfg.supabaseKey).length > 20;
+}
 
   function esc(value) {
     return String(value == null ? "" : value).replace(/[&<>"']/g, function (ch) {
@@ -175,8 +181,12 @@
         show("f-msg", "كلمتا المرور غير متطابقتين.", "err");
         return;
       }
-      if (!ready() || !sb) {
+      if (!ready()) {
         show("f-msg", "لم تُلصق مفاتيح Supabase بعد. افتح affiliate/config.js واتبع دليل الإعداد.", "err");
+        return;
+      }
+      if (!sb) {
+        show("f-msg", "تعذّر تحميل مكتبة الاتصال. حدّث الصفحة.", "err");
         return;
       }
       var button = document.getElementById("f-btn");
@@ -225,8 +235,12 @@
         show("f-msg", "اكتب البريد وكلمة المرور.", "err");
         return;
       }
-      if (!ready() || !sb) {
+      if (!ready()) {
         show("f-msg", "لم تُلصق مفاتيح Supabase بعد. افتح affiliate/config.js واتبع دليل الإعداد.", "err");
+        return;
+      }
+      if (!sb) {
+        show("f-msg", "تعذّر تحميل مكتبة الاتصال. حدّث الصفحة.", "err");
         return;
       }
       var button = document.getElementById("f-btn");
@@ -409,9 +423,14 @@
       return;
     }
 
+    if (!ready()) {
+      document.getElementById("gate").hidden = false;
+      document.getElementById("gate").textContent = "لم تُلصق مفاتيح Supabase بعد. افتح affiliate/config.js واتبع دليل الإعداد.";
+      return;
+    }
     if (!sb) {
       document.getElementById("gate").hidden = false;
-      document.getElementById("gate").textContent = "لم تُلصق مفاتيح Supabase بعد، أو تعذّر تحميل الاتصال. افتح affiliate/config.js واتبع SETUP_AFFILIATE_AR.md.";
+      document.getElementById("gate").textContent = "تعذّر تحميل مكتبة الاتصال. حدّث الصفحة.";
       return;
     }
 
