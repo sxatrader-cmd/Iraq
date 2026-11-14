@@ -26,6 +26,8 @@
    - Site URL: `https://iraq.fabletour.com`
    - Redirect URLs: `https://iraq.fabletour.com/**`
 
+رابط نسيان كلمة المرور يفتح `https://iraq.fabletour.com/affiliate/reset.html`. النمط `/**` يغطيه. إذا كانت القائمة محددة بعناوين منفردة، أضف هذا العنوان أيضاً.
+
 بدون إيقاف تأكيد البريد يصل الشريك رسالة أولاً، ولا يدخل لوحتَه إلا بعد فتحها.
 
 ## 4. الصق المفاتيح في الموقع
