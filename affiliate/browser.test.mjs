@@ -154,6 +154,50 @@ try {
   assert(dir === "rtl", "signup page is not RTL");
   await page.click("#f-btn");
   await page.waitForFunction(() => document.getElementById("f-msg").textContent.includes("واتساب"));
+  const scripts = await page.evaluate(() => ({
+    config: document.querySelectorAll("script[src*='config.js']").length,
+    auth: document.querySelectorAll("script[src*='auth.js']").length,
+    vendor: document.querySelectorAll("script[src*='vendor/supabase.js']").length,
+    cdn: document.querySelectorAll("script[src*='jsdelivr']").length
+  }));
+  assert(scripts.config === 1 && scripts.auth === 1 && scripts.vendor === 1 && scripts.cdn === 0, JSON.stringify(scripts));
+  await page.waitForFunction(() => window.FTAuth && window.FTAuth.hasLib() && window.FTAuth.problem() === "");
+  const classified = await page.evaluate(() => {
+    var keepCfg = window.FT_AFFILIATE_CONFIG;
+    var keepLib = window.supabase;
+    window.FT_AFFILIATE_CONFIG = { supabaseUrl: "YOUR_SUPABASE_URL", supabaseKey: "YOUR_SUPABASE_ANON_KEY" };
+    var keys = window.FTAuth.problem();
+    window.FT_AFFILIATE_CONFIG = keepCfg;
+    window.supabase = undefined;
+    var library = window.FTAuth.problem();
+    window.supabase = keepLib;
+    return {
+      keys: keys,
+      library: library,
+      keysText: window.FTAuth.message("keys"),
+      libraryText: window.FTAuth.message("library"),
+      networkText: window.FTAuth.message("network")
+    };
+  });
+  assert(classified.keys === "keys" && classified.library === "library", JSON.stringify(classified));
+  assert(classified.keysText !== classified.libraryText && classified.libraryText !== classified.networkText);
+  assert(!classified.keysText.includes("أو تعذّر"), classified.keysText);
+
+  await page.goto(origin + "/affiliate/login.html", { waitUntil: "domcontentloaded" });
+  const loginScripts = await page.evaluate(() => document.querySelectorAll("script[src*='config.js'], script[src*='auth.js'], script[src*='vendor/supabase.js']").length);
+  assert(loginScripts === 3, "login page should include each script once, got " + loginScripts);
+
+  await page.goto(origin + "/affiliate/dashboard.html", { waitUntil: "domcontentloaded" });
+  await page.waitForFunction(() => {
+    var gate = document.getElementById("gate");
+    return location.pathname.indexOf("login") !== -1 || (gate && !gate.hidden && gate.textContent);
+  });
+  const gateText = await page.evaluate(() => {
+    var gate = document.getElementById("gate");
+    return gate && !gate.hidden ? gate.textContent : "";
+  });
+  assert(!gateText.includes("لم تُلصق مفاتيح"), gateText);
+  assert(!gateText.includes("غير موجودة"), gateText);
 
   await page.goto(origin + "/affiliate/dashboard.html?preview=1", { waitUntil: "domcontentloaded" });
   await page.waitForSelector("#app:not([hidden]) #ref-link");

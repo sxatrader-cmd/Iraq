@@ -5,9 +5,57 @@
   var CFG = window.FT_AFFILIATE_CONFIG || {};
   var STATUS = { pending: "مبدئي", confirmed: "مؤكد", cancelled: "ملغي" };
 
-  function ready() {
-    return window.FableAffiliate && window.FableAffiliate.isConfigured(CFG);
+var MSG = {
+  keys: "مفاتيح Supabase غير موجودة في الملف affiliate/config.js. الصق رابط المشروع والمفتاح العام ثم أعد نشر الموقع.",
+  library: "تعذّر تحميل مكتبة الاتصال من الموقع نفسه. حدّث الصفحة بقوة. إذا استمر العطل فالمتصفح يمنع الملف /affiliate/vendor/supabase.js.",
+  network: "تعذّر الاتصال بخادم Supabase. تحقق من الإنترنت، وأن المشروع غير متوقف."
+};
+
+function keysOk() {
+  var cfg = window.FT_AFFILIATE_CONFIG || CFG;
+  if (!cfg || !cfg.supabaseUrl || !cfg.supabaseKey) return false;
+  if (/YOUR_/i.test(String(cfg.supabaseUrl)) || /YOUR_/i.test(String(cfg.supabaseKey))) return false;
+  return /^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/i.test(cfg.supabaseUrl) && String(cfg.supabaseKey).length > 20;
+}
+
+function hasLib() {
+  return !!(window.supabase && typeof window.supabase.createClient === "function");
+}
+
+function problem() {
+  if (!keysOk()) return "keys";
+  if (!hasLib()) return "library";
+  return "";
+}
+
+function showProblem(id, code) {
+  var text = MSG[code] || MSG.network;
+  if (id === "gate") {
+    var gate = document.getElementById("gate");
+    if (!gate) return;
+    gate.hidden = false;
+    gate.textContent = text;
+    return;
   }
+  show(id, text, "err");
+}
+
+function ensureLib(done) {
+  if (hasLib()) { done(true); return; }
+  var finished = false;
+  function finish(ok) {
+    if (finished) return;
+    finished = true;
+    done(!!ok && hasLib());
+  }
+  var script = document.createElement("script");
+  script.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.js";
+  script.async = true;
+  script.onload = function () { finish(true); };
+  script.onerror = function () { finish(false); };
+  document.head.appendChild(script);
+  setTimeout(function () { finish(false); }, 8000);
+}
 
   function esc(value) {
     return String(value == null ? "" : value).replace(/[&<>"']/g, function (ch) {
@@ -37,7 +85,7 @@
     if (/already registered|already been registered|user already/i.test(message)) return "هذا البريد مسجّل مسبقاً. انتقل إلى تسجيل الدخول.";
     if (/password/i.test(message)) return "كلمة المرور قصيرة. استخدم 6 أحرف على الأقل.";
     if (/email/i.test(message) && /invalid|valid/i.test(message)) return "البريد الإلكتروني غير صحيح.";
-    if (/fetch|network|failed to fetch|load failed/i.test(message)) return "تعذّر الاتصال بـ Supabase. راجع دليل الإعداد وتأكد أن المشروع يعمل.";
+    if (/fetch|network|failed to fetch|load failed|timeout/i.test(message)) return MSG.network;
     if (/relation|schema|function|permission|not found|pgrst|42501|jwt/i.test(message)) return "قاعدة البيانات غير جاهزة أو الحساب ليس مديراً. نفّذ ملف SQL كما في دليل الإعداد.";
     return "حدث خطأ. حاول مرة أخرى.";
   }
@@ -175,10 +223,8 @@
         show("f-msg", "كلمتا المرور غير متطابقتين.", "err");
         return;
       }
-      if (!ready() || !sb) {
-        show("f-msg", "لم تُلصق مفاتيح Supabase بعد. افتح affiliate/config.js واتبع دليل الإعداد.", "err");
-        return;
-      }
+      if (!keysOk()) { showProblem("f-msg", "keys"); return; }
+      if (!sb || !hasLib()) { showProblem("f-msg", "library"); return; }
       var button = document.getElementById("f-btn");
       button.disabled = true;
       button.textContent = "جارٍ إنشاء الحساب…";
@@ -225,10 +271,8 @@
         show("f-msg", "اكتب البريد وكلمة المرور.", "err");
         return;
       }
-      if (!ready() || !sb) {
-        show("f-msg", "لم تُلصق مفاتيح Supabase بعد. افتح affiliate/config.js واتبع دليل الإعداد.", "err");
-        return;
-      }
+      if (!keysOk()) { showProblem("f-msg", "keys"); return; }
+      if (!sb || !hasLib()) { showProblem("f-msg", "library"); return; }
       var button = document.getElementById("f-btn");
       button.disabled = true;
       button.textContent = "جارٍ الدخول…";
@@ -356,25 +400,26 @@
       location.href = "/" + (value === "ar" ? "" : value + "/");
     });
 
-    var sb = null;
-    if (!preview && ready() && window.supabase && window.supabase.createClient) {
-      try { sb = client(); } catch (e) { sb = null; }
+    function connect(then) {
+      if (!keysOk()) { then(null, "keys"); return; }
+      ensureLib(function (ok) {
+        if (!ok) { then(null, "library"); return; }
+        try { then(client(), ""); }
+        catch (e) { then(null, "library"); }
+      });
     }
 
-    if (page === "signup") {
-      bindSignup(sb);
-      if (sb) sb.auth.getSession().then(function (result) {
-        if (result.data.session) location.href = "dashboard.html";
-      });
-      return;
-    }
-    if (page === "login") {
-      bindLogin(sb);
-      if (sb) sb.auth.getSession().then(function (result) {
-        if (result.data.session) {
+    if (page === "signup" || page === "login") {
+      connect(function (sb, code) {
+        if (page === "signup") bindSignup(sb);
+        else bindLogin(sb);
+        if (code) return;
+        sb.auth.getSession().then(function (result) {
+          if (!result.data.session) return;
+          if (page === "signup") { location.href = "dashboard.html"; return; }
           var next = new URLSearchParams(location.search).get("next");
           location.href = next === "admin" ? "admin.html" : "dashboard.html";
-        }
+        }).catch(function () {});
       });
       return;
     }
@@ -409,11 +454,8 @@
       return;
     }
 
-    if (!sb) {
-      document.getElementById("gate").hidden = false;
-      document.getElementById("gate").textContent = "لم تُلصق مفاتيح Supabase بعد، أو تعذّر تحميل الاتصال. افتح affiliate/config.js واتبع SETUP_AFFILIATE_AR.md.";
-      return;
-    }
+    connect(function (sb, code) {
+    if (!sb) { showProblem("gate", code || "library"); return; }
 
     sb.auth.getSession().then(function (result) {
       var session = result.data.session;
@@ -482,8 +524,16 @@
       watch(sb, loadAdmin);
       var refreshAdmin = document.getElementById("refresh");
       if (refreshAdmin) refreshAdmin.addEventListener("click", loadAdmin);
+    }).catch(function (error) {
+      var gate = document.getElementById("gate");
+      if (!gate) return;
+      gate.hidden = false;
+      gate.textContent = human(error);
+    });
     });
   }
+
+  window.FTAuth = { keysOk: keysOk, hasLib: hasLib, problem: problem, message: function (code) { return MSG[code] || ""; } };
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
   else start();
