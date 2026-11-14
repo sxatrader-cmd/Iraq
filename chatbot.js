@@ -853,6 +853,6 @@
     s.src = src;
     document.head.appendChild(s);
   }
-  add("/affiliate/config.js?v=3");
-  add("/affiliate/track.js?v=3");
+  add("/affiliate/config.js?v=5");
+  add("/affiliate/track.js?v=5");
 })();
