@@ -841,3 +841,18 @@
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();
+
+/* Affiliate referral: persist ?ref= and, after a successful Web3Forms booking, record a pending booking.
+   The booking request itself is unchanged. */
+(function () {
+  if (window.__ftAffBoot) return;
+  window.__ftAffBoot = 1;
+  function add(src) {
+    var s = document.createElement("script");
+    s.async = false;
+    s.src = src;
+    document.head.appendChild(s);
+  }
+  add("/affiliate/config.js");
+  add("/affiliate/track.js");
+})();
